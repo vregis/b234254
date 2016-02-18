@@ -82,17 +82,6 @@ use modules\user\site\controllers\ProfileController;
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="/favicon.ico"/>
     <sctipt src="/js/comments.js"></sctipt>
-
-    <style>
-        .callskype{
-            width: 32px!important;
-            margin: 0 !important;
-            height: 32px!important;
-            margin-left: 10px!important;
-        }
-    </style>
-
-
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -163,7 +152,7 @@ use modules\user\site\controllers\ProfileController;
                                                         <div class="panel-body background-<?php echo $dep->department_id?>">
                                                             <div class="col-md-8 col-md-offset-2 service-heading">
                                                                 <div class="row">
-                                                                    <div class="col-sm-6" style="padding: 0;">Speciality</div>
+                                                                    <div class="col-sm-6" style="padding: 0;">Specialty</div>
                                                                     <div class="col-sm-4" style="">Level</div>
                                                                     <div class="col-sm-2" style="padding: 0;">Rate / h</div>
                                                                 </div>
@@ -210,62 +199,71 @@ use modules\user\site\controllers\ProfileController;
                     <div class="title">GET IN TOUCH</div>
                     <div class="content">
                         <div class="big">
-                            <?php if($model->phone || $model->phone != ''):?>
+                            <?php if(($model->phone) && $model->phone != ''):?>
                                 <?php if($model->show_phone == 1):?>
                                     <a tabindex="0" role="button" class="tel" data-toggle="popover" data-content="<?php echo ($model->phone)?$model->phone:'' ?>"></a>
                                 <?php else:?>
-                                    <a tabindex="0" role="button" class="tel" data-toggle="popover" data-content="User has hidden information"></a>
-                                <?php endif;?>
+                                    <a tabindex="0" role="button" class="tel no_hover" data-toggle="popover" data-content="User has hidden this information"></a>
+                                <?php endif; ?>
+
                             <?php endif;?>
-                            <?php if($model->skype && $model->skype != ''):?>
-                                <?php if($model->show_skype ==1):?>
-                                    <a role="button" class="skype" data-toggle="popover" data-content="<?php echo ($model->skype)?$model->skype:'' ?> <a class='callskype' href='skype:<?php echo $model->skype?>?call'><img src='/images/phone.png'></a>" ></a>
+                            <?php if(($model->skype) && $model->skype != ''):?>
+                                <?php if($model->show_skype == 1):?>
+                                    <a role="button" data-toggle="popover" data-content="<?php echo ($model->skype)?$model->skype:'' ?> <a class='callskype' href='skype:sdasdasda?call'><img src='/images/phone.png'></a>" class="skype" ></a>
                                 <?php else:?>
-                                    <a role="button" class="skype" data-toggle="popover" data-content="User has hidden information" ></a>
-                                <?php endif;?>
+                                    <a role="button" data-toggle="popover" data-content="User has hidden this information" class="skype no_hover" ></a>
+                                <?php endif; ?>
+
                             <?php endif;?>
-                            <?php if($model->email && $model->email != ''):?>
+
+                            <?php if(($model->email) && $model->email != ''):?>
                                 <?php if($model->show_mail == 1):?>
                                     <a tabindex="1" role="button" data-toggle="popover" data-content="<?php echo ($model->email)?$model->email:'' ?>" class="mail" ></a>
                                 <?php else:?>
-                                    <a tabindex="1" role="button" data-toggle="popover" data-content="User has hidden information" class="mail" ></a>
-                                <?php endif;?>
+                                    <a tabindex="1" role="button" data-toggle="popover" data-content="User has hidden this information" class="mail no_hover" ></a>
+                                <?php endif; ?>
+
                             <?php endif;?>
+
+
                         </div>
                         <div class="small">
                             <?php if(($model->social_tw) && $model->social_tw != ''):?>
                                 <?php if($model->show_tw == 1):?>
-                                    <a href="<?php echo $model->social_tw?>" target="_blank" class="tw"></a>
-                                <?php else:?>
-                                    <a href="#" onclick="return false" data-toggle="popover"  data-content="User has hidden information" class="tw no-hover"></a>
+                                    <a href="<?php echo $model->social_tw?>" class="tw"></a>
+                                <?php else: ?>
+                                    <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_tw?>" class="tw no_hover"></a>
                                 <?php endif;?>
                             <?php endif;?>
                             <?php if(($model->social_fb) && $model->social_fb != ''):?>
                                 <?php if($model->show_fb == 1):?>
-                                    <a href="<?php echo $model->social_fb?>" target="_blank" class="fb"></a>
+                                    <a href="<?php echo $model->social_fb?>" class="fb"></a>
                                 <?php else: ?>
-                                    <a href="#" onclick="return false" role="button" data-toggle="popover"  data-content="User has hidden information" class="fb no-hover"></a>
+                                    <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_fb?>" class="fb no_hover"></a>
                                 <?php endif;?>
                             <?php endif;?>
                             <?php if(($model->social_gg) && $model->social_gg != ''):?>
+
                                 <?php if($model->show_gg == 1):?>
-                                    <a href="<?php echo $model->social_gg?>" target="_blank" class="gp"></a>
-                                <?php else:?>
-                                    <a href="#" onclick="return false" data-toggle="popover"  data-content="User has hidden information" class="gp no-hover"></a>
+                                    <a href="<?php echo $model->social_gg?>" class="gp"></a>
+                                <?php else: ?>
+                                    <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_gg?>" class="gp no_hover"></a>
                                 <?php endif;?>
                             <?php endif;?>
                             <?php if(($model->social_in) && $model->social_in != ''):?>
+
                                 <?php if($model->show_in == 1):?>
-                                    <a href="<?php echo $model->social_in?>" target="_blank" class="inst"></a>
-                                <?php else:?>
-                                    <a href="#" onclick="return false" data-toggle="popover" data-content="User has hidden information" class="inst no-hover"></a>
+                                    <a href="<?php echo $model->social_in?>" class="inst"></a>
+                                <?php else: ?>
+                                    <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_in?>" class="inst no_hover"></a>
                                 <?php endif;?>
                             <?php endif;?>
                             <?php if(($model->social_ln) && $model->social_ln):?>
+
                                 <?php if($model->show_ln == 1):?>
-                                    <a href="<?php echo $model->social_ln?>" target="_blank" class="lin"></a>
-                                <?php else:?>
-                                    <a href="#" onclick="return false" data-toggle="popover" data-content="User has hidden information" class="lin no-hover"></a>
+                                    <a href="<?php echo $model->social_ln?>" class="lin"></a>
+                                <?php else: ?>
+                                    <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_in?>" class="lin no_hover"></a>
                                 <?php endif;?>
                             <?php endif;?>
                             <div></div>
@@ -305,32 +303,40 @@ use modules\user\site\controllers\ProfileController;
     </div>
 <script>
     $(document).ready(function(){
-
-        //$('.no-hover').popover();
-        $(".contacts .big .tel, .contacts .big .mail, .contacts .big .skype, .no-hover").popover({
+        $(".contacts .no_hover").popover({
+            placement:"top",
+            html: true,
+            trigger:"click",
+            content:"User has hidden this information"
+        });
+        // $(".contacts .skype").not(".no_hover").popover({
+        //     placement:"top",
+        //     html: true,
+        //     trigger:"manual",
+        // });
+        $(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not(".no_hover").popover({
             placement:"top",
             html: true,
             trigger:"manual"
         }).click(function(){
-            if($(".contacts .big .tel, .contacts .big .mail, .contacts .big .skype, .no-hover").not($(this)).next("div").hasClass('popover')){
-                $(".contacts .big .tel, .contacts .big .mail, .contacts .big .skype, .no-hover").not($(this)).popover("hide");
+            if($(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not($(this)).next("div").hasClass('popover')){
+                $(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not($(this)).popover("hide");
             }
             $(this).popover('toggle');
+        });
 
-            $(this).toggleClass('active');
-        })
-        $(".contacts a").on('show.bs.popover',function(){
+        $(".contacts .big a").on('show.bs.popover',function(){
             $("body").on("click", function(e){
-                $('.contacts a').each(function () {
+                $('.contacts .big a').each(function () {
                     //the 'is' for buttons that trigger popups
                     //the 'has' for icons within a button that triggers a popup
-                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.contacts .popover').has(e.target).length === 0) {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.contacts .big .popover').has(e.target).length === 0) {
                         $(this).popover('hide');
-                        $(this).removeClass('active');
                     }
                 });
             });
         });
+
 
         $("body").animate({"opacity":1},1000);
         $('.fb-share-button').css('opacity', 0);
@@ -382,15 +388,10 @@ use modules\user\site\controllers\ProfileController;
 </script>
 
 <script>
-
     $(function(){
-
-
-        $('.no_hover').hover(function(){
-            return false;
-        })
-
-
+        $('body').mCustomScrollbar({
+            theme:"dark"
+        });
         $(document).on('click', '#send-btn', function(e){
             e.preventDefault();
             var text = $('#comment-area').val();
@@ -420,7 +421,6 @@ use modules\user\site\controllers\ProfileController;
 
     })
 </script>
-
 
 </body>
 </html>

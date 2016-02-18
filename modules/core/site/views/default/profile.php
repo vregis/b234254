@@ -64,13 +64,13 @@ $this->registerJs($msgJs);
                         </td>
                         <td>
                             <div class="col-sm-12">
-                                <?= $form->field($model, 'first_name')->textInput(['placeholder'=>'John', 'class'=>'form-control'])->label(false); ?>
+                                <?= $form->field($model, 'first_name')->textInput(['placeholder'=>'First name', 'class'=>'form-control'])->label(false); ?>
                             </div>
                             <div class="col-sm-12">
-                                <?= $form->field($model, 'last_name')->textInput(['placeholder'=>'Doe', 'class'=>'form-control'])->label(false); ?>
+                                <?= $form->field($model, 'last_name')->textInput(['placeholder'=>'Last name', 'class'=>'form-control'])->label(false); ?>
                             </div>
                             <div class="col-sm-12">
-                                <?= $form->field($model, 'status')->textInput(['placeholder'=>'I’m a crazy lunatic :)', 'class'=>'form-control'])->label(false); ?>
+                                <?= $form->field($model, 'status')->textInput(['placeholder'=>'My motto', 'class'=>'form-control'])->label(false); ?>
                             </div>
                         </td>
                     </tr>
@@ -175,7 +175,7 @@ $this->registerJs($msgJs);
                                         <div class="panel-body background-<?php echo $j?>">
                                             <div class="col-md-8 col-md-offset-2 service-heading">
                                                 <div class="row">
-                                                        <div class="col-sm-5" style="padding: 0;padding-left: 12px;">Speciality</div>
+                                                        <div class="col-sm-5" style="padding: 0;padding-left: 12px;">Specialty</div>
                                                         <div class="col-sm-4" style="padding-left: 24px;">Level</div>
                                                         <div class="col-sm-3" style="padding: 0;padding-left: 12px;">Rate / h</div>
                                                 </div>
@@ -231,10 +231,10 @@ $this->registerJs($msgJs);
                                                 </h4>
                                             </div>
                                             <div id="collapse_3_<?php echo $i?>" class="panel-collapse collapse <?php echo $in?>" aria-expanded="false" style="height: 0px;">
-                                                <div class="panel-body background-<?php echo $t['result']['department_id']?>">
+                                                <div class="panel-body background-<?php echo $i?>">
                                                     <div class="col-md-8 col-md-offset-2 service-heading">
                                                         <div class="row">
-                                                            <div class="col-sm-5" style="padding: 0;padding-left: 12px;">Speciality</div>
+                                                            <div class="col-sm-5" style="padding: 0;padding-left: 12px;">Specialty</div>
                                                             <div class="col-sm-4" style="padding-left: 24px;">Level</div>
                                                             <div class="col-sm-3" style="padding: 0;padding-left: 12px;">Rate / h</div>
                                                         </div>
@@ -289,7 +289,7 @@ $this->registerJs($msgJs);
                                             <div class="panel-body background-<?php echo $t['result']['department_id']?>">
                                                 <div class="col-md-8 col-md-offset-2 service-heading">
                                                     <div class="row">
-                                                        <div class="col-sm-5" style="padding: 0;padding-left: 12px;">Speciality</div>
+                                                        <div class="col-sm-5" style="padding: 0;padding-left: 12px;">Specialty</div>
                                                         <div class="col-sm-4" style="padding-left: 24px;">Level</div>
                                                         <div class="col-sm-3" style="padding: 0;padding-left: 12px;">Rate / h</div>
                                                     </div>

@@ -118,30 +118,15 @@ $this->registerJs($msgJs);
                 </table>
             </div>
             <div role="tabpanel" class="tab-pane fade <?= count($self_userTools) == 0 ? 'in active' : '' ?>" id="delegated">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th> Name </th>
-                        <th width="170"> Creation date </th>
-                        <th width="130"> Milestones </th>
-                        <th width="130"> Tasks </th>
-                        <th width="130"> In progress </th>
-                        <th width="130"> New </th>
-                        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="cursor:default;"><i class="ico-history"></i></a></th>
-                    </tr>
-                    </thead>
-                    <tbody id="delegated_businesses">
-                        <?= $delegated_businesses ?>
-                    </tbody>
-                    <tfoot>
-                    <th colspan="7">
-                        <div class="text-center">
-                            <a href="#" style="padding: 0px 50px;line-height: 30px !important;height: 30px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Find job <i style="font-size: 20px;position: absolute;top: 7px;margin-left: 10px;" class="fa fa-angle-down"></i></a>
-                        </div>
-                    </th>
-                    </tfoot>
-                </table>
+                <div id="delegated_businesses">
+                    <?= $delegated_businesses ?>
+                </div>
+                
                 <? require __DIR__.'/blocks/find_job.php' ?>
+                <div class="text-center btn-div" style="padding-top:30px;">
+                    <a href="#" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search <i style="font-size: 20px;position: absolute;top: 14px;margin-left: 10px;" class="fa fa-angle-down"></i></a>
+                </div>
+                
             </div>
         </div>
 

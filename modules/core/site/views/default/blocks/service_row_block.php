@@ -8,7 +8,7 @@ use modules\departments\models\Specialization;
             <div class="multiselect <?php echo $type == 'add'?'add':''?>">
                     <div class="btn-group bootstrap-select update form-control open specialization-wrapper">
                         <button type="button" class="btn dropdown-toggle btn-default spec" title="Native" aria-expanded="true">
-                            <span class="filter-option pull-left selected-specialization-name">Select</span>&nbsp;
+                            <span class="filter-option pull-left selected-specialization-name">Select </span>&nbsp;
                             <span class="bs-caret"><span class="caret"><i class="fa fa-angle-down"></i></span></span>
                         </button>
                         <div class="dropdown-content">
@@ -16,7 +16,7 @@ use modules\departments\models\Specialization;
                                 <?php if($speclist):?>
                                     <?php foreach($speclist as $spec):?>
                                         <li class="<?php echo (isset($service) && $service->specialization_id == $spec->id)?'spec-selected':'' ?> specializ-id" data-id = '<?php echo $spec->id?>'>
-                                            <div class="pull-left spec-name" data-id="<?php echo $spec->id?>"><?php echo substr($spec->name, 0, 15)?> <?php echo mb_strlen($spec->name)>18?'...':''?></div>
+                                            <div class="pull-left spec-name" data-id="<?php echo $spec->id?>" data-descr="<?php echo $spec->description?>"> <?php echo substr($spec->name, 0, 25)?> <?php echo mb_strlen($spec->name)>25?'...':''?></div>
                                             <div class="pull-right">
                                                 <a href="#" data-toggle="popover" data-content="<?php echo $spec->description?>" class="btn btn-primary static circle info">i</a>
                                                 <input <?php echo (isset($service) && $spec->id == $service->specialization_id)?'checked':''?> type="checkbox" class="form-control" data-specid = '<?php echo $spec->id?>'>
@@ -31,6 +31,7 @@ use modules\departments\models\Specialization;
                             </ul>
                         </div>
                     </div>
+                <a href="#" data-toggle="popover" data-content="asdasdas" data-trigger="hover" class="pull-right btn btn-primary static circle info spec_desc">i</a>
             </div>
         </div>
         <div class="col-sm-4">
@@ -66,8 +67,14 @@ use modules\departments\models\Specialization;
     $('li.spec-selected').each(function(){
         var name = $(this).find('.spec-name').text();
         var id = $(this).find('.spec-name').attr('data-id');
+        var desc = $(this).find('.spec-name').attr('data-descr');
         $(this).closest('.multiselect').find('.selected-specialization-name').html(name);
         $(this).closest('.multiselect').find('.selected-specialization-name').attr('data-id', id);
+                $(".services .service .multiselect > .btn.info").popover({
+            placement:"top",
+            trigger:"hover"
+        });
+        $(this).closest('.multiselect').find('.spec_desc').attr('data-content', desc);
     })
 
     $('.plus_disabled').on('click', function(){

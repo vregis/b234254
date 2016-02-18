@@ -1,13 +1,10 @@
+
 <?php $this->registerJsFile("/metronic/theme/assets/global/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"); ?>
 <?php $this->registerJsFile("/js/min/jquery.mask.min.js"); ?>
 <?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
 <?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
 <div id="find_job" class="collapse slidePop">
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Task</a></li>
-        <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="offered-block" role="tab" data-toggle="tab">Request <span class="label label-danger circle"></span></a></li>
-    </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
@@ -15,7 +12,7 @@
             <table class="table table-bordered" style="width:100%;">
                 <thead>
                 <tr>
-                    <th width="60"><button style="margin:0;cursor:default;" class="btn btn-primary static circle"><i class="ico-user"></i></button></th>
+                    <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                     <th width="290">Task name</th>
                     <th class="dropmenu filter-task deps" width="170">
                         <div style="position:relative;">
@@ -27,7 +24,7 @@
                     </th>
                     <th class="dropmenu filter-task specs" width="121">
                         <div style="position:relative;">
-                            <div class="trigger">Speciality <i class="fa fa-angle-down"></i></div>
+                            <div class="trigger">Specialty <i class="fa fa-angle-down"></i></div>
                             <div class="popover dropselect fade bottom in spec-menu" role="tooltip">
                                  <?= $specials_filter ?>
                             </div>
@@ -35,7 +32,19 @@
                     </th>
                     <th width="120" class="time">Time</th>
                     <th width="120" class="rate">Rate / H</th>
-                    <th><button class="btn btn-primary select-all" style="font-size: 11px !important;padding: 4px 15px !important;">Request <br> all</button></th>
+                    <th class="dropmenu filter-task status" width="121">
+                        <div style="position:relative;">
+                            <div class="trigger">Status <i class="fa fa-angle-down"></i></div>
+                            <div class="popover dropselect fade bottom in status-menu" id="status-menu" role="tooltip">
+                            <div class="arrow"></div>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
+                                    <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </th>
+    <!--                 <th class="dropmenu status" data-toggle="popover" data-not_autoclose="1">Status <i class="fa fa-angle-down"></i></th> -->
                 </tr>
                 </thead>
                 <tbody id="user_task">
@@ -82,21 +91,38 @@
             <table class="table table-bordered" style="width:100%;">
                 <thead>
                 <tr>
-                    <th width="60"><button style="margin:0;cursor:default;" class="btn btn-primary static circle"><i class="ico-user"></i></button></th>
+                    <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                     <th width="290">Task name</th>
-                    <th class="deps" width="170">
+                    <th class="dropmenu filter-task deps" width="170">
                         <div style="position:relative;">
-                            <div>Departments</div>
+                            <div class="trigger">Departments <i class="fa fa-angle-down"></i></div>
+                            <div class="popover dropselect fade bottom in deps-menu" role="tooltip">
+                                 <?= $deps_filter ?>
+                            </div>
                         </div>
                     </th>
-                    <th class="specs" width="121">
+                    <th class="dropmenu filter-task specs" width="121">
                         <div style="position:relative;">
-                            <div>Speciality</div>
+                            <div class="trigger">Specialty <i class="fa fa-angle-down"></i></div>
+                            <div class="popover dropselect fade bottom in spec-menu" role="tooltip">
+                                 <?= $specials_filter ?>
+                            </div>
                         </div>
                     </th>
                     <th width="120" class="time">Time</th>
                     <th width="120" class="rate">Rate / H</th>
-                    <th><button class="btn btn-primary select-all" style="font-size: 11px !important;padding: 4px 15px !important;">Request <br> all</button></th>
+                    <th class="dropmenu filter-task status" width="121">
+                        <div style="position:relative;">
+                            <div class="trigger">Status <i class="fa fa-angle-down"></i></div>
+                            <div class="popover dropselect fade bottom in status-menu" id="status-menu" role="tooltip">
+                            <div class="arrow"></div>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
+                                    <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </th>
                 </tr>
                 </thead>
                 <tbody id="user_request">
@@ -110,18 +136,21 @@
                         <div class="clearfix"></div>
                     </th>
                     <th style="border-left:0;">
-                        <button id="reject" class="btn btn-primary make-ajax" style="width:100px;">Reject</button>
+                        <button id="reject" class="btn btn-primary make-ajax" style="width:100px;">Cancel</button>
                     </th>
                 </tr>
                 </tfoot>
             </table>
         </div>
+<!--                 <div id="status-menu" style="display:none !important;">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
+                <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
+            </ul>
+        </div> -->
     </div>
 </div>
 <style>
-    table th{
-        position:relative;
-    }
     table th .fa{
         margin-left:10px;
     }
@@ -155,10 +184,12 @@
     .popover{
         min-width: 420px;
         border:1px solid #d7d7d7;
-        padding: 9px;
+        padding: 10px;
         /*white-space: nowrap;*/
-        background: #ebebeb;
-        box-shadow: 0 0 10px 0 rgba(139,139,143,0.34) !important;
+        /*background: #ebebeb;*/
+        border-radius:10px !important;
+        box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+        border: 1px solid #dae2ea;
     }
     .advanced-search-btn+.popover .popover-content{
         padding:0;
@@ -166,44 +197,103 @@
         height:239px;
     }
     .popover.bottom > .arrow:after {
-        border-bottom-color: #ebebeb !important;
+        border-bottom-color: #FFF !important;
     }
     .popover.top > .arrow:after {
-        border-top-color: #ebebeb !important;
+        border-top-color: #FFF !important;
     }
     .popover.right > .arrow:after {
-        border-right-color: #ebebeb !important;
+        border-right-color: #fff !important;
     }
     .popover .popover-content,.advanced-search-btn+.popover .popover-content{
         background: #fff;
-        border: 1px solid #d7d7d7;
+        /*border: 1px solid #d7d7d7;*/
     }
     .dropselect{
         min-width:195px !important;
         width:195px !important;
-        top:50px;
-        display:none;
-        left:50%;
-        margin-left: -98px;
     }
     .dropselect .popover-content{
         padding: 0;
     }
     .dropselect a{
-        display:block;
-        width:100%;
-        text-align:center;
-        line-height:30px;
-        font-size:16px;
-        color:#7b7b7b;
+        display: block;
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        color: #7b7b7b;
         text-decoration: none;
         border-bottom: 1px solid #d7d7d7;
     }
-    .dropselect a:last-child{
-        border-bottom:0;
+    #status-menu ul{
+        position: relative;
+        top: 0;
+        border:none;
+        margin: 0;
     }
+    #status-menu a{
+        border:none;
+        display:block;
+        width:100%;
+        background:none !important;
+        color: #7b7b7b !important;
+        padding: 0 !important;
+        line-height: 30px;
+    }
+    #status-menu li{
+        display:block;
+        width:100%;
+        float:none;
+    }
+    #status-menu a i{
+        margin-left:12px;
+        font-size:10px;
+    }
+    .dropmenu{
+        cursor: pointer;
+        padding:0 !important;
+    }
+    .dropmenu .trigger{
+        height:50px;
+        line-height:50px;
+    }
+    .dropmenu > div:first-child{
+        padding:0px;
+    }
+    .dropmenu .popover{
+        top:100%;
+    }
+    .dropselect a:last-child {
+        border-bottom: 0;
+    }
+
     .dropselect a.off{
         color:rgba(123,123,123,0.5);
+    }
+    .background-6.on{
+        background-color: rgba(112, 202, 200,0.1);
+    }
+    .background-1.on{
+        background-color: rgba(145, 135, 208,0.1);
+    }
+    .background-2.on{
+        background-color: rgba(183, 135, 209,0.1);
+    }
+    .background-3.on{
+        background-color: rgba(253, 109, 100,0.1);
+    }
+    .background-5.on{
+        background-color: rgba(255, 209, 71,0.1);
+    }
+    .background-4.on{
+        background-color: rgba(255, 162, 93,0.1);
+    }
+    .background-7.on{
+        background-color: rgba(112,202,200,0.1);
+    }
+    .background-8.on{
+        background-color: rgba(93,201,240,0.1);
     }
     #input-rate-start,#input-rate-end{
         background: #fff url("/images/cost-bg.png") 7px 0 no-repeat;
@@ -235,47 +325,11 @@
     }
     .dropmenu{
         cursor: pointer;
-        padding:0 !important;
-    }
-    .dropmenu .trigger{
-        height:50px;
-        line-height:50px;
-    }
-    .dropmenu > div:first-child{
-        padding:0px;
     }
     .popover.avatar{
         text-align:center;
         min-width:185px;
         color:#5a5a5a;
-    }
-
-    .dropselect a.off {
-        color: rgba(123,123,123,0.5) !important;
-    }
-    .background-6.on{
-        background-color: rgba(112, 202, 200,0.1);
-    }
-    .background-1.on{
-        background-color: rgba(145, 135, 208,0.1);
-    }
-    .background-2.on{
-        background-color: rgba(183, 135, 209,0.1);
-    }
-    .background-3.on{
-        background-color: rgba(253, 109, 100,0.1);
-    }
-    .background-5.on{
-        background-color: rgba(255, 209, 71,0.1);
-    }
-    .background-4.on{
-        background-color: rgba(255, 162, 93,0.1);
-    }
-    .background-7.on{
-        background-color: rgba(112,202,200,0.1);
-    }
-    .background-8.on{
-        background-color: rgba(93,201,240,0.1);
     }
 </style>
 <script>
@@ -285,6 +339,22 @@
                 placement:"top",
                 html:true
             });
+            // $(".dropmenu.status").popover({
+            //     placement:"bottom",
+            //     html:true,
+            //     content:$("#status-menu"),
+            //     container:$("body"),
+            //     template:'<div class="popover dropselect" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+            // });
+            // $(".dropmenu.status").on('shown.bs.popover',function(){
+            //     $("#status-menu a[data-toggle='tab']").click(function(){
+            //         console.log("asdasda");
+            //         $("#status-menu a[data-toggle='tab'] i").remove();
+            //         $(this).append('<i class="ico-check1"></i>');
+            //         $(this).tab('show');
+            //         $(".dropmenu.status").popover('hide');
+            //     });
+            // });
             $(".btn.info").on('show.bs.popover',function(){
                 $(".gant_avatar,table tr td.name .pull-left").popover('destroy');
             }).on('hide.bs.popover',function(){
@@ -309,6 +379,25 @@
                 container:$("body"),
                 trigger:"hover"
             });
+                    $("#status-menu a[data-toggle='tab']").click(function(){
+                        console.log("asdasda");
+                        $("#status-menu a[data-toggle='tab'] i").remove();
+                        $(this).append('<i class="ico-check1"></i>');
+                        $(this).tab('show');
+                        // $(".dropmenu.status").popover('hide');
+                    });
+            // $(".dropmenu").on('show.bs.popover',function(){
+            //     if($(this).hasClass('specs'))
+            //         $("#spec-menu").show();
+            //     else if($(this).hasClass('deps'))
+            //         $("#deps-menu").show();
+            //     else
+            //         $("#status-menu").show();
+            //     $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+
+            // }).on('hide.bs.popover',function(){
+            //     $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+            // });
             $(".dropmenu .trigger").click(function(){
                 var that = $(this).parent('.dropmenu');
                 
@@ -317,6 +406,7 @@
                     $(".dropmenu").find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
                     $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
                     $(".gant_avatar,table tr td.name .pull-left").popover('destroy');
+
                 }else{
                     $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
                     $(".gant_avatar").popover({
@@ -334,20 +424,21 @@
                 $(this).next('.dropselect').toggle();
                  return false;
             });
+
             $('html').click(function(e) {
                 $('.dropselect').hide(); 
                 $('.dropmenu').find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
-                            $(".gant_avatar").popover({
-                container:$("body"),
-                html:true,
-                template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                trigger:"hover"
-            });
-            $("table tr td.name .pull-left").popover({
-                container:$("body"),
-                trigger:"hover"
-            });
-            });
+                    $(".gant_avatar").popover({
+                        container:$("body"),
+                        html:true,
+                        template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                        trigger:"hover"
+                    });
+                    $("table tr td.name .pull-left").popover({
+                        container:$("body"),
+                        trigger:"hover"
+                    });
+                });
                 
             $('.dropselect').click(function(e){
                 e.stopPropagation();
@@ -548,7 +639,7 @@
                     if(i != 0) {
                         names += ", ";
                     }
-                    names += $(this).closest('.user-row').find('.field-name').html();
+                    names += $(this).closest('.user-row').find('.name').find('.pull-left').text();
                     i++;
                 }
             });
@@ -589,7 +680,7 @@
                     if(i != 0) {
                         names += ", ";
                     }
-                    names += $(this).closest('.user-row').find('.field-name').html();
+                    names += $(this).closest('.user-row').find('.name').find('.pull-left').text();
                     i++;
                 }
             });

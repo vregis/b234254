@@ -191,13 +191,13 @@ section.contacts .title{
 	width: 380px;
 	margin: 0 auto;
 }
-.contacts .big a{
+.contacts .big > a{
 	width:60px;
 	height: 60px;
 	display: inline-block;
 	margin: 15px;
 }
-.contacts .small a{
+.contacts .small > a{
 	display: inline-block;
 	width:32px;
 	height:32px;
