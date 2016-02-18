@@ -201,11 +201,11 @@ $this->registerJs($msgJs);
             theme:"dark"
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
-        $(".page-content-wrapper").mCustomScrollbar("destroy");
-        $('.page-content-wrapper').mCustomScrollbar({
-            setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
-        });
+            $(".page-content-wrapper").mCustomScrollbar("destroy");
+            $('.page-content-wrapper').mCustomScrollbar({
+                setHeight: $('.page-content').css('minHeight'),
+                theme:"dark"
+            });
                 $("#find_job").on('shown.bs.collapse',function(){
                     $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
         $(".page-content-wrapper").mCustomScrollbar("destroy");

@@ -570,10 +570,10 @@
                 }
             });
 
-            // $('.dropselect .popover-content').mCustomScrollbar({
-            //     setHeight: 218,
-            //     theme:"dark"
-            // });
+            $('.dropselect .popover-content').mCustomScrollbar({
+                setHeight: 218,
+                theme:"dark"
+            });
         }
         function set_user_request(_this, html) {
             if(html!=undefined) {
