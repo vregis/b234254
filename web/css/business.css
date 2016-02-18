@@ -12,7 +12,7 @@
 .table{
     border-color:#d7d7d7 !important;
     margin-bottom: 0px !important; 
-    border-top: 0 !important;
+    /*border-top: 0 !important;*/
 }
 .table.table-light>thead>tr>th,
 .table td, .table th {
@@ -57,53 +57,6 @@ table thead tr th, table tbody tr td,table tfoot tr th{
     padding: 8px;
     border-left: none;
 }
- .nav-tabs{
-    margin-bottom: 0 !important;
-    border: none;
-    margin-left:1px;
-}
- .nav-tabs > li > a,.nav-tabs > li > a:hover{
-    font-size: 16px !important;
-    color:#5a5a5a;
-    /*border:1px solid #d7d7d7 !important;*/
-    width: 170px;
-    text-align: center;
-    height: 26px;
-    line-height: 26px !important;
-    padding: 0 !important;
-    border-radius: 0px 15px 0 0 !important;
-    border:none !important;
-    margin-left: -1px;
-    background: #ebebeb !important;
-    /*text-align: left;*/
-    /*text-indent: 14px;*/
-}
-.nav-tabs > li > a:hover{
-
-}
- .nav-tabs > li:first-child > a{
-    width:170px;
-    border-radius: 15px 0px 0 0 !important;
- }
- .nav-tabs > li > a .label{
-    font-size: 10px !important;
-    top: 50%;
-    margin-top: -7px;
-    right: 10px;
-    padding: 0px;
-    line-height: 11px;
-    text-indent: 0;
-}
-.nav-tabs > li{
-    margin-bottom: 0 !important;
-}
- .nav-tabs > li:not(.active) > a:hover{
-    /*border: 1px solid #d7d7d7 !important;*/
-}
- .nav-tabs > li.active > a{
-    background: #5184f3 !important;
-    color:#fff !important;
-}
 
 table tbody tr td .label{
     right: 20px !important;
@@ -117,4 +70,69 @@ table tbody tr td .label{
 }
 #delegated > table .btn{
     line-height: 34px !important;
+}
+.nav-tabs{
+    position:absolute;
+    top:-30px;
+    left:0px;
+}
+.nav-tabs li a{
+    padding:0;
+    height:30px;
+    line-height:30px;
+    width:170px;
+    text-align:center;
+    font-size:16px;
+    color:rgba(90,90,90,0.5);
+    border:1px solid transparent;
+    background:url("/images/tab-bg-dash.png") 0 0 repeat-x;
+    padding: 5px 12px !important;
+}
+.nav-tabs li a:hover{
+    border:1px solid rgba(215,215,215,0.5);
+}
+.nav-tabs li.active a:hover,.nav-tabs li.active a:focus{
+    border-color: #fff !important;
+}
+.nav-tabs li:first-child a{
+    border-radius:10px 0 0 0;
+}
+.nav-tabs li:last-child a{
+    border-radius:0px 10px 0 0;
+}
+.nav-tabs li.active a{
+    color:#5a5a5a;
+    border-color:#fff !important;
+    background:#fff;
+}
+.tables-business .well{
+    position: relative;
+    border-top-left-radius:0 !important;
+    margin-top:60px !important;
+}
+.slidePop{
+    position:initial;
+}
+.table{
+    border-radius:10px !important;
+    border-collapse: initial;
+}
+.table thead tr > td:first-child,.table thead tr > th:first-child{
+    border-top-left-radius:10px !important;
+}
+.table thead tr > td:last-child,.table thead tr > th:last-child{
+    border-top-right-radius:10px !important;
+}
+.table tbody tr:last-child > td:first-child,.table tfoot tr > th:first-child{
+    border-bottom-left-radius:10px !important;
+}
+.table tbody tr:last-child > td:last-child,.table tfoot tr > th:last-child{
+    border-bottom-right-radius:10px !important;
+}
+.table.with-foot td{
+    border-right:0 !important;
+    border-bottom: 0 !important;
+}
+.table.with-foot td:first-child{
+    border-left:0 !important;
 }

@@ -8,9 +8,9 @@
 
 return [
     'class' => 'Swift_SmtpTransport',
-    'host' => 'a2plcpnl0233.prod.iad2.secureserver.net',
-    'username' => 'toozzacontrol@bigsbusiness.com',
-    'password' => 'Justoozza2015',
+    'host' => 'smtp.gmail.com',
+    'username' => 'toozzatest@gmail.com',
+    'password' => 'test_company',
     'port' => 465,
-    'encryption' => 'ssl'
+    'encryption' => 'ssl',
 ];

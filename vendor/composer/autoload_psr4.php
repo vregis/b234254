@@ -8,9 +8,13 @@ $baseDir = dirname($vendorDir);
 return array(
     'yii\\swiftmailer\\' => array($vendorDir . '/yiisoft/yii2-swiftmailer'),
     'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
+    'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'nodge\\eauth\\' => array($vendorDir . '/nodge/yii2-eauth/src'),
+    'kartik\\social\\' => array($vendorDir . '/kartik-v/yii2-social'),
+    'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'c006\\paypal_ipn\\' => array($vendorDir . '/c006/yii2-paypal-ipn'),
     'ak\\' => array($vendorDir . '/marciocamello/yii2-paypal'),
+    'Facebook\\' => array($vendorDir . '/facebook/php-sdk-v4/src/Facebook'),
 );

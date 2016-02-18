@@ -1,28 +1,31 @@
-Options +FollowSymLinks
-IndexIgnore */*
-RewriteEngine on
+AddDefaultCharset utf-8
+
+# Mod_Autoindex
+<IfModule mod_autoindex.c>
+  # Запрещаем просмотр содержимого папок
+  Options -Indexes
+</IfModule>
 
 DirectoryIndex /web/index.php
 DirectoryIndex /web/admin.php
 
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f
+
+RewriteRule ^(.+) $1 [L]
+
 RewriteRule ^admin.*$ /web/admin.php [L]
 
-RewriteCond %{REQUEST_URI} !^/(web)
-RewriteRule ^assets/(.*)$ /web/assets/$1 [L]
-RewriteRule ^audio/(.*)$ /web/audio/$1 [L]
-RewriteRule ^content/(.*)$ /web/content/$1 [L]
-RewriteRule ^css/(.*)$ web/css/$1 [L]
-RewriteRule ^fonts/(.*)$ web/fonts/$1 [L]
-RewriteRule ^icomoon/(.*)$ web/icomoon/$1 [L]
-RewriteRule ^icons/(.*)$ web/icons/$1 [L]
-RewriteRule ^images/(.*)$ web/images/$1 [L]
-RewriteRule ^js/(.*)$ web/js/$1 [L]
-RewriteRule ^metronic/(.*)$ web/metronic/$1 [L]
-RewriteRule ^plugins/(.*)$ web/plugins/$1 [L]
-RewriteRule ^favicon.ico$ web/favicon.ico [L]
-RewriteRule (.*) /web/$1
+RewriteCond %{DOCUMENT_ROOT}/web%{REQUEST_URI} -f
+
+RewriteRule ^(.+) /web/$1 [L]
+RewriteRule ^([^?]*) index.php [L,QSA]
+
+php_value display_errors 1
+php_value display_startup_errors 1
+php_value error_reporting E_ALL
 
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /web/index.php
+php_value short_open_tag 1
+

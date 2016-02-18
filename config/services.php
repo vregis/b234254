@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * Настройки для авторизации через соц. сети для nodge\eauth
@@ -35,8 +35,10 @@ return [
         // register your app here: https://dev.twitter.com/apps/new
         'title' => Yii::t('user', 'Twitter'),
         'class' => 'modules\user\site\services\Twitter',
-        'key' => 'mr2KqL6jBd7EFE3rcYJjpd7RD',
-        'secret' => 'GFX5z4puq0nDhyg7dvu1Uprx7zhc0UqgIbmCSPABsKhEiWxcX4',
+        'key' => 'x3JOQktxKRY4alFVnlUrvf560',
+        'secret' => 'yvn3tyoj9a0FkaTmzYUMK3JHyr2TywClFTLVWtj27VlEegcykd',
+        /*'key' => 'mr2KqL6jBd7EFE3rcYJjpd7RD',
+        'secret' => 'GFX5z4puq0nDhyg7dvu1Uprx7zhc0UqgIbmCSPABsKhEiWxcX4',*/
     ],
     // Google
     /*'gg' => [

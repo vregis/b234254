@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'bsb-icons';
-    src:    url('fonts/bsb-icons.eot?nrechk');
-    src:    url('fonts/bsb-icons.eot?nrechk#iefix') format('embedded-opentype'),
-        url('fonts/bsb-icons.ttf?nrechk') format('truetype'),
-        url('fonts/bsb-icons.woff?nrechk') format('woff'),
-        url('fonts/bsb-icons.svg?nrechk#bsb-icons') format('svg');
+    src:    url('fonts/bsb-icons.eot?dc19eh');
+    src:    url('fonts/bsb-icons.eot?dc19eh#iefix') format('embedded-opentype'),
+        url('fonts/bsb-icons.ttf?dc19eh') format('truetype'),
+        url('fonts/bsb-icons.woff?dc19eh') format('woff'),
+        url('fonts/bsb-icons.svg?dc19eh#bsb-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,69 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.ico-dollar:before {
+    content: "\e936";
+}
+.ico-check1:before {
+    content: "\e935";
+}
+.ico-login:before {
+    content: "\e92e";
+}
+.ico-facebook-out:before {
+    content: "\e909";
+}
+.ico-google-out:before {
+    content: "\e923";
+}
+.ico-instagram-out:before {
+    content: "\e924";
+}
+.ico-linkedin-out:before {
+    content: "\e925";
+}
+.ico-twitter-out:before {
+    content: "\e926";
+}
+.ico-phone1:before {
+    content: "\e927";
+}
+.ico-facebook:before {
+    content: "\e928";
+}
+.ico-google:before {
+    content: "\e929";
+}
+.ico-history:before {
+    content: "\e92a";
+}
+.ico-instagram:before {
+    content: "\e92b";
+}
+.ico-linkedin:before {
+    content: "\e92c";
+}
+.ico-linkedin1:before {
+    content: "\e92d";
+}
+.ico-mailenvelope:before {
+    content: "\e92f";
+}
+.ico-pass:before {
+    content: "\e930";
+}
+.ico-skype:before {
+    content: "\e931";
+}
+.ico-skype-out:before {
+    content: "\e932";
+}
+.ico-twitter:before {
+    content: "\e933";
+}
+.ico-user1:before {
+    content: "\e934";
+}
 .ico-calendar:before {
     content: "\e910";
 }
@@ -104,9 +167,6 @@
 }
 .ico-edit:before {
     content: "\e908";
-}
-.ico-history:before {
-    content: "\e909";
 }
 .ico-info:before {
     content: "\e90a";

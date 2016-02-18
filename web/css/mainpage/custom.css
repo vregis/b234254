@@ -197,3 +197,55 @@
     background-color: transparent !important;
     right:10px !important;
 }
+.small-login{
+    position:absolute;
+    top:28px;
+    right: 11px;
+    width: 380px;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: normal;
+}
+.small-login .form-control{
+    height: 30px;
+    width: 130px;
+    margin: 0 5px;
+    line-height: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(255,255,255,0.5) !important;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-top: -6px;
+}
+.small-login .input-icon{
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:3px;
+}
+.small-login .input-icon i{
+    padding-left:6px;
+    width: 24px;
+    text-align: center;
+    font-size:16px;
+}
+.small-login .form-control:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px rgba(255,255,255,0) !important; !important; /* Цвет фона */
+    -webkit-text-fill-color: #000 !important; /* цвет текста */
+    color: #000 !important; /* цвет текста */
+    background:none !important;
+}
+.small-login button{
+    border: none;
+    background: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 30px;
+    padding: 0;
+    margin-left: 7px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.small-login button:hover,.small-login button:focus{
+    color:#fff;
+    background:none;
+}

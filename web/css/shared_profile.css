@@ -57,7 +57,6 @@ body{
 section#about{
 	margin:20px auto;
 	font-size: 16px;
-    padding: 0px 140px;
 }
 section#about .title{
 	text-transform: uppercase;
@@ -68,7 +67,7 @@ section#about .text{
 }
 section#about .text p{
 	margin:20px 0;
-	text-indent: 30px;  
+	text-indent: 30px;
 }
 section.contacts .title{
 	text-transform: uppercase;
@@ -181,8 +180,6 @@ section.contacts .title{
     font-size: 16px;
     line-height: 50px;
     text-align: left;
-    border-bottom: 1px solid rgba(90,90,90,0.1);
-    margin-bottom:15px;
 }
 #services .service-wrapper{
 	text-align: left;
@@ -208,19 +205,19 @@ section.contacts .title{
 .contacts .big a.tel{
 	background: url("/images/share_profile.png") 0 0 no-repeat;
 }
-.contacts .big a.tel.active{
+.contacts .big a.tel:not(.no_hover):hover,.contacts .big a.tel:not(.no_hover):focus,.contacts .big a.tel.active:not(.no_hover){
 	background: url("/images/share_profile.png") -60px 0 no-repeat;
 }
 .contacts .big a.skype{
 	background: url("/images/share_profile.png") -120px 0px no-repeat;
 }
-.contacts .big a.skype.active{
+.contacts .big a.skype:not(.no_hover):focus,.contacts .big a.skype.active:not(.no_hover){
 	background: url("/images/share_profile.png") -180px 0px no-repeat;
 }
 .contacts .big a.mail{
 	background: url("/images/share_profile.png") -240px 0px no-repeat;
 }
-.contacts .big a.mail.active{
+.contacts .big a.mail:not(.no_hover):focus,.contacts .big a.mail.active:not(.no_hover){
 	background: url("/images/share_profile.png") -300px 0px no-repeat;
 }
 .contacts .small{
@@ -232,31 +229,31 @@ section.contacts .title{
 .contacts .small a.tw{
 	background: url("/images/share_profile.png") 0 -60px no-repeat;
 }
-.contacts .small a.tw:hover,.contacts .small a.tw:focus,.contacts .small a.tw.active{
+.contacts .small a.tw:not(.no_hover):hover,.contacts .small a.tw:not(.no_hover):focus,.contacts .small a.tw.active:not(.no_hover){
 	background: url("/images/share_profile.png") -32px -60px no-repeat;
 }
 .contacts .small a.fb{
 	background: url("/images/share_profile.png") -64px -60px no-repeat;
 }
-.contacts .small a.fb:hover,.contacts .small a.fb:focus,.contacts .small a.fb.active{
+.contacts .small a.fb:not(.no_hover):hover,.contacts .small a.fb:not(.no_hover):focus,.contacts .small a.fb.active:not(.no_hover){
 	background: url("/images/share_profile.png") -96px -60px no-repeat;
 }
 .contacts .small a.gp{
 	background: url("/images/share_profile.png") -128px -60px no-repeat;
 }
-.contacts .small a.gp:hover,.contacts .small a.gp:focus,.contacts .small a.gp.active{
+.contacts .small a.gp:not(.no_hover):hover,.contacts .small a.gp:not(.no_hover):focus,.contacts .small a.gp.active:not(.no_hover){
 	background: url("/images/share_profile.png") -160px -60px no-repeat;
 }
 .contacts .small a.inst{
 	background: url("/images/share_profile.png") -192px -60px no-repeat;
 }
-.contacts .small a.inst:hover,.contacts .small a.inst:focus,.contacts .small a.inst.active{
+.contacts .small a.inst:not(.no_hover):hover,.contacts .small a.inst:not(.no_hover):focus,.contacts .small a.inst.active:not(.no_hover){
 	background: url("/images/share_profile.png") -224px -60px no-repeat;
 }
 .contacts .small a.lin{
 	background: url("/images/share_profile.png") -256px -60px no-repeat;
 }
-.contacts .small a.lin:hover,.contacts .small a.lin:focus,.contacts .small a.lin.active{
+.contacts .small a.lin:not(.no_hover):hover,.contacts .small a.lin:not(.no_hover):focus,.contacts .small a.lin.active:not(.no_hover){
 	background: url("/images/share_profile.png") -288px -60px no-repeat;
 }
 .contacts .small > div{
@@ -363,39 +360,4 @@ section.contacts .title{
 .pagination > li > a, .pagination > li > span{
 	float: none !important;
 	vertical-align: middle;
-}
-
-
-.contacts .small a.tw-no-hover{
-	background: url("/images/share_profile.png") 0 -60px no-repeat;
-}
-.contacts .small a.fb-no-hover{
-	background: url("/images/share_profile.png") -64px -60px no-repeat;
-}
-
-.contacts .small a.gp-no-hover{
-	background: url("/images/share_profile.png") -128px -60px no-repeat;
-}
-
-.contacts .small a.inst-no-hover{
-	background: url("/images/share_profile.png") -192px -60px no-repeat;
-}
-
-.contacts .small a.lin-no-hover{
-	background: url("/images/share_profile.png") -256px -60px no-repeat;
-}
-
-.contacts .big a.tel-no-hover{
-	background: url("/images/share_profile.png") 0 0 no-repeat;
-}
-
-.contacts .big a.skype-no-hover{
-	background: url("/images/share_profile.png") -120px 0px no-repeat;
-}
-
-.contacts .big a.mail-no-hover{
-	background: url("/images/share_profile.png") -240px 0px no-repeat;
-}
-.popover-content{
-	text-align: center;
 }

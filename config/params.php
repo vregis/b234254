@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'domain' => 'http://stage.bigsbusiness.com/',
-    'staticDomain' => 'http://static-stage.bigsbusiness.com/',
+    'dbname' => 'bsb',
+    'domain' => 'http://bsb.local/',
+    'staticDomain' => 'http://bsb.local/statc/web/',
     'version' => require(__DIR__ . '/version.php')
 ];

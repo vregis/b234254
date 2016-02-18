@@ -1,0 +1,67 @@
+version 1.3.1
+=============
+**Date:** 19-Jul-2015
+
+- (enh #21): Implement VKontakte plugin.
+- (enh #26): Add option to disable credits after Disqus widget.
+- Update copyright year till current.
+- (enh #29): Validate Disqus comment rendering for older IE browsers.
+- (enh #30): Generate default `en` message translation file.
+- (enh #32): Enhancements to generate Facebook session better.
+- (enh #33): Add Spanish translations.
+- (enh #35): Better composer version dependencies for Facebook SDK.
+- (enh #36): Add `FacebookPlugin::async` property.
+
+version 1.3.0
+=============
+**Date:** 13-Feb-2015
+
+- (enh #6): Remove Facebook PHP SDK support (old version v3.0). 
+- (enh #10): German translations added
+- (enh #11): Hungarian translations added
+- (enh #12): Ukranian & Russian translations added
+- (enh #13): New features for PHP SDK v4.0
+    - Implement an extended `FacebookRedirectLoginHelperX` class for handling sessions the Yii way
+    - New `getFbLoginHelper` method in social module to fetch the Redirect Login Helper object instance based on the module level facebook settings
+    - New `initFbSession` method in social module to initialize a facebook session
+    - New `getFbSession` method in social module to get a facebook session either based on string token, redirect login url, canvas login, or Javascript login.
+    - New `getFbGraphUser` method gets the Facebook graph user object for current user.
+    - Changes from earlier release
+        - Method `getFbApi`has been removed from the social module
+        - Method `getFbUser` has been removed from the social module
+        - Set release to stable.
+- (enh #14): Add new configuration for GoogleAnalytics `anonymizeIp`.
+- (enh #15): Various enhancements and additional configuration settings for the `GoogleAnalytics` widget:
+    - Remove support for old version (widget only supports the new Google Universal Analytics plugin)
+    - New `testMode` property that defaults to `YII_DEBUG` definition to allow google analytics to work from localhost.
+    - Ability to configure tracking object name. Defaults to `__gaTracker`.
+    - Ability to configure `trackerConfig` settings for creation of the ga object.
+    - Ability to configure `sendConfig` settings for sending of the ga data.
+    - Ability to configure `anonymizeIp` property.
+    - Ability to add additional javascript **before** sending the ga data. 
+    - Ability to add additional javascript **after** sending the ga data.
+- (enh #18): Separate Github star and watch buttons as per v2.0.
+- (enh #19): Implement GithubXPlugin based on [github buttons](https://github.com/ntkme/github-buttons).
+- (enh #20): Allow `social` module to be used as an embedded submodule.
+- (enh #22): Set dependency on kartik-v/yii2-krajee-base.
+- (enh #23): Enhance Facebook plugin and fix comments plugin width property.
+- Set copyright year to current.
+
+version 1.2.0
+=============
+**Date:** 10-Nov-2014
+
+- Set release to stable
+
+version 1.1.0
+=============
+**Date:** 01-Jul-2014
+
+- PSR4 alias change
+- (enh #8): Allow language configuration for Facebook, Twitter, and Google plugins.
+
+version 1.0.0
+=============
+**Date:** 01-Dec-2013
+
+- Initial release

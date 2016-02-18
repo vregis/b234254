@@ -8,9 +8,7 @@ use modules\core\widgets\Flash;
 <!--[if lt IE 9 ]><html class="ie ie-lt9 no-js" lang="en"><![endif]-->
 <!--[if IE 9 ]><html class="ie ie9 no-js" lang="en"><![endif]-->
 <!--[if gt IE 9 | !IE]><!-->
-<?
-$this->beginPage();
-?>
+<? $this->beginPage(); ?>
 <html class="no-js fixed" lang="en">
 <!--<![endif]-->
 <head>
@@ -21,7 +19,7 @@ $this->beginPage();
     <meta name="keywords" content="">
     <meta name="author" content="">
     <title>Big S Business</title>
-    <?php     $this->registerCssFile("/plugins/bsb-icons/style.css"); ?>
+    <?php $this->registerCssFile("/plugins/bsb-icons/style.css"); ?>
     <link href="/fonts/Open Sans/OpenSans.css" rel="stylesheet">
     <link rel='stylesheet' href='/css/mainpage/bootstrap.min.css'>
     <link rel='stylesheet' href='/metronic/theme/assets/global/plugins/simple-line-icons/simple-line-icons.css'>
@@ -85,7 +83,17 @@ $this->beginPage();
                 </div>
 
                 <!-- header brand -->
-
+                <div class="small-login">
+                    <form method="post" class="form-inline" action="/user/login" autocomplete="off">
+                        <div class="form-group">
+                            <div class="input-icon"><i class="ico-mail"></i><input type="text" id="loginform-email" class="form-control placeholder-no-fix" name="LoginForm[email]" placeholder="Email" autocomplete="off"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-icon"><i class="ico-pass"></i><input type="password" id="loginform-password" class="form-control placeholder-no-fix" name="LoginForm[password]" placeholder="Password"  autocomplete="off"></div>
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="ico-login"></i></button>
+                    </form>
+                </div>
 
                 <!-- header toggle-->
 

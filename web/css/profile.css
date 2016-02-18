@@ -467,7 +467,7 @@ hr{
     word-wrap: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 65%;
+    width:75%;
 }
 .service-heading{
     color:rgba(90,90,90,0.5);
@@ -496,6 +496,12 @@ hr{
 .popover{
     min-width: 420px;
     /*white-space: nowrap;*/
+}
+.services .service .multiselect > .btn.info{
+    position:absolute;
+    right:30px;
+    top:6px;
+    z-index: 999;
 }
 /*.page-content{
     padding-bottom: 62px;

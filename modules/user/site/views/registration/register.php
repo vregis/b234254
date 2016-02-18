@@ -46,12 +46,12 @@ $this->registerJs($msgJs);
 <!-- BEGIN REGISTRATION FORM -->
 <?php $form = ActiveForm::begin();?>
 <div class="nav">
-    <a href="/user/security/login" class="signin-btn">
-        <span class="icon"></span>Sign in
-    </a>
     <div class="signup-btn active">
         <span class="icon"></span>Sign up
     </div>
+    <a href="/user/security/login" class="signin-btn">
+        <span class="icon"></span>Sign in
+    </a>
     <div class="clearfix"></div>
 </div>
 	<?= Yii::$app->session->getFlash('error');?>

@@ -49,12 +49,12 @@ $this->registerJs($msgJs);
         ]
     ) ?>
     <div class="nav">
-        <div class="signin-btn active">
-            <span class="icon"></span>Sign in
-        </div>
         <a href="/user/registration/register" class="signup-btn">
             <span class="icon"></span>Sign up
         </a>
+                <div class="signin-btn active">
+            <span class="icon"></span>Sign in
+        </div>
         <div class="clearfix"></div>
     </div>
         <div class="alert alert-danger display-hide">

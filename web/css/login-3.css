@@ -156,12 +156,12 @@ input {
 }
 .window .nav .signin-btn.active{
     background: #fff !important;
-    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
     color:#5a5a5a;
 }
 .window .nav .signup-btn.active{
     background: #fff !important;
-    border-top-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
     color:#5a5a5a;
 }
 .window .row{
