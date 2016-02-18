@@ -72,7 +72,7 @@ $this->registerJs($msgJs);
                             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
                             ?>
                             <td style="text-transform: uppercase">
-                                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <span class="label label-danger circle"></span></a>
+                                <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <span class="label label-danger circle"></span></a>
                             </td>
                             <td>
                                 <?= (new DateTime($current_userTool->create_date))->format("m/d/Y") ?>
