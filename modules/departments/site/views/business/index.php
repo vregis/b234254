@@ -56,7 +56,7 @@ $this->registerJs($msgJs);
                         <th width="130"> New </th>
                         <th width="130"> In progress </th>
                         <th width="130"> Completed </th>
-                        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="cursor:default;"><i class="ico-history"></i></a></th>
+                        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;"><i class="ico-history"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -90,19 +90,15 @@ $this->registerJs($msgJs);
                                 <?= $count_completed ?>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary circle dropdown-toggle" data-toggle="dropdown"><i class="ico-history"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $current_userTool->id]) ?>">Business Dashboard</a></li>
-                                    <li class="disabled"><a>Team</a></li>
-                                    <li><a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a></li>
-                                </ul>
+                                <a href="javascript:;" class="dropmenu1 history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+
                             </td>
                         </tr>
                     <? endforeach; ?>
                     <? if(count($self_userTools) == 0) : ?>
                         <tr>
                             <td colspan="7">
-                                <div style="padding:22px 0;">
+                                <div style="padding:22px 0;color:#8eb6f8;">
                                     You do not yet have own business. But you have an idea certainly.<br>
                                     Realize it
                                 </div>
@@ -110,12 +106,15 @@ $this->registerJs($msgJs);
                         </tr>
                     <? endif; ?>
                     </tbody>
-                    <tfoot>
-                    <th colspan="7">
-                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" class="btn btn-primary">Create new business</a>
-                    </th>
-                    </tfoot>
                 </table>
+                <div id="huistory" class="huistory" style="display:none;">
+                    <a href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $current_userTool->id]) ?>">Business Dashboard</a>
+                    <a class="disabled">Team</a>
+                    <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
+                </div>
+                <div class="text-center btn-div" style="padding-top:30px;">
+                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary">Create new business</a>
+                </div>
             </div>
             <div role="tabpanel" class="tab-pane fade <?= count($self_userTools) == 0 ? 'in active' : '' ?>" id="delegated">
                 <div id="delegated_businesses">
@@ -132,11 +131,105 @@ $this->registerJs($msgJs);
 
     </div>
 </div>
+<style>
+    .dropselect1{
+        min-width:190px !important;
+        width:190px !important;
+    }
+    .huistory ul{
+        position: relative;
+        top: 0;
+        border:none;
+        margin: 0;
+            list-style-type: none;
+    padding: 0;
+    }
+    .huistory a{
+        border:none;
+        display:block;
+        width:100%;
+        background:none !important;
+        color: #7b7b7b !important;
+        padding: 0 !important;
+        line-height: 30px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .huistory a:hover{
+        background:#8eb6f8 !important;
+        color:#fff !important;
+        border-radius:3px;
+    }
+</style>
 <script>
-    $("#find_job").on('show.bs.collapse',function(){
-        $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(document).on('change',function(){
+        $('.page-content').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
     });
-    $("#find_job").on('hide.bs.collapse',function(){
-        $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+    $(document).ready(function () {
+        $(".dropmenu1.history").popover({
+            placement:"bottom",
+            html:true,
+            content:$("#huistory"),
+            container:$("body"),
+            template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+        });
+        $(".dropmenu1.history1").popover({
+            placement:"bottom",
+            html:true,
+            content:$("#huistory1"),
+            container:$("body"),
+            template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+        });
+        $(".dropmenu1.history").on('show.bs.popover',function(){
+            $("#huistory").show();
+            $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+        }).on('hide.bs.popover',function(){
+            $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+        });
+        $(".dropmenu1.history1").on('show.bs.popover',function(){
+            $("#huistory1").show();
+            $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+        }).on('hide.bs.popover',function(){
+            $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+        });
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+        $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+                $("#find_job").on('shown.bs.collapse',function(){
+                    $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+                });
+                $("#find_job").on('hidden.bs.collapse',function(){
+                    $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+                });
+        });
+            // $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
+            //     console.log("asdasda");
+            //     $(".huistory a[data-toggle='tab'] i").remove();
+            //     $(this).append('<i class="ico-check1"></i>');
+            //     $(this).tab('show');
+            //     // $(".dropmenu1.status").popover('hide');
+            // });
     });
+
 </script>

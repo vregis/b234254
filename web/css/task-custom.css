@@ -1,3 +1,6 @@
+body{
+    opacity:0;
+}
 .well{
     padding: 30px 20px !important;
     margin:0 auto;
@@ -6,7 +9,7 @@
 	width: 170px;
 }
 .task{
-	background-color: transparent !important;
+	/*background-color: transparent !important;*/
 }
 .b-page-checkbox-wrap .md-radio .task-name{
 	text-transform: uppercase;

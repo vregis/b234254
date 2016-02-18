@@ -45,7 +45,7 @@ $this->registerJs($msgJs);
 ?>
 <?= Flash::widget(['view' => '@modules/core/widgets/views/dialog']) ?>
 <!-- BEGIN Portlet PORTLET-->
-<div class="well" style="margin-top:20px; max-width:1024px; margin:auto;">
+<div class="well" style="margin-top:30px; max-width:1024px; margin:auto;">
     <div class="container-fluid">
         <div class="row title">
             <div class="col-sm-6">

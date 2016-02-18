@@ -159,6 +159,12 @@ use yii\helpers\Url;
     }
 </style>
 <script>
+$(document).ready(function(){
+        $('.page-content').mCustomScrollbar({
+        setHeight: $('.page-content').css('minHeight'),
+        theme:"dark"
+    }); 
+});
     // $(".selectpicker").selectpicker({});
     $("#find_job").on('show.bs.collapse',function(){
         $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
