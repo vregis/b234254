@@ -42,6 +42,35 @@ $this->registerJs($msgJs);
         margin-top:9px;
     }
 </style>
+
+<script>
+    $(document).ready(function(){
+        $('.noselect').bind("cut copy paste",function(e) {
+            e.preventDefault();
+        });
+    });
+
+    function clickIE4(){
+        if (event.button==2 || event.button==86){
+            return false;
+        }
+    }
+    function clickNS4(e){
+        if (document.layers||document.getElementById&&!document.all){
+            if (e.which==2||e.which==3||e.which==86){
+                return false;
+            }
+        }
+    }
+    if (document.layers){
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown=clickNS4;
+    }
+    else if (document.all&&!document.getElementById){
+        document.onmousedown=clickIE4;
+    }
+    document.oncontextmenu=new Function("return false")
+</script>
 <div id="reg" class="window">
 <!-- BEGIN REGISTRATION FORM -->
 <?php $form = ActiveForm::begin();?>
@@ -61,7 +90,7 @@ $this->registerJs($msgJs);
         <?=	$form->field($model, 'email', [
             'template' => '<div class="input-icon"><i class="icon-envelope"></i>{input}</div>{error}',
             'inputOptions' => [
-                'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix',
+                'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
                 'placeholder' => $model->getAttributeLabel('email'),
             ],
         ]);?>
@@ -73,7 +102,7 @@ $this->registerJs($msgJs);
         <?=	$form->field($model, 'email_repeat', [
             'template' => '<div class="input-icon"><i class="icon-check"></i>{input}</div>{error}',
             'inputOptions' => [
-                'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix',
+                'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
                 'placeholder' => $model->getAttributeLabel('email_repeat'),
             ],
         ]);?>
@@ -84,7 +113,7 @@ $this->registerJs($msgJs);
         <?= $form->field($model, 'password', [
             'template' => '<div class="input-icon"><i class="icon-lock"></i>{input}</div>{error}',
             'inputOptions' => [
-                'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix',
+                'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
                 'placeholder' => $model->getAttributeLabel('password'),
             ],
         ])->passwordInput();?>
@@ -95,7 +124,7 @@ $this->registerJs($msgJs);
         <?= $form->field($model, 'password_repeat', [
     		'template' => '<div class="input-icon"><i class="icon-check"></i>{input}</div>{error}',
     		'inputOptions' => [
-    			'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix',
+    			'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
     			'placeholder' => Yii::t('user', 'Re-type Your Password'),
     		],
     	])->passwordInput();?>
