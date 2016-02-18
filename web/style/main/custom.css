@@ -1,0 +1,828 @@
+.ui-autocomplete {
+    font-size: 12px;
+}
+
+.alert {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;
+    background: #000;
+    color: red !important;
+    z-index: 9999;
+    font-size: 12px !important;
+    text-align: center;
+}
+
+span.error {
+    font-size: 10px !important;
+    color: #a72e17;
+}
+
+.pas_recovery .input-lines label {
+    width: auto;
+}
+
+#preloadedImages {
+    width: 0px;
+    height: 0px;
+    display: inline;
+    background: url(img/preloading.gif);
+}
+
+.required {
+    color: #FFD800;
+}
+
+.item {
+    float: left;
+}
+
+.help-inline {
+    clear: both;
+    float: right;
+}
+
+input.confirmed {
+    border: 1px solid #88d395;
+}
+
+div.email-change-msg {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.login_page_social {
+    width: auto !important;
+    float: right;
+}
+
+.one_line_error {
+    height: 20px;
+    overflow: hidden;
+    clear: both;
+}
+
+.pagination-spisok .first,
+.pagination-spisok .last {
+    display: none !important;
+}
+
+.main-navigation ol.breadcrumbs {
+    display: block;
+    overflow: hidden;
+    height: 40px;
+}
+
+.tabs-form.tabs-three ul li {
+    width: 308px !important;
+}
+
+.enter-ava a {
+    text-decoration: none;
+}
+
+.faq-info-main-block .explain {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 150%;
+    color: #CBCBCB;
+    text-align: left;
+}
+
+.tabs-form ul.navigation li {
+    position: relative;
+}
+
+.centred {
+    text-align: center;
+}
+
+.tabs-form.tabs-four ul li {
+    width: 228px !important;
+    margin-left: 16px !important;
+}
+
+.tabs-form.tabs-four ul li:nth-child(1) {
+    margin-left: 0 !important;
+}
+
+.tabs-form.tabs-four ul li.ui-state-default {
+    margin-left: 10px !important;
+}
+
+.tabs-form.tabs-four ul li.ui-state-default:first-child {
+    margin: 0 !important;
+}
+
+.tabs-form.tabs-four ul li.ui-state-default:last-child {
+    margin-left: 10px !important;
+}
+
+.tabs-form.tabs-four ul.navigation li a {
+    text-transform: uppercase;
+}
+
+.user-profile-social-block {
+    margin-left: 200px;
+    width: 760px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.user-profile-social-block table {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.user-profile-social-block table td {
+    width: 40%;
+    padding: 5px 40px;
+    border-bottom: 1px dashed #333;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-vk.active {
+    background-position: 0 -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-ok.active {
+    background-position: -25px -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-mr.active {
+    background-position: -50px -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-fb.active {
+    background-position: -75px -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-tw.active {
+    background-position: -100px -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-gg.active {
+    background-position: -125px -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-ya.active {
+    background-position: -150px -25px;
+}
+
+.user-profile-social-block .icon-reg-soc.icon-st.active {
+    background-position: -150px -25px;
+}
+
+.form-search-group {
+    padding-top: 10px;
+}
+
+.search-form-group .left .group-title {
+    padding-top: 10px;
+}
+
+.question-detail-title {
+    vertical-align: top;
+}
+
+.discussion-spisok-option .third-block,
+.discussion-spisok-option .first-block {
+    width: 150px;
+    float: left;
+}
+
+/* Rating */
+.rating-button-like {
+    margin-right: 10px !important;
+    color: #336600 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+}
+
+.rating-button-dislike {
+    color: #d51e00 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+}
+
+.book_review_spisok .first-block .otziv-button .button-green {
+    width: 30px;
+    height: 19px;
+    font-size: 14px;
+    line-height: 19px;
+    float: left;
+    color: #FFF;
+}
+
+.book_review_spisok .first-block .otziv-button .batton-red {
+    width: 30px;
+    height: 19px;
+    font-size: 14px;
+    line-height: 19px;
+    float: right;
+    color: #FFF;
+}
+
+.enter-menu ul li.active a {
+    color: #FFF;
+}
+
+.mrarthur-media-info-text {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+    padding: 0 0 30px 30px;
+    text-align: left;
+}
+
+/*.upload-photo-description {
+    height: 70px !important;
+}*/
+
+.upload-photo-description {
+    width: 480px;
+    float: right;
+}
+
+.album-name-block input {
+    width: 420px;
+}
+
+.profile-album-block-main div.view-all {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-album-block-settings:hover {
+    /*opacity: 0.3;
+    filter: alpha(opacity=30);*/
+}
+
+.fio-field-bg table tr td:first-child {
+    width: 60px;
+}
+
+.dialog-foto {
+    position: fixed;
+}
+
+img.user-media-preview {
+    width: 120px;
+    height: 80px;
+}
+
+.fileupload-buttonbar .fileinput-button .fileinput-text {
+    text-align: center;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+}
+
+/* user/media/video */
+#create_video_win label {
+    width: 100px !important;
+}
+
+#create_video_win .input-lines {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#create_video_win .album-name-block {
+    padding-bottom: 0;
+}
+
+#create_video_win input[type="text"] {
+    height: 34px;
+    width: 510px;
+}
+
+#create_video_win textarea {
+    margin-left: 10px;
+    float: left;
+    width: 510px;
+    min-width: 510px;
+    height: 100px;
+    min-height: 100px;
+}
+
+.user-media-video-preview {
+    width: 100%;
+    margin: 0 0 15px 140px;
+    text-align: left;
+}
+
+.user-media-video-preview img {
+    width: 320px;
+}
+
+.video-preview {
+    border: 3px solid #222;
+}
+
+.video-update-form label {
+    width: 120px !important;
+}
+
+.video-update-form input {
+    width: 516px !important;
+    height: 36px !important;
+}
+
+.noty_type_alert {
+    background: #ccc;
+}
+
+.dialog-box .head-dialog {
+    font-size: 16px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* temp */
+.icon-reg-soc.icon-st {
+    background-position: -75px 0;
+}
+
+.icon-reg-soc.icon-st:hover {
+    background-position: -75px -25px;
+}
+
+ul.auth-services-vxod li {
+    margin-left: 8px;
+}
+
+ul.auth-services-vxod li:nth-child(2) {
+    margin-left: 8px;
+}
+
+.profile-wid-bg .title a.create_album {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 2px;
+    width: 34px;
+    height: 26px;
+    border: none;
+    cursor: pointer;
+    background-color: #00491f;
+    padding: 0;
+    background-image: url('img/plus-icon.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a.edit_album {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 2px;
+    width: 34px;
+    height: 26px;
+    border: none;
+    cursor: pointer;
+    background-color: #00491f;
+    padding: 0;
+    background-image: url('img/icon-edit.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selectize-dropdown-content {
+    width: 100%;
+}
+
+.textheight14 {
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 6px;
+    vertical-align: top;
+}
+
+.select2-drop * {
+    font-size: 13px;
+}
+
+.select2-container {
+    width: 400px !important;
+    margin: 0 0 0 20px;
+}
+
+.select2-container .select2-choice {
+    height: 34px;
+    line-height: 34px !important;
+    background: #ddd;
+}
+
+.select2-drop-mask,
+.select2-results,
+.select2-search,
+.select2-drop-active {
+    background: #ddd;
+}
+
+.select2-chosen {
+    font-size: 12px;
+    color: #111214;
+}
+
+.select2-container .select2-choice .select2-arrow b {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.select2-container .select2-choice {
+    border-radius: 0;
+}
+
+.select2-container .select2-choice .select2-arrow {
+    width: 32px;
+    height: 34px;
+    background: url('img/selected.png') no-repeat center center;
+    border: none;
+}
+
+.select2-container.select2-dropdown-open .select2-choice .select2-arrow {
+    display: none;
+}
+
+.select2-container .select2-choice .select2-arrow b {
+    display: none;
+}
+
+.select2-results .select2-highlighted {
+    background: #3a3d43;
+    color: #fff;
+}
+
+.select2-container.size_150x30 {
+    width: 150px !important;
+    margin: 0;
+}
+
+.select2-container.size_150x30 .select2-choice {
+    height: 30px;
+    line-height: 30px !important
+}
+
+.select2-container.size_150x30 .select2-choice .select2-arrow {
+    width: 27px;
+    height: 30px;
+    background-image: url('img/selected30.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+/*.dota-game-chat {
+    width: 246px;
+    border: 1px solid #333;
+}
+
+.chat-title {
+    margin: 10px;
+}
+
+.chat-messages {
+    width: 240px;
+    height: 250px;
+    overflow: auto;
+}
+
+.chat-form {
+    padding: 10px;
+}
+
+.chat-form textarea {
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.chat-submit-message {
+    float: right;
+}
+
+.chat-message-block {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.chat-message-block-userinfo {
+    float: left;
+    width: 70px;
+    border-right: 1px solid #333;
+}
+
+.chat-message-block-message {
+    float: right;
+    width: 120px;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.mrarthur-button-green {
+    font-size: 14px;
+    width: 200px;
+    color: #eee;
+}
+
+.dota-create-description {
+    height: 200px !important;
+}
+
+.dota-game-info table {
+    border-collapse: collapse;
+}
+
+.dota-game-info td {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+.dota-game-teams td {
+    border-bottom: 1px solid #444;
+    padding: 10px;
+}*/
+
+.no-decoretion {
+    text-decoration: none;
+}
+
+a.no-decoretion:hover {
+    text-decoration: none !important;
+}
+
+.title-news-inside span {
+    height: 50px;
+}
+
+#fileupload {
+    margin: 0;
+}
+
+#fileupload-form .fileinput-text {
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    margin-left: -52px;
+}
+
+#profile-form .select2-drop * {
+    font-size: 13px;
+}
+
+#profile-form .select2-container {
+    width: 400px !important;
+    margin: 0 0 0 20px;
+}
+
+#profile-form .select2-container .select2-choice {
+    height: 34px;
+    line-height: 34px;
+    background: #ddd;
+}
+
+#profile-form .select2-drop-mask,
+#profile-form .select2-results,
+#profile-form .select2-search,
+#profile-form .select2-drop-active {
+    background: #ddd;
+}
+
+#profile-form .select2-container .select2-choice .select2-arrow b {
+    background-position: 0 4px;
+}
+
+#profile-form .select2-chosen {
+    font-size: 14px;
+}
+
+.financi-head .left {
+    height: 100%;
+}
+
+.history {
+    height: 119px;
+}
+
+.financi-head .left .count {
+    line-height: 80px;
+}
+
+.chat-messages {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.mail-review-block .button-green {
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.command-sp .default:hover .title-bl {
+    text-decoration: none;
+    font-size: 10px;
+    color: #fff;
+}
+
+.command-sp .command-bl:hover .title-bl {
+    text-decoration: none;
+    color: #fff;
+}
+
+.quick-game-creation-form-right-side textarea {
+    height: 200px;
+}
+
+.main-enter .enter-help {
+    height: 55px;
+}
+
+.game-create-btn-block button {
+    width: 200px;
+    height: 40px;
+}
+
+.game-create-btn-block p {
+    width: 740px;
+}
+
+#index_chat_textarea:disabled {
+    color: #888;
+}
+
+.btn-sbm-green {
+    margin: 20px 0;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.btn-invite {
+    width: 200px !important;
+    float: right;
+    height: 30px;
+    line-height: 28px;
+}
+
+.dialog-send-invite {
+    width: 960px;
+}
+
+.dialog-send-invite.scrool-active {
+    width: 979px;
+}
+
+.dialog-send-invite.scrool-active .scroll-select {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.chat-messages-tbl,
+.chat-form form {
+    border-top: 1px solid #191A1E;
+}
+.make_bet_player .player_status.offline{    
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.button-green.add-group.left-group-bl{
+    float: left;
+    width: 80px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.button-green.add-group.right-group-bl{
+    float: right;
+    width: 80px;
+    margin-left: 5px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.button-green.add-group.two-line-text{
+    box-sizing: border-box;
+    padding-top: 8px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.moderator{
+    position: fixed;
+    width:100%;
+    height:40px;
+    background-color:rgb(17,17,19);
+    top:0;
+    z-index: 99999;
+    text-align: center;
+}
+
+.moderator ul{
+    display: table;
+    width: 960px;
+    margin:  0 auto;
+    text-align: left;
+}
+.moderator ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.moderator ul li a{
+    text-decoration: none;
+    font-size:12px;
+    line-height:38px;
+    color:rgb(153,153,153);
+    text-align:left;
+}
+.moderator ul li a:hover{
+   color:red;
+}
+.content-menu-user{
+    width: 100%;
+}
+.content-menu-user tr td{
+    text-align: center;
+}
+.content-menu-user .button-green{
+    font-size:14px;
+    line-height:34px;
+    color:rgb(255,255,255);
+    text-align:center;
+    width: 200px;
+    display: inline-block;
+    height: 34px;
+}
+.banner_pad20{
+    padding: 10px;
+    background-color: #232529;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+.banner_pad20 img{
+    width: 100%;
+}
+
+.games-h1 {
+    box-sizing: border-box;
+    height: auto;
+    font-size: 26px;
+    color: rgb(153,153,153);
+    text-align: center;
+}
+
+.table-games {
+    font-size:14px;
+    line-height:24px;
+    color:rgb(153,153,153);
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.tilte-games {
+    font-size:14px;
+    line-height:24px;
+    color:rgb(153,153,153);
+    margin-top: 20px;
+}
+.filtres-games {
+    min-height: 125px;
+}
+.selectize-control.select-games {
+    max-height: 40px;
+}
+.field-games-type {
+    margin-top: 15px;
+}
+.field-games-bet_type {
+    margin-top: 15px;
+}
+.field-games-set_1 {
+    margin-top: 15px;
+}
+.button-create-game {
+    margin-top: 45px;
+    float: right;
+    width: 200px;
+    height: 50px;
+}

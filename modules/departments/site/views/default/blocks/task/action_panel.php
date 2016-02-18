@@ -1,0 +1,226 @@
+<?
+use modules\tasks\models\TaskUser;
+use yii\helpers\Url;
+use modules\tasks\models\DelegateTask;
+
+$start_m = '';
+$start_d = '';
+
+if(!isset($start_date)) {
+    if($is_my) {
+        $start_date = $task_user->start;
+    }
+    else {
+        if($delegate_task->status <= DelegateTask::$status_offer) {
+            $start_date = $delegate_task->start;
+        }
+        else {
+            $start_date = $task_user->start;
+        }
+    }
+}
+if(!isset($end_date)) {
+    if($is_my) {
+        $end_date = $task_user->end;
+    }
+    else {
+        if($delegate_task->status <= DelegateTask::$status_offer) {
+            $end_date = $delegate_task->end;
+        }
+        else {
+            $end_date = $task_user->end;
+        }
+    }
+}
+$start_date = $task_user->start;
+$end_date = $task_user->end;
+if(!$is_my) {
+    if($delegate_task->status <= DelegateTask::$status_offer) {
+        $start_date = $delegate_task->start;
+    }
+    else {
+        $start_date = $task_user->start;
+    }
+    if($delegate_task->status <= DelegateTask::$status_offer) {
+        $end_date = $delegate_task->end;
+    }
+    else {
+        $end_date = $task_user->end;
+    }
+}
+
+if($start_date != '') {
+    preg_match("#(\d+)-(\d+)-(\d+)#", $start_date,$mathces);
+    if(isset($mathces[2]) && isset($mathces[3])) {
+        $start_m = TaskUser::getMonth($mathces[2]);
+        $start_d = intval($mathces[3]);
+    }
+}
+$end_m = '';
+$end_d = '';
+if($start_date != '') {
+    preg_match("#(\d+)-(\d+)-(\d+)#", $end_date,$mathces);
+    if(isset($mathces[2]) && isset($mathces[3])) {
+        $end_m = TaskUser::getMonth($mathces[2]);
+        $end_d = intval($mathces[3]);
+    }
+}
+
+?>
+
+<div id="status-delegate" data-status="<? if($delegate_task) echo $delegate_task->status; ?>"></div>
+
+<input type="hidden" id="taskuser-start" data-value="<?= $start_date ?>" value="<?= $start_date ?>">
+<input type="hidden" id="taskuser-end" data-value="<?= $end_date ?>" value="<?= $end_date ?>">
+
+<div class="item date">
+    <input type="hidden" id="input-href" name="href" value="none">
+    <? if($is_my || ($delegate_task->status == DelegateTask::$status_inactive)) : ?>
+        <button class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="false" aria-controls="datepicker">
+            <i class="ico-calendar"></i>
+        </button>
+    <? else : ?>
+        <button class="btn btn-primary circle icon static">
+            <i class="ico-calendar"></i>
+        </button>
+    <? endif; ?>
+    <span class="title-value start"><?= $start_d ?></span> <span class="title-caption start"><?= $start_m ?></span> -
+    <span class="title-value end"><?= $end_d ?></span> <span class="title-caption end"><?= $end_m ?></span>
+</div>
+<div class="item time">
+    <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
+        <i class="ico-clock"></i>
+    </button>
+    <? if($is_my) : ?>
+        <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
+            <span id="input-time"><?= $task_user->time ?></span>
+        <? else : ?>
+            <input id="input-time" value="<?= $task_user->time ?>" type="text">
+        <? endif; ?>
+    <? else : ?>
+        <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
+            <input id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>" type="text">
+        <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
+            <span id="input-time"><?= $delegate_task->counter_time ?></span>
+        <? else : ?>
+            <span id="input-time"><?= $task_user->time ?></span>
+        <? endif; ?>
+    <? endif; ?>
+    h
+</div>
+<div class="item cost" style="margin-right: 33px;">
+    <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">$</button>
+    <? if($is_my) : ?>
+        <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
+            <span id="input-price"><?= $task_user->price ?></span>
+        <? else : ?>
+            <input id="input-price" value="<?= $task_user->price ?>" type="text">
+        <? endif; ?>
+    <? else : ?>
+        <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
+            <input id="input-price" data-value="<?= $delegate_task->price ?>" value="<?= $delegate_task->price ?>" type="text">
+        <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
+            <span id="input-price"><?= $delegate_task->counter_price ?></span>
+        <? else : ?>
+            <span id="input-price"><?= $task_user->price ?></span>
+        <? endif; ?>
+    <? endif; ?>
+</div>
+<input type="hidden" id="taskuser-status" name="TaskUser[status]" value="<?= $task_user->status ?>">
+<? if($is_my) : ?>
+    <? if(!$delegate_task || $delegate_task->status <= DelegateTask::$status_offer) : ?>
+        <? if(count($counter_offers) > 0) : ?>
+            <button onclick="return false" data-toggle="collapse" data-target="#counter" aria-expanded="false" aria-controls="counter" class="btn btn-primary offer">Offer <span class="label label-danger circle"><?=count($counter_offers) ?></span></button>
+        <? else : ?>
+            <button class="btn btn-primary offer disabled static">Offer</button>
+        <? endif; ?>
+        <? if($task_user->status != 2) : ?>
+            <button id="btn-delegate" class="btn btn-primary"
+                data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button>
+            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;">Complete</button>
+        <? else : ?>
+            <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Delegate</button>
+            <button id="restart" class="btn btn-success" style="width:93px;">Restart</button>
+        <? endif; ?>
+    <? else : ?>
+        <? if($delegate_task->status == DelegateTask::$status_active) : ?>
+            <form style="display:inline-block;" action="/tasks/paypal/createpayment" id="paypal-form" method="post" target="_blank">
+                <input type="hidden" name="name">
+                <input type="hidden" name="sum">
+                <input type="hidden" value="<?php echo $delegate_task->id?>" name="id">
+                <button id="payment-paypal" onclick="return false" class="btn btn-success payment-btn" style="width:93px;">Fund</button> <!-- this is payment from client -->
+            </form>
+        <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
+            <button class="btn btn-success disabled static payment-btn" style="width:93px;">Payment <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
+        <? endif; ?>
+        <? if($delegate_task->status == DelegateTask::$status_active) : ?>
+            <button style="display:inline-block;" class="btn btn-primary confirn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Reject <br> offer</button>
+        <? else : ?>
+            <button class="btn btn-success disabled static" style="width:93px;">Reject</button>
+        <? endif; ?>
+        <? if($task_user->status != 2) : ?>
+            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
+                class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
+        <? else : ?>
+            Completed
+        <? endif; ?>
+    <? endif; ?>
+<? else : ?>
+    <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
+        <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Offer</button>
+        <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-primary" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
+        <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-success" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
+    <? else : ?>
+        <? if($delegate_task->status == DelegateTask::$status_checked && $task_user->status = 2) : ?>
+            <button id="get_money_confirm" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover">
+                Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
+            </button>
+        <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
+            <button id="get_money" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover" data-trigger="hover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
+                Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
+            </button>
+        <?php else: ?>
+            <button class="btn btn-success disabled static payment-btn" style="width:93px;">Payment</button>
+        <?php endif; ?>
+        <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
+        <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/submit','id' => $delegate_task->id]) ?>'"
+                class="btn btn-success <? if($delegate_task && $delegate_task->status != DelegateTask::$status_payment) echo 'disabled static' ?>" style="width:93px;">Submit</button>
+    <? endif; ?>
+<? endif; ?>
+<a href="#" data-dismiss="modal" class="href-black task-close"></a>
+<div id="payment-form" style="display:none;">
+    <div class="container-fluid">
+        <div class="row">
+            <?php if($is_my): ?>
+                <label for="" class="col-sm-12">Pay with credit card</label>
+            <?php else: ?>
+                <label for="" class="col-sm-4">You will receive</label>
+                <div class="col-sm-8 text-right">
+                    <button class="btn static circle" style="margin:0;">$</button> <span class="money">1000</span>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="row"><label for="" class="col-sm-12" style="text-align:left;">Enter payment information</label></div>
+
+        <div class="row">
+            <label for="" class="col-sm-3" style="text-align: left;margin: 0;padding-right: 0;">Paypal login</label>
+            <div class="col-sm-9 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" name="paypal_login"></div>
+        </div>
+        <div class="row text-center">
+            <button style="margin:10px 0 0 0;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
+            <style type="text/css">
+                [type="submit"] .label{
+                    font-size:10px;
+                    border:1px solid #818588;
+                    border-radius:100% !important;
+                    color: #818588;
+                    z-index: 999999;
+                }
+                [type="submit"]:hover .label{
+                    color:#fff;
+                    border-color:#fff;
+                }
+            </style>
+        </div>
+    </div>
+</div>

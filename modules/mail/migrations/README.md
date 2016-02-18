@@ -1,0 +1,1 @@
+yii migrate/up --migrationPath=@common/modules/mail/migrations

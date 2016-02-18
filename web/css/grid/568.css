@@ -1,0 +1,164 @@
+@media screen and (min-width:568px) and (max-width:768px){
+    .page-header .page-header-top,.page-header .page-header-top .page-logo{
+        height: 40px !important;
+    }
+
+    .page-header .page-header-top .page-logo{
+        margin-left: 0;
+    }
+    .typeSwitch{
+        height: 40px;
+        line-height: 40px;
+    }
+    .typeSwitch label {
+        margin: 0;
+        font-size: 12px;
+        line-height: 40px;
+    }
+    .materials-btn .btn .text{
+        display: none;
+    }
+    .materials-btn .btn .fa{
+        font-size: 2.5em;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        vertical-align: middle;
+    }
+    .materials-btn .btn{
+        text-align: center;
+        padding: 20px 9px;
+    }
+    .materials-btn .btn .badge{
+        top:5px !important;
+        margin-top: 0 !important;
+        right: 15px;
+    }
+    .page-header .page-header-top .top-menu{
+        margin: 0;
+        top:0;
+    }
+    .page-header .page-header-top .page-logo .logo-default{
+        height: 19px;
+        margin: 10px 0 0 45px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li,.page-header .page-header-top .top-menu .navbar-nav > li.dropdown{
+        height: 40px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav li a{
+        /*padding: 0px !important;*/
+    }
+    .page-header .page-header-top .top-menu .navbar-nav .fa-users{
+        font-size: 18px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li a{
+        font-size: 16px;
+    }
+    .switchery{
+        height: 30px;
+    }
+    .switchery > small{
+        height: 28px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > img{
+        height: 33px;
+        margin-top: 3px;
+        padding: 1px;
+        border:1px solid #666;
+    }
+    .page-header .page-header-top{
+        background: #2d3135;
+        border-bottom: 1px solid #000;
+    }
+    .page-header-menu .btn{
+        background: #191c1f;
+        border-left:1px solid #212528;
+        padding: 0;
+        overflow: hidden;
+        height: 40px;
+        width: 70px;
+        text-align: center;
+    }
+    .page-header-menu .btn.active{
+        border-bottom: solid 3px #b787d1;
+    }
+    .page-header-menu .btn .text{
+        display: block !important;
+        /*position: absolute;*/
+        color:#999;
+        z-index: 999;
+        position: relative;
+        font-size: 12px;
+    }
+    .page-header-menu .btn i{
+        font-size: 3em;
+        color: #434548;
+        display: block;
+        position: absolute !important;
+        left:-6px;
+        bottom:-6px;
+        z-index: 0;
+    }
+    .page-header-menu .btn .label{
+        background: none;
+        font-size: 10px;
+        display: inline-block;
+        /*position: absolute;*/
+        color: #999;
+        border:1px solid rgba(153,153,153,0.3);
+        margin: 3px auto;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav .fa-users+span{
+        display: inline-block;
+        font-size: 12px;
+    }
+    .task-title .col1 .btn,.task-title .col2 .btn{
+        margin: 0 5px;
+        width: auto;
+    }
+    .test-start-page{
+        padding: 0px 45px;
+    }
+    .test-start-page .text1{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .test-start-page .text2{
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: normal;
+    }
+    .test-start-page .btn{
+        line-height: 50px !important;
+        font-size: 22px;
+    }
+    .test-start-page .btn-wrap{
+        margin:15px auto;
+        width: 187px;
+    }
+    .test-start-page .skip{
+        font-size:14px;
+    }
+    .page-footer {
+        bottom: 0;
+        font-size: 12px;
+        font-weight: 300;
+        left: 0;
+        padding: 10px 0 2px 22px;
+        position: relative;
+        width: 100%;
+    }
+        .task-title .col1{
+        float: left;
+    }
+    .task-title .col2{
+        float: right;
+    }
+    .task-title{
+        height: 60px;
+    }
+        .page-header .page-header-top .top-menu .navbar-nav > li a span.label-danger{
+        bottom: 0;
+    }
+}

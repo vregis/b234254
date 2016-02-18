@@ -1,0 +1,151 @@
+@media screen and (min-width:1024px) and (max-width:1280px){
+    .page-header-menu .btn{
+        width: 128px;
+        height: 50px;
+        overflow: hidden;
+        font-size: 14px;
+    }
+    .typeSwitch {
+        top: 6px;
+    }
+    .page-header .page-header-menu,.page-header .page-header-top{
+        height: 50px !important;
+    }
+    .page-header .page-header-top .page-logo .logo-default{
+        height: 33px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle{
+       padding: 6px 10px !important;
+    }
+    .hor-menu .btn-group-justified > .btn-group{
+        height: 60px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .dropdown-toggle{
+        position: absolute;
+        bottom: 3px;
+        height: 17px;
+        width:16px !important;
+        left: 50%;
+        margin-left: -8px;
+    }
+    .hor-menu .btn i.fa{
+        border:none;
+    }
+    .hor-menu .btn-group .btn:hover{
+        box-shadow: none !important;
+        border-color:transparent !important;
+    }
+    .hor-menu .btn .text{
+        display: block !important;
+        /* position: absolute; */
+        /*color: #999;*/
+        z-index: 999;
+        position: relative;
+    }
+    .task-title .btn, .title-button{
+        height: 35px;
+        font-size: 14px;
+    }
+    .page-header-menu .btn .text{
+        display: block !important;
+        /*position: absolute;*/
+        color:#999;
+        z-index: 999;
+        position: relative;
+    }
+    .page-header-menu .btn i{
+        font-size: 53px;
+        color: #434548;
+        display: block;
+        position: absolute !important;
+        left:-6px;
+        bottom:-6px;
+        z-index: 0;
+    }
+    .page-header-menu .btn .label{
+        background: none;
+        font-size: 10px;
+        display: inline-block;
+        /*position: absolute;*/
+        color: #999;
+        border:1px solid rgba(153,153,153,0.3);
+        margin: 3px auto;
+    }
+    /*.page-header-menu .btn .label{
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        right: 10px;
+        border-radius: 10px !important;
+        width: 35px;
+    }*/
+    .test-start-page{
+        padding: 0px 40px;
+    }
+    .test-start-page .text1 {
+        font-size: 150px;
+        line-height: 160px;
+        font-weight: 700;
+    }
+    .test-start-page .text2 {
+        font-size: 61px;
+        line-height: 70px;
+        font-weight:700;
+    }
+    .test-start-page .btn-wrap {
+        width: 450px;
+        margin:47px auto;
+    }
+    .test-start-page .btn{
+        line-height: 130px !important;
+        font-size: 47px; 
+    }
+    .test-start-page .skip{
+        font-size:28px;
+    }
+    .page-footer {
+        bottom: 0;
+        font-size: 18px;
+        font-weight: 300;
+        left: 0;
+        padding: 10px 0 7px 22px;
+        position: relative;
+        width: 100%;
+    }
+    .materials-btn .btn .text{
+        display: inline-block;
+        font-size: 14px;
+    }
+    .materials-btn .btn .fa{
+        font-size: 16px;
+        line-height: 40px;
+        margin-top: 0;
+        vertical-align: middle;
+    }
+    .materials-btn .btn{
+        text-align: left;
+        padding: 0px 9px;
+    }
+    .materials-btn .btn .badge{
+        top: 50% !important;
+        margin-top: -10px !important;
+        right: 9px;
+    }
+
+    .page-header .page-header-top .top-menu .navbar-nav > li a span.label-danger {
+        bottom: 6px;
+    }
+    .name-cell {
+        padding-left: 28px !important;
+    }
+    .btn-support{
+        padding: 5px 25px 4px;
+        font-size:15px;
+    }
+    .milestones .panel-heading > *{
+        display: table-cell !important;
+    }
+    .milestones .panel-heading > .info{
+        width:390px !important;
+    }
+}

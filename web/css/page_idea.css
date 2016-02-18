@@ -1,0 +1,185 @@
+/* css modifikation for bsb site */
+
+.b-idea-title
+{
+	color: #333333;
+	text-align: center;
+	margin: 0 0 20px 0;
+	font-size: 42px;
+	text-transform: uppercase;
+	padding: 35px 0 0 0;
+}
+.nopadding
+{
+	padding: 0 !important;
+	width: 48% !important;
+}
+.b-ideablock-wrapper {
+    background: rgba(0, 0, 0, 0) url("../images/bg-idea-wrapper.png") no-repeat scroll center top / contain ;
+    margin: 0 auto;
+    min-height: 650px !important;
+    padding: 5% 0 150px;
+    text-align: center;
+    width: 100%;
+    color: #333333;
+}
+.b-ideablock-head
+{
+	font-size: 38px;
+	font-weight: bold;
+    margin-bottom: 1%;
+    text-transform: uppercase;
+}
+.b-ideablock-text
+{
+	font-size: 28px;
+    margin: 0 0 1%;
+}
+.col-md-6-48
+{
+	width: 48% !important;
+
+}
+.col-md-right
+{
+	float:right !important;
+}
+.b-form-textarea
+{
+	height: 90px !important;
+	resize: none !important;
+}
+
+#idea-form .control-label {
+    color: #428bca;
+    font-size: 22px;
+    min-width: 110%;
+}
+#idea-form .form-control {
+	padding: 5px 50px 0 5px;
+	}
+#idea-form textarea, #idea-form input, #idea-form select {
+    background-color: #f6f9fd;
+    border-radius: 3px !important;
+    border-width: 2px;
+    color: #333333;
+    font-size: 18px;
+    min-height: 53px;
+    overflow: hidden !important;
+}
+#idea-form #idea-name, #idea-form .select2
+{
+	
+	text-transform: uppercase;
+}
+#idea-form .help-block {
+    font-size: 18px;
+
+}
+.b-btn-block-idea {
+    text-align: center;
+}
+#idea-form .b-btn-save, .b-btn-no-idea {
+    display: table;
+    margin: 30px auto;
+}
+.b-btn-no-idea {
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+#idea-form .select2 {
+    background: url("../images/bg-custom-select.png") no-repeat scroll right -54px #f6f9fd;
+    -webkit-appearance: none;
+     /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px; 
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+.select2::-ms-expand {
+  display: none;
+}
+.select2-active {
+    background-position: right 0 !important;
+}
+
+
+
+@media only screen and (max-width: 1450px) {
+.b-ideablock-wrapper {
+
+    padding: 6% 0 150px;
+
+}
+
+}
+
+@media only screen and (max-width: 1281px) {
+.b-ideablock-wrapper {
+    min-height: 510px !important;
+}
+.b-ideablock-head {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+.b-ideablock-text {
+    font-size: 25px;
+    margin: 5px 0 0;
+}
+}
+
+@media only screen and (max-width: 1081px) {
+
+.b-ideablock-text {
+    line-height: 30px;
+}
+
+}
+
+
+@media only screen and (max-width: 991px) {
+.b-ideablock-wrapper {
+    padding: 15% 0 150px;
+}
+.nopadding
+{
+	padding: 0 !important;
+	width: 100% !important;
+}
+.col-md-right
+{
+	float: none !important;
+}
+
+}
+
+@media only screen and (max-width: 641px) {
+.b-ideablock-head {
+    font-size: 35px;
+    margin-bottom: 0;
+
+}
+.b-ideablock-wrapper {
+    padding: 12% 0 150px;
+}
+
+}
+
+@media only screen and (max-width: 510px) {
+.b-ideablock-wrapper {
+    background-size: cover;
+    padding: 30% 0 150px;
+}
+
+.b-ideablock-head {
+    font-size: 35px;
+    margin-bottom: 0;
+
+}
+
+
+}
+

@@ -1,0 +1,450 @@
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* main page styles */
+#wrapper {
+    background-color: #f9f9f9; 
+    min-height: 100%;
+    position: relative;
+}
+#header {
+    background: rgba(0, 0, 0, 0) url("../images/index/bg-header.png") no-repeat scroll center top / contain ;
+    background-size: 100% 100%;
+    height: 932px;
+    position: relative;
+}
+#content {
+    padding-bottom: 100px; /* Height of the footer element */
+    background: #f9f9f9;
+}
+
+
+.b-page-logo {
+    display: block;
+    margin: 20px 0 0 13px;
+    outline: medium none;
+    position: absolute;
+    z-index: 2;
+}
+
+.b-page-logo img {
+    display: block !important;
+    height: 50px !important;
+    max-width: 177px !important;
+    width: 177px !important;
+}
+
+
+#footer {
+    background: #3b434c none repeat scroll 0 0;
+    color: #a2abb7;
+    width:100%;
+    height:100px;
+    position: relative;
+    bottom:0;
+    left:0;
+    padding: 17px 0 17px 22px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+#footer .page-container {
+    display: inline-block;
+    padding: 20px 0 0;
+}
+
+
+.b-btn-small-video {
+    background: rgba(0, 0, 0, 0) url("../images/index/b-btn-small-video.png") no-repeat scroll 50% 0 / contain ;
+    bottom: 10%;
+    display: block;
+    height: 85px;
+    left: 0;
+    margin: 0 auto;
+    max-height: 15%;
+    max-width: 15%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 85px;
+}
+
+.b-header-text {
+    bottom: 15px !important;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute !important;
+    text-align: center;
+    width: 100%;
+}
+.b-img-block
+{
+    width: 100%;
+    position: relative;
+    height: 932px;
+}
+
+.b-img-block img {
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+   /* height: 100% !important;*/
+}
+
+.b-header-circle-wrapper {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    height: 670px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 40px;
+    width: 45%;
+}
+
+.b-header-circle-one, .b-header-circle-two {
+    background: rgba(0, 0, 0, 0) url("../images/index/b-header-circle.png") no-repeat scroll center center / contain ;
+    height: 95%;
+    left: 0;
+    margin: 10% auto 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 95%;
+    z-index: 2;
+      -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.b-header-circle-three-2{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    /*margin:0,auto;*/
+    z-index:2;
+}
+
+.b-header-circle-one-2, .b-header-circle-two-2{
+     background: rgba(0, 0, 0, 0) url("../images/index/b-header-circle.png") no-repeat scroll center center / contain ;
+     width:100%;
+     height: 100%;
+     position:absolute;
+     /*margin:0,auto;*/
+     z-index:1;
+
+ }
+
+.b-header-circle-four-2 {
+    background: rgba(0, 0, 0, 0) url("../images/arrow.png") no-repeat scroll center center / contain ;
+    width:100%;
+    height: 100%;
+    position:absolute;
+    /*margin:0,auto;*/
+    z-index:1;
+
+}
+
+.logosun {
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:1;
+}
+
+/*.b-header-circle-three {
+    /*background: rgba(0, 0, 0, 0) url("/images/arrow.png") no-repeat scroll 70% 10% / contain ;
+    height: 95%;
+    left: 0;
+    margin: 10% auto 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 95%;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.b-header-circle-four {
+    background: rgba(0, 0, 0, 0) url("/images/arrow.png") no-repeat scroll 47% 50% / contain ;
+    height: 95%;
+    left: 0;
+    margin: -25% auto 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}*/
+
+.b-header-circle-content {
+    background: rgba(0, 0, 0, 0) url("../images/index/b-header-circle-content.png") no-repeat scroll center center / contain ;
+    height: 80%;
+    margin: 0 auto;
+    /*max-height: 565px;
+    max-width: 565px;*/
+    position: relative;
+    top: 10%;
+    width: 80%;
+    z-index: 9;
+}
+.b-btn-blue {
+    background-color: #5dc9f0;
+    bottom: 27%;
+    box-sizing: border-box !important;
+    color: #ffffff;
+    display: block;
+    font-family: "Segoe UI";
+    font-size: 28px;
+    left: 0;
+    margin: 0 auto;
+    /*min-width: 190px;*/
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 30%;
+    z-index: 2;
+}
+
+ .b-img-xl, .b-img-l, .b-img-s, .b-img-m, .b-img-p-l, .b-img-5-h, .b-img-p-s, .b-img-p-l, .b-img-p-s, .b-img-5-h, .b-img-5-v
+{
+    display: none;
+}
+.b-img-xl
+{
+    display: block;
+}
+
+.b-img-xl
+{
+
+}
+.b-img-l
+{
+
+}
+.b-img-s
+{
+
+}
+.b-img-m
+{
+
+}
+.b-img-p-l
+{
+
+}
+.b-img-5-h
+{
+
+}
+
+.content-divider
+{
+    background: #e4e4e4;
+    height: 40px;
+}
+
+.b-content-head
+{
+    color: #4a414b;
+    font-size: 48px;
+    text-align: center;
+    padding: 35px 0 0 0;
+}
+
+
+.b-content-block-wrapper {
+    margin: 75px auto 0;
+    max-width: 1170px;
+    min-height: 400px;
+}
+
+.b-content-text-block
+{
+
+}
+.b-content-text-blockL
+{
+     padding: 70px 0 0 0;
+}
+.b-content-text-blockR
+{
+   padding: 90px 0 0 70px !important;
+}
+.b-content-text-blockL3 {
+    padding: 150px 0 0 !important;
+}
+.b-content-text-block4 {
+    padding: 175px 0 0 70px!important;
+}
+
+.b-content-text-head
+{
+    font-size: 46px;
+}
+
+.b-content-text-text
+{
+    font-size: 22px;
+}
+
+.b-content-text-time
+{
+    background: rgba(0, 0, 0, 0) url("../images/index/clock.png") no-repeat scroll left 0 ;
+    padding: 0 0 0 40px;
+    font-size: 36px;
+}
+
+.b-content-img-block img
+{
+ max-width: 100%;
+ margin: 35px 0 0 0;
+}
+
+
+.b-content-img-blockL img
+{
+    float: left;
+}
+.b-content-img-blockR img
+{
+
+    float: right;
+}
+.b-content-img-block4 img {
+    margin: 130px 0 0;
+
+}
+.b-content-step-block {
+    background: rgba(0, 0, 0, 0) url("../images/index/content-step.png") no-repeat scroll center 140px;
+    height: 1480px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 184px;
+    margin: 0 auto;
+}
+.b-btn-blue-start {
+    background-color: #5dc9f0;
+    bottom: 0;
+    box-sizing: border-box !important;
+    color: #ffffff;
+    display: block;
+    font-family: "Segoe UI";
+    font-size: 34px;
+    left: 0;
+    margin: 70px auto 0px;
+    min-width: 190px;
+    padding: 10px 0;
+    position: relative !important;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 332px;
+    top: auto;
+    max-width: 60%;
+}
+.b-btn-blue:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logomain {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+
+}
+

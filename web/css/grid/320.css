@@ -1,0 +1,188 @@
+@media (max-width:413px) {
+    .page-header .page-header-top,.page-header .page-header-top .page-logo{
+        height: 40px !important;
+    }
+    .task-title .col1,.task-title .col2{
+        float: none;
+    }
+    .task-title{
+        height: auto;
+    }
+    .page-header .page-header-top .page-logo{
+        margin-left: 0;
+    }
+    .page-header .page-header-top .page-logo .logo-default{
+        height: 19px;
+        margin: 10px 0 0 30px;
+    }
+    .typeSwitch{
+        height: 40px;
+        line-height: 40px;
+    }
+    .typeSwitch label {
+        margin: 0;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .page-header .page-header-top .top-menu .navbar-nav > li,.page-header .page-header-top .top-menu .navbar-nav > li.dropdown{
+        height: 40px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav li a{
+        padding: 0px 10px !important;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav li .dropdown-menu a{
+        padding: 6px 0 6px 13px !important;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav .fa-users{
+        font-size: 18px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li a{
+        font-size: 16px;
+    }
+    .switchery{
+        /*height: 28px;*/
+    }
+    .switchery > small{
+        height: 28px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > img{
+        height: 33px;
+        margin-top: 3px;
+        padding: 1px;
+    }
+
+    .hor-menu .btn{
+        padding: 0;
+        text-align: center;
+        width:1% !important;
+        display: table-cell !important;
+    }
+    .hor-menu .btn .text{
+        display: none !important;
+    }
+    .hor-menu .btn i{
+        display: block !important;
+        position: relative !important;
+        left: auto;
+        font-size: 16px;
+    }
+    .hor-menu .btn i.fa{
+        font-size: 16px;
+        position: relative;
+        border: 1px solid #fff;
+        border-radius: 50% !important;
+        display: inline-block !important;
+        width: 17px;
+        height: 16px;
+        text-align: center;
+    }
+    .page-header-menu .btn .label{
+        font-size: 10px;
+        display: inline-block !important;
+        margin-top: 3px;
+        position: relative !important;
+    }
+    .task-title .btn, .title-button{
+        width: 90px;
+        padding: 6px 2px;
+        height: 42px;
+    }
+    .task-title {
+        padding: 14px 10px 0;
+        text-align: justify;
+    }
+    .test-start-page{
+        padding: 0px 40px;
+    }
+    .test-start-page .text1{
+        font-size: 45px;
+        line-height: 70px;
+    }
+    .test-start-page .text2,.test-start-page .text3{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .test-start-page .btn{
+        line-height: 50px !important;
+        font-size: 22px;
+    }
+    .test-start-page .btn-wrap{
+        margin:30px auto;
+        width: 187px;
+    }
+    .materials-btn .btn .text{
+        display: none;
+    }
+    .materials-btn .btn .fa{
+        font-size: 2em;
+        position: relative;
+        left: 0;
+        top: 0;
+        vertical-align: middle;
+    }
+    .materials-btn .btn{
+        text-align: center;
+        padding: 15px 9px;
+    }
+    .materials-btn .btn .badge{
+        top:5px !important;
+        margin-top: 0 !important;
+        right: 5px;
+    }
+    .task-body {
+        padding: 15px 15px 15px;
+    }
+    .name-cell{
+        font-size: 16px;
+        padding-left: 24px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li a span.label-danger{
+        bottom: 0;
+    }
+    .portlet.box>.portlet-title {
+        padding-left: 42px;
+    }
+    .btn-support{
+        padding: 0px 15px 0px;
+        font-size:12px;
+         right: 50%;
+        margin-right: -40px;
+        bottom: 3px;
+    }
+    .page-footer {
+        padding: 17px 0 22px 22px;
+    }
+    .page-content.milestones
+    ,.page-content.milestones .well-sm
+    ,.page-content.milestones .container-fluid
+    ,.page-content.milestones .col-sm-12
+    ,.page-content.milestones .row{
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .milestones .panel-heading .panel-title{
+        width: 110px;
+        overflow: hidden;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .milestones .panel-heading{
+        height: auto;
+    }
+    .milestones .panel-heading .info{
+        width:100%;
+        display: block;
+    }
+    .hor-menu .btn-group-justified > .btn-group .btn{
+        height: 30px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .dropdown-toggle{
+        position: relative;
+        height: 30px;
+        width: 100% !important;
+        padding: 0;
+    }
+}

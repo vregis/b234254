@@ -1,0 +1,1841 @@
+/* commandds stylesheet begin */
+
+.command-main-bl{
+    width: 960px;
+    display: table;
+    height: 100%;
+    background-color: red;
+    margin: 0 auto;
+}
+.command-main-left-bl{
+    display: table-cell;
+    width: 240px;
+    background-color:rgb(32,32,35);
+    padding-bottom: 20px;
+    vertical-align: top;
+}
+.command-main-right-bl{
+    display: table-cell;
+    width: 720px;
+    background-color:rgb(49,51,55);
+    vertical-align: top;
+}
+.command-main-top-tbl{
+    display: table;
+    width: 100%;
+    height: 53px;
+    background-color:rgb(45,47,51);
+}
+.command-main-top-td{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0 20px;
+}
+.command-main-top-td .img-flag{
+    display: inline-block;
+    vertical-align: middle;
+}
+.command-main-top-td .name-bl{
+    font-size:14px;
+    font-weight:bold;
+    line-height:14px;
+    color:rgb(255,255,255);
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-left: 11px;
+}
+.command-main-top-td a.name-bl:hover{
+    text-decoration: underline;
+}
+.command-main-top-td .right-bl{
+    float: right;
+}
+.command-main-bl .command-main-info{
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.command-main-info .command-img-bl{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color:rgb(167,167,167);
+    position: relative;
+}
+.command-main-info .command-img-bl .command-lick-bl{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.command-main-info .command-title-bl{
+    background-color:rgba(45,47,51,0.6);
+    height: 25px;
+    padding: 10px;
+    display: block;
+    font-size:11px;
+    line-height:25px;
+    color:rgb(127,133,141);
+}
+.command-main-info .command-title-bl a{
+    font-size:11px;
+    line-height:25px;
+    color:rgb(203,203,203);
+    display: inline-block;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.command-main-info .command-title-bl a:hover{
+    text-decoration: underline;
+}
+.command-main-info .command-btn-green{
+    margin-top: 10px;
+}
+.command-main-info .command-btn-green.active{
+    background-color:rgb(65,73,85) !important;
+    cursor: default;
+}
+.command-main-info .command-btn-green-namber{
+    margin-top: 10px;
+}
+.command-btn-green{
+    display:block;
+    text-decoration:none;
+    width:100%;
+    height:40px;
+    line-height:40px;
+    background-color:rgb(0,157,47);
+    text-align:center;
+    font-size:12px;
+    line-height:40px;
+    color:rgb(255,255,255);
+    border:0;
+    cursor:pointer;
+}
+.command-btn-green:hover{background-color:#00b236;}
+.command-btn-green-namber{
+    display:block;
+    text-decoration:none;
+    width:100%;
+    height:40px;
+    line-height:40px;
+    background-color:rgb(0,157,47);
+    text-align: left ;
+    font-size:12px;
+    line-height:40px;
+    color:rgb(255,255,255);
+    border:0;
+    cursor:pointer;
+    padding-left: 22px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.command-btn-green-namber:hover{background-color:#00b236;}
+.command-btn-green-namber .number-bl{
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color:rgb(0,129,39);
+    vertical-align: top;
+    font-size:12px;
+    font-weight:bold;
+    line-height:40px;
+    color:rgb(0,58,17);
+    text-align:center;
+}
+
+.command-main-option{
+    width: 100%;
+    display: block;
+}
+.command-main-option .name-bl{
+    height: 40px;
+    padding: 0 20px;
+    display: block;
+    background-color:rgba(45,47,51,0.6);
+    font-size:11px;
+    line-height:40px;
+    color:rgb(127,133,141);
+    text-align:left;
+}
+
+.command-btn-sm{
+    background-color:rgb(85,91,99);
+    text-decoration: none;
+    width: 40px;
+    height: 20px;
+    font-size:10px;
+    line-height:20px;
+    color:rgb(255,255,255);
+    float: right;
+    text-align: center;
+    vertical-align:middle;
+}
+.command-main-option .name-bl .command-btn-sm{
+    margin-top: 10px;
+    vertical-align:top;
+}
+.command-btn-sm:hover{
+    opacity: 0.8;
+}
+.command-main-option  .command-main-option-sp{
+    padding:20px;
+    display: table;
+}
+.command-main-option .command-main-option-sp .command-main-option-bl{
+    float: left;
+    width: 40px;
+    text-decoration: none;
+    margin-left: 13px;
+}
+.command-main-option .command-main-option-sp a.command-main-option-bl:hover{opacity: 0.7}
+.command-main-option-sp .command-main-option-bl:nth-child(4n+1){
+    margin-left: 0;
+}
+.command-main-option-sp .command-main-option-bl:nth-child(4n+3){
+    margin-left: 14px;
+}
+
+.command-main-option-sp .command-main-option-bl:nth-child(n+5){
+    margin-top: 10px;
+}
+
+.command-main-option-sp.progress-bl .command-main-option-bl{
+    margin-left: 8px;
+    width: 44px;
+}
+
+.command-main-option-sp.progress-bl .command-main-option-bl:nth-child(4n+3){
+    margin-left: 8px;
+}
+.command-main-option-sp.progress-bl .command-main-option-bl:nth-child(4n+1){
+    margin-left: 0;
+}
+.command-main-left-bl .command-main-date{
+    padding: 0 20px;
+    height: 25px;
+    margin: 0 auto;
+    font-size:11px;
+    line-height:24px;
+    color:rgb(127,133,141);
+    background-color:rgba(45,47,51,0.6);
+    text-align:left;
+}
+.command-main-left-bl .command-main-date span{
+    font-size:11px;
+    color:rgb(203,203,203);
+    margin-left: 5px;
+}
+
+.command-complain-btn{
+    font-size:10px;
+    line-height:30px;
+    color:rgb(127,133,141);
+    text-align:left;
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+}
+a.command-complain-btn:hover{
+    text-decoration: underline;
+}
+.command-menu{
+    background-color:rgb(37,37,41);
+    width: 100%;
+    height: 53px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.command-menu .command-menu-sp{
+    display: inline-block;
+    margin: 0 auto;
+    height: 53px;
+}
+.command-menu .command-menu-sp .command-menu-bl{
+    border-top: 3px solid rgb(37, 37, 41);
+    position: relative;
+    height: 50px;
+
+    float: left;
+    text-decoration: none;
+    font-size:11px;
+    line-height:50px;
+    color:rgb(127,133,141);
+    text-align:center;
+    width: 107px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.command-menu .command-menu-sp .command-menu-bl:hover{
+    color:rgb(255,255,255);
+}
+.command-menu .command-menu-sp .command-menu-bl.active{
+    border-top: 3px solid rgb(213,29,0);
+    color:rgb(255,255,255);
+    cursor: default;
+}
+.command-menu .command-edit{
+    position: absolute;
+    right: 0;
+    top:0;
+    margin-top: 19px;
+    margin-right: 20px;
+    width: 16px;
+    height: 16px;
+}
+.command-h3{
+    font-size:20px;
+    line-height:20px;
+    color:rgb(153,153,153);
+    text-align:left;
+    padding:0 25px 20px 25px;
+    position: relative;
+}
+.command-h3 .command-btn-edit{
+    width: 21px;
+    height: 21px;
+    background-color:rgb(37,37,41);
+    display: block;
+    float: right;
+    right: 0;
+    text-decoration: none;
+}
+.command-btn-edit .icon-command-edit{
+    vertical-align: top;
+    margin: 6px;
+}
+.command-h3.active .command-btn-edit{
+    display: none;
+}
+.command-h3 .command-btn-sm{
+    display: none;
+}
+.command-h3.active .command-btn-sm{
+    display: block;
+}
+.command-stats{
+    width: 680px;
+    height: auto;
+    display: table;
+    background-color:rgb(37,37,41);
+    margin: 0 auto;
+}
+.command-stats .left-td,.command-stats .right-td{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    width: 50%;
+    height: 120px;
+    vertical-align: middle;
+    position: relative;
+}
+.command-stats .right-td{
+    border-left: 1px solid rgb(46,47,52);
+}
+.command-stats-tbl{
+    width: 100%;
+}
+.command-stats-tbl .command-stats-info{
+    padding-left: 30px;
+    width: 70px;
+    vertical-align: top;
+}
+.command-stats-tbl .command-stats-info .name-bl{
+    font-size:12px;
+    font-weight:bold;
+    line-height:18px;
+    color:rgb(255,255,255);
+}
+.command-stats-tbl .command-stats-info .title-bl{
+    font-size:10px;
+    line-height:12px;
+    color:rgb(127,133,141);
+}
+.command-stats-tbl .command-stats-progress{
+    width: 70px;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+.command-stats-tbl .command-stats-option{
+    vertical-align: top;
+}
+.command-stats-option-tbl{
+    width: 105px;
+}
+.command-stats-option-tbl td{
+    font-size:11px;
+    line-height:18px;
+    color:rgb(101,101,101);
+    text-align:left;
+}
+.command-stats-option-tbl td:nth-last-child(1){
+    text-align:right;
+    font-size:11px;
+    line-height:18px;
+    color:rgb(203,203,203);
+}
+.command-stats-option-tbl td.win-bl{color:rgb(9,189,63);}
+.command-stats-option-tbl td.lost-bl{color:rgb(213,29,0);}
+.command-hr{
+    background-color: rgb(37, 38, 42);
+    border: medium none;
+    height: 1px;
+    margin: 30px 0;
+    width: 100%;
+}
+.command-structure-tbl{
+    width: 680px;
+    margin:0 auto ;
+}
+.command-structure-tbl th{
+    font-size:10px;
+    line-height:24px;
+    color:rgb(127,133,141);
+    text-align: left;
+    height: 24px;
+    background-color:rgb(37,37,41);
+    border-bottom: 3px solid rgb(49,51,55);
+}
+
+.command-structure-tbl th:nth-child(1){
+    padding-left: 56px;
+}
+
+.command-structure-tbl tr td{
+    vertical-align: middle;
+    height: 50px;
+    background-color:rgb(37,37,41);
+    border-bottom: 1px solid rgb(49,51,55);
+}
+.command-structure-tbl tr td:nth-child(1){
+    padding-left: 6px;
+}
+.command-structure-tbl tr td:nth-child(2){
+    width: 180px;
+    padding-right: 50px;
+}
+.command-structure-tbl tr td:nth-child(3){
+    width: 150px;
+    vertical-align: top;
+}
+.command-structure-tbl.active th:nth-child(2){
+    padding-right: 0;
+}
+.command-structure-tbl.active tr td:nth-child(3){
+
+    width: 200px;
+}
+.command-structure-tbl .command-user-team-del{display: none;}
+.command-structure-tbl.active .command-user-team-del{
+    float: right;
+    width: 50px;
+    height: 50px;
+    display: block;
+    vertical-align: top;
+    border-left:1px solid rgb(49, 51, 55);
+}
+.command-structure-tbl .selectize-control.select-icon-team{
+    float: left;
+    vertical-align: top;
+    padding-top: 10px;
+}
+.command-user-team-del:hover .icon-command-close{
+    background-position: left bottom;
+}
+.command-user-team-del .icon-command-close{
+    margin-top: 21px;
+    margin-left: 21px;
+}
+.command-ava-bl{
+    width: 100%;
+    display: table;
+    height: 40px;
+}
+.command-ava-bl .ava-img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+.command-ava-bl .flag-bl{
+    width: 36px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.command-ava-bl .name-bl{
+    font-size:13px;
+    line-height:40px;
+    color:rgb(203,203,203);
+    text-align:left;
+    display: table-cell;
+    vertical-align: middle;
+}
+.command-progress-user{
+    width: 130px;
+}
+.command-progress-user .info-bl{
+    font-size:12px;
+    line-height:20px;
+    color:rgb(203,203,203);
+    text-align:left;
+    display: block;
+}
+.command-progress-user .progress-bl{
+    width:100%;
+    background-color:rgb(213,29,0);
+    height: 5px;
+    position: relative;
+}
+.command-progress-user .progress-bl .progres-win{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 5px;
+    width: 0;
+    background-color:rgb(0,169,51);
+    transition: width 1s ease 0s;
+}
+/* select  Role in the team */
+.select-icon-team{
+    width: 140px;
+}
+.select-icon-team .selectize-input{
+    height: 30px;
+    line-height: 30px;
+    background-color:rgb(45,47,51);
+}
+.select-icon-team .selectize-dropdown, .select-icon-team .selectize-input, .select-icon-team .selectize-input input{
+    font-size:12px;
+    line-height:30px;
+    color:rgb(203,203,203);
+    background-color:rgb(45,47,51);
+    border-color:rgb(45,47,51);
+}
+.select-icon-team .selectize-dropdown{
+    border-top: 1px solid rgba(203,203,203, 0.18);
+}
+.select-icon-team .selectize-input{
+    background-image: url("../img/icon-team-select.png");
+}
+.select-icon-team .selectize-input{
+    background-color:rgb(45,47,51) !important;
+}
+.select-icon-team .selectize-dropdown [data-selectable], .select-icon-team  .selectize-dropdown .optgroup-header{
+    padding: 0 8px;
+}
+.select-icon-team .selectize-input .item[data-value="1"]{
+    padding-left: 37px;
+    background-image: url("../img/icon-command-stats1.png");
+    background-position: 2px 8px;
+    background-repeat: no-repeat;
+}
+.select-icon-team .selectize-input .item[data-value="2"]{
+    padding-left: 37px;
+    background-image: url("../img/icon-command-stats2.png");
+    background-position: 2px 8px;
+    background-repeat: no-repeat;
+}
+.select-icon-team .selectize-input .item[data-value="3"]{
+    padding-left: 26px;
+    background-image: url("../img/icon-command-stats3.png");
+    background-position: 2px 8px;
+    background-repeat: no-repeat;
+}
+
+.select-icon-team .selectize-dropdown-content .option[data-value="1"]{
+    padding-left: 45px;
+    background-image: url("../img/icon-command-stats1.png");
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+}
+.select-icon-team .selectize-dropdown-content .option[data-value="2"]{
+    padding-left: 45px;
+    background-image: url("../img/icon-command-stats2.png");
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+}
+.select-icon-team .selectize-dropdown-content .option[data-value="3"]{
+    padding-left: 45px;
+    background-image: url("../img/icon-command-stats3.png");
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+}
+.command-team-stats .item[data-value="1"] {
+    background-image: url("../img/icon-command-stats1.png");
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+}
+
+.command-team-stats .item[data-value="2"] {
+    background-image: url("../img/icon-command-stats2.png");
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+}
+.command-team-stats .item[data-value="3"] {
+    background-image: url("../img/icon-command-stats3.png");
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+}
+/* select Role in the team */
+
+.command-team-add-users{
+    height: 50px;
+    padding: 10px 9px;
+    padding-left: 22px;
+    background-color:rgb(53,55,61);
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 680px;
+    border: 1px dashed rgb(87,91,97);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.command-team-add-users .title-bl{
+    display: inline-block;
+    font-size:11px;
+    line-height:30px;
+    color:rgb(224,224,224);
+    text-align:left;
+}
+.command-team-add-users .command-btn-green{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+}
+.command-team-stats{
+    display: block;
+    margin-top: 10px;
+    width: 140px;
+    background-color:rgb(45,47,51);
+    height: 30px;
+}
+.command-team-stats .item{
+    padding-left: 42px;
+    display: block;
+    font-size:12px;
+    line-height:30px;
+    color:rgb(203,203,203);
+    text-align:left;
+}
+/* commandds stylesheet end */
+
+/* Достижение begin */
+.command-dostizheniy{
+    padding-bottom: 20px;
+}
+.command-dostizheniy-sp{
+    height: 390px;
+    display: block;
+    padding: 0 20px;
+}
+.command-dostizheniy .command-dostizheniy-sp:nth-child(n+2){
+    margin-top: 10px;
+}
+.command-dostizheniy-bl{
+    display: block;
+    width: 100%;
+    height: 390px;
+}
+.command-dostizheniy-sp.count-td-2 .command-dostizheniy-bl{
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.command-dostizheniy-sp.count-td-2 .command-dostizheniy-bl:nth-child(2){
+    padding-left: 10px;
+    padding-right: 0;
+}
+.command-dostizheniy-bl .command-dostizheniy-tbl{
+    width: 100%;
+}
+.command-dostizheniy-bl .command-dostizheniy-tbl td{
+    vertical-align: middle;
+    text-align: center;
+    background-color:rgb(37,37,41);
+    height: 360px;
+}
+.command-dostizheniy-bl .title-bl{
+    display: block;
+    width: 100%;
+    font-size:11px;
+    line-height:30px;
+    color:rgb(127,133,141);
+    text-align:center;
+}
+.command-not-data{
+    background-color:rgb(37,37,41);
+    font-size:12px;
+    line-height:60px;
+    color:rgb(127,133,141);
+    text-align:center;
+    margin: 0 auto;
+    width: 680px;
+    height: 60px;
+}
+.command-h3 .command-btn-sort{
+    float: right;
+    font-size:12px;
+    line-height:20px;
+    color:rgb(203,203,203);
+    text-align:right;
+    text-decoration: none;
+}
+.command-h3 .command-btn-sort:hover{
+    text-decoration: underline;
+}
+.command-btn-sort .icon-command-sort{
+    margin-left: 10px;
+    vertical-align: top;
+    text-decoration: none;
+    float: right;
+    margin-top: 8px;
+}
+
+.command-h3.active .icon-command-sort{
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid rgb(148,153,158);
+    border-top:none;
+}
+
+/* Достижение end */
+/* Command Game begin */
+.command-games-played{
+    width: 680px;
+    margin: 0 auto;
+}
+.command-games-played .date-td{
+    width: 76px;
+    height: 60px;
+    position: relative;
+    background-color:rgb(25,25,27);
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(48,50,54);
+}
+.command-games-played .game-info-td{
+    border-bottom: 1px solid rgb(48,50,54);
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.command-games-played .btn-td{
+    border-bottom: 1px solid rgb(48,50,54);
+    vertical-align: middle;
+    width: 50px;
+}
+.command-games-played .date-td .date-bl{
+    font-size:24px;
+    font-weight:bold;
+    line-height:24px;
+    color:rgb(203,203,203);
+    text-align:center;
+}
+.command-games-played .date-td .month-bl{
+    font-size:10px;
+    line-height:18px;
+    color:rgb(127,133,141);
+    text-align:center;
+}
+.command-games-played .date-td .icon-command-arrow-right{
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid rgb(25, 25, 27);
+    border-top: 8px solid transparent;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right:-8px ;
+    margin-top:21px ;
+}
+.command-games-played .btn-info{
+    display: block;
+    background-color:rgb(45,47,51);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+.command-games-played .btn-info:hover{opacity: 0.7;}
+.command-games-played-info{
+    height: 30px;
+    margin: 0 auto;
+}
+.command-games-played td{
+    background-color:rgb(37,37,41);
+}
+.command-games-played-info .left-command-td{
+    text-align: right;
+}
+.command-games-played-info .info-bl{
+    display: inline-block;
+}
+.command-games-played-info .info-bl .name-bl{
+    font-size:12px;
+    font-weight:bold;
+    line-height:18px;
+    color:rgb(255,255,255);
+    text-align:right;
+    display: block;
+    text-decoration: none;
+}
+.command-games-played-info .info-bl a.name-bl:hover{
+    text-decoration: underline;
+}
+.command-games-played-info .ava-img-bl{
+    display: inline-block;
+    padding:0 10px;
+    vertical-align: top;
+}
+.command-games-played-info .right-command-td{
+    text-align: left;
+}
+.command-games-played-info .result-command-td{
+    width: 80px;
+    font-size:18px;
+    font-weight:bold;
+    line-height:18px;
+    color:rgb(255,255,255);
+    text-align:center;
+    vertical-align: middle;
+}
+.command-games-played-info .result-command-td span{
+    font-size:12px;
+    font-weight:bold;
+    line-height:18px;
+    color:rgb(127,133,141);
+}
+/* Command Game end */
+
+/* command tournament begin */
+.command-tournament{
+    margin-top: 30px;
+    width: 720px;
+}
+.command-tournament-sp{
+    width: 100%;
+    height: auto;
+}
+.command-tournament-sp .command-tournament-bl:nth-child(n+2){
+    padding-top: 14px !important;
+}
+.command-tournament-bl{
+    width: 100%;
+}
+.command-tournament-bl .command-tournament-name{
+    font-size:11px;
+    line-height:22px;
+    color:rgb(127,133,141);
+    text-align:left;
+    display: block;
+    padding: 0 20px;
+}
+.command-tournament-bl .command-tournament-info{
+    position: relative;
+    display: block;
+    height: 120px;
+}
+.command-tournament-bl .command-tournament-info.my-game-active{
+border:1px solid rgb(213,29,0);
+}
+.command-tournament-bl .command-tournament-info .background-bl{
+    opacity: 0.65;
+}
+.command-tournament-bl .command-tournament-info .info-tbl{
+    width: 100%;
+    position: absolute;
+    height: 90px;
+    top: 0;
+    left: 0;
+}
+.command-tournament-bl .command-tournament-info .info-tbl tr td{
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+.command-tournament-bl .command-tournament-info .info-tbl tr td:nth-child(2){
+    width: auto;
+}
+.command-tournament-bl .command-tournament-info .info-tbl .date-bl{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:11px;
+    line-height:18px;
+    color:rgb(255,255,255);
+}
+.command-tournament-bl .command-tournament-info .info-tbl .name-bl{
+    font-size:24px;
+    font-weight:bold;
+    line-height:24px;
+    color:rgb(255,255,255);
+    text-align:center;
+    display: block;
+    width: 100%;
+}
+.command-tournament-bl .command-tournament-info .info-tbl .title-bl{
+    font-size:11px;
+    line-height:18px;
+    color:rgb(255,215,0);
+    text-align:center;
+    width: 100%;
+    display: block;
+
+}
+.command-tournament-bl .command-tournament-info .arrow-info-show{
+    border-top: 1px solid #474749;
+    position: absolute;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: rgba(0,0,0,0.45);
+}
+.command-tournament-bl .command-tournament-info .arrow-info-show:hover{
+    background: rgba(0,0,0,0.65);
+}
+.arrow-info-show .icon-tournament-arrow{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+.command-tournament-bl .command-tournament-info .arrow-info-show .icon-tournament-arrow{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.command-tournament-bl.active .command-tournament-info .arrow-info-show .icon-tournament-arrow{
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+}
+.command-tournament-grid{
+    display: none;
+}
+.command-tournament-bl.active .command-tournament-grid{
+    display: block;
+}
+.command-tournament-grid .command-menu{
+    text-align: left;
+    width: auto;
+}
+.command-tournament-grid .command-menu .command-menu-bl{
+    margin: 0 20px;
+    width: 104px;
+}
+.command-tournament-table{
+    width: 100%;
+    height: 100%;
+}
+.command-tournament-table-th th{
+    width: 180px;
+    padding:10px;
+    border-left: 1px dashed #42464c;
+    border-bottom: 1px dashed #42464c;
+}
+.command-tournament-table-th th:nth-child(1){
+    border-left: none;
+}
+.command-tournament-table-th .name-bl{
+    font-size:12px;
+    line-height:16px;
+    color:rgb(255,255,255);
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.command-tournament-table-th .title-bl{
+    font-size:8px;
+    line-height:12px;
+    color:rgb(127,133,141);
+    text-align:center;
+    display: block;
+    width: 100%;
+}
+.command-tournament-table-td .date-bl{
+    width: 100%;
+    text-align: right;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:10px;
+    line-height:18px;
+    color:rgb(127,133,141);
+}
+.command-tournament-table-td .date-bl span{
+    color:rgb(203,203,203);
+}
+
+.command-tournament-party-tbl{
+    width: 100%;
+    height: auto;
+}
+.command-tournament-party-tbl tr td{
+    padding-top: 13px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.command-tournament-table-td .info-command-bl{
+    width: 100%;
+    display: table;
+    height: 32px;
+    background-color:rgb(32,33,36);
+    cursor: pointer;
+    position: relative;
+}
+
+.command-tournament-table-td .info-command-bl + .info-command-bl {
+    margin-top: 1px;
+}
+.command-tournament-table-td .info-command-bl .ava-img{
+    width: 32px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.command-tournament-party-tbl .info-command-bl .info-bl{
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+    padding:0 3px;
+}
+.command-tournament-party-tbl .info-command-bl .info-bl .name-user{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:11px;
+    line-height:12px;
+    color:rgb(127,133,141);
+    text-align:left;
+    text-decoration: none;
+}
+
+.command-tournament-party-tbl .info-command-bl .info-bl a.name-user:hover{
+    text-decoration: underline;
+}
+.command-tournament-table-td .info-command-bl.active{
+    background-color:rgb(71,72,77);
+}
+.command-tournament-table-td .info-command-bl.active .btn-bl{
+    color: #fff;
+}
+.command-tournament-table-td .info-command-bl.active .icon-command-win{
+    background-position: 0 -10px;
+}
+.command-tournament-table-td .info-command-bl.active .icon-command-lost{
+    background-position: 0 -11px;
+}
+.command-tournament-table-td .info-command-bl.active .info-bl .country-user{
+    color: #fff !important;
+}
+.command-tournament-table-td .info-command-bl.active .info-bl .name-user{
+    color: #fff !important;
+}
+.command-tournament-table-td .info-command-bl.user-win .info-bl .name-user{
+    color:rgb(255,255,255);
+}
+.command-tournament-party-tbl .info-command-bl .info-bl .country-user{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:9px;
+    line-height:12px;
+    color:rgb(127,133,141);
+    text-align:left;
+}
+.command-tournament-party-tbl .info-command-bl .btn-bl{
+    width: 32px;
+    display: table-cell;
+    vertical-align: middle;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:11px;
+    line-height:18px;
+    color:rgb(127,133,141);
+    text-align:center;
+}
+.command-tournament-party-tbl .info-command-bl .btn-bl i{
+    vertical-align: middle;
+}
+.info-command-sp{
+    position: relative;
+    width: 160px;
+    margin: 0 auto;
+}
+.command-tournament-arrow-top{
+    border-right: 1px solid rgb(66, 70, 76);
+    border-top: 1px solid rgb(66, 70, 76);
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+    margin-top: 2px;
+}
+.command-tournament-arrow-bottom{
+    border-right: 1px solid rgb(66, 70, 76);
+    border-bottom: 1px solid rgb(66, 70, 76);
+    height: 6px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -16px;
+    width: 16px;
+}
+.command-tournament-arrow-top.active{
+    border-right: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+    z-index: 10;
+}
+.command-tournament-arrow-bottom.active{
+    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    z-index: 10;
+}
+.tournament-party-1-2 .command-tournament-arrow-top{
+    height: 54px;
+    margin-top: -45px;
+}
+.tournament-party-1-2 .command-tournament-arrow-bottom{
+    height: 54px;
+    margin-bottom: -65px;
+}
+.command-tournament-border{
+    border-left:1px dashed #42464c;
+    border-bottom: 1px solid #42464c;
+    padding-bottom: 20px;
+}
+.command-tournament-table-td .command-tournament-border:nth-child(1){
+    border-left: none;
+}
+.tournament-party-final .command-tournament-arrow-top{
+    height: 150px;
+    margin-top: -142px;
+}
+.tournament-party-final .command-tournament-arrow-bottom{
+    height: 150px;
+    margin-bottom: -161px;
+}
+.command-tournament-border.active .info-command-bl{
+    opacity: 0.5;
+}
+.command-tournament-border.active .info-command-bl.active{
+    opacity: 1;
+}
+
+.info-command-sp.active .info-command-bl{
+    border:1px solid #D51D00;
+    border-bottom: none;
+    height: 31px;
+}
+.info-command-sp.active .info-command-bl + .info-command-bl {
+    border-top: none;
+    border-bottom: 1px solid #D51D00;
+}
+
+.info-command-bl .number-bl{
+    position: absolute;
+    height: 32px;
+    width: 40px;
+    top:0;
+    left: 0;
+    margin-left: -40px;
+    font-family:"Times New Roman", Georgia, Times, serif;
+    font-size:20px;
+    line-height:32px;
+    color:rgb(127,133,141);
+    text-align:center;
+}
+.info-command-bl.info-command-win{
+    background-color:rgb(65,73,85);
+}
+.info-command-bl.info-command-win .icon-command-lost{
+    background-position: 0 -22px;
+}
+.command-tournament-info .my-game{
+    position: absolute;
+    display: none;
+    top:0;
+    right: 0;
+    width: 16px;
+    height: 13px;
+    font-size:10px;
+    line-height:13px;
+    color:rgb(255,255,255);
+    text-align:center;
+    background-color:rgb(213,29,0);
+    z-index: 2;
+}
+.command-tournament-info.my-game-active .my-game{
+    display: block;
+}
+.command-menu-bl .icon-my-game-active{
+    position: absolute;
+    display: block;
+    top:0;
+    right: 0;
+    margin-top: 8px;
+    margin-right: 5px;
+    width: 16px;
+    height: 13px;
+    font-size:10px;
+    line-height:13px;
+    color:rgb(255,255,255);
+    text-align:center;
+    background-color:rgb(213,29,0);
+    z-index: 2;
+}
+.command-tournament-information{
+    width: 100%;
+    margin: 30px 0;
+}
+.command-tournament-information .left-td{
+    width: 170px;
+    border-left: 1px dashed rgb(58,60,66);
+    padding-left: 20px;
+    vertical-align: top;
+}
+.command-tournament-information .right-td{
+    vertical-align: top;
+    padding-left: 0;
+}
+.command-tournament-information .left-td .command-btn-green{
+    width: 130px;
+    height: 30px;
+    font-size:12px;
+    line-height:30px;
+    margin-top: 30px;
+}
+.command-tournament-information .left-td .info-tbl{
+    width: 130px;
+}
+
+.command-tournament-information .left-td .info-tbl tr td:nth-child(1){
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:11px;
+    line-height:18px;
+    color:rgb(127,133,141);
+    text-align:left;
+    padding-left: 5px;
+}
+.command-tournament-information .left-td .info-tbl tr td:nth-child(2){
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:12px;
+    line-height:18px;
+    color:rgb(255,255,255);
+    text-align:left;
+}
+.command-tournament-information .title-tbl{
+    width: 100%;
+}
+.command-tournament-information .title-tbl tr:nth-child(n+2) td{
+    padding-top: 22px;
+}
+.command-tournament-information .title-tbl tr td:nth-child(1){
+    width: 70px;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:11px;
+    line-height:18px;
+    color:rgb(127,133,141);
+    text-align:left;
+}
+.command-tournament-information .title-tbl tr td:nth-child(2){
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:12px;
+    line-height:18px;
+    color:rgb(203,203,203);
+    text-align:left;
+    padding-right: 20px;
+}
+/* command tournament end */
+.command-add-new{
+    padding: 0 20px;
+    text-align: center;
+}
+.command-add-new .name-bl{
+    width: 100%;
+    padding: 21px 0;
+    font-size:11px;
+    line-height:18px;
+    color:rgb(255,255,255);
+    text-align:center;
+}
+.dialog-command-new .name-bl{
+    background-color:rgb(49,51,55);
+    height: 53px;
+    font-size:18px;
+    line-height:53px;
+    color:rgb(203,203,203);
+    text-align:left;
+    padding: 0 30px;
+}
+.dialog-command-new form.account-option-form{
+    width: 100%;
+    display: block;
+    padding-bottom: 0;
+}
+.dialog-command-new form div.input-lines input{
+    height: 30px;
+}
+.dialog-command-new form div.input-lines label{
+    line-height: 30px;
+}
+.dialog-command-new form .input-lines{
+    height: 50px;
+}
+.dialog-command-new form .input-lines.form-textarea{
+    height: 160px;
+}
+.dialog-command-new form .input-lines.form-textarea label{
+    padding-top: 0;
+}
+.dialog-command-new form.account-option-form .form-submit{
+    background-color:rgb(45,47,51);
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+.dialog-command-new .form-submit .form-submit-close{
+    line-height: 100px;
+}
+.dialog-command-new form .form-submit button{
+    height: 40px;
+    width: 200px;
+    font-size:14px;
+    line-height:40px;
+    color:rgb(255,255,255);
+    text-align:center;
+    margin: 30px 0;
+}
+/* add command dialog */
+
+/* command list begin */
+.command-form-list-tbl{
+    width: 100%;
+    display: table;
+    height: 90px;
+}
+.command-form-list-tbl .left-td{
+    display: table-cell;
+    width: 140px;
+    vertical-align: top;
+}
+.command-form-list-tbl .right-td{
+    display: table-cell;
+    vertical-align: top;
+}
+.command-form-list-tbl .left-td .name-bl{
+    font-size:20px;
+    line-height:20px;
+    color:rgb(153,153,153);
+    text-align:left;
+    padding-left: 20px;
+    padding-top: 47px;
+}
+.form-command-search{
+    width: 100%;
+    padding-top: 16px;
+    background-color:rgb(49,51,55);
+}
+form.form-command-search div.input-lines input{
+    width: 200px;
+    height: 30px;
+}
+form.form-command-search div.input-lines.input-vertical{
+    float: left;
+    width: 200px;
+    margin-left: 20px;
+    vertical-align: top;
+}
+form.form-command-search .form-submit button{
+    width: 100px;
+    height: 30px;
+    font-size:14px;
+    line-height:30px;
+    color:rgb(255,255,255);
+    text-align:center;
+}
+form.form-command-search .form-submit{
+    float: right;
+    vertical-align: top;
+    padding: 0;
+    padding-top: 28px;
+    padding-right: 20px;
+    height: auto;
+    width: 100px;
+    background:none;
+}
+form.form-command-search .birth_select_d{
+    width: 200px;
+}
+
+.command-spisok-all-sp{
+    width: 100%;
+    background-color: #111214;
+}
+
+.command-spisok-all-sp .command-spisok-all-tbl{
+    display: table;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color:rgb(37,37,41);
+
+}
+.command-spisok-all-tbl .img-td{
+    width: 140px;
+    display: table-cell;
+    vertical-align: top;
+}
+.command-spisok-all-tbl .img-td .img-bl{
+    width: 140px;
+    height: 120px;
+    overflow: hidden;
+}
+.command-spisok-all-tbl .info-td{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.command-spisok-all-tbl .info-td .name-bl{
+    font-size:20px;
+    font-weight:bold;
+    line-height:24px;
+    color:rgb(255,255,255);
+    text-align:left;
+}
+.command-spisok-all-tbl .info-td .title-bl{
+    font-size:11px;
+    font-weight:bold;
+    line-height:9px;
+    color:rgb(255,255,255);
+    text-align:left;
+}
+.command-spisok-all-tbl .info-td .title-bl .img-flag{
+    float: left;
+    margin-right: 10px;
+}
+.command-spisok-all-tbl .raiting-td{
+    width: 316px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.command-spisok-all-tbl .raiting-td .win-rate-bl{
+    display: inline-block;
+    height: 92px;
+}
+.command-spisok-all-tbl .raiting-td .rating-bl{
+    display: inline-block;
+    margin-left: 30px;
+    height: 92px;
+    position: relative;
+}
+.command-spisok-all-tbl .raiting-td .command-people-count{
+    display: inline-block;
+    margin-left: 30px;
+    height: 92px;
+}
+.command-spisok-all-tbl .raiting-td .title-bl{
+    display: block;
+    padding-top: 10px;
+    font-size:10px;
+    font-weight:bold;
+    line-height:12px;
+    color:rgb(255,255,255);
+    text-align:center;
+}
+.command-spisok-all-tbl .command-people-count .img-bl{
+    width: 70px;
+    height: 70px;
+    background-image: url("../img/icon-command-people.png");
+    background-repeat: no-repeat;
+    display: block;
+    font-size:24px;
+    font-weight:bold;
+    line-height:70px;
+    color:rgb(255,255,255);
+    text-align:center;
+
+}
+/* command list end */
+
+
+/* add command dialog */
+
+/* tournament */
+.tournament-win-bl{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90px;
+    overflow: hidden;
+    z-index: 3;
+}
+.bg_black{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.tournament-win-bl .win-status-bl{
+    float: left;
+    width: 192px;
+    height: 70px;
+    border: 1px solid rgba(0,0,0,0.5);
+    font-size:24px;
+    font-weight:bold;
+    line-height:70px;
+    color:rgb(191,191,191);
+    text-align:center;
+    margin-left: 22px;
+    margin-top: 10px;
+}
+.tournament-win-bl .win-status-one{
+    float: left;
+    width: 192px;
+    height: 70px;
+    border: 1px solid rgba(255,198,0,0.2);
+    margin-left: 48px;
+    margin-top: 10px;
+}
+
+.tournament-win-bl .win-status-user{
+    float: right;
+    width: 192px;
+    height: 70px;
+    margin-right: 22px;
+    margin-top: 10px;
+}
+.tournament-win-bl .option-bl{
+    width: 100%;
+    display: table;
+    height: 38px;
+}
+.tournament-win-bl .option-bl .img-bl{
+    width: 32px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.tournament-win-bl .option-bl .title-bl{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size:30px;
+    font-weight:bold;
+    line-height:30px;
+    color:rgb(255,255,255);
+}
+.tournament-win-bl .option-bl .title-bl span{
+    font-size:16px;
+    line-height:129%;
+    color:rgb(127,127,127);
+    text-align:center;
+    font-weight: normal;
+}
+.icon-tour-win{
+    font-size: 0;
+    line-height: 0;
+    background-image: url("../img/win1.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width:26px;
+    height:26px;
+    border:  1px solid rgb(32,33,36);
+    background-color: rgb(20,22,24);
+}
+
+.tournament-win-bl .info-command-bl{
+    display: table;
+    width: 100%;
+    height: 32px;
+    background-color: rgb(32,33,36);
+}
+.tournament-win-bl .info-command-bl .ava-img{
+    display: table-cell;
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+}
+.tournament-win-bl .info-command-bl .info-bl{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding-left: 5px;
+}
+.tournament-win-bl .info-command-bl .info-bl .name-user{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:11px;
+    line-height:12px;
+    color:rgb(255,255,255);
+    text-align:left;
+    text-decoration: none;
+}
+.tournament-win-bl .info-command-bl .info-bl a.name-user:hover{
+    text-decoration: underline;
+}
+.tournament-win-bl .info-command-bl .info-bl .country-user {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 9px;
+    line-height: 12px;
+    color: rgb(127, 133, 141);
+    text-align: left;
+}
+
+.win-status-user .win-user .win-status{
+    width: 100%;
+    height: 32px;
+    display: block;
+}
+.win-status-user .win-user .win-status{
+    height: 32px;
+    display: block;
+    float: left;
+    width: 34px;
+    font-size:24px;
+    font-weight:bold;
+    line-height:20px;
+    color:rgb(255,255,255);
+    text-align:center;
+}
+.win-status-user .win-user .win-status span{
+    font-size:11px;
+    line-height:12px;
+    color:rgb(127,133,141);
+    text-align:center;
+    display: block;
+}
+
+.win-status-user .win-user  .info-command-bl{
+    width: 158px;
+    height: 32px;
+    background-color: rgb(32,33,36);
+}
+
+.win-status-user .win-user:nth-child(1){
+    margin-bottom: 6px  ;
+}
+.command-tournament-bl.tournament-close .command-tournament-info .info-tbl{
+    display: none;
+}
+
+.team-spisok-for-admin-delete{
+    width: auto;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.image-indevelopment-warning{
+    position: absolute;
+    top:0;
+    opacity: 0.9;
+    left: 0;
+}
+
+.team-spisok-for-admin-delete .btn-bl a:hover .icon-command-lost{
+    background-position: 0 -11px;
+}
+
+.team-spisok-for-admin-delete .info-command-bl{
+    cursor: default;
+}
+
+
+.team-status-users{
+    width: 100%;
+    background-color:rgb(41,41,45);
+    padding-bottom: 20px;
+}
+.team-status-users th{
+    border-top: 1px solid rgb(65,70,76);
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:12px;
+    line-height:20px;
+    color:rgb(255,215,0);
+    text-align:center;
+    background-color:rgb(35,35,39);
+}
+.team-status-users th:nth-child(1){
+    width: 44px;
+}
+.team-status-users{
+    border-bottom: 1px solid rgb(65,70,76);
+}
+.team-status-users td{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:12px;
+    line-height:20px;
+    color:rgb(203,203,203);
+    text-align:center;
+}
+.team-status-users .accepted{
+    color:rgb(0,169,51);
+}
+.team-status-users .no-accepted{
+    color:rgb(213,29,0);
+}
+.team-status-users tr:nth-child(2n+2) td{
+    background-color:rgb(45,47,51);
+}
+.v-razrabotke{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(37, 37, 41);
+    opacity: 0.9;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-top: 19px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* commands icon begin */
+.icon-star{
+    font-size: 0;
+    line-height: 0;
+    background-image: url("../img/icon-star.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width:24px;
+    height:13px;
+}
+.icon-command-plus{
+    width: 38px;
+    height: 38px;
+    background-color:rgb(53,55,61);
+    background-image: url("../img/icon-plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    border: 1px dashed #5B5F65;
+}
+.icon-command-option{
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-option.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+}
+.icon-command-option:hover{
+    background-position: left bottom;
+}
+.icon-command-edit{
+    width: 11px;
+    height: 11px;
+    background-image: url("../img/icon-edit.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-command-stats{
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon-command-stats1.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-command-select-arrow{
+    width: 7px;
+    height: 4px;
+    background-image: url("../img/icon-command-select-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-command-close{
+    width: 9px;
+    height: 9px;
+    background-image: url("../img/icon-command-close.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-command-close:hover{
+    background-position: left bottom;
+}
+.icon-command-sort{
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgb(148,153,158);
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.command-icon-info{
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/command-icon-info.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-tournament-arrow{
+    width: 15px;
+    height: 9px;
+    background-image: url("../img/tournament_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-command-win{
+    width: 15px;
+    height: 9px;
+    background-image: url("../img/icon-command-win.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+.icon-command-lost{
+    width: 10px;
+    height: 10px;
+    background-image: url("../img/icon-command-lost.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+
+
+/* commands icon end */
+
+

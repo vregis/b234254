@@ -1,0 +1,49 @@
+<?php
+
+namespace modules\tasks\models;
+
+use modules\departments\models\Idea;
+use Yii;
+
+
+class UserTool extends \yii\db\ActiveRecord
+{
+    const STATUS_CREATION = 0;
+    const STATUS_IDEA_FILLED = 1;
+    const STATUS_IDEA_BENEFITS_FILLED = 2;
+    const STATUS_IDEA_SHARED = 3;
+
+    public $name;
+
+    public function rules()
+    {
+        return [
+        ];
+    }
+    public static function tableName()
+    {
+        return 'user_tool';
+    }
+
+    public static function getCurrentUserTool($is_my = false) {
+        $user_id = Yii::$app->user->identity->id;
+        if(!isset(Yii::$app->session['tool_id']) || $is_my) {
+            $userTool = UserTool::find();
+            $userTool->where(['user_id' => $user_id]);
+            $userTool = $userTool->one();
+            if($userTool && !$is_my) {
+                Yii::$app->session['tool_id'] = $userTool->id;
+            }
+        }else {
+            $userTool = UserTool::find()->where(['id' => Yii::$app->session['tool_id']])->one();
+        }
+        return $userTool;
+    }
+    public static function createUserTool() {
+        $userTool = new UserTool();
+        $userTool->user_id = Yii::$app->user->id;
+        $userTool->create_date = '' . date('Y-m-d h:i:s');
+        $userTool->save();
+        return $userTool;
+    }
+}

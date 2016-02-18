@@ -1,0 +1,703 @@
+2014-11-14 14:26:55 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:26:55 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57628'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964415.8733
+    'REQUEST_TIME' => 1415964415
+]
+2014-11-14 14:26:57 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:26:57 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57645'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964417.3451
+    'REQUEST_TIME' => 1415964417
+]
+2014-11-14 14:26:58 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:26:58 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57646'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964418.7484
+    'REQUEST_TIME' => 1415964418
+]
+2014-11-14 14:27:29 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:27:29 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57645'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964449.7187
+    'REQUEST_TIME' => 1415964449
+]
+2014-11-14 14:27:32 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:27:32 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57628'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964452.0896
+    'REQUEST_TIME' => 1415964452
+]
+2014-11-14 14:27:37 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:27:37 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57646'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964457.3739
+    'REQUEST_TIME' => 1415964457
+]
+2014-11-14 14:27:39 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:27:39 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '9468'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57646'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964459.9261
+    'REQUEST_TIME' => 1415964459
+]
+2014-11-14 14:27:48 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:27:48 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415964410
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '80197'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '57686'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415964468.5151
+    'REQUEST_TIME' => 1415964468
+]
+2014-11-14 14:43:54 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:43:54 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415965383
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '80197'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '58099'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415965434.4654
+    'REQUEST_TIME' => 1415965434
+]
+2014-11-14 14:43:56 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:43:56 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415965383
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '80197'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '58439'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415965436.3074
+    'REQUEST_TIME' => 1415965436
+]
+2014-11-14 14:43:57 [91.221.53.131][133][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /var/www/mirprost.com/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /var/www/mirprost.com/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/mirprost.com/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(frontend\modules\core\components\LangRequest))
+#2 /var/www/mirprost.com/frontend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2014-11-14 14:43:57 [91.221.53.131][133][-][info][application] $_GET = [
+    'q' => '/image/favicon.ico'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'pq1c5k1m3lps37i8gpj8k8cpb4'
+    '_identity' => '5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s:48:\"[133,\"8013FmYVZ5vYv2e6pgx-k7_9fSjx78I-\",1209600]\";'
+    '_csrf' => '785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as:32:\"RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd\";'
+]
+
+$_SESSION = [
+    '__id' => 133
+    '__flash' => []
+    'last_online_update' => 1415965383
+    'last_comment' => 1415960254
+    '__captcha/core/default/captcha' => '80197'
+    '__captcha/core/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/image/favicon.ico&'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/image/favicon.ico'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '58226'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=pq1c5k1m3lps37i8gpj8k8cpb4; _identity=5a08e3d440d2286dd6a80e98eef24a7c98f517b29f1c37b6b00a73caf3198a70s%3A48%3A%22%5B133%2C%228013FmYVZ5vYv2e6pgx-k7_9fSjx78I-%22%2C1209600%5D%22%3B; _csrf=785aad1b9f5a9d2ebd9bfa4a1515d3da21403a2d11143b004795e6516f96dd5as%3A32%3A%22RVqEQr5UZ92ctqSJv3eC0TgD8FXpVcgd%22%3B'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415965437.4827
+    'REQUEST_TIME' => 1415965437
+]
+2014-11-14 14:47:30 [91.221.53.131][117][lljaeqvtkav029vk6avujh7380][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function delete() on a non-object' in /var/www/mirprost.com/frontend/modules/message/controllers/DefaultController.php:270
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-11-14 14:47:30 [91.221.53.131][117][lljaeqvtkav029vk6avujh7380][info][application] $_GET = [
+    'q' => '/message/delete-by-id'
+]
+
+$_POST = [
+    '_csrf' => 'cXktdE41WDc/CxkYGEENXBsmXEYDAStNID19TB1DYHAHL344CWMpYw=='
+    'id' => '5'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'lljaeqvtkav029vk6avujh7380'
+    '_csrf' => '50e9476ef3c9a43277dca68d06198a257317533204a46238018edbb738dfe85bs:32:\"Nr4lVtUkj_q2M4szQDP8Sv8GvVSLGVqT\";'
+    '_identity' => '4d45eaeece51cea086a3028dfcf389120dc792e7b3b7545d92cad5821cbc5ccbs:48:\"[117,\"K1u7WJEMUxP21VuptJeNFa_6GcoVZHEs\",1209600]\";'
+]
+
+$_SESSION = [
+    '__id' => 117
+    '__flash' => []
+    'last_online_update' => 1415965624
+    'last_comment' => 1415960330
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'q=/message/delete-by-id&'
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '73'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/message/delete-by-id'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/mirprost.com/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.6.2'
+    'REMOTE_ADDR' => '91.221.53.131'
+    'REMOTE_PORT' => '54861'
+    'SERVER_ADDR' => '195.114.6.41'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'mirprost.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/mirprost.com/frontend/web/index.php'
+    'HTTP_HOST' => 'mirprost.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://mirprost.com/dota/game/5'
+    'HTTP_CONTENT_LENGTH' => '73'
+    'HTTP_COOKIE' => 'PHPSESSID=lljaeqvtkav029vk6avujh7380; _csrf=50e9476ef3c9a43277dca68d06198a257317533204a46238018edbb738dfe85bs%3A32%3A%22Nr4lVtUkj_q2M4szQDP8Sv8GvVSLGVqT%22%3B; _identity=4d45eaeece51cea086a3028dfcf389120dc792e7b3b7545d92cad5821cbc5ccbs%3A48%3A%22%5B117%2C%22K1u7WJEMUxP21VuptJeNFa_6GcoVZHEs%22%2C1209600%5D%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1415965650.72
+    'REQUEST_TIME' => 1415965650
+]

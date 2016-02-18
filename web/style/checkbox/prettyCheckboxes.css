@@ -1,0 +1,67 @@
+﻿/* ------------------------------------------------------------------------
+ This you can customize
+------------------------------------------------------------------------- */
+
+ label.checkbox span.holder {
+  height: 20px; /* Total height of your checkbox image */
+  width:20px;
+  background: url(images/checkbox2.png) 0px 0px no-repeat; /* Path to your checkbox image */
+  cursor:pointer;
+ } 
+ label.checkbox span.holder.marked {
+  height: 40px; /* Total height of your checkbox image */
+  background:  url(images/checkbox2.png) -1px 0px no-repeat; /* Path to your checkbox image */
+  border:#7cbe0c solid 1px;
+  }
+ label.radio span.holder {
+   height: 15px; /* Total height of your radio buttons image */
+   background: url(images/radio.png) 0px 0px no-repeat; /* Path to your radio button image */
+   cursor:pointer;
+ }
+.form-iwant-checkbox .label-check span.holderWrap span.holder:hover{background-position: 0 -42px;}
+ label.radio:hover span.holder { background-position: 0 -16px; } /* Background position on mouseover */
+ label.checked span.holder,
+ label.checked span.holder,
+ label.checked:hover span.holder,
+ label.checked:hover span.holder {background-position: 0px -21px !important;} /* Background position when checked */
+ label.radio.checked span.holder{background-position: 0 -16px !important;}
+
+
+/* ------------------------------------------------------------------------
+ Customize at your own risk
+------------------------------------------------------------------------- */
+
+	label.list {float: left; clear: left;	margin: 0 0 5px 0;}
+	
+	label.inline {float: left; margin: 0 10px 0 0;}
+	
+  input.hiddenCheckbox {position: absolute; left: -10000px; /* Hide the input */}
+	
+  label.reg-aut-chbx span.holderWrap {
+			display: block;
+			position: relative;
+			margin-right: 5px;
+			overflow: hidden;
+      margin-top: -2px;
+		}
+  
+		label.prettyCheckbox span.holderWrap {
+			display: block;
+			position: relative;
+			margin-right: 5px;
+			overflow: hidden;
+		}
+
+		
+		label.prettyCheckbox span.holder {
+			display: block;
+			position: absolute;
+			eft: 0;
+		}
+    label.reg-aut-chbx span.holder {
+			display: block;
+			position: absolute;
+			top:-2px; left: 0;
+		}
+    
+.new-filter-radio .holderWrap span{width:15px;height:15px; display:inline-block; background-position:top;}

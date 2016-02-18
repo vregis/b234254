@@ -1,0 +1,176 @@
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 213070643396561453456994532
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345875540625
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534589791365
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345911955663
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345915338344
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345974839205
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345980438277
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345990755085
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345991829041
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345997347452
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145345999528736
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346000427123
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346001860649
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.rfTdqqq3onp6XR99251Gbbq6kbU7Si4Cu2JFm17qSifxOAcmsjAAR9gz_OKMYOse._m8DG87HGkRIyJrXrtMowuA6uDG
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346033962174
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534607497656
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346074963868
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346074919735
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346311323395
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346319860362
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346336516604
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534634531362
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.Bk7ifqnyOQCe1-Vw0pMjj3RtsTPccvkOqvSr3BtN9YhRofvWQRx91n3ioWeof8p0.ZqJ02H8yVYZ2ZYcYY69Wz8CFqNW
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346368037760
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346406955145
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346412061843
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346461542457
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346474833195
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346494911652
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346498721808
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 213070643396561453465084345
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534651238931
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534651682311
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346521737409
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346527512115
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346547329885
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346554550624
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346559516569
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346571341812
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534658196161
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346589250830
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 2130706433965614534658988474
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346590954761
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346600940073
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346602641617
+PayPal\Core\PPHttpConnection: Adding header Content-Type: application/json
+PayPal\Core\PPHttpConnection: Adding header User-Agent: PayPalSDK/rest-sdk-php 0.6.0 (lang=PHP;v=5.5.28;bit=32;os=Windows_NT_6.2;machine=i586;openssl=1.0.1p;curl=7.42.1)
+PayPal\Core\PPHttpConnection: Adding header Authorization: Bearer A101.IaalQT0J3XSWvBYEGVmOobJssF-Ivp_CDomF-VbrZNEghHnfw-eV48kESEuVzCkN.TNkk4m3T6ecniVNSk-fwPU5hVX8
+PayPal\Core\PPHttpConnection: Adding header PayPal-Request-Id: 21307064339656145346613233811

@@ -1,0 +1,46 @@
+.pop-up {
+    width: 500px;
+    box-shadow: 0 0 0 1000px rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 50%;
+    margin-top: 100%;
+    left: 50%;
+    margin-left: -250px;
+    z-index: 9;
+    color: #fff;
+    display: none;
+}
+
+.popup-close {
+    width: 50px;
+    top: 35px;
+    right: 30px;
+    opacity: 0.8;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+}
+
+.popup-l1, .popup-l2 {
+    width: 6px;
+    height: 50px;
+    margin-top: -5px;
+    margin-left: 22px;
+    background: #fff;
+}
+
+.popup-l1 {
+    float: left;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.popup-l2 {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.popup-close:hover {
+    opacity: 1;
+}

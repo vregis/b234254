@@ -1,0 +1,136 @@
+/* ===========================================
+    показывать до/после определенного разрешения по ширене
+    .show-xxx (показывать до)
+    .showxxx- (показывать после)
+ */
+@media (max-width: 320px) {
+    .show320- {
+        display: none !important;
+    }
+}
+@media (min-width: 321px) {
+    .show-320 {
+        display: none !important;
+    }
+}
+@media (max-width: 375px) {
+    .show375- {
+        display: none !important;
+    }
+}
+@media (min-width: 376px) {
+    .show-375 {
+        display: none !important;
+    }
+}
+@media (max-width: 480px) {
+    .show480- {
+        display: none !important;
+    }
+}
+@media (min-width: 481px) {
+    .show-480 {
+        display: none !important;
+    }
+}
+@media (max-width: 568px) {
+    .show568- {
+        display: none !important;
+    }
+}
+@media (min-width: 569px) {
+    .show-568 {
+        display: none !important;
+    }
+}
+@media (max-width: 667px) {
+    .show667- {
+        display: none !important;
+    }
+}
+@media (min-width: 666px) {
+    .show-667 {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .show768- {
+        display: none !important;
+    }
+}
+@media (min-width: 769px) {
+    .show-768 {
+        display: none !important;
+    }
+}
+@media (max-width: 1024px) {
+    .show1024- {
+        display: none !important;
+    }
+}
+@media (min-width: 1025px) {
+    .show-1024 {
+        display: none !important;
+    }
+}
+@media (max-width: 1280px) {
+    .show1280- {
+        display: none !important;
+    }
+}
+@media (min-width: 1281px) {
+    .show-1280 {
+        display: none !important;
+    }
+}
+@media (max-width: 1366px) {
+    .show1366- {
+        display: none !important;
+    }
+}
+@media (min-width: 1367px) {
+    .show-1366 {
+        display: none !important;
+    }
+}
+@media (max-width: 1680px) {
+    .show1680- {
+        display: none !important;
+    }
+}
+@media (min-width: 1681px) {
+    .show-1680 {
+        display: none !important;
+    }
+}
+@media (max-width: 1920px) {
+    .show1920- {
+        display: none !important;
+    }
+}
+@media (min-width: 1921px) {
+    .show-1920 {
+        display: none !important;
+    }
+}
+/* ===========================================
+ */
+ .col-full{
+     width:100%;
+ }
+ .col20{
+     width:20%;
+     float: left;
+ }
+ .col25{
+     width:25%;
+     float: left;
+ }
+ .col33{
+     width:33%;
+     float: left;
+ }
+ .col50{
+     width:50%;
+     float: left;
+ }

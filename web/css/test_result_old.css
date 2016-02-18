@@ -1,0 +1,438 @@
+body .page-header .page-header-top {
+    height: 68px !important;
+}
+
+body .page-header .page-header-top .menu-toggler {
+    display: none !important;
+}
+
+.page-content-wrapper {
+    background-color: #77a0d3 !important;
+}
+
+.page-content {
+    background: rgba(0, 0, 0, 0) url("../images/tests/bg-test-result.png") no-repeat scroll center top !important;
+    margin: 0 auto !important;
+    max-width: 1920px;
+    min-height: 870px !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.btn-next-wrapper {
+    background: #d4e5fa none repeat scroll 0 0;
+    bottom: 0 !important;
+    float: none !important;
+    height: 100px;
+    left: 0;
+    position: absolute !important;
+    width: 100% !important;
+}
+
+
+.btn-next-wrapper .btn {
+    background: #428bca none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    font-size: 28px;
+    height: 55px;
+    line-height: 58px;
+    margin-top: 22px;
+    margin-left: 40px;
+    text-align: center;
+    min-width: 120px;
+}
+.btn-next-wrapper .btn.btn-primary {
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+
+.portlet-result
+{
+
+}
+.page-content .portlet > .portlet-title > .caption {
+    color: #333333;
+    display: inline-block;
+    float: none;
+    font-size: 36px;
+    line-height: 45px;
+    padding: 25px 0 0 0;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+.portlet > .portlet-title {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+}
+.portlet-result .caption
+{
+
+}
+
+.portlet-result > .portlet-body {
+
+
+}
+#chart_result {
+    position: relative;
+    margin: 0 auto;
+    top: 170px;
+    left: 25px;
+    height: 400px;
+}
+.ico-cloud-wrapper {
+    color: #ffffff;
+    font-size: 220px;
+    position: absolute;
+    right: 90px;
+    top: 70px;
+}
+.ico-cloud-big {
+    font-size: 0.9em;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+}
+.result-cloud {
+    color: #333333;
+    font-size: 21px;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+.result-cloud-head {
+    color: #ffffff;
+    font-family: "Segoe UI",sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 5px 20px 0;
+    text-align: center;
+}
+.result-cloud-table {
+    display: table;
+    width: 100%;
+}
+.result-cloud-text {
+    display: table-cell;
+    vertical-align: middle;
+    color: #333333;
+    font-family: "Segoe UI",sans-serif;
+    font-size: 16px;
+    padding: 7px 7px 0 7px;
+    text-align: center;
+    height: 108px;
+}
+.result-cloud-link {
+    color: #23418d;
+    font-family: "Segoe UI",sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+.result-cloud-dropdown {
+    margin-left: 90px;
+    position: absolute !important;
+    bottom: 16px;
+    font-size: 14px;
+}
+
+.dropdown.result-cloud-dropdown.open {
+    position: static;
+}
+.dropdown.result-cloud-dropdown.open .dropdown-menu {
+    display:table;
+    width: 250px;
+    text-align: left;
+    line-height: 1.4;
+    left:-100px;
+    right:0;
+    padding: 5px;
+    color: #34495e;
+}
+.dropdown.result-cloud-dropdown>.btn-group>.dropdown-menu:before, .dropdown.result-cloud-dropdown>.dropdown-toggle>.dropdown-menu:before, .dropdown.result-cloud-dropdown>.dropdown-menu:before {
+    left: 130px !important;
+}
+.dropdown.result-cloud-dropdown>.btn-group>.dropdown-menu:after, .dropdown.result-cloud-dropdown>.dropdown-toggle>.dropdown-menu:after, .dropdown.result-cloud-dropdown>.dropdown-menu:after {
+    left: 131px !important;
+}
+.dropdown-menu>li {
+    display: table-cell;
+}
+
+.next-step {
+    position	: absolute;
+    width: calc(100% - 370px);
+    font-size: 25px;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 100px;
+    display: table;
+}
+.next-step-grey {
+    position	: absolute;
+    top: -100px;
+    margin-bottom: 100px !important;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: table;
+}
+.next-step-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1281px) {
+
+    .portlet-result > .portlet-body {
+
+    }
+
+    .portlet-result {
+        background-size: 90% 100%;
+    }
+    .result-cloud-wrapper {
+        background-size: contain !important;
+        height: 200px;
+        overflow: hidden;
+        padding: 60px 40px 40px 53px;
+        position: absolute;
+        right: 5%;
+        top: 4%;
+        width: 300px;
+    }
+    .result-cloud-head {
+        font-size: 24px;
+
+    }
+    .result-cloud {
+        font-size: 18px;
+    }
+
+
+}
+
+@media only screen and (max-width: 981px) {
+    .page-content .portlet > .portlet-title > .caption {
+        padding: 25px 0 0px 70px;
+
+    }
+    .portlet-result {
+        margin: 0 !important;
+    }
+    .portlet-result > .portlet-body {
+
+
+    }
+    .result-cloud-wrapper {
+        right: 2%;
+    }
+}
+
+
+@media only screen and (max-width: 801px) {
+    .page-content {
+        background: rgba(0, 0, 0, 0) url("../images/tests/bg-test-result-portrait.png") no-repeat scroll center top / 100% auto !important;
+        margin: 0 0 120px !important;
+        min-height: 1150px !important;
+    }
+
+    .page-content .portlet > .portlet-title > .caption {
+        font-size: 30px;
+
+    }
+    .page-content-wrapper {
+        background-color: #77a0d3 !important;
+        min-height: 880px !important;
+    }
+    .btn-next-wrapper {
+        bottom: -125px !important;
+    }
+
+    .portlet-result > .portlet-body {
+
+        max-width: 100%;
+    }
+    #chart_result {
+        height: 300px;
+        left: 15px;
+        top: 360px;
+    }
+
+    .ico-cloud-wrapper {
+        font-size: 220px;
+        top: 170px;
+    }
+    .result-cloud {
+        top: 18px;
+    }
+
+}
+
+
+@media only screen and (max-width: 781px) {
+    .page-content {
+
+    }
+
+    .portlet-result {
+        height: 600px;
+    }
+
+    #chart_result {
+        left: 15px;
+        top: 335px;
+
+    }
+
+    .btn-next-wrapper .btn {
+        margin-left: 20px;
+    }
+    .btn-next-wrapper .btn.btn-primary {
+        margin-right: 20px;
+    }
+
+    @media only screen and (max-width: 641px) {
+
+        .page-content {
+            min-height: 1005px !important;
+        }
+
+        .page-content .portlet > .portlet-title > .caption {
+            position: relative;
+            top: -20px;
+        }
+
+        #chart_result {
+            top: 270px;
+            left: 2em;
+        }
+
+    }
+
+    @media only screen and (max-width: 601px) {
+
+        .page-content {
+            min-height: 1005px !important;
+        }
+
+        .portlet-result > .portlet-body {
+
+        }
+        .btn-next-wrapper .btn {
+            margin-left: 10px;
+        }
+        .btn-next-wrapper .btn.btn-primary {
+            margin-right: 10px;
+        }
+
+    }
+    @media only screen and (max-width: 581px) {
+        #chart_result {
+            top: 160px;
+            left: 15px;
+        }
+
+        .page-content .portlet > .portlet-title > .caption {
+            padding: 36px 0 0 135px;
+            font-size: 20px;
+        }
+
+        .ico-cloud-wrapper {
+            font-size: 220px;
+            right: 30px;
+            top: 77px;
+        }
+    }
+
+
+    @media only screen and (max-width: 451px) {
+        .page-content {
+            background-size: 140% 80% !important
+        }
+
+        .portlet-result {
+            min-height: 740px !important;
+        }
+
+        .portlet-result > .portlet-body {
+            margin: 30px auto 0 !important;
+            max-width: 100%;
+        }
+
+        #chart_result {
+            left: 15px;
+            top: 210px;
+        }
+
+        .ico-cloud-wrapper {
+            top: 135px;
+        }
+
+        .result-cloud-head {
+            font-size: 20px;
+            padding: 5px 35px 0;
+
+        }
+    }
+
+
+    @media only screen and (max-width: 381px) {
+
+        .page-content {
+            background-size: auto 70%;
+
+        }
+
+        .page-content .portlet > .portlet-title > .caption {
+            padding: 36px 0 0 50px;
+        }
+
+        #chart_result {
+            left: 15px;
+            top: 195px;
+        }
+    }
+
+
+    @media only screen and (max-width: 330px) {
+        .page-content-wrapper {
+            min-height: 860px !important;
+        }
+
+        .page-content {
+            background-size: 140% 95% !important;
+            min-height: 790px !important;
+        }
+
+        .portlet-result > .portlet-body {
+            margin: 20px auto 0 !important;
+        }
+
+        #chart_result {
+            left: 15px;
+            top: 170px;
+        }
+
+        .ico-cloud-wrapper {
+            top: 95px;
+        }
+    }
+}
+
+.page-footer {
+    bottom: 0;
+    font-size: 12px;
+    font-weight: 300;
+    left: 0;
+    margin: 0 0 -20px;
+    padding: 17px 0 17px 22px;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}

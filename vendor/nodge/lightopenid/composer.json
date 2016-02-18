@@ -1,0 +1,24 @@
+{
+	"name": "nodge/lightopenid",
+	"description": "Lightweight PHP5 library for easy OpenID authentication.",
+	"keywords": ["openid", "authentication"],
+	"homepage": "https://github.com/Nodge/LightOpenID",
+	"type": "library",
+	"license": "MIT License",
+	"authors": [
+		{
+			"name": "Mewp",
+			"homepage": "http://code.google.com/p/lightopenid/"
+		},
+		{
+			"name": "Ignat Ignatov",
+			"homepage": "https://github.com/iignatov/LightOpenID"
+		}
+	],
+	"require": {
+		"php": ">=5.2"
+	},
+	"autoload": {
+		"classmap": ["openid.php", "provider/provider.php"]
+	}
+}

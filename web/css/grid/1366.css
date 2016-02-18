@@ -1,0 +1,98 @@
+@media screen and (min-width:1366px){
+    .page-header-menu .btn i{
+        font-size: 24px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        left: 10px;
+        /*top: 50%;*/
+        margin-top: -5px;
+    }
+    .page-header .page-header-menu,.page-header .page-header-top,.page-header-menu .btn{
+        height: 50px !important;
+    }
+    .page-header-menu .btn .text{
+        display: inline-block;
+    }
+    .materials-btn .btn{
+        height: 45px;
+    }
+    .page-header-menu .btn .label{
+        right:10px;
+    }
+    .task-title .col1 .btn, .task-title .col2 .btn {
+        margin: 0 5px;
+    }
+    .test-start-page{
+        padding: 0px 40px;
+    }
+    .test-start-page .skip{
+        font-size:26px;
+    }
+    .test-start-page .text1{
+        font-size: 141px;
+    }
+    .test-start-page .text2 {
+        font-size: 55px;
+        line-height: 65px;
+        font-weight:700;
+    }
+    .test-start-page .btn-wrap {
+        width: 410px;
+        margin:47px auto 15px;
+    }
+    .test-start-page .btn{
+        line-height: 110px !important;
+        font-size: 42px; 
+    }
+    .materials-btn .btn .text{
+        display: inline-block;
+        font-size: 14px;
+    }
+    .materials-btn .btn .fa{
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .materials-btn .btn{
+        text-align: left;
+        padding: 0px 9px;
+    }
+    .materials-btn .btn .badge{
+        top: 50% !important;
+        margin-top: -10px !important;
+        right: 9px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .dropdown-toggle{
+        position: absolute;
+        width: auto !important;
+        padding: 0 8px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .btn{
+        height: 45px !important;
+    }
+    .hor-menu .btn .text{
+        display: inline-block !important;
+        font-size: 13px;
+    }
+    .hor-menu .btn i{
+        font-size: 18px !important;
+        color: #fff;
+        position: absolute !important;
+        left: 8% !important;  
+    }
+
+    .hor-menu .btn i.fa {
+         font-size: 20px; 
+         position: relative !important; 
+         border: none !important; 
+         display: inline-block !important;  
+         text-align: center; 
+    }
+}
+@media screen and (min-width:1367px){
+    .task-body .col{
+        width:1249px;
+        padding: 0 2em;
+    }
+}

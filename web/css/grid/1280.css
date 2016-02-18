@@ -1,0 +1,151 @@
+@media screen and (min-width:1280px){
+    .page-header-menu .btn{
+        width:1%;
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .typeSwitch {
+        top: 6px;
+    }
+    .page-header .page-header-top .page-logo .logo-default {
+        height: 33px;
+    }
+    .page-header .page-header-menu, .page-header .page-header-top {
+        height: 50px !important;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle{
+       padding: 6px 10px !important;
+    } 
+    .page-header-menu .btn{
+        height: 50px;
+    }
+    .page-header-menu .btn i{
+        font-size: 24px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        /*margin-right: 6px;*/
+        position: absolute;
+        left: 10px;
+        /*top: 50%;*/
+        margin-top: -5px;
+    }
+    .page-header-menu .btn .text{
+        display: inline-block;
+    }
+    .page-header-menu .btn .label{
+        position: absolute;
+        /*top: 50%;*/
+        margin-top: 17px;
+        width: 35px;
+        border-radius: 10px !important;
+        right:10px;
+    }
+
+    .test-start-page{
+        padding: 0px 40px;
+    }
+    .test-start-page .skip{
+        font-size:26px;
+    }
+    .test-start-page .text1{
+        font-size: 141px;
+        line-height: 151px;
+    }
+    .test-start-page .text2 {
+        font-size: 55px;
+        line-height: 60px;
+        font-weight:700;
+    }
+    .test-start-page .btn-wrap {
+        width: 410px;
+        margin:47px auto 15px;
+    }
+    .test-start-page .btn{
+        line-height: 110px !important;
+        font-size: 42px; 
+    }
+    .page-footer {
+        bottom: 0;
+        font-size: 18px;
+        font-weight: 300;
+        left: 0;
+        padding: 10px 0 7px 22px;
+        position: relative;
+        width: 100%;
+    }
+    .materials-btn .btn .text{
+        display: inline-block;
+        font-size: 14px;
+    }
+    .materials-btn .btn .fa{
+        font-size: 16px;
+        line-height: 40px;
+                margin-top: 0;
+        vertical-align: middle;
+    }
+    .materials-btn .btn{
+        text-align: left;
+        padding: 0px 9px;
+    }
+    .materials-btn .btn .badge{
+        top: 50% !important;
+        margin-top: -10px !important;
+        right: 9px;
+    }
+        .page-header .page-header-top .top-menu .navbar-nav > li a span.label-danger {
+        bottom: 6px;
+    }
+        .btn-support{
+        padding: 5px 25px 4px;
+        font-size:15px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .dropdown-toggle{
+        position: absolute;
+        width: auto !important;
+        padding: 0 4px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .btn{
+        height: 45px !important;
+    }
+    .hor-menu .btn .text{
+        display: inline-block !important;
+        font-size: 10px;
+    }
+    .hor-menu .btn i.fa {
+         font-size: 16px; 
+         position: relative !important; 
+         border: none !important; 
+         display: inline-block !important;  
+         text-align: center; 
+         
+    }
+     .page-content.milestones{
+        padding: 20px !important;
+     }
+    .page-content.milestones .well-sm{
+        padding: 10px 6px !important;
+    }
+    .page-content.milestones .container-fluid{
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-top: 10px !important;
+    }
+    .page-content.milestones .col-sm-12{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .page-content.milestones .row{
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+        .milestones .panel-heading > *{
+        display: table-cell !important;
+    }
+    .milestones .panel-heading > .info{
+        width:390px !important;
+    }
+}

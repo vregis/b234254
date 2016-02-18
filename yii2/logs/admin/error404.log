@@ -1,0 +1,1530 @@
+2015-12-11 15:51:22 [127.0.0.1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: departments/specialization/view' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#1 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('departments/spe...', Array)
+#2 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#2 {main}
+2015-12-11 15:51:21 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_COOKIE = [
+    '_ym_uid' => '1448258330111244493'
+    '_csrf' => '423890fbed7c435bd1f41722e0ec99e87dc2b185a58605bcd1e93e169b7c562aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hvS9pMoQaN6BKip97DeZp5hnHxvBeaVa\";}'
+    'XDEBUG_SESSION' => '17744'
+    'PHPSESSID' => 'o41lmqcltvskipklp1hig140s1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/departments/view?id=1'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.toozza.ru'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25'
+    'HTTP_REFERER' => 'http://bsb.toozza.ru/admin/departments/view?id=6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ym_uid=1448258330111244493; _csrf=423890fbed7c435bd1f41722e0ec99e87dc2b185a58605bcd1e93e169b7c562aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hvS9pMoQaN6BKip97DeZp5hnHxvBeaVa%22%3B%7D; XDEBUG_SESSION=17744; PHPSESSID=o41lmqcltvskipklp1hig140s1'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.5\\ext;c:\\openserver\\modules\\php\\PHP-5.5\\pear;c:\\openserver\\modules\\php\\PHP-5.5\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.5;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'bsb.toozza.ru'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/bsb.toozza.ru/web/admin.php'
+    'REMOTE_PORT' => '11339'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'REDIRECT_URL' => '/admin/departments/specialization/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/admin/departments/specialization/view?id=10'
+    'SCRIPT_NAME' => '/admin.php'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1449838281.882
+    'REQUEST_TIME' => 1449838281
+    'argv' => [
+        0 => 'id=10'
+    ]
+    'argc' => 1
+]
+2015-12-12 09:43:05 [127.0.0.1][1][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#3 {main}
+2015-12-12 09:43:05 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    '_ym_uid' => '1448258330111244493'
+    '_csrf' => 'd3f2317d215fa541fb635207e2a793b9108e311ace5cd9d4a14e6960d3e0910aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tcJoQFv7tKhYyLhVAlpajX8qawh9Ndt0\";}'
+    'PHPSESSID' => '5mebl92q2cap4vivjmujjcm8i6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/tasks/update?id=11'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.toozza.ru'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ym_uid=1448258330111244493; _csrf=d3f2317d215fa541fb635207e2a793b9108e311ace5cd9d4a14e6960d3e0910aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tcJoQFv7tKhYyLhVAlpajX8qawh9Ndt0%22%3B%7D; PHPSESSID=5mebl92q2cap4vivjmujjcm8i6'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.5\\ext;c:\\openserver\\modules\\php\\PHP-5.5\\pear;c:\\openserver\\modules\\php\\PHP-5.5\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.5;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'bsb.toozza.ru'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/bsb.toozza.ru/web/admin.php'
+    'REMOTE_PORT' => '14072'
+    'REDIRECT_URL' => '/admin/tasks/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/tasks/'
+    'SCRIPT_NAME' => '/admin.php'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1449902585.533
+    'REQUEST_TIME' => 1449902585
+    'argv' => []
+    'argc' => 0
+]
+2015-12-12 09:50:24 [127.0.0.1][1][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#3 {main}
+2015-12-12 09:50:24 [127.0.0.1][1][-][info][application] $_POST = [
+    'draw' => '1'
+    'columns' => [
+        0 => [
+            'data' => '0'
+            'name' => ''
+            'searchable' => 'true'
+            'orderable' => 'true'
+            'search' => [
+                'value' => ''
+                'regex' => 'false'
+            ]
+        ]
+        1 => [
+            'data' => '1'
+            'name' => ''
+            'searchable' => 'false'
+            'orderable' => 'false'
+            'search' => [
+                'value' => ''
+                'regex' => 'false'
+            ]
+        ]
+    ]
+    'order' => [
+        0 => [
+            'column' => '0'
+            'dir' => 'asc'
+        ]
+    ]
+    'start' => '0'
+    'length' => '10'
+    'search' => [
+        'value' => ''
+        'regex' => 'false'
+    ]
+    '_csrf' => 'VFhCeWZFLmMgOwgWNwNYVCATKiAfCUY1FTQyGAwdFhI1LypAKCFaUw=='
+    'model' => '\\modules\\tasks\\models\\Task'
+    'keys' => '[\"name\"]'
+    'action_string' => '%d'
+]
+
+$_COOKIE = [
+    '_ym_uid' => '1448258330111244493'
+    '_csrf' => 'd3f2317d215fa541fb635207e2a793b9108e311ace5cd9d4a14e6960d3e0910aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tcJoQFv7tKhYyLhVAlpajX8qawh9Ndt0\";}'
+    'PHPSESSID' => '5mebl92q2cap4vivjmujjcm8i6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/tasks/update?id=11'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.toozza.ru'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '685'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://bsb.toozza.ru'
+    'HTTP_X_CSRF_TOKEN' => 'VFhCeWZFLmMgOwgWNwNYVCATKiAfCUY1FTQyGAwdFhI1LypAKCFaUw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://bsb.toozza.ru/admin/tasks/update?id=57'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ym_uid=1448258330111244493; _csrf=d3f2317d215fa541fb635207e2a793b9108e311ace5cd9d4a14e6960d3e0910aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tcJoQFv7tKhYyLhVAlpajX8qawh9Ndt0%22%3B%7D; PHPSESSID=5mebl92q2cap4vivjmujjcm8i6'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.5\\ext;c:\\openserver\\modules\\php\\PHP-5.5\\pear;c:\\openserver\\modules\\php\\PHP-5.5\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.5;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'bsb.toozza.ru'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/bsb.toozza.ru/web/admin.php'
+    'REMOTE_PORT' => '14112'
+    'REDIRECT_URL' => '/admin/tasks/$url'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/tasks/$url'
+    'SCRIPT_NAME' => '/admin.php'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1449903024.804
+    'REQUEST_TIME' => 1449903024
+    'argv' => []
+    'argc' => 0
+]
+2015-12-25 16:54:43 [127.0.0.1][2][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: tasks/default/update_video' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update_video', Array)
+#1 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('tasks/default/u...', Array)
+#2 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#2 {main}
+2015-12-25 16:54:42 [127.0.0.1][2][-][info][application] $_POST = [
+    'row' => '1'
+    'name' => 'gff'
+    'id' => '38'
+    '_csrf' => 'aDJFNnBrM0c9ASJzQBh5cwNoIlpGCkUXDmIjAxo6QiwPVX1yNBxZIA=='
+]
+
+$_COOKIE = [
+    '_ym_uid' => '1448258330111244493'
+    'PHPSESSID' => 'h5loutjq62lh2ql1anl5v6riv7'
+    'XDEBUG_SESSION' => '12487'
+    '_csrf' => 'ea74a88ec373f308cf64a4840e5f8d0f47d6639e30e18f0bcbbb5ce9c3ae6c24a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U3gE0sJ4kZgl6avPfPf5jQqkgg8DDwjg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tests/start'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.toozza.ru'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '83'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://bsb.toozza.ru'
+    'HTTP_X_CSRF_TOKEN' => 'aDJFNnBrM0c9ASJzQBh5cwNoIlpGCkUXDmIjAxo6QiwPVX1yNBxZIA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://bsb.toozza.ru/admin/tasks/update?id=38'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ym_uid=1448258330111244493; PHPSESSID=h5loutjq62lh2ql1anl5v6riv7; XDEBUG_SESSION=12487; _csrf=ea74a88ec373f308cf64a4840e5f8d0f47d6639e30e18f0bcbbb5ce9c3ae6c24a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U3gE0sJ4kZgl6avPfPf5jQqkgg8DDwjg%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.5\\ext;c:\\openserver\\modules\\php\\PHP-5.5\\pear;c:\\openserver\\modules\\php\\PHP-5.5\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.5;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'bsb.toozza.ru'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/bsb.toozza.ru/web/admin.php'
+    'REMOTE_PORT' => '17259'
+    'REDIRECT_URL' => '/admin/tasks/update_video'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/tasks/update_video'
+    'SCRIPT_NAME' => '/admin.php'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1451051682.932
+    'REQUEST_TIME' => 1451051682
+    'argv' => []
+    'argc' => 0
+]
+2015-12-25 16:55:09 [127.0.0.1][2][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: tasks/default/delete_video' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('delete_video', Array)
+#1 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('tasks/default/d...', Array)
+#2 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#2 {main}
+2015-12-25 16:55:09 [127.0.0.1][2][-][info][application] $_POST = [
+    'row' => '1'
+    'id' => '38'
+    '_csrf' => 'aDJFNnBrM0c9ASJzQBh5cwNoIlpGCkUXDmIjAxo6QiwPVX1yNBxZIA=='
+]
+
+$_COOKIE = [
+    '_ym_uid' => '1448258330111244493'
+    'PHPSESSID' => 'h5loutjq62lh2ql1anl5v6riv7'
+    'XDEBUG_SESSION' => '12487'
+    '_csrf' => 'ea74a88ec373f308cf64a4840e5f8d0f47d6639e30e18f0bcbbb5ce9c3ae6c24a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U3gE0sJ4kZgl6avPfPf5jQqkgg8DDwjg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tests/start'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.toozza.ru'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '74'
+    'HTTP_ORIGIN' => 'http://bsb.toozza.ru'
+    'HTTP_X_CSRF_TOKEN' => 'aDJFNnBrM0c9ASJzQBh5cwNoIlpGCkUXDmIjAxo6QiwPVX1yNBxZIA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://bsb.toozza.ru/admin/tasks/update?id=38'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ym_uid=1448258330111244493; PHPSESSID=h5loutjq62lh2ql1anl5v6riv7; XDEBUG_SESSION=12487; _csrf=ea74a88ec373f308cf64a4840e5f8d0f47d6639e30e18f0bcbbb5ce9c3ae6c24a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U3gE0sJ4kZgl6avPfPf5jQqkgg8DDwjg%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.5\\ext;c:\\openserver\\modules\\php\\PHP-5.5\\pear;c:\\openserver\\modules\\php\\PHP-5.5\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.5;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'bsb.toozza.ru'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/bsb.toozza.ru/web/admin.php'
+    'REMOTE_PORT' => '17267'
+    'REDIRECT_URL' => '/admin/tasks/delete_video'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/tasks/delete_video'
+    'SCRIPT_NAME' => '/admin.php'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1451051708.988
+    'REQUEST_TIME' => 1451051708
+    'argv' => []
+    'argc' => 0
+]
+2015-12-25 17:08:09 [127.0.0.1][2][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: tasks/default/sdfsdf' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('sdfsdf', Array)
+#1 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('tasks/default/s...', Array)
+#2 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\bsb.toozza.ru\yii2\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\bsb.toozza.ru\web\admin.php(23): yii\base\Application->run()
+#2 {main}
+2015-12-25 17:08:09 [127.0.0.1][2][-][info][application] $_COOKIE = [
+    '_ym_uid' => '1448258330111244493'
+    'PHPSESSID' => 'h5loutjq62lh2ql1anl5v6riv7'
+    '_csrf' => 'ea74a88ec373f308cf64a4840e5f8d0f47d6639e30e18f0bcbbb5ce9c3ae6c24a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U3gE0sJ4kZgl6avPfPf5jQqkgg8DDwjg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tests/start'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.toozza.ru'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25'
+    'HTTP_REFERER' => 'http://bsb.toozza.ru/admin/tasks/update?id=37'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ym_uid=1448258330111244493; PHPSESSID=h5loutjq62lh2ql1anl5v6riv7; _csrf=ea74a88ec373f308cf64a4840e5f8d0f47d6639e30e18f0bcbbb5ce9c3ae6c24a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U3gE0sJ4kZgl6avPfPf5jQqkgg8DDwjg%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.5\\ext;c:\\openserver\\modules\\php\\PHP-5.5\\pear;c:\\openserver\\modules\\php\\PHP-5.5\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.5;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'bsb.toozza.ru'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/bsb.toozza.ru/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/bsb.toozza.ru/web/admin.php'
+    'REMOTE_PORT' => '17512'
+    'REDIRECT_URL' => '/admin/tasks/sdfsdf'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/tasks/sdfsdf'
+    'SCRIPT_NAME' => '/admin.php'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1451052489.75
+    'REQUEST_TIME' => 1451052489
+    'argv' => []
+    'argc' => 0
+]
+2016-01-01 04:11:20 [85.195.226.180][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "istrator/default/index".' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('istrator/defaul...', Array)
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#2 {main}
+2016-01-01 04:11:20 [85.195.226.180][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'HTTP_CONNECTION' => 'close'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator'
+    'REMOTE_PORT' => '26655'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '85.195.226.180'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
+    'UNIQUE_ID' => 'VoXSOMZH5DoAA36yOPoAAACS'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VoXSOMZH5DoAA36yOPoAAACS'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1451610680.02
+    'REQUEST_TIME' => 1451610680
+]
+2016-01-01 16:44:50 [50.186.201.88][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/default/security' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('security', Array)
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/default/se...', Array)
+#2 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#2 {main}
+2016-01-01 16:44:49 [50.186.201.88][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.2.1141001811.1444024770'
+    '_csrf' => '75a3bf8e75a9c34463fb08670785036aba86adbc74ce458b7e232fa54f16999ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"So_TEGqOBl2fBrQReAzYWgyO-Niq_5bw\";}'
+    'PHPSESSID' => 'r1bdcl4mcii7t87lbhpmhr1t24'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin/user/security'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/user/security'
+    'REMOTE_PORT' => '51801'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '50.186.201.88'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9'
+    'HTTP_COOKIE' => '_ga=GA1.2.1141001811.1444024770; _csrf=75a3bf8e75a9c34463fb08670785036aba86adbc74ce458b7e232fa54f16999ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22So_TEGqOBl2fBrQReAzYWgyO-Niq_5bw%22%3B%7D; PHPSESSID=r1bdcl4mcii7t87lbhpmhr1t24'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'VoaC0cZH5DoADpxPUu0AAAJO'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VoaC0cZH5DoADpxPUu0AAAJO'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1451655889.9905
+    'REQUEST_TIME' => 1451655889
+]
+2016-01-01 16:45:07 [50.186.201.88][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/default/security' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('security', Array)
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/default/se...', Array)
+#2 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#2 {main}
+2016-01-01 16:45:07 [50.186.201.88][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.2.1141001811.1444024770'
+    '_csrf' => '75a3bf8e75a9c34463fb08670785036aba86adbc74ce458b7e232fa54f16999ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"So_TEGqOBl2fBrQReAzYWgyO-Niq_5bw\";}'
+    'PHPSESSID' => 'r1bdcl4mcii7t87lbhpmhr1t24'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/user/logout'
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin/user/security'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/user/security'
+    'REMOTE_PORT' => '51809'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '50.186.201.88'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9'
+    'HTTP_COOKIE' => '_ga=GA1.2.1141001811.1444024770; _csrf=75a3bf8e75a9c34463fb08670785036aba86adbc74ce458b7e232fa54f16999ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22So_TEGqOBl2fBrQReAzYWgyO-Niq_5bw%22%3B%7D; PHPSESSID=r1bdcl4mcii7t87lbhpmhr1t24'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'VoaC48ZH5DoADgtDO6sAAABD'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VoaC48ZH5DoADgtDO6sAAABD'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1451655907.9508
+    'REQUEST_TIME' => 1451655907
+]
+2016-01-07 09:35:32 [91.225.167.2][23][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-07 09:35:32 [91.225.167.2][23][-][info][application] $_COOKIE = [
+    '_identity' => '96e7f1267b344961aa38e4efc167afb919c141a70345c44161ddb5f4a3152bcba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[23,\"ZYwZyp0W-Lkl83bFE8TKKVlzL4yBVI3v\",1209600]\";}'
+    '_csrf' => '6341b1d3887a56330983d80d167f25a8245924d760dc04c1df578862ef57ce1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_6W2zuL6Jzvl2tCcQQVMFcZSuMQ3PyvW\";}'
+    'PHPSESSID' => 'nli4vkngqg5fnrtivomqsp5bs0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/tasks/update?id=37'
+    '__id' => 23
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin/page_user_profile_1.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/page_user_profile_1.html'
+    'REMOTE_PORT' => '27388'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '91.225.167.2'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_identity=96e7f1267b344961aa38e4efc167afb919c141a70345c44161ddb5f4a3152bcba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B23%2C%22ZYwZyp0W-Lkl83bFE8TKKVlzL4yBVI3v%22%2C1209600%5D%22%3B%7D; _csrf=6341b1d3887a56330983d80d167f25a8245924d760dc04c1df578862ef57ce1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_6W2zuL6Jzvl2tCcQQVMFcZSuMQ3PyvW%22%3B%7D; PHPSESSID=nli4vkngqg5fnrtivomqsp5bs0'
+    'HTTP_REFERER' => 'http://bigsbusiness.com/admin/milestones'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'Vo4HNMZH5DoAA9UTEzoAAAIA'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vo4HNMZH5DoAA9UTEzoAAAIA'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1452148532.5262
+    'REQUEST_TIME' => 1452148532
+]
+2016-01-10 08:16:51 [23.99.196.41][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-10 08:16:51 [23.99.196.41][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/'
+    'REMOTE_PORT' => '35456'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '23.99.196.41'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru'
+    'HTTP_ACCEPT' => 'image/gif, image/x-xbitmap, image/jpeg,image/pjpeg, application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://bigsbusiness.com/administrator/'
+    'UNIQUE_ID' => 'VpHpQ8ZH5DoACKi8kiMAAAHB'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VpHpQ8ZH5DoACKi8kiMAAAHB'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1452403011.7683
+    'REQUEST_TIME' => 1452403011
+]
+2016-01-10 08:16:52 [23.99.196.41][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-10 08:16:52 [23.99.196.41][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin.php'
+    'REMOTE_PORT' => '35434'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '23.99.196.41'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru'
+    'HTTP_ACCEPT' => 'image/gif, image/x-xbitmap, image/jpeg,image/pjpeg, application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://bigsbusiness.com/admin.php'
+    'UNIQUE_ID' => 'VpHpRMZH5DoACI07kIsAAADS'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VpHpRMZH5DoACI07kIsAAADS'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1452403012.2578
+    'REQUEST_TIME' => 1452403012
+]
+2016-01-10 10:36:48 [178.137.82.205][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-10 10:36:48 [178.137.82.205][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'hnj27tjb8k14g61u52ihf0fsu5'
+    '_csrf' => 'c6555fe1add610816d5593a5e170e0ee945c235132d2d4c9c787d4d6418348a0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ueyBmdYogljsCeQqii8qp4TdCDv1mb4Z\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/index.php'
+    'REMOTE_PORT' => '61022'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '178.137.82.205'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_COOKIE' => 'PHPSESSID=hnj27tjb8k14g61u52ihf0fsu5; _csrf=c6555fe1add610816d5593a5e170e0ee945c235132d2d4c9c787d4d6418348a0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ueyBmdYogljsCeQqii8qp4TdCDv1mb4Z%22%3B%7D'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'VpIKEMZH5DoADAndLNoAAABJ'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VpIKEMZH5DoADAndLNoAAABJ'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1452411408.6887
+    'REQUEST_TIME' => 1452411408
+]
+2016-01-10 10:36:49 [178.137.82.205][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-10 10:36:49 [178.137.82.205][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'hnj27tjb8k14g61u52ihf0fsu5'
+    '_csrf' => '4a8bac6875e43cede470eba8da37a8dc25099f2d517af05939167e8845c8b885a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5l0BTaKlidHSjvWrRWQtyyNuMNJ70fY1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index.php'
+    'REMOTE_PORT' => '61022'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '178.137.82.205'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_COOKIE' => 'PHPSESSID=hnj27tjb8k14g61u52ihf0fsu5; _csrf=4a8bac6875e43cede470eba8da37a8dc25099f2d517af05939167e8845c8b885a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225l0BTaKlidHSjvWrRWQtyyNuMNJ70fY1%22%3B%7D'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'VpIKEcZH5DoADAndLN0AAABJ'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VpIKEcZH5DoADAndLN0AAABJ'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1452411409.2441
+    'REQUEST_TIME' => 1452411409
+]
+2016-01-20 16:11:25 [50.186.201.88][23][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'User not found' in /home/bigs/public_html/modules/user/admin/controllers/DefaultController.php:149
+Stack trace:
+#0 /home/bigs/public_html/modules/user/admin/controllers/DefaultController.php(58): modules\user\admin\controllers\DefaultController->findModel('undefined')
+#1 [internal function]: modules\user\admin\controllers\DefaultController->actionUpdate('undefined')
+#2 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('update', Array)
+#5 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/default/up...', Array)
+#6 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#8 {main}
+2016-01-20 16:11:25 [50.186.201.88][23][-][info][application] $_GET = [
+    'id' => 'undefined'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.1141001811.1444024770'
+    '_csrf' => 'bcc191b2c368397c261839b26af20cd56fdbdd7d334da6a061bb2e9ffdefe9a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"3SSH2g31_l5IJU6Caao8mAOrib7TZ2IZ\";}'
+    'PHPSESSID' => 'd6m8bvut8htrbt67a28cu0ng44'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/milestones'
+    '__id' => 23
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin/user/update?id=undefined'
+    'QUERY_STRING' => 'id=undefined'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/user/update'
+    'REDIRECT_QUERY_STRING' => 'id=undefined'
+    'REMOTE_PORT' => '55981'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '50.186.201.88'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://bigsbusiness.com/admin/user'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.4.4 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4'
+    'HTTP_COOKIE' => '_ga=GA1.2.1141001811.1444024770; _csrf=bcc191b2c368397c261839b26af20cd56fdbdd7d334da6a061bb2e9ffdefe9a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223SSH2g31_l5IJU6Caao8mAOrib7TZ2IZ%22%3B%7D; PHPSESSID=d6m8bvut8htrbt67a28cu0ng44'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'Vp@HfcZH5DoACbqS-BIAAAHX'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vp@HfcZH5DoACbqS-BIAAAHX'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453295485.4879
+    'REQUEST_TIME' => 1453295485
+]
+2016-01-24 01:43:44 [46.219.255.78][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-24 01:43:44 [46.219.255.78][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/'
+    'REMOTE_PORT' => '29810'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '46.219.255.78'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_CHARSET' => 'windows-1251,utf-8;q=0.7,*;q=0.3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'VqQCIMZH5DoABmv@omYAAAKI'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqQCIMZH5DoABmv@omYAAAKI'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453589024.7179
+    'REQUEST_TIME' => 1453589024
+]
+2016-01-24 01:43:45 [46.219.255.78][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-24 01:43:45 [46.219.255.78][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin.php'
+    'REMOTE_PORT' => '29810'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '46.219.255.78'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_CHARSET' => 'windows-1251,utf-8;q=0.7,*;q=0.3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'UNIQUE_ID' => 'VqQCIcZH5DoABmv@omoAAAKI'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqQCIcZH5DoABmv@omoAAAKI'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453589025.7312
+    'REQUEST_TIME' => 1453589025
+]
+2016-01-26 03:22:51 [62.109.7.46][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-26 03:22:51 [62.109.7.46][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/'
+    'REMOTE_PORT' => '60535'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '62.109.7.46'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru'
+    'HTTP_ACCEPT' => 'image/gif, image/x-xbitmap, image/jpeg,image/pjpeg, application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://bigsbusiness.com/administrator/'
+    'UNIQUE_ID' => 'Vqa8W8ZH5DoADzPb55gAAACH'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vqa8W8ZH5DoADzPb55gAAACH'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453767771.4697
+    'REQUEST_TIME' => 1453767771
+]
+2016-01-26 03:22:52 [62.109.7.46][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-26 03:22:52 [62.109.7.46][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin.php'
+    'REMOTE_PORT' => '61286'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '62.109.7.46'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru'
+    'HTTP_ACCEPT' => 'image/gif, image/x-xbitmap, image/jpeg,image/pjpeg, application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://bigsbusiness.com/admin.php'
+    'UNIQUE_ID' => 'Vqa8XMZH5DoADzJN8iMAAAFB'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vqa8XMZH5DoADzJN8iMAAAFB'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453767772.5604
+    'REQUEST_TIME' => 1453767772
+]
+2016-01-26 04:54:05 [196.1.219.213][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-26 04:54:05 [196.1.219.213][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'HTTP_CONNECTION' => 'close'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/'
+    'REMOTE_PORT' => '63480'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '196.1.219.213'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_HOST' => 'BIGSBUSINESS.COM'
+    'HTTP_USER_AGENT' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729)'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'UNIQUE_ID' => 'VqbRvcZH5DoAAV4JkK4AAAAF'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqbRvcZH5DoAAV4JkK4AAAAF'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453773245.3816
+    'REQUEST_TIME' => 1453773245
+]
+2016-01-26 04:54:05 [166.78.134.156][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "istrator/default/index".' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('istrator/defaul...', Array)
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#2 {main}
+2016-01-26 04:54:05 [166.78.134.156][-][-][info][application] $_COOKIE = [
+    'XTCsid' => '313295aa9a97a06c25fc8279fb64fac5, PHPSESSID=obem9aje1nvvvv16f5hulrgmg1, CFID=253386016, CFTOKEN=9d1e03edfe82615e-D21CA01C-D1DB-161D-574AD0B2F76BBEDF'
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator'
+    'REMOTE_PORT' => '34883'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '166.78.134.156'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_COOKIE' => 'XTCsid=313295aa9a97a06c25fc8279fb64fac5, PHPSESSID=obem9aje1nvvvv16f5hulrgmg1, CFID=253386016, CFTOKEN=9d1e03edfe82615e-D21CA01C-D1DB-161D-574AD0B2F76BBEDF'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0'
+    'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1;utf-8;q=0.7,*;q=0.7'
+    'HTTP_ACCEPT' => '*/*'
+    'UNIQUE_ID' => 'VqbRvcZH5DoAAV57cB8AAADI'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqbRvcZH5DoAAV57cB8AAADI'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453773245.542
+    'REQUEST_TIME' => 1453773245
+]
+2016-01-26 11:19:44 [52.35.49.11][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-26 11:19:44 [52.35.49.11][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'HTTP_CONNECTION' => 'close'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/index.php'
+    'REMOTE_PORT' => '60153'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '52.35.49.11'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_HOST' => 'BIGSBUSINESS.com'
+    'UNIQUE_ID' => 'VqcsIMZH5DoACt@JpigAAABA'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqcsIMZH5DoACt@JpigAAABA'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453796384.4659
+    'REQUEST_TIME' => 1453796384
+]
+2016-01-26 11:19:45 [52.35.49.11][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-26 11:19:45 [52.35.49.11][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'HTTP_CONNECTION' => 'close'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin.php'
+    'REMOTE_PORT' => '60175'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '52.35.49.11'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_HOST' => 'BIGSBUSINESS.com'
+    'UNIQUE_ID' => 'VqcsIcZH5DoACt6IXQUAAAEA'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqcsIcZH5DoACt6IXQUAAAEA'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453796385.0435
+    'REQUEST_TIME' => 1453796385
+]
+2016-01-27 02:39:25 [187.121.142.179][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Request.php:187
+Stack trace:
+#0 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-27 02:39:25 [187.121.142.179][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/index.php'
+    'REMOTE_PORT' => '63203'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '187.121.142.179'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'HTTP_USER_AGENT' => 'Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-br'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONNECTION' => 'close'
+    'UNIQUE_ID' => 'VqgDrcZH5DoAAdfNnKEAAAFA'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'VqgDrcZH5DoAAdfNnKEAAAFA'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453851565.344
+    'REQUEST_TIME' => 1453851565
+]
+2016-01-28 18:30:11 [14.186.132.134][-][j0f1j9u66fn39v4bblvdhjk572][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/vendor/yiisoft/yii2/web/Request.php:190
+Stack trace:
+#0 /home/bigs/public_html/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-28 18:30:11 [14.186.132.134][-][j0f1j9u66fn39v4bblvdhjk572][info][application] $_COOKIE = [
+    'PHPSESSID' => 'j0f1j9u66fn39v4bblvdhjk572'
+    '_csrf' => '5c446a24e2328ea1c61bfd58164d32d02ff64ee0cb0bea9866d22923703c0025a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YPNLc1WBouH5vFaEL5cn5oRNZa23YiDw\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/index.php'
+    'REMOTE_PORT' => '52097'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '14.186.132.134'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'HTTP_COOKIE' => 'PHPSESSID=j0f1j9u66fn39v4bblvdhjk572; _csrf=5c446a24e2328ea1c61bfd58164d32d02ff64ee0cb0bea9866d22923703c0025a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YPNLc1WBouH5vFaEL5cn5oRNZa23YiDw%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Chilkat/1.0.0 (+http://www.chilkatsoft.com/ChilkatHttpUA.asp)'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us,en;q=0.5'
+    'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'UNIQUE_ID' => 'Vqo0A8ZH5DoABnq-J8oAAACG'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vqo0A8ZH5DoABnq-J8oAAACG'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1453995011.7011
+    'REQUEST_TIME' => 1453995011
+]
+2016-01-31 17:45:23 [62.109.7.46][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/vendor/yiisoft/yii2/web/Request.php:190
+Stack trace:
+#0 /home/bigs/public_html/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-31 17:45:23 [62.109.7.46][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/administrator/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/administrator/'
+    'REMOTE_PORT' => '64720'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '62.109.7.46'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru'
+    'HTTP_ACCEPT' => 'image/gif, image/x-xbitmap, image/jpeg,image/pjpeg, application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://BIGSBUSINESS.COM/administrator/'
+    'UNIQUE_ID' => 'Vq4eA8ZH5DoACsgc7PcAAAPH'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vq4eA8ZH5DoACsgc7PcAAAPH'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1454251523.6606
+    'REQUEST_TIME' => 1454251523
+]
+2016-01-31 17:45:24 [62.109.7.46][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/bigs/public_html/vendor/yiisoft/yii2/web/Request.php:190
+Stack trace:
+#0 /home/bigs/public_html/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /home/bigs/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/bigs/public_html/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-01-31 17:45:24 [62.109.7.46][-][-][info][application] $_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin'
+    'PWD' => '/usr/local/cpanel/cgi-sys'
+    'SHLVL' => '0'
+    'PHP_FCGI_MAX_REQUESTS' => '5000'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin.php'
+    'REMOTE_PORT' => '64945'
+    'SCRIPT_FILENAME' => '/home/bigs/public_html/web/admin.php'
+    'SERVER_ADMIN' => 'webmaster@bigsbusiness.com'
+    'CONTEXT_DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/home/bigs/public_html'
+    'REMOTE_ADDR' => '62.109.7.46'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '107.180.25.236'
+    'SERVER_NAME' => 'bigsbusiness.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12'
+    'SERVER_SIGNATURE' => ''
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'bigsbusiness.com'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru'
+    'HTTP_ACCEPT' => 'image/gif, image/x-xbitmap, image/jpeg,image/pjpeg, application/x-shockwave-flash,application/vnd.ms-excel,application/vnd.ms-powerpoint,application/msword'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://BIGSBUSINESS.COM/admin.php'
+    'UNIQUE_ID' => 'Vq4eBMZH5DoACscrsO0AAADS'
+    'REDIRECT_STATUS' => '200'
+    'REDIRECT_UNIQUE_ID' => 'Vq4eBMZH5DoACscrsO0AAADS'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1454251524.6158
+    'REQUEST_TIME' => 1454251524
+]

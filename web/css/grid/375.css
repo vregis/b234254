@@ -1,0 +1,42 @@
+@media screen and (min-width:375px){
+    .test-start-page{
+        padding: 0px 28px;
+    }
+    .test-start-page .text1 {
+        font-size: 60px;
+        line-height: 90px;
+    }
+    .test-start-page .text2 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+        .materials-btn .btn .text{
+        display: none;
+    }
+    .materials-btn .btn .fa{
+        font-size: 2em;
+        position: relative;
+        left: 0;
+        top: 0;
+        vertical-align: bottom;
+    }
+    .materials-btn .btn{
+        text-align: center;
+        padding: 20px 9px;
+    }
+    .materials-btn .btn .badge{
+        top:5px !important;
+        margin-top: 0 !important;
+        right: 15px;
+    }
+    .btn-support {
+        padding: 0px 15px 0px;
+        font-size: 12px;
+        right: 37px;
+        bottom:5px;
+        margin-right: 0;
+    }
+        .page-footer{
+        padding: 10px 0 2px 22px;
+    }
+}

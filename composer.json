@@ -1,0 +1,8 @@
+{
+    "require": {
+        "marciocamello/yii2-paypal": "*",
+        "c006/yii2-paypal-ipn": "dev-master",
+        "yiisoft/yii2-swiftmailer": "^2.0",
+        "nodge/yii2-eauth": "^2.4"
+    }
+}

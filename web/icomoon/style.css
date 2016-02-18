@@ -1,0 +1,75 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?twi8ie');
+	src:url('fonts/icomoon.eot?twi8ie#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?twi8ie') format('truetype'),
+		url('fonts/icomoon.woff?twi8ie') format('woff'),
+		url('fonts/icomoon.svg?twi8ie#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ico-cloud-2:before {
+	content: "\e900";
+}
+.ico-computers:before {
+	content: "\e901";
+}
+.ico-customers:before {
+	content: "\e902";
+}
+.ico-documents:before {
+	content: "\e903";
+}
+.ico-idea:before {
+	content: "\e904";
+}
+.ico-message:before {
+	content: "\e905";
+}
+.ico-numbers:before {
+	content: "\e906";
+}
+.ico-people:before {
+	content: "\e907";
+}
+.ico-products:before {
+	content: "\e908";
+}
+.ico-self:before {
+	content: "\e909";
+}
+.ico-strategy:before {
+	content: "\e90a";
+}
+.ico-team:before {
+	content: "\e90b";
+}
+.ico-buisness:before {
+	content: "\e90c";
+}
+.ico-calendar:before {
+	content: "\e90d";
+}
+.ico-chat:before {
+	content: "\e90e";
+}
+.ico-cloud-1:before {
+	content: "\e90f";
+}
+

@@ -1,0 +1,15 @@
+.header-logo a img {
+    height: 156px;
+}
+.nick {
+    color: #ffffff;
+    width: 200px;
+}
+.nick img {
+    margin-right: 10px;
+}
+.status img {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,207 @@
+/* Cubic Bezier Transition */
+
+
+/***
+Login page
+***/
+
+
+/* logo page */
+
+.overlay {
+    position: fixed;
+    background: url('/images/login-bg.jpg') center top no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.login {
+    position: relative;
+}
+.window {
+    background: #fff;
+    width: 382px;
+    padding: 0px 0px 15px;
+    margin: 0 auto;
+    border-radius: 15px !important;
+    color: #5b5b5b;
+    position: relative;
+    min-height: 500px;
+}
+.window .logo {
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+}
+.form-title {
+    text-align: center;
+    color: #5a5a5a;
+    font-size: 16px;
+}
+.copyright {
+    color: rgba(91,91,91,.6);
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.form-actions {
+    margin: 0px 0 0px !important;
+}
+.form-actions label{
+    margin-bottom: 25px;
+}
+.soc-wrap{
+    text-align: justify;
+}
+.socicon-btn {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    border: 1px solid #eaeef3;
+    font-size: 30px;
+    margin: 0px 0px 0px 0;
+    -webkit-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+}
+.socicon-facebook:hover {
+    color: #3f65a3;
+}
+.socicon-twitter:hover {
+    color: #3fb0ea;
+}
+.socicon-mail:hover {
+    color: #9187d0;
+}
+input {
+    border-radius: 3px !important;
+    height: 28px !important;
+    color: #5a5a5a;
+    border-color: #5a5a5a;
+}
+.input-icon>i {
+    margin: 6px 2px 4px 10px;
+    color: #5a5a5a;
+}
+@media (max-width:568px) {
+    .window {
+        width: 80%;
+        padding: 15px 30px;
+    }
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.m-icon-swapright{
+    background: url("/images/mainpage/arrow.png") 0 0 no-repeat;
+    width:11px;
+    height: 10px;
+}
+/*@media (min-width:1921px){
+    .window{
+        width: 940px;
+        font-size:1.7em;
+    }
+    .form-title{
+        font-size:2em;
+    }
+    .input-icon > .form-control{
+        font-size:28px;
+        padding-left: 66px;
+    }
+    .form-group {
+        margin-bottom: 36px;
+    }
+    .input-icon>i{
+        font-size:32px;
+        width:32px;
+        margin: 18px 4px 8px 20px;
+    }
+    input{
+        height: 56px !important;
+    }
+}*/
+.window .nav{
+    background: url("/images/login-nav-bg.png") 0 0 no-repeat;
+}
+.window .nav > *{
+    width: 50%;
+    float:left;
+    height:63px;
+    text-align: center;
+    line-height: 63px;
+    color:rgba(90,90,90,.5);
+}
+.window .nav a:hover{
+    text-decoration: none;
+}
+.window .nav .signin-btn .icon{
+    background-image: url("/images/login_screen_signin.png");
+    display: inline-block;
+    width:32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right:10px;
+}
+.window .nav .signup-btn .icon{
+    background-image: url("/images/login_screen_signup.png");
+    display: inline-block;
+    width:32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right:10px;
+}
+.window .nav .signin-btn.active{
+    background: #fff !important;
+    border-top-left-radius: 20px !important;
+    color:#5a5a5a;
+}
+.window .nav .signup-btn.active{
+    background: #fff !important;
+    border-top-right-radius: 20px !important;
+    color:#5a5a5a;
+}
+.window .row{
+    padding: 0 30px;
+}
+.btn-wrap{
+    background-color: #9187d0;
+    border-color: #9187d0;
+    width: 160px;
+    /*height: 50px;*/
+    margin:40px auto;
+    border-radius: 100px !important;
+    padding: 3px;
+}
+.btn.btn-cust{
+    background-color: #9187d0 !important;
+    border-radius: 100px !important;
+    border-width: 1px !important;
+}
+div.checker, div.radio{
+    margin-left:0;
+}
+.terms{
+    font-size: 13px;
+    margin-top: 10px
+}
+[aria-controls="rmjs-1"]{
+    margin-botton:40px;
+    font-size: 13px;
+}
+input{
+    height: 33px !important;
+}
+.input-icon > i{
+    margin-top:9px;
+}
+.field-loginform-rememberme,
+.field-loginform-rememberme label{
+    margin-bottom: 0;
+}
+.field-loginform-rememberme .hel-block{
+    display: none;
+}

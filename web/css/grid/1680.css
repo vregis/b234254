@@ -1,0 +1,8 @@
+@media screen and (min-width:1680px){
+    .test-start-page{
+        padding: 0px 40px;
+    }
+    .test-start-page .btn{
+        line-height: 114px !important;
+    }
+}

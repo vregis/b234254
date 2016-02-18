@@ -1,0 +1,155 @@
+@media screen and (min-width:414px){
+    .page-header .page-header-top,.page-header .page-header-top .page-logo{
+        height: 40px !important;
+    }
+    .page-header .page-header-top .page-logo{
+        margin-left: 0;
+    }
+    .page-header .page-header-top .page-logo .logo-default{
+        height: 19px;
+        margin: 10px 0 0 45px;
+    }
+    .typeSwitch{
+        height: 40px;
+        line-height: 40px;
+    }
+    .typeSwitch label {
+        margin: 0;
+        font-size: 12px;
+        line-height: 40px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle{
+        padding: 0 10px !important;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > img{
+        height: 33px;
+        margin-top: 3px;
+        padding: 1px;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav > li,.page-header .page-header-top .top-menu .navbar-nav > li.dropdown{
+        height: 40px;
+    }
+    .page-header-menu .btn{
+        text-align: center;
+    }
+    .page-header-menu .btn .text{
+        display: none;
+    }
+    .page-header-menu .btn i{
+        font-size: 18px;
+        display: block;
+        position: relative;
+    }
+    .page-header-menu .btn .label{
+        background: none;
+        font-size: 10px;
+        display: inline-block;
+        color: #999;
+        border:1px solid rgba(153,153,153,0.3);
+        margin-top: 5px;
+    }
+    .test-start-page{
+        padding: 0px 28px;
+    }
+    .test-start-page .text1 {
+        font-size: 80px;
+        line-height: 100px;
+        font-weight: 700;
+    }
+    .test-start-page .text2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .test-start-page .btn-wrap {
+        width: 225px;
+        margin:15px auto;
+    }
+    .test-start-page .btn{
+        line-height: 50px !important;
+        font-size: 22px;
+    }
+    .test-start-page .skip{
+        font-size:14px;
+    }
+        .materials-btn .btn{
+        text-align: center;
+        padding: 15px 9px;
+    }
+    .materials-btn .btn .badge{
+        top:5px !important;
+        margin-top: 0 !important;
+        right: 5px;
+    }
+        .name-cell{
+        font-size: 18px;
+        padding-left: 18px;
+    }
+        .page-header .page-header-top .top-menu .navbar-nav > li a span.label-danger{
+        bottom: 0;
+    }
+    .btn-support{
+        padding: 0px 15px 0px;
+        font-size:12px;
+    }
+    .page-footer{
+        padding: 10px 0 2px 22px;
+    }
+    /*.hor-menu .btn{
+        padding: 0;
+        text-align: center;
+        width:1% !important;
+        display: table-cell !important;
+    }*/
+    .hor-menu .btn .text{
+        display: none !important;
+    }
+    .hor-menu .btn i{
+        display: block !important;
+        position: relative !important;
+        left: auto;
+        font-size: 16px;
+    }
+    .hor-menu .btn i.fa{
+        font-size: 16px;
+        position: relative;
+        border: 1px solid #fff;
+        border-radius: 50% !important;
+        display: inline-block !important;
+        width: 17px;
+        height: 16px;
+        text-align: center;
+    }
+     .page-content.milestones
+    ,.page-content.milestones .well-sm
+    ,.page-content.milestones .container-fluid
+    ,.page-content.milestones .col-sm-12
+    ,.page-content.milestones .row{
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .milestones .panel-heading .panel-title{
+        width: auto;
+        overflow: hidden;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 195px;
+    }
+    .milestones .panel-heading{
+        height: auto;
+    }
+    .milestones .panel-heading .info{
+        width:100%;
+        display: block;
+    }
+    .hor-menu .btn-group-justified > .btn-group .btn{
+        height: 30px;
+    }
+    .hor-menu .btn-group-justified > .btn-group .dropdown-toggle{
+        position: relative;
+        height: 30px;
+        width: 100% !important;
+        padding: 0;
+    }
+}

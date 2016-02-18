@@ -1,0 +1,120 @@
+.table-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    table-layout: fixed;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 16px !important;
+    color:#5a5a5a;
+        margin: 17px 0;
+}
+.table{
+    border-color:#d7d7d7 !important;
+    margin-bottom: 0px !important; 
+    border-top: 0 !important;
+}
+.table.table-light>thead>tr>th,
+.table td, .table th {
+    font-size: 16px !important;
+    text-align: center;
+    color:#5a5a5a;
+    position: relative;
+    vertical-align: middle !important;
+    border-color:#d7d7d7 !important;
+}
+.table .label.label-sm {
+    font-size: 1em !important;
+}
+.table th{
+	font-weight: normal !important;
+}
+.page-content a{
+	color:#5a5a5a !important;
+}
+.page-content .label{
+	position: absolute;
+	top:50%;
+	margin-top: -6px;
+	right:8px;
+	font-size:10px !important;
+	/*padding: 6px 6px 6px 6px !important;*/
+}
+table thead tr th,table tfoot tr th{
+    background: #ebebeb;
+    font-weight: normal;
+}
+table thead tr th{
+    height: 50px;
+}
+table thead tr th .btn,table tfoot tr th .btn{
+    background: none;
+    line-height: 1 !important;
+}
+table thead tr th, table tbody tr td,table tfoot tr th{
+    text-align:center;
+    border:1px solid #d7d7d7;
+    padding: 8px;
+    border-left: none;
+}
+ .nav-tabs{
+    margin-bottom: 0 !important;
+    border: none;
+    margin-left:1px;
+}
+ .nav-tabs > li > a,.nav-tabs > li > a:hover{
+    font-size: 16px !important;
+    color:#5a5a5a;
+    /*border:1px solid #d7d7d7 !important;*/
+    width: 170px;
+    text-align: center;
+    height: 26px;
+    line-height: 26px !important;
+    padding: 0 !important;
+    border-radius: 0px 15px 0 0 !important;
+    border:none !important;
+    margin-left: -1px;
+    background: #ebebeb !important;
+    /*text-align: left;*/
+    /*text-indent: 14px;*/
+}
+.nav-tabs > li > a:hover{
+
+}
+ .nav-tabs > li:first-child > a{
+    width:170px;
+    border-radius: 15px 0px 0 0 !important;
+ }
+ .nav-tabs > li > a .label{
+    font-size: 10px !important;
+    top: 50%;
+    margin-top: -7px;
+    right: 10px;
+    padding: 0px;
+    line-height: 11px;
+    text-indent: 0;
+}
+.nav-tabs > li{
+    margin-bottom: 0 !important;
+}
+ .nav-tabs > li:not(.active) > a:hover{
+    /*border: 1px solid #d7d7d7 !important;*/
+}
+ .nav-tabs > li.active > a{
+    background: #5184f3 !important;
+    color:#fff !important;
+}
+
+table tbody tr td .label{
+    right: 20px !important;
+}
+#find_job{
+    border:none;
+    margin-top: 30px;
+}
+#find_job .offerall{
+    font-size: 10px !important;
+}
+#delegated > table .btn{
+    line-height: 34px !important;
+}

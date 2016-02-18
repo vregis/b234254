@@ -1,0 +1,57 @@
+@media screen and (min-width:667px) and (max-width:735px){
+    .materials-btn .btn .text{
+        display: inline-block;
+        font-size: 14px;
+    }
+    .materials-btn .btn .fa{
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .materials-btn .btn{
+        text-align: left;
+        padding: 0px 9px;
+    }
+    .materials-btn .btn .badge{
+        top: 50% !important;
+        margin-top: -10px !important;
+        right: 9px;
+    }
+    .task-title .col1 .btn, .task-title .col2 .btn {
+        margin: 0 5px;
+    }
+    .test-start-page{
+        padding: 0px 100px;
+    }
+    .test-start-page .text1{
+        font-size: 60px;
+        line-height: 70px;
+        font-weight: 700;
+    }
+    .test-start-page .text2{
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: normal;
+    }
+    .test-start-page .btn{
+        line-height: 60px !important;
+        font-size: 24px;
+    }
+    .test-start-page .btn-wrap{
+        margin:15px auto;
+        width: 225px;
+        padding: 3px;
+    }
+    .test-start-page .skip{
+        font-size:14px;
+    }
+    .page-footer {
+        bottom: 0;
+        font-size: 12px;
+        font-weight: 300;
+        left: 0;
+        padding: 10px 0 2px 22px;
+        position: relative;
+        width: 100%;
+    }
+    
+}

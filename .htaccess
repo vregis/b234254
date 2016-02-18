@@ -1,0 +1,28 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+DirectoryIndex /web/index.php
+DirectoryIndex /web/admin.php
+
+RewriteRule ^admin.*$ /web/admin.php [L]
+
+RewriteCond %{REQUEST_URI} !^/(web)
+RewriteRule ^assets/(.*)$ /web/assets/$1 [L]
+RewriteRule ^audio/(.*)$ /web/audio/$1 [L]
+RewriteRule ^content/(.*)$ /web/content/$1 [L]
+RewriteRule ^css/(.*)$ web/css/$1 [L]
+RewriteRule ^fonts/(.*)$ web/fonts/$1 [L]
+RewriteRule ^icomoon/(.*)$ web/icomoon/$1 [L]
+RewriteRule ^icons/(.*)$ web/icons/$1 [L]
+RewriteRule ^images/(.*)$ web/images/$1 [L]
+RewriteRule ^js/(.*)$ web/js/$1 [L]
+RewriteRule ^metronic/(.*)$ web/metronic/$1 [L]
+RewriteRule ^plugins/(.*)$ web/plugins/$1 [L]
+RewriteRule ^favicon.ico$ web/favicon.ico [L]
+RewriteRule (.*) /web/$1
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /web/index.php

@@ -1,0 +1,19 @@
+@media screen and (min-width:1024px){
+    .page-header-menu .btn{
+        width: 128px;
+        height: 50px;
+    }
+    .page-header .page-header-menu{
+        height: 50px;
+    }
+    .page-header-menu .btn i{
+        font-size: 54px;
+    }
+    .task-title .btn i{
+        margin-left: 25px;
+        margin-right: 5px;
+    }
+    .page-header-menu .btn .text{
+        
+    }
+}
