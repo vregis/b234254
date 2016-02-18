@@ -53,6 +53,14 @@ if($task->specialization_id > 0) {
 </div>
 
 <script type="text/javascript">
+    $(document).ready(function(){
+        var offs = 32;
+        console.log(offs);
+        $('.well').css({
+            'margin-top': offs - 2,
+            'margin-bottom': offs - 2
+        });
+    });
         $("body").animate({"opacity":1},1000);
         $(document).ready(function(){
         $('.page-content').mCustomScrollbar({

@@ -41,7 +41,7 @@
                             </div>
                         </div>
                     </th> -->
-                    <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Status <i class="fa fa-angle-down"></i></th>
+                    <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
                 <tbody id="user_task">
@@ -108,7 +108,7 @@
                     </th>
                     <th width="120" class="time">Time</th>
                     <th width="120" class="rate">Rate / H</th>
-                    <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Status <i class="fa fa-angle-down"></i></th>
+                    <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Pending <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
                 <tbody id="user_request">
@@ -130,7 +130,7 @@
         </div>
         <div id="status-menu" style="display:none !important;">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
+                <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search </a></li>
                 <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
             </ul>
         </div>
@@ -214,7 +214,9 @@
         font-size: 16px;
         color: #7b7b7b;
         text-decoration: none;
-        border-bottom: 1px solid #d7d7d7;
+        /*border-bottom: 1px solid #d7d7d7;*/
+        border-radius:3px;
+        margin-bottom:1px;
     }
     #status-menu ul{
         position: relative;
@@ -236,9 +238,10 @@
         width:100%;
         float:none;
     }
-    #status-menu a i{
-        margin-left:12px;
-        font-size:10px;
+    #status-menu li.active a{
+        background:#8eb6f8 !important;
+        color:#fff !important;
+        border-radius:3px;
     }
     .dropmenu,.dropmenu1{
         cursor: pointer;
@@ -262,28 +265,28 @@
         color:rgba(123,123,123,0.5);
     }
     .background-6.on{
-        background-color: rgba(112, 202, 200,0.1);
+        background-color: rgba(112, 202, 200,0.6);
     }
     .background-1.on{
-        background-color: rgba(145, 135, 208,0.1);
+        background-color: rgba(145, 135, 208,0.6);
     }
     .background-2.on{
-        background-color: rgba(183, 135, 209,0.1);
+        background-color: rgba(183, 135, 209,0.6);
     }
     .background-3.on{
-        background-color: rgba(253, 109, 100,0.1);
+        background-color: rgba(253, 109, 100,0.6);
     }
     .background-5.on{
-        background-color: rgba(255, 209, 71,0.1);
+        background-color: rgba(255, 209, 71,0.6);
     }
     .background-4.on{
-        background-color: rgba(255, 162, 93,0.1);
+        background-color: rgba(255, 162, 93,0.6);
     }
     .background-7.on{
-        background-color: rgba(112,202,200,0.1);
+        background-color: rgba(112,202,200,0.6);
     }
     .background-8.on{
-        background-color: rgba(93,201,240,0.1);
+        background-color: rgba(93,201,240,0.6);
     }
     #input-rate-start,#input-rate-end{
         background: #fff url("/images/cost-bg.png") 7px 0 no-repeat;
@@ -329,6 +332,13 @@
                 placement:"top",
                 html:true
             });
+
+            $(".gant_avatar").popover({
+                container:$("body"),
+                html:true,
+                template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                trigger:"click"
+            });
             $(".dropmenu1.status").popover({
                 placement:"bottom",
                 html:true,
@@ -336,18 +346,11 @@
                 // container:$("body"),
                 template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
             });
-            $(".gant_avatar").popover({
-                container:$("body"),
-                html:true,
-                template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                trigger:"click"
-            });
             $(".dropmenu1.status").on('shown.bs.popover',function(){
                 $("#status-menu a[data-toggle='tab']").click(function(){
                     console.log("asdasda");
-                    $("#status-menu a[data-toggle='tab'] i").remove();
-                    $(this).append('<i class="ico-check1"></i>');
-                    $(this).tab('show');
+                    $("#status-menu li").removeClass('active');
+                    $(this).tab('show').parents('li').addClass('active');
                     // $(".dropmenu1.status").popover('hide');
                 });
             });

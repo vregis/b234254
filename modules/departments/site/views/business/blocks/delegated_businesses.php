@@ -6,7 +6,7 @@ use yii\helpers\Url;
 
 ?>
 <? if(count($userTools) == 0): ?>
-<div class="text-center none" style="padding:22px 0;">
+<div class="text-center none" style="padding:22px 0;color:#8eb6f8;">
     Not a single task was yet delegated to you. But you can find tasks independently
 </div>
 <div style="border-top:1px solid #d7d7d7;height:1px;"></div>
@@ -60,7 +60,7 @@ use yii\helpers\Url;
                 ?>
             </td>
             <td>
-                <a href="#" class="btn btn-primary circle dropdown-toggle" data-toggle="dropdown"><i class="ico-history"></i></a>
+                <a href="javascript:;" class="dropmenu1 history1 btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                 <ul class="dropdown-menu">
                     <li class="disabled"><a href="#">Business Dashboard</a></li>
                     <li class="disabled"><a>Team</a></li>
@@ -71,4 +71,11 @@ use yii\helpers\Url;
 <? endforeach; ?>
     </tbody>
 </table>
+<div id="huistory1" class="huistory" style="display:none;">
+    <ul>
+        <li class="disabled"><a href="#">Business Dashboard</a></li>
+        <li class="disabled"><a>Team</a></li>   
+    </ul>
+
+</div>
 <? endif; ?>
