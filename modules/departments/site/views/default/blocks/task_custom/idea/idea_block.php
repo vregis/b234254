@@ -139,6 +139,12 @@ $('.nav-tabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 });
+$('.nav-tabs a').on('shown.bs.tab',function(){
+    $('.page-content').mCustomScrollbar({
+        setHeight: $('.page-content').css('minHeight'),
+        theme:"dark"
+    }); 
+});
 </script>
 <style>
     .nav-tabs{

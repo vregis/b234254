@@ -110,12 +110,10 @@ $this->registerJs($msgJs);
                         </tr>
                     <? endif; ?>
                     </tbody>
-                    <tfoot>
-                    <th colspan="7">
-                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" class="btn btn-primary">Create new business</a>
-                    </th>
-                    </tfoot>
                 </table>
+                <div class="text-center btn-div" style="padding-top:30px;">
+                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary">Create new business</a>
+                </div>
             </div>
             <div role="tabpanel" class="tab-pane fade <?= count($self_userTools) == 0 ? 'in active' : '' ?>" id="delegated">
                 <div id="delegated_businesses">
@@ -133,10 +131,48 @@ $this->registerJs($msgJs);
     </div>
 </div>
 <script>
-    $("#find_job").on('show.bs.collapse',function(){
-        $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+    $(document).on('change',function(){
+        $('.page-content').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
     });
-    $("#find_job").on('hide.bs.collapse',function(){
-        $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+    $(document).ready(function () {
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+        $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+                $("#find_job").on('shown.bs.collapse',function(){
+                    $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+                });
+                $("#find_job").on('hidden.bs.collapse',function(){
+                    $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+        $(".page-content-wrapper").mCustomScrollbar("destroy");
+        $('.page-content-wrapper').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        });
+                });
+        });
+            // $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
+            //     console.log("asdasda");
+            //     $("#status-menu a[data-toggle='tab'] i").remove();
+            //     $(this).append('<i class="ico-check1"></i>');
+            //     $(this).tab('show');
+            //     // $(".dropmenu1.status").popover('hide');
+            // });
     });
+
 </script>

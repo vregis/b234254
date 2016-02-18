@@ -41,19 +41,25 @@ if($task->specialization_id > 0) {
 ) */?>
 <link rel="stylesheet" type="text/css" href="/css/task.css">
 <link rel="stylesheet" type="text/css" href="/css/task-custom.css">
-<div class="task task-custom">
+<div class="task task-custom well well-sm" style="margin:30px auto;max-width:1024px;">
     <div class="hidden-task-id" style="display:none"><?php echo $task->id?></div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="well well-sm task-bg">
+            <div class="task-bg">
                  <?= $custom ?>
             </div>
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('.task-custom').css({'margin-top': $('.page-content').height() / 2 - $('.task-custom').height() / 2});
+        $("body").animate({"opacity":1},1000);
+        $(document).ready(function(){
+        $('.page-content').mCustomScrollbar({
+            setHeight: $('.page-content').css('minHeight'),
+            theme:"dark"
+        }); 
+        // $('.task-custom').css({'margin-top': $('.page-content').height() / 2 - $('.task-custom').height() / 2});
         // $(".task-custom .personal-fields .form-control[name='goal']").inputmask('999,999,999.99', {
         //     // numericInput: true,
         //     // rightAlignNumerics: false,
