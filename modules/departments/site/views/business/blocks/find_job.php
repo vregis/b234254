@@ -32,19 +32,16 @@
                     </th>
                     <th width="120" class="time">Time</th>
                     <th width="120" class="rate">Rate / H</th>
-                    <th class="dropmenu filter-task status" width="121">
+ <!--                    <th class="filter-task status" width="121">
                         <div style="position:relative;">
                             <div class="trigger">Status <i class="fa fa-angle-down"></i></div>
-                            <div class="popover dropselect fade bottom in status-menu" id="status-menu" role="tooltip">
+                            <div class="popover dropselect fade bottom in status-menu" role="tooltip">
                             <div class="arrow"></div>
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
-                                    <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
-                                </ul>
+
                             </div>
                         </div>
-                    </th>
-    <!--                 <th class="dropmenu status" data-toggle="popover" data-not_autoclose="1">Status <i class="fa fa-angle-down"></i></th> -->
+                    </th> -->
+                    <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Status <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
                 <tbody id="user_task">
@@ -111,18 +108,7 @@
                     </th>
                     <th width="120" class="time">Time</th>
                     <th width="120" class="rate">Rate / H</th>
-                    <th class="dropmenu filter-task status" width="121">
-                        <div style="position:relative;">
-                            <div class="trigger">Status <i class="fa fa-angle-down"></i></div>
-                            <div class="popover dropselect fade bottom in status-menu" id="status-menu" role="tooltip">
-                            <div class="arrow"></div>
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
-                                    <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </th>
+                    <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Status <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
                 <tbody id="user_request">
@@ -142,12 +128,12 @@
                 </tfoot>
             </table>
         </div>
-<!--                 <div id="status-menu" style="display:none !important;">
+        <div id="status-menu" style="display:none !important;">
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search <i class="ico-check1"></i></a></li>
                 <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
             </ul>
-        </div> -->
+        </div>
     </div>
 </div>
 <style>
@@ -209,11 +195,15 @@
         background: #fff;
         /*border: 1px solid #d7d7d7;*/
     }
-    .dropselect{
+    .dropselect,.dropselect1{
         min-width:195px !important;
         width:195px !important;
     }
-    .dropselect .popover-content{
+    .dropselect1{
+        min-width:150px !important;
+        width:150px !important;
+    }
+    .dropselect .popover-content,.dropselect1 .popover-content{
         padding: 0;
     }
     .dropselect a{
@@ -250,7 +240,7 @@
         margin-left:12px;
         font-size:10px;
     }
-    .dropmenu{
+    .dropmenu,.dropmenu1{
         cursor: pointer;
         padding:0 !important;
     }
@@ -339,22 +329,28 @@
                 placement:"top",
                 html:true
             });
-            // $(".dropmenu.status").popover({
-            //     placement:"bottom",
-            //     html:true,
-            //     content:$("#status-menu"),
-            //     container:$("body"),
-            //     template:'<div class="popover dropselect" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
-            // });
-            // $(".dropmenu.status").on('shown.bs.popover',function(){
-            //     $("#status-menu a[data-toggle='tab']").click(function(){
-            //         console.log("asdasda");
-            //         $("#status-menu a[data-toggle='tab'] i").remove();
-            //         $(this).append('<i class="ico-check1"></i>');
-            //         $(this).tab('show');
-            //         $(".dropmenu.status").popover('hide');
-            //     });
-            // });
+            $(".dropmenu1.status").popover({
+                placement:"bottom",
+                html:true,
+                content:$("#status-menu"),
+                // container:$("body"),
+                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+            });
+            $(".gant_avatar").popover({
+                container:$("body"),
+                html:true,
+                template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                trigger:"click"
+            });
+            $(".dropmenu1.status").on('shown.bs.popover',function(){
+                $("#status-menu a[data-toggle='tab']").click(function(){
+                    console.log("asdasda");
+                    $("#status-menu a[data-toggle='tab'] i").remove();
+                    $(this).append('<i class="ico-check1"></i>');
+                    $(this).tab('show');
+                    // $(".dropmenu1.status").popover('hide');
+                });
+            });
             $(".btn.info").on('show.bs.popover',function(){
                 $(".gant_avatar,table tr td.name .pull-left").popover('destroy');
             }).on('hide.bs.popover',function(){
@@ -362,42 +358,24 @@
                     container:$("body"),
                     html:true,
                     template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                    trigger:"hover"
+                    trigger:"click"
                 });
                 $("table tr td.name .pull-left").popover({
                     container:$("body"),
                     trigger:"hover"
                 });
             });
-            $(".gant_avatar").popover({
-                container:$("body"),
-                html:true,
-                template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                trigger:"hover"
-            });
+
             $("table tr td.name .pull-left").popover({
                 container:$("body"),
                 trigger:"hover"
             });
-                    $("#status-menu a[data-toggle='tab']").click(function(){
-                        console.log("asdasda");
-                        $("#status-menu a[data-toggle='tab'] i").remove();
-                        $(this).append('<i class="ico-check1"></i>');
-                        $(this).tab('show');
-                        // $(".dropmenu.status").popover('hide');
-                    });
-            // $(".dropmenu").on('show.bs.popover',function(){
-            //     if($(this).hasClass('specs'))
-            //         $("#spec-menu").show();
-            //     else if($(this).hasClass('deps'))
-            //         $("#deps-menu").show();
-            //     else
-            //         $("#status-menu").show();
-            //     $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
-
-            // }).on('hide.bs.popover',function(){
-            //     $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
-            // });
+            $(".dropmenu1").on('show.bs.popover',function(){
+                $("#status-menu").show();
+                $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+            }).on('hide.bs.popover',function(){
+                $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+            });
             $(".dropmenu .trigger").click(function(){
                 var that = $(this).parent('.dropmenu');
                 
@@ -413,7 +391,7 @@
                         container:$("body"),
                         html:true,
                         template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                        trigger:"hover"
+                        trigger:"click"
                     });
                     $("table tr td.name .pull-left").popover({
                         container:$("body"),
@@ -432,7 +410,7 @@
                         container:$("body"),
                         html:true,
                         template:'<div class="popover avatar" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                        trigger:"hover"
+                        trigger:"click"
                     });
                     $("table tr td.name .pull-left").popover({
                         container:$("body"),
