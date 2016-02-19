@@ -53,7 +53,6 @@ if($task->specialization_id > 0) {
         <div class="col-sm-12">
             <div class="task-bg" style="box-shadow: none !important;border: none !important;">
                 <div class="row task-title">
-
                     <div class="name pull-left"><?= $task->name ?></div>
                     <div id="action_panel" class="pull-right inline">
                         <? require_once __DIR__.'/task/action_panel.php' ?>
@@ -75,23 +74,19 @@ if($task->specialization_id > 0) {
                     <? endif; ?>
                     <div id="delegate" class="collapse slidePop"> <div class="arrow"></div>
                         <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#search-block" aria-controls="search-block" role="tab" data-toggle="tab">Search</a></li>
-                            <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <span class="label label-danger circle"></span></a></li>
-                        </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="search-block">
-                                <table style="width:100%;">
+                                <table style="width:100%;" class="table with-foot">
                                     <thead>
                                     <tr>
-                                        <th></th>
+                                        <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                                         <th>Name</th>
                                         <th>Level</th>
-                                        <th>Rate by hour</th>
+                                        <th class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
                                         <th>Location</th>
-                                        <th><button class="btn btn-primary offerall-btn">Offer <br> to all</button></th>
+                                        <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search<i class="fa fa-angle-down"></i></th>
                                     </tr>
                                     </thead>
                                     <tbody id="delegate_users">
@@ -100,7 +95,7 @@ if($task->specialization_id > 0) {
                                     <tfoot>
                                     <tr>
                                         <th colspan="5" style="border-right:0;">
-                                            <div class="pull-left">
+                                            <div class="pull-left" style="margin-left: 10px;">
                                                 <div id="invite-form" class="no-autoclose" style="display:none;">
                                                     <div class="form-group">
                                                         <input type="text" id="input-invite-email" class="form-control" placeholder="Email Address">
@@ -162,16 +157,6 @@ if($task->specialization_id > 0) {
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
-                                                        <label class="col-sm-12" for="">Skills</label>
-                                                        <div class="col-sm-12">
-                                                            <div class="input-group input-group-lg select2-bootstrap-append">
-                                                                <select id="select-skills" class="form-control" multiple>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
                                                         <div class="col-sm-12">
                                                             <div class="pull-right">
                                                                 <button type="submit" id="advanced-search-send" class="btn btn-primary">Send</button>
@@ -182,7 +167,7 @@ if($task->specialization_id > 0) {
                                                 <button class="btn btn-primary circle invite-by-email" data-toggle="popover">
                                                     <i class="ico-mail"></i>
                                                 </button>
-                                                Invite by email
+                                                Delegate by email
                                                 <button style="margin-left: 11px;" class="btn btn-primary circle advanced-search-btn" data-toggle="popover" data-not_autoclose="1">
                                                     <i class="ico-search"></i>
                                                 </button>
@@ -201,15 +186,15 @@ if($task->specialization_id > 0) {
                                 </table>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="offered-block">
-                                <table style="width:100%;">
+                                <table style="width:100%;" class="table with-foot">
                                     <thead>
                                     <tr>
-                                        <th></th>
+                                        <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                                         <th>Name</th>
                                         <th>Level</th>
-                                        <th>Rate by hour</th>
+                                        <th class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
                                         <th>Location</th>
-                                        <th><button class="btn btn-primary cancelall-btn">Cancel <br> all</button></th>
+                                        <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Offered <i class="fa fa-angle-down"></i></th>
                                     </tr>
                                     </thead>
                                     <tbody id="cancel_delegate_users">
@@ -229,6 +214,12 @@ if($task->specialization_id > 0) {
                                     </tfoot>
                                 </table>
                             </div>
+                        </div>
+                        <div id="status-menu" style="display:none !important;">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#search-block" aria-controls="search-block" role="tab" data-toggle="tab">Search</a></li>
+                                <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <span class="label label-danger circle"></span></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -290,9 +281,8 @@ if($task->specialization_id > 0) {
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
-                        <a href="<?= $task_link->name ?>" class="item" target="_blank">
-                            <i class="fa fa-link"></i> <br>
-                            <?= $task_link->name ?>
+                        <a href="<?= $task_link->name ?>" target="_blank" class="item">
+                            <i class="fa fa-link"></i>
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>

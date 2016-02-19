@@ -4,7 +4,7 @@
             <div class="content" style="
     border-width: 1px;
     border-color: #d7d7d7;
-    border-style: solid;padding:0 15px;height:auto;overflow: auto;">
+    border-style: solid;padding:0 15px;height:auto;overflow: auto; height:150px !important;border-radius:0 !important;">
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade" id="videos">
                     <? foreach($task_videos as $task_video) : ?>

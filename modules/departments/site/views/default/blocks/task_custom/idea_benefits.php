@@ -63,12 +63,12 @@ use yii\widgets\ActiveForm;
                 <input type="text" maxlength="200" class="form-control" placeholder="Third benefit (No more than 200 characters)" value="<?= $benefit->third ?>" name="Benefit[third]">
             </div>
         </div>
-        <div class="row form-group">
+        <div class="row form-group" style="margin-bottom:0;">
             <div class="col-sm-12">
                 <? require __DIR__.'/idea/idea_block.php'; ?>
                 <?= Html::submitButton('Continue', [
                     'class' => 'btn btn-success btn-lg',
-                    'style' => 'margin:30px auto;'
+                    'style' => 'margin:30px auto 0;'
                 ]) ?>
             </div>
         </div>

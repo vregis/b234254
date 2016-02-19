@@ -334,14 +334,23 @@ function Task(task_user_id, is_my, is_custom) {
                 html:true,
                 trigger:"click",
                 content:$("#invite-form"),
-                // container:$("#task"),
+                // container:$("#delegate"),
             });
+            $(".task-body .block.desc .footer .btn").on('shown.bs.tab',function(){
+                console.log("sadasda");
+                $(".tab-content > .tab-pane .item").popover({
+                    placement:"auto top",
+                    html:true,
+                    trigger:"click",
+                });
+            });
+
             $(".advanced-search-btn").popover({
                 placement:"auto top",
                 html:true,
                 trigger:"click",
                 content:$("#advanced-search-form"),
-                // container:$("#task"),
+                // container:$("#delegate"),
             });
             $(".offerall-btn").click(function(){
                 // $(this).toggleClass('active');

@@ -136,14 +136,14 @@ body{
     background: #c3d7ea;
     text-decoration: none;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+/*.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
     background-color: #c3d7ea !important;
     color: #fff !important;
 }
 .nav-tabs > li.active > a .label{
     color: #fff !important;
     border-color: #fff !important;
-}
+}*/
 .step{
     position: relative;
 }

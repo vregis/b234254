@@ -67,20 +67,20 @@ use yii\widgets\ActiveForm;
         </div>
         <div class="row form-group <?= isset($idea->errors['description_like']) ? 'has-error' : '' ?>">
             <div class="col-sm-12">
-                <textarea style="height:85px;resize:none;" maxlength="300" name="Idea[description_like]" placeholder="Small description of your idea (No more than 300 characters)" class="form-control"><?= $idea->description_like ?></textarea>
+                <textarea style="height:75px;resize:none;" maxlength="300" name="Idea[description_like]" placeholder="Small description of your idea (No more than 300 characters)" class="form-control"><?= $idea->description_like ?></textarea>
             </div>
         </div>
         <div class="row form-group <?= isset($idea->errors['description_problem']) ? 'has-error' : '' ?>">
             <div class="col-sm-12">
-                <textarea style="height:85px;resize:none;" maxlength="300" placeholder="What problem is solving? (No more than 300 characters)" name="Idea[description_problem]" class="form-control"><?= $idea->description_problem ?></textarea>
+                <textarea style="height:75px;resize:none;" maxlength="300" placeholder="What problem is solving? (No more than 300 characters)" name="Idea[description_problem]" class="form-control"><?= $idea->description_problem ?></textarea>
             </div>
         </div>
-        <div class="row form-group">
+        <div class="row form-group" style="margin-bottom:0;">
             <div class="col-sm-12">
                 <? require __DIR__.'/idea/idea_block.php'; ?>
                 <?= Html::submitButton('Continue', [
                     'class' => 'btn btn-success btn-lg',
-                    'style' => 'margin:30px auto;'
+                    'style' => 'margin:30px auto 0;'
                 ]) ?>
             </div>
         </div>
@@ -105,7 +105,7 @@ use yii\widgets\ActiveForm;
     }
 
     .task-custom textarea {
-        height:85px;
+        height:75px;
         resize:none;
     }
 </style>

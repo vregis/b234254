@@ -6,7 +6,7 @@
     position: relative;
 }
 .well{
-    padding: 10px !important;
+    padding: 0 10px !important;
     position: relative;
 }
 .task-bg{
@@ -15,7 +15,7 @@
 }
 
 .task .mCSB_container{
-    padding: 15px 30px;
+    padding: 5px 30px 30px;
 }
 .idea-block {
     overflow: hidden;
@@ -758,7 +758,7 @@ span.title {
 .task-body .block.desc .content{
     border-radius:10px 10px 0 0 !important;
     height:357px !important;
-}   
+}
 .task-body .block.desc .footer{
     background:none;
     height:30px;
@@ -885,7 +885,7 @@ span.title {
     }
 }
 .slidePop{
-    border:1px solid #d7d7d7;
+    /*border:1px solid #d7d7d7;*/
     position: relative;
     margin-top: 10px;
 }
@@ -946,8 +946,10 @@ span.title {
 #delegate thead tr th, #delegate tbody tr td,#delegate tfoot tr th,#counter thead tr th, #counter tbody tr td,#counter tfoot tr th{
     text-align:center;
     border:1px solid #d7d7d7;
-    padding: 8px;
-    border-left: none;
+    padding: 0px;
+    vertical-align: middle;
+    height: 50px;
+    /*border-left: none;*/
 }
 #delegate .gant_avatar,#counter .gant_avatar{
     margin:0;
@@ -991,11 +993,11 @@ span.title {
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
     max-width:433px;
     left:0 !important;
-    /*top: 7px !important;*/
+    margin-top: -65px !important;
 }
 .invite-by-email+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
-    background: #ebebeb;
-    width:430px;
+    /*background: #ebebeb;*/
+    /*width:430px;*/
     height: 199px;
     padding: 9px;
 }
@@ -1007,12 +1009,12 @@ span.title {
 }
 .advanced-search-btn+.popover{
     max-width:433px;
-    left:0 !important;
+    left:170px !important;
     /*top: 5px !important;*/
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
 }
 .advanced-search-btn+.popover.top > .arrow{
-    left: 170px !important;
+    left: 21px !important;
 }
 .advanced-search-btn+.popover .form-group, .invite-by-email+.popover .form-group{
     margin-bottom: 3px;
@@ -1026,7 +1028,7 @@ span.title {
 }
 #advanced-search-form{
     background: #fff;
-    border:1px solid #d7d7d7;
+    /*border:1px solid #d7d7d7;*/
     padding: 9px;
 }
 #advanced-search-form .select2-container--bootstrap .select2-selection--multiple{
@@ -1232,7 +1234,7 @@ span.title {
     padding-right: 0; 
 }
 .task .mCSB_scrollTools{
-    right:5px;
+    right:-7px;
 }
 .task-title .popover .btn-primary{
     width:83px !important;
@@ -1263,42 +1265,105 @@ span.title {
     bottom:2px !important;
     right: -4px !important;
 }
-#delegate .nav-tabs{
-    margin-bottom: 0;
-    border: none;
-    margin-top: -15px;
-    position: absolute;
-/*left: -1px;*/
-}
-#delegate .nav-tabs > li > a{
-    font-size: 11px !important;
-    color:#5a5a5a;
-    border:1px solid #d7d7d7 !important;
-    width: 93px;
-    text-align: center;
-    height: 16px;
-    padding: 0;
-    border-radius: 15px 15px 0 0 !important;
-    border-bottom: none !important;
-    margin-left: -1px;
-}
-#delegate .nav-tabs > li > a .label{
-    font-size: 10px !important;
-    top: 50%;
-    margin-top: -6px;
-    right: 10px;
-    padding: 0px;
-    line-height: 11px;
-}
-#delegate .nav-tabs > li > a:hover{
-    background: none;
-}
-#delegate .nav-tabs > li.active > a{
-    background: #ebebeb;
-}
-#delegate thead tr th:first-child{
-    border:none;
-}
+    .popover{
+        min-width: 420px;
+        border:1px solid #d7d7d7;
+        padding: 10px;
+        /*white-space: nowrap;*/
+        /*background: #ebebeb;*/
+        border-radius:10px !important;
+        box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+        border: 1px solid #dae2ea;
+    }
+    .advanced-search-btn+.popover .popover-content{
+        padding:0;
+        width: 410px;
+        height:185px;
+    }
+    .popover.bottom > .arrow:after {
+        border-bottom-color: #FFF !important;
+    }
+    .popover.top > .arrow:after {
+        border-top-color: #FFF !important;
+    }
+    .popover.right > .arrow:after {
+        border-right-color: #fff !important;
+    }
+    .popover .popover-content,.advanced-search-btn+.popover .popover-content{
+        background: #fff;
+        /*border: 1px solid #d7d7d7;*/
+    }
+    .dropselect,.dropselect1{
+        min-width:195px !important;
+        width:195px !important;
+    }
+    .dropselect1{
+        min-width:150px !important;
+        width:150px !important;
+    }
+    .dropselect .popover-content,.dropselect1 .popover-content{
+        padding: 0;
+    }
+    .dropselect a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        color: #7b7b7b;
+        text-decoration: none;
+        /*border-bottom: 1px solid #d7d7d7;*/
+        border-radius:3px;
+        margin-bottom:1px;
+    }
+    #status-menu ul{
+        position: relative;
+        top: 0;
+        border:none;
+        margin: 0;
+    }
+    #status-menu a{
+        border:none;
+        display:block;
+        width:100%;
+        background:none !important;
+        color: #7b7b7b !important;
+        padding: 0 !important;
+        line-height: 30px;
+        text-align:center;
+    }
+    #status-menu a .label{
+        right: 10px;
+        top: 10px;
+    }
+    
+    #status-menu li{
+        display:block;
+        width:100%;
+        float:none;
+    }
+    #status-menu li.active a{
+        background:#8eb6f8 !important;
+        color:#fff !important;
+        border-radius:3px;
+    }
+    .dropmenu,.dropmenu1{
+        cursor: pointer;
+        padding:0 !important;
+    }
+    .dropmenu .trigger{
+        height:50px;
+        line-height:50px;
+    }
+    .dropmenu > div:first-child{
+        padding:0px;
+    }
+    .dropmenu .popover{
+        top:100%;
+    }
+    .dropselect a:last-child {
+        border-bottom: 0;
+    }
 .task-body .block.desc .collapse{
     background: #ebebeb;
     padding: 10px 10px;
@@ -1381,4 +1446,87 @@ span.title {
 }
 .b-page-checkbox-wrap.off{
     background: rgba(0, 0, 0, 0) url("/images/tests/bg-checkbox-wrap-off.png") repeat-x scroll center center;
+}
+#btn-delegate+.popover > *{
+    text-align:center;
+    background:none;
+    border:none;
+}
+table th.rate .fa{
+        position:absolute;
+        cursor:pointer;
+        margin-left: 7px;
+    }
+    table th.rate .fa-angle-up{
+        margin-top:-4px;
+    }
+    table th.rate .fa-angle-down{
+        margin-top:10px;
+    }
+    table th.rate{
+        text-align:right;
+        padding-right:30px !important;
+        padding-left:0 !important;
+        width:150px;
+    }
+    .dropselect .popover-content,.dropselect1 .popover-content{
+        padding: 0;
+    }
+    .dropselect a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        color: #7b7b7b;
+        text-decoration: none;
+        /*border-bottom: 1px solid #d7d7d7;*/
+        border-radius:3px;
+        margin-bottom:1px;
+    }
+    .table thead tr > td:first-child,.table thead tr > th:first-child{
+    border-top-left-radius:10px !important;
+}
+.table{
+    border-collapse:initial !important;
+    border-radius:10px !important;
+}
+.table thead tr > td:last-child,.table thead tr > th:last-child{
+    border-top-right-radius:10px !important;
+}
+.table tbody tr:last-child > td:first-child,.table tfoot tr > th:first-child{
+    border-bottom-left-radius:10px !important;
+}
+.table tbody tr:last-child > td:last-child,.table tfoot tr > th:last-child{
+    border-bottom-right-radius:10px !important;
+}
+.table.with-foot td{
+    border-right:0 !important;
+    border-bottom: 0 !important;
+}
+.table.with-foot td:last-child{
+    border-right:1px solid #d7d7d7 !important;
+}
+.table.with-foot td:first-child{
+    /*border-left:0 !important;*/
+}
+
+#input-rate-start, #input-rate-end {
+    background: #fff url("/images/cost-bg.png") 7px 0 no-repeat;
+    padding-left: 30px;
+}
+.task .block.desc .mCSB_container {
+    padding: 15px 0px 15px;
+}
+.tab-content > .tab-pane .item{
+    width: 50px;
+    height:50px;
+    font-size:24px;
+    line-height:50px;
+    margin-bottom:10px;
+    float: left;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 10px;
+    line-height: 36px;
 }

@@ -2,6 +2,7 @@ function openTask(id, is_custom){
     if(is_custom == undefined) {
         is_custom = false;
     }
+
     $.ajax({
         url: '/departments/getpopuptask',
         type: 'post',
@@ -22,6 +23,7 @@ function openTask(id, is_custom){
                 $('.collapse').collapse({
                     toggle: false
                 });
+
                 setTimeout(function () {
                     var height = $('.task').height() + 34;
                     if (height > 610 && !is_custom) {
@@ -63,7 +65,31 @@ function openTask(id, is_custom){
     task.off();
     task.on('show.bs.modal', function (e) {
         console.log('show.bs.modal');
+
         setTimeout(function(){
+            $("#delegate").on('show.bs.collapse',function(){
+                console.log("sdasd");
+            });
+            $(".dropmenu1.status").popover({
+                placement:"bottom",
+                html:true,
+                content:$("#status-menu"),
+                // container:$("body"),
+                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+            });
+            $(".dropmenu1.status").on('shown.bs.popover',function(){
+                $("#status-menu a[data-toggle='tab']").click(function(){
+                    $("#status-menu li").removeClass('active');
+                    $(this).tab('show').parents('li').addClass('active');
+                    // $(".dropmenu1.status").popover('hide');
+                });
+            });
+            $(".dropmenu1").on('show.bs.popover',function(){
+                $("#status-menu").show();
+                $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+            }).on('hide.bs.popover',function(){
+                $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+            });
             $("#input-time, #input-price").inputmask({
                 "mask": "9",
                 "repeat": 10,

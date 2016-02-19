@@ -3,14 +3,15 @@
  */
 
 var timeoutChat = 2000;
-    $(document).ready(function(){
-        var offs = 32;
-        console.log(offs);
-        $('.well').css({
-            'margin-top': offs - 2,
-            'margin-bottom': offs - 2
-        });
+$(document).ready(function(){
+
+    var offs = 32;
+    console.log(offs);
+    $('.well').css({
+        'margin-top': offs - 2,
+        'margin-bottom': offs - 2
     });
+});
 function afterSubmit() {
     var start = $("#taskuser-start");
     if($('#taskuser-status').val() == '2') {

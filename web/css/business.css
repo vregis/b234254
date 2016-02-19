@@ -109,6 +109,7 @@ table tbody tr td .label{
     position: relative;
     border-top-left-radius:0 !important;
     margin-top:60px !important;
+        padding: 20px !important;
 }
 .slidePop{
     position:initial;
