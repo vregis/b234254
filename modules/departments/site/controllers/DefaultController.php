@@ -651,7 +651,7 @@ class DefaultController extends Controller
         }
 
         $custom = null;
-        $task_view = 'blocks/task';
+        $task_view = 'blocks/task_window';
         if($is_custom) {
             $task_view = 'blocks/task_custom';
             if($task->id == Task::$task_roadmap_personal_id) $customObject = new TaskCustom('simply_start',$task);
