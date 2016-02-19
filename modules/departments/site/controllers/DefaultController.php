@@ -75,6 +75,7 @@ class DefaultController extends Controller
                             'get-new-logs',
                             'get-count-by-tool',
                             'get-count-by-business',
+                            'get-task'
                         ],
                         'roles' => ['@'],
 
@@ -578,6 +579,119 @@ class DefaultController extends Controller
         ]);
     }
 
+    public function getTaskHtmlFromPage($tool,$task,$task_user,$is_my,$is_custom){
+        if($task_user) {
+            if ($task_user->status == TaskUser::$status_new) {
+                $task_user->status = TaskUser::$status_active;
+                TaskUserLog::sendLog($task_user->id, TaskUserLog::$log_start);
+                $task_user->save(false);
+            }
+        }
+
+        $user_task_helpful = UserTaskHelpful::getUserTaskHelpful($task->id);
+
+        $files['archive'] = $this->getFiles($task->id, 'archive');
+        $files['audio'] = $this->getFiles($task->id, 'audio');
+        $files['document'] = $this->getFiles($task->id, 'document');
+        $files['photo'] = $this->getFiles($task->id, 'photo');
+
+        $task_videos = [];
+        $task_videosYoutube = TaskVideoYoutube::find()->where(['task_id' => $task->id])->all();
+        foreach($task_videosYoutube as $task_videoYoutube) {
+            $link = $task_videoYoutube->name;
+            if(preg_match('/.*watch\?v=(.*)$/',$link,$matches)) {
+                $task_videos[] = $matches[1];
+            }
+        }
+        $task_links = TaskLink::find()->where(['task_id' => $task->id])->all();
+        $task_notes = TaskNote::find()->where(['task_id' => $task->id])->all();
+
+        $delegate_task = null;
+        if($task_user) {
+            $delegate_task = DelegateTask::getCurrentDelegateTask($task_user->id, $is_my);
+        }
+
+        $noteController = new NoteController('note', Yii::$app->getModule('tasks'));
+
+        $taskUserNotes = null;
+        if($task_user) {
+            $taskUserNotes = $noteController->getNotesRender($task_user->id);
+        }
+
+        $delegate_tasks = [];
+        $counter_offers = [];
+        $delegate_user = null;
+
+        if($is_my) {
+            if($task_user) {
+                $delegate_tasks = DelegateTask::getCurrentDelegateTasks($task_user->id, $is_my);
+                $counter_offers = DelegateTask::getCurrentCounterOffers($task_user->id);
+            }
+        }
+        else {
+            $delegate_user = User::find()->select('*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava')
+                ->join('JOIN', 'user_profile', 'user_profile.user_id = user.id')
+                /*->where(['user.id' => $tool->user_id])*/
+                ->one();
+        }
+
+        $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();
+        $countrylist = Country::findBySql('SELECT * FROM geo_country gc ORDER BY id=1 DESC, title_en ASC')->all();
+        $skill_list = Skilllist::find()->all();
+
+        $task_component = new TaskComponent();
+        $taskUserLogs = [];
+        $html_cancel_delegate_users = '';
+        if($task_user) {
+            $taskUserLogs = $task_component->get_task_user_logs($task_user->id);
+            $html_cancel_delegate_users = $task_component->get_cancel_delegate_users($task_user->id);
+        }
+        if($html_cancel_delegate_users == 'none') {
+            $html_cancel_delegate_users = '';
+        }
+
+        $custom = null;
+        $task_view = 'blocks/task';
+        if($is_custom) {
+            $task_view = 'blocks/task_custom';
+            if($task->id == Task::$task_roadmap_personal_id) $customObject = new TaskCustom('simply_start',$task);
+            else if($task->id == Task::$task_bussiness_role_id) $customObject = new TaskCustom('bussiness_role',$task);
+            else if($task->id == Task::$task_comfort_place_id) $customObject = new TaskCustom('comfort_place',$task);
+            else if($task->id == Task::$task_person_goal_id) $customObject = new TaskPersonGoal($task);
+            else if($task->id == Task::$task_idea_id) $customObject = new TaskIdea('idea',$task,$task_videos,$task_notes,$task_links,$files);
+            else if($task->id == Task::$task_idea_benefits_id) $customObject = new TaskBenefit($tool->id,'idea_benefits',$task,$task_videos,$task_notes,$task_links,$files);
+            else if($task->id == Task::$task_idea_share_id) $customObject = new TaskShare($tool->id,'idea_share',$task,$task_videos,$task_notes,$task_links,$files);
+            else if($task->is_roadmap) $customObject = new TaskRoadmap($task);
+            $custom = $customObject->render();
+
+            if($task->id == Task::$task_idea_share_id && $tool->status == UserTool::STATUS_IDEA_BENEFITS_FILLED) {
+                $tool->status = UserTool::STATUS_IDEA_SHARED;
+                $tool->save(false);
+            }
+        }
+        return $this->render($task_view, [
+            'task' => $task,
+            'task_user' => $task_user,
+            'user_task_helpful' => $user_task_helpful,
+            'task_videos' =>$task_videos,
+            'task_notes' => $task_notes,
+            'task_links' => $task_links,
+            'files'=>$files,
+            'taskUserNotes' => $taskUserNotes,
+            'taskUserLogs' => $taskUserLogs,
+            'delegate_tasks' => $delegate_tasks,
+            'delegate_task' => $delegate_task,
+            'delegate_user' => $delegate_user,
+            'counter_offers' => $counter_offers,
+            'profile' => $profile,
+            'countrylist' => $countrylist,
+            'skill_list' => $skill_list,
+            'html_cancel_delegate_users' => $html_cancel_delegate_users,
+            'custom' => $custom,
+            'is_my' => $is_my
+        ]);
+    }
+
     public function actionGetpopuptask(){
         $response = [];
 
@@ -603,6 +717,40 @@ class DefaultController extends Controller
         }
         return json_encode($response);
     }
+
+
+    public function actionGetTask($id){
+        $response = [];
+
+        //$is_custom = filter_var($_POST['is_custom'], FILTER_VALIDATE_BOOLEAN);
+        $task = Task::find()
+            ->select('task.*, specialization.name as spec, milestone.is_pay is_pay')
+            ->join('JOIN', 'milestone', 'milestone.id = task.milestone_id')
+            ->join('LEFT OUTER JOIN', 'specialization', 'task.specialization_id = specialization.id')
+            ->where(['task.id' => $id])
+            ->one();
+
+        if(Yii::$app->user->can('admin') || $task->is_pay == 0) {
+            $tool = UserTool::getCurrentUserTool();
+            $tool = 77;
+            $task_user = TaskUser::getTaskUser($tool->id, $task->id, $task);
+            $is_my = $tool->user_id == Yii::$app->user->id;
+
+            $response['html'] = $this->getTaskHtml($tool,$task,$task_user,$is_my/*,$is_custom*/);
+            $response['task_user_id'] = $task_user->id;
+            $response['is_my'] = $is_my;
+            $response['error'] = false;
+        }else {
+            $response['error'] = true;
+        }
+        $tool = UserTool::getCurrentUserTool();
+        $task_user = TaskUser::getTaskUser($tool->id, $task->id, $task);
+        $is_my = $tool->user_id == Yii::$app->user->id;
+        return $this->getTaskHtmlFromPage($tool,$task,$task_user,$is_my, false);
+    }
+
+
+
     public function actionTask($id){
 
         $is_custom = true;

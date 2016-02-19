@@ -19023,3 +19023,2067 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1455874468.88
     'REQUEST_TIME' => 1455874468
 ]
+2016-02-19 12:44:53 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:44:53 [127.0.0.1][278][-][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47895'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875093.067
+    'REQUEST_TIME' => 1455875093
+]
+2016-02-19 12:44:55 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:44:55 [127.0.0.1][278][-][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47895'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/core/profile'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875095.069
+    'REQUEST_TIME' => 1455875095
+]
+2016-02-19 12:45:03 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:45:02 [127.0.0.1][278][-][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47898'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/core/profile'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875102.968
+    'REQUEST_TIME' => 1455875102
+]
+2016-02-19 12:45:19 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:45:19 [127.0.0.1][278][-][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47907'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/core/profile'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875119.058
+    'REQUEST_TIME' => 1455875119
+]
+2016-02-19 12:45:19 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:45:19 [127.0.0.1][278][-][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47908'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/core/profile'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875119.258
+    'REQUEST_TIME' => 1455875119
+]
+2016-02-19 12:45:26 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:45:26 [127.0.0.1][278][-][info][application] $_POST = [
+    'fname' => ''
+    'lname' => ''
+    'status' => ''
+    'country' => '0'
+    'city' => ''
+    'about' => ''
+    'tw' => ''
+    'fb' => ''
+    'ln' => ''
+    'inst' => ''
+    'gg' => ''
+    'email' => 'fkotcccp@gmail.com'
+    'skype' => ''
+    'phone' => ''
+    'zip' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '112'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://bsb.local'
+    'HTTP_X_CSRF_TOKEN' => 'cnF4b1kyZGhFJjUNEgMAIhgALThtRi4FAR0gWwtwVRkxEwg2YWAFEg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://bsb.local/core/profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47910'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/core/profile'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875126.449
+    'REQUEST_TIME' => 1455875126
+]
+2016-02-19 12:45:26 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:26 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:26 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47910'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/statc/web/avatars/1455256427avatar.jpg'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875126.874
+    'REQUEST_TIME' => 1455875126
+]
+2016-02-19 12:45:27 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:27 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:27 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47911'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/statc/web/avatars/1455256427avatar.jpg'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875127.012
+    'REQUEST_TIME' => 1455875127
+]
+2016-02-19 12:45:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47915'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/statc/web/avatars/1455256427avatar.jpg'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875131.384
+    'REQUEST_TIME' => 1455875131
+]
+2016-02-19 12:45:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47914'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/statc/web/avatars/1455256427avatar.jpg'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875131.49
+    'REQUEST_TIME' => 1455875131
+]
+2016-02-19 12:45:42 [127.0.0.1][278][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 [internal function]: yii\log\Logger->flush(true)
+#4 {main}
+2016-02-19 12:45:42 [127.0.0.1][278][-][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = [
+    '_csrf' => 'WmZ4VVBtX3htMTU3G1w7MjAXLQJkGRUVKQogYQIvbgkZBAgMaD8.Ag=='
+    'Idea' => [
+        'name' => 'dfasdf'
+        'industry_id' => '3'
+        'description_like' => 'asdfasdf'
+        'description_problem' => 'asdfasdf'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '187'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://bsb.local'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://bsb.local/departments/task?id=37'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47920'
+    'REDIRECT_QUERY_STRING' => 'id=37'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=37'
+    'REQUEST_URI' => '/departments/task?id=37'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875142.428
+    'REQUEST_TIME' => 1455875142
+]
+2016-02-19 12:45:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47921'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/statc/web/avatars/1455256427avatar.jpg'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875151.538
+    'REQUEST_TIME' => 1455875151
+]
+2016-02-19 12:45:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:45:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47923'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/statc/web/avatars/1455256427avatar.jpg'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875151.669
+    'REQUEST_TIME' => 1455875151
+]
+2016-02-19 12:47:23 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:47:23 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:47:23 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47958'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875243.064
+    'REQUEST_TIME' => 1455875243
+]
+2016-02-19 12:52:32 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 12:52:32 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '22'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47967'
+    'REDIRECT_QUERY_STRING' => 'id=22'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=22'
+    'REQUEST_URI' => '/departments/task?id=22'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875552.963
+    'REQUEST_TIME' => 1455875552
+]
+2016-02-19 12:56:06 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 12:56:06 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '22'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47989'
+    'REDIRECT_QUERY_STRING' => 'id=22'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=22'
+    'REQUEST_URI' => '/departments/task?id=22'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875766.246
+    'REQUEST_TIME' => 1455875766
+]
+2016-02-19 12:56:11 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:56:11 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:56:11 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '47992'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875771.314
+    'REQUEST_TIME' => 1455875771
+]
+2016-02-19 12:56:43 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:56:43 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error404.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#5 {main}
+2016-02-19 12:56:43 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48006'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875803.283
+    'REQUEST_TIME' => 1455875803
+]
+2016-02-19 12:57:16 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 12:57:16 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48014'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455875836.559
+    'REQUEST_TIME' => 1455875836
+]
+2016-02-19 13:00:44 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:00:44 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48044'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876044.745
+    'REQUEST_TIME' => 1455876044
+]
+2016-02-19 13:01:28 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:01:28 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48051'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876088.329
+    'REQUEST_TIME' => 1455876088
+]
+2016-02-19 13:01:38 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:01:38 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48052'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876098.714
+    'REQUEST_TIME' => 1455876098
+]
+2016-02-19 13:01:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:01:51 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48054'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876111.879
+    'REQUEST_TIME' => 1455876111
+]
+2016-02-19 13:03:29 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:03:29 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48065'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876209.696
+    'REQUEST_TIME' => 1455876209
+]
+2016-02-19 13:03:30 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:03:30 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48068'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876210.715
+    'REQUEST_TIME' => 1455876210
+]
+2016-02-19 13:03:39 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:03:39 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48085'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876219.51
+    'REQUEST_TIME' => 1455876219
+]
+2016-02-19 13:04:29 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:04:29 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48093'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876269.449
+    'REQUEST_TIME' => 1455876269
+]
+2016-02-19 13:04:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:04:31 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48094'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876271.007
+    'REQUEST_TIME' => 1455876271
+]
+2016-02-19 13:05:02 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:05:02 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48101'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876302.594
+    'REQUEST_TIME' => 1455876302
+]
+2016-02-19 13:05:19 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:05:19 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48102'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876319.691
+    'REQUEST_TIME' => 1455876319
+]
+2016-02-19 13:06:03 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\FileTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'Unable to append to log file: /var/www/bsb.local/yii2/logs/site/error.log' 
+
+in /var/www/bsb.local/vendor/yiisoft/yii2/log/FileTarget.php:108
+
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/log/Target.php(111): yii\log\FileTarget->export()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/log/Dispatcher.php(183): yii\log\Target->collect(Array, true)
+#2 /var/www/bsb.local/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#3 /var/www/bsb.local/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#4 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#5 {main}
+2016-02-19 13:06:03 [127.0.0.1][278][tmj9q2t2ovsfobmp87dmbnpt67][info][application] $_GET = [
+    'id' => '56'
+]
+
+$_COOKIE = [
+    '_csrf' => '3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz\";}'
+    'PHPSESSID' => 'tmj9q2t2ovsfobmp87dmbnpt67'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/core/profile'
+    '__id' => 278
+    'tool_id' => 167
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3a521f3f74de3a2dc3ae8106e1eb4e56f15782c5f34b3ea5a32b0debabe5b114a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227WMbK1dJjqUW4tJmslX4RB1qCbpY8Raz%22%3B%7D; PHPSESSID=tmj9q2t2ovsfobmp87dmbnpt67'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/index.php'
+    'REMOTE_PORT' => '48107'
+    'REDIRECT_QUERY_STRING' => 'id=56'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=56'
+    'REQUEST_URI' => '/departments/get-task?id=56'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1455876363.394
+    'REQUEST_TIME' => 1455876363
+]
