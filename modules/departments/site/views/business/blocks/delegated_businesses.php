@@ -6,7 +6,7 @@ use yii\helpers\Url;
 
 ?>
 <? if(count($userTools) == 0): ?>
-<div class="text-center none" style="padding:22px 0;color:#8eb6f8;">
+<div class="text-center none" style="padding:22px 0;">
     Not a single task was yet delegated to you. But you can find tasks independently
 </div>
 <div style="border-top:1px solid #d7d7d7;height:1px;"></div>

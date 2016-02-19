@@ -48,10 +48,11 @@ $this->registerJs($msgJs);
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in <?= count($self_userTools) != 0 ? 'in active' : '' ?>" id="my">
             <? if(count($self_userTools) == 0) : ?>
-                <div class="text-center" style="padding:22px 0;color:#8eb6f8;">
+                <div class="text-center" style="padding:22px 0;">
                     You do not yet have own business. But you have an idea certainly.<br>
                     Realize it
                 </div>
+                <div style="border-top:1px solid #d7d7d7;height:1px;"></div>
             <?php else: ?>
                 <table class="table table-bordered">
                     <thead>
@@ -128,6 +129,9 @@ $this->registerJs($msgJs);
     </div>
 </div>
 <style>
+.table .btn{
+    margin:0;
+}
     .dropselect1{
         min-width:190px !important;
         width:190px !important;
@@ -202,30 +206,28 @@ $this->registerJs($msgJs);
                 setHeight: $('.page-content').css('minHeight'),
                 theme:"dark"
             });
-                $("#find_job").on('shown.bs.collapse',function(){
-                    $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
-        $(".page-content-wrapper").mCustomScrollbar("destroy");
-        $('.page-content-wrapper').mCustomScrollbar({
-            setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
-        });
+            $("#find_job").on('shown.bs.collapse',function(){
+                $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+                $(".page-content-wrapper").mCustomScrollbar("destroy");
+                $('.page-content-wrapper').mCustomScrollbar({
+                    setHeight: $('.page-content').css('minHeight'),
+                    theme:"dark"
                 });
-                $("#find_job").on('hidden.bs.collapse',function(){
-                    $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
-        $(".page-content-wrapper").mCustomScrollbar("destroy");
-        $('.page-content-wrapper').mCustomScrollbar({
-            setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
-        });
+            });
+            $("#find_job").on('hidden.bs.collapse',function(){
+                $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+                $(".page-content-wrapper").mCustomScrollbar("destroy");
+                $('.page-content-wrapper').mCustomScrollbar({
+                    setHeight: $('.page-content').css('minHeight'),
+                    theme:"dark"
                 });
+            });
         });
-            // $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
-            //     console.log("asdasda");
-            //     $(".huistory a[data-toggle='tab'] i").remove();
-            //     $(this).append('<i class="ico-check1"></i>');
-            //     $(this).tab('show');
-            //     // $(".dropmenu1.status").popover('hide');
-            // });
+        $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
+            console.log("asdasda");
+            $("#find_job").collapse('hide');
+            $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+        });
     });
 
 </script>

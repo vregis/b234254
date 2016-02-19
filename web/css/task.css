@@ -1,14 +1,16 @@
 .task {
     align-content: center;
-    background-color: white;
-    margin: 0 auto;
-    padding: 0;
+    /*background-color: white;*/
     color: #5a5a5a;
-    width: 1024px;
+    /*width: 1024px;*/
+    position: relative;
+}
+.well{
+    padding: 10px !important;
     position: relative;
 }
 .task-bg{
-    padding: 0 10px !important;
+    /*padding: 0 10px !important;*/
     margin-bottom: 0 !important;
 }
 
@@ -558,6 +560,7 @@ span.title {
     border-width: 1px;
     border-color: #d7d7d7;
     border-style: solid;
+    border-radius: 10px !important;
 }
 .task-body .block .content {
     border-bottom: 1px solid #d7d7d7;
@@ -569,7 +572,7 @@ span.title {
     line-height: 23px;
     /* Приближение из-за подстановки шрифтов */
     text-align: justify;
-    height: 285px;
+    height: 321px;
     position: relative;
 }
 .task-body .block .content .actions{
@@ -582,6 +585,10 @@ span.title {
     height: 66px;
     position: relative;
     border-top: none;
+    border-radius:10px !important;
+}
+.task-body .block .content+.footer{
+    border-radius:0 0 10px 10px !important;
 }
 .milestones-users {
     line-height: 43px !important;
@@ -748,25 +755,55 @@ span.title {
 .md-radio.has-test.b-page-checkbox:last-child {
     right: -1px;
 }*/
+.task-body .block.desc .content{
+    border-radius:10px 10px 0 0 !important;
+    height:357px !important;
+}   
+.task-body .block.desc .footer{
+    background:none;
+    height:30px;
+}
+.task-body .block.desc .footer .nav-tabs{
+    border-bottom:none;
+    margin-bottom:0;
+}
+.task-body .block.desc .footer .nav-tabs li{
+    margin-top: -1px;
+    margin-bottom:auto;
+}
 .task-body .block.desc .footer .btn {
-    height: 66px;
+    height: 30px;
     border-radius: 0 !important;
-    border:none !important;
-    border-right: 1px solid #D7D7D7 !important;
-    background: none;
+    border:1px solid #fff;
+    background: #f5f5f5;
+    border-top-color:#d7d7d7 !important;
     color: #999;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+    margin:0;
+    width:75px !important;
+    line-height:28px;
+    border-radius: 0 0 10px 10px !important;
 }
-.task-body .block.desc .footer .btn:last-child{
-    border-right: none !important;
+/*.task-body .block.desc .footer li:first-child .btn{
+    border-bottom-left-radius:10px;
 }
-.task-body .block.desc .footer .btn:hover, .task-body .block.desc .footer .btn.active {
-    background-color: #c3d7ea;
-    color: #fff;
+.task-body .block.desc .footer li:last-child .btn{
+    border-bottom-right-radius:10px;
+}*/
+.task-body .block.desc .footer .btn:hover, .task-body .block.desc .footer .active .btn {
+    background-color: #fff;
+    border:1px solid #d7d7d7 !important;
+    color:#5a5a5a !important;
+    border-top-color:#fff !important;
 }
 .task-body .block.desc .footer .btn i {
-    display: block;
+    display: inline-block;
+
+}
+.task-body .block.desc .footer .btn:hover .label,.task-body .block.desc .footer .active .btn .label{
+    color:#5a5a5a !important;
+    border:1px solid #d7d7d7;
 }
 .task-body .block.desc .footer .btn .label {
     color: #999;
@@ -774,9 +811,9 @@ span.title {
     /*position: absolute;*/
     border: 1px solid #999;
     padding: 2px 0px;
-    font-size: 14px;
-    width: 20px;
-    height: 20px;
+    font-size: 8px;
+    width: 13px;
+    height: 13px;
     text-align: center;
     display: inline-block;
     line-height: 100%;
@@ -784,14 +821,10 @@ span.title {
     margin-top: 4px;
 }
 .task-body .block.desc .footer .btn .text{
-    display: block;
+    display: inline-block;
     /*margin-bottom: 10px;*/
 }
 
-.task-body .block.desc .footer .btn:hover .label, .task-body .block.desc .footer .btn.active .label {
-    color: #fff;
-    border-color: #fff;
-}
 .ui-datepicker {
     width: 100%;
     background: none;
