@@ -33,12 +33,7 @@
         </div>
         <div class="col-sm-6">
             <label for="">City</label> <br>
-            <select id="select-country" class="form-control selectpicker country">
-                <option class="start" value="0">Select city</option>
-                <?php foreach($countrylist as $c):?>
-                    <option <?php echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->title_en?></option>
-                <?php endforeach; ?>
-            </select>
+            <input type="text" style="height:32px;" placeholder="Type city" class="form-control">
         </div>
         <div class="col-sm-6">
             <label for="">Department</label> <br>

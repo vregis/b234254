@@ -46,11 +46,12 @@ if($task->specialization_id > 0) {
     ]
 ) */?>
 <link rel="stylesheet" type="text/css" href="/css/task.css">
+<div class="well well-sm" style="margin:30px auto;max-width:1024px;">
 <div class="task">
     <div class="hidden-task-id" style="display:none"><?php echo $task->id?></div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="well well-sm task-bg" style="box-shadow: none !important;border: none !important;">
+            <div class="task-bg" style="box-shadow: none !important;border: none !important;">
                 <div class="row task-title">
 
                     <div class="name pull-left"><?= $task->name ?></div>
@@ -241,43 +242,43 @@ if($task->specialization_id > 0) {
                             <div class="footer">
                                 <div>
                                     <div class="btn-group btn-group-justified">
-                                        <?php if(count($task_videos) > 0):?>
+                                        <?php if(count($task_videos) == 0):?>
                                             <div class="btn" data-target="#collapseVideo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseVideo">
                                                 <span class="label"><?php echo count($task_videos)?></span>
                                                 <span class="text">Video</span>
                                             </div>
                                         <?php endif; ?>
-                                        <?php if(count($files['audio']) > 0):?>
+                                        <?php if(count($files['audio']) == 0):?>
                                             <div class="btn" data-target="#collapseAudio" data-toggle="collapse" aria-expanded="false" aria-controls="collapseAudio">
                                                 <span class="label"><?php echo count($files['audio'])?></span>
                                                 <span class="text">Sound</span>
                                             </div>
                                         <?php endif;?>
-                                        <?php if(count($files['photo']) > 0):?>
+                                        <?php if(count($files['photo']) == 0):?>
                                             <div class="btn" data-target="#collapsePhotos" data-toggle="collapse" aria-expanded="false" aria-controls="collapsePhotos">
                                                 <span class="label"><?php echo count($files['photo'])?></span>
                                                 <span class="text">Photo</span>
                                             </div>
                                         <?php endif;?>
-                                        <?php if(count($files['document']) > 0):?>
+                                        <?php if(count($files['document']) == 0):?>
                                             <div class="btn" data-target="#collapseDocument" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDocument">
                                                 <span class="label"><?php echo count($files['document'])?></span>
                                                 <span class="text">Doc</span>
                                             </div>
                                         <?php endif;?>
-                                        <?php if(count($files['archive']) > 0):?>
+                                        <?php if(count($files['archive']) == 0):?>
                                             <div class="btn" data-target="#collapseArchives" data-toggle="collapse" aria-expanded="false" aria-controls="collapseArchives">
                                                 <span class="label"><?php echo count($files['archive'])?></span>
                                                 <span class="text">Archive</span>
                                             </div>
                                         <?php endif;?>
-                                        <?php if(count($task_links) > 0):?>
+                                        <?php if(count($task_links) == 0):?>
                                             <div class="btn" data-target="#collapseLinks" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLinks">
                                                 <span class="label"><?php echo count($task_links)?></span>
                                                 <span class="text">Link</span>
                                             </div>
                                         <?php endif;?>
-                                        <?php if(count($task_notes) > 0):?>
+                                        <?php if(count($task_notes) == 0):?>
                                             <div class="btn" data-target="#collapseNotes" data-toggle="collapse" aria-expanded="false" aria-controls="collapseNotes">
                                                 <span class="label"><?php echo count($task_notes)?></span>
                                                 <span class="text">Notes</span>
@@ -452,4 +453,5 @@ if($task->specialization_id > 0) {
             </div>
         </div>
     </div>
+</div>
 </div>

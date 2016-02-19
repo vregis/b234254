@@ -48,10 +48,11 @@ $this->registerJs($msgJs);
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in <?= count($self_userTools) != 0 ? 'in active' : '' ?>" id="my">
             <? if(count($self_userTools) == 0) : ?>
-                <div class="text-center" style="padding:22px 0;color:#8eb6f8;">
+                <div class="text-center" style="padding:22px 0;">
                     You do not yet have own business. But you have an idea certainly.<br>
                     Realize it
                 </div>
+                <div style="border-top:1px solid #d7d7d7;height:1px;"></div>
             <?php else: ?>
                 <table class="table table-bordered">
                     <thead>
@@ -128,6 +129,9 @@ $this->registerJs($msgJs);
     </div>
 </div>
 <style>
+.table .btn{
+    margin:0;
+}
     .dropselect1{
         min-width:190px !important;
         width:190px !important;

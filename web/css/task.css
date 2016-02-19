@@ -1,14 +1,16 @@
 .task {
     align-content: center;
-    background-color: white;
-    margin: 0 auto;
-    padding: 0;
+    /*background-color: white;*/
     color: #5a5a5a;
-    width: 1024px;
+    /*width: 1024px;*/
+    position: relative;
+}
+.well{
+    padding: 10px !important;
     position: relative;
 }
 .task-bg{
-    padding: 0 10px !important;
+    /*padding: 0 10px !important;*/
     margin-bottom: 0 !important;
 }
 
@@ -558,6 +560,7 @@ span.title {
     border-width: 1px;
     border-color: #d7d7d7;
     border-style: solid;
+    border-radius: 10px !important;
 }
 .task-body .block .content {
     border-bottom: 1px solid #d7d7d7;
@@ -582,6 +585,10 @@ span.title {
     height: 66px;
     position: relative;
     border-top: none;
+    border-radius:10px !important;
+}
+.task-body .block .content+.footer{
+    border-radius:0 0 10px 10px !important;
 }
 .milestones-users {
     line-height: 43px !important;
@@ -758,8 +765,12 @@ span.title {
     text-align: center;
     font-size: 14px;
 }
+.task-body .block.desc .footer .btn:first-child{
+    border-bottom-left-radius:10px;
+}
 .task-body .block.desc .footer .btn:last-child{
     border-right: none !important;
+    border-bottom-right-radius:10px;
 }
 .task-body .block.desc .footer .btn:hover, .task-body .block.desc .footer .btn.active {
     background-color: #c3d7ea;

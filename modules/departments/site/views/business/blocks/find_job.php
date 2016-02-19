@@ -293,7 +293,7 @@
         padding-left: 30px;
     }
     .advanced-search-btn+.popover.top > .arrow {
-        left: 38px !important;
+        left: 28px !important;
     }
     label{
         text-indent: 12px;
