@@ -350,7 +350,8 @@ HTML;
                         $user->save(false);
                     }
                 }
-                return $this->redirect(['/departments']);
+               // return $this->redirect(['/departments']);
+                return $this->redirect(['/departments/business']);
             }else{
                 $response['error'] = true;
                 var_dump($profile->getErrors());

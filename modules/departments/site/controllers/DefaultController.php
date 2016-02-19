@@ -732,7 +732,6 @@ class DefaultController extends Controller
 
         if(Yii::$app->user->can('admin') || $task->is_pay == 0) {
             $tool = UserTool::getCurrentUserTool();
-            $tool = 77;
             $task_user = TaskUser::getTaskUser($tool->id, $task->id, $task);
             $is_my = $tool->user_id == Yii::$app->user->id;
 
