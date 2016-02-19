@@ -30,8 +30,8 @@
                             </div>
                         </div>
                     </th>
-                    <th width="120" class="time">Time</th>
-                    <th width="120" class="rate">Rate / H</th>
+                    <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
  <!--                    <th class="filter-task status" width="121">
                         <div style="position:relative;">
                             <div class="trigger">Status <i class="fa fa-angle-down"></i></div>
@@ -106,8 +106,8 @@
                             </div>
                         </div>
                     </th>
-                    <th width="120" class="time">Time</th>
-                    <th width="120" class="rate">Rate / H</th>
+                    <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
                     <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Pending <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
@@ -571,7 +571,7 @@
             });
 
             $('.dropselect .popover-content').mCustomScrollbar({
-                setHeight: 218,
+                setHeight: 247,
                 theme:"dark"
             });
         }

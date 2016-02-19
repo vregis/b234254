@@ -14,13 +14,13 @@ use yii\helpers\Url;
 <table class="table table-bordered">
     <thead>
     <tr>
+        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 42px !important;"><i class="ico-history"></i></a></th>
         <th> Business Name </th>
         <th width="130"> Tasks </th>
         <th width="130"> Pending </th>
         <th width="130"> New </th>
         <th width="130"> Active </th>
         <th width="130"> Complited </th>
-        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;"><i class="ico-history"></i></a></th>
     </tr>
     </thead>
     <tbody>
@@ -38,6 +38,13 @@ use yii\helpers\Url;
         ?>
 
         <tr id="toolid-<?php echo $userTool->id?>">
+                    <td>
+                <a href="javascript:;" class="dropmenu1 history1 btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="disabled"><a href="#">Business Dashboard</a></li>
+                    <li class="disabled"><a>Team</a></li>
+                </ul>
+            </td>
             <td style="text-transform: uppercase">
                 <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>
             </td>
@@ -59,13 +66,7 @@ use yii\helpers\Url;
                 echo $task_progress;
                 ?>
             </td>
-            <td>
-                <a href="javascript:;" class="dropmenu1 history1 btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="disabled"><a href="#">Business Dashboard</a></li>
-                    <li class="disabled"><a>Team</a></li>
-                </ul>
-            </td>
+
         </tr>
     <? endif; ?>
 <? endforeach; ?>

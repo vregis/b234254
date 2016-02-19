@@ -47,16 +47,22 @@ $this->registerJs($msgJs);
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in <?= count($self_userTools) != 0 ? 'in active' : '' ?>" id="my">
+            <? if(count($self_userTools) == 0) : ?>
+                <div class="text-center" style="padding:22px 0;color:#8eb6f8;">
+                    You do not yet have own business. But you have an idea certainly.<br>
+                    Realize it
+                </div>
+            <?php else: ?>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
+                        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 42px !important;"><i class="ico-history"></i></a></th>
                         <th> Name </th>
                         <th width="170"> Creation date </th>
                         <th width="130"> Tasks </th>
                         <th width="130"> New </th>
                         <th width="130"> In progress </th>
                         <th width="130"> Completed </th>
-                        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;"><i class="ico-history"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -71,6 +77,9 @@ $this->registerJs($msgJs);
                             $count_progress = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_active])->count();
                             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
                             ?>
+                            <td>
+                                <a href="javascript:;" class="dropmenu1 history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                            </td>
                             <td style="text-transform: uppercase">
                                 <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <span class="label label-danger circle"></span></a>
                             </td>
@@ -89,22 +98,8 @@ $this->registerJs($msgJs);
                             <td>
                                 <?= $count_completed ?>
                             </td>
-                            <td>
-                                <a href="javascript:;" class="dropmenu1 history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
-
-                            </td>
                         </tr>
                     <? endforeach; ?>
-                    <? if(count($self_userTools) == 0) : ?>
-                        <tr>
-                            <td colspan="7">
-                                <div style="padding:22px 0;color:#8eb6f8;">
-                                    You do not yet have own business. But you have an idea certainly.<br>
-                                    Realize it
-                                </div>
-                            </td>
-                        </tr>
-                    <? endif; ?>
                     </tbody>
                 </table>
                 <div id="huistory" class="huistory" style="display:none;">
@@ -112,6 +107,7 @@ $this->registerJs($msgJs);
                     <a class="disabled">Team</a>
                     <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
                 </div>
+                <? endif; ?>
                 <div class="text-center btn-div" style="padding-top:30px;">
                     <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary">Create new business</a>
                 </div>
