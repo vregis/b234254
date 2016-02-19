@@ -14,7 +14,7 @@ use yii\helpers\Url;
 <table class="table table-bordered">
     <thead>
     <tr>
-        <th> Name </th>
+        <th> Business Name </th>
         <th width="130"> Tasks </th>
         <th width="130"> Pending </th>
         <th width="130"> New </th>

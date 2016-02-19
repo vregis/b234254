@@ -264,9 +264,6 @@
     .dropselect a.off{
         color:rgba(123,123,123,0.5);
     }
-    .background-6.on{
-        background-color: rgba(112, 202, 200,0.6);
-    }
     .background-1.on{
         background-color: rgba(145, 135, 208,0.6);
     }
@@ -276,11 +273,14 @@
     .background-3.on{
         background-color: rgba(253, 109, 100,0.6);
     }
+    .background-4.on{
+        background-color: rgba(255, 162, 93,0.6);
+    }
     .background-5.on{
         background-color: rgba(255, 209, 71,0.6);
     }
-    .background-4.on{
-        background-color: rgba(255, 162, 93,0.6);
+    .background-6.on{
+        background-color: rgba(170,215,114,0.6);
     }
     .background-7.on{
         background-color: rgba(112,202,200,0.6);
