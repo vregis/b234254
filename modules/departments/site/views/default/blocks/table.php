@@ -13,7 +13,7 @@
     <?php else:?>
         <?php $status = 'Completed';?>
     <?php endif; ?>
-    <td class="odd color-<?php echo $t->department_id?>"><?php echo $status?>  <span style="display:none" class="label label-danger circle">3</span></td>
+    <td class="odd color-<?php echo $t->department_id?>"><?php echo $status?>  <!--<span style="display:none" class="label label-danger circle">3</span>--></td>
 </tr>
     <?php $i++;?>
 <?php endforeach; ?>

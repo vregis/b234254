@@ -346,7 +346,7 @@ class BusinessController extends Controller
     }
     private function get_user_request() {
         return DelegateTask::find()->select(
-            'delegate_task.*,user_profile.first_name fname,user_profile.last_name lname,user.email email,user_profile.avatar user_avatar,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city,task.name task_name,specialization.name task_special,task.market_rate task_rate, task_user.time task_user_time, task_user.price task_user_price, task.description task_desc,task.department_id dep_id,department.name dname,specialization.id spec_id'
+            'delegate_task.*,user_profile.first_name fname,user_profile.last_name lname,user.email email,user_profile.avatar user_avatar,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city,task.name task_name,specialization.name task_special,task.market_rate task_rate, task_user.time task_user_time, task_user.price task_user_price, task.description task_desc,task.department_id dep_id,department.name dname,specialization.id spec_id, user_profile.user_id uid'
         )
             ->join('JOIN','task_user', 'task_user.id = delegate_task.task_user_id')
             ->join('JOIN','task', 'task.id = task_user.task_id')
