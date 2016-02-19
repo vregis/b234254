@@ -21,7 +21,8 @@ $config = [
         'user' => [
             'class' => 'yii\web\User',
             'enableAutoLogin' => true,
-            'loginUrl' => ['/user/login'],
+            //'loginUrl' => ['/user/login'],
+            'loginUrl' => ['user/registration/register'],
             'identityClass' => 'modules\user\models\User'
         ],
         // переопределяем request класс для мультиязычности

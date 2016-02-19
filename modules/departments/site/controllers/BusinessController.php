@@ -144,7 +144,7 @@ class BusinessController extends Controller
 
     private function findUsersCondition(&$users, &$exclude_user_ids, $task, $where = null) {
         $users_find = User::find()->select(
-            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city, delegate_task.delegate_user_id delegate_user_id, task_user.is_delegate is_delegate, user_tool.id tool, task_user.time task_user_time, task_user.price task_user_price'
+            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city, delegate_task.delegate_user_id delegate_user_id, task_user.is_delegate is_delegate, user_tool.id tool, task_user.time task_user_time, task_user.price task_user_price, user_profile.user_id uid'
         )
             ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
             ->join('JOIN','user_tool', 'user_tool.user_id = user.id')

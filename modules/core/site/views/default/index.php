@@ -84,7 +84,7 @@ use modules\core\widgets\Flash;
 
                 <!-- header brand -->
                 <div class="small-login">
-                    <form method="post" class="form-inline" action="/user/login" autocomplete="off">
+                    <form method="post" class="form-inline" action="/user/security/login-from-main-page" autocomplete="off">
                         <div class="form-group">
                             <div class="input-icon"><i class="ico-mail"></i><input type="text" id="loginform-email" class="form-control placeholder-no-fix" name="LoginForm[email]" placeholder="Email" autocomplete="off"></div>
                         </div>

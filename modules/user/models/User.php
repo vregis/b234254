@@ -96,6 +96,7 @@ class User extends ActiveRecord implements IdentityInterface
     public $delegate_user_id;
     public $is_delegate;
     public $dname;
+    public $uid;
 
 
     /** @inheritdoc */

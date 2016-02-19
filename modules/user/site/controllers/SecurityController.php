@@ -33,7 +33,7 @@ class SecurityController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['login', 'logout', 'ajaxlogin', 'forgot-password', 'set-mail-from-pass', 'sendforgotpass'],
+                        'actions' => ['login', 'logout', 'ajaxlogin', 'forgot-password', 'set-mail-from-pass', 'sendforgotpass', 'login-from-main-page'],
                         // разрешаем всем, но проверяем в экшнах
                         'roles' => ['?', '@']
                     ],
@@ -73,7 +73,9 @@ class SecurityController extends Controller
                 // AJAX
                 if ($this->isAjax) {
                     Yii::$app->response->format = Response::FORMAT_JSON;
-                    return ['url' => Url::previous()];
+                    //return ['url' => Url::previous()];
+                    return $this->redirect('/departments/business');
+
                 } else // обычный запрос
                 {
                     return $this->redirect(Url::previous());
@@ -191,6 +193,38 @@ class SecurityController extends Controller
 
         return json_encode($response);
 
+    }
+
+    public function actionLoginFromMainPage()
+    {
+        if(Yii::$app->getModule('user')->onlySteam){
+            return $this->redirect('/user/steam/login');
+        }
+
+        $model = $this->module->manager->createLoginForm();
+
+        if ($model->load(Yii::$app->request->post())) {
+
+            // успешная авторизация
+            if ($model->validate() && $model->login()) {
+                // AJAX
+                if ($this->isAjax) {
+                    Yii::$app->response->format = Response::FORMAT_JSON;
+                    return ['url' => Url::previous()];
+                } else // обычный запрос
+                {
+                    return $this->redirect('/departments/business');
+                }
+                // не удалось авторизироваться
+            } else {
+                if ($this->isAjax) {
+                    Yii::$app->response->format = Response::FORMAT_JSON;
+                    return $model->getFirstErrors();
+                }
+            }
+        }
+
+        return $this->render('login', ['model' => $model]);
     }
 
 
