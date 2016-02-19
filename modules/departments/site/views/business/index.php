@@ -206,30 +206,28 @@ $this->registerJs($msgJs);
                 setHeight: $('.page-content').css('minHeight'),
                 theme:"dark"
             });
-                $("#find_job").on('shown.bs.collapse',function(){
-                    $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
-        $(".page-content-wrapper").mCustomScrollbar("destroy");
-        $('.page-content-wrapper').mCustomScrollbar({
-            setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
-        });
+            $("#find_job").on('shown.bs.collapse',function(){
+                $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+                $(".page-content-wrapper").mCustomScrollbar("destroy");
+                $('.page-content-wrapper').mCustomScrollbar({
+                    setHeight: $('.page-content').css('minHeight'),
+                    theme:"dark"
                 });
-                $("#find_job").on('hidden.bs.collapse',function(){
-                    $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
-        $(".page-content-wrapper").mCustomScrollbar("destroy");
-        $('.page-content-wrapper').mCustomScrollbar({
-            setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
-        });
+            });
+            $("#find_job").on('hidden.bs.collapse',function(){
+                $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+                $(".page-content-wrapper").mCustomScrollbar("destroy");
+                $('.page-content-wrapper').mCustomScrollbar({
+                    setHeight: $('.page-content').css('minHeight'),
+                    theme:"dark"
                 });
+            });
         });
-            // $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
-            //     console.log("asdasda");
-            //     $(".huistory a[data-toggle='tab'] i").remove();
-            //     $(this).append('<i class="ico-check1"></i>');
-            //     $(this).tab('show');
-            //     // $(".dropmenu1.status").popover('hide');
-            // });
+        $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
+            console.log("asdasda");
+            $("#find_job").collapse('hide');
+            $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+        });
     });
 
 </script>

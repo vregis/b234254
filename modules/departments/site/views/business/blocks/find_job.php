@@ -32,15 +32,6 @@
                     </th>
                     <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
                     <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
- <!--                    <th class="filter-task status" width="121">
-                        <div style="position:relative;">
-                            <div class="trigger">Status <i class="fa fa-angle-down"></i></div>
-                            <div class="popover dropselect fade bottom in status-menu" role="tooltip">
-                            <div class="arrow"></div>
-
-                            </div>
-                        </div>
-                    </th> -->
                     <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
@@ -137,6 +128,9 @@
     </div>
 </div>
 <style>
+    .mCSB_outside + .mCSB_scrollTools {
+        right: -13px;
+    }
     table th .fa{
         margin-left:10px;
     }
@@ -569,11 +563,22 @@
                     get_user_request(is_dep);
                 }
             });
-
-            $('.dropselect .popover-content').mCustomScrollbar({
-                setHeight: 247,
-                theme:"dark"
+            $.each($('.spec-menu .popover-content'),function(){
+                var els = $(this).find('a');
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 250,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
             });
+
         }
         function set_user_request(_this, html) {
             if(html!=undefined) {
@@ -679,15 +684,20 @@
                     }, get_find_params()),
                     success: function (response) {
                         if (!response.error) {
-                            if(response.html_user_request == ''){
-                                // Сюда впили переход на серч
-                            }
+
                             toastr["success"]("Reject requests: " + names, "Success");
                             $('.filter-task .deps-menu').html(response.html_deps_filter);
                             $('.filter-task .spec-menu').html(response.html_specials_filter);
                             set_user_task($('#user_task'), response.html_user_task);
                             set_user_request($('#user_request'), response.html_user_request);
                             $('#delegated_businesses').html(response.html_delegated_businesses);
+                            if(response.html_user_request == ''){
+                                // Сюда впили переход на серч
+                                $("#task-block").addClass('in active');
+                                $("#request-block").removeClass('in active');
+                                $("#btn-task-block").parents('li').addClass('active');
+
+                            }
                         }
                     }
                 });

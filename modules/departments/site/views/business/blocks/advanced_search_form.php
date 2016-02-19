@@ -35,6 +35,8 @@
             <label for="">City</label> <br>
             <input type="text" style="height:32px;" placeholder="Type city" class="form-control">
         </div>
+    </div>
+    <div class="row form-group">
         <div class="col-sm-6">
             <label for="">Department</label> <br>
             <select id="select-department" class="form-control selectpicker country">
