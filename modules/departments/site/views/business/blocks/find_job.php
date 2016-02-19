@@ -94,7 +94,7 @@
                         <div style="position:relative;">
                             <div class="trigger">Departments <i class="fa fa-angle-down"></i></div>
                             <div class="popover dropselect fade bottom in deps-menu" role="tooltip">
-                                 <?= $deps_filter ?>
+                                 <?= $deps_filter_pending ?>
                             </div>
                         </div>
                     </th>
@@ -102,7 +102,7 @@
                         <div style="position:relative;">
                             <div class="trigger">Specialty <i class="fa fa-angle-down"></i></div>
                             <div class="popover dropselect fade bottom in spec-menu" role="tooltip">
-                                 <?= $specials_filter ?>
+                                 <?= $specials_filter_pending ?>
                             </div>
                         </div>
                     </th>

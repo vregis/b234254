@@ -6,6 +6,7 @@ use modules\core\site\base\Controller;
 use modules\departments\models\BenefitLike;
 use modules\departments\models\Department;
 use modules\departments\models\IdeaLike;
+use modules\departments\models\Specialization;
 use modules\departments\models\UserDo;
 use modules\departments\tool\TaskComponent;
 use modules\tasks\models\DelegateTask;
@@ -100,12 +101,27 @@ class BusinessController extends Controller
         $users_request = $this->get_user_request();
         $user_request = $this->render_user_request($users_request);
 
+        $spec_pending = [];
+        $i = 0;
+        foreach($users_request as $ur){
+            $spec_pending[$i] = $ur->spec_id;
+            $i++;
+        }
+
+        $spec_pending = array_unique($spec_pending);
+
+        $user_special_pending = $this->get_user_specials_pending($spec_pending);
+
         $user = User::find()->where(['id' => Yii::$app->user->id])->one();
         $user_specials = $this->get_user_specials();
         $departments = ArrayHelper::map($user_specials, 'dep_id', 'dname');
 
+
         $deps_filter = $this->render_deps_filter($post, $user_specials);
         $specials_filter = $this->render_specials_filter($post, $user_specials);
+
+        $deps_filter_pending = $this->render_deps_filter_pending($post, $user_special_pending);
+        $specials_filter_pending = $this->render_specials_filter($post, $user_specials);
 
         $users_special_request = $user_specials;
         foreach($users_special_request as $key => $user_special) {
@@ -136,7 +152,9 @@ class BusinessController extends Controller
             'user' => $user,
             'user_specials' => $user_specials,
             'deps_filter' => $deps_filter,
+            'deps_filter_pending' => $deps_filter_pending,
             'specials_filter' => $specials_filter,
+            'specials_filter_pending' => $specials_filter_pending,
             'deps_request_filter' => $deps_request_filter,
             'specials_request_filter' => $specials_request_filter
         ]);
@@ -226,6 +244,28 @@ class BusinessController extends Controller
                 continue;
             }
         }
+        return $user_specials;
+    }
+
+
+    private function get_user_specials_pending($spec) {
+        $user_do = UserDo::find()->where(['user_id' => Yii::$app->user->id])->all();
+        $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname')
+            ->join('JOIN','department','department.id = specialization.department_id')
+            ->where(['specialization.id' => $spec])->all();
+       /* foreach($user_specials as $key => $user_special) {
+            $is_find = false;
+            foreach($user_do as $do) {
+                if($do->status_sell == 1 && $user_special->dep_id == $do->department_id && $user_special->dep_hide == 0) {
+                    $is_find = true;
+                    break;
+                }
+            }
+            if(!$is_find) {
+                unset($user_specials[$key]);
+                continue;
+            }
+        }*/
         return $user_specials;
     }
 
@@ -389,6 +429,25 @@ class BusinessController extends Controller
                 'departments' => $departments
             ]);
     }
+
+    private function render_deps_filter_pending($post = [],$user_specials = null) {
+        if(!$user_specials) {
+            $user_specials = $this->get_user_specials();
+        }
+        $this->apply_filters($user_specials, $post, false);
+        $departments = [];
+        foreach($user_specials as $special) {
+            $departments[$special->dep_id] = ['id' => $special->dep_id,'name' => $special->dname,'is_hide'=>$special->dep_hide];
+        }
+        return $this->renderPartial('blocks/deps_filter',
+            [
+                'departments' => $departments
+            ]);
+    }
+
+
+
+
     private function render_specials_filter($post = [],$user_specials = null,$is_dep = false) {
         if(!$user_specials) {
             $user_specials = $this->get_user_specials();

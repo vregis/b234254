@@ -49,12 +49,12 @@ use yii\helpers\Url;
                 <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <!--<span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>-->
             </td>
             <td>
-                <?= (new DateTime($userTool->create_date))->format("m/d/Y") ?>
+                <?= count($tasks) ?>
             </td>
             <td>
                 <?= count($tasks) ?>
             </td>
-            <td>1</td>
+            <td><?= isset($tasks_count_array[DelegateTask::$status_inactive]) ? $tasks_count_array[DelegateTask::$status_inactive] : '0' ?></td>
             <td>
                 <?= isset($tasks_count_array[DelegateTask::$status_inactive]) ? $tasks_count_array[DelegateTask::$status_inactive] : '0' ?>
             </td>

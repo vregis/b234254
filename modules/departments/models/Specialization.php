@@ -9,6 +9,8 @@ class Specialization extends \yii\db\ActiveRecord
 {
 
     var $dname;
+    var $dep_id;
+    var $dep_hide;
 
     public function rules()
     {

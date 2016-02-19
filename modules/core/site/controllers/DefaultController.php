@@ -441,7 +441,7 @@ HTML;
 
         if (Yii::$app->request->isPost) {
             $model->file = UploadedFile::getInstance($model, 'file');
-            if($model->file->size > 2000000){
+            if($model->file->size > 2000000 || $model->file->size == 0){
                 $response['error'] = true;
                 $response['msg'] = 'Photo size should not exceed 2 megabytes';
             }
