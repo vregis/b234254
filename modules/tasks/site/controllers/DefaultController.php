@@ -81,6 +81,7 @@ class DefaultController extends Controller
     }
 
     public function actionIndex($id, $task_user_id = -1, $delegate_task_id = -1) {
+        return $this->render('one_task');
     }
 
     public function actionSendfeedback(){

@@ -15,7 +15,6 @@ use modules\tasks\models\UserTool;
  * @var modules\core\site\base\View $this
  */
 
-
 $this->registerCssFile("/plugins/datetimepicker/jquery.datetimepicker.css");
 $this->registerCssFile("/metronic/theme/assets/global/plugins/jquery-ui/jquery-ui.min.css");
 
@@ -48,7 +47,7 @@ function getMonth($number) {
         case 4:
             $month = 'Apr';
             break;
-        case 5:
+        case 5:index
             $month = 'May';
             break;
         case 6:
@@ -60,7 +59,7 @@ function getMonth($number) {
         case 8:
             $month = 'Aug';
             break;
-        case 9:
+        case 9:index
             $month = 'Sept';
             break;
         case 10:
@@ -72,11 +71,11 @@ function getMonth($number) {
         case 12:
             $month = 'Dec';
             break;
-    }
+    }index
     return $month;
 }
 
-$start_m = '';
+$start_m = '';index
 $start_d = '';
 if($task_user->start != '') {
     preg_match("#(\d+)-(\d+)-(\d+)#", $task_user->start,$mathces);
