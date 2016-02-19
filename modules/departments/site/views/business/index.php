@@ -43,7 +43,7 @@ $this->registerJs($msgJs);
     <div class="well" style="margin: 0 auto; max-width: 1000px">
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="<?= count($self_userTools) != 0 ? 'active' : '' ?>"><a href="#my" aria-controls="my" role="tab" data-toggle="tab">My business</a></li>
-            <li role="presentation" class="<?= count($self_userTools) == 0 ? 'active' : '' ?>"><a id="btn-offered-block" href="#delegated" aria-controls="delegated" role="tab" data-toggle="tab">Delegated busineses <span class="label label-danger circle"></span></a></li>
+            <li role="presentation" class="<?= count($self_userTools) == 0 ? 'active' : '' ?>"><a id="btn-offered-block" href="#delegated" aria-controls="delegated" role="tab" data-toggle="tab">Delegated busineses <!--<span class="label label-danger circle"></span>--></a></li>
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in <?= count($self_userTools) != 0 ? 'in active' : '' ?>" id="my">
@@ -82,7 +82,7 @@ $this->registerJs($msgJs);
                                 <a href="javascript:;" class="dropmenu1 history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                             </td>
                             <td style="text-transform: uppercase">
-                                <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <span class="label label-danger circle"></span></a>
+                                <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
                             </td>
                             <td>
                                 <?= (new DateTime($current_userTool->create_date))->format("m/d/Y") ?>

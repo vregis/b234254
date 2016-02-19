@@ -148,7 +148,7 @@ $this->beginPage();
                 <div class="typeSwitch">
                     <a class="btn disabled off">Life </a>
                     <input type="checkbox" id="typeSwitch" checked class="js-switch js-check-change" name="view">
-                    <a href="<?= Url::toRoute(['/departments/business']) ?>" class="btn business-switch" class="control-label bus">Business <span style="display:none" class="label label-danger circle">3</span></a>
+                    <a href="<?= Url::toRoute(['/departments/business']) ?>" class="btn business-switch" class="control-label bus">Business <!--<span style="display:none" class="label label-danger circle">3</span>--></a>
                 </div>
 
                 <!-- BEGIN TOP NAVIGATION MENU -->

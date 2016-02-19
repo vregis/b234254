@@ -31,7 +31,7 @@ use modules\departments\models\Specialization;
                             </ul>
                         </div>
                     </div>
-                <a href="#" data-toggle="popover" data-content="asdasdas" data-trigger="hover" class="pull-right btn btn-primary static circle info spec_desc">i</a>
+                <a href="#" data-toggle="popover" data-content="" data-trigger="hover" class="pull-right btn btn-primary static circle info spec_desc">i</a>
             </div>
         </div>
         <div class="col-sm-4">
@@ -88,4 +88,6 @@ use modules\departments\models\Specialization;
 
         $(this).closest('.dynamic_block').find('.plus_disabled').removeClass('.plus_disabled');
     })
+
+    $('.multiselect.add').find('.spec_desc').hide();
 </script>

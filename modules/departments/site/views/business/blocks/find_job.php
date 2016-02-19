@@ -679,6 +679,9 @@
                     }, get_find_params()),
                     success: function (response) {
                         if (!response.error) {
+                            if(response.html_user_request == ''){
+                                // Сюда впили переход на серч
+                            }
                             toastr["success"]("Reject requests: " + names, "Success");
                             $('.filter-task .deps-menu').html(response.html_deps_filter);
                             $('.filter-task .spec-menu').html(response.html_specials_filter);
