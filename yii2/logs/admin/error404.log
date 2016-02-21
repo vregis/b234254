@@ -1528,3 +1528,55 @@ Stack trace:
     'REQUEST_TIME_FLOAT' => 1454251524.6158
     'REQUEST_TIME' => 1454251524
 ]
+2016-02-21 20:25:28 [127.0.0.1][266][q3o9e65aff6thc34ns3rkcbjn1][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/bsb.local/vendor/yiisoft/yii2/web/Request.php:190
+Stack trace:
+#0 /var/www/bsb.local/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/bsb.local/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/bsb.local/web/admin.php(23): yii\base\Application->run()
+#3 {main}
+2016-02-21 20:25:28 [127.0.0.1][266][q3o9e65aff6thc34ns3rkcbjn1][info][application] $_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48270'
+    'REDIRECT_URL' => '/admin/milestones/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/milestones/'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075528.005
+    'REQUEST_TIME' => 1456075528
+]

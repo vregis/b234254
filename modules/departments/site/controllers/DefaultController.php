@@ -151,6 +151,7 @@ class DefaultController extends Controller
                 }
             }
         }
+        //var_dump($user);
         if($task_id == 0) {
             if ($userTool->status == UserTool::STATUS_CREATION) {
                 $task_id = Task::$task_idea_id;
@@ -751,7 +752,6 @@ class DefaultController extends Controller
 
 
     public function actionTask($id){
-
         $is_custom = true;
         $task = Task::find()
             ->select('task.*, specialization.name as spec')

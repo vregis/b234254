@@ -5113,3 +5113,369 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-02-21 20:25:11 [127.0.0.1][266][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: /var/www/bsb.local/vendor/yiisoft/yii2/messages/en/yii.php
+    in /var/www/bsb.local/modules/tasks/admin/views/default/form.php:75
+    in /var/www/bsb.local/modules/tasks/admin/controllers/DefaultController.php:220
+2016-02-21 20:25:11 [127.0.0.1][266][-][info][application] $_GET = [
+    'id' => '38'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/admin/tasks'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48259'
+    'REDIRECT_QUERY_STRING' => 'id=38'
+    'REDIRECT_URL' => '/admin/tasks/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=38'
+    'REQUEST_URI' => '/admin/tasks/update?id=38'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075511.192
+    'REQUEST_TIME' => 1456075511
+]
+2016-02-21 20:25:18 [127.0.0.1][266][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: /var/www/bsb.local/vendor/yiisoft/yii2/messages/en/yii.php
+    in /var/www/bsb.local/modules/tasks/admin/controllers/DefaultController.php:168
+2016-02-21 20:25:18 [127.0.0.1][266][-][info][application] $_GET = [
+    'id' => '38'
+]
+
+$_POST = [
+    '_csrf' => 'VU9LRk1yYmJsfBkrdQcxBTw.HSobBS8kBSIfPhoVOCsXICkIAwM2JA=='
+    'preceding-tasks' => '[]'
+    'Task' => [
+        'name' => 'Describe your benefits1'
+        'description' => 'Describe three three advantages of your idea. It will help you to quicken customer`s interest in your product. You will be able to explain the advantages of your product among the others.'
+        'director_name' => 'BSB'
+        'priority' => '3'
+        'sort' => '2'
+        'department_id' => '1'
+        'specialization_id' => '42'
+        'market_rate' => '0'
+        'is_roadmap' => '0'
+        'performed_immediately' => '0'
+        'recommended_time' => '1'
+    ]
+    'files' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '580'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://bsb.local'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://bsb.local/admin/tasks/update?id=38'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48268'
+    'REDIRECT_QUERY_STRING' => 'id=38'
+    'REDIRECT_URL' => '/admin/tasks/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=38'
+    'REQUEST_URI' => '/admin/tasks/update?id=38'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075518.896
+    'REQUEST_TIME' => 1456075518
+]
+2016-02-21 20:25:28 [127.0.0.1][266][q3o9e65aff6thc34ns3rkcbjn1][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: /var/www/bsb.local/vendor/yiisoft/yii2/messages/en/yii.php
+2016-02-21 20:25:28 [127.0.0.1][266][q3o9e65aff6thc34ns3rkcbjn1][info][application] $_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48270'
+    'REDIRECT_URL' => '/admin/milestones/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/milestones/'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075528.005
+    'REQUEST_TIME' => 1456075528
+]
+2016-02-21 20:25:39 [127.0.0.1][266][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: /var/www/bsb.local/vendor/yiisoft/yii2/messages/en/yii.php
+    in /var/www/bsb.local/modules/tasks/admin/views/default/form.php:75
+    in /var/www/bsb.local/modules/tasks/admin/controllers/DefaultController.php:220
+2016-02-21 20:25:39 [127.0.0.1][266][-][info][application] $_GET = [
+    'id' => '38'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/admin/tasks'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48276'
+    'REDIRECT_QUERY_STRING' => 'id=38'
+    'REDIRECT_URL' => '/admin/tasks/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=38'
+    'REQUEST_URI' => '/admin/tasks/update?id=38'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075539.017
+    'REQUEST_TIME' => 1456075539
+]
+2016-02-21 20:26:02 [127.0.0.1][266][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: /var/www/bsb.local/vendor/yiisoft/yii2/messages/en/yii.php
+    in /var/www/bsb.local/modules/tasks/admin/views/default/form.php:75
+    in /var/www/bsb.local/modules/tasks/admin/controllers/DefaultController.php:220
+2016-02-21 20:26:02 [127.0.0.1][266][-][info][application] $_GET = [
+    'id' => '38'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.local/admin/tasks'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48286'
+    'REDIRECT_QUERY_STRING' => 'id=38'
+    'REDIRECT_URL' => '/admin/tasks/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=38'
+    'REQUEST_URI' => '/admin/tasks/update?id=38'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075562.432
+    'REQUEST_TIME' => 1456075562
+]
+2016-02-21 20:26:14 [127.0.0.1][266][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: /var/www/bsb.local/vendor/yiisoft/yii2/messages/en/yii.php
+    in /var/www/bsb.local/modules/tasks/admin/controllers/DefaultController.php:168
+2016-02-21 20:26:14 [127.0.0.1][266][-][info][application] $_GET = [
+    'id' => '38'
+]
+
+$_POST = [
+    '_csrf' => 'Rkt1M2hmcnd/eCdeUBMhEC86I18.ET8xFiYhSz8BKD4EJBd9JhcmMQ=='
+    'preceding-tasks' => '[]'
+    'Task' => [
+        'name' => 'Describe your benefits'
+        'description' => 'Describe three three advantages of your idea. It will help you to quicken customer`s interest in your product. You will be able to explain the advantages of your product among the others.'
+        'director_name' => 'BSB'
+        'priority' => '3'
+        'sort' => '2'
+        'department_id' => '1'
+        'specialization_id' => '42'
+        'market_rate' => '0'
+        'is_roadmap' => '0'
+        'performed_immediately' => '0'
+        'recommended_time' => '1'
+    ]
+    'files' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'q3o9e65aff6thc34ns3rkcbjn1'
+    '_csrf' => '83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"93Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 266
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '581'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://bsb.local'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://bsb.local/admin/tasks/update?id=38'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=q3o9e65aff6thc34ns3rkcbjn1; _csrf=83861b1a3ae6089a6c813f1f7264dc6c2623b86cc0d2451990819f5ec3514fc3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2293Rm8uSgiqVlVwMFPmTxWgZIBobNNqTF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at bsb.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'bsb.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/bsb.local'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bsb.local/web/admin.php'
+    'REMOTE_PORT' => '48290'
+    'REDIRECT_QUERY_STRING' => 'id=38'
+    'REDIRECT_URL' => '/admin/tasks/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=38'
+    'REQUEST_URI' => '/admin/tasks/update?id=38'
+    'SCRIPT_NAME' => '/web/admin.php'
+    'PHP_SELF' => '/web/admin.php'
+    'REQUEST_TIME_FLOAT' => 1456075574.286
+    'REQUEST_TIME' => 1456075574
+]

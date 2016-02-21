@@ -351,7 +351,7 @@ HTML;
                     }
                 }
 
-                if($user->user_type == User::TYPE_EMPLOYER){
+                if($user->user_type == User::TYPE_EMPLOYER && $_POST['is_first'] == 1){
                     return $this->redirect(['/departments']);
                 }
 

@@ -6,7 +6,7 @@
                     <a target="_blank" href="/user/social/shared-profile?id=<?php echo $com->uid?>"><img src="<?php echo $com->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$com->ava:'/images/avatar/nophoto.png'?>" alt="" width="40" height="40" class="avatar"></a>
                     <div class="name"><?php echo ($com->fn)?$com->fn:''?> <?php echo ($com->ln)?$com->ln:''?> <?php echo (!$com->fn && !$com->ln)?'User':''?></div>
                     <div class="comment"><?php echo $com->text?></div>
-                    <div class="time">about 8 hours<?php //echo date('Y-m-d, H:i:s', $com->time)?></div>
+                    <div class="time"><?php echo date('Y-m-d, H:i:s', $com->time)?></div>
                 </div>
             <?php endforeach;?>
         <?php endif?>

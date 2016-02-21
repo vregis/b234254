@@ -39,6 +39,7 @@ $msgJs = <<<JS
 JS;
 $this->registerJs($msgJs);
 ?>
+
 <div class="col-md-12 tables-business">
     <div class="well" style="margin: 0 auto; max-width: 1000px">
         <ul class="nav nav-tabs" role="tablist">
@@ -70,6 +71,8 @@ $this->registerJs($msgJs);
                     <?php $i = 0;?>
                     <? foreach($self_userTools as $current_userTool) : ?>
                         <?php $i++; ?>
+                        <?php if($user->user_type == User::TYPE_EMPLOYER && !$current_userTool->name):?>
+                        <?php else:?>
                         <tr>
                             <?
                             $task_count = Task::find()
@@ -135,6 +138,7 @@ $this->registerJs($msgJs);
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
                             });
                         </script>
+                            <?php endif;?>
                     <? endforeach; ?>
                     </tbody>
                 </table>

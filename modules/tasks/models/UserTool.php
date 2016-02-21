@@ -29,7 +29,7 @@ class UserTool extends \yii\db\ActiveRecord
         $user_id = Yii::$app->user->identity->id;
         if(!isset(Yii::$app->session['tool_id']) || $is_my) {
             $userTool = UserTool::find();
-            $userTool->where(['user_id' => $user_id]);
+            $userTool->where(['user_id' => $user_id])->orderBy(['id' => SORT_DESC]);
             $userTool = $userTool->one();
             if($userTool && !$is_my) {
                 Yii::$app->session['tool_id'] = $userTool->id;
@@ -42,6 +42,14 @@ class UserTool extends \yii\db\ActiveRecord
     public static function createUserTool() {
         $userTool = new UserTool();
         $userTool->user_id = Yii::$app->user->id;
+        $userTool->create_date = '' . date('Y-m-d h:i:s');
+        $userTool->save();
+        return $userTool;
+    }
+    public static function createNewUserTool() {
+        $userTool = new UserTool();
+        $userTool->user_id = Yii::$app->user->id;
+        $userTool->status = 10;
         $userTool->create_date = '' . date('Y-m-d h:i:s');
         $userTool->save();
         return $userTool;

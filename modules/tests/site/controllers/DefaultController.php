@@ -257,7 +257,10 @@ class DefaultController extends Controller
                     $min_points = $test_user_result->points;
                 }
                 $test_result_inform[] = [
-                    'result' => TestResult::find()->where(['id' => $test_user_result->result_id])->one(),
+                    'result' => TestResult::find()
+                        ->select('test_result.*, department.icons as icons')
+                        ->join('LEFT JOIN', 'department','test_result.department_id = department.id')
+                        ->where(['test_result.id' => $test_user_result->result_id])->one(),
                     'user_result' => $test_user_result
                 ];
             }

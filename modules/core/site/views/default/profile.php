@@ -386,6 +386,11 @@ $this->registerJs($msgJs);
                                 <tr>
                                     <td><img style="margin: 0 8px 0 0;" src="/images/inst.png"></td>
                                     <td><?= Html::activeTextInput($model, 'social_in', ['placeholder' => 'Link to your account', 'class' => 'form-control']); ?></td>
+                                    <?php if(isset($_GET['first']) && $_GET['first'] == 1):?>
+                                        <input type="hidden" name = 'is_first' value = '1'>
+                                    <?php else:?>
+                                        <input type="hidden" name = 'is_first' value = '0'>
+                                    <?php endif;?>
                                 </tr>
                             </table>
                         </td>

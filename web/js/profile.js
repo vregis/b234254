@@ -235,6 +235,7 @@ $(function(){
         var skype = $('input[name="ProfileForm[skype]"]').val();
         var phone = $('input[name="ProfileForm[phone]"]').val();
         var zip = $('input[name="ProfileForm[zip]"]').val();
+        var is_first = $('input[name="is_first"]').val();
 
         var input_count_money = $('input[name="ProfileForm[count_money]"]');
         var count_money = undefined;
@@ -266,6 +267,7 @@ $(function(){
                 phone:phone,
                 zip:zip,
                 count_money:count_money,
+                is_first:is_first,
                 date:date
             },
             success: function(response){
