@@ -396,7 +396,7 @@ $this->registerJs($msgJs);
         <div class="row">
             <div class="col-sm-12">
                 <div class="pull-left">
-                    <a href="/user/social/shared-profile?id=<?php echo Yii::$app->user->id?>" class="btn btn-primary share" style="margin-top: 15px;width:100px;margin-left:200px;">Share</a>
+                    <a target="_blank" href="/user/social/shared-profile?id=<?php echo Yii::$app->user->id?>" class="btn btn-primary share" style="margin-top: 15px;width:100px;margin-left:200px;">Share</a>
                 </div>
                 <div class="pull-right">
                     <button class="btn btn-success save" style="margin-top: 15px;width:100px;margin-right:200px;">Save</button>
