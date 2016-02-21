@@ -11,12 +11,13 @@
             <div class="col-sm-5 pull-right" style="padding:0;"><input placeholder="Max" type="text" id="input-rate-end" value="<?=$rate_max?>" class="form-control"></div>
             <div class="clearfix"></div>
         </div>
+        <?php $levellist = \modules\user\models\Skilllist::find()->all();?>
         <div class="col-sm-6">
             <label for="">Level</label> <br>
             <select id="select-country" class="form-control selectpicker country">
                 <option class="start" value="0">Select level</option>
-                <?php foreach($countrylist as $c):?>
-                    <option <?php echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->title_en?></option>
+                <?php foreach($levellist as $c):?>
+                    <option <?php //echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->name?></option>
                 <?php endforeach; ?>
             </select>
         </div>

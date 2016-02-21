@@ -65,7 +65,8 @@ class BusinessController extends Controller
                             'decline',
                             'select-tool',
                             'dashboard-editing',
-                            'dashboard-save'
+                            'dashboard-save',
+                            'shared-business'
                         ],
                         'roles' => ['@']
                     ],
@@ -883,4 +884,9 @@ class BusinessController extends Controller
         $response['error'] = false;
         return json_encode($response);
     }
+
+    public function actionSharedBusiness($id){
+        return $this->render('shared_business', []);
+    }
+
 }

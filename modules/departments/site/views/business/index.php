@@ -67,7 +67,9 @@ $this->registerJs($msgJs);
                     </tr>
                     </thead>
                     <tbody>
+                    <?php $i = 0;?>
                     <? foreach($self_userTools as $current_userTool) : ?>
+                        <?php $i++; ?>
                         <tr>
                             <?
                             $task_count = Task::find()
@@ -79,7 +81,7 @@ $this->registerJs($msgJs);
                             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
                             ?>
                             <td>
-                                <a href="javascript:;" class="dropmenu1 history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                                <a href="javascript:;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                             </td>
                             <td style="text-transform: uppercase">
                                 <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
@@ -100,14 +102,43 @@ $this->registerJs($msgJs);
                                 <?= $count_completed ?>
                             </td>
                         </tr>
+                        <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
+                            <a href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $current_userTool->id]) ?>">Business Dashboard</a>
+                            <a class="disabled">Team</a>
+                            <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
+                        </div>
+                        <script>
+                            $(".dropmenu<?php echo $i?>.history").popover({
+                                placement:"bottom",
+                                html:true,
+                                content:$("#huistory<?php echo $i?>"),
+                                container:$("body"),
+                                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+                            });
+                            $(".dropmenu<?php echo $i?>.history1").popover({
+                                placement:"bottom",
+                                html:true,
+                                content:$("#huistory<?php echo $i?>"),
+                                container:$("body"),
+                                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+                            });
+                            $(".dropmenu<?php echo $i?>.history").on('show.bs.popover',function(){
+                                $("#huistory<?php echo $i?>").show();
+                                $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+                            }).on('hide.bs.popover',function(){
+                                $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+                            });
+                            $(".dropmenu1.history<?php echo $i?>").on('show.bs.popover',function(){
+                                $("#huistory<?php echo $i?>").show();
+                                $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+                            }).on('hide.bs.popover',function(){
+                                $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+                            });
+                        </script>
                     <? endforeach; ?>
                     </tbody>
                 </table>
-                <div id="huistory" class="huistory" style="display:none;">
-                    <a href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $current_userTool->id]) ?>">Business Dashboard</a>
-                    <a class="disabled">Team</a>
-                    <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
-                </div>
+
                 <? endif; ?>
                 <div class="text-center btn-div" style="padding-top:30px;">
                     <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary">Create new business</a>
@@ -168,33 +199,13 @@ $this->registerJs($msgJs);
             theme:"dark"
         });
     });
+
     $(document).ready(function () {
-        $(".dropmenu1.history").popover({
-            placement:"bottom",
-            html:true,
-            content:$("#huistory"),
-            container:$("body"),
-            template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
-        });
-        $(".dropmenu1.history1").popover({
-            placement:"bottom",
-            html:true,
-            content:$("#huistory1"),
-            container:$("body"),
-            template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
-        });
-        $(".dropmenu1.history").on('show.bs.popover',function(){
-            $("#huistory").show();
-            $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
-        }).on('hide.bs.popover',function(){
-            $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
-        });
-        $(".dropmenu1.history1").on('show.bs.popover',function(){
-            $("#huistory1").show();
-            $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
-        }).on('hide.bs.popover',function(){
-            $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
-        });
+
+
+
+
+
         $(".page-content-wrapper").mCustomScrollbar("destroy");
         $('.page-content-wrapper').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),

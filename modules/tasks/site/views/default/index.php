@@ -47,7 +47,7 @@ function getMonth($number) {
         case 4:
             $month = 'Apr';
             break;
-        case 5:index
+        case 5:
             $month = 'May';
             break;
         case 6:
@@ -59,7 +59,7 @@ function getMonth($number) {
         case 8:
             $month = 'Aug';
             break;
-        case 9:index
+        case 9:
             $month = 'Sept';
             break;
         case 10:
@@ -71,11 +71,11 @@ function getMonth($number) {
         case 12:
             $month = 'Dec';
             break;
-    }index
+    }
     return $month;
 }
 
-$start_m = '';index
+$start_m = '';
 $start_d = '';
 if($task_user->start != '') {
     preg_match("#(\d+)-(\d+)-(\d+)#", $task_user->start,$mathces);

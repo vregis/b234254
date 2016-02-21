@@ -350,7 +350,11 @@ HTML;
                         $user->save(false);
                     }
                 }
-               // return $this->redirect(['/departments']);
+
+                if($user->user_type == User::TYPE_EMPLOYER){
+                    return $this->redirect(['/departments']);
+                }
+
                 return $this->redirect(['/departments/business']);
             }else{
                 $response['error'] = true;
