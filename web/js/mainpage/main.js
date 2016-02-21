@@ -1104,6 +1104,7 @@ $('.support_send').on('click', function(){
 
 })
 $(document).ready(function(){
+  if($(".btn-icon.play").length > 0){
     $(".btn-icon.play").venobox({
         // framewidth: '70%',        // default: ''
         // frameheight: '100%',       // default: ''
@@ -1113,4 +1114,5 @@ $(document).ready(function(){
         // numeratio: true,            // default: false
         // infinigall: true            // default: false
     });
+  }
 });

@@ -1,37 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
 body{
-	background: #f6f6f6;
+	background: url("/images/profile/shared_bg.jpg") center top;
 	color:#5a5a5a;
+	background-size: cover;
 }
 .well{
 	width: 1000px;
 	padding:0;
 	margin:100px auto;
+	border:none;
+	background:rgba(255,255,255,0.9);
 }
 .well .header{
-	background: #2d3135;
-	height: 86px;
-	line-height: 86px;
+	height: 76px;
+	line-height: 76px;
 	text-align: center;
 	border-radius: 10px 10px 0 0 !important;
+	position:relative;
+	margin:0 50px;
+	border-bottom:1px solid rgba(90,90,90,0.6);
 }
 .well .header > *{
 	display: inline-block;
     vertical-align: middle;
 }
+.logo-wrap{
+	position:absolute;
+	top:20px;
+	left:0;
+	display:block;
+	vertical-align:top !important;
+}
 .well .header .logo-default{
-	height: 54px;
-	width: 54px;
+	height: 36px;
+	width: 36px;
+    display: block;
+    vertical-align:top !important;
 }
 .header .site-name{
-	color: #fff;
-	font-size: 32px;
-	margin-left: 20px;
+	color: rgba(90,90,90,0.6);
+	font-size: 18px;
 }
 
 .page-content{
 	padding: 30px;
 	text-align: center;
+	background: none;
 }
 .page-content .avatar{
 	border-radius: 100% !important;
@@ -78,7 +92,7 @@ section.contacts .title{
 	padding: 0;
 	line-height: 86px;
 	height: 86px;
-	background: #2d3135;
+	background: none;
 }
 #services .panel-group{
 	margin-bottom: 2px;
@@ -261,7 +275,7 @@ section.contacts .title{
 	width: 100%;
 }
 .contacts{
-	border-bottom:1px solid #d7d7d7;
+	border-bottom:1px solid rgba(90,90,90,0.6);
 	padding-bottom: 15px;
 }
 /*Comments*/
@@ -270,20 +284,20 @@ section.contacts .title{
 }
 #comments-count{
 	font-size: 18px;
-	color:#828282;
+	color:#5a5a5a;
 	font-weight: 300;
 }
 #comment-area{
 	height: 63px;
 	resize:none;
-	border:1px solid #d7d7d7;
+	border:1px solid rgba(90,90,90,0.6);
 	width: 100%;
 	padding: 10px;
 	outline:none;
 	margin-bottom: 20px;
 }
 .comments .item{
-	border-bottom:1px solid #d7d7d7;
+	border-bottom:1px solid rgba(90,90,90,0.6);
 	padding: 15px;
 	padding-left: 65px;
 	font-size:16px;
@@ -291,7 +305,7 @@ section.contacts .title{
 	position: relative;
 }
 .comments .item:first-child{
-	border-top: 1px solid #d7d7d7;
+	border-top: 1px solid rgba(90,90,90,0.6);
 }
 .comments .item .avatar{
 	position: absolute;
@@ -299,7 +313,8 @@ section.contacts .title{
 	left:0;
 }
 .comments .item .name{
-	color:#828282;
+	color:#5a5a5a;
+	font-weight:normal;
 	margin-bottom: 10px;
 }
 .comments .item .comment{
@@ -310,12 +325,15 @@ section.contacts .title{
 	font-weight: 300;
 	color: rgba(90,90,90,0.5);
 	font-size: 14px;
+	position: absolute;
+    top: 19px;
+    right: 0;
 }
 .comments .item:nth-child(4),.comments .item:nth-child(5), .pagination{
 	display: none;
 }
 #comments .more{
-	color:#afb1b4;
+	color:#5a5a5a;
 	font-size: 18px;
 	width: 18px;
 	display: block;
@@ -330,6 +348,7 @@ section.contacts .title{
 	line-height: 32px;
 	border: none;
 	text-align: left;
+	color:#5a5a5a;
 }
 .page-footer .contacts .small{
 	width:180px;
@@ -360,4 +379,11 @@ section.contacts .title{
 .pagination > li > a, .pagination > li > span{
 	float: none !important;
 	vertical-align: middle;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	background-color:rgba(255,255,255,0.5);
+	border-radius:3px !important;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+	background-color:rgba(255,255,255,0.9);
 }

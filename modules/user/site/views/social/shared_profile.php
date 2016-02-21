@@ -103,7 +103,7 @@ use modules\user\site\controllers\ProfileController;
     <div class="b-page-wrap">
         <div class="well">
             <div class="header text-center">
-                <a href="/"><img src="/images/logo-big.png" alt="logo" class="logo-default"></a>
+                <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
                 <div class="site-name">Business Without BusYness</div>
             </div>
             <div class="page-content">
@@ -296,7 +296,7 @@ use modules\user\site\controllers\ProfileController;
                         </div>
                     </div>
                     <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>
-                    <a href="/core/profile" class="btn btn-primary" style="position:absolute;right:30px;top:25px;">Close</a>
+                    <!-- <a href="/core/profile" class="btn btn-primary" style="position:absolute;right:30px;top:25px;">Close</a> -->
                 </div>
             </div>
         </div>
