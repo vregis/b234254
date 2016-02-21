@@ -15,7 +15,7 @@
 }
 
 .task .mCSB_container{
-    padding: 5px 30px 30px;
+    padding: 5px 30px 5px;
 }
 .idea-block {
     overflow: hidden;
@@ -521,10 +521,8 @@ span.title {
 }
 .task-title button.offer{
     color:#818588;
-    font-size:11px;
     padding: 0px 15px;
     white-space: initial;
-    line-height: 12px;
     position: relative;
 }
 .task-title button.offer:hover{
@@ -1521,9 +1519,9 @@ table th.rate .fa{
     padding: 15px 0px 15px;
 }
 .tab-content > .tab-pane .item{
-    width: 50px;
-    height:50px;
-    font-size:24px;
+    width: 105px;
+    height:105px;
+    font-size:48px;
     line-height:50px;
     margin-bottom:10px;
     float: left;

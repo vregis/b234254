@@ -104,7 +104,7 @@ use modules\user\site\controllers\ProfileController;
         <div class="well">
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
-                <div class="site-name">Business Without BusYness</div>
+                <div class="site-name">Business without busyness</div>
             </div>
             <div class="page-content">
                 <section id="user">

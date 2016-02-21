@@ -134,7 +134,6 @@ if($task->specialization_id > 0) {
                                                         <div class="col-sm-6">
                                                             <label for="">Level</label> <br>
                                                             <select id="select-level" class="update form-control selectpicker">
-                                                                <option class="start" value="0">Select level</option>
                                                                 <?php foreach($skill_list as $skill):?>
                                                                     <option value="<?php echo $skill->id?>"><?php echo $skill->name?></option>
                                                                 <?php endforeach;?>
@@ -145,7 +144,6 @@ if($task->specialization_id > 0) {
                                                         <div class="col-sm-6">
                                                             <label for="">Country</label> <br>
                                                             <select id="select-country" class="form-control selectpicker country">
-                                                                <option class="start" value="0">Select country</option>
                                                                 <?php foreach($countrylist as $c):?>
                                                                     <option <?php echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->title_en?></option>
                                                                 <?php endforeach; ?>
@@ -282,7 +280,8 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
                         <a href="<?= $task_link->name ?>" target="_blank" class="item">
-                            <i class="fa fa-link"></i>
+                            <i class="fa fa-link"></i> <br>
+                            Name
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
