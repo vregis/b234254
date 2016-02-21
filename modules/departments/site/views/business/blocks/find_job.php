@@ -707,7 +707,7 @@
                             set_user_request($('#user_request'), response.html_user_request);
                             $('#delegated_businesses').html(response.html_delegated_businesses);
                             if(response.html_user_request == ''){
-                                // Сюда впили переход на серч
+                                // Сюда впили переход на серч 
                                 $("#task-block").addClass('in active');
                                 $("#request-block").removeClass('in active');
                                 $("#btn-task-block").parents('li').addClass('active');

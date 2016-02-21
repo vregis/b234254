@@ -762,6 +762,7 @@ span.title {
 .task-body .block.desc .footer{
     background:none;
     height:30px;
+    text-align:right;
 }
 .task-body .block.desc .footer .nav-tabs{
     border-bottom:none;

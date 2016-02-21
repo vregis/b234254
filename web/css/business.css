@@ -137,3 +137,6 @@ table tbody tr td .label{
 .table.with-foot td:first-child{
     border-left:0 !important;
 }
+#find_job .advanced-search-btn+.popover{
+    left:0 !important;
+}

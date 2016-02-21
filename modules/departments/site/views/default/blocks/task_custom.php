@@ -53,20 +53,25 @@ if($task->specialization_id > 0) {
 </div>
 
 <script type="text/javascript">
+
+    $("body").animate({"opacity":1},1000);
     $(document).ready(function(){
-        var offs = 32;
-        console.log(offs);
-        $('.well').css({
-            'margin-top': offs - 2,
-            'margin-bottom': offs - 2
-        });
-    });
-        $("body").animate({"opacity":1},1000);
-        $(document).ready(function(){
         $(".page-content-wrapper").mCustomScrollbar("destroy");
         $('.page-content-wrapper').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),
             theme:"dark"
+        });
+        var offs;
+        if($('.well').height() > ($(window).height() - $('.page-header').height() - $(".page-footer").height())){
+            offs = 30;
+        }else{
+            offs = $(".page-content").height() / 2 - $('.well').height() / 2 - 32;
+        }
+        // var offs = 32;
+         // if
+        $('.well').css({
+            'margin-top': offs,
+            'margin-bottom': offs
         });
         // $('.task-custom').css({'margin-top': $('.page-content').height() / 2 - $('.task-custom').height() / 2});
         // $(".task-custom .personal-fields .form-control[name='goal']").inputmask('999,999,999.99', {

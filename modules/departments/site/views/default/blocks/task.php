@@ -461,3 +461,12 @@ if($task->specialization_id > 0) {
     </div>
 </div>
 </div>
+<style>
+    #btn-delegate+.popover{
+        min-width:250px !important;
+        width:250px !important;
+    }
+    #btn-delegate+.popover > .arrow{
+        margin-left:0 !important;
+    }
+</style>

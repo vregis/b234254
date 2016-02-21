@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     var offs = 32;
     console.log(offs);
-    $('.well').css({
+    $('#task .well').css({
         'margin-top': offs - 2,
         'margin-bottom': offs - 2
     });
