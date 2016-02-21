@@ -72,10 +72,14 @@ $this->title = 'Your role in business';
         </div>
     </div>
 
+
     
     <div class="portlet box">
         <div class="portlet-body">
             <? for($i = 0;$i< count($test_result_inform); $i++) : ?>
+
+
+
             <?php $progressWidth = (($test_result_inform[$i]['user_result']->points-$min_points)/($max_points-$min_points))*100;
                    if($progressWidth <= 35){
                        $progressWidth = 35;

@@ -670,13 +670,19 @@ function Task(task_user_id, is_my, is_custom) {
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
+                        console.log(response);
+                        if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
 
-                        if(response.html_user_request == '' || response.html_user_request == "undefined"){
                             // Сюда впили переход на серч
                             console.log('empty offers');
                             $("#offered-block").removeClass('active');
                             $("#search-block").addClass('active');
-
+                            $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
+                                // $("#status-menu").show();
+                                $("a[href='#search-block']").tab('show');
+                                $("#btn-offered-block .label").remove();
+                                // $(".dropmenu1.status").popover('destroy');
+                            }).popover('hide');
                         }
                     }
                 }
