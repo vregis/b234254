@@ -43,7 +43,7 @@ $this->registerJs($msgJs);
             <? foreach($tasks as $task) : ?>
                     <tr>
                         <td style="text-transform: uppercase">
-                            <a target="_blank" href="<?= Url::toRoute(['/tasks', 'id' => $task->task, 'task_user_id' => $task->task_user_id, 'delegate_task_id' => $task->id]) ?>" class="btn blue"><?= $task->name ?></a>
+                            <a href="<?= Url::toRoute(['/tasks', 'id' => $task->task, 'task_user_id' => $task->task_user_id, 'delegate_task_id' => $task->id]) ?>" class="btn blue"><?= $task->name ?></a>
                         </td>
                     </tr>
             <? endforeach; ?>

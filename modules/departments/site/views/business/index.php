@@ -84,7 +84,7 @@ $this->registerJs($msgJs);
                                 <a href="javascript:;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                             </td>
                             <td style="text-transform: uppercase">
-                                <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
+                                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
                             </td>
                             <td>
                                 <?= (new DateTime($current_userTool->create_date))->format("m/d/Y") ?>

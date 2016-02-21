@@ -886,6 +886,7 @@ class BusinessController extends Controller
     }
 
     public function actionSharedBusiness($id){
+        $this->layout = false;
         return $this->render('shared_business', []);
     }
 

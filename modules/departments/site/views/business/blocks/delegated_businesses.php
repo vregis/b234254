@@ -46,7 +46,7 @@ use yii\helpers\Url;
                 </ul>
             </td>
             <td style="text-transform: uppercase">
-                <a target="_blank" href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <!--<span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>-->
+                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <!--<span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>-->
             </td>
             <td>
                 <?= count($tasks) ?>
