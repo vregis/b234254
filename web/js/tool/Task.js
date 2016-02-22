@@ -16,7 +16,7 @@ function Task(task_user_id, is_my, is_custom) {
         theme:"dark",
         axis:"y",
         setHeight:285,
-        scrollbarPosition: "relative"
+        scrollbarPosition: "outside"
     });
     var offerall_btn = $('.offerall-btn');
     offerall_btn.off();
@@ -371,6 +371,22 @@ function Task(task_user_id, is_my, is_custom) {
                 $(".invite-by-email").popover('hide');
                 $("#advanced-search-form").show();
                 $('#advanced-search-form .selectpicker').selectpicker();
+                $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
             });
         });
         delegate.on('hide.bs.collapse',function(){

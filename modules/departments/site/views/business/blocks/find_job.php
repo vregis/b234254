@@ -447,22 +447,22 @@
         $(".advanced-search-btn").on('show.bs.popover',function(){
             $('#advanced-search-form-dom').html('');
             $("#advanced-search-form").show();
-            // $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
-            //     var els = $(this).find('li');
-            //     console.log(els.length);
-            //     if(els.length > 8){
-            //         $(this).mCustomScrollbar({
-            //             setHeight: 250,
-            //             theme:"dark",
-            //             scrollbarPosition:"outside"
-            //         });  
-            //     }else{
-            //         $(this).mCustomScrollbar({
-            //             theme:"dark",
-            //             scrollbarPosition:"outside"
-            //         });  
-            //     }
-            // });
+            $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+            });
         });
         $(".advanced-search-btn").on('hide.bs.popover',function(){
             $('#advanced-search-form-dom').html($('.popover.in').html());

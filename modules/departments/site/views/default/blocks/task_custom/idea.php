@@ -108,11 +108,51 @@ use yii\widgets\ActiveForm;
         height:75px;
         resize:none;
     }
+    .task .mCSB_container{
+        padding:0;
+    }
+     .task .mCSB_container a{
+        color:#5a5a5a;
+     }
 </style>
 <script>
     $( document ).ready(function() {
         $.each($(".b-page-checkbox-wrap .md-radio .task-name"),function(){
             $(this).css({'margin-left':"-"+$(this).width() / 8+"px"});
+        });
+        setTimeout(function(){
+            $.each($('.dropdown-menu.inner'),function(){
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+            });
+        },400);
+        $.each($('.dropdown-menu.inner'),function(){
+            var els = $(this).find('li');
+            console.log(els.length);
+            if(els.length > 8){
+                $(this).mCustomScrollbar({
+                    setHeight: 252,
+                    theme:"dark",
+                    scrollbarPosition:"outside"
+                });  
+            }else{
+                $(this).mCustomScrollbar({
+                    theme:"dark",
+                    scrollbarPosition:"outside"
+                });  
+            }
         });
     });
 </script>

@@ -70,6 +70,7 @@ section#about .text{
 	font-weight:100;
 	text-align:left;
 	margin-bottom:20px;
+	width: 100%;
 }
 section#about .step .title{
 	font-size:18px;
