@@ -12,7 +12,7 @@ use yii\helpers\Url;
         <div class="tab-content">
             <div role="tabpanel" class="active" id="idea">
                 <div class="idea">
-                    <div class="idea-title title text-center">
+                    <div class="idea-title title text-center" style="margin-top: -15px;">
                         Idea description
                     </div>
                     <div class="row form-group">
@@ -60,8 +60,8 @@ use yii\helpers\Url;
                     </div>
                 </div>
                 <div class="button-panel" style="overflow: hidden">
-                    <a style="margin:30px auto;" onclick="return false" href="#<? //= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary static btn-lg pull-left">Share</a>
-                    <a style="margin:30px auto;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right">Close</a>
+                    <a style="margin:15px auto 0;" onclick="return false" href="#<? //= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary static btn-lg pull-left">Share</a>
+                    <a style="margin:15px auto 0;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right">Close</a>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="statistic">
@@ -156,6 +156,7 @@ use yii\helpers\Url;
     .well{
         position: relative;
         border-top-left-radius:0 !important;
+        padding: 20px !important;
     }
 </style>
 <script>
