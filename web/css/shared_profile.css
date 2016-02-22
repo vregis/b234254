@@ -231,7 +231,7 @@ section.contacts .title{
 .contacts .big a.mail{
 	background: url("/images/share_profile.png") -240px 0px no-repeat;
 }
-.contacts .big a.mail:not(.no_hover):focus,.contacts .big a.mail.active:not(.no_hover){
+.contacts .big a.mail:hover,.contacts .big a.mail:not(.no_hover):focus,.contacts .big a.mail.active:not(.no_hover){
 	background: url("/images/share_profile.png") -300px 0px no-repeat;
 }
 .contacts .small{
