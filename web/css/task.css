@@ -995,7 +995,7 @@ span.title {
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
     max-width:433px;
     left:0 !important;
-    margin-top: -65px !important;
+    /*margin-top: -65px !important;*/
 }
 .invite-by-email+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
     /*background: #ebebeb;*/
@@ -1302,6 +1302,7 @@ span.title {
     .dropselect1{
         min-width:150px !important;
         width:150px !important;
+        z-index: 99999999;
     }
     .dropselect .popover-content,.dropselect1 .popover-content{
         padding: 0;
@@ -1531,4 +1532,8 @@ table th.rate .fa{
     background: #f5f5f5;
     padding: 10px;
     line-height: 36px;
+}
+#delegate thead tr th.status i{
+    margin-left:8px;
+    font-size: 16px;
 }
