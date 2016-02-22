@@ -550,7 +550,7 @@
             setHandlerPagination(_this.closest('.table'));
             var on = $('.on');
             on.off();
-            on.on('click',function(e) { //alert('ahsdhkf');
+            on.on('click',function(e) { //click for on
                 var count = $(this).closest('div').find('.on').length;
                 if(count > 1) {
                     $(this).removeClass('on');
@@ -565,7 +565,7 @@
             });
             var off = $('.off');
             off.off();
-            off.on('click',function(e) {
+            off.on('click',function(e) { //click from off
                 $(this).removeClass('off');
                 $(this).addClass('on');
                 var is_dep = false;
@@ -573,7 +573,7 @@
                     is_dep = true;
                 }
                 if($(this).closest('.filter-task').length > 0) {
-                    get_user_task(false, is_dep);
+                    get_user_task(false, is_dep); //this
                 }else {
                     get_user_request(is_dep);
                 }
