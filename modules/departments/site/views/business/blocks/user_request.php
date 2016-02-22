@@ -3,7 +3,7 @@
 <?php //echo count($users)?>
 <? foreach($users as $user) : ?>
     <?php $tool = \modules\tasks\models\UserTool::find()->where(['user_id' => $user->id, 'status' => 3])->one();?>
-    <?php var_dump($tool);?>
+    <?php //var_dump($tool);?>
     <tr class="user-row" data-page-id="<?= intval($i/5) ?>" style="<?=intval($i/5)!=0 ? 'display: none':'' ?>">
         <td><img style="margin:0;" data-toggle="popover" data-placement="right" data-content='<div style="text-align:left;"><strong><?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?></strong> <br/> <?= $user->country ? $user->country : '' ?><?= $user->city ? ($user->country ? ', ' : '').$user->city : '' ?><br> Eco Farm </div><p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
