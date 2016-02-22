@@ -3,6 +3,8 @@
 namespace modules\departments\site\controllers;
 
 use modules\core\site\base\Controller;
+use modules\core\site\comments\BusinessComments;
+use modules\departments\models\BusinessCommentary;
 use modules\departments\models\BenefitLike;
 use modules\departments\models\Department;
 use modules\departments\models\IdeaLike;
@@ -28,6 +30,7 @@ use Yii;
 use yii\helpers\Url;
 use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
+use modules\core\site\comments\Comments;
 
 /**
  * Class DefaultController
@@ -67,6 +70,10 @@ class BusinessController extends Controller
                             'select-tool',
                             'dashboard-editing',
                             'dashboard-save',
+                            'pagination',
+                            'add-comment',
+                            'add-like',
+                            'add-like-idea',
                             'shared-business'
                         ],
                         'roles' => ['@']
@@ -83,6 +90,11 @@ class BusinessController extends Controller
                 ]
             ],
         ];
+    }
+
+    public function beforeAction($action) {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
     }
 
     public function actionIndex()
@@ -504,6 +516,7 @@ class BusinessController extends Controller
         }
         $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
 
+        //var_dump($post); die();
         $users_request = $this->get_user_request();
        /* $user_request = $this->render_user_request($users_request);
         var_dump($user_request); die();*/
@@ -519,7 +532,7 @@ class BusinessController extends Controller
 
         $user_special_pending = $this->get_user_specials_pending($spec_pending);
 
-        $response['html_user_task'] = $this->render_user_task($post, $is_dep);
+        //$response['html_user_task'] = $this->render_user_task($post, $is_dep);
         $response['html_user_request'] = $this->render_user_request($users_request);
         $response['html_delegated_businesses'] = $this->render_delegated_businesses();
         $response['html_deps_filter'] = $this->render_deps_filter_pending($post, $user_special_pending);
@@ -955,7 +968,66 @@ class BusinessController extends Controller
 
     public function actionSharedBusiness($id){
         $this->layout = false;
-        return $this->render('shared_business', []);
+        $model = UserTool::find()
+            ->select('user_tool.*, benefit.first benefit_first, benefit.second benefit_second, benefit.third benefit_third,
+            idea.name idea_name, idea.description_like idea_description_like, idea.description_problem idea_description_problem,
+            industry.name industry_name')
+            ->join('JOIN','benefit', 'benefit.user_tool_id = user_tool.id')
+            ->join('JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->where(['user_tool.id'=>$id])
+            ->one();
+
+        $com = BusinessCommentary::find()
+            ->select('business_commentary.*, user_profile.avatar as ava, user_profile.first_name as fn, user_profile.last_name as ln, user_profile.user_id as uid')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = business_commentary.sender_id')
+            ->where(['business_commentary.user_id' => $id])
+            ->orderBy(['business_commentary.time' => SORT_DESC])->limit(5)
+            ->all();
+        $new_com = new BusinessComments();
+        $count = $new_com->getCount($_GET['id']);
+
+        $comments = $this->renderPartial('blocks/comments', ['comments' => $com, 'count'=>$count, 'user_id' => $_GET['id']]);
+        $likes = $this->renderPartial('blocks/likes', ['id'=>$id]);
+        $idea = $this->renderPartial('blocks/idea', ['id'=>$id]);
+
+        return $this->render('shared_business', ['model' => $model, 'comments' => $comments, 'count'=> $count, 'likes'=>$likes, 'idea' => $idea]);
+    }
+
+    public function actionAddComment(){
+        $comment = new BusinessComments();
+        $comment->addComment($_POST['text'], $_POST['user_id']);
+        $count = $comment->getCount($_POST['user_id']);
+        $response['html'] = $comment->render($_POST['user_id']);
+        $response['count'] = $count;
+        return json_encode($response);
+    }
+
+    public function actionPagination(){
+        $comment = new BusinessComments();
+        $response['html'] = $comment->render($_POST['user_id'], $_POST['page']);
+        return json_encode($response);
+    }
+
+    public function actionAddLike(){
+        $like = new BenefitLike();
+        $like->benefit_id = $_POST['benefit'];
+        $like->user_tool_id = $_POST['tool'];
+        $like->like = $_POST['like'];
+        $like->ip_address = $_SERVER['REMOTE_ADDR'];
+        $like->save();
+        $response['html'] = $this->renderPartial('blocks/likes', ['id'=>$_POST['tool']]);
+        return json_encode($response);
+    }
+
+    public function actionAddLikeIdea(){
+        $idea = new IdeaLike();
+        $idea->like = $_POST['point'];
+        $idea->ip_address = $_SERVER['REMOTE_ADDR'];
+        $idea->idea_id = $_POST['tool'];
+        $idea->save();
+        $response['html'] = $this->renderPartial('blocks/idea', ['id'=>$_POST['tool']]);
+        return json_encode($response);
     }
 
 }
