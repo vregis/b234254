@@ -556,7 +556,11 @@
                     $(this).removeClass('on');
                     $(this).addClass('off');
                     if($(this).closest('.filter-task').length > 0) {
-                        get_user_task(false);
+                        if($(this).closest('#request-block').length > 0){
+                            get_user_task_pending(false);
+                        }else{
+                            get_user_task(false);
+                        }
                     }
                     else {
                         get_user_request(false);
@@ -572,8 +576,14 @@
                 if($(this).closest('.deps-menu').length > 0) {
                     is_dep = true;
                 }
+
                 if($(this).closest('.filter-task').length > 0) {
-                    get_user_task(false, is_dep);
+                    if($(this).closest('#request-block').length > 0){
+                        get_user_task_pending(false, is_dep);
+                    }else{
+                        get_user_task(false, is_dep);
+                    }
+
                 }else {
                     get_user_request(is_dep);
                 }
@@ -822,6 +832,45 @@
                 }
             });
         }
+
+
+        function get_user_task_pending(is_advance, is_dep) {
+            if(is_advance == undefined) {
+                is_advance = false;
+            }
+            if(is_dep == undefined) {
+                is_dep = false;
+            }
+            if(is_dep == true){
+                var click_dep = 1;
+            }else{
+                var click_dep = 0;
+            }
+            $.ajax({
+                url: '/departments/business/user-task-pending',
+                type: 'post',
+                dataType: 'json',
+                data: Object.assign({
+                    _csrf: $("meta[name=csrf-token]").attr("content"),
+                    is_dep: is_dep,
+                    click_dep: click_dep
+                }, get_find_params(is_advance)),
+                success: function (response) {
+                    if (!response.error) {
+                        $('.filter-task .deps-menu').html(response.html_deps_filter);
+                        $('.filter-task .spec-menu').html(response.html_specials_filter);
+                        set_user_task($('#user_task'), response.html_user_task);
+                        set_user_request($('#user_request'), response.html_user_request);
+                        $('#delegated_businesses').html(response.html_delegated_businesses);
+                    }
+                }
+            });
+        }
+
+
+
+
+
         function get_user_request(is_dep) {
             if(is_dep == undefined) {
                 is_dep = false;
@@ -878,5 +927,14 @@
                 }
             });
         });
+
+
+        $('.time').find('.fa-angle-down').on('click', function(){
+
+        })
+
+
+
+
     });
 </script>

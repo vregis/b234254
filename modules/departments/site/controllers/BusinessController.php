@@ -49,6 +49,7 @@ class BusinessController extends Controller
                         'actions' => [
                             'index',
                             'user-task',
+                            'user-task-pending',
                             'user-request',
                             'request',
                             'reject',
@@ -122,7 +123,7 @@ class BusinessController extends Controller
         $specials_filter = $this->render_specials_filter($post, $user_specials);
 
         $deps_filter_pending = $this->render_deps_filter_pending($post, $user_special_pending);
-        $specials_filter_pending = $this->render_specials_filter($post, $user_specials);
+        $specials_filter_pending = $this->render_specials_filter_pending($post, $user_special_pending);
 
         $users_special_request = $user_specials;
         foreach($users_special_request as $key => $user_special) {
@@ -463,6 +464,21 @@ class BusinessController extends Controller
                 'user_specials' => $user_specials
             ]);
     }
+
+    private function render_specials_filter_pending($post = [],$user_specials = null,$is_dep = false) {
+        if(!$user_specials) {
+            $user_specials = $this->get_user_specials();
+        }
+        $this->apply_filters($user_specials, $post, true,$is_dep);
+        return $this->renderPartial('blocks/specials_filter',
+            [
+                'user_specials' => $user_specials
+            ]);
+    }
+
+
+
+
     public function actionUserTask($post = null)
     {
         if($post == null) {
@@ -479,14 +495,61 @@ class BusinessController extends Controller
         $response['error'] = false;
         return json_encode($response);
     }
+
+
+    public function actionUserTaskPending($post = null)
+    {
+        if($post == null) {
+            $post = Yii::$app->request->post();
+        }
+        $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
+
+        $users_request = $this->get_user_request();
+       /* $user_request = $this->render_user_request($users_request);
+        var_dump($user_request); die();*/
+
+        $spec_pending = [];
+        $i = 0;
+        foreach($users_request as $ur){
+            $spec_pending[$i] = $ur->spec_id;
+            $i++;
+        }
+
+        $spec_pending = array_unique($spec_pending);
+
+        $user_special_pending = $this->get_user_specials_pending($spec_pending);
+
+        $response['html_user_task'] = $this->render_user_task($post, $is_dep);
+        $response['html_user_request'] = $this->render_user_request($users_request);
+        $response['html_delegated_businesses'] = $this->render_delegated_businesses();
+        $response['html_deps_filter'] = $this->render_deps_filter_pending($post, $user_special_pending);
+
+        $response['html_specials_filter'] = $this->render_specials_filter_pending($post, $user_special_pending, $is_dep);
+        $response['error'] = false;
+        return json_encode($response);
+    }
+
+
+
     public function actionUserRequest($post = null) {
         if($post == null) {
             $post = Yii::$app->request->post();
         }
 
-        $users_request = $this->get_user_request();
 
-        $user_specials = $this->get_user_specials();
+        $users_request = $this->get_user_request();
+        //$user_request = $this->render_user_request($users_request);
+
+        $spec_pending = [];
+        $i = 0;
+        foreach($users_request as $ur){
+            $spec_pending[$i] = $ur->spec_id;
+            $i++;
+        }
+
+        $spec_pending = array_unique($spec_pending);
+
+        $user_specials = $this->get_user_specials_pending($spec_pending);
         $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
 
         $users_special_request = $user_specials;
