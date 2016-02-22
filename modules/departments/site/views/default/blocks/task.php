@@ -81,12 +81,12 @@ if($task->specialization_id > 0) {
                                 <table style="width:100%;" class="table with-foot">
                                     <thead>
                                     <tr>
-                                        <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
-                                        <th>Name</th>
-                                        <th>Level</th>
-                                        <th class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                                        <th>Location</th>
-                                        <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search<i class="fa fa-angle-down"></i></th>
+                                        <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
+                                        <th width="180">Name</th>
+                                        <th width="210">Level</th>
+                                        <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                                        <th width="230">Location</th>
+                                        <th width="130" class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search<i class="fa fa-angle-down"></i></th>
                                     </tr>
                                     </thead>
                                     <tbody id="delegate_users">
@@ -134,7 +134,6 @@ if($task->specialization_id > 0) {
                                                         <div class="col-sm-6">
                                                             <label for="">Level</label> <br>
                                                             <select id="select-level" class="update form-control selectpicker">
-                                                                <option class="start" value="0">Select level</option>
                                                                 <?php foreach($skill_list as $skill):?>
                                                                     <option value="<?php echo $skill->id?>"><?php echo $skill->name?></option>
                                                                 <?php endforeach;?>
@@ -145,7 +144,6 @@ if($task->specialization_id > 0) {
                                                         <div class="col-sm-6">
                                                             <label for="">Country</label> <br>
                                                             <select id="select-country" class="form-control selectpicker country">
-                                                                <option class="start" value="0">Select country</option>
                                                                 <?php foreach($countrylist as $c):?>
                                                                     <option <?php echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->title_en?></option>
                                                                 <?php endforeach; ?>
@@ -159,7 +157,7 @@ if($task->specialization_id > 0) {
                                                     <div class="row form-group">
                                                         <div class="col-sm-12">
                                                             <div class="pull-right">
-                                                                <button type="submit" id="advanced-search-send" class="btn btn-primary">Send</button>
+                                                                <button type="submit" id="advanced-search-send" class="btn btn-primary">Search</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -189,12 +187,12 @@ if($task->specialization_id > 0) {
                                 <table style="width:100%;" class="table with-foot">
                                     <thead>
                                     <tr>
-                                        <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
-                                        <th>Name</th>
-                                        <th>Level</th>
-                                        <th class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                                        <th>Location</th>
-                                        <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Offered <i class="fa fa-angle-down"></i></th>
+                                        <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
+                                        <th width="180">Name</th>
+                                        <th width="210">Level</th>
+                                        <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                                        <th width="230">Location</th>
+                                        <th width="130" class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Offered <i class="fa fa-angle-down"></i></th>
                                     </tr>
                                     </thead>
                                     <tbody id="cancel_delegate_users">
@@ -253,11 +251,9 @@ if($task->specialization_id > 0) {
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="photos">
                     <? foreach($files['photo'] as $file) : ?>
-                        <div class="col-sm-3">
                             <a href="<?= $file['path'] ?>" target="_blank">
                                 <img src="<?= $file['path'] ?>" class="img-responsive" alt="">
                             </a>
-                        </div>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
@@ -282,27 +278,25 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
                         <a href="<?= $task_link->name ?>" target="_blank" class="item">
-                            <i class="fa fa-link"></i>
+                            <i class="fa fa-link"></i> <br>
+                            Name
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="notes">
                     <? foreach($task_notes as $task_note) : ?>
-                        <div class="collapse-line"><?= $task_note->name ?> </div>
+                        <a href="<?= $task_link->name ?>" target="_blank" class="item"><?= $task_note->name ?>
+                            <i class="ico-history"></i> <br>
+                            Name
+                        </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade in active" id="desc"><?php echo $task->description?></div>
               </div>
             </div>
-            <? if(count($task_videos) > 0 ||
-            count($files['audio']) > 0 ||
-            count($files['photo']) > 0 ||
-            count($files['document']) > 0 ||
-            count($files['archive']) > 0 ||
-            count($task_links) > 0 ||
-            count($task_notes) > 0) : ?>
+
                 <div class="footer">
                     <div>
                         <ul class="btn-group nav nav-tabs" role="tablist">
@@ -354,7 +348,6 @@ if($task->specialization_id > 0) {
                         </ul>
                     </div>
                 </div>
-            <? endif; ?>
         </div>
                         <div class="title text-center" style="margin-top: 15px;">Is this task was helpful to you?</div>
                         <div class="step">
