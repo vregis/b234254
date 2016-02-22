@@ -60,7 +60,7 @@ use yii\helpers\Url;
                     </div>
                 </div>
                 <div class="button-panel" style="overflow: hidden">
-                    <a style="margin:15px auto 0;" onclick="return false" href="#<? //= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary static btn-lg pull-left">Share</a>
+                    <a style="margin:15px auto 0;" target="_blank" href="<?= Url::toRoute(['/departments/business/shared-business?id='.$tool->id.'']) ?>" class="btn btn-primary static btn-lg pull-left">Share</a>
                     <a style="margin:15px auto 0;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right">Close</a>
                 </div>
             </div>

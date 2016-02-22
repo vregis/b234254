@@ -107,58 +107,16 @@ use modules\user\site\controllers\ProfileController;
             </div>
             <div class="page-content">
             	<section id="about">
-            		<div class="title">ECOFARM</div>
-            		<div class="subtitle">Food & drinks</div>
+            		<div class="title"><?php echo $model->idea_name?></div>
+            		<div class="subtitle"><?php echo $model->industry_name?></div>
             		<table class="text">
             			<tr>
-            				<td style="width:50%;border-right:1px solid #5a5a5a;vertical-align: top;padding-right:40px;">A farm is built with the observance of the most modern ecological technologies</td>
-            				<td style="width:50%;vertical-align: top;padding-left:40px;">The products grown by us do not contain preservatives and harmful substances and it is 100 % natural.</td>
+            				<td style="width:50%;border-right:1px solid #5a5a5a;vertical-align: top;padding-right:40px;"><?php echo $model->idea_description_like?></td>
+            				<td style="width:50%;vertical-align: top;padding-left:40px;"><?php echo $model->idea_description_problem?></td>
             			</tr>
             		</table>
-            		<div class="step">
-        				<div class="title">DO YOU LIKE OUR IDEA?</div>
-                        <div class="question-name">
-                            <h4 class="left pull-left">No</h4>
-                            <h4 class="right pull-right">Yes</h4>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div id="helpful" class="form-md-radios md-radio-inline b-page-checkbox-wrap ">
-                        <div class="separ"></div>
-                            <div class="md-radio has-test b-page-checkbox">
-                                    <input type="radio" id="Helpful[0]" name="Helpful" class="md-radiobtn" value="0">
-                                    <label for="Helpful[0]">
-                                        <span></span>
-                                        <span class="check"></span>
-                                        <span class="box"></span>
-                                    </label>
-                                </div>
-                                <div class="md-radio has-test b-page-checkbox">
-                                    <input type="radio" id="Helpful[1]" name="Helpful" class="md-radiobtn" value="1">
-                                    <label for="Helpful[1]">
-                                        <span></span>
-                                        <span class="check"></span>
-                                        <span class="box"></span>
-                                    </label>
-                                </div>
-                                <div class="md-radio has-test b-page-checkbox">
-                                    <input type="radio" id="Helpful[2]" name="Helpful" class="md-radiobtn" value="2">
-                                    <label for="Helpful[2]">
-                                        <span></span>
-                                        <span class="check"></span>
-                                        <span class="box"></span>
-                                    </label>
-                                </div>
-                                <div class="md-radio has-test b-page-checkbox">
-                                    <input type="radio" id="Helpful[3]" name="Helpful" class="md-radiobtn" value="3">
-                                    <label for="Helpful[3]">
-                                        <span></span>
-                                        <span class="check"></span>
-                                        <span class="box"></span>
-                                    </label>
-                                </div>
-                                <div style="display:inline-block;width:100%;">
-                            </div>
-                        </div>
+            		<div data-tool-id = '<?php echo $model->id?>' class="step">
+        				<?php echo $idea?>
                     </div>
             	</section>
 	            <section id="benefits">
@@ -171,56 +129,12 @@ use modules\user\site\controllers\ProfileController;
 		            			<td><div class="digit">3</div></td>
 		            		</tr>
 		            		<tr>
-		            			<td><div class="desc">Always fresh foods</div></td>
-		            			<td><div class="desc">Harmful 
-								components are 
-								not used in a 
-								production</div></td>
-								<td><div class="desc">100% Natural</div></td>
+		            			<td><div class="desc"><?php echo $model->benefit_first?></div></td>
+		            			<td><div class="desc"><?php echo $model->benefit_second?></div></td>
+								<td><div class="desc"><?php echo $model->benefit_third?></div></td>
 		            		</tr>
-		            		<tr>
-		            			<td class="likes">
-		            				<table>
-		            					<tr>
-		            						<td>
-		            							<a href="" class="btn btn-primary circle like"><i class="fa fa-thumbs-o-up"></i></a>
-		            							37
-		            						</td>
-		            						<td>
-		            							<a href="" class="btn btn-primary circle dislike"><i class="fa fa-thumbs-o-down"></i></a>
-		            							1,323
-		            						</td>
-		            					</tr>
-		            				</table>
-		            			</td>
-		            			<td class="likes">
-		            				<table>
-		            					<tr>
-		            						<td>
-		            							<a href="" class="btn btn-primary circle like"><i class="fa fa-thumbs-o-up"></i></a>
-		            							56
-		            						</td>
-		            						<td>
-		            							<a href="" class="btn btn-primary circle dislike"><i class="fa fa-thumbs-o-down"></i></a>
-		            							623
-		            						</td>
-		            					</tr>
-		            				</table>
-		            			</td>
-		            			<td class="likes">
-		            				<table>
-		            					<tr>
-		            						<td>
-		            							<a href="" class="btn btn-primary circle like"><i class="fa fa-thumbs-o-up"></i></a>
-		            							27
-		            						</td>
-		            						<td>
-		            							<a href="" class="btn btn-primary circle dislike"><i class="fa fa-thumbs-o-down"></i></a>
-		            							666
-		            						</td>
-		            					</tr>
-		            				</table>
-		            			</td>
+		            		<tr class="like-block" data-user-tool-id = '<?php echo $model->id ?>'>
+		            			<?php echo $likes?>
 		            		</tr>
 		            	</table>
 	            	</div>
@@ -272,50 +186,14 @@ use modules\user\site\controllers\ProfileController;
                     </div>
                     <a href="javascript:;" class="btn btn-lg btn-primary" style="width:185px;border-radius: 30px;">JOIN US</a>
                 </section>
-<section id="comments">
+                <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>
                     <div style="text-align:justify;">
-                        <label for="" id="comments-count" style="display:inline-block;"><span class="count">2</span> Comments</label> <button style="display:inline-block;width:100px;" class="btn btn-primary" id="send-btn">Send</button>
+                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;" class="btn btn-primary" id="send-btn">Send</button>
                         <div style="display:inline-block;width:100%;"></div>
                     </div>
                     <div class="dinamic_comments">
-                    <div class="comments">
-    <div class="wrapper">
-                                    <div class="item">
-                    <a target="_blank" href="/user/social/shared-profile?id=16"><img src="http://bsb.local/statc/web/avatars/1452864278xnjr9J5e4lI.jpg" alt="" width="40" height="40" class="avatar mCS_img_loaded"></a>
-                    <div class="name">Mirprost Mirprost </div>
-                    <div class="comment">фывфы</div>
-                    <div class="time">about 8 hours</div>
-                </div>
-                            <div class="item">
-                    <a target="_blank" href="/user/social/shared-profile?id=16"><img src="http://bsb.local/statc/web/avatars/1452864278xnjr9J5e4lI.jpg" alt="" width="40" height="40" class="avatar mCS_img_loaded"></a>
-                    <div class="name">Mirprost Mirprost </div>
-                    <div class="comment">вфывфы</div>
-                    <div class="time">about 8 hours</div>
-                </div>
-                                                        <ul class="pagination" style="margin-left: -41.5px;">
-            <li class="disabled">
-                <a class="prev-page go-page" data-page-id="-1">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-            </li>
-            
-                                                                                    <li class="active">
-                <a class="go-page" data-page-id="0"> 1 </a>
-            </li>
-                
-                            
-            <li class="disabled">
-                <a class="next-page go-page" data-page-id="1">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-
-            <div class="clearfix"></div>
-        </ul>
-    </div>
-    
-</div>
+                        <?php echo $comments?>
 
                     </div>
                     <span style="cursor:pointer" class="more"><i class="fa fa-angle-down"></i></span>
@@ -386,7 +264,7 @@ use modules\user\site\controllers\ProfileController;
             user_id: <?php echo $_GET['id']?>
         }
         $.ajax({
-            'url': '/user/social/pagination',
+            'url': '/departments/business/pagination',
             type: 'post',
             dataType: 'json',
             data: data,
@@ -432,7 +310,7 @@ use modules\user\site\controllers\ProfileController;
                 return false;
             }else{
                 $.ajax({
-                    url:'/user/social/add-comment',
+                    url:'/departments/business/add-comment',
                     type: 'post',
                     dataType: 'json',
                     data: data,
@@ -446,6 +324,51 @@ use modules\user\site\controllers\ProfileController;
         })
 
 
+    })
+
+    $(document).on('click', '.add-thumb', function(){
+        var tool = $(this).closest('.like-block').attr('data-user-tool-id');
+        var benefit = $(this).closest('.benefit').attr('data-benefit-id');
+        if($(this).hasClass('like')){
+            var like = 1;
+        }else{
+            var like = 0;
+        }
+        var data = {
+            tool:tool,
+            benefit: benefit,
+            like:like
+        }
+        $.ajax({
+            url: '/departments/business/add-like',
+            type: 'post',
+            dataType: 'json',
+            data: data,
+            success: function(response){
+                $('.like-block').html(response.html);
+            }
+        })
+    })
+
+    $(document).on('click', '.idea-like', function(){
+        if($(this).hasClass('not')){
+            return false;
+        }
+        var point = $(this).val();
+        var tool = $(this).closest('.step').attr('data-tool-id');
+        var data = {
+            point:point,
+            tool:tool
+        }
+        $.ajax({
+            url: '/departments/business/add-like-idea',
+            type: 'post',
+            dataType: 'json',
+            data: data,
+            success: function(response){
+                $('.step').html(response.html);
+            }
+        })
     })
 </script>
 
