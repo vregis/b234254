@@ -447,22 +447,22 @@
         $(".advanced-search-btn").on('show.bs.popover',function(){
             $('#advanced-search-form-dom').html('');
             $("#advanced-search-form").show();
-            $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 250,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
-            });
+            // $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+            //     var els = $(this).find('li');
+            //     console.log(els.length);
+            //     if(els.length > 8){
+            //         $(this).mCustomScrollbar({
+            //             setHeight: 250,
+            //             theme:"dark",
+            //             scrollbarPosition:"outside"
+            //         });  
+            //     }else{
+            //         $(this).mCustomScrollbar({
+            //             theme:"dark",
+            //             scrollbarPosition:"outside"
+            //         });  
+            //     }
+            // });
         });
         $(".advanced-search-btn").on('hide.bs.popover',function(){
             $('#advanced-search-form-dom').html($('.popover.in').html());
@@ -550,7 +550,7 @@
             setHandlerPagination(_this.closest('.table'));
             var on = $('.on');
             on.off();
-            on.on('click',function(e) { //alert('ahsdhkf');
+            on.on('click',function(e) { //click for on
                 var count = $(this).closest('div').find('.on').length;
                 if(count > 1) {
                     $(this).removeClass('on');
@@ -565,7 +565,7 @@
             });
             var off = $('.off');
             off.off();
-            off.on('click',function(e) {
+            off.on('click',function(e) { //click from off
                 $(this).removeClass('off');
                 $(this).addClass('on');
                 var is_dep = false;
@@ -573,7 +573,7 @@
                     is_dep = true;
                 }
                 if($(this).closest('.filter-task').length > 0) {
-                    get_user_task(false, is_dep);
+                    get_user_task(false, is_dep); //this
                 }else {
                     get_user_request(is_dep);
                 }
@@ -710,8 +710,16 @@
                                 // Сюда впили переход на серч 
                                 $("#task-block").addClass('in active');
                                 $("#request-block").removeClass('in active');
-                                $("#btn-task-block").parents('li').addClass('active');
+                                $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
+                                    // $("#status-menu").show();
+                                    $("#btn-request-block").parent().removeClass('active');
+                                    $("#btn-task-block").parent().addClass('active');
+                                    $("#btn-task-block").tab('show');
+                                    console.log($("#btn-request-block").parent().attr('class'));
+                                    // $(".dropmenu1.status").popover('destroy');
+                                }).popover('hide');
 
+                                
                             }
                         }
                     }

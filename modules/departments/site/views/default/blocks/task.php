@@ -134,7 +134,6 @@ if($task->specialization_id > 0) {
                                                         <div class="col-sm-6">
                                                             <label for="">Level</label> <br>
                                                             <select id="select-level" class="update form-control selectpicker">
-                                                                <option class="start" value="0">Select level</option>
                                                                 <?php foreach($skill_list as $skill):?>
                                                                     <option value="<?php echo $skill->id?>"><?php echo $skill->name?></option>
                                                                 <?php endforeach;?>
@@ -145,7 +144,6 @@ if($task->specialization_id > 0) {
                                                         <div class="col-sm-6">
                                                             <label for="">Country</label> <br>
                                                             <select id="select-country" class="form-control selectpicker country">
-                                                                <option class="start" value="0">Select country</option>
                                                                 <?php foreach($countrylist as $c):?>
                                                                     <option <?php echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->title_en?></option>
                                                                 <?php endforeach; ?>
@@ -189,7 +187,7 @@ if($task->specialization_id > 0) {
                                 <table style="width:100%;" class="table with-foot">
                                     <thead>
                                     <tr>
-<th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
+                                        <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                                         <th width="180">Name</th>
                                         <th width="210">Level</th>
                                         <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
@@ -253,11 +251,9 @@ if($task->specialization_id > 0) {
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="photos">
                     <? foreach($files['photo'] as $file) : ?>
-                        <div class="col-sm-3">
                             <a href="<?= $file['path'] ?>" target="_blank">
                                 <img src="<?= $file['path'] ?>" class="img-responsive" alt="">
                             </a>
-                        </div>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
@@ -282,8 +278,13 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
                         <a href="<?= $task_link->name ?>" target="_blank" class="item">
+<<<<<<< HEAD
                             <i class="fa fa-link"></i>
                              Name
+=======
+                            <i class="fa fa-link"></i> <br>
+                            Name
+>>>>>>> 3b8b0268a198d318e60d1e45108cf1f3b6ded39c
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
@@ -291,7 +292,11 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="notes">
                     <? foreach($task_notes as $task_note) : ?>
                         <a href="<?= $task_link->name ?>" target="_blank" class="item"><?= $task_note->name ?>
+<<<<<<< HEAD
                             <i class="ico-history"></i>
+=======
+                            <i class="ico-history"></i> <br>
+>>>>>>> 3b8b0268a198d318e60d1e45108cf1f3b6ded39c
                             Name
                         </a>
                     <? endforeach; ?>
@@ -300,6 +305,10 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade in active" id="desc"><?php echo $task->description?></div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b8b0268a198d318e60d1e45108cf1f3b6ded39c
                 <div class="footer">
                     <div>
                         <ul class="btn-group nav nav-tabs" role="tablist">

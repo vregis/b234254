@@ -231,7 +231,8 @@ class BusinessController extends Controller
         $user_specials = UserSpecialization::find()->select('user_specialization.*, specialization.name name, specialization.department_id dep_id,department.name dname')
             ->join('JOIN','specialization','specialization.id = user_specialization.specialization_id')
             ->join('JOIN','department','department.id = specialization.department_id')
-            ->where(['user_id' => Yii::$app->user->id])->all();
+            ->join('JOIN', 'task', 'task.specialization_id = specialization.id')
+            ->where(['user_specialization.user_id' => Yii::$app->user->id])->all();
         foreach($user_specials as $key => $user_special) {
             $is_find = false;
             foreach($user_do as $do) {
@@ -347,10 +348,10 @@ class BusinessController extends Controller
         $user_specials = $this->get_user_specials();
         $this->apply_filters($user_specials, $post);
         foreach($user_specials as $key => $user_special) {
-            if($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
+          /*  if($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
                 unset($user_specials[$key]);
                 continue;
-            }
+            }*/
         }
 
         $special_ids = [];
