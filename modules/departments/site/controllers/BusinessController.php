@@ -174,7 +174,7 @@ class BusinessController extends Controller
             ->join('LEFT OUTER JOIN','geo_country', 'geo_country.id = user_profile.country_id')
             ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id');
         foreach($exclude_user_ids as $exclude_user_id)
-        $users_find->where(['not in','user.id',$exclude_user_ids]);
+            $users_find->where(['not in','user.id',$exclude_user_ids]);
         if($where) {
             $users_find->andWhere($where);
         }
@@ -231,7 +231,8 @@ class BusinessController extends Controller
         $user_specials = UserSpecialization::find()->select('user_specialization.*, specialization.name name, specialization.department_id dep_id,department.name dname')
             ->join('JOIN','specialization','specialization.id = user_specialization.specialization_id')
             ->join('JOIN','department','department.id = specialization.department_id')
-            ->where(['user_id' => Yii::$app->user->id])->all();
+            ->join('JOIN','task','task.specialization_id = specialization.id')
+            ->where(['user_specialization.user_id' => Yii::$app->user->id])->all();
         foreach($user_specials as $key => $user_special) {
             $is_find = false;
             foreach($user_do as $do) {
@@ -254,19 +255,19 @@ class BusinessController extends Controller
         $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname')
             ->join('JOIN','department','department.id = specialization.department_id')
             ->where(['specialization.id' => $spec])->all();
-       /* foreach($user_specials as $key => $user_special) {
-            $is_find = false;
-            foreach($user_do as $do) {
-                if($do->status_sell == 1 && $user_special->dep_id == $do->department_id && $user_special->dep_hide == 0) {
-                    $is_find = true;
-                    break;
-                }
-            }
-            if(!$is_find) {
-                unset($user_specials[$key]);
-                continue;
-            }
-        }*/
+        /* foreach($user_specials as $key => $user_special) {
+             $is_find = false;
+             foreach($user_do as $do) {
+                 if($do->status_sell == 1 && $user_special->dep_id == $do->department_id && $user_special->dep_hide == 0) {
+                     $is_find = true;
+                     break;
+                 }
+             }
+             if(!$is_find) {
+                 unset($user_specials[$key]);
+                 continue;
+             }
+         }*/
         return $user_specials;
     }
 
@@ -347,10 +348,10 @@ class BusinessController extends Controller
         $user_specials = $this->get_user_specials();
         $this->apply_filters($user_specials, $post);
         foreach($user_specials as $key => $user_special) {
-            if($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
-                unset($user_specials[$key]);
-                continue;
-            }
+            /* if($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
+                 unset($user_specials[$key]);
+                 continue;
+             }*/
         }
 
         $special_ids = [];
