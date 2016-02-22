@@ -12,7 +12,7 @@ use yii\helpers\Url;
         <div class="tab-content">
             <div role="tabpanel" class="active" id="idea">
                 <div class="idea">
-                    <div class="idea-title title text-center" style="margin-top: -15px;">
+                    <div class="idea-title title text-center" style="margin-top: -10px;">
                         Idea description
                     </div>
                     <div class="row form-group">
@@ -111,7 +111,7 @@ use yii\helpers\Url;
         color:#5a5a5a;
         font-size:18px; 
         text-transform: uppercase;
-        line-height:50px;
+        line-height:36px;
     }
     .btn-primary{
         width:100px;

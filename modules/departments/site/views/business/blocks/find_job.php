@@ -447,22 +447,22 @@
         $(".advanced-search-btn").on('show.bs.popover',function(){
             $('#advanced-search-form-dom').html('');
             $("#advanced-search-form").show();
-            $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 250,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
-            });
+            // $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+            //     var els = $(this).find('li');
+            //     console.log(els.length);
+            //     if(els.length > 8){
+            //         $(this).mCustomScrollbar({
+            //             setHeight: 250,
+            //             theme:"dark",
+            //             scrollbarPosition:"outside"
+            //         });  
+            //     }else{
+            //         $(this).mCustomScrollbar({
+            //             theme:"dark",
+            //             scrollbarPosition:"outside"
+            //         });  
+            //     }
+            // });
         });
         $(".advanced-search-btn").on('hide.bs.popover',function(){
             $('#advanced-search-form-dom').html($('.popover.in').html());
@@ -721,7 +721,12 @@
                                 $("#task-block").addClass('in active');
                                 $("#request-block").removeClass('in active');
                                 $("#btn-task-block").parents('li').addClass('active');
-
+                                $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
+                                    $("#btn-request-block").parent().removeClass('active');
+                                    $("#btn-task-block").parent().addClass('active');
+                                    $("#btn-task-block").tab('show');
+                                    console.log($("#btn-request-block").parent().attr('class'));
+                                }).popover('hide');
                             }
                         }
                     }

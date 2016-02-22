@@ -676,7 +676,12 @@ function Task(task_user_id, is_my, is_custom) {
                             console.log('empty offers');
                             $("#offered-block").removeClass('active');
                             $("#search-block").addClass('active');
-                            $("a[href='#search-block]").parents('li').addClass('active');
+                            $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
+                                // $("#status-menu").show();
+                                $("a[href='#search-block']").tab('show');
+                                $("#btn-offered-block .label").remove();
+                                // $(".dropmenu1.status").popover('destroy');
+                            }).popover('hide');
                         }
                     }
                 }

@@ -81,7 +81,7 @@ if($task->specialization_id > 0) {
                                 <table style="width:100%;" class="table with-foot">
                                     <thead>
                                     <tr>
-<th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
+                                        <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                                         <th width="180">Name</th>
                                         <th width="210">Level</th>
                                         <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
@@ -282,7 +282,8 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
                         <a href="<?= $task_link->name ?>" target="_blank" class="item">
-                            <i class="fa fa-link"></i>
+                            <i class="fa fa-link"></i> <br>
+                            Name
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
@@ -290,7 +291,7 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="notes">
                     <? foreach($task_notes as $task_note) : ?>
                         <a href="<?= $task_link->name ?>" target="_blank" class="item"><?= $task_note->name ?>
-                            <i class="ico-history"></i>
+                            <i class="ico-history"></i> <br>
                             Name
                         </a>
                     <? endforeach; ?>
