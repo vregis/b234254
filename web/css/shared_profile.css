@@ -225,7 +225,7 @@ section.contacts .title{
 .contacts .big a.skype{
 	background: url("/images/share_profile.png") -120px 0px no-repeat;
 }
-.contacts .big a.skype:not(.no_hover):focus,.contacts .big a.skype.active:not(.no_hover){
+.contacts .big a.skype:not(.no_hover):hover,.contacts .big a.skype:not(.no_hover):focus,.contacts .big a.skype.active:not(.no_hover){
 	background: url("/images/share_profile.png") -180px 0px no-repeat;
 }
 .contacts .big a.mail{
