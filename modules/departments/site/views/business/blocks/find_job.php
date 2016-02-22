@@ -550,7 +550,7 @@
             setHandlerPagination(_this.closest('.table'));
             var on = $('.on');
             on.off();
-            on.on('click',function(e) { //alert('ahsdhkf');
+            on.on('click',function(e) {
                 var count = $(this).closest('div').find('.on').length;
                 if(count > 1) {
                     $(this).removeClass('on');
@@ -797,13 +797,19 @@
             if(is_dep == undefined) {
                 is_dep = false;
             }
+            if(is_dep == true){
+                var click_dep = 1;
+            }else{
+                var click_dep = 0;
+            }
             $.ajax({
                 url: '/departments/business/user-task',
                 type: 'post',
                 dataType: 'json',
                 data: Object.assign({
                     _csrf: $("meta[name=csrf-token]").attr("content"),
-                    is_dep: is_dep
+                    is_dep: is_dep,
+                    click_dep: click_dep
                 }, get_find_params(is_advance)),
                 success: function (response) {
                     if (!response.error) {

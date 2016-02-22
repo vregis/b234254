@@ -233,6 +233,7 @@ class BusinessController extends Controller
             ->join('JOIN','department','department.id = specialization.department_id')
             ->join('JOIN','task','task.specialization_id = specialization.id')
             ->where(['user_specialization.user_id' => Yii::$app->user->id])->all();
+
         foreach($user_specials as $key => $user_special) {
             $is_find = false;
             foreach($user_do as $do) {
@@ -255,7 +256,7 @@ class BusinessController extends Controller
         $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname')
             ->join('JOIN','department','department.id = specialization.department_id')
             ->where(['specialization.id' => $spec])->all();
-        /* foreach($user_specials as $key => $user_special) {
+         foreach($user_specials as $key => $user_special) {
              $is_find = false;
              foreach($user_do as $do) {
                  if($do->status_sell == 1 && $user_special->dep_id == $do->department_id && $user_special->dep_hide == 0) {
@@ -267,7 +268,7 @@ class BusinessController extends Controller
                  unset($user_specials[$key]);
                  continue;
              }
-         }*/
+         }
         return $user_specials;
     }
 
@@ -344,14 +345,16 @@ class BusinessController extends Controller
             }
         }
     }
-    private function render_user_task($post = []) {
+    private function render_user_task($post = [], $is_dep = false) {
         $user_specials = $this->get_user_specials();
         $this->apply_filters($user_specials, $post);
-        foreach($user_specials as $key => $user_special) {
-            /* if($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
-                 unset($user_specials[$key]);
-                 continue;
-             }*/
+        if($is_dep != true) {
+            foreach ($user_specials as $key => $user_special) {
+                if ($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
+                    unset($user_specials[$key]);
+                    continue;
+                }
+            }
         }
 
         $special_ids = [];
@@ -465,12 +468,13 @@ class BusinessController extends Controller
         if($post == null) {
             $post = Yii::$app->request->post();
         }
+        $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
 
-        $response['html_user_task'] = $this->render_user_task($post);
+        $response['html_user_task'] = $this->render_user_task($post, $is_dep);
         $response['html_user_request'] = $this->render_user_request();
         $response['html_delegated_businesses'] = $this->render_delegated_businesses();
         $response['html_deps_filter'] = $this->render_deps_filter($post);
-        $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
+
         $response['html_specials_filter'] = $this->render_specials_filter($post,null, $is_dep);
         $response['error'] = false;
         return json_encode($response);
