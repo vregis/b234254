@@ -26,8 +26,8 @@ function openTask(id, is_custom){
 
                 setTimeout(function () {
                     var height = $('.task').height() + 34;
-                    if (height > 610 && !is_custom) {
-                        height = 610;
+                    if (height > 620 && !is_custom) {
+                        height = 620;
                     }
                     $("#task .task").mCustomScrollbar({
                         theme: "dark",
