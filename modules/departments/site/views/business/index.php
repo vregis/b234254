@@ -48,7 +48,13 @@ $this->registerJs($msgJs);
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in <?= count($self_userTools) != 0 ? 'in active' : '' ?>" id="my">
-            <? if(count($self_userTools) == 0) : ?>
+                <?php $i = 0;?>
+                <? foreach($self_userTools as $cur) : ?>
+                    <?php if($cur->name):?>
+                        <?php $i++;?>
+                    <?php endif;?>
+                <?php endforeach;?>
+            <? if(count($self_userTools) == 0 || $i == 0) : ?>
                 <div class="text-center" style="padding:22px 0;">
                     You do not yet have own business. But you have an idea certainly.<br>
                     Realize it
@@ -71,7 +77,7 @@ $this->registerJs($msgJs);
                     <?php $i = 0;?>
                     <? foreach($self_userTools as $current_userTool) : ?>
                         <?php $i++; ?>
-                        <?php if($user->user_type == User::TYPE_EMPLOYER && !$current_userTool->name):?>
+                        <?php if(!$current_userTool->name):?>
                         <?php else:?>
                         <tr>
                             <?
