@@ -378,14 +378,17 @@ function Task(task_user_id, is_my, is_custom) {
                         $(this).mCustomScrollbar({
                             setHeight: 252,
                             theme:"dark",
-                            scrollbarPosition:"outside"
+                            scrollbarPosition:"outside",
+                            live: true
                         });  
                     }else{
                         $(this).mCustomScrollbar({
                             theme:"dark",
-                            scrollbarPosition:"outside"
+                            scrollbarPosition:"outside",
+                            live: true
                         });  
                     }
+                    $(this).mCustomScrollbar('update');
                 });
                 $("body").on("click", function(e){
                     $('.invite-by-email, .advanced-search-btn').each(function () {
