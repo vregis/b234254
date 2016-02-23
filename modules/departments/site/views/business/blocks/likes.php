@@ -17,9 +17,9 @@
     </td>
 <?php endfor;?>
 <style>
-    .hover{
+/*    .hover{
         border-color: #5184f3 !important;
         background-color: #5184f3 !important;
         color: #ffffff !important;
-    }
+    }*/
 </style>

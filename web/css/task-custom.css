@@ -141,6 +141,9 @@ body{
     width:225px !important;
     word-break: break-all;
 }
+.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"]{
+    display:none;
+}
 /*.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
     background-color: #c3d7ea !important;
     color: #fff !important;
