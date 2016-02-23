@@ -3,7 +3,10 @@
 namespace modules\user\admin\controllers;
 
 use modules\core\admin\base\Controller;
+use modules\tests\models\TestProgress;
+use modules\tests\models\TestUser;
 use modules\user\models\User;
+use modules\user\models\UserTaskHelpful;
 use Yii;
 use yii\web\NotFoundHttpException;
 
@@ -101,7 +104,23 @@ class DefaultController extends Controller
             Yii::$app->session->setFlash('error', Yii::t('user', 'Вы не можете удалить себя'));
         }
         else {
-            $user->delete();
+            $test_user = TestUser::find()->where(['user_id' => $id])->one();
+            if($test_user){
+                $test_prog = TestProgress::find()->where(['test_user_id' => $test_user->id])->all();
+                if($test_prog){
+                    foreach($test_prog as $tp){
+                        $tp->delete();
+                    }
+                }
+            }
+
+            $help = UserTaskHelpful::find()->where(['user_id' => $id])->all();
+            if($help){
+                foreach($help as $hl){
+                    $hl->delete();
+                }
+
+            }
             Yii::$app->session->setFlash('success', Yii::t('user', 'Пользователь удален'));
         }
         //
