@@ -387,6 +387,15 @@ function Task(task_user_id, is_my, is_custom) {
                         });  
                     }
                 });
+                $("body").on("click", function(e){
+                    $('.invite-by-email, .advanced-search-btn').each(function () {
+                        //the 'is' for buttons that trigger popups
+                        //the 'has' for icons within a button that triggers a popup
+                        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('#task .popover').has(e.target).length === 0) {
+                            $(this).popover('hide');
+                        }
+                    });
+                });
             });
         });
         delegate.on('hide.bs.collapse',function(){

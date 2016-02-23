@@ -234,37 +234,32 @@ if($task->specialization_id > 0) {
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade" id="videos">
                     <? foreach($task_videos as $task_video) : ?>
-                        <div class="col-sm-3">
-                            <a href="https://www.youtube.com/watch?v=<?= $task_video ?>" class="item" target="_blank">
-                                <img height="200" class="img-responsive" data-toggle="modal" href="#modal-<?= $task_video ?>" src="http://img.youtube.com/vi/<?= $task_video ?>/1.jpg" tabindex="2"/>
-                            </a>
-                        </div>
+                        <a href="https://www.youtube.com/watch?v=<?= $task_video ?>" class="item" target="_blank">
+                            <i class="ico-video"></i> <br>
+                        </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="audios">
                     <? foreach($files['audio'] as $file) : ?>
                         <a href="<?= $file['path'] ?>" class="item" target="_blank">
-                            <i class="icon-music-tone-alt"></i> <br>
-                            <?= $file['name'] ?>
+                            <i class="ico-sound"></i> <br>
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="photos">
                     <? foreach($files['photo'] as $file) : ?>
-                        <div class="col-sm-3">
-                            <a href="<?= $file['path'] ?>" target="_blank">
-                                <img src="<?= $file['path'] ?>" class="img-responsive" alt="">
-                            </a>
-                        </div>
+                        <a href="<?= $file['path'] ?>" target="_blank">
+                            <i class="ico-photo"></i> <br>
+                        </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="docs">
                     <? foreach($files['document'] as $file) : ?>
                         <a href="<?= $file['path'] ?>" class="item" target="_blank">
-                            <i class="ico-history"></i> <br>
+                            <i class="ico-docs"></i> <br>
                             <?= $file['name'] ?>
                         </a>
                     <? endforeach; ?>
@@ -273,7 +268,7 @@ if($task->specialization_id > 0) {
                 <div role="tabpanel" class="tab-pane fade" id="archive">
                     <? foreach($files['archive'] as $file) : ?>
                         <a href="<?= $file['path'] ?>" class="item" target="_blank">
-                            <i class="fa fa-archive"></i> <br>
+                            <i class="ico-archive"></i> <br>
                             <?= $file['name'] ?>
                         </a>
                     <? endforeach; ?>
@@ -281,18 +276,8 @@ if($task->specialization_id > 0) {
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
-                        <a href="<?= $task_link->name ?>" target="_blank" class="item">
-                            <i class="fa fa-link"></i> <br>
-                            Name
-                        </a>
-                    <? endforeach; ?>
-                    <div class="clearfix"></div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="notes">
-                    <? foreach($task_notes as $task_note) : ?>
-                        <a href="<?= $task_link->name ?>" target="_blank" class="item"><?= $task_note->name ?>
-                            <i class="ico-history"></i> <br>
-                            Name
+                        <a href="javascript:;" data-toggle="popover" data-content="<a target='_blank href='<?= $task_link->name ?>'><?= $task_link->name ?></a>" class="item">
+                            <i class="ico-link"></i> <br>
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
@@ -337,12 +322,6 @@ if($task->specialization_id > 0) {
                                 <li><a class="btn" href="#links" role="tab" data-toggle="tab">
                                     <span class="text">Link</span>
                                     <span class="label"><?php echo count($task_links)?></span>
-                                </a></li>
-                            <?php endif;?>
-                            <?php if(count($task_notes) > 0):?>
-                                <li><a class="btn" href="#notes" role="tab" data-toggle="tab">
-                                    <span class="text">Notes</span>
-                                    <span class="label"><?php echo count($task_notes)?></span>
                                 </a></li>
                             <?php endif;?>
                             <li class="active"><a class="btn" href="#desc" role="tab" data-toggle="tab">
