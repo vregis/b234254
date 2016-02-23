@@ -131,7 +131,7 @@ body{
     border-radius:10px;
     color:#7b7f83;
 }
-.tab-content > .tab-pane .item:hover,.tab-content > .tab-pane .item:focus{
+.tab-content > .tab-pane .item:hover{
     border-color:#5184f3;
     background:#5184f3;
     color:#fff;

@@ -126,6 +126,7 @@ function openTask(id, is_custom){
                 $(".task-body .block.desc .tab-content > .tab-pane .item").popover({
                     placement: "top",
                     html: true,
+                    trigger:"hover",
                     container:$("#task"),
                     template:'<div class="popover material" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
                 });

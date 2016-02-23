@@ -17,6 +17,9 @@
 .task .mCSB_container{
     padding: 5px 30px 5px;
 }
+.task .scroller .mCSB_container {
+    padding: 5px 5px 5px;
+}
 .idea-block {
     overflow: hidden;
     margin-bottom: 15px;
@@ -457,8 +460,8 @@ span.title {
     line-height: 50px;
 }
 .task .title{
-    line-height: 28px;
-    margin-top: 16px;
+    line-height: 38px;
+    margin-top: 3px;
 }
 .task .name{
     overflow: hidden;
@@ -508,6 +511,8 @@ span.title {
     cursor: pointer;
     vertical-align: middle;
     margin-right: 5px;
+    padding-top:2px;
+    font-size:17px;
     /*line-height: initial !important;*/
 }
 .task-title .item input[type="text"]{
@@ -538,7 +543,8 @@ span.title {
 .task-title .item.time .btn{
     font-size: 16px !important;
     text-align: center;
-        padding-top: 2px;
+    padding-top: 3px;
+    font-size: 24px !important;
     /*line-height: 37px !important;*/
 }
 /*.task-title .item.date .icon:hover{
@@ -1537,7 +1543,7 @@ table th.rate .fa{
     border-radius:10px;
     color:#7b7f83;
 }
-.tab-content > .tab-pane .item:hover,.tab-content > .tab-pane .item:focus{
+.tab-content > .tab-pane .item:hover{
     border-color:#5184f3;
     background:#5184f3;
     color:#fff;

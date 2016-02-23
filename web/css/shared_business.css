@@ -67,7 +67,7 @@ section#about .subtitle{
 	margin-bottom:30px;
 }
 section#about .text{
-	font-weight:100;
+	font-weight:300;
 	text-align:justify;
 	margin-bottom:20px;
 	width: 100%;
@@ -164,7 +164,7 @@ section#about .step .title{
 	line-height: 30px !important;
 }
 #benefits .content table tr td .btn:focus{
-	
+
 }
 .page-content .avatar{
 	border-radius: 100% !important;
