@@ -1,6 +1,6 @@
 <? foreach($users as $user) : ?>
     <tr class="user-row">
-        <td><img class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></td>
+        <td><a target="_blank" href="/user/social/shared-profile?id=<?php echo $user->id?>"><img class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></a></td>
         <td class="field-name"><?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?></td>
         <td><?= $user->level ? $user->level : '-' ?></td>
         <td><?= $user->rate_h ? $user->rate_h.'$' : '-' ?></td>

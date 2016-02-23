@@ -264,11 +264,12 @@ class BusinessController extends Controller
     }
 
 
-    private function get_user_specials_pending($spec) {
+    private function get_user_specials_pending($spec, $is_dep = false) {
         $user_do = UserDo::find()->where(['user_id' => Yii::$app->user->id])->all();
-        $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname')
+        $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname, specialization.id as id')
             ->join('JOIN','department','department.id = specialization.department_id')
             ->where(['specialization.id' => $spec])->all();
+
          foreach($user_specials as $key => $user_special) {
              $is_find = false;
              foreach($user_do as $do) {
@@ -481,10 +482,81 @@ class BusinessController extends Controller
         if(!$user_specials) {
             $user_specials = $this->get_user_specials();
         }
+        if(!isset($post['dep_idd'])){
+            $post['dep_idd'] = false;
+        }
         $this->apply_filters($user_specials, $post, true,$is_dep);
         return $this->renderPartial('blocks/specials_filter',
             [
-                'user_specials' => $user_specials
+                'user_specials' => $user_specials,
+                'dep_idd' => $post['dep_idd']
+            ]);
+    }
+
+    private function render_user_request_pending($post, $users = null, $is_dep) {
+        if(!$users) {
+            $users = $this->get_user_request();
+        }
+
+        $user_specials = $this->get_user_specials_pending($post['spec'], $is_dep);
+        $this->apply_filters($user_specials, $post);
+
+        if($is_dep != true) {
+            foreach ($user_specials as $key => $user_special) {
+                if ($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
+                    unset($user_specials[$key]);
+                    continue;
+                }
+            }
+        }
+
+        $special_ids = [];
+        foreach($user_specials as $user_special) {
+            array_push($special_ids,$user_special->id);
+        }
+
+        $users = [];
+        $task_find = DelegateTask::find()->select(
+            'delegate_task.*,user_profile.first_name fname,user_profile.last_name lname,user.email email,user_profile.avatar
+            user_avatar,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,
+            user_profile.city_title city,task.name task_name,specialization.name task_special,
+            task.market_rate task_rate, task_user.time task_user_time, task_user.price task_user_price,
+            task.description task_desc,task.department_id dep_id,department.name dname,specialization.id spec_id,
+            user_profile.user_id uid'
+        )
+            ->join('JOIN','task_user', 'task_user.id = delegate_task.task_user_id')
+            ->join('JOIN','task', 'task.id = task_user.task_id')
+            ->join('JOIN','department', 'department.id = task.department_id')
+            ->join('JOIN','specialization', 'specialization.id = task.specialization_id')
+            ->join('JOIN','user_tool', 'user_tool.id = task_user.user_tool_id')
+            ->join('JOIN','user', 'user.id = user_tool.user_id')
+            ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
+            ->join('LEFT OUTER JOIN','user_specialization', 'user_specialization.user_id = user.id')
+            ->join('LEFT OUTER JOIN','skill_list', 'skill_list.id = user_specialization.exp_type')
+            ->join('LEFT OUTER JOIN','geo_country', 'geo_country.id = user_profile.country_id')
+            ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id')
+            ->where([
+                'delegate_task.delegate_user_id' => Yii::$app->user->id,
+                'delegate_task.status' => DelegateTask::$status_inactive,
+                'specialization.id' => $special_ids
+            ])->all();
+
+
+        foreach($task_find as $task) {
+            $exclude_user_ids = [Yii::$app->user->id];
+            if(count($users) < 25)
+            {
+                $this->findUsersByTask($users,$exclude_user_ids, $task, $post);
+            }
+            else {
+                break;
+            }
+        }
+
+
+        return $this->renderPartial('blocks/user_request',
+            [
+                'users' => $task_find
             ]);
     }
 
@@ -514,6 +586,8 @@ class BusinessController extends Controller
         if($post == null) {
             $post = Yii::$app->request->post();
         }
+
+        //var_dump($post); die();
         $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
 
         //var_dump($post); die();
@@ -532,8 +606,10 @@ class BusinessController extends Controller
 
         $user_special_pending = $this->get_user_specials_pending($spec_pending);
 
+
         //$response['html_user_task'] = $this->render_user_task($post, $is_dep);
-        $response['html_user_request'] = $this->render_user_request($users_request);
+       // $response['html_user_request'] = $this->render_user_request($users_request);
+        $response['html_user_request'] = $this->render_user_request_pending($post, $users_request, $is_dep);
         $response['html_delegated_businesses'] = $this->render_delegated_businesses();
         $response['html_deps_filter'] = $this->render_deps_filter_pending($post, $user_special_pending);
 

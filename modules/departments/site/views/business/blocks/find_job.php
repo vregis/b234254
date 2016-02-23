@@ -575,11 +575,12 @@
                 var is_dep = false;
                 if($(this).closest('.deps-menu').length > 0) {
                     is_dep = true;
+                    var dep_idd = $(this).attr('data-id');
                 }
 
                 if($(this).closest('.filter-task').length > 0) {
                     if($(this).closest('#request-block').length > 0){
-                        get_user_task_pending(false, is_dep);
+                        get_user_task_pending(false, is_dep, dep_idd);
                     }else{
                         get_user_task(false, is_dep);
                     }
@@ -839,7 +840,7 @@
         }
 
 
-        function get_user_task_pending(is_advance, is_dep) {
+        function get_user_task_pending(is_advance, is_dep, dep_idd) {
             if(is_advance == undefined) {
                 is_advance = false;
             }
@@ -851,6 +852,10 @@
             }else{
                 var click_dep = 0;
             }
+            if(dep_idd == undefined){
+                dep_idd = false;
+            }
+            console.log(get_find_params());
             $.ajax({
                 url: '/departments/business/user-task-pending',
                 type: 'post',
@@ -858,8 +863,9 @@
                 data: Object.assign({
                     _csrf: $("meta[name=csrf-token]").attr("content"),
                     is_dep: is_dep,
-                    click_dep: click_dep
-                }, get_find_params(is_advance)),
+                    click_dep: click_dep,
+                    dep_idd:dep_idd
+                }, get_find_params()),
                 success: function (response) {
                     if (!response.error) {
                         $('.filter-task .deps-menu').html(response.html_deps_filter);
