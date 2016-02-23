@@ -163,6 +163,9 @@ section#about .step .title{
 	font-size: 16px;
 	line-height: 30px !important;
 }
+#benefits .content table tr td .btn:focus{
+	
+}
 .page-content .avatar{
 	border-radius: 100% !important;
 	margin-bottom: 20px;
