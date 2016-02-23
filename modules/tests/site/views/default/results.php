@@ -38,6 +38,8 @@ $this->title = 'Your role in business';
                     <?php else:?>
                         <?php $ud->status_sell = 1;?>
                         <?php $ud->status_show = 1;?>
+                        <?php $user->user_status = 3;?>
+                        <?php $user->save();?>
                     <?php endif;?>
                     <?php $ud->save();?>
 
