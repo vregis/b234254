@@ -1061,7 +1061,7 @@ class BusinessController extends Controller
     public function actionSharedBusiness($id){
         $this->layout = false;
 
-        $profile = Profile::find()->where(['user_id' => $id])->one();
+
 
 
         $model = UserTool::find()
@@ -1073,6 +1073,8 @@ class BusinessController extends Controller
             ->join('JOIN', 'industry', 'industry.id = idea.industry_id')
             ->where(['user_tool.id'=>$id])
             ->one();
+
+        $profile = Profile::find()->where(['user_id' => $model->user_id])->one();
 
         $com = BusinessCommentary::find()
             ->select('business_commentary.*, user_profile.avatar as ava, user_profile.first_name as fn, user_profile.last_name as ln, user_profile.user_id as uid')

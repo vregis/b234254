@@ -23,7 +23,7 @@ function getData($data) {
     <tbody id="counter_users">
     <? foreach($counter_offers as $counter_offer) : ?>
         <tr class="counter-offer-row">
-            <td><img class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>"></td>
+            <td><img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>"></td>
             <td><?= $counter_offer->name ?></td>
             <td><?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?></td>
             <td style="width: 50px;" class="<? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink bg-font-red-pink';

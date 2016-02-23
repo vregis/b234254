@@ -161,7 +161,7 @@ $this->beginPage();
                         <li class="dropdown dropdown-user dropdown-dark">
                             <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">
                                 <?php $model = Profile::find()->where(['user_id' => Yii::$app->user->getId()])->one();?>
-                                <img style="height:33px; width:33px"  src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-circle" alt="">
+                                <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="height:33px; width:33px"  src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-circle" alt="">
 
                                 <?php if(ProfileController::checkprofile() == false):?>
                                     <span class="label label-danger circle"><span class="icon-bell"></span></span>
