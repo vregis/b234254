@@ -140,3 +140,6 @@ table tbody tr td .label{
 #find_job .advanced-search-btn+.popover{
     left:0 !important;
 }
+.dropdown-menu .mCSB_container{
+    padding:0 !important;
+}

@@ -537,7 +537,8 @@ span.title {
 }
 .task-title .item.time .btn{
     font-size: 16px !important;
-    text-align: center;
+    text-align: left;
+    text-indent: 9px;
     /*line-height: 37px !important;*/
 }
 /*.task-title .item.date .icon:hover{
@@ -898,12 +899,13 @@ thead .ui-datepicker-week-end {
     width:24px;
     height:12px;
     background: url("/images/corner.png") 0 0 no-repeat;
+    left: 780px !important;
 }
 #delegate > .arrow,#counter > .arrow{
     content:"";
     display:block;
     position: absolute;
-    top:-11px;
+    top:-10px;
     width:24px;
     height:12px;
     background: url("/images/corner2.png") 0 0 no-repeat;
@@ -955,9 +957,9 @@ thead .ui-datepicker-week-end {
 #delegate .gant_avatar,#counter .gant_avatar{
     margin:0;
 }
-#delegate table,#counter table{
+/*#delegate table,#counter table{
     border-collapse: collapse;
-}
+}*/
 .offerall{
     width:32px;
     font-size: 18px !important;
@@ -1486,12 +1488,15 @@ table th.rate .fa{
         border-radius:3px;
         margin-bottom:1px;
     }
-    .table thead tr > td:first-child,.table thead tr > th:first-child{
+/*.table thead tr > td:first-child,.table thead tr > th:first-child{
     border-top-left-radius:10px !important;
-}
+}*/
 .table{
-    border-collapse:initial !important;
     border-radius:10px !important;
+    border-collapse: initial;
+}
+.table thead tr > td:first-child,.table thead tr > th:first-child{
+    border-top-left-radius:10px !important;
 }
 .table thead tr > td:last-child,.table thead tr > th:last-child{
     border-top-right-radius:10px !important;
@@ -1506,11 +1511,8 @@ table th.rate .fa{
     border-right:0 !important;
     border-bottom: 0 !important;
 }
-.table.with-foot td:last-child{
-    border-right:1px solid #d7d7d7 !important;
-}
 .table.with-foot td:first-child{
-    /*border-left:0 !important;*/
+    border-left:0 !important;
 }
 
 #input-rate-start, #input-rate-end {
@@ -1646,4 +1648,7 @@ table th.rate .fa{
 }
 #datepicker > .arrow{
     left: 254px !important;
+}
+.task .dropdown-menu .mCSB_container{
+    padding:0 !important;
 }

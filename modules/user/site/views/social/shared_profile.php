@@ -273,7 +273,7 @@ use modules\user\site\controllers\ProfileController;
                 <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>
                     <div style="text-align:justify;">
-                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;" class="btn btn-primary" id="send-btn">Send</button>
+                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;background: transparent;" class="btn btn-primary" id="send-btn">Send</button>
                         <div style="display:inline-block;width:100%;"></div>
                     </div>
                     <div class="dinamic_comments">
@@ -286,7 +286,7 @@ use modules\user\site\controllers\ProfileController;
             <div class="page-footer">
                 <div class="text-center">
                     <div class="contacts">
-                        <label for="">Shared by</label>
+                        <label for="">Share on</label>
                         <div class="small">
                             <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
                             <?php $fblink =$_SERVER['REQUEST_URI'];?>

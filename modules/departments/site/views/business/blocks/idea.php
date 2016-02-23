@@ -11,7 +11,7 @@
         <input type="radio" id="Helpful[0]" name="Helpful" <?php echo ($can && $can->like == 0)?'checked':''?> class="md-radiobtn idea-like <?php echo (!$can)?'':'not'?>" value="0">
         <label for="Helpful[0]">
             <span></span>
-            <span class="check"></span>
+            <span class="check" style="left: 5px !important;"></span>
             <span class="box"></span>
         </label>
     </div>

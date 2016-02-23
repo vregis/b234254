@@ -9,11 +9,7 @@
         <table>
             <tr class="benefit" data-benefit-id = '<?php echo $i?>'>
                 <td>
-                    <a href="" onclick="return false" class="btn btn-primary <?php echo (!$can)?'add-thumb':(($can->like ==0)?'hover':'')?> circle dislike"><i class="fa fa-thumbs-o-down"></i></a>
-                    <?php echo count($dislikes)?>
-                </td>
-                <td>
-                    <a href="" onclick="return false" class="btn btn-primary <?php echo (!$can)?'add-thumb':(($can->like ==1)?'hover':'')?> circle like"><i class="fa fa-thumbs-o-up"></i></a>
+                    <a href="" onclick="return false" class="btn btn-primary <?php echo (!$can)?'add-thumb':(($can->like ==1)?'hover':'')?> circle like"><i class="ico-like"></i></a>
                     <?php echo count($likes)?>
                 </td>
             </tr>

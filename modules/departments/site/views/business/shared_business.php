@@ -111,7 +111,7 @@ use modules\user\site\controllers\ProfileController;
             		<div class="subtitle"><?php echo $model->industry_name?></div>
             		<table class="text">
             			<tr>
-            				<td style="width:50%;border-right:1px solid #5a5a5a;vertical-align: top;padding-right:40px;"><?php echo $model->idea_description_like?></td>
+            				<td style="width:50%;border-right:1px solid rgba(90, 90, 90, 0.6);vertical-align: top;padding-right:40px;"><?php echo $model->idea_description_like?></td>
             				<td style="width:50%;vertical-align: top;padding-left:40px;"><?php echo $model->idea_description_problem?></td>
             			</tr>
             		</table>
@@ -120,7 +120,7 @@ use modules\user\site\controllers\ProfileController;
                     </div>
             	</section>
 	            <section id="benefits">
-	            	<div class="title">our benefits</div>
+	            	<div class="title">benefits</div>
 	            	<div class="content">
 		            	<table>
 		            		<tr>
@@ -140,12 +140,12 @@ use modules\user\site\controllers\ProfileController;
 	            	</div>
 	            </section>
                 <section id="user">
-                	<div class="title">Our team</div>
-                	<div class="status">Founder</div>
+                	<div class="title">TEAM</div>
+                	<div class="status" style="color:rgba(90,90,90,0.75);">Founder</div>
                     <img src="<?php echo $profile->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$profile->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
                     <div class="name"><?php echo $profile->first_name?$profile->first_name:''?> <?php echo $profile->last_name?$profile->last_name:''?></div>
-                    <div class="adres"><i class="ico-location"></i> USA,<?php echo $profile->city_title?' ,'.$profile->city_title:''?><?php echo $profile->zip?' ,'.$profile->zip:''?></div>
-                    <div class="title" style="margin:25px auto;">Vacancy</div>
+                    <div class="adres" style="color:rgba(90,90,90,0.75);"><i class="ico-location"></i> USA,<?php echo $profile->city_title?' ,'.$profile->city_title:''?><?php echo $profile->zip?' ,'.$profile->zip:''?></div>
+                	 <div class="title" style="margin:25px auto;">Vacancy</div>
                     <div class="deps-wrap">
                     	<div class="roww action">
                     		<div class="item">
@@ -184,12 +184,12 @@ use modules\user\site\controllers\ProfileController;
                     		<a href="javascript:;" class="item background-8">Team</a>
                     	</div>
                     </div>
-                    <a href="javascript:;" class="btn btn-lg btn-primary" style="width:185px;border-radius: 30px;">JOIN US</a>
+                    <a href="javascript:;" class="btn btn-lg btn-primary" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
                 </section>
                 <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>
                     <div style="text-align:justify;">
-                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;" class="btn btn-primary" id="send-btn">Send</button>
+                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;background: transparent;" class="btn btn-primary" id="send-btn">Send</button>
                         <div style="display:inline-block;width:100%;"></div>
                     </div>
                     <div class="dinamic_comments">

@@ -78,7 +78,7 @@ if($task->specialization_id > 0) {
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="search-block">
-                                <table style="width:100%;" class="table with-foot">
+                                <table style="width:100%;" class="table with-foot table-bordered">
                                     <thead>
                                     <tr>
                                         <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
@@ -186,7 +186,7 @@ if($task->specialization_id > 0) {
                                 </table>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="offered-block">
-                                <table style="width:100%;" class="table with-foot">
+                                <table style="width:100%;" class="table with-foot table-bordered">
                                     <thead>
                                     <tr>
                                         <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
