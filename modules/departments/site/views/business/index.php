@@ -200,33 +200,48 @@ $this->registerJs($msgJs);
     $(document).on('change',function(){
         $('.page-content').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
+            theme:"dark",
+            advanced:{
+                autoScrollOnFocus: false,
+                updateOnContentResize: true,
+                updateOnBrowserResize: true
+            }
         });
     });
 
     $(document).ready(function () {
-
-
-
-
-
         $(".page-content-wrapper").mCustomScrollbar("destroy");
         $('.page-content-wrapper').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),
-            theme:"dark"
+            theme:"dark",
+            advanced:{
+                autoScrollOnFocus: false,
+                updateOnContentResize: true,
+                updateOnBrowserResize: true
+            }
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
             $(".page-content-wrapper").mCustomScrollbar("destroy");
             $('.page-content-wrapper').mCustomScrollbar({
                 setHeight: $('.page-content').css('minHeight'),
-                theme:"dark"
+                theme:"dark",
+                advanced:{
+                autoScrollOnFocus: false,
+                updateOnContentResize: true,
+                updateOnBrowserResize: true
+            }
             });
             $("#find_job").on('shown.bs.collapse',function(){
                 $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
                 $(".page-content-wrapper").mCustomScrollbar("destroy");
                 $('.page-content-wrapper').mCustomScrollbar({
                     setHeight: $('.page-content').css('minHeight'),
-                    theme:"dark"
+                    theme:"dark",
+                    advanced:{
+                autoScrollOnFocus: false,
+                updateOnContentResize: true,
+                updateOnBrowserResize: true
+            }
                 });
             });
             $("#find_job").on('hidden.bs.collapse',function(){
@@ -234,7 +249,12 @@ $this->registerJs($msgJs);
                 $(".page-content-wrapper").mCustomScrollbar("destroy");
                 $('.page-content-wrapper').mCustomScrollbar({
                     setHeight: $('.page-content').css('minHeight'),
-                    theme:"dark"
+                    theme:"dark",
+                    advanced:{
+                        autoScrollOnFocus: false,
+                        updateOnContentResize: true,
+                        updateOnBrowserResize: true
+                    }
                 });
             });
         });

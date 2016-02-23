@@ -538,7 +538,7 @@ span.title {
 .task-title .item.time .btn{
     font-size: 16px !important;
     text-align: left;
-    text-indent: 9px;
+    text-indent: 7px;
     /*line-height: 37px !important;*/
 }
 /*.task-title .item.date .icon:hover{
@@ -936,7 +936,7 @@ thead .ui-datepicker-week-end {
     border-bottom: 0;
 }
 #delegate thead tr th,#delegate tfoot tr th,#counter thead tr th,#counter tfoot tr th{
-    background: #ebebeb;
+    background: #f5f5f5;
     font-weight: normal;
 }
 #counter thead tr th,#counter tfoot tr th{

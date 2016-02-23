@@ -46,10 +46,10 @@ use yii\helpers\Url;
     </div>
 </div>
     <div id="idea" class="col-md-12">
-        <div class="row form-group">
+        <div class="row form-group" style="margin-bottom: 0;">
             <div class="col-sm-12">
 <? require __DIR__.'/idea/idea_block.php'; ?>
-<a style="margin:30px auto;" href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg">Share preview</a>
+<a style="margin:30px auto 0;" href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg">Share preview</a>
             </div>
         </div>
     </div>
@@ -57,6 +57,9 @@ use yii\helpers\Url;
 </div>
 
 <style>
+.task-body .block.desc .content{
+    border-radius: 10px 10px 0px 10px !important;
+}
     .b-page-checkbox-wrap .md-radio .task-name{
         left:-50% !important;
     }

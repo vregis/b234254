@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400,500,300,700&subset=latin,cyrillic);
 body{
 	background: url("/images/profile/shared_bg.jpg") center top;
 	color:#5a5a5a;
 	background-size: cover;
+		font-family: "Roboto";
+	font-weight:300;
 }
 .well{
 	width: 1000px;
@@ -346,7 +349,7 @@ section.contacts .title{
 }
 .page-footer .contacts{
 	position: absolute;
-	top: 25px;
+	top: 20px;
 	left:30px;
 	width:380px;
 	line-height: 32px;

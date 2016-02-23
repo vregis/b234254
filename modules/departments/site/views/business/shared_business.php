@@ -144,7 +144,7 @@ use modules\user\site\controllers\ProfileController;
                 	<div class="status" style="color:rgba(90,90,90,0.75);">Founder</div>
                     <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src="<?php echo $profile->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$profile->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
                     <div class="name"><?php echo $profile->first_name?$profile->first_name:''?> <?php echo $profile->last_name?$profile->last_name:''?></div>
-                    <div class="adres" style="color:rgba(90,90,90,0.75);"><i class="ico-location"></i> USA,<?php echo $profile->city_title?' ,'.$profile->city_title:''?><?php echo $profile->zip?' ,'.$profile->zip:''?></div>
+                    <div class="adres" style="color:rgba(90,90,90,0.75);"><i class="ico-location"></i> USA <?php echo $profile->city_title?' ,'.$profile->city_title:''?><?php echo $profile->zip?' ,'.$profile->zip:''?></div>
                 	 <div class="title" style="margin:25px auto;">Vacancy</div>
                     <div class="deps-wrap">
                     	<div class="roww action">
@@ -194,13 +194,21 @@ use modules\user\site\controllers\ProfileController;
                     </div>
                     <div class="dinamic_comments">
                         <?php echo $comments?>
-
                     </div>
                     <span style="cursor:pointer" class="more"><i class="fa fa-angle-down"></i></span>
                 </section>
             </div>
             <div class="page-footer">
                 <div class="text-center">
+                    <div class="contacts">
+                        <label for="">Share on</label>
+                        <div class="small">
+                            <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
+                            <?php $fblink =$_SERVER['REQUEST_URI'];?>
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
+                            <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
+                        </div>
+                    </div>
                     <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>
                 </div>
             </div>

@@ -91,6 +91,9 @@ use yii\widgets\ActiveForm;
 </div>
 
 <style>
+.task-body .block.desc .content{
+    border-radius:10px !important;
+}
     .b-page-checkbox-wrap .md-radio:nth-child(1) label > .box{
         border-color: #26C281 !important;
     }

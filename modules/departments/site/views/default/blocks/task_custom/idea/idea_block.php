@@ -3,42 +3,37 @@
         <div class="block desc" style="border: none;">
             <div class="content" style="
     border-width: 1px;
-    border-color: #d7d7d7;
-    border-style: solid;padding:0 15px;height:auto;overflow: auto; height:150px !important;border-radius:0 !important;">
+    border-color: rgba(215, 215, 215, 0.7);
+    border-style: solid;padding:0 15px;height:auto;overflow: auto; height:150px !important;border-radius:10px;">
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade" id="videos">
                     <? foreach($task_videos as $task_video) : ?>
-                        <div class="col-sm-3">
-                            <a href="https://www.youtube.com/watch?v=<?= $task_video ?>" class="item" target="_blank">
-                                <img height="200" class="img-responsive" data-toggle="modal" href="#modal-<?= $task_video ?>" src="http://img.youtube.com/vi/<?= $task_video ?>/1.jpg" tabindex="2"/>
-                            </a>
-                        </div>
+                        <a href="https://www.youtube.com/watch?v=<?= $task_video ?>" class="item" target="_blank">
+                            <i class="ico-video"></i> <br>
+                        </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="audios">
                     <? foreach($files['audio'] as $file) : ?>
                         <a href="<?= $file['path'] ?>" class="item" target="_blank">
-                            <i class="icon-music-tone-alt"></i> <br>
-                            <?= $file['name'] ?>
+                            <i class="ico-sound"></i> <br>
                         </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="photos">
                     <? foreach($files['photo'] as $file) : ?>
-                        <div class="col-sm-3">
-                            <a href="<?= $file['path'] ?>" target="_blank">
-                                <img src="<?= $file['path'] ?>" class="img-responsive" alt="">
-                            </a>
-                        </div>
+                        <a href="<?= $file['path'] ?>" target="_blank">
+                            <i class="ico-photo"></i> <br>
+                        </a>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="docs">
                     <? foreach($files['document'] as $file) : ?>
                         <a href="<?= $file['path'] ?>" class="item" target="_blank">
-                            <i class="ico-history"></i> <br>
+                            <i class="ico-docs"></i> <br>
                             <?= $file['name'] ?>
                         </a>
                     <? endforeach; ?>
@@ -47,7 +42,7 @@
                 <div role="tabpanel" class="tab-pane fade" id="archive">
                     <? foreach($files['archive'] as $file) : ?>
                         <a href="<?= $file['path'] ?>" class="item" target="_blank">
-                            <i class="fa fa-archive"></i> <br>
+                            <i class="ico-archive"></i> <br>
                             <?= $file['name'] ?>
                         </a>
                     <? endforeach; ?>
@@ -55,33 +50,19 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
-                        <a href="<?= $task_link->name ?>" class="item" target="_blank">
-                            <i class="fa fa-link"></i> <br>
-                            <?= $task_link->name ?>
+                        <a href="javascript:;" data-toggle="popover" data-content="<a target='_blank href='<?= $task_link->name ?>'><?= $task_link->name ?></a>" class="item">
+                            <i class="ico-link"></i> <br>
                         </a>
-                    <? endforeach; ?>
-                    <div class="clearfix"></div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="notes">
-                    <? foreach($task_notes as $task_note) : ?>
-                        <div class="collapse-line"><?= $task_note->name ?> </div>
                     <? endforeach; ?>
                     <div class="clearfix"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade in active" id="desc"><?php echo $task->description?></div>
               </div>
             </div>
-            <? if(count($task_videos) > 0 ||
-            count($files['audio']) > 0 ||
-            count($files['photo']) > 0 ||
-            count($files['document']) > 0 ||
-            count($files['archive']) > 0 ||
-            count($task_links) > 0 ||
-            count($task_notes) > 0) : ?>
                 <div class="footer">
                     <div>
-                        <ul class="btn-group nav nav-tabs" role="tablist">
-                            <?php if(count($task_videos) > 0):?>
+<ul class="btn-group nav nav-tabs" role="tablist">
+                               <?php if(count($task_videos) > 0):?>
                                 <li><a class="btn" href="#videos" role="tab" data-toggle="tab">
                                     <span class="text">Video</span>
                                     <span class="label"><?php echo count($task_videos)?></span>
@@ -117,19 +98,12 @@
                                     <span class="label"><?php echo count($task_links)?></span>
                                 </a></li>
                             <?php endif;?>
-                            <?php if(count($task_notes) > 0):?>
-                                <li><a class="btn" href="#notes" role="tab" data-toggle="tab">
-                                    <span class="text">Notes</span>
-                                    <span class="label"><?php echo count($task_notes)?></span>
-                                </a></li>
-                            <?php endif;?>
                             <li class="active"><a class="btn" href="#desc" role="tab" data-toggle="tab">
                                 <span class="text">Description</span>
                             </a></li>
                         </ul>
                     </div>
                 </div>
-            <? endif; ?>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -144,6 +118,12 @@ $('.nav-tabs a').on('shown.bs.tab',function(){
         setHeight: $('.page-content').css('minHeight'),
         theme:"dark"
     }); 
+    $(".task-body .block.desc .tab-content > .tab-pane .item").popover({
+        placement: "top",
+        html: true,
+        container:$("body"),
+        template:'<div class="popover material" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+    });
 });
 </script>
 <style>
