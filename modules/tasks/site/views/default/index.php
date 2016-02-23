@@ -222,7 +222,7 @@ if($task->specialization_id > 0) {
                             <div class="milestones-users">
                                 <? foreach($delegate_tasks as $d_task) : ?>
                                     <a href="<?= Url::toRoute(['/tasks', 'id' => $task->id, 'task_user_id' => $task_user->id, 'delegate_task_id' => $d_task->id]) ?>">
-                                        <img data-toggle="popover" class="active gant_avatar" src="<?php echo $d_task->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$d_task->delegate_avatar:'/images/avatar/nophoto.png'?>">
+                                        <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="active gant_avatar" src="<?php echo $d_task->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$d_task->delegate_avatar:'/images/avatar/nophoto.png'?>">
                                     </a>
                                 <? endforeach; ?>
                                 <button class="btn btn-success" style="margin-left:10px;">Accept</button>

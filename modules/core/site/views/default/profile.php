@@ -53,7 +53,7 @@ $this->registerJs($msgJs);
                     <tr>
                         <td width="139">
                             <div class="profile-userpic">
-                                <img style="height:134px; width:134px;margin-right:22px;" src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-responsive avatar_image" alt="">
+                                <img onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="height:134px; width:134px;margin-right:22px;" src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-responsive avatar_image" alt="">
                                 <?php $file = new \modules\user\models\Avatar();?>
                                 <?php $form = ActiveForm::begin(['action'=>'/core/changeavatar', 'options' => ['enctype' => 'multipart/form-data', 'class'=>'avatar']]) ?>
                                 <?= $form->field($file, 'file')->fileInput(['style'=>'', 'class'=>'upload'])->label(false) ?>

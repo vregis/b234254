@@ -28,6 +28,20 @@ $this->title = 'Your role in business';
                    } 
             ?>
             <?php if($i == 0):?>
+
+                    <?php $ud = new \modules\departments\models\UserDo();?>
+                    <?php $ud->user_id = Yii::$app->user->id;?>
+                    <?php $ud->department_id = $test_result_inform[$i]['result']->department_id?>
+                    <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+                    <?php if($user->user_type == 0):?>
+                        <?php $ud->status_do = 1;?>
+                    <?php else:?>
+                        <?php $ud->status_sell = 1;?>
+                        <?php $ud->status_show = 1;?>
+                    <?php endif;?>
+                    <?php $ud->save();?>
+
+
             <div class="test-line">
                 <div class="test-result" id="<?=$i?>" data="<?= (($test_result_inform[$i]['user_result']->points-$min_points)/($max_points-$min_points)) ?>">
                     <div class="name-table progress " style="background-color: <?= $test_result_inform[$i]['result']->color ?>;width:0%;">

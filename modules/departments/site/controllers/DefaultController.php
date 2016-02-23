@@ -121,7 +121,7 @@ class DefaultController extends Controller
     public function actionIndex($task_id = 0) {
         $userTool = UserTool::getCurrentUserTool();
         $user = User::find()->where(['id' => Yii::$app->user->id])->one();
-        if($user->user_type == User::TYPE_EMPLOYER) {
+       /* if($user->user_type == User::TYPE_EMPLOYER) {*/
             if (!$userTool) {
                 $userTool = UserTool::createUserTool();
             }
@@ -140,7 +140,7 @@ class DefaultController extends Controller
                     }
                 }
             }
-        }
+        /*}
         else {
             if (!$userTool) {
                 if ($user->user_status == User::STATUS_CREATION) {
@@ -150,7 +150,7 @@ class DefaultController extends Controller
                     return $this->redirect(['/departments/business']);
                 }
             }
-        }
+        }*/
         //var_dump($user);
         if($task_id == 0) {
             if ($userTool->status == UserTool::STATUS_CREATION) {
@@ -165,6 +165,7 @@ class DefaultController extends Controller
                 }
             }
         }
+
         if($task_id != 0) {
             return $this->redirect(['/departments/task', 'id' => $task_id]);
         }
