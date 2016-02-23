@@ -74,6 +74,7 @@ section#about .text{
 	font-size:18px;
 }
 section#about .step .title{
+	margin-top:40px;
 	font-size:18px;
 	font-weight:100;
 	line-height:10px;

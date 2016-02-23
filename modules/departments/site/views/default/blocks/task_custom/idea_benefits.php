@@ -79,6 +79,9 @@ use yii\widgets\ActiveForm;
 
 
 <style>
+.task-body .block.desc .content{
+    border-radius:10px !important;
+}
     .b-page-checkbox-wrap .md-radio .task-name{
         left:-50% !important;
     }

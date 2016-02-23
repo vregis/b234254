@@ -1,5 +1,5 @@
 <?php $can = \modules\departments\models\IdeaLike::find()->where(['idea_id' => $id, 'ip_address' => $_SERVER['REMOTE_ADDR']])->one();?>
-<div class="title">DO YOU LIKE OUR IDEA?</div>
+<div class="title">DO YOU LIKE IDEA?</div>
 <div class="question-name">
     <h4 class="left pull-left">No</h4>
     <h4 class="right pull-right">Yes</h4>
