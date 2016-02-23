@@ -184,12 +184,12 @@ use modules\user\site\controllers\ProfileController;
                     		<a href="javascript:;" class="item background-8">Team</a>
                     	</div>
                     </div>
-                    <a href="javascript:;" class="btn btn-lg btn-primary" style="width:185px;border-radius: 30px;">JOIN US</a>
+                    <a href="javascript:;" class="btn btn-lg btn-primary" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
                 </section>
                 <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>
                     <div style="text-align:justify;">
-                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;" class="btn btn-primary" id="send-btn">Send</button>
+                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;background: transparent;" class="btn btn-primary" id="send-btn">Send</button>
                         <div style="display:inline-block;width:100%;"></div>
                     </div>
                     <div class="dinamic_comments">

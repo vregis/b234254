@@ -1647,3 +1647,6 @@ table th.rate .fa{
 #datepicker > .arrow{
     left: 254px !important;
 }
+.task .dropdown-menu .mCSB_container{
+    padding:0 !important;
+}
