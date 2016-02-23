@@ -35,7 +35,7 @@ use modules\departments\models\Specialization;
             </div>
         </div>
         <div class="col-sm-4">
-            <select data-key="exp_type" <? if(!$service) echo 'disabled'; ?> class="form-control update selectpicker sel2">
+            <select data-key="exp_type" <? if(!$service) echo 'disabled'; ?> <?php echo $type == 'add'?'disabled':''?> class="form-control update selectpicker sel2">
                 <? if(!$service || $service->exp_type == 0) : ?>
                     <option class="start" value="0">Select</option>
                 <? endif; ?>

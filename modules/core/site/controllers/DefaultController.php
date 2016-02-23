@@ -355,6 +355,10 @@ HTML;
                     return $this->redirect(['/departments']);
                 }
 
+                if($user->user_type == 1){
+                    return $this->redirect(['/departments/business#delegated']);
+                }
+
                 return $this->redirect(['/departments/business']);
             }else{
                 $response['error'] = true;
