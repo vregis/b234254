@@ -97,8 +97,8 @@
                             </div>
                         </div>
                     </th>
-                    <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="time">Time <i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-down"></i></th>
                     <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Pending <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
