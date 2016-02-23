@@ -444,10 +444,12 @@
             trigger:"click",
             content:$("#advanced-search-form")
         });
-        $(".advanced-search-btn").on('show.bs.popover',function(){
+
+        $(".advanced-search-btn").on('show.bs.popover',function(e){
             $('#advanced-search-form-dom').html('');
             $("#advanced-search-form").show();
             $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+                // e.preventDefault();
                 var els = $(this).find('li');
                 console.log(els.length);
                 if(els.length > 8){
@@ -462,6 +464,7 @@
                         scrollbarPosition:"outside"
                     });  
                 }
+                $(this).mCustomScrollbar('update');
             });
         });
         $(".advanced-search-btn").on('hide.bs.popover',function(){

@@ -109,7 +109,9 @@ if($start_date != '') {
     h
 </div>
 <div class="item cost" style="margin-right: 33px;">
-    <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">$</button>
+    <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
+        <i class="ico-dollar"></i>
+    </button>
     <? if($is_my) : ?>
         <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
             <span id="input-price"><?= $task_user->price ?></span>
