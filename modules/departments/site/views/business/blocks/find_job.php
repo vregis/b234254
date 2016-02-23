@@ -832,8 +832,8 @@
                 }, get_find_params(is_advance)),
                 success: function (response) {
                     if (!response.error) {
-                        $('.filter-task .deps-menu').html(response.html_deps_filter);
-                        $('.filter-task .spec-menu').html(response.html_specials_filter);
+                        $('#user_task').find('.filter-task .deps-menu').html(response.html_deps_filter);
+                        $('#user_task').find('.filter-task .spec-menu').html(response.html_specials_filter);
                         set_user_task($('#user_task'), response.html_user_task);
                         set_user_request($('#user_request'), response.html_user_request);
                         $('#delegated_businesses').html(response.html_delegated_businesses);
@@ -871,8 +871,8 @@
                 }, get_find_params()),
                 success: function (response) {
                     if (!response.error) {
-                        $('.filter-task .deps-menu').html(response.html_deps_filter);
-                        $('.filter-task .spec-menu').html(response.html_specials_filter);
+                        $('#user_request').find('.filter-task .deps-menu').html(response.html_deps_filter);
+                        $('#user_request').find('.filter-task .spec-menu').html(response.html_specials_filter);
                         set_user_task($('#user_task'), response.html_user_task);
                         set_user_request($('#user_request'), response.html_user_request);
                         $('#delegated_businesses').html(response.html_delegated_businesses);

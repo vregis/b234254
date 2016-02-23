@@ -268,7 +268,8 @@ class BusinessController extends Controller
         $user_do = UserDo::find()->where(['user_id' => Yii::$app->user->id])->all();
         $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname, specialization.id as id')
             ->join('JOIN','department','department.id = specialization.department_id')
-            ->where(['specialization.id' => $spec])->all();
+            ->where(['specialization.id' => $spec])
+            ->all();
 
          foreach($user_specials as $key => $user_special) {
              $is_find = false;
@@ -498,8 +499,21 @@ class BusinessController extends Controller
             $users = $this->get_user_request();
         }
 
-        $user_specials = $this->get_user_specials_pending($post['spec'], $is_dep);
-        $this->apply_filters($user_specials, $post);
+
+        if($is_dep == true){
+            $prepare_spec = [];
+            $i = 0;
+            foreach($users as $us){
+                $prepare_spec[$i] = $us->id;
+                $i++;
+            }
+            $user_specials = $this->get_user_specials_pending($prepare_spec, $is_dep);
+        }else{
+            $user_specials = $this->get_user_specials_pending($post['spec'], $is_dep);
+        }
+
+
+        $this->apply_filters($user_specials, $post, true, $is_dep);
 
         if($is_dep != true) {
             foreach ($user_specials as $key => $user_special) {
@@ -514,6 +528,8 @@ class BusinessController extends Controller
         foreach($user_specials as $user_special) {
             array_push($special_ids,$user_special->id);
         }
+
+
 
         $users = [];
         $task_find = DelegateTask::find()->select(
@@ -609,7 +625,7 @@ class BusinessController extends Controller
 
         //$response['html_user_task'] = $this->render_user_task($post, $is_dep);
        // $response['html_user_request'] = $this->render_user_request($users_request);
-        $response['html_user_request'] = $this->render_user_request_pending($post, $users_request, $is_dep);
+        $response['html_user_request'] = $this->render_user_request_pending($post, $user_special_pending, $is_dep);
         $response['html_delegated_businesses'] = $this->render_delegated_businesses();
         $response['html_deps_filter'] = $this->render_deps_filter_pending($post, $user_special_pending);
 
@@ -1044,6 +1060,10 @@ class BusinessController extends Controller
 
     public function actionSharedBusiness($id){
         $this->layout = false;
+
+        $profile = Profile::find()->where(['user_id' => $id])->one();
+
+
         $model = UserTool::find()
             ->select('user_tool.*, benefit.first benefit_first, benefit.second benefit_second, benefit.third benefit_third,
             idea.name idea_name, idea.description_like idea_description_like, idea.description_problem idea_description_problem,
@@ -1067,7 +1087,7 @@ class BusinessController extends Controller
         $likes = $this->renderPartial('blocks/likes', ['id'=>$id]);
         $idea = $this->renderPartial('blocks/idea', ['id'=>$id]);
 
-        return $this->render('shared_business', ['model' => $model, 'comments' => $comments, 'count'=> $count, 'likes'=>$likes, 'idea' => $idea]);
+        return $this->render('shared_business', ['model' => $model, 'comments' => $comments, 'count'=> $count, 'likes'=>$likes, 'idea' => $idea, 'profile' => $profile]);
     }
 
     public function actionAddComment(){

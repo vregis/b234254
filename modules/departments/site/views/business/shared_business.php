@@ -142,9 +142,9 @@ use modules\user\site\controllers\ProfileController;
                 <section id="user">
                 	<div class="title">Our team</div>
                 	<div class="status">Founder</div>
-                    <img src="/images/avatar/nophoto.png" height="125" width="125" alt="" class="avatar">
-                    <div class="name">Tony Bulletooth</div>
-                    <div class="adres"><i class="ico-location"></i> USA, New York, 10001</div>
+                    <img src="<?php echo $profile->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$profile->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
+                    <div class="name"><?php echo $profile->first_name?$profile->first_name:''?> <?php echo $profile->last_name?$profile->last_name:''?></div>
+                    <div class="adres"><i class="ico-location"></i> USA,<?php echo $profile->city_title?' ,'.$profile->city_title:''?><?php echo $profile->zip?' ,'.$profile->zip:''?></div>
                     <div class="title" style="margin:25px auto;">Vacancy</div>
                     <div class="deps-wrap">
                     	<div class="roww action">

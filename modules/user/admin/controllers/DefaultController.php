@@ -121,6 +121,7 @@ class DefaultController extends Controller
                 }
 
             }
+            $user->delete();
             Yii::$app->session->setFlash('success', Yii::t('user', 'Пользователь удален'));
         }
         //
