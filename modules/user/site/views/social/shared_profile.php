@@ -292,7 +292,6 @@ use modules\user\site\controllers\ProfileController;
                             <?php $fblink =$_SERVER['REQUEST_URI'];?>
                             <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
                             <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
-
                         </div>
                     </div>
                     <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>

@@ -84,8 +84,6 @@ section#about .step .title{
 	height:18px;
 	top:6px;
 	left:7px;
-	transform:scale(1);
-	opacity:1 !important;
 }
 
 .question-name h4{
@@ -344,9 +342,64 @@ section.contacts .title{
 	margin: 0 auto;
 	margin-top: 15px;
 }
+.contacts .small > div{
+	display: inline-block;
+	width: 100%;
+}
+.contacts{
+	border-bottom:1px solid rgba(90,90,90,0.6);
+	padding-bottom: 15px;
+}
+.contacts .small{
+	text-align: center;
+	width: 380px;
+	margin: 0 auto;
+}
+.contacts .small > a{
+	display: inline-block;
+	width:32px;
+	height:32px;
+}
+.contacts .small{
+	text-align: center;
+}
+.contacts .small a{
+	margin: 0 20px;
+}
+.contacts .small a.tw{
+	background: url("/images/share_profile.png") 0 -60px no-repeat;
+}
+.contacts .small a.tw:not(.no_hover):hover,.contacts .small a.tw:not(.no_hover):focus,.contacts .small a.tw.active:not(.no_hover){
+	background: url("/images/share_profile.png") -32px -60px no-repeat;
+}
+.contacts .small a.fb{
+	background: url("/images/share_profile.png") -64px -60px no-repeat;
+}
+.contacts .small a.fb:not(.no_hover):hover,.contacts .small a.fb:not(.no_hover):focus,.contacts .small a.fb.active:not(.no_hover){
+	background: url("/images/share_profile.png") -96px -60px no-repeat;
+}
+.contacts .small a.gp{
+	background: url("/images/share_profile.png") -128px -60px no-repeat;
+}
+.contacts .small a.gp:not(.no_hover):hover,.contacts .small a.gp:not(.no_hover):focus,.contacts .small a.gp.active:not(.no_hover){
+	background: url("/images/share_profile.png") -160px -60px no-repeat;
+}
+.contacts .small a.inst{
+	background: url("/images/share_profile.png") -192px -60px no-repeat;
+}
+.contacts .small a.inst:not(.no_hover):hover,.contacts .small a.inst:not(.no_hover):focus,.contacts .small a.inst.active:not(.no_hover){
+	background: url("/images/share_profile.png") -224px -60px no-repeat;
+}
+.contacts .small a.lin{
+	background: url("/images/share_profile.png") -256px -60px no-repeat;
+}
+.contacts .small a.lin:not(.no_hover):hover,.contacts .small a.lin:not(.no_hover):focus,.contacts .small a.lin.active:not(.no_hover){
+	background: url("/images/share_profile.png") -288px -60px no-repeat;
+}
+
 .page-footer .contacts{
 	position: absolute;
-	top: 25px;
+	top: 20px;
 	left:30px;
 	width:380px;
 	line-height: 32px;

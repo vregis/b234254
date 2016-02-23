@@ -30,8 +30,8 @@
                             </div>
                         </div>
                     </th>
-                    <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="time">Time <i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-down"></i></th>
                     <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
@@ -136,13 +136,10 @@
     }
     table th.rate .fa,table th.time .fa{
         position:absolute;
+        margin-top:4px;
+    }
+    table th.rate,table th.time{
         cursor:pointer;
-    }
-    table th.rate .fa-angle-up,table th.time .fa-angle-up{
-        margin-top:-4px;
-    }
-    table th.rate .fa-angle-down,table th.time .fa-angle-down{
-        margin-top:10px;
     }
     table th.rate{
         text-align:right;
@@ -326,7 +323,12 @@
                 placement:"top",
                 html:true
             });
-
+            $("table th.rate,table th.time").click(function(){
+                if($(this).find('i').hasClass('fa-angle-down'))
+                    $(this).find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
+                else
+                    $(this).find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
+            });
             $(".gant_avatar").popover({
                 container:$("body"),
                 html:true,
