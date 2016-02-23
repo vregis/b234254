@@ -286,7 +286,7 @@ use modules\user\site\controllers\ProfileController;
             <div class="page-footer">
                 <div class="text-center">
                     <div class="contacts">
-                        <label for="">Shared by</label>
+                        <label for="">Share on</label>
                         <div class="small">
                             <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
                             <?php $fblink =$_SERVER['REQUEST_URI'];?>

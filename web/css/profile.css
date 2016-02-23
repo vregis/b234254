@@ -560,6 +560,8 @@ hr{
 .bootstrap-select.btn-group .dropdown-menu.inner{
     overflow-y: visible !important;
     min-height: auto !important;
+    max-height: 252px !important;
+overflow: hidden;
 }
 .bootstrap-select .dropdown-menu li a{
     border-radius: 3px !important;

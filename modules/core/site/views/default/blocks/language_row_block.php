@@ -1,5 +1,5 @@
 <div class="dynamic-block col-md-6" style="padding-right: 25px;" data-id="<?= $model ? $model->id : '0' ?>">
-        <div class="col-md-6" style="padding-left: 0;padding-right: 0;">
+        <div class="col-md-6 lang-sel" style="padding-left: 0;padding-right: 0;">
             <select class="update form-control selectpicker" data-key="language">
                 <? if(!$model) : ?>
                     <option class="start" value="0">Select language</option>

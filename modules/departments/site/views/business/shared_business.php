@@ -111,7 +111,7 @@ use modules\user\site\controllers\ProfileController;
             		<div class="subtitle"><?php echo $model->industry_name?></div>
             		<table class="text">
             			<tr>
-            				<td style="width:50%;border-right:1px solid #5a5a5a;vertical-align: top;padding-right:40px;"><?php echo $model->idea_description_like?></td>
+            				<td style="width:50%;border-right:1px solid rgba(90, 90, 90, 0.6);vertical-align: top;padding-right:40px;"><?php echo $model->idea_description_like?></td>
             				<td style="width:50%;vertical-align: top;padding-left:40px;"><?php echo $model->idea_description_problem?></td>
             			</tr>
             		</table>
@@ -120,7 +120,7 @@ use modules\user\site\controllers\ProfileController;
                     </div>
             	</section>
 	            <section id="benefits">
-	            	<div class="title">our benefits</div>
+	            	<div class="title">benefits</div>
 	            	<div class="content">
 		            	<table>
 		            		<tr>
@@ -140,11 +140,11 @@ use modules\user\site\controllers\ProfileController;
 	            	</div>
 	            </section>
                 <section id="user">
-                	<div class="title">Our team</div>
-                	<div class="status">Founder</div>
+                	<div class="title">TEAM</div>
+                	<div class="status" style="color:rgba(90,90,90,0.75);">Founder</div>
                     <img src="/images/avatar/nophoto.png" height="125" width="125" alt="" class="avatar">
                     <div class="name">Tony Bulletooth</div>
-                    <div class="adres"><i class="ico-location"></i> USA, New York, 10001</div>
+                    <div class="adres" style="color:rgba(90,90,90,0.75);"><i class="ico-location"></i> USA, New York, 10001</div>
                     <div class="title" style="margin:25px auto;">Vacancy</div>
                     <div class="deps-wrap">
                     	<div class="roww action">

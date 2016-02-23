@@ -68,9 +68,10 @@ section#about .subtitle{
 }
 section#about .text{
 	font-weight:100;
-	text-align:center;
+	text-align:justify;
 	margin-bottom:20px;
 	width: 100%;
+	font-size:18px;
 }
 section#about .step .title{
 	font-size:18px;
@@ -124,10 +125,11 @@ section#about .step .title{
 	color:#5a5a5a;
 	font-size:30px;
 	text-transform: uppercase;
+	margin-bottom:15px;
 }
 
 #benefits .content .digit{
-	font-size:76px;
+	font-size:45px;
 	font-weight:100;
 }
 #benefits .content table{
@@ -136,16 +138,19 @@ section#about .step .title{
 #benefits .content > table tr td > *{
 	width:150px;
 	margin: 0 auto;
+	font-size:24px;
 }
 #benefits .content .likes table tr td{
 	width:50%;
 	text-align:center;
+	font-size:12px;
 }
 #benefits .content table tr td .btn{
-	margin:15px auto;
+	margin:20px auto;
 	background:none;
     display: block;
-    font-size:18px;
+	font-size: 16px;
+	line-height: 30px !important;
 }
 .page-content .avatar{
 	border-radius: 100% !important;
@@ -202,7 +207,7 @@ section#user{
 	text-align:center;
 }
 .deps-wrap .action .item .btn{
-	line-height: 34px !important;
+	line-height: 33px !important;
 }
 .deps-wrap .action .item:first-child{
 	border-top-left-radius:5px !important;
