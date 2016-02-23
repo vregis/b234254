@@ -537,8 +537,8 @@ span.title {
 }
 .task-title .item.time .btn{
     font-size: 16px !important;
-    text-align: left;
-    text-indent: 7px;
+    text-align: center;
+        padding-top: 2px;
     /*line-height: 37px !important;*/
 }
 /*.task-title .item.date .icon:hover{
@@ -1651,4 +1651,7 @@ table th.rate .fa{
 }
 .task .dropdown-menu .mCSB_container{
     padding:0 !important;
+}
+.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"]{
+    display:none;
 }
