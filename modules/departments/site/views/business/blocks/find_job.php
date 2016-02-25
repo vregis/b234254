@@ -122,7 +122,7 @@
         <div id="status-menu" style="display:none !important;">
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a id="btn-task-block" href="#task-block" aria-controls="task-block" role="tab" data-toggle="tab">Search </a></li>
-                <li role="presentation"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab" style="cursor: pointer;">Pending </a></li>
+                <li role="presentation" class="disabled"><a id="btn-request-block" href="#request-block" aria-controls="request-block" role="tab" data-toggle="tab">Pending </a></li>
             </ul>
         </div>
     </div>
@@ -632,14 +632,15 @@
                 var btn_request_block = $('#btn-request-block');
                 btn_request_block.removeAttr('data-toggle');
                 btn_request_block.removeAttr('href');
-                btn_request_block.css('cursor','default');
+                btn_request_block.removeAttr('css');
+                btn_request_block.parent().addClass('disabled');
                 $('#btn-task-block').tab('show');
 
             }else {
                 var btn_request_block = $('#btn-request-block');
                 btn_request_block.attr('data-toggle','tab');
                 btn_request_block.attr('href','#request-block');
-                btn_request_block.css('cursor','pointer');
+                btn_request_block.parent().removeClass('disabled');
             }
             setHandlerPagination(_this.closest('.table'));
 
@@ -676,7 +677,17 @@
                     }, get_find_params()),
                     success: function (response) {
                         if (!response.error) {
-                            toastr["success"]("Make requests: " + names, "Success");
+                            $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
+                                $("#btn-request-block").parent().removeClass('active');
+                                var btn_request_block = $('#btn-request-block');
+                                btn_request_block.parent().removeClass('disabled');
+                                btn_request_block.attr('data-toggle','tab');
+                                btn_request_block.attr('href','#request-block');
+                                $("#btn-task-block").parent().addClass('active');
+                                $("#btn-task-block").tab('show');                  
+                            }).popover('hide');
+
+                            console.log("hui");
                             $('.filter-task .deps-menu').html(response.html_deps_filter);
                             $('.filter-task .spec-menu').html(response.html_specials_filter);
                             set_user_task($('#user_task'), response.html_user_task);
@@ -716,8 +727,6 @@
                     }, get_find_params()),
                     success: function (response) {
                         if (!response.error) {
-
-                            toastr["success"]("Reject requests: " + names, "Success");
                             $('.filter-task .deps-menu').html(response.html_deps_filter);
                             $('.filter-task .spec-menu').html(response.html_specials_filter);
                             set_user_task($('#user_task'), response.html_user_task);
@@ -725,14 +734,18 @@
                             $('#delegated_businesses').html(response.html_delegated_businesses);
                             if(response.html_user_request == ''){
                                 // Сюда впили переход на серч 
+
                                 $("#task-block").addClass('in active');
                                 $("#request-block").removeClass('in active');
                                 $("#btn-task-block").parents('li').addClass('active');
                                 $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
-                                    $("#btn-request-block").parent().removeClass('active');
+                                    $("#btn-request-block").parent().removeClass('active').addClass('disabled');
+                                    var btn_request_block = $('#btn-request-block');
+                                    btn_request_block.removeAttr('data-toggle');
+                                    btn_request_block.removeAttr('href');
+                                    btn_request_block.removeAttr('css');
                                     $("#btn-task-block").parent().addClass('active');
-                                    $("#btn-task-block").tab('show');
-                                    console.log($("#btn-request-block").parent().attr('class'));                     
+                                    $("#btn-task-block").tab('show');                  
                                 }).popover('hide');
                             }
                         }
@@ -945,7 +958,11 @@
             });
         });
 
-
+        $("#status-menu li.disabled").on('click',function(e){
+            $("#btn-task-block").parent().addClass('active');
+            $(this).removeClass('active');
+            return false;
+        });
         $('.time').find('.fa-angle-down').on('click', function(){
 
         })
