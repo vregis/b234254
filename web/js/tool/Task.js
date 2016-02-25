@@ -190,6 +190,12 @@ function Task(task_user_id, is_my, is_custom) {
         var confirn = $('.confirn');
         confirn.off();
         confirn.on('click', function(){
+            if($(this).text() == 'Cancel'){
+                if (!confirm("Approve cancel")){
+                    return false;
+                }
+            }
+
             var name = $(this).closest('.user-row').find('.field-name').html();
             var data = {
                 _csrf: $("meta[name=csrf-token]").attr("content"),
@@ -753,7 +759,7 @@ function Task(task_user_id, is_my, is_custom) {
         }
         var data = {
             _csrf: $("meta[name=csrf-token]").attr("content"),
-            command: 'get_delegate_users',
+            command: 'get_delegate_users_advanced',
             task_user_id: task_user_id,
             rate_start: rate_start,
             rate_end: rate_end,
@@ -786,6 +792,16 @@ function Task(task_user_id, is_my, is_custom) {
             $(this).popover('hide');
         });
     });
+
+    var advanced_send_task = $('#advanced-search-send-task');
+    advanced_send_task.off();
+    advanced_send_task.on('click',function(e) {
+        get_delegate_users();
+        $('.popover').each(function(){
+            $(this).popover('hide');
+        });
+    });
+
     function unlockForm() {
         $('.popover').each(function(){
             $(this).popover('hide');
