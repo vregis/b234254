@@ -115,6 +115,8 @@ class Paypal extends Component
 
     public function createPay($post){
 
+
+
         $this->authorize();
         $payer = new Payer();
         $payer->setPaymentMethod('paypal');
@@ -151,6 +153,7 @@ class Paypal extends Component
         foreach ($links as $link) {
             if ($link->getMethod() == 'REDIRECT') {
                 header('location:'.$link->getHref());
+                die();
                 return;
             }
         }

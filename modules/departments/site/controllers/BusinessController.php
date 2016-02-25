@@ -402,6 +402,35 @@ class BusinessController extends Controller
                 break;
             }
         }
+
+        if(count($users) == 0){
+            $task_find = Task::find()->select('task.*,specialization.id spec,specialization.name spec_name,department.name dname')
+                ->join('JOIN','milestone','milestone.id = task.milestone_id')
+                ->join('JOIN', 'department', 'department.id = task.department_id')
+                ->join('JOIN', 'specialization', 'specialization.id = task.specialization_id')
+                ->orderBy('task.id')
+                ->where([
+                    'is_hidden' => '0',
+                    'department.is_additional' => 0
+                ])
+                ->all();
+
+            foreach($task_find as $task) {
+                $exclude_user_ids = [Yii::$app->user->id];
+                if(count($users) < 25)
+                {
+                    $this->findUsersByTask($users,$exclude_user_ids, $task, $post);
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+
+
+
+
         return $this->renderPartial('blocks/user_task',[
             'users' => $users,
         ]);
