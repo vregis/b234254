@@ -132,7 +132,7 @@ section#about .step .title{
 #benefits > .title{
 	color:#5a5a5a;
 	font-size:26px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	margin-bottom:15px;
 }
 
