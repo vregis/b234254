@@ -27676,3 +27676,717 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-02-25 14:22:02 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: self_userTools' in D:\OpenServer\domains\bsb.loc\modules\departments\site\views\default\team.php:46
+Stack trace:
+#0 D:\OpenServer\domains\bsb.loc\modules\departments\site\views\default\team.php(46): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\OpenServer\\d...', 46, Array)
+#1 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\OpenServer\\d...')
+#2 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\OpenServer\\d...', Array)
+#3 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\OpenServer\\d...', Array, Object(modules\departments\site\controllers\DefaultController))
+#4 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('team', Array, Object(modules\departments\site\controllers\DefaultController))
+#5 D:\OpenServer\domains\bsb.loc\modules\departments\site\controllers\DefaultController.php(921): yii\base\Controller->render('team')
+#6 [internal function]: modules\departments\site\controllers\DefaultController->actionTeam()
+#7 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('team', Array)
+#10 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('departments/def...', Array)
+#11 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\OpenServer\domains\bsb.loc\web\index.php(25): yii\base\Application->run()
+#13 {main}
+2016-02-25 14:21:59 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '6538'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/departments/team'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456399318.776
+    'REQUEST_TIME' => 1456399318
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 15:02:04 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 15:02:04 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '7528'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456401724.35
+    'REQUEST_TIME' => 1456401724
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 15:38:28 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 15:38:27 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '8448'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456403906.812
+    'REQUEST_TIME' => 1456403906
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 15:39:09 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 15:39:09 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '8481'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456403949.545
+    'REQUEST_TIME' => 1456403949
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 17:41:07 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 17:41:06 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+    'task_user_266' => [
+        'delegate_task_id' => 58
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '12520'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456411266.535
+    'REQUEST_TIME' => 1456411266
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 18:10:27 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 18:10:27 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+    'task_user_266' => [
+        'delegate_task_id' => 58
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '13212'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456413027.089
+    'REQUEST_TIME' => 1456413027
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 18:21:42 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 18:21:42 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+    'task_user_266' => [
+        'delegate_task_id' => 58
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '13515'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456413702.086
+    'REQUEST_TIME' => 1456413702
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 18:33:41 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2/messages/en/yii.php
+2016-02-25 18:33:41 [127.0.0.1][16][1haeshu0vntanqe9d2ahnhi570][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/departments'
+    '__id' => 16
+    'tool_id' => '47'
+    'task_user_266' => [
+        'delegate_task_id' => 58
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '13714'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/js/min/underscore-min.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456414421.502
+    'REQUEST_TIME' => 1456414421
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 18:50:17 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Out of memory (allocated 2621440) (tried to allocate 6528 bytes)' in D:\OpenServer\domains\bsb.loc\modules\departments\site\controllers\DefaultController.php:553
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-02-25 18:50:16 [127.0.0.1][-][-][info][application] $_POST = [
+    '_csrf' => 'NXI1UlpXNm5QJ2M.DTt7AHcqdwALZ2YHDQpef2kVXh9PGXwCaCNDCA=='
+    'command' => 'check_status'
+    'task_user_id' => '266'
+    'message_count' => '0'
+    'status_delegate' => '0'
+    'delegate_tasks_count' => '1'
+    'counter_offers_count' => '0'
+    'is_active_chat' => 'false'
+    'is_my' => 'true'
+]
+
+$_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '216'
+    'HTTP_ORIGIN' => 'http://bsb.loc'
+    'HTTP_X_CSRF_TOKEN' => 'NXI1UlpXNm5QJ2M.DTt7AHcqdwALZ2YHDQpef2kVXh9PGXwCaCNDCA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://bsb.loc/departments'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '14132'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/departments/tool-ajax'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456415416.293
+    'REQUEST_TIME' => 1456415416
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 18:58:59 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\ActiveQuery.php(132): yii\db\Query->all('<span class="ke...')
+#9 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(47): yii\db\ActiveQuery->all()
+#10 [internal function]: modules\core\base\Controller->modules\core\base\{closure}(Object(yii\db\Connection))
+#11 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(417): call_user_func(Object(Closure), Object(yii\db\Connection))
+#12 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(50): yii\db\Connection->cache(Object(Closure), '<span class="nu...')
+#13 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(29): modules\core\base\Controller->getSettings()
+#14 D:\OpenServer\domains\bsb.loc\modules\core\site\base\Controller.php(81): modules\core\base\Controller->init()
+#15 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Object.php(107): modules\core\site\base\Controller->init()
+#16 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct('[]')
+#17 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(modules\departments\Module), '[]')
+#18 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs('[<span class="s...')
+#19 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#20 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#21 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#22 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('<span class="st...')
+#23 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(513): yii\base\Module->createController('<span class="st...')
+#24 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('<span class="st...')
+#25 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#26 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 D:\OpenServer\domains\bsb.loc\web\index.php(25): yii\base\Application->run()
+#28 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\ActiveQuery.php(132): yii\db\Query->all('<span class="ke...')
+#7 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(47): yii\db\ActiveQuery->all()
+#8 [internal function]: modules\core\base\Controller->modules\core\base\{closure}(Object(yii\db\Connection))
+#9 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(417): call_user_func(Object(Closure), Object(yii\db\Connection))
+#10 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(50): yii\db\Connection->cache(Object(Closure), '<span class="nu...')
+#11 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(29): modules\core\base\Controller->getSettings()
+#12 D:\OpenServer\domains\bsb.loc\modules\core\site\base\Controller.php(81): modules\core\base\Controller->init()
+#13 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Object.php(107): modules\core\site\base\Controller->init()
+#14 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct('[]')
+#15 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(modules\departments\Module), '[]')
+#16 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs('[<span class="s...')
+#17 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#18 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#19 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#20 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('<span class="st...')
+#21 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(513): yii\base\Module->createController('<span class="st...')
+#22 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('<span class="st...')
+#23 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#24 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\OpenServer\domains\bsb.loc\web\index.php(25): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2016-02-25 18:58:55 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_REFERER' => 'http://bsb.loc/departments/business'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '1781'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/departments'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456415935.644
+    'REQUEST_TIME' => 1456415935
+    'argv' => []
+    'argc' => 0
+]
+2016-02-25 18:58:59 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\ActiveQuery.php(132): yii\db\Query->all('<span class="ke...')
+#9 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(47): yii\db\ActiveQuery->all()
+#10 [internal function]: modules\core\base\Controller->modules\core\base\{closure}(Object(yii\db\Connection))
+#11 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(417): call_user_func(Object(Closure), Object(yii\db\Connection))
+#12 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(50): yii\db\Connection->cache(Object(Closure), '<span class="nu...')
+#13 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(29): modules\core\base\Controller->getSettings()
+#14 D:\OpenServer\domains\bsb.loc\modules\core\site\base\Controller.php(81): modules\core\base\Controller->init()
+#15 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Object.php(107): modules\core\site\base\Controller->init()
+#16 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct('[]')
+#17 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(modules\departments\Module), '[]')
+#18 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs('[<span class="s...')
+#19 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#20 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#21 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#22 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('<span class="st...')
+#23 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(513): yii\base\Module->createController('<span class="st...')
+#24 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('<span class="st...')
+#25 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#26 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 D:\OpenServer\domains\bsb.loc\web\index.php(25): yii\base\Application->run()
+#28 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\ActiveQuery.php(132): yii\db\Query->all('<span class="ke...')
+#7 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(47): yii\db\ActiveQuery->all()
+#8 [internal function]: modules\core\base\Controller->modules\core\base\{closure}(Object(yii\db\Connection))
+#9 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\db\Connection.php(417): call_user_func(Object(Closure), Object(yii\db\Connection))
+#10 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(50): yii\db\Connection->cache(Object(Closure), '<span class="nu...')
+#11 D:\OpenServer\domains\bsb.loc\modules\core\base\Controller.php(29): modules\core\base\Controller->getSettings()
+#12 D:\OpenServer\domains\bsb.loc\modules\core\site\base\Controller.php(81): modules\core\base\Controller->init()
+#13 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Object.php(107): modules\core\site\base\Controller->init()
+#14 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct('[]')
+#15 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(modules\departments\Module), '[]')
+#16 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs('[<span class="s...')
+#17 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#18 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#19 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#20 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('<span class="st...')
+#21 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(513): yii\base\Module->createController('<span class="st...')
+#22 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('<span class="st...')
+#23 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#24 D:\OpenServer\domains\bsb.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\OpenServer\domains\bsb.loc\web\index.php(25): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2016-02-25 18:58:54 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf\";}'
+    'PHPSESSID' => '1haeshu0vntanqe9d2ahnhi570'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'bsb.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.5253 (beta) Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f2f6c6dfcffdaec174c609d7dfe496665adec61238f5264fb98a748e783d9357a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eUVlWlMnBXBRQ0Pi8xk-3BhqzkIP2tuf%22%3B%7D; PHPSESSID=1haeshu0vntanqe9d2ahnhi570'
+    'PATH' => 'd:\\openserver\\modules\\php\\PHP-5.4\\ext;d:\\openserver\\modules\\php\\PHP-5.4\\pear;d:\\openserver\\modules\\php\\PHP-5.4\\pear\\bin;d:\\openserver\\modules\\php\\PHP-5.4;d:\\openserver\\modules\\imagemagick;d:\\openserver\\modules\\wget\\bin;d:\\openserver\\modules\\git;d:\\openserver\\modules\\git\\bin;d:\\openserver\\modules\\git\\mingw\\bin;d:\\openserver\\modules\\git\\cmd;d:\\openserver\\modules\\database\\MySQL-5.5\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\bin;d:\\openserver\\modules\\database\\PostgreSQL-9.3\\lib;d:\\openserver\\modules\\http\\Apache-2.2\\bin;d:\\openserver\\modules\\http\\Apache-2.2;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64;C:\\Python33\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\darth\\AppData\\Roaming\\npm;C:\\Users\\darth\\AppData\\Local\\atom\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Win32)'
+    'SERVER_NAME' => 'bsb.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/domains/bsb.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/domains/bsb.loc/web/index.php'
+    'REMOTE_PORT' => '1782'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/departments/team'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1456415934.409
+    'REQUEST_TIME' => 1456415934
+    'argv' => []
+    'argc' => 0
+]
