@@ -171,8 +171,9 @@ if($start_date != '') {
     <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
         <?php if($delegate_task->is_request == 1):?>
             <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-primary disabled" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Payment</button>
-        <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-success offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Accept</button>
-        <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
+            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
+        <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-success offer <?= $delegate_task->is_request==0 ? '' :'' ?>">Request</button>
+
         <?php else:?>
             <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Offer</button>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-primary" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
@@ -192,8 +193,11 @@ if($start_date != '') {
             <button class="btn btn-success disabled static payment-btn" style="width:93px;">Payment</button>
         <?php endif; ?>
         <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
+        <?php if($delegate_task && $delegate_task->status != DelegateTask::$status_payment):?>
+            <?php else: ?>
         <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/submit','id' => $delegate_task->id]) ?>'"
-                class="btn btn-success <? if($delegate_task && $delegate_task->status != DelegateTask::$status_payment) echo 'disabled static' ?>" style="width:93px;">Submit</button>
+                class="btn btn-success" style="width:93px;">Submit</button>
+            <?php endif; ?>
     <? endif; ?>
 <? endif; ?>
 <a href="#" data-dismiss="modal" class="href-black task-close"></a>
