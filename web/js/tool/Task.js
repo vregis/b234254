@@ -91,7 +91,6 @@ function Task(task_user_id, is_my, is_custom) {
             $(this).toggleClass("active");
 
             $(".make-offer").addClass('active');
-            // console.log($('.delegate-select.active').length);
             if($('.delegate-select.active').length == 0){
                 $(".make-offer").removeClass('active');
             }
@@ -250,7 +249,7 @@ function Task(task_user_id, is_my, is_custom) {
                     this_confirmation.confirmation({
                         title: "Are you trying to delegate a task without payment?",
                         placement: "bottom",
-                        btnOkClass: "btn btn-primary",
+                        btnOkClass: "btn btn-success",
                         btnCancelClass: "btn btn-danger",
                         btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
                         onConfirm: function (event) {
@@ -337,7 +336,6 @@ function Task(task_user_id, is_my, is_custom) {
                 // container:$("#delegate"),
             });
             $(".task-body .block.desc .footer .btn").on('shown.bs.tab',function(){
-                console.log("sadasda");
                 $(".tab-content > .tab-pane .item").popover({
                     placement:"auto top",
                     html:true,
@@ -373,7 +371,6 @@ function Task(task_user_id, is_my, is_custom) {
                 $('#advanced-search-form .selectpicker').selectpicker();
                 $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
                     var els = $(this).find('li');
-                    console.log(els.length);
                     if(els.length > 8){
                         $(this).mCustomScrollbar({
                             setHeight: 252,
@@ -439,7 +436,7 @@ function Task(task_user_id, is_my, is_custom) {
                 $(this).confirmation({
                     title: "Are you trying to confirm the task without payment?",
                     placement: "bottom",
-                    btnOkClass: "btn btn-primary huinya-1",
+                    btnOkClass: "btn btn-success huinya-1",
                     btnCancelClass: "btn btn-danger huinya-2",
                     btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
                     btnCancelLabel: '<i class="icon-times icon-white"></i> No',
@@ -698,17 +695,16 @@ function Task(task_user_id, is_my, is_custom) {
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
-                        console.log(response);
                         if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
 
                             // Сюда впили переход на серч
-                            console.log('empty offers');
                             $("#offered-block").removeClass('active');
                             $("#search-block").addClass('active');
                             $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
                                 // $("#status-menu").show();
-                                $("a[href='#search-block']").tab('show');
                                 $("#btn-offered-block .label").remove();
+                                $("a[href='#search-block']").tab('show');
+
                                 // $(".dropmenu1.status").popover('destroy');
                             }).popover('hide');
                         }

@@ -131,7 +131,7 @@ section#about .step .title{
 }
 #benefits > .title{
 	color:#5a5a5a;
-	font-size:30px;
+	font-size:26px;
 	text-transform: uppercase;
 	margin-bottom:15px;
 }
@@ -146,7 +146,7 @@ section#about .step .title{
 #benefits .content > table tr td > *{
 	width:150px;
 	margin: 0 auto;
-	font-size:24px;
+	font-size:18px;
 }
 #benefits .content .likes table tr td{
 	width:50%;
@@ -186,7 +186,7 @@ section#about .step .title{
 	font-size:14px;
 }
 section#user > .title{
-	font-size:30px;
+	font-size:26px;
 	color:#5a5a5a;
 	margin-bottom:20px;
 }

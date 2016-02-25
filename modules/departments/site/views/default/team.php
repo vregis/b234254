@@ -60,14 +60,14 @@ $this->registerJs($msgJs);
                         </div>
                     </div>
                     <div class="roww deps">
-                        <a data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></a>
-                        <a data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></a>
-                        <a data-id="3" href="javascript:;" class="item background-3">Customers</a>
-                        <a data-id="4" href="javascript:;" class="item background-4">Documents</a>
-                        <a data-id="5" href="javascript:;" class="item background-5">Products</a>
-                        <a data-id="6" href="javascript:;" class="item background-6">Numbers</a>
-                        <a data-id="7" href="javascript:;" class="item background-7">IT</a>
-                        <a data-id="8" href="javascript:;" class="item background-8">Team</a>
+                        <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
+                        <div data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></div>
+                        <div data-id="3" href="javascript:;" class="item background-3">Customers</div>
+                        <div data-id="4" href="javascript:;" class="item background-4">Documents</div>
+                        <div data-id="5" href="javascript:;" class="item background-5">Products</div>
+                        <div data-id="6" href="javascript:;" class="item background-6">Numbers</div>
+                        <div data-id="7" href="javascript:;" class="item background-7">IT</div>
+                        <div data-id="8" href="javascript:;" class="item background-8">Team</div>
                     </div>
                 </div>
                 <div class="collapse fade" id="idea">
@@ -86,7 +86,7 @@ $this->registerJs($msgJs);
                                 <td>
                                     <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
                                 </td>
-                                <td style="text-align:left;">Simon Swerdlow</td>
+                                <td>Simon Swerdlow</td>
                                 <td>USA, Jupiter</td>
                                 <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
                                 <td><button class="btn btn-primary circle"><i class="ico-add"></i></button></td>
@@ -244,14 +244,14 @@ $this->registerJs($msgJs);
                 </div>
             </div>
             <div class="roww deps">
-                <a data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></a>
-                <a data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></a>
-                <a data-id="3" href="javascript:;" class="item background-3">Customers</a>
-                <a data-id="4" href="javascript:;" class="item background-4">Documents</a>
-                <a data-id="5" href="javascript:;" class="item background-5">Products</a>
-                <a data-id="6" href="javascript:;" class="item background-6">Numbers</a>
-                <a data-id="7" href="javascript:;" class="item background-7">IT</a>
-                <a data-id="8" href="javascript:;" class="item background-8">Team</a>
+                <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
+                <div data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></div>
+                <div data-id="3" href="javascript:;" class="item background-3">Customers</div>
+                <div data-id="4" href="javascript:;" class="item background-4">Documents</div>
+                <div data-id="5" href="javascript:;" class="item background-5">Products</div>
+                <div data-id="6" href="javascript:;" class="item background-6">Numbers</div>
+                <div data-id="7" href="javascript:;" class="item background-7">IT</div>
+                <div data-id="8" href="javascript:;" class="item background-8">Team</div>
             </div>
         </div>
         <div class="collapse fade" id="idea1">
@@ -272,7 +272,7 @@ $this->registerJs($msgJs);
                         <td>
                             <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
                         </td>
-                        <td style="text-align:left;">Simon Swerdlow</td>
+                        <td>Simon Swerdlow</td>
                         <td>Idea</td>
                         <td>USA, Jupiter</td>
                         <td><button class="btn btn-primary btn-chat circle"><i class="ico-chat"></i></button></td>
@@ -382,7 +382,7 @@ $this->registerJs($msgJs);
                         <td>
                             <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
                         </td>
-                        <td style="text-align:left;">Swerdlow</td>
+                        <td>Swerdlow</td>
                         <td>USA, Jupiter</td>
                         <td><button class="btn btn-primary circle"><i class="ico-chat"></i></button></td>
                         <td><button class="btn btn-primary circle"><i class="ico-add"></i></button></td>

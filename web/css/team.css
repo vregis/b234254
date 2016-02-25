@@ -17,7 +17,7 @@
     position: relative;
 }
 .deps-wrap .action .item{
-	background:#f8f8f8;
+	background:#f5f5f5;
 	height:65px;
 	line-height:65px;
 	text-align:center;
@@ -76,7 +76,7 @@
 .deps .item.background-8{
     background-color: rgba(93,201,240,1);
 }
-.deps-wrap .action .item.background-1:hover{
+/*.deps-wrap .action .item.background-1:hover{
     background-color: rgba(145, 135, 208,0.7);
 }
 .deps-wrap .action .item.background-2:hover{
@@ -99,7 +99,7 @@
 }
 .deps-wrap .action .item.background-8:hover{
     background-color: rgba(93,201,240,0.7);
-}
+}*/
 .deps .item.active .arrow{
     position: absolute;
     display: block;
@@ -173,7 +173,7 @@
     border-bottom: 0 !important;
 }
 
-.table.with-foot td:first-child,.table.with-foot th:first-child,.table.with-foot th:last-child{
+.table.with-foot td:first-child,.table.with-foot th:first-child{
     border-left:0 !important;
 }
 .tables-business.team .btn.circle{line-height:34px !important;}

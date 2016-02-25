@@ -325,7 +325,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                             </div>
                         </div>
                     </div>
-                    <div class="title text-center" style="margin-top: 15px;">Is this task was helpful to you?</div>
+                    <div class="title text-center" style="margin-top: 4px;">Is this task was helpful to you?</div>
                     <div class="step">
                         <div class="question-name">
                             <h4 class="left pull-left">No</h4>
