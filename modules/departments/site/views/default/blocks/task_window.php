@@ -77,7 +77,7 @@ if($task->specialization_id > 0) {
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#search-block" aria-controls="search-block" role="tab" data-toggle="tab">Search</a></li>
-                                <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <span class="label label-danger circle"></span></a></li>
+                                <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <!--<span class="label label-danger circle"></span>--></a></li>
                             </ul>
 
                             <!-- Tab panes -->

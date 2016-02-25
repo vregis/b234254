@@ -203,7 +203,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                     <div id="status-menu" style="display:none !important;">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#search-block" aria-controls="search-block" role="tab" data-toggle="tab">Search</a></li>
-                            <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <span class="label label-danger circle"></span></a></li>
+                            <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <!--<span class="label label-danger circle"></span>--></a></li>
                         </ul>
                     </div>
                 </div>

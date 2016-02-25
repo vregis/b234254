@@ -164,7 +164,7 @@ $this->beginPage();
                                 <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="height:33px; width:33px"  src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-circle" alt="">
 
                                 <?php if(ProfileController::checkprofile() == false):?>
-                                    <span class="label label-danger circle"><span class="icon-bell"></span></span>
+                                    <!--<span class="label label-danger circle"><span class="icon-bell"></span></span>-->
                                 <?php endif;?>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
@@ -173,7 +173,7 @@ $this->beginPage();
                                     <a href="/core/profile">
                                         <i class="icon-user"></i> My Profile
                                         <?php if(ProfileController::checkprofile() == false):?>
-                                            <span data-container="body" data-toggle="popover" data-placement="left" data-content="Not all fields are filled profile" class="label label-danger circle"><span class="icon-bell"></span></span>
+                                            <!--<span data-container="body" data-toggle="popover" data-placement="left" data-content="Not all fields are filled profile" class="label label-danger circle"><span class="icon-bell"></span></span>-->
                                         <?php endif;?>
                                         </a>
                                 </li>
