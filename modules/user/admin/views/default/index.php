@@ -60,7 +60,17 @@ $this->registerJs($msgJs);
                     'attribute' => 'username',
                     'format' => 'html',
                     'value' => function ($model) {
-                        return Html::a(Html::encode($model->username), ['update', 'id' => $model['id']]);
+                        $profile = '<a class="blank" href="/user/social/shared-profile?id='.$model->id.'" target="_blank" style="float:right">P</a>';
+                        $tool = \modules\tasks\models\UserTool::find()
+                            ->select('user_tool.*')
+                            ->join('INNER JOIN', 'benefit', 'benefit.user_tool_id = user_tool.id')
+                            ->where(['user_tool.user_id' => $model->id])->all();
+                        if($tool){
+                            $bus = '<a class="blank" href="/departments/business/shared-business?id='.$tool[0]->id.'" target="_blank" style="float:right; margin-right:7px">B</a>';
+                        }else{
+                            $bus = '';
+                        }
+                        return Html::a(Html::encode($model->username), ['update', 'id' => $model['id']]).$profile. '&nbsp&nbsp&nbsp'.$bus;
                     }
                 ],
                 [
@@ -166,6 +176,14 @@ $this->registerJs($msgJs);
         ]
     );
     ?>
+
+    <script>
+        $(function(){
+            $('.blank').each(function(){
+                $(this).attr('target', '_blank');
+            })
+        })
+    </script>
 
 
 

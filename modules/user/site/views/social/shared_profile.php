@@ -104,11 +104,11 @@ use modules\user\site\controllers\ProfileController;
         <div class="well">
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
-                <div class="site-name">Business Without BusYness</div>
+                <div class="site-name">Business without busyness</div>
             </div>
             <div class="page-content">
                 <section id="user">
-                    <img src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
+                    <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
                     <div class="name"><?php echo ($model->first_name)?$model->first_name:''?> <?php echo ($model->last_name)?$model->last_name:''?> <?php echo (!$model->first_name && !$model->last_name)?'User':''?></div>
                     <div class="adres"><i class="ico-location"></i> <?php echo ($model->country_id)?$model->country_title:''?><?php echo ($model->city_title)?', '.$model->city_title:''?><?php echo ($model->zip)?', '.$model->zip:''?></div>
                     <div class="status"><?php echo ($model->status)?$model->status:''?></div>
@@ -230,14 +230,14 @@ use modules\user\site\controllers\ProfileController;
                         <div class="small">
                             <?php if(($model->social_tw) && $model->social_tw != ''):?>
                                 <?php if($model->show_tw == 1):?>
-                                    <a href="<?php echo $model->social_tw?>" class="tw"></a>
+                                    <a target="_blank" href="<?php echo $model->social_tw?>" class="tw"></a>
                                 <?php else: ?>
                                     <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_tw?>" class="tw no_hover"></a>
                                 <?php endif;?>
                             <?php endif;?>
                             <?php if(($model->social_fb) && $model->social_fb != ''):?>
                                 <?php if($model->show_fb == 1):?>
-                                    <a href="<?php echo $model->social_fb?>" class="fb"></a>
+                                    <a target="_blank" href="<?php echo $model->social_fb?>" class="fb"></a>
                                 <?php else: ?>
                                     <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_fb?>" class="fb no_hover"></a>
                                 <?php endif;?>
@@ -245,7 +245,7 @@ use modules\user\site\controllers\ProfileController;
                             <?php if(($model->social_gg) && $model->social_gg != ''):?>
 
                                 <?php if($model->show_gg == 1):?>
-                                    <a href="<?php echo $model->social_gg?>" class="gp"></a>
+                                    <a target="_blank" href="<?php echo $model->social_gg?>" class="gp"></a>
                                 <?php else: ?>
                                     <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_gg?>" class="gp no_hover"></a>
                                 <?php endif;?>
@@ -253,7 +253,7 @@ use modules\user\site\controllers\ProfileController;
                             <?php if(($model->social_in) && $model->social_in != ''):?>
 
                                 <?php if($model->show_in == 1):?>
-                                    <a href="<?php echo $model->social_in?>" class="inst"></a>
+                                    <a target="_blank" href="<?php echo $model->social_in?>" class="inst"></a>
                                 <?php else: ?>
                                     <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_in?>" class="inst no_hover"></a>
                                 <?php endif;?>
@@ -261,7 +261,7 @@ use modules\user\site\controllers\ProfileController;
                             <?php if(($model->social_ln) && $model->social_ln):?>
 
                                 <?php if($model->show_ln == 1):?>
-                                    <a href="<?php echo $model->social_ln?>" class="lin"></a>
+                                    <a target="_blank" href="<?php echo $model->social_ln?>" class="lin"></a>
                                 <?php else: ?>
                                     <a onclick="return false" role="button" data-trigger="hover" data-toggle="popover" data-content="User has hidden this information" href="<?php echo $model->social_in?>" class="lin no_hover"></a>
                                 <?php endif;?>
@@ -273,7 +273,7 @@ use modules\user\site\controllers\ProfileController;
                 <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>
                     <div style="text-align:justify;">
-                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;" class="btn btn-primary" id="send-btn">Send</button>
+                        <label for="" id="comments-count" style="display:inline-block;"><span class="count"><?php echo $count?></span> Comments</label> <button style="display:inline-block;width:100px;background: transparent;" class="btn btn-primary" id="send-btn">Send</button>
                         <div style="display:inline-block;width:100%;"></div>
                     </div>
                     <div class="dinamic_comments">
@@ -286,13 +286,12 @@ use modules\user\site\controllers\ProfileController;
             <div class="page-footer">
                 <div class="text-center">
                     <div class="contacts">
-                        <label for="">Shared by</label>
+                        <label for="">Share on</label>
                         <div class="small">
                             <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
                             <?php $fblink =$_SERVER['REQUEST_URI'];?>
                             <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
                             <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
-
                         </div>
                     </div>
                     <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>

@@ -293,7 +293,7 @@ class DefaultController extends Controller
 
             $redirect_url = Url::toRoute(['/departments']);
             if($user->user_type == User::TYPE_SPECIALIST || $user->user_status >= User::STATUS_TEST_PASSED) {
-                $redirect_url = Url::toRoute(['/core/profile']);
+                $redirect_url = Url::toRoute(['/core/profile?user=spec']);
             }
 
             if($user->user_status == User::STATUS_ROADMAP_PASSED) {

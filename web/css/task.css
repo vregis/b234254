@@ -15,7 +15,10 @@
 }
 
 .task .mCSB_container{
-    padding: 5px 30px 30px;
+    padding: 5px 30px 5px;
+}
+.task .scroller .mCSB_container {
+    padding: 5px 5px 5px;
 }
 .idea-block {
     overflow: hidden;
@@ -457,8 +460,8 @@ span.title {
     line-height: 50px;
 }
 .task .title{
-    line-height: 28px;
-    margin-top: 16px;
+    line-height: 38px;
+    margin-top: 3px;
 }
 .task .name{
     overflow: hidden;
@@ -508,6 +511,8 @@ span.title {
     cursor: pointer;
     vertical-align: middle;
     margin-right: 5px;
+    padding-top:2px;
+    font-size:17px;
     /*line-height: initial !important;*/
 }
 .task-title .item input[type="text"]{
@@ -521,10 +526,8 @@ span.title {
 }
 .task-title button.offer{
     color:#818588;
-    font-size:11px;
     padding: 0px 15px;
     white-space: initial;
-    line-height: 12px;
     position: relative;
 }
 .task-title button.offer:hover{
@@ -540,7 +543,9 @@ span.title {
 .task-title .item.time .btn{
     font-size: 16px !important;
     text-align: center;
-    line-height: 37px !important;
+    padding-top: 3px;
+    font-size: 24px !important;
+    /*line-height: 37px !important;*/
 }
 /*.task-title .item.date .icon:hover{
     box-shadow: inset 0 0 10px 5px #fff !important;
@@ -813,12 +818,12 @@ span.title {
     /*position: absolute;*/
     border: 1px solid #999;
     padding: 2px 0px;
-    font-size: 8px;
-    width: 13px;
-    height: 13px;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
     text-align: center;
     display: inline-block;
-    line-height: 100%;
+    line-height: 14px;
     top: 0px;
     margin-top: 4px;
 }
@@ -835,8 +840,9 @@ span.title {
 .ui-datepicker td {
     border: 1px solid #d7d7d7;
 }
-.ui-datepicker-week-end {
+thead .ui-datepicker-week-end {
     background-color: #f7f8f9;
+    border-radius:3px 3px 0 0 !important;
 }
 .ui-datepicker .ui-datepicker-header {
     padding: 0;
@@ -895,16 +901,17 @@ span.title {
     content:"";
     display:block;
     position: absolute;
-    top:-11px;
+    top:-12px;
     width:24px;
     height:12px;
     background: url("/images/corner.png") 0 0 no-repeat;
+    left: 780px !important;
 }
 #delegate > .arrow,#counter > .arrow{
     content:"";
     display:block;
     position: absolute;
-    top:-11px;
+    top:-10px;
     width:24px;
     height:12px;
     background: url("/images/corner2.png") 0 0 no-repeat;
@@ -918,7 +925,7 @@ span.title {
     color:#fff !important;
 }
 .ui-datepicker table {
-    margin: 0.2em 0px 0.4em;
+    margin: 0.2em 0px 0em;
 }
 .ui-widget-content .ui-state-hover, .ui-widget-content .ui-state-focus{
     /*background: #5184F3;*/
@@ -935,7 +942,7 @@ span.title {
     border-bottom: 0;
 }
 #delegate thead tr th,#delegate tfoot tr th,#counter thead tr th,#counter tfoot tr th{
-    background: #ebebeb;
+    background: #f5f5f5;
     font-weight: normal;
 }
 #counter thead tr th,#counter tfoot tr th{
@@ -956,9 +963,9 @@ span.title {
 #delegate .gant_avatar,#counter .gant_avatar{
     margin:0;
 }
-#delegate table,#counter table{
+/*#delegate table,#counter table{
     border-collapse: collapse;
-}
+}*/
 .offerall{
     width:32px;
     font-size: 18px !important;
@@ -995,7 +1002,7 @@ span.title {
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
     max-width:433px;
     left:0 !important;
-    margin-top: -65px !important;
+    top: 34px !important;
 }
 .invite-by-email+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
     /*background: #ebebeb;*/
@@ -1302,6 +1309,7 @@ span.title {
     .dropselect1{
         min-width:150px !important;
         width:150px !important;
+        z-index: 99999999;
     }
     .dropselect .popover-content,.dropselect1 .popover-content{
         padding: 0;
@@ -1486,12 +1494,15 @@ table th.rate .fa{
         border-radius:3px;
         margin-bottom:1px;
     }
-    .table thead tr > td:first-child,.table thead tr > th:first-child{
+/*.table thead tr > td:first-child,.table thead tr > th:first-child{
     border-top-left-radius:10px !important;
-}
+}*/
 .table{
-    border-collapse:initial !important;
     border-radius:10px !important;
+    border-collapse: initial;
+}
+.table thead tr > td:first-child,.table thead tr > th:first-child{
+    border-top-left-radius:10px !important;
 }
 .table thead tr > td:last-child,.table thead tr > th:last-child{
     border-top-right-radius:10px !important;
@@ -1506,11 +1517,8 @@ table th.rate .fa{
     border-right:0 !important;
     border-bottom: 0 !important;
 }
-.table.with-foot td:last-child{
-    border-right:1px solid #d7d7d7 !important;
-}
 .table.with-foot td:first-child{
-    /*border-left:0 !important;*/
+    border-left:0 !important;
 }
 
 #input-rate-start, #input-rate-end {
@@ -1521,14 +1529,135 @@ table th.rate .fa{
     padding: 15px 0px 15px;
 }
 .tab-content > .tab-pane .item{
-    width: 50px;
-    height:50px;
-    font-size:24px;
-    line-height:50px;
-    margin-bottom:10px;
+    width: 60px;
+    height:60px;
+    font-size:36px;
+    line-height:36px;
+    margin:10px;
     float: left;
     text-align: center;
-    background: #f5f5f5;
+    background: none;
     padding: 10px;
-    line-height: 36px;
+    text-decoration:none;
+    border:1px solid #7b7f83;
+    border-radius:10px;
+    color:#7b7f83;
+}
+.tab-content > .tab-pane .item:hover{
+    border-color:#5184f3;
+    background:#5184f3;
+    color:#fff;
+}
+#delegate thead tr th.status i{
+    margin-left:8px;
+    font-size: 16px;
+}
+.task-body .block.desc .content .mCSB_scrollTools{
+    right:0 !important;
+}
+.dropdown-menu.open{
+    padding: 10px;
+    border-radius: 10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea;
+    background:#fff;
+    overflow: initial !important;
+    margin-top: 9px !important;
+    top: 100% !important;
+    max-height: 272px !important;
+    min-height: auto !important;
+    width: 100%;
+}
+
+.dropdown-menu.open:before{
+    content: " ";
+        position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    left: auto !important;
+    right:6px !important;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #dae2ea;
+        top: -23px !important;
+        border-width: 11px !important;
+}
+.dropdown-menu.open:after{
+    content: " ";
+    margin-left: -10px;
+    border-top-width: 0;
+    border-bottom-color: #FFF !important;
+    border-width: 10px !important;
+    content: "";
+    position: absolute;
+    top: -20px !important;
+    left: auto !important;
+    right:7px !important;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner{
+    overflow-y: visible !important;
+    min-height: auto !important;
+}
+.bootstrap-select .dropdown-menu li a{
+    border-radius: 3px !important;
+    line-height:30px !important;
+    white-space:initial !important;
+    padding: 0 5px;
+    color:#5a5a5a;
+}
+#datepicker{
+    border:1px solid #d7d7d7;
+    border-radius: 10px !important;
+    padding:0 20px 20px;
+}
+.popover.material{
+    min-width:225px !important;
+    width:225px !important;
+    word-break: break-all;
+}
+.ui-datepicker tbody tr:first-child td:first-child{
+    border-top-left-radius:3px !important;
+}
+.ui-datepicker tbody tr:first-child td:last-child{
+    border-top-right-radius:3px !important;
+}
+.ui-datepicker tbody tr:last-child td:first-child{
+    border-bottom-left-radius:3px !important;
+}
+.ui-datepicker tbody tr:last-child td:last-child{
+    border-bottom-right-radius:3px !important;
+}
+.ui-datepicker tbody td{
+    border-right:0 !important;
+    border-bottom:0 !important;
+    opacity:1 !important;
+}
+.ui-state-disabled span, .ui-widget-content .ui-state-disabled span, .ui-widget-header .ui-state-disabled span{
+    color:rgba(90, 90, 90, 0.35) !important;
+}
+.ui-datepicker tbody tr:last-child td{
+    border-bottom:1px solid #d7d7d7 !important;
+}
+.ui-datepicker tbody td:last-child{
+    border-right:1px solid #d7d7d7 !important;
+}
+.ui-datepicker table{
+    border-collapse:initial;
+}
+#datepicker > .arrow{
+    left: 254px !important;
+}
+.task .dropdown-menu .mCSB_container{
+    padding:0 !important;
+}
+.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"]{
+    display:none;
 }

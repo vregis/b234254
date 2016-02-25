@@ -275,7 +275,8 @@ and dependencies (minified).
 				/*
 				auto-scroll to elements with focus
 				*/
-				autoScrollOnFocus:"input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']",
+				// autoScrollOnFocus:"input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']",
+				autoScrollOnFocus:false,
 				/*
 				auto-update scrollbars on content, element or viewport resize
 				should be true for fluid layouts/elements, adding/removing content dynamically, hiding/showing elements, content with images etc.

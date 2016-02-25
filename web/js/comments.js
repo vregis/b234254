@@ -1,6 +1,6 @@
 
-$(function(){ alert('sadjg');
-  $(document).on('click', '#send-btn', function(e){
+$(function(){
+  $(document).on('click', '#send-btn', function(e){ alert('asjkdj');
       e.preventDefault();
       var text = $('#comment_area').val();
       if(text == ''){

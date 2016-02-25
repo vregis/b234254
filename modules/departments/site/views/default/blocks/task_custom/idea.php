@@ -80,7 +80,7 @@ use yii\widgets\ActiveForm;
                 <? require __DIR__.'/idea/idea_block.php'; ?>
                 <?= Html::submitButton('Continue', [
                     'class' => 'btn btn-success btn-lg',
-                    'style' => 'margin:30px auto 0;'
+                    'style' => 'margin:0px auto 0;'
                 ]) ?>
             </div>
         </div>
@@ -91,6 +91,9 @@ use yii\widgets\ActiveForm;
 </div>
 
 <style>
+.task-body .block.desc .content{
+        border-radius: 10px 10px 0px 10px !important;
+    }
     .b-page-checkbox-wrap .md-radio:nth-child(1) label > .box{
         border-color: #26C281 !important;
     }
@@ -108,11 +111,51 @@ use yii\widgets\ActiveForm;
         height:75px;
         resize:none;
     }
+    .task .mCSB_container{
+        padding:0;
+    }
+     .task .mCSB_container a{
+        color:#5a5a5a;
+     }
 </style>
 <script>
     $( document ).ready(function() {
         $.each($(".b-page-checkbox-wrap .md-radio .task-name"),function(){
             $(this).css({'margin-left':"-"+$(this).width() / 8+"px"});
+        });
+        setTimeout(function(){
+            $.each($('.dropdown-menu.inner'),function(){
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+            });
+        },400);
+        $.each($('.dropdown-menu.inner'),function(){
+            var els = $(this).find('li');
+            console.log(els.length);
+            if(els.length > 8){
+                $(this).mCustomScrollbar({
+                    setHeight: 252,
+                    theme:"dark",
+                    scrollbarPosition:"outside"
+                });  
+            }else{
+                $(this).mCustomScrollbar({
+                    theme:"dark",
+                    scrollbarPosition:"outside"
+                });  
+            }
         });
     });
 </script>

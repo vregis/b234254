@@ -1,3 +1,4 @@
 /yii2/*
 /vendor/*
 /config/*
+*.log

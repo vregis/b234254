@@ -12,7 +12,7 @@ use yii\helpers\Url;
         <div class="tab-content">
             <div role="tabpanel" class="active" id="idea">
                 <div class="idea">
-                    <div class="idea-title title text-center">
+                    <div class="idea-title title text-center" style="margin-top: -10px;">
                         Idea description
                     </div>
                     <div class="row form-group">
@@ -60,8 +60,8 @@ use yii\helpers\Url;
                     </div>
                 </div>
                 <div class="button-panel" style="overflow: hidden">
-                    <a style="margin:30px auto;" onclick="return false" href="#<? //= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary static btn-lg pull-left">Share</a>
-                    <a style="margin:30px auto;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right">Close</a>
+                    <a style="margin:15px auto 0;" target="_blank" href="<?= Url::toRoute(['/departments/business/shared-business?id='.$tool->id.'']) ?>" class="btn btn-primary btn-lg pull-left">Share</a>
+                    <a style="margin:15px auto 0;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right">Close</a>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="statistic">
@@ -111,7 +111,7 @@ use yii\helpers\Url;
         color:#5a5a5a;
         font-size:18px; 
         text-transform: uppercase;
-        line-height:50px;
+        line-height:36px;
     }
     .btn-primary{
         width:100px;
@@ -156,14 +156,91 @@ use yii\helpers\Url;
     .well{
         position: relative;
         border-top-left-radius:0 !important;
+        padding: 20px !important;
     }
+.dropdown-menu.open{
+    padding: 10px;
+    border-radius: 10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea;
+    background:#fff;
+    overflow: initial !important;
+    margin-top: 9px !important;
+    top: 100% !important;
+    max-height: 272px !important;
+    min-height: auto !important;
+    width: 100%;
+}
+
+.dropdown-menu.open:before{
+    content: " ";
+        position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    left: auto !important;
+    right:6px !important;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #dae2ea;
+        top: -23px !important;
+        border-width: 11px !important;
+}
+.dropdown-menu.open:after{
+    content: " ";
+    margin-left: -10px;
+    border-top-width: 0;
+    border-bottom-color: #FFF !important;
+    border-width: 10px !important;
+    content: "";
+        position: absolute;
+        top: -20px !important;
+        left: auto !important;
+        right:7px !important;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner{
+    overflow-y: visible !important;
+    min-height: auto !important;
+}
+.bootstrap-select .dropdown-menu li a{
+    border-radius: 3px !important;
+    line-height:30px !important;
+    white-space:initial !important;
+    padding: 0 5px;
+    color:#5a5a5a;
+}
 </style>
 <script>
 $(document).ready(function(){
-        $('.page-content').mCustomScrollbar({
+    $('.page-content').mCustomScrollbar({
         setHeight: $('.page-content').css('minHeight'),
         theme:"dark"
     }); 
+        setTimeout(function(){
+            $.each($('.dropdown-menu.inner'),function(){
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+            });
+        },400);
 });
     // $(".selectpicker").selectpicker({});
     $("#find_job").on('show.bs.collapse',function(){

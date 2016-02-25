@@ -16,7 +16,7 @@ function Task(task_user_id, is_my, is_custom) {
         theme:"dark",
         axis:"y",
         setHeight:285,
-        scrollbarPosition: "relative"
+        scrollbarPosition: "outside"
     });
     var offerall_btn = $('.offerall-btn');
     offerall_btn.off();
@@ -371,6 +371,34 @@ function Task(task_user_id, is_my, is_custom) {
                 $(".invite-by-email").popover('hide');
                 $("#advanced-search-form").show();
                 $('#advanced-search-form .selectpicker').selectpicker();
+                $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside",
+                            live: true
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside",
+                            live: true
+                        });  
+                    }
+                    $(this).mCustomScrollbar('update');
+                });
+                $("body").on("click", function(e){
+                    $('.invite-by-email, .advanced-search-btn').each(function () {
+                        //the 'is' for buttons that trigger popups
+                        //the 'has' for icons within a button that triggers a popup
+                        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('#task .popover').has(e.target).length === 0) {
+                            $(this).popover('hide');
+                        }
+                    });
+                });
             });
         });
         delegate.on('hide.bs.collapse',function(){
@@ -672,11 +700,17 @@ function Task(task_user_id, is_my, is_custom) {
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
                         console.log(response);
                         if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
+
                             // Сюда впили переход на серч
                             console.log('empty offers');
                             $("#offered-block").removeClass('active');
                             $("#search-block").addClass('active');
-                            $("a[href='#search-block]").parents('li').addClass('active');
+                            $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
+                                // $("#status-menu").show();
+                                $("a[href='#search-block']").tab('show');
+                                $("#btn-offered-block .label").remove();
+                                // $(".dropmenu1.status").popover('destroy');
+                            }).popover('hide');
                         }
                     }
                 }
