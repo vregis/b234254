@@ -108,6 +108,65 @@ class TaskComponent extends Component
             ]
         );
     }
+
+    public function get_delegate_users_advanced($task_user_id, $post) {
+        $is_advanced = false;
+        if(isset($post['is_advanced'])) {
+            $is_advanced = filter_var($post['is_advanced'], FILTER_VALIDATE_BOOLEAN);
+        }
+
+
+        $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();
+        $task_user = TaskUser::find()->select('*,task_user.id id,task.specialization_id spec')
+            ->join('JOIN','task','task.id = task_user.task_id')
+            ->where(['task_user.id' => $task_user_id])->one();
+
+        $delegate_tasks = DelegateTask::find()
+            ->where(['task_user_id' => $task_user_id])
+            ->andWhere(['!=','status',DelegateTask::$status_done])
+            ->andWhere(['!=','delegate_task.status',DelegateTask::$status_cancel])
+            ->all();
+
+        $delegate_user_ids = [];
+        foreach ($delegate_tasks as $d_task) {
+            $delegate_user_ids[$d_task->delegate_user_id] = '';
+        }
+
+        $users = [];
+        $exclude_user_ids = $delegate_user_ids;
+        $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
+        $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
+        if (isset($post['rate_start']) && $post['rate_start'] != '' && isset($post['rate_end']) && $post['rate_end'] != '') {
+            $this->setFindUsersCondition($users, $exclude_user_ids, ['between', 'user_profile.rate', $post['rate_start'], $post['rate_end']]);
+        }
+        if (isset($post['level']) && $post['level'] != '' && $post['level'] != '0') {
+            $this->setFindUsersCondition($users, $exclude_user_ids,['skill_list.id' => $post['level']]
+            );
+        }
+        if (isset($post['city']) && $post['city'] != '') {
+            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_profile.city_title' => $post['city']]);
+        }
+        if (isset($post['country']) && $post['country'] != '') {
+            $this->setFindUsersCondition($users, $exclude_user_ids,['user_profile.country_id' => $post['country']]
+            );
+        }
+        if (isset($post['skills_ids']) && $post['skills_ids'] != '' && count($post['skills_ids']) > 0) {
+            foreach($post['skills_ids'] as $skill) {
+                $this->setFindUsersCondition($users, $exclude_user_ids,['user_skills.skill_tag' => intval($skill)]);
+            }
+        }
+        $this->setFindUsersCondition($users, $exclude_user_ids);
+        $this->setFindUsersCondition($users, $exclude_user_ids);
+
+        return Yii::$app->controller->renderPartial('blocks/task/delegate_users',
+            [
+                'users' => $users,
+            ]
+        );
+    }
+
+
+
     public function get_task_user_logs($task_user_id) {
         $taskUserLogs = TaskUserLog::find()->where(['task_user_id' => $task_user_id])->all();
         return Yii::$app->controller->renderPartial('blocks/task/logs',
@@ -163,6 +222,30 @@ class TaskComponent extends Component
         $response['html'] = $this->get_delegate_users($post['task_user_id'], $post);
         return json_encode($response);
     }
+
+    public function ajaxGet_delegate_users_advanced()
+    {
+        $post = Yii::$app->request->post();
+        $is_my = filter_var($post['is_my'], FILTER_VALIDATE_BOOLEAN);
+
+        if($is_my) {
+            $task_user_id = $post['task_user_id'];
+            $task_user = TaskUser::find()->where(['id' => $task_user_id])->one();
+            if ($task_user) {
+                $task_user->time = $post['time'];
+                $task_user->price = $post['price'];
+                $task_user->rate = intval($task_user->price/$task_user->time);
+                $task_user->save(false);
+            }
+        }
+
+        $response['error'] = false;
+        $response['html'] = $this->get_delegate_users_advanced($post['task_user_id'], $post);
+        return json_encode($response);
+    }
+
+
+
     public function render_delegate_active_users($task_user_id, $delegate_task = null, $delegate_tasks = null) {
         if(!$delegate_task) {
             $delegate_task = DelegateTask::getCurrentDelegateTask($task_user_id, true);

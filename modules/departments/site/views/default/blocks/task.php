@@ -145,7 +145,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                                 <div class="row form-group">
                                                     <div class="col-sm-12">
                                                         <div class="pull-right">
-                                                            <button type="submit" id="advanced-search-send" class="btn btn-primary">Search</button>
+                                                            <button type="submit" id="advanced-search-send-task" class="btn btn-primary">Search</button>
                                                         </div>
                                                     </div>
                                                 </div>

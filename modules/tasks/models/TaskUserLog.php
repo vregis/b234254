@@ -9,7 +9,7 @@ class TaskUserLog extends \yii\db\ActiveRecord
 {
     public static $log_start = 'Task obtained';
     public static $log_offer = 'Task offered %s';
-    public static $log_cancel_offer = '%s reject offer';
+    public static $log_cancel_offer = '%s cancel delegate';
     public static $log_cancel_offer_specialist = 'Offer cancel for: %s';
     public static $log_counter_offer = '%s made an offer';
     public static $log_cancel_counter_offer = 'Offer %s canceled';
