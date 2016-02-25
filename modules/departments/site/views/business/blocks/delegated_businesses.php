@@ -20,7 +20,7 @@ use yii\helpers\Url;
         <th width="130"> Pending </th>
         <th width="130"> New </th>
         <th width="130"> Active </th>
-        <th width="130"> Complited </th>
+        <th width="130"> Completed </th>
     </tr>
     </thead>
     <tbody>

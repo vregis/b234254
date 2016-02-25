@@ -41,7 +41,7 @@
 	/*padding: 6px 6px 6px 6px !important;*/
 }
 table thead tr th,table tfoot tr th{
-    background: #ebebeb;
+    background: #f5f5f5;
     font-weight: normal;
 }
 table thead tr th{
@@ -139,4 +139,7 @@ table tbody tr td .label{
 }
 #find_job .advanced-search-btn+.popover{
     left:0 !important;
+}
+.dropdown-menu .mCSB_container{
+    padding:0 !important;
 }

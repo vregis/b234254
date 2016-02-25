@@ -30,8 +30,8 @@
                             </div>
                         </div>
                     </th>
-                    <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="time">Time <i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-down"></i></th>
                     <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
@@ -97,8 +97,8 @@
                             </div>
                         </div>
                     </th>
-                    <th width="120" class="time">Time <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="time">Time <i class="fa fa-angle-down"></i></th>
+                    <th width="120" class="rate">Rate / H <i class="fa fa-angle-down"></i></th>
                     <th class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Pending <i class="fa fa-angle-down"></i></th>
                 </tr>
                 </thead>
@@ -136,13 +136,10 @@
     }
     table th.rate .fa,table th.time .fa{
         position:absolute;
+        margin-top:4px;
+    }
+    table th.rate,table th.time{
         cursor:pointer;
-    }
-    table th.rate .fa-angle-up,table th.time .fa-angle-up{
-        margin-top:-4px;
-    }
-    table th.rate .fa-angle-down,table th.time .fa-angle-down{
-        margin-top:10px;
     }
     table th.rate{
         text-align:right;
@@ -326,7 +323,12 @@
                 placement:"top",
                 html:true
             });
-
+            $("table th.rate,table th.time").click(function(){
+                if($(this).find('i').hasClass('fa-angle-down'))
+                    $(this).find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
+                else
+                    $(this).find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
+            });
             $(".gant_avatar").popover({
                 container:$("body"),
                 html:true,
@@ -444,25 +446,29 @@
             trigger:"click",
             content:$("#advanced-search-form")
         });
-        $(".advanced-search-btn").on('show.bs.popover',function(){
+
+        $(".advanced-search-btn").on('show.bs.popover',function(e){
             $('#advanced-search-form-dom').html('');
             $("#advanced-search-form").show();
-            // $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
-            //     var els = $(this).find('li');
-            //     console.log(els.length);
-            //     if(els.length > 8){
-            //         $(this).mCustomScrollbar({
-            //             setHeight: 250,
-            //             theme:"dark",
-            //             scrollbarPosition:"outside"
-            //         });  
-            //     }else{
-            //         $(this).mCustomScrollbar({
-            //             theme:"dark",
-            //             scrollbarPosition:"outside"
-            //         });  
-            //     }
-            // });
+
+            $.each($('#advanced-search-form .dropdown-menu.inner'),function(){
+                // e.preventDefault();
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+                $(this).mCustomScrollbar('update');
+            });
         });
         $(".advanced-search-btn").on('hide.bs.popover',function(){
             $('#advanced-search-form-dom').html($('.popover.in').html());
@@ -550,13 +556,17 @@
             setHandlerPagination(_this.closest('.table'));
             var on = $('.on');
             on.off();
-            on.on('click',function(e) { //click for on
+            on.on('click',function(e) {
                 var count = $(this).closest('div').find('.on').length;
                 if(count > 1) {
                     $(this).removeClass('on');
                     $(this).addClass('off');
                     if($(this).closest('.filter-task').length > 0) {
-                        get_user_task(false);
+                        if($(this).closest('#request-block').length > 0){
+                            get_user_task_pending(false);
+                        }else{
+                            get_user_task(false);
+                        }
                     }
                     else {
                         get_user_request(false);
@@ -571,9 +581,16 @@
                 var is_dep = false;
                 if($(this).closest('.deps-menu').length > 0) {
                     is_dep = true;
+                    var dep_idd = $(this).attr('data-id');
                 }
+
                 if($(this).closest('.filter-task').length > 0) {
-                    get_user_task(false, is_dep); //this
+                    if($(this).closest('#request-block').length > 0){
+                        get_user_task_pending(false, is_dep, dep_idd);
+                    }else{
+                        get_user_task(false, is_dep);
+                    }
+
                 }else {
                     get_user_request(is_dep);
                 }
@@ -710,16 +727,13 @@
                                 // Сюда впили переход на серч 
                                 $("#task-block").addClass('in active');
                                 $("#request-block").removeClass('in active');
+                                $("#btn-task-block").parents('li').addClass('active');
                                 $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
-                                    // $("#status-menu").show();
                                     $("#btn-request-block").parent().removeClass('active');
                                     $("#btn-task-block").parent().addClass('active');
                                     $("#btn-task-block").tab('show');
-                                    console.log($("#btn-request-block").parent().attr('class'));
-                                    // $(".dropmenu1.status").popover('destroy');
+                                    console.log($("#btn-request-block").parent().attr('class'));                     
                                 }).popover('hide');
-
-                                
                             }
                         }
                     }
@@ -805,18 +819,24 @@
             if(is_dep == undefined) {
                 is_dep = false;
             }
+            if(is_dep == true){
+                var click_dep = 1;
+            }else{
+                var click_dep = 0;
+            }
             $.ajax({
                 url: '/departments/business/user-task',
                 type: 'post',
                 dataType: 'json',
                 data: Object.assign({
                     _csrf: $("meta[name=csrf-token]").attr("content"),
-                    is_dep: is_dep
+                    is_dep: is_dep,
+                    click_dep: click_dep
                 }, get_find_params(is_advance)),
                 success: function (response) {
                     if (!response.error) {
-                        $('.filter-task .deps-menu').html(response.html_deps_filter);
-                        $('.filter-task .spec-menu').html(response.html_specials_filter);
+                        $('#user_task').find('.filter-task .deps-menu').html(response.html_deps_filter);
+                        $('#user_task').find('.filter-task .spec-menu').html(response.html_specials_filter);
                         set_user_task($('#user_task'), response.html_user_task);
                         set_user_request($('#user_request'), response.html_user_request);
                         $('#delegated_businesses').html(response.html_delegated_businesses);
@@ -824,6 +844,50 @@
                 }
             });
         }
+
+
+        function get_user_task_pending(is_advance, is_dep, dep_idd) {
+            if(is_advance == undefined) {
+                is_advance = false;
+            }
+            if(is_dep == undefined) {
+                is_dep = false;
+            }
+            if(is_dep == true){
+                var click_dep = 1;
+            }else{
+                var click_dep = 0;
+            }
+            if(dep_idd == undefined){
+                dep_idd = false;
+            }
+            console.log(get_find_params());
+            $.ajax({
+                url: '/departments/business/user-task-pending',
+                type: 'post',
+                dataType: 'json',
+                data: Object.assign({
+                    _csrf: $("meta[name=csrf-token]").attr("content"),
+                    is_dep: is_dep,
+                    click_dep: click_dep,
+                    dep_idd:dep_idd
+                }, get_find_params()),
+                success: function (response) {
+                    if (!response.error) {
+                        $('#user_request').find('.filter-task .deps-menu').html(response.html_deps_filter);
+                        $('#user_request').find('.filter-task .spec-menu').html(response.html_specials_filter);
+                        set_user_task($('#user_task'), response.html_user_task);
+                        set_user_request($('#user_request'), response.html_user_request);
+                        $('#delegated_businesses').html(response.html_delegated_businesses);
+                    }
+                }
+            });
+        }
+
+
+
+
+
         function get_user_request(is_dep) {
             if(is_dep == undefined) {
                 is_dep = false;
@@ -880,5 +944,10 @@
                 }
             });
         });
+
+
+        $('.time').find('.fa-angle-down').on('click', function(){
+
+        })
     });
 </script>

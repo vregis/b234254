@@ -42,6 +42,8 @@ class DelegateTask extends \yii\db\ActiveRecord
     public $spec_id;
     public $dname;
     public $uid;
+    public $spec_name;
+    public $description;
 
     public function rules()
     {

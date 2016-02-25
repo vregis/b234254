@@ -14,6 +14,16 @@ class UserTool extends \yii\db\ActiveRecord
     const STATUS_IDEA_SHARED = 3;
 
     public $name;
+    public $idea_name;
+    public $idea_description_like;
+    public $idea_description_problem;
+    public $industry_name;
+    public $benefit_first;
+    public $benefit_second;
+    public $benefit_third;
+
+
+
 
     public function rules()
     {

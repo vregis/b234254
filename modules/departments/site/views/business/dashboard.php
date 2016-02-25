@@ -95,7 +95,7 @@ $this->registerCssFile("/css/task.css");
         </div>
         <div class="profile text-center">
             <div class="caption">Founder</div>
-            <img class="gant_avatar" src="<?php echo $profile->avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$profile->avatar:'/images/avatar/nophoto.png'?>">
+            <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="gant_avatar" src="<?php echo $profile->avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$profile->avatar:'/images/avatar/nophoto.png'?>">
             <div class="field-name"><?= $profile->first_name && $profile->last_name ? $profile->first_name.' '.$profile->last_name : $user->email ?></div>
             <div class="location"><?= $profile->country ? $profile->country : '' ?><?= $profile->city_title ? ($profile->country ? ', ' : '').$profile->city_title : '' ?></div>
         </div>

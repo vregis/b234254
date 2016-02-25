@@ -378,7 +378,7 @@ if($task->specialization_id > 0) {
 	                            <? if($is_my) : ?>
 	                                <? require_once __DIR__.'/task/delegate_active_users.php' ?>
 	                            <? else: ?>
-	                                <img class="active gant_avatar" src="<?php echo $delegate_user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$delegate_user->ava:'/images/avatar/nophoto.png'?>">
+	                                <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $delegate_user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$delegate_user->ava:'/images/avatar/nophoto.png'?>">
 	                            <? endif; ?>
 	                        </div>
 	                        <div class="block chat">

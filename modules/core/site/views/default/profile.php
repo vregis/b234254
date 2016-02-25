@@ -53,7 +53,7 @@ $this->registerJs($msgJs);
                     <tr>
                         <td width="139">
                             <div class="profile-userpic">
-                                <img style="height:134px; width:134px;margin-right:22px;" src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-responsive avatar_image" alt="">
+                                <img onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="height:134px; width:134px;margin-right:22px;" src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" class="img-responsive avatar_image" alt="">
                                 <?php $file = new \modules\user\models\Avatar();?>
                                 <?php $form = ActiveForm::begin(['action'=>'/core/changeavatar', 'options' => ['enctype' => 'multipart/form-data', 'class'=>'avatar']]) ?>
                                 <?= $form->field($file, 'file')->fileInput(['style'=>'', 'class'=>'upload'])->label(false) ?>
@@ -404,7 +404,7 @@ $this->registerJs($msgJs);
                     <a target="_blank" href="/user/social/shared-profile?id=<?php echo Yii::$app->user->id?>" class="btn btn-primary share" style="margin-top: 15px;width:100px;margin-left:200px;">Share</a>
                 </div>
                 <div class="pull-right">
-                    <button class="btn btn-success save" style="margin-top: 15px;width:100px;margin-right:200px;">Save</button>
+                    <button class="btn btn-success save" style="margin-top: 15px;width:100px;margin-right:200px;">Continue</button>
                 </div>
             </div>
         </div>

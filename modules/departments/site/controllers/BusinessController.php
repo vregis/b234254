@@ -3,6 +3,8 @@
 namespace modules\departments\site\controllers;
 
 use modules\core\site\base\Controller;
+use modules\core\site\comments\BusinessComments;
+use modules\departments\models\BusinessCommentary;
 use modules\departments\models\BenefitLike;
 use modules\departments\models\Department;
 use modules\departments\models\IdeaLike;
@@ -28,6 +30,7 @@ use Yii;
 use yii\helpers\Url;
 use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
+use modules\core\site\comments\Comments;
 
 /**
  * Class DefaultController
@@ -49,6 +52,7 @@ class BusinessController extends Controller
                         'actions' => [
                             'index',
                             'user-task',
+                            'user-task-pending',
                             'user-request',
                             'request',
                             'reject',
@@ -66,6 +70,10 @@ class BusinessController extends Controller
                             'select-tool',
                             'dashboard-editing',
                             'dashboard-save',
+                            'pagination',
+                            'add-comment',
+                            'add-like',
+                            'add-like-idea',
                             'shared-business'
                         ],
                         'roles' => ['@']
@@ -82,6 +90,11 @@ class BusinessController extends Controller
                 ]
             ],
         ];
+    }
+
+    public function beforeAction($action) {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
     }
 
     public function actionIndex()
@@ -122,7 +135,7 @@ class BusinessController extends Controller
         $specials_filter = $this->render_specials_filter($post, $user_specials);
 
         $deps_filter_pending = $this->render_deps_filter_pending($post, $user_special_pending);
-        $specials_filter_pending = $this->render_specials_filter($post, $user_specials);
+        $specials_filter_pending = $this->render_specials_filter_pending($post, $user_special_pending);
 
         $users_special_request = $user_specials;
         foreach($users_special_request as $key => $user_special) {
@@ -174,7 +187,7 @@ class BusinessController extends Controller
             ->join('LEFT OUTER JOIN','geo_country', 'geo_country.id = user_profile.country_id')
             ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id');
         foreach($exclude_user_ids as $exclude_user_id)
-        $users_find->where(['not in','user.id',$exclude_user_ids]);
+            $users_find->where(['not in','user.id',$exclude_user_ids]);
         if($where) {
             $users_find->andWhere($where);
         }
@@ -231,8 +244,9 @@ class BusinessController extends Controller
         $user_specials = UserSpecialization::find()->select('user_specialization.*, specialization.name name, specialization.department_id dep_id,department.name dname')
             ->join('JOIN','specialization','specialization.id = user_specialization.specialization_id')
             ->join('JOIN','department','department.id = specialization.department_id')
-            ->join('JOIN', 'task', 'task.specialization_id = specialization.id')
+            ->join('JOIN','task','task.specialization_id = specialization.id')
             ->where(['user_specialization.user_id' => Yii::$app->user->id])->all();
+
         foreach($user_specials as $key => $user_special) {
             $is_find = false;
             foreach($user_do as $do) {
@@ -250,24 +264,26 @@ class BusinessController extends Controller
     }
 
 
-    private function get_user_specials_pending($spec) {
+    private function get_user_specials_pending($spec, $is_dep = false) {
         $user_do = UserDo::find()->where(['user_id' => Yii::$app->user->id])->all();
-        $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname')
+        $user_specials = Specialization::find()->select('specialization.name name, specialization.department_id dep_id,department.name dname, specialization.id as id')
             ->join('JOIN','department','department.id = specialization.department_id')
-            ->where(['specialization.id' => $spec])->all();
-       /* foreach($user_specials as $key => $user_special) {
-            $is_find = false;
-            foreach($user_do as $do) {
-                if($do->status_sell == 1 && $user_special->dep_id == $do->department_id && $user_special->dep_hide == 0) {
-                    $is_find = true;
-                    break;
-                }
-            }
-            if(!$is_find) {
-                unset($user_specials[$key]);
-                continue;
-            }
-        }*/
+            ->where(['specialization.id' => $spec])
+            ->all();
+
+         foreach($user_specials as $key => $user_special) {
+             $is_find = false;
+             foreach($user_do as $do) {
+                 if($do->status_sell == 1 && $user_special->dep_id == $do->department_id && $user_special->dep_hide == 0) {
+                     $is_find = true;
+                     break;
+                 }
+             }
+             if(!$is_find) {
+                 unset($user_specials[$key]);
+                 continue;
+             }
+         }
         return $user_specials;
     }
 
@@ -344,14 +360,18 @@ class BusinessController extends Controller
             }
         }
     }
-    private function render_user_task($post = []) {
+    private function render_user_task($post = [], $is_dep = false) {
         $user_specials = $this->get_user_specials();
         $this->apply_filters($user_specials, $post);
-        foreach($user_specials as $key => $user_special) {
-          /*  if($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
-                unset($user_specials[$key]);
-                continue;
-            }*/
+
+        if($is_dep != true) {
+            foreach ($user_specials as $key => $user_special) {
+                if ($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
+                    unset($user_specials[$key]);
+                    continue;
+                }
+            }
+
         }
 
         $special_ids = [];
@@ -460,29 +480,183 @@ class BusinessController extends Controller
                 'user_specials' => $user_specials
             ]);
     }
+
+    private function render_specials_filter_pending($post = [],$user_specials = null,$is_dep = false) {
+        if(!$user_specials) {
+            $user_specials = $this->get_user_specials();
+        }
+        if(!isset($post['dep_idd'])){
+            $post['dep_idd'] = false;
+        }
+        $this->apply_filters($user_specials, $post, true,$is_dep);
+        return $this->renderPartial('blocks/specials_filter',
+            [
+                'user_specials' => $user_specials,
+                'dep_idd' => $post['dep_idd']
+            ]);
+    }
+
+    private function render_user_request_pending($post, $users = null, $is_dep) {
+        if(!$users) {
+            $users = $this->get_user_request();
+        }
+
+
+        if($is_dep == true){
+            $prepare_spec = [];
+            $i = 0;
+            foreach($users as $us){
+                $prepare_spec[$i] = $us->id;
+                $i++;
+            }
+            $user_specials = $this->get_user_specials_pending($prepare_spec, $is_dep);
+        }else{
+            $user_specials = $this->get_user_specials_pending($post['spec'], $is_dep);
+        }
+
+
+        $this->apply_filters($user_specials, $post, true, $is_dep);
+
+        if($is_dep != true) {
+            foreach ($user_specials as $key => $user_special) {
+                if ($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
+                    unset($user_specials[$key]);
+                    continue;
+                }
+            }
+        }
+
+        $special_ids = [];
+        foreach($user_specials as $user_special) {
+            array_push($special_ids,$user_special->id);
+        }
+
+
+
+        $users = [];
+        $task_find = DelegateTask::find()->select(
+            'delegate_task.*,user_profile.first_name fname,user_profile.last_name lname,user.email email,user_profile.avatar
+            user_avatar,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,
+            user_profile.city_title city,task.name task_name,specialization.name task_special,
+            task.market_rate task_rate, task_user.time task_user_time, task_user.price task_user_price,
+            task.description task_desc,task.department_id dep_id,department.name dname,specialization.id spec_id,
+            user_profile.user_id uid'
+        )
+            ->join('JOIN','task_user', 'task_user.id = delegate_task.task_user_id')
+            ->join('JOIN','task', 'task.id = task_user.task_id')
+            ->join('JOIN','department', 'department.id = task.department_id')
+            ->join('JOIN','specialization', 'specialization.id = task.specialization_id')
+            ->join('JOIN','user_tool', 'user_tool.id = task_user.user_tool_id')
+            ->join('JOIN','user', 'user.id = user_tool.user_id')
+            ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
+            ->join('LEFT OUTER JOIN','user_specialization', 'user_specialization.user_id = user.id')
+            ->join('LEFT OUTER JOIN','skill_list', 'skill_list.id = user_specialization.exp_type')
+            ->join('LEFT OUTER JOIN','geo_country', 'geo_country.id = user_profile.country_id')
+            ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id')
+            ->where([
+                'delegate_task.delegate_user_id' => Yii::$app->user->id,
+                'delegate_task.status' => DelegateTask::$status_inactive,
+                'specialization.id' => $special_ids
+            ])->all();
+
+
+        foreach($task_find as $task) {
+            $exclude_user_ids = [Yii::$app->user->id];
+            if(count($users) < 25)
+            {
+                $this->findUsersByTask($users,$exclude_user_ids, $task, $post);
+            }
+            else {
+                break;
+            }
+        }
+
+
+        return $this->renderPartial('blocks/user_request',
+            [
+                'users' => $task_find
+            ]);
+    }
+
+
+
+
     public function actionUserTask($post = null)
     {
         if($post == null) {
             $post = Yii::$app->request->post();
         }
+        $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
 
-        $response['html_user_task'] = $this->render_user_task($post);
+        $response['html_user_task'] = $this->render_user_task($post, $is_dep);
         $response['html_user_request'] = $this->render_user_request();
         $response['html_delegated_businesses'] = $this->render_delegated_businesses();
         $response['html_deps_filter'] = $this->render_deps_filter($post);
-        $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
+
         $response['html_specials_filter'] = $this->render_specials_filter($post,null, $is_dep);
         $response['error'] = false;
         return json_encode($response);
     }
+
+
+    public function actionUserTaskPending($post = null)
+    {
+        if($post == null) {
+            $post = Yii::$app->request->post();
+        }
+
+        //var_dump($post); die();
+        $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
+
+        //var_dump($post); die();
+        $users_request = $this->get_user_request();
+       /* $user_request = $this->render_user_request($users_request);
+        var_dump($user_request); die();*/
+
+        $spec_pending = [];
+        $i = 0;
+        foreach($users_request as $ur){
+            $spec_pending[$i] = $ur->spec_id;
+            $i++;
+        }
+
+        $spec_pending = array_unique($spec_pending);
+
+        $user_special_pending = $this->get_user_specials_pending($spec_pending);
+
+
+        //$response['html_user_task'] = $this->render_user_task($post, $is_dep);
+       // $response['html_user_request'] = $this->render_user_request($users_request);
+        $response['html_user_request'] = $this->render_user_request_pending($post, $user_special_pending, $is_dep);
+        $response['html_delegated_businesses'] = $this->render_delegated_businesses();
+        $response['html_deps_filter'] = $this->render_deps_filter_pending($post, $user_special_pending);
+
+        $response['html_specials_filter'] = $this->render_specials_filter_pending($post, $user_special_pending, $is_dep);
+        $response['error'] = false;
+        return json_encode($response);
+    }
+
+
+
     public function actionUserRequest($post = null) {
         if($post == null) {
             $post = Yii::$app->request->post();
         }
 
-        $users_request = $this->get_user_request();
 
-        $user_specials = $this->get_user_specials();
+        $users_request = $this->get_user_request();
+        //$user_request = $this->render_user_request($users_request);
+
+        $spec_pending = [];
+        $i = 0;
+        foreach($users_request as $ur){
+            $spec_pending[$i] = $ur->spec_id;
+            $i++;
+        }
+
+        $spec_pending = array_unique($spec_pending);
+
+        $user_specials = $this->get_user_specials_pending($spec_pending);
         $is_dep = filter_var($post['is_dep'], FILTER_VALIDATE_BOOLEAN);
 
         $users_special_request = $user_specials;
@@ -888,7 +1062,72 @@ class BusinessController extends Controller
 
     public function actionSharedBusiness($id){
         $this->layout = false;
-        return $this->render('shared_business', []);
+
+
+
+
+        $model = UserTool::find()
+            ->select('user_tool.*, benefit.first benefit_first, benefit.second benefit_second, benefit.third benefit_third,
+            idea.name idea_name, idea.description_like idea_description_like, idea.description_problem idea_description_problem,
+            industry.name industry_name')
+            ->join('JOIN','benefit', 'benefit.user_tool_id = user_tool.id')
+            ->join('JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->where(['user_tool.id'=>$id])
+            ->one();
+
+        $profile = Profile::find()->where(['user_id' => $model->user_id])->one();
+
+        $com = BusinessCommentary::find()
+            ->select('business_commentary.*, user_profile.avatar as ava, user_profile.first_name as fn, user_profile.last_name as ln, user_profile.user_id as uid')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = business_commentary.sender_id')
+            ->where(['business_commentary.user_id' => $id])
+            ->orderBy(['business_commentary.time' => SORT_DESC])->limit(5)
+            ->all();
+        $new_com = new BusinessComments();
+        $count = $new_com->getCount($_GET['id']);
+
+        $comments = $this->renderPartial('blocks/comments', ['comments' => $com, 'count'=>$count, 'user_id' => $_GET['id']]);
+        $likes = $this->renderPartial('blocks/likes', ['id'=>$id]);
+        $idea = $this->renderPartial('blocks/idea', ['id'=>$id]);
+
+        return $this->render('shared_business', ['model' => $model, 'comments' => $comments, 'count'=> $count, 'likes'=>$likes, 'idea' => $idea, 'profile' => $profile]);
+    }
+
+    public function actionAddComment(){
+        $comment = new BusinessComments();
+        $comment->addComment($_POST['text'], $_POST['user_id']);
+        $count = $comment->getCount($_POST['user_id']);
+        $response['html'] = $comment->render($_POST['user_id']);
+        $response['count'] = $count;
+        return json_encode($response);
+    }
+
+    public function actionPagination(){
+        $comment = new BusinessComments();
+        $response['html'] = $comment->render($_POST['user_id'], $_POST['page']);
+        return json_encode($response);
+    }
+
+    public function actionAddLike(){
+        $like = new BenefitLike();
+        $like->benefit_id = $_POST['benefit'];
+        $like->user_tool_id = $_POST['tool'];
+        $like->like = $_POST['like'];
+        $like->ip_address = $_SERVER['REMOTE_ADDR'];
+        $like->save();
+        $response['html'] = $this->renderPartial('blocks/likes', ['id'=>$_POST['tool']]);
+        return json_encode($response);
+    }
+
+    public function actionAddLikeIdea(){
+        $idea = new IdeaLike();
+        $idea->like = $_POST['point'];
+        $idea->ip_address = $_SERVER['REMOTE_ADDR'];
+        $idea->idea_id = $_POST['tool'];
+        $idea->save();
+        $response['html'] = $this->renderPartial('blocks/idea', ['id'=>$_POST['tool']]);
+        return json_encode($response);
     }
 
 }

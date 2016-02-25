@@ -68,7 +68,7 @@ use yii\widgets\ActiveForm;
                 <? require __DIR__.'/idea/idea_block.php'; ?>
                 <?= Html::submitButton('Continue', [
                     'class' => 'btn btn-success btn-lg',
-                    'style' => 'margin:30px auto 0;'
+                    'style' => 'margin:0px auto 0;'
                 ]) ?>
             </div>
         </div>
@@ -79,6 +79,9 @@ use yii\widgets\ActiveForm;
 
 
 <style>
+.task-body .block.desc .content{
+        border-radius: 10px 10px 0px 10px !important;
+    }
     .b-page-checkbox-wrap .md-radio .task-name{
         left:-50% !important;
     }

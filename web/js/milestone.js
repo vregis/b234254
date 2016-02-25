@@ -73,7 +73,8 @@ function openTask(id, is_custom){
             $(".advanced-search-btn").on('show.bs.popover',function(){
                 $(".advanced-search-btn").addClass('active');
             }).on('hide.bs.popover',function(){
-                $(".advanced-search-btn").removeClass('active');
+               $(".advanced-search-btn").removeClass('active');
+
             });
             $(".invite-by-email").on('show.bs.popover',function(){
                 $(".invite-by-email").addClass('active');
@@ -121,14 +122,16 @@ function openTask(id, is_custom){
                     $("#input-time").inputmask({'setvalue': text + "h"});
                 }
             });
-        $('.task-body .block.desc .collapse').on('shown.bs.collapse',function(e){
-            e.preventDefault();
-            $('.task-body .block.desc .collapse').not($(this)).collapse('hide');
-            $(this).collapse('show');
-            $("#task").on('click',function(){
-                $('.task-body .block.desc .collapse').collapse('hide');
+            $('.task-body .block.desc a[data-toggle="tab"]').on('shown.bs.tab',function(e){
+                $(this).tab('show');
+                $(".task-body .block.desc .tab-content > .tab-pane .item").popover({
+                    placement: "top",
+                    html: true,
+                    trigger:"hover",
+                    container:$("#task"),
+                    template:'<div class="popover material" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                });
             });
-        });
         },500);
     });
     task.on('hide.bs.modal',function(){
