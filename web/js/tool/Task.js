@@ -700,6 +700,7 @@ function Task(task_user_id, is_my, is_custom) {
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
                         console.log(response);
                         if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
+
                             // Сюда впили переход на серч
                             console.log('empty offers');
                             $("#offered-block").removeClass('active');

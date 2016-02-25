@@ -363,6 +363,7 @@ class BusinessController extends Controller
     private function render_user_task($post = [], $is_dep = false) {
         $user_specials = $this->get_user_specials();
         $this->apply_filters($user_specials, $post);
+
         if($is_dep != true) {
             foreach ($user_specials as $key => $user_special) {
                 if ($user_special->dep_hide == 1 || $user_special->spec_hide == 1) {
@@ -370,6 +371,7 @@ class BusinessController extends Controller
                     continue;
                 }
             }
+
         }
 
         $special_ids = [];

@@ -67,7 +67,7 @@ section#about .subtitle{
 	margin-bottom:30px;
 }
 section#about .text{
-	font-weight:100;
+	font-weight:300;
 	text-align:justify;
 	margin-bottom:20px;
 	width: 100%;
@@ -86,17 +86,14 @@ section#about .step .title{
 	top:6px;
 	left:7px;
 }
-
 .question-name h4{
 	margin-top:0;
 }
 #helpful{
-	position:relative;
-    height: 30px;
-}
-#helpful{
 	background:url("/images/share_steps.png") 0 0 no-repeat;
 	width: 644px;
+	position:relative;
+    height: 30px;
 }
 #helpful .separ{
 	position:absolute;
@@ -164,7 +161,7 @@ section#about .step .title{
 	line-height: 30px !important;
 }
 #benefits .content table tr td .btn:focus{
-	
+
 }
 .page-content .avatar{
 	border-radius: 100% !important;
@@ -448,3 +445,4 @@ section.contacts .title{
 .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
 	background-color:rgba(255,255,255,0.9);
 }
+

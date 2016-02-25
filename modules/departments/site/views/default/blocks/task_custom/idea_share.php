@@ -48,8 +48,8 @@ use yii\helpers\Url;
     <div id="idea" class="col-md-12">
         <div class="row form-group" style="margin-bottom: 0;">
             <div class="col-sm-12">
-<? require __DIR__.'/idea/idea_block.php'; ?>
-<a style="margin:0px auto 0;" href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg">Share preview</a>
+                <? require __DIR__.'/idea/idea_block.php'; ?>
+                <a style="margin:0px auto 0;" href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg">Share preview</a>
             </div>
         </div>
     </div>
