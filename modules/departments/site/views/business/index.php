@@ -227,6 +227,7 @@ $this->registerJs($msgJs);
             }
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
+            window.location.hash = $(this).attr('href');
             $(".page-content-wrapper").mCustomScrollbar("destroy");
             $('.page-content-wrapper').mCustomScrollbar({
                 setHeight: $('.page-content').css('minHeight'),

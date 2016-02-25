@@ -647,7 +647,7 @@ function Task(task_user_id, is_my, is_custom) {
                 data: data,
                 success: function (response) {
                     if (!response.error) {
-                        toastr["success"]("Make offers: " + names, "Success");
+                        // toastr["success"]("Make offers: " + names, "Success");
                         set_delegate_users($('#delegate_users'), response.html_users);
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
@@ -690,7 +690,7 @@ function Task(task_user_id, is_my, is_custom) {
                 data: data,
                 success: function (response) {
                     if (!response.error) {
-                        toastr["success"]("Cancel offers: " + names, "Success");
+                        // toastr["success"]("Cancel offers: " + names, "Success");
                         set_delegate_users($('#delegate_users'), response.html_users);
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);

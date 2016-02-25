@@ -13,7 +13,7 @@ use yii\helpers\Url;
             <div role="tabpanel" class="active" id="idea">
                 <div class="idea">
                     <div class="idea-title title text-center" style="margin-top: -10px;">
-                        Idea description
+                        Correct the idea
                     </div>
                     <div class="row form-group">
                         <div class="col-sm-10 <?= isset($idea->errors['name']) ? 'has-error' : '' ?>">
