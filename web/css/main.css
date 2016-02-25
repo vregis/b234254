@@ -3614,7 +3614,7 @@ div.ganttview-slide-container{
 .modal-content{
     border-radius: 5px !important;
 }
-.btn-primary,.btn-success,.btn-danger{
+.btn-primary,.btn-success,.btn-danger,.btn-danger:focus{
     border-radius: 20px;
     background: #fff;
     border-width: 1px;

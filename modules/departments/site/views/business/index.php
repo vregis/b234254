@@ -266,7 +266,6 @@ $this->registerJs($msgJs);
             });
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
-            console.log("asdasda");
             $("#find_job").collapse('hide');
             $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
         });
