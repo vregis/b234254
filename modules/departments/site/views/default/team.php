@@ -213,62 +213,7 @@ $this->registerJs($msgJs);
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="collapse fade" id="strategy">
-            <table class="table table-bordered with-foot" style="width:100%;">
-                <thead>
-                    <tr>
-                        <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
-                        <th width="390">Name</th>
-                        <th width="290">Location</th>
-                        <th width="125">Chat</th>
-                        <th width="125">Invite</th>
-                    </tr>
-                </thead>
-                <tbody id="user_request">
-                    <tr class="user-row" data-page-id="0" style="">
-                        <td>
-                            <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
-                        </td>
-                        <td style="text-align:left;">Swerdlow</td>
-                        <td>USA, Jupiter</td>
-                        <td><button class="btn btn-primary circle"><i class="ico-chat"></i></button></td>
-                        <td><button class="btn btn-primary circle"><i class="ico-add"></i></button></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="5" style="border-right:0;padding: 10px 12px;">
-                        <div class="pull-left">
-                            <div id="invite-form" class="no-autoclose" style="display:none;">
-                                <div class="form-group">
-                                    <input type="text" id="input-invite-email" class="form-control" placeholder="Email Address">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="name" id="input-invite-offer" class="form-control" rows="8" cols="40" placeholder="Offer text"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <div class="pull-right">
-                                        <button type="submit" id="invite-form-send" class="btn btn-primary">Send</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary circle invite-by-email" data-toggle="popover">
-                            <i class="ico-mail"></i>
-                            </button>
-                            Invite by email
-                        </div>
-                        <div class="pull-right">
-                        </div>
-                        <div class="clearfix"></div>
-                    </th>
-                </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="request-block">
+                <div role="tabpanel" class="tab-pane fade" id="request-block">
         <div class="deps-wrap">
             <div class="roww action">
                 <div data-id="1" class="item background-1">
@@ -420,6 +365,62 @@ $this->registerJs($msgJs);
             </table>
         </div>
     </div>
+        </div>
+        <div class="collapse fade" id="strategy">
+            <table class="table table-bordered with-foot" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
+                        <th width="390">Name</th>
+                        <th width="290">Location</th>
+                        <th width="125">Chat</th>
+                        <th width="125">Invite</th>
+                    </tr>
+                </thead>
+                <tbody id="user_request">
+                    <tr class="user-row" data-page-id="0" style="">
+                        <td>
+                            <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
+                        </td>
+                        <td style="text-align:left;">Swerdlow</td>
+                        <td>USA, Jupiter</td>
+                        <td><button class="btn btn-primary circle"><i class="ico-chat"></i></button></td>
+                        <td><button class="btn btn-primary circle"><i class="ico-add"></i></button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="5" style="border-right:0;padding: 10px 12px;">
+                        <div class="pull-left">
+                            <div id="invite-form" class="no-autoclose" style="display:none;">
+                                <div class="form-group">
+                                    <input type="text" id="input-invite-email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="name" id="input-invite-offer" class="form-control" rows="8" cols="40" placeholder="Offer text"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <div class="pull-right">
+                                        <button type="submit" id="invite-form-send" class="btn btn-primary">Send</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary circle invite-by-email" data-toggle="popover">
+                            <i class="ico-mail"></i>
+                            </button>
+                            Invite by email
+                        </div>
+                        <div class="pull-right">
+                        </div>
+                        <div class="clearfix"></div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
 </div>
 </div>
 </div>
