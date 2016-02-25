@@ -990,7 +990,7 @@ thead .ui-datepicker-week-end {
     color:#fff !important;
 }
 .dp-end-highlight a{
-    background: #53D769 !important;
+    background: #0f9d58 !important;
     color:#fff !important;
 }
 
@@ -1654,7 +1654,7 @@ table th.rate .fa{
     border-collapse:initial;
 }
 #datepicker > .arrow{
-    left: 254px !important;
+    left: 215px !important;
 }
 .task .dropdown-menu .mCSB_container{
     padding:0 !important;
