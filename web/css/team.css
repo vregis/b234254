@@ -168,11 +168,12 @@
 .table tbody tr:last-child > td:last-child,.table tfoot tr > th:last-child{
     border-bottom-right-radius:10px !important;
 }
-.table.with-foot td{
+.table.with-foot td,.table.with-foot th{
     border-right:0 !important;
     border-bottom: 0 !important;
 }
-.table.with-foot td:first-child{
+
+.table.with-foot td:first-child,.table.with-foot th:first-child,.table.with-foot th:last-child{
     border-left:0 !important;
 }
 .tables-business.team .btn.circle{line-height:34px !important;}
