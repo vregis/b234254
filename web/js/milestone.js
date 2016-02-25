@@ -35,7 +35,6 @@ function openTask(id, is_custom){
                         setHeight: height
                     });
                     $.each($(".b-page-checkbox-wrap .md-radio .task-name"), function () {
-                        console.log($(this).width() / 2 - 13);
                         var offsetL = $(this).width() / 2 - 13;
                         $(this).css({"left": "-" + offsetL + "px"});
                     });
@@ -64,17 +63,11 @@ function openTask(id, is_custom){
     var task = $('#task');
     task.off();
     task.on('show.bs.modal', function (e) {
-        console.log('show.bs.modal');
-
         setTimeout(function(){
-            $("#delegate").on('show.bs.collapse',function(){
-                console.log("sdasd");
-            });
             $(".advanced-search-btn").on('show.bs.popover',function(){
                 $(".advanced-search-btn").addClass('active');
             }).on('hide.bs.popover',function(){
                $(".advanced-search-btn").removeClass('active');
-
             });
             $(".invite-by-email").on('show.bs.popover',function(){
                 $(".invite-by-email").addClass('active');
@@ -97,6 +90,8 @@ function openTask(id, is_custom){
                         $(".advanced-search-btn").popover('hide');
                         $(".invite-by-email").popover('hide');
                     });
+                    $(".dropmenu1.status").popover('hide');
+
                 });
             });
             $(".dropmenu1").on('show.bs.popover',function(){
@@ -111,12 +106,10 @@ function openTask(id, is_custom){
                 "greedy": false,
                 "onincomplete":function(){
                     var text = $("#input-time").val();
-                    console.log("text "+text);
                     $("#input-time").attr('value',text + "h");
                 }
             }); // ~ mask "9" or mask "99" or ... mask "9999999999"
             $("#input-time").blur(function(){
-                console.log("asda");
                 var text = $("#input-time").val();
                 if(text.indexOf('h') == -1){
                     $("#input-time").inputmask({'setvalue': text + "h"});
@@ -135,7 +128,6 @@ function openTask(id, is_custom){
         },500);
     });
     task.on('hide.bs.modal',function(){
-        console.log("hide task");
         var id = $('.hidden-task-id').text();
         clsTask(id);
         window.history.pushState('', 'BSB', '/departments');

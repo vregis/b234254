@@ -330,7 +330,7 @@ span.title {
     font-weight: normal;
 }
 .dp-highlight .ui-state-default {
-    background-color: #818588;
+    background-color: rgba(129,133,136,0.50);
     color:#fff !important;
 }
 .ui-widget-header .ui-icon {
@@ -763,7 +763,7 @@ span.title {
 
 .task-body .block.desc .content{
     border-radius:10px 10px 0 0 !important;
-    height:357px !important;
+    height:362px !important;
 }
 .task-body .block.desc .footer{
     background:none;
@@ -1461,6 +1461,7 @@ thead .ui-datepicker-week-end {
     text-align:center;
     background:none;
     border:none;
+    padding: 0;
 }
 table th.rate .fa{
         position:absolute;

@@ -145,7 +145,7 @@ use modules\user\site\controllers\ProfileController;
                     <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src="<?php echo $profile->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$profile->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
                     <div class="name"><?php echo $profile->first_name?$profile->first_name:''?> <?php echo $profile->last_name?$profile->last_name:''?></div>
                     <div class="adres" style="color:rgba(90,90,90,0.75);"><i class="ico-location"></i> USA <?php echo $profile->city_title?' ,'.$profile->city_title:''?><?php echo $profile->zip?' ,'.$profile->zip:''?></div>
-                	 <div class="title" style="margin:25px auto;">Vacancy</div>
+                	 <div class="title" style="margin:25px auto;font-size:24px;">Vacancy</div>
                     <div class="deps-wrap">
                     	<div class="roww action">
                     		<div class="item">
