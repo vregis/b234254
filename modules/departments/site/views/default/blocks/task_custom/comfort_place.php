@@ -1,7 +1,7 @@
 <? use yii\helpers\Url; ?>
 <div class="container-fluid">
 <div class="row task-title" style="margin-bottom: 8px;">
-	<div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">GO</div>
+	<div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Go</div>
 	<div class="name text-center" style="margin:15px auto 30px;"><?= $task->description ?></div>
 	<div class="clearfix"></div>
 

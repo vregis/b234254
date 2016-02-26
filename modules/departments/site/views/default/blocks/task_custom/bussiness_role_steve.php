@@ -19,7 +19,7 @@
 							<label for="Roadmap[<?= $i ?>]">
 								<span></span>
 								<span class="check"></span>
-								<span class="box" style="cursor: default" onclick="return false;"><?=$i==0 || $i==1 ? '<i class="fa fa-check font-green-jungle"></i>' : $i + 1?></span>
+								<span class="box" style="cursor: default" onclick="return false;"></span>
 							</label>
 							<div class="text-desc-task" style="display: none">
 								<?= $task->description ?>

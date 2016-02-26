@@ -213,9 +213,6 @@ $this->title = 'Progress test';
     });
 </script>
 <style>
-    .well{
-        width:675px !important;
-    }
     #side_road .progress{
         height:20%;
     }

@@ -280,9 +280,6 @@ $this->title = 'Your role in business';
     });
 </script>
 <style>
-    .well{
-        width:675px !important;
-    }
     #side_road .progress{
         height:20%;
     }

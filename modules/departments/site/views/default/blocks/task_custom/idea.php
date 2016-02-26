@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 ?>
 <div class="container-fluid">
     <div class="row task-title" style="margin-bottom: 8px;">
-        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">IDEA</div>
+        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Idea</div>
         <div class="name text-center">
             <span id="title-task text-center"><?= $task->name ?></span>
         </div>
