@@ -226,9 +226,12 @@ $this->title = 'Your role in business';
         });
     });
 </script>
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+<?php if($user->user_type == 0):?>
 <div id="side_road">
     <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
 </div>
+<?php endif;?>
 <script>
     $(document).ready(function(){
         $(".b-page-checkbox-wrap .md-radio:nth-child(3)").addClass('active');

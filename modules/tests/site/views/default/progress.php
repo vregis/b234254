@@ -138,9 +138,12 @@ $this->title = 'Progress test';
         <? $i++; ?>
     <? endforeach; ?>
 <div class="clearfix"></div>
-<div id="side_road">
-    <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
-</div>
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+<?php if($user->user_type == 0):?>
+    <div id="side_road">
+        <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
+    </div>
+<?php endif;?>
 <script>
     $(document).ready(function(){
         // console.log("page-content: "+parseInt($('.page-content').css('min-height')) / 2);
