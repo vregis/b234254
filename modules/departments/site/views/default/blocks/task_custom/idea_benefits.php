@@ -10,10 +10,11 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
-
 ?>
 <div class="container-fluid">
   <div class="row task-title" style="margin-bottom: 8px;">
+      <?php $tool = \modules\tasks\models\UserTool::find()->where(['user_id' => Yii::$app->user->id])->all();?>
+      <?php if(count($tool) > 2):?>
           <div class="row task-body" style="margin-top:40px;">
         <div class="desc" style="padding:0 15px;">
             <div class="step">
@@ -43,8 +44,10 @@ use yii\widgets\ActiveForm;
                 </div>
             </div>
         </div>
-    </div>s
+    </div>
+      <?php else:?>
         <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Benefits</div>
+      <?php endif; ?>
         <div class="name text-center">
             <span id="title-task text-center"><?= $task->name ?></span>
         </div>
@@ -105,7 +108,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-4 completed" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?><div class='text-center'>Completed</div>'
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-5").popover({
             placement:"right auto",

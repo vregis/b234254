@@ -3,9 +3,14 @@ use yii\helpers\Url;
 ?>
 <?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
 <?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
+<?php $user = \modules\user\models\User::find()->where(['id'=>Yii::$app->user->id])->one();?>
+<?php if($user):?>
+    <?php if($user->user_type == 0):?>
 <div id="side_road">
     <?php require_once Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
 </div>
+        <?php endif; ?>
+<?php endif;?>
 <div id="dashboard-editing" class="col-md-12" data-tool-id="<?= $tool->id ?>">
     <div class="well" style="margin: 60px auto; max-width: 1000px">
         <ul class="nav nav-tabs" role="tablist">

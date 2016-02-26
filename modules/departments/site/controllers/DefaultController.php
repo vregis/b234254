@@ -179,7 +179,7 @@ class DefaultController extends Controller
         }
 
         if($task_id != 0) {
-            return $this->redirect(['/departments/task', 'id' => $task_id]);
+            return $this->redirect(['/departments/task', 'id' => $task_id, 'first' => 1]);
         }
 
         return $this->render('index', [
