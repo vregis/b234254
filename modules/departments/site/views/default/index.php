@@ -54,6 +54,18 @@ $('.page-content').addClass('milestones');
             $('.table-block').css({fontSize: '14px'});
         }
     }
+        //     var offs;
+        // if($('.well').height() > ($(window).height() - $('.page-header').height() - $(".page-footer").height())){
+        //     offs = 30;
+        // }else{
+        //     offs = $(".page-content").height() / 2 - $('.well').height() / 2 - 32;
+        // }
+        // // var offs = 32;
+        //  // if
+        // $('.well').css({
+        //     'margin-top': offs,
+        //     'margin-bottom': offs
+        // });
     $(function() { fontSize(); });
     $(window).resize(function() { fontSize(); });
 JS;
