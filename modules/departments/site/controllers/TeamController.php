@@ -64,6 +64,13 @@ class TeamController extends Controller {
     public function actionInviteUser(){
         if($_POST){
             $req = new Team();
+            $req->user_tool_id = $_POST['tool_id'];
+            $req->recipient_id = $_POST['recipient'];
+            $req->sender_id = Yii::$app->user->id;
+            $req->department = $_POST['dep_id'];
+            $req->status = 0;
+            $req->is_request = 0;
+            $req->save();
         }
     }
 

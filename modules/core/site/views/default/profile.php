@@ -45,9 +45,14 @@ $this->registerJs($msgJs);
 ?>
 <?= Flash::widget(['view' => '@modules/core/widgets/views/dialog']) ?>
 <!-- BEGIN Portlet PORTLET-->
-<div id="side_road">
-    <?php require_once Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
-</div>
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+<?php if($user):?>
+    <?php if($user->user_type == 0 || $user->user_status != 3):?>
+        <div id="side_road">
+            <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
+        </div>
+    <?php endif;?>
+<?php endif;?>
 <script>
     $(document).ready(function(){
         $(".b-page-checkbox-wrap .md-radio:nth-child(4)").addClass('active');
