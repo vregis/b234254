@@ -13,36 +13,11 @@ use yii\widgets\ActiveForm;
 
 ?>
 <div class="container-fluid">
-  <div class="row task-title" style="margin-bottom: 8px;">
-    <div class="row task-body" style="margin-top:40px;">
-        <div class="desc" style="padding:0 15px;">
-            <div class="step">
-                <div class="form-md-radios md-radio-inline b-page-checkbox-wrap">
-                    <? $name[0] = 'Idea'; ?>
-                    <? $name[1] = 'Benefits'; ?>
-                    <? $name[2] = 'Share'; ?>
-                    <? for($i = 0; $i < 3; $i++) : ?>
-                        <div class="md-radio even has-test b-page-checkbox">
-                            <div class="task-name">
-                                <?= $name[$i] ?>
-                            </div>
-                            <input type="radio" id="Roadmap[<?= $i ?>]" name="Roadmap" class="md-radiobtn" value="<?= $i ?>">
-                            <label for="Roadmap[<?= $i ?>]">
-                                <span></span>
-                                <span class="check"></span>
-                                <span class="box" style="cursor: default" onclick="return false;"><?=$i==0 ? '<i class="fa fa-check font-green-jungle"></i>' : $i + 1?></span>
-                            </label>
-                        </div>
-                    <? endfor; ?>
-                    <div style="display:inline-block;width:100%;">
-                    </div>
-                </div>
-            </div>
+    <div class="row task-title" style="margin-bottom: 8px;">
+        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">IDEA</div>
+        <div class="name text-center">
+            <span id="title-task text-center"><?= $task->name ?></span>
         </div>
-    </div>
-
-    <div class="name text-center">
-        <span id="title-task"><?= $task->name ?></span>
     </div>
 </div>
     <?php $form = ActiveForm::begin(
@@ -104,7 +79,7 @@ use yii\widgets\ActiveForm;
          right: auto !important; 
     }
     .well{
-        padding: 30px 0px !important;
+        padding: 30px 20px !important;
     }
 
     .task-custom textarea {

@@ -2,7 +2,7 @@ body{
     opacity:0;
 }
 .well{
-    padding: 30px 20px !important;
+    padding: 30px !important;
     margin:0 auto;
 }
 .task-custom .btn-lg{
@@ -74,15 +74,18 @@ body{
     width: auto !important;
     text-overflow: initial;
     white-space: initial;
-    line-height: 22px;
-    font-size: 14px;
-    margin:30px auto;
-        padding: 0 32px;
+    line-height: 26px;
+    font-size: 18px;
+    margin: 5px auto 15px;
+    /*padding: 0 32px;*/
+    color: rgba(90,90,90,1);
+    /*text-transform: uppercase;*/
     /*text-align: justify;*/
 }
 #title-task{
-	    padding: 0 30px;
+	    /*padding: 0 30px;*/
     display: block;
+    text-align:justify;
 }
 .task-body .block.desc .footer .btn{
 	width:137px;
