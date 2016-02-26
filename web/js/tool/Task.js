@@ -619,7 +619,6 @@ function Task(task_user_id, is_my, is_custom) {
     var make_offer = $('.make-offer');
     make_offer.off();
     make_offer.on('click', function(){
-
         var ids = [];
         var names = "";
         var i=0;
