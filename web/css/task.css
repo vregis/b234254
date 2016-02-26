@@ -638,93 +638,15 @@ span.title {
     border-color: #5184f3;
     color: #fff;
 }
-.md-radio label > .box {
-    /* border: 2px solid #666;*/
-    border-radius: 50% !important;
-    height: 28px !important;
-    top: 0 !important;
-    width: 28px !important;
-    z-index: 5 !important;
-}
-.md-radio label > .check {
-    background: #428bca none repeat scroll 0 0 !important;
-    height: 11px !important;
-    left: 9px !important;
-    top: 9px !important;
-    width: 11px !important;
-}
 
-.md-radio-inline {
-    margin: 10px 0 !important;
-}
 .question-name {
     overflow: hidden;
     /*padding-left: 70px;*/
 }
 .step {
-
     padding-left: 1px;
 }
-.b-page-checkbox-wrap {
-    background: rgba(0, 0, 0, 0) url("/images/tests/bg-checkbox-wrap.png") repeat-x scroll center center;
-    content: "";
-    height: 11px;
-    /*left: 75px;*/
-    margin: 0 auto !important;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    text-align: justify;
-}
-.md-radio label > span.inc {
-    border-radius: 50% !important;
-    display: block !important;
-    height: 60px !important;
-    left: -15px !important;
-    top: -15px !important;
-    width: 60px !important;
-}
-.md-radio-inline .md-radio {
-    display: inline-block;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 26px;
-    z-index: 9;
-}
-.md-radio-inline .md-radio:first-child{
-    left:-2px;
-}
-.md-radio-inline .md-radio:last-child{
-    right:-2px;
-}
-.md-radio-inline .md-radio {
-    display: inline-block;
-    margin-right: 0;
-}
-.help-block {
-    text-align: center;
-}
-.b-page-checkbox-wrap {
-    /*padding: 0 0 0 70px;*/
-    position: relative;
-    width: 100%;
-    height: 28px;
-}
 
-/*.b-page-checkbox-wrap div:first-child {
-     margin: 0 auto !important;
-     position: relative;
-     width: 80%;
-}*/
-
-.b-page-checkbox-wrap .md-radio.has-test label > .box {
-    background: #f7fbff none repeat scroll 0 0;
-    border-color: #c3d7ea;
-    color: #428bca;
-    text-align: center;
-    line-height: 26px;
-    font-size: 18px;
-}
 .task-custom .md-radio input[type=radio]:checked ~ label > .box{
     font-size: 0;
 }
