@@ -661,4 +661,23 @@ class TaskComponent extends Component
         $command = 'ajax'.ucfirst(Yii::$app->request->post('command'));
         return $this->$command();
     }
+
+
+    public static function getTaskTitle($id){
+        $task = Task::find()->where(['id' => $id])->one();
+        if($task){
+            return $task->name;
+        }else{
+            return null;
+        }
+    }
+
+    public static function getTaskDesc($id){
+        $task = Task::find()->where(['id' => $id])->one();
+        if($task){
+            return $task->description;
+        }else{
+            return null;
+        }
+    }
 }
