@@ -36,7 +36,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
 ]
 ) */?>
 <link rel="stylesheet" type="text/css" href="/css/task.css">
-<div class="well well-sm" style="margin:30px auto;max-width:1024px;">
+<div class="well well-sm" style="margin:0px auto;max-width:1024px;">
     <div class="task">
         <div class="hidden-task-id" style="display:none"><?php echo $task->id?></div>
         <div class="row">

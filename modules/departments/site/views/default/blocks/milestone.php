@@ -73,7 +73,6 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                 </div>
                 <div class="btns pull-right">
                     <button class="btn-empty btn-info" data-toggle="popover" data-content="<?= $ml->description ?>">i</button>
-                    <button class="btn-empty btn btn-primary delegate" style="height: 30px;width: 30px;line-height: 34px;" data-toggle="popover"><i class="ico-delegate"></i></button>
                     <div class="typeSwitch hide">
                         <!--<label class="live off">L</a>-->
                         <input data-color="#53d769" type="checkbox" id="typeSwitch<?php echo $key?>" checked class="js-switch js-check-change" name="view">
