@@ -122,7 +122,7 @@ class DefaultController extends Controller
     public function actionIndex($task_id = 0) {
         $userTool = UserTool::getCurrentUserTool();
         $user = User::find()->where(['id' => Yii::$app->user->id])->one();
-       /* if($user->user_type == User::TYPE_EMPLOYER) {*/
+        if($user->user_type == User::TYPE_EMPLOYER) {
             if (!$userTool) {
                 $userTool = UserTool::createUserTool();
             }
@@ -141,17 +141,27 @@ class DefaultController extends Controller
                     }
                 }
             }
-        /*}
+        }
         else {
             if (!$userTool) {
+                $userTool = UserTool::createUserTool();
+            }
+            if ($userTool->user_id == Yii::$app->user->id) {
                 if ($user->user_status == User::STATUS_CREATION) {
-                    return $this->redirect(['/core/profile']);
-                }
-                else {
-                    return $this->redirect(['/departments/business']);
+                    $user->user_status = User::STATUS_ROADMAP_PASSED;
+                    $user->save(false);
+                    $task_id = Task::$task_steve_roadmap_personal_id;
+                } else {
+                    if ($user->user_status == User::STATUS_ROADMAP_PASSED) {
+                        $task_id = Task::$task_steve_bussiness_role_id;
+                    } else {
+                        if ($user->user_status ==  User::STATUS_TEST_PASSED) {
+                            $task_id = Task::$task_steve_comfort_place_id;
+                        }
+                    }
                 }
             }
-        }*/
+        }
         //var_dump($user);
         if($task_id == 0) {
             if ($userTool->status == UserTool::STATUS_CREATION) {
@@ -547,6 +557,9 @@ class DefaultController extends Controller
             if($task->id == Task::$task_roadmap_personal_id) $customObject = new TaskCustom('simply_start',$task);
             else if($task->id == Task::$task_bussiness_role_id) $customObject = new TaskCustom('bussiness_role',$task);
             else if($task->id == Task::$task_comfort_place_id) $customObject = new TaskCustom('comfort_place',$task);
+            else if($task->id == Task::$task_steve_roadmap_personal_id) $customObject = new TaskCustom('simply_start_steve',$task);
+            else if($task->id == Task::$task_steve_bussiness_role_id) $customObject = new TaskCustom('bussiness_role_steve',$task);
+            else if($task->id == Task::$task_steve_comfort_place_id) $customObject = new TaskCustom('comfort_place_steve',$task);
             else if($task->id == Task::$task_person_goal_id) $customObject = new TaskPersonGoal($task);
             else if($task->id == Task::$task_idea_id) $customObject = new TaskIdea('idea',$task,$task_videos,$task_notes,$task_links,$files);
             else if($task->id == Task::$task_idea_benefits_id) $customObject = new TaskBenefit($tool->id,'idea_benefits',$task,$task_videos,$task_notes,$task_links,$files);

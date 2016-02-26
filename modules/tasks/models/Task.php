@@ -23,6 +23,9 @@ class Task extends \yii\db\ActiveRecord
 
     public $spec_name;
 
+    static public $task_steve_roadmap_personal_id = 287;
+    static public $task_steve_bussiness_role_id = 285;
+    static public $task_steve_comfort_place_id = 286;
     static public $task_roadmap_personal_id = 284;
     static public $task_bussiness_role_id = 282;
     static public $task_comfort_place_id = 283;
