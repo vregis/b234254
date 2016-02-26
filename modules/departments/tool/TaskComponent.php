@@ -675,7 +675,7 @@ class TaskComponent extends Component
     public static function getTaskDesc($id){
         $task = Task::find()->where(['id' => $id])->one();
         if($task){
-            return $task->description;
+            return strip_tags($task->description);
         }else{
             return null;
         }

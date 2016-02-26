@@ -104,7 +104,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-2" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(282);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-3").popover({
             placement:"right auto",
@@ -112,7 +112,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-3" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-4").popover({
             placement:"right auto",
@@ -120,7 +120,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-4" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?>'
         });
         $("#side_road .item-5").popover({
             placement:"right auto",
@@ -128,7 +128,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-5" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(38);?>'
         });
         $("#side_road .item-6").popover({
             placement:"right auto",
@@ -136,7 +136,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-6" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(39);?>'
         });
     });
 </script>
