@@ -63,7 +63,7 @@
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-1" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"Suspendisse molestie in augue ac rhoncus. Donec tempus eros id rutrum sollicitudin. Nulla nec porta nisi. Donec sapien sapien, euismod ut tempus et, pharetra et felis. In hac habitasse platea dictumst. Proin neque ante, vulputate vitae libero vel, blandit molestie diam. <div class='text-center'>Completed</div>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(284);?> <div class="text-center">Completed</div>'
         });
     });
 </script>
