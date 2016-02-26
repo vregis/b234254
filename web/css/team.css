@@ -47,10 +47,10 @@
 	text-align:center;
 }
 .deps .item:first-child{
-	border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px !important;
 }
 .deps .item:last-child{
-	border-bottom-right-radius:10px;
+	border-bottom-right-radius:10px !important;
 }
 .deps .item.background-1{
     background-color: rgba(145, 135, 208,1);

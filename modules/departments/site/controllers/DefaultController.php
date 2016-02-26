@@ -75,6 +75,8 @@ class DefaultController extends Controller
                             'get-new-logs',
                             'get-count-by-tool',
                             'get-count-by-business',
+                            'team',
+                            'team-steve',
                             'get-task'
                         ],
                         'roles' => ['@'],
@@ -929,4 +931,11 @@ class DefaultController extends Controller
         return json_encode($response);
     }
 
+    public function actionTeam(){
+        return $this->render('team');
+    }
+
+    public function actionTeamSteve(){
+        return $this->render('team-steve');
+    }
 }

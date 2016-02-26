@@ -1,0 +1,205 @@
+.popover {
+    border-radius: 10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea;
+}
+.md-radio label > span.inc{
+	display: none !important;
+}
+.md-radio label > .box {
+    /* border: 2px solid #666;*/
+    border-radius: 50% !important;
+    height: 28px !important;
+    top: 0 !important;
+    width: 28px !important;
+    z-index: 5 !important;
+}
+.md-radio label > .check {
+    background: #428bca none repeat scroll 0 0 !important;
+    height: 11px !important;
+    left: 9px !important;
+    top: 9px !important;
+    width: 11px !important;
+}
+
+.md-radio-inline {
+    margin: 10px 0 !important;
+}
+.b-page-checkbox-wrap {
+    background: rgba(0, 0, 0, 0) url("/images/tests/bg-checkbox-wrap.png") repeat-x scroll center center;
+    content: "";
+    height: 11px;
+    /*left: 75px;*/
+    margin: 0 auto !important;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: justify;
+}
+.md-radio-inline .md-radio {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 26px;
+    z-index: 9;
+}
+.md-radio-inline .md-radio:first-child{
+    left:-2px;
+}
+.md-radio-inline .md-radio:last-child{
+    right:-2px;
+}
+.md-radio-inline .md-radio {
+    display: inline-block;
+    margin-right: 0;
+}
+.help-block {
+    text-align: center;
+}
+.b-page-checkbox-wrap {
+    /*padding: 0 0 0 70px;*/
+    position: relative;
+    width: 100%;
+    height: 28px;
+}
+
+/*.b-page-checkbox-wrap div:first-child {
+     margin: 0 auto !important;
+     position: relative;
+     width: 80%;
+}*/
+
+.b-page-checkbox-wrap .md-radio.has-test label > .box {
+    background: #f7fbff none repeat scroll 0 0;
+    border-color: #c3d7ea;
+    color: #428bca;
+    text-align: center;
+    line-height: 26px;
+    font-size: 18px;
+    cursor: pointer !important;
+}
+#side_road{
+	position:fixed;
+	left:0;
+	top:50%;
+	margin-top:-225px;
+	width:53px;
+	border:1px solid #e1e1e1;
+	border-radius:0 10px 10px 0 !important;
+	background:#ffffff;
+	padding:40px 8px;
+    z-index: 99999999999999999999;
+}
+
+#side_road .progress{
+    background: #26C281;
+    width:11px;
+    position:absolute;
+    left: 9px;
+    top: 1px;
+    z-index: 9;
+}
+#side_road .md-radio-inline .md-radio{
+	right: 0 !important;
+	width: 28px;
+    height: 28px;
+    margin-bottom:40px !important;
+    cursor: pointer;
+}
+#side_road .md-radio-inline .md-radio label > .box .fa{
+	display:none;
+}
+#side_road .md-radio-inline .md-radio.done label > .box .fa{
+    display: inline-block;
+}
+#side_road .md-radio-inline .md-radio.active label > .box,#side_road .md-radio-inline .md-radio.done label > .box{
+	border-color: #26C281 !important;
+	color: #26C281 !important;
+}
+#side_road .md-radio-inline .md-radio.active label > .box{
+	text-indent:-9000px;
+}
+#side_road .md-radio-inline .md-radio.item-6{
+	margin-bottom:0px !important;
+    top: 2px;
+}
+#side_road .md-radio-inline .md-radio:nth-child(2){
+    top: -1px !important;
+}
+#side_road .b-page-checkbox-wrap{
+	height:auto;
+    width: 28px;
+    background: rgba(0, 0, 0, 0) url("/images/step-side-bg.png") repeat-y scroll top center;
+}
+#side_road .step{
+	padding:0;
+	position: relative;
+}
+#side_road .popover{
+	z-index: 999;
+	min-width: 274px;
+    padding: 15px 30px 30px;
+    text-align: justify;
+    left:50px !important;
+}
+#side_road .popover.top-fix{
+	top:0px !important;
+}
+#side_road .popover.bottom-fix{
+	top:auto !important;
+	bottom:0px !important;
+}
+#side_road .popover .popover-title{
+	color:#5a5a5a;
+	font-size: 16px;
+	background: none;
+	text-align: center;
+    padding: 0;
+    line-height: 40px;
+    border-color:#acacac;
+    margin-bottom: 20px !important;
+}
+#side_road .popover .popover-content{
+	padding: 0;
+}
+#side_road .popover .text-center{
+	color:#2e9e5c;
+	font-weight: bold;
+	margin-top:25px;
+}
+#side_road .popover .arrow{
+    border-right: none;
+}
+#side_road .item-1.popover .arrow{
+    top: 53px !important;
+}
+#side_road .item-2.popover .arrow{
+    top: 121px !important;
+}
+#side_road .item-3.popover .arrow{
+    top: 189px !important;
+}
+#side_road .item-4.popover .arrow{
+    top: 51px !important;
+}
+#side_road .item-5.popover .arrow{
+    top: 119px !important;
+}
+#side_road .item-6.popover .arrow{
+    top: 189px !important;
+}
+#side_road .item-2.popover.completed .arrow{
+    top: 121px !important;
+}
+#side_road .item-3.popover.completed .arrow{
+    top: 189px !important;
+}
+#side_road .item-4.popover.completed .arrow{
+    top: 93px !important;
+}
+#side_road .item-5.popover.completed .arrow{
+    top: 163px !important;
+}
+#side_road .item-6.popover.completed .arrow{
+    top: 202px !important;
+}

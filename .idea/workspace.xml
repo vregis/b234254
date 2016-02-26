@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="411baeb6-ed34-49f4-b37a-037d71951563" name="Default" comment="">
+    <list default="true" id="411baeb6-ed34-49f4-b37a-037d71951563" name="Default" comment="add steve roadmap">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/step-side-bg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/db.php" afterPath="$PROJECT_DIR$/config/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php" afterPath="$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/marciocamello/yii2-paypal/Paypal.php" afterPath="$PROJECT_DIR$/vendor/marciocamello/yii2-paypal/Paypal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/roadmap.css" afterPath="$PROJECT_DIR$/web/css/roadmap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/task.css" afterPath="$PROJECT_DIR$/web/css/task.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/team.css" afterPath="$PROJECT_DIR$/web/css/team.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log" />
+    </list>
+    <list id="80854a28-7d0e-42fe-a75a-6c28826850fa" name="Failed commit: Default" comment="add steve roadmap">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/team-steve.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/core/site/views/default/profile.php" afterPath="$PROJECT_DIR$/modules/core/site/views/default/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_benefits.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_benefits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_share.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_share.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap_side.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap_side.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/tests/site/views/default/progress.php" afterPath="$PROJECT_DIR$/modules/tests/site/views/default/progress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/tests/site/views/default/results.php" afterPath="$PROJECT_DIR$/modules/tests/site/views/default/results.php" />
     </list>
     <ignored path="bsb.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,54 +45,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_task.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_task.php">
+      <file leaf-file-name="TeamController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/TeamController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="593" column="56" selection-start-line="593" selection-start-column="49" selection-end-line="593" selection-end-column="56" />
+            <state vertical-scroll-proportion="-26.74074">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
               <folding>
-                <element signature="e#56#69#0#PHP" expanded="true" />
-                <marker date="1456394563900" expanded="true" signature="20463:20524" placeholder="SELECT * FRO... geo_country" />
-                <marker date="1456394563900" expanded="true" signature="25791:25852" placeholder="SELECT * FRO... geo_country" />
+                <element signature="e#57#99#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="likes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/likes.php">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php">
+      <file leaf-file-name="progress.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/tests/site/views/default/progress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44202065">
-              <caret line="414" column="18" selection-start-line="414" selection-start-column="18" selection-end-line="414" selection-end-column="18" />
+            <state vertical-scroll-proportion="-3.189655">
+              <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="117" />
               <folding>
-                <marker date="1456443340320" expanded="true" signature="3681:3742" placeholder="SELECT * FRO... geo_country" />
+                <marker date="1456510697697" expanded="true" signature="3545:4130" placeholder="..." />
+                <marker date="1456510697697" expanded="true" signature="3798:4079" placeholder="..." />
+                <marker date="1456510697697" expanded="true" signature="4206:4238" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idea.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/idea.php">
+      <file leaf-file-name="results.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/tests/site/views/default/results.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.189655">
+              <caret line="229" column="117" selection-start-line="229" selection-start-column="117" selection-end-line="229" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roadmap.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3703704">
+              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roadmap_side.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap_side.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.333333">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -83,53 +121,95 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action_panel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yii2/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.666667">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_request.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_request.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="15" column="141" selection-start-line="15" selection-start-column="141" selection-end-line="15" selection-end-column="141" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="find_job.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/find_job.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="56.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagination.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/pagination.php">
+      <file leaf-file-name="Team.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/models/Team.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="specials_filter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/specials_filter.php">
+      <file leaf-file-name="team_search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.7413793">
+              <caret line="159" column="47" selection-start-line="159" selection-start-column="47" selection-end-line="159" selection-end-column="47" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1456508620997" expanded="true" signature="2172:3575" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2185:3558" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="2222:2256" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2257:3544" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2297:3417" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="2369:2382" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2383:3181" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2432:2584" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2633:2815" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2864:3154" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="2917:3066" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3279:3358" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3458:3481" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="3616:3630" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3631:8432" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3664:8041" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3698:6869" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3741:6850" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3787:6827" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3852:4217" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="3911:3925" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3926:4186" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="3982:4151" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4023:4113" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4289:6258" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="4348:4362" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4363:6227" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4422:6192" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4605:5054" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4653:5012" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4705:5004" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="4709:4951" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="4849:4860" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5121:5571" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5169:5529" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5221:5521" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5225:5468" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="5286:5297" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5641:6089" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5689:6047" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5741:6039" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="5745:5986" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="5885:5896" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6323:6800" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="6382:6396" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6397:6769" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6452:6734" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6493:6571" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6612:6696" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6903:8026" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6956:8007" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="6990:7242" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="7128:7216" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="7282:7617" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="7422:7510" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="7651:7985" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="7788:7879" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="8070:8421" placeholder="..." />
+                <marker date="1456508620997" expanded="false" signature="8115:8130" placeholder="..." />
+                <marker date="1456508620997" expanded="true" signature="8131:8406" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -146,8 +226,21 @@
         <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_request.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_task.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/models/Task.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start_steve.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks.php" />
+        <option value="$PROJECT_DIR$/modules/departments/models/UserDo.php" />
+        <option value="$PROJECT_DIR$/config/site/main.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/team/team.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php" />
+        <option value="$PROJECT_DIR$/modules/departments/models/Team.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/controllers/TeamController.php" />
+        <option value="$PROJECT_DIR$/config/db.php" />
+        <option value="$PROJECT_DIR$/modules/tests/site/views/default/progress.php" />
+        <option value="$PROJECT_DIR$/modules/tests/site/views/default/results.php" />
       </list>
     </option>
   </component>
@@ -162,9 +255,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -191,8 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,198 +302,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/departments/site/views/team" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/departments/models" />
+      <recent name="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -457,16 +373,34 @@
       <option name="project" value="LOCAL" />
       <updated>1456436979429</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="a little fixes">
+      <created>1456444071094</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1456444071094</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add steve roadmap">
+      <created>1456491341796</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1456491341796</updated>
+    </task>
+    <task id="LOCAL-00005" summary="start work with team">
+      <created>1456510218721</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1456510218721</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25262576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27418464" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -498,56 +432,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sd" />
     <MESSAGE value="a little fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="a little fixes" />
+    <MESSAGE value="start work with team" />
+    <MESSAGE value="add steve roadmap" />
+    <option name="LAST_COMMIT_MESSAGE" value="add steve roadmap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#56#69#0#PHP" expanded="true" />
-            <marker date="1456394563900" expanded="true" signature="20463:20524" placeholder="SELECT * FRO... geo_country" />
-            <marker date="1456394563900" expanded="true" signature="25791:25852" placeholder="SELECT * FRO... geo_country" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1456443340320" expanded="true" signature="3681:3742" placeholder="SELECT * FRO... geo_country" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="141" selection-start-line="15" selection-start-column="141" selection-end-line="15" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/accept-tasks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -555,7 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -563,9 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,7 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,9 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,7 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,17 +494,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_task.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,23 +515,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/find_job.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="56.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="141" selection-start-line="15" selection-start-column="141" selection-end-line="15" selection-end-column="141" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,37 +536,415 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.666667">
+        <state vertical-scroll-proportion="0.0">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskRoadmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskShare.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskPersonGoal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskIdeaMilestone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskIdea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/TaskComponent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskBenefit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskCustom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding>
+            <marker date="1456510323977" expanded="false" signature="124:139" placeholder="..." />
+            <marker date="1456510323977" expanded="true" signature="346:351" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/task_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tasks/models/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place_steve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role_steve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start_steve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0">
+          <caret line="22" column="142" selection-start-line="22" selection-start-column="142" selection-end-line="22" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.962963">
+          <caret line="538" column="4" selection-start-line="538" selection-start-column="4" selection-end-line="538" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/views/default/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667">
+          <caret line="55" column="103" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="103" />
+          <folding>
+            <marker date="1456510323977" expanded="true" signature="1960:2141" placeholder="{...}" />
+            <marker date="1456510323977" expanded="true" signature="10936:10997" placeholder="SELECT * FRO... geo_country" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="593" column="56" selection-start-line="593" selection-start-column="49" selection-end-line="593" selection-end-column="56" />
+        <state vertical-scroll-proportion="-2.1724138">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
           <folding>
-            <element signature="e#56#69#0#PHP" expanded="true" />
-            <marker date="1456394563900" expanded="true" signature="20463:20524" placeholder="SELECT * FRO... geo_country" />
-            <marker date="1456394563900" expanded="true" signature="25791:25852" placeholder="SELECT * FRO... geo_country" />
+            <marker date="1456510370501" expanded="true" signature="20960:21021" placeholder="SELECT * FRO... geo_country" />
+            <marker date="1456510370501" expanded="true" signature="26682:26743" placeholder="SELECT * FRO... geo_country" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/models/UserDo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="39.62963">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/site/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.37037">
+          <caret line="52" column="77" selection-start-line="52" selection-start-column="77" selection-end-line="52" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44202065">
-          <caret line="414" column="18" selection-start-line="414" selection-start-column="18" selection-end-line="414" selection-end-column="18" />
+        <state vertical-scroll-proportion="68.27586">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
           <folding>
             <marker date="1456443340320" expanded="true" signature="3681:3742" placeholder="SELECT * FRO... geo_country" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/controllers/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="30.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455806459179" expanded="true" signature="3970:4213" placeholder="..." />
+            <marker date="1455806459179" expanded="true" signature="4011:4206" placeholder="..." />
+            <marker date="1455806459179" expanded="true" signature="4658:4670" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/controllers/ChatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="20.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/SocialController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.6666665">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.465517">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#44#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#th#0;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#tfoot#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#th#0;n#tr#0;n#tfoot#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1456507429561" expanded="true" signature="442:550" placeholder="{...}" />
+            <marker date="1456507429561" expanded="true" signature="493:546" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7413793">
+          <caret line="159" column="47" selection-start-line="159" selection-start-column="47" selection-end-line="159" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1456508620997" expanded="true" signature="2172:3575" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2185:3558" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="2222:2256" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2257:3544" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2297:3417" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="2369:2382" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2383:3181" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2432:2584" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2633:2815" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2864:3154" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="2917:3066" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3279:3358" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3458:3481" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="3616:3630" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3631:8432" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3664:8041" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3698:6869" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3741:6850" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3787:6827" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3852:4217" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="3911:3925" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3926:4186" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="3982:4151" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4023:4113" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4289:6258" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="4348:4362" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4363:6227" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4422:6192" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4605:5054" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4653:5012" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4705:5004" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="4709:4951" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="4849:4860" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5121:5571" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5169:5529" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5221:5521" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5225:5468" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="5286:5297" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5641:6089" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5689:6047" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5741:6039" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="5745:5986" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="5885:5896" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6323:6800" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="6382:6396" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6397:6769" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6452:6734" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6493:6571" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6612:6696" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6903:8026" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6956:8007" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="6990:7242" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="7128:7216" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="7282:7617" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="7422:7510" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="7651:7985" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="7788:7879" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="8070:8421" placeholder="..." />
+            <marker date="1456508620997" expanded="false" signature="8115:8130" placeholder="..." />
+            <marker date="1456508620997" expanded="true" signature="8131:8406" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/models/Team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/TeamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.74074">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#57#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tests/site/views/default/progress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.189655">
+          <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="117" />
+          <folding>
+            <marker date="1456510697697" expanded="true" signature="3545:4130" placeholder="..." />
+            <marker date="1456510697697" expanded="true" signature="3798:4079" placeholder="..." />
+            <marker date="1456510697697" expanded="true" signature="4206:4238" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tests/site/views/default/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.189655">
+          <caret line="229" column="117" selection-start-line="229" selection-start-column="117" selection-end-line="229" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3703704">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap_side.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yii2/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
