@@ -76,6 +76,7 @@ class DefaultController extends Controller
                             'get-count-by-tool',
                             'get-count-by-business',
                             'team',
+                            'team-steve',
                             'get-task'
                         ],
                         'roles' => ['@'],
@@ -933,5 +934,8 @@ class DefaultController extends Controller
     public function actionTeam(){
         return $this->render('team');
     }
-
+    
+    public function actionTeamSteve(){
+        return $this->render('team-steve');
+    }
 }
