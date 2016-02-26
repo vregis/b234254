@@ -163,7 +163,7 @@ use yii\helpers\Url;
     .tab-content .title{
         color:#5a5a5a;
         font-size:18px; 
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         line-height:36px;
     }
     .btn-primary{
