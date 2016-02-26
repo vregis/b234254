@@ -3,6 +3,9 @@ use yii\helpers\Url;
 ?>
 <?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
 <?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
+<div id="side_road">
+    <?php require_once Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
+</div>
 <div id="dashboard-editing" class="col-md-12" data-tool-id="<?= $tool->id ?>">
     <div class="well" style="margin: 60px auto; max-width: 1000px">
         <ul class="nav nav-tabs" role="tablist">
@@ -70,6 +73,56 @@ use yii\helpers\Url;
 
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $(".b-page-checkbox-wrap .md-radio").addClass('done');
+        $("#side_road .item-2").popover({
+            placement:"right auto",
+            html:true,
+            trigger:'hover',
+            container:$("#side_road .wrapper"),
+            template:'<div class="popover top-fix item-2" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+        });
+        $("#side_road .item-3").popover({
+            placement:"right auto",
+            html:true,
+            trigger:'hover',
+            container:$("#side_road .wrapper"),
+            template:'<div class="popover top-fix item-3" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+        });
+        $("#side_road .item-4").popover({
+            placement:"right auto",
+            html:true,
+            trigger:'hover',
+            container:$("#side_road .wrapper"),
+            template:'<div class="popover bottom-fix item-4 completed" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+        });
+        $("#side_road .item-5").popover({
+            placement:"right auto",
+            html:true,
+            trigger:'hover',
+            container:$("#side_road .wrapper"),
+            template:'<div class="popover bottom-fix item-5 completed" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+        });
+        $("#side_road .item-6").popover({
+            placement:"right auto",
+            html:true,
+            trigger:'hover',
+            container:$("#side_road .wrapper"),
+            template:'<div class="popover bottom-fix item-6 completed" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam.<div class='text-center'>Completed</div>"
+        });
+    });
+</script>
+<style>
+    #side_road .progress{
+        height:100%;
+    }
+</style>
 <style>
 .bootstrap-select.btn-group .dropdown-toggle .caret{
     height: 30px;

@@ -14,7 +14,37 @@ use yii\widgets\ActiveForm;
 ?>
 <div class="container-fluid">
   <div class="row task-title" style="margin-bottom: 8px;">
-        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">BENEFITS</div>
+          <div class="row task-body" style="margin-top:40px;">
+        <div class="desc" style="padding:0 15px;">
+            <div class="step">
+                <div class="progress"></div>
+                <div class="form-md-radios md-radio-inline b-page-checkbox-wrap">
+                    <? $name[0] = 'Idea'; ?>
+                    <? $name[1] = 'Benefits'; ?>
+                    <? $name[2] = 'Share'; ?>
+                    <? for($i = 0; $i < 3; $i++) : ?>
+                        <div class="md-radio even has-test b-page-checkbox">
+                            <div class="task-name">
+                                <?= $name[$i] ?>
+                            </div>
+                            <input type="radio" id="Roadmap[<?= $i ?>]" name="Roadmap" class="md-radiobtn" value="<?= $i ?>">
+                            <label for="Roadmap[<?= $i ?>]">
+                                <span></span>
+                                <span class="check"></span>
+                                <span class="box" style="cursor: default;" onclick="return false;"><?=$i==0 ? '<i class="fa fa-check font-green-jungle"></i>' : $i + 1?></span>
+                            </label>
+                            <div class="text-desc-task" style="display: none">
+                                <?= $task->description ?>
+                            </div>
+                        </div>
+                    <? endfor; ?>
+                    <div style="display:inline-block;width:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>s
+        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Benefits</div>
         <div class="name text-center">
             <span id="title-task text-center"><?= $task->name ?></span>
         </div>
@@ -119,6 +149,7 @@ use yii\widgets\ActiveForm;
     }
     .b-page-checkbox-wrap .md-radio:nth-child(1) label > .box,.b-page-checkbox-wrap .md-radio:nth-child(2) label > .box{
         border-color: #26C281 !important;
+        color: #26C281 !important;
     }
 </style>
 <script>

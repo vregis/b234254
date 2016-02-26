@@ -4,7 +4,7 @@ use modules\tasks\models\Task;
 ?>
 <div class="container-fluid">
  <div class="row task-title" style="margin-bottom: 0px;">
-    <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">START</div>
+    <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Start</div>
     <div class="name text-center" style="margin:15px auto 30px;"><?= $task->description ?></div>
 </div>
     <div class="task-body">
@@ -24,6 +24,7 @@ use modules\tasks\models\Task;
             placement:"right auto",
             html:true,
             trigger:'hover',
+            container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
             content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
         });
@@ -31,6 +32,7 @@ use modules\tasks\models\Task;
             placement:"right auto",
             html:true,
             trigger:'hover',
+            container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
             content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
         });
@@ -38,6 +40,7 @@ use modules\tasks\models\Task;
             placement:"right auto",
             html:true,
             trigger:'hover',
+            container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
             content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
         });
@@ -45,6 +48,7 @@ use modules\tasks\models\Task;
             placement:"right auto",
             html:true,
             trigger:'hover',
+            container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
             content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
         });
@@ -52,6 +56,7 @@ use modules\tasks\models\Task;
             placement:"right auto",
             html:true,
             trigger:'hover',
+            container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
             content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam, laboriosam non ea quos accusamus accusantium repellendus porro tempore quis esse in eius vero, mollitia nihil? Ipsa voluptates, dicta magnam."
         });
