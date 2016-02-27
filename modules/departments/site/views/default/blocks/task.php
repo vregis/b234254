@@ -215,7 +215,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                 $('#liofer').css('display', 'block');
                             }else{
                                 $('#liofer').hide();
-                                $('#liofer').remove();
+                                // $('#liofer').remove();
                             }
                         }
                     </script>
