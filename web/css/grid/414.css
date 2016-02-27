@@ -119,14 +119,14 @@
         height: 16px;
         text-align: center;
     }
-     .page-content.milestones
+/*     .page-content.milestones
     ,.page-content.milestones .well-sm
     ,.page-content.milestones .container-fluid
     ,.page-content.milestones .col-sm-12
     ,.page-content.milestones .row{
         padding: 0 !important;
         margin: 0;
-    }
+    }*/
 
     .milestones .panel-heading .panel-title{
         width: auto;

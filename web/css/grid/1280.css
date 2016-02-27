@@ -133,15 +133,16 @@
         padding-left: 15px !important;
         padding-right: 15px !important;
         padding-top: 10px !important;
+        padding-bottom: 10px !important;
     }
-    .page-content.milestones .col-sm-12{
+/*    .page-content.milestones .col-sm-12{
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
     .page-content.milestones .row{
         margin-left: -15px !important;
         margin-right: -15px !important;
-    }
+    }*/
         .milestones .panel-heading > *{
         display: table-cell !important;
     }

@@ -98,10 +98,10 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 
                             <?php if($dep->id != 9):?>
                                 <div data-id='<?php echo $dep->id?>' class="btn-group department open btn-idea dep <?php echo $class?> dep-color-<?php echo $dep->id?>">
-                                    <button data-id='<?php echo $dep->id?>' class="btn">
-                                        <i class="ico-<?php echo $dep->icons?>"></i>
+                                    <div data-id='<?php echo $dep->id?>' class="btn">
+                                        <a data-toggle="popover" class="btn btn-empty circle"><i class="ico-delegate"></i></a>
                                         <span class="text show568-"><?php echo $dep->name?></span>
-                                    </button>
+                                    </div>
 
                                     <button class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                         <i class="fa fa-angle-down"></i>
@@ -187,6 +187,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 </div>
 
     <script>
+    
         var changeCheckbox<?php echo $key?> = document.querySelector('#typeSwitch<?php echo $key?>');
         if(changeCheckbox<?php echo $key?>){
             changeCheckbox<?php echo $key?>.onchange = function() {
