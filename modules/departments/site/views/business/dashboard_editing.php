@@ -4,8 +4,9 @@ use yii\helpers\Url;
 <?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
 <?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
 <?php $user = \modules\user\models\User::find()->where(['id'=>Yii::$app->user->id])->one();?>
+<?php $tool2 = \modules\tasks\models\UserTool::find()->where(['user_id' => Yii::$app->user->id])->all();?>
 <?php if($user):?>
-    <?php if($user->user_type == 0):?>
+    <?php if($user->user_type == 0 && count($tool2) < 3):?>
 <div id="side_road">
     <?php require_once Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
 </div>

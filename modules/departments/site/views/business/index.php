@@ -161,7 +161,7 @@ $this->registerJs($msgJs);
                 
                 <? require __DIR__.'/blocks/find_job.php' ?>
                 <div class="text-center btn-div" style="padding-top:30px;">
-                    <a href="#" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search <i style="font-size: 20px;position: absolute;top: 14px;margin-left: 10px;" class="fa fa-angle-down"></i></a>
+                    <a href="#delegated#open" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search <i style="font-size: 20px;position: absolute;top: 14px;margin-left: 10px;" class="fa fa-angle-down"></i></a>
                 </div>
                 
             </div>
@@ -267,6 +267,7 @@ $this->registerJs($msgJs);
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
             $("#find_job").collapse('hide');
+            //$(".toggle-findjod").attr('href', '/departments/business#delegated');
             $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
         });
     });
