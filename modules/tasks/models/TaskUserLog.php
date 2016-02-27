@@ -7,21 +7,21 @@ use Yii;
 
 class TaskUserLog extends \yii\db\ActiveRecord
 {
-    public static $log_start = 'Task obtained';
+    public static $log_start = 'Obtained';
     public static $log_offer = 'Task offered %s';
-    public static $log_cancel_offer = '%s cancel delegate';
+    public static $log_cancel_offer = 'Cancel an offer';
     public static $log_cancel_offer_specialist = 'Offer cancel for: %s';
-    public static $log_counter_offer = '%s made an offer';
-    public static $log_cancel_counter_offer = 'Offer %s canceled';
-    public static $log_payment = 'Task paid';
+    public static $log_counter_offer = '%s Make an offer';
+    public static $log_cancel_counter_offer = 'Cancel an offer';
+    public static $log_payment = 'Fund';
     public static $log_delegate = 'Task delegated %s';
-    public static $log_complete_specialist = 'Task completed specialist';
-    public static $log_checked = 'Task checked and completed';
-    public static $log_complete = 'Task completed';
-    public static $log_payment_received = 'Payment received';
+    public static $log_complete_specialist = 'Submit';
+    public static $log_checked = 'Complete';
+    public static $log_complete = 'Complete';
+    public static $log_payment_received = 'Payment';
     public static $log_cancel = 'Task cancel delegated';
-    public static $log_restart = 'Task restart';
-    public static $log_job = 'The task is taken to job';
+    public static $log_restart = 'Restart';
+    public static $log_job = 'Accept';
     public function rules()
     {
         return [
