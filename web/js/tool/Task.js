@@ -704,7 +704,7 @@ function Task(task_user_id, is_my, is_custom) {
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
                         if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
-                            showLi(0);
+                            
                             // Сюда впили переход на серч
                             $("#offered-block").removeClass('active');
                             $("#search-block").addClass('active');
@@ -712,7 +712,7 @@ function Task(task_user_id, is_my, is_custom) {
                                 // $("#status-menu").show();
                                 $("#btn-offered-block .label").remove();
                                 $("a[href='#search-block']").tab('show');
-
+                                showLi(0);
                                 // $(".dropmenu1.status").popover('destroy');
                             }).popover('hide');
                         }
