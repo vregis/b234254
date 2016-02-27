@@ -3092,6 +3092,30 @@ Page Footer
 }
 .hor-menu .btn-group-justified > .btn-group .btn{
     width:100% !important;
+    line-height: 45px;
+}
+.hor-menu .btn-group-justified > .btn-group .btn .circle{
+    height: 30px !important;
+    width: 30px !important;
+    position: relative;
+/*    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 10px;*/
+    z-index: 999999999999;
+    margin-right: 3px;
+}
+.hor-menu .btn-group-justified > .btn-group .btn .circle i{
+    position: relative !important;
+    left: auto !important;
+    line-height: 30px;
+}
+.hor-menu .btn-group-justified > .btn-group .btn .circle{
+    border: 1px solid #fff !important;
+}
+.hor-menu .btn-group-justified > .btn-group .btn .circle:hover{
+    box-shadow: inset 0 0 20px 0 #fff !important;
+    border-color:#fff !important;
 }
 .hor-menu .btn-group-justified > .btn-group .dropdown-toggle{
     position: absolute;
@@ -3385,20 +3409,14 @@ Page Footer
     border-left:none;
     border-right:none;
     margin-top: 0 !important;
-    border-color: #d7d7d7 !important;
-
+    /*border-color: #d7d7d7 !important;*/
+    border: none;
 }
 .milestones .panel:not(:last-child){
     border-bottom: 0;
 }
-.milestones .panel-heading{
-    background: #ebebeb;
-    border-color:#d7d7d7;
-    padding: 0;
-    height: 45px;
-    line-height: 45px;
-    /*overflow: hidden;*/
-}
+
+.milestones .panel-heading
 .milestones .panel-heading > *{
     display: table-cell;
     vertical-align: middle;
@@ -3524,10 +3542,10 @@ div.ganttview-slide-container{
     transition: 0.3s linear all;
 }
 .milestones .gant .milestones-users > *.active{
-    border-color:#53D769;
+    border-color:#2e9e5c;
 }
 .milestones .list .milestones-users > *.active{
-    border-color:#6699CC;
+    border-color:#2e9e5c;
 }
 .milestones .table.table-bordered thead>tr>th{
     vertical-align: middle;
@@ -3542,6 +3560,7 @@ div.ganttview-slide-container{
     color:#2a2a2a;
     font-size:12px;
     position: relative;
+    border-color:#d7d7d7;
 }
 .milestones .table.table-bordered tbody tr td .label{
     margin-left: 10px;
@@ -3768,4 +3787,36 @@ div.ganttview-block .label{
 .pagination li:not(.disabled) a.next-page:hover{
     background: #4285f4 !important;
     color:#fff !important;
+}
+.page-content.milestones .row{
+    margin:0 !important;
+}
+.page-content.milestones .col-sm-12{
+    padding:0 !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+    border-top: 0;
+}
+.milestones .panel-heading{
+    background: #ebebeb;
+    padding: 0;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-top: 1px solid #d7d7d7;
+}
+.panel-group:first-child .panel .panel-heading{
+    border-top: 0 !important;
+}
+.page-content.milestones .container-fluid{
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.table-striped > tbody > tr{
+    background:#f5f5f5;
 }

@@ -89,7 +89,11 @@ $this->registerJs($msgJs);
 </div>
 <script>
 
-
+$(".hor-menu .btn-group-justified > .btn-group .btn .circle").popover({
+    container: 'body',
+    placement: "bottom",
+    content : 'Will be available in the next version'
+});
     $(document).on('click', '.on', function(e){
         var target = $(e.target);
         if (target.is("li"))
