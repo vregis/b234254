@@ -203,11 +203,22 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                     <div id="status-menu" style="display:none !important;">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#search-block" aria-controls="search-block" role="tab" data-toggle="tab">Search</a></li>
-                            <li role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <!--<span class="label label-danger circle"></span>--></a></li>
+                            <li id="liofer" <?php echo $hide ==1?'style="display:none"':''?> role="presentation"><a id="btn-offered-block" href="#offered-block" aria-controls="offered-block" role="tab" data-toggle="tab">Offered <!--<span class="label label-danger circle"></span>--></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+                    <script>
+                        function showLi(id){
+                            if(id == 1){
+                                $('#liofer').show();
+                                $('#liofer').css('display', 'block');
+                            }else{
+                                $('#liofer').hide();
+                                $('#liofer').remove();
+                            }
+                        }
+                    </script>
             <div class="row task-body">
                 <div class="col1">
                     <div class="title">Speciality:  <?php echo $task->spec?></div>

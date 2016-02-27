@@ -489,6 +489,8 @@ class DefaultController extends Controller
             }
         }
 
+        $hide = 0;
+
         $user_task_helpful = UserTaskHelpful::getUserTaskHelpful($task->id);
 
         $files['archive'] = $this->getFiles($task->id, 'archive');
@@ -549,6 +551,7 @@ class DefaultController extends Controller
         }
         if($html_cancel_delegate_users == 'none') {
             $html_cancel_delegate_users = '';
+            $hide = 1;
         }
 
         $custom = null;
@@ -592,7 +595,8 @@ class DefaultController extends Controller
             'skill_list' => $skill_list,
             'html_cancel_delegate_users' => $html_cancel_delegate_users,
             'custom' => $custom,
-            'is_my' => $is_my
+            'is_my' => $is_my,
+            'hide' => $hide
         ]);
     }
 
