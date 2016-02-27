@@ -619,6 +619,9 @@ function Task(task_user_id, is_my, is_custom) {
     var make_offer = $('.make-offer');
     make_offer.off();
     make_offer.on('click', function(){
+
+        showLi(1);
+
         var ids = [];
         var names = "";
         var i=0;
@@ -701,7 +704,7 @@ function Task(task_user_id, is_my, is_custom) {
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
                         if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
-
+                            showLi(0);
                             // Сюда впили переход на серч
                             $("#offered-block").removeClass('active');
                             $("#search-block").addClass('active');
@@ -879,6 +882,7 @@ function Task(task_user_id, is_my, is_custom) {
                         set_action_panel($('#action_panel'), response.html_action_panel);
                         set_delegate_users($('#delegate_users'), response.html_users);
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
+
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
                     }
                     if (response.html_counter_offers) {
