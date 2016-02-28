@@ -3554,6 +3554,7 @@ div.ganttview-slide-container{
     font-weight: normal;
     font-size: 16px;
     padding-left: 30px;
+    background: #fff;
 }
 .milestones .table.table-bordered tbody tr td{
     padding-left: 30px;

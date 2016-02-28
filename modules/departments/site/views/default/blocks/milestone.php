@@ -69,7 +69,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
             <div class="info">
                 <div class="pull-left <?php echo $ml->is_pay == 1? 'pay':''?>" data-parent=".milestones" data-placement="top" data-toggle="collapse"<?php echo $ml->is_pay == 1? 'href = "#collapse"':'href = "#collapseOne'.$key.'"'?> aria-expanded="false" aria-controls="collapseOne2" data-content="Will be available in the next version">
                     <button class="panel-toggle btn-empty unset_session" ><i class="fa fa-angle-down"></i></button>
-                    <h4 class="panel-title"><?php echo $ml->name?> <span class="c_count"></span></h4>
+                    <h4 class="panel-title" <?php if(strlen($ml->name) >12):?> data-toggle="popover" data-trigger="hover" data-content="<?= $ml->name ?>"<?php endif;?>><?php echo $ml->name?> <span class="c_count"></span></h4>
                 </div>
                 <div class="btns pull-right">
                     <button class="btn-empty btn-info" data-toggle="popover" data-content="<?= $ml->description ?>">i</button>
@@ -149,7 +149,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                         <table id="datatable_ajax" class="table table-bordered table-striped table-condensed flip-content" style="display:none" >
                             <thead>
                             <tr role="row" class="heading no-sort">
-                                <th class="no-sort" style="width:390px;">
+                                <th class="no-sort" style="width:300px;">
                                 </th>
                                 <th class="no-sort">
                                     Specialty
@@ -241,6 +241,11 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 
 <script>
     $(function(){
+        $("h4.panel-title[data-toggle='popover']").popover({
+            trigger:"hover",
+            html:true,
+            placement:"top"
+        });
         for(i=1; i<=<?php echo $jj?>; i++){
             $('.start'+i+'').delay(i*50).fadeIn(500);
         }
