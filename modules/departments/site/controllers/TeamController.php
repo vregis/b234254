@@ -6,6 +6,8 @@ namespace modules\departments\site\controllers;
 use modules\departments\models\Department;
 use modules\departments\models\Team;
 use modules\departments\models\UserDo;
+use modules\tasks\models\TaskUser;
+use modules\tasks\models\UserTool;
 use yii\web\Controller;
 use yii\filters\AccessControl;
 use Yii;
@@ -43,7 +45,14 @@ class TeamController extends Controller {
     }
 
     public function actionRequest($id){
-        return $this->render('team-request');
+
+        $departments = Department::find()->all();
+        $search_html = $this->renderPartial('blocks/jobber_search', ['departments' => $departments, 'tool_id' => $id]);
+        return $this->render('team-request', ['departments' => $departments, 'search_html' => $search_html]);
+    }
+
+    public static function getSearchChief($dep_id){
+
     }
 
     public function actionGetSearch(){
@@ -58,6 +67,7 @@ class TeamController extends Controller {
             ->join('INNER JOIN','user_profile', 'user_profile.user_id = user_do.user_id')
             ->join('JOIN', 'geo_country', 'geo_country.id = user_profile.country_id')
             ->where(['user_do.status_sell' => 1, 'user_do.department_id' => $dep_id])
+            ->orderBy(['user_profile.user_id' => SORT_DESC])
             ->groupBy('user_profile.user_id')
             ->limit(5)
             ->all();
@@ -67,6 +77,12 @@ class TeamController extends Controller {
     }
 
     public function actionInviteUser(){
+
+        $tasks = TaskUser::find()->where(['user_tool_id' => $_POST['tool_id']])->all();
+        var_dump($tasks); die();
+
+
+
         if($_POST){
             $req = new Team();
             $req->user_tool_id = $_POST['tool_id'];
