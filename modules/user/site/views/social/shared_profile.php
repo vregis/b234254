@@ -313,24 +313,27 @@ use modules\user\site\controllers\ProfileController;
         //     html: true,
         //     trigger:"manual",
         // });
-        $(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not(".no_hover").popover({
+        $(".contacts .big > a").not(".no_hover").popover({
             placement:"top",
             html: true,
             trigger:"manual"
         }).click(function(){
-            if($(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not($(this)).next("div").hasClass('popover')){
-                $(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not($(this)).popover("hide");
+            if($(".contacts .big > a").not($(this)).next("div").hasClass('popover')){
+                $(".contacts .big > a").not($(this)).popover("hide");
             }
             $(this).popover('toggle');
+            $(this).toggleClass('active');
         });
 
         $(".contacts .big a").on('show.bs.popover',function(){
             $("body").on("click", function(e){
                 $('.contacts .big a').each(function () {
+                    var that = $(this);
                     //the 'is' for buttons that trigger popups
                     //the 'has' for icons within a button that triggers a popup
                     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.contacts .big .popover').has(e.target).length === 0) {
                         $(this).popover('hide');
+                        $(this).removeClass('active');
                     }
                 });
             });

@@ -10,7 +10,7 @@ body{
 .well{
 	width: 1000px;
 	padding:0;
-	margin:100px auto;
+	margin:50px auto;
 	border:none;
 	background:rgba(255,255,255,0.9);
 }
@@ -226,19 +226,19 @@ section.contacts .title{
 .contacts .big a.tel{
 	background: url("/images/share_profile.png") 0 0 no-repeat;
 }
-.contacts .big a.tel:not(.no_hover):hover,.contacts .big a.tel:not(.no_hover):focus,.contacts .big a.tel.active:not(.no_hover){
+.contacts .big a.tel:not(.no_hover):hover,.contacts .big a.tel.active:not(.no_hover){
 	background: url("/images/share_profile.png") -60px 0 no-repeat;
 }
 .contacts .big a.skype{
 	background: url("/images/share_profile.png") -120px 0px no-repeat;
 }
-.contacts .big a.skype:not(.no_hover):hover,.contacts .big a.skype:not(.no_hover):focus,.contacts .big a.skype.active:not(.no_hover){
+.contacts .big a.skype:not(.no_hover):hover,.contacts .big a.skype.active:not(.no_hover){
 	background: url("/images/share_profile.png") -180px 0px no-repeat;
 }
 .contacts .big a.mail{
 	background: url("/images/share_profile.png") -240px 0px no-repeat;
 }
-.contacts .big a.mail:hover,.contacts .big a.mail:not(.no_hover):focus,.contacts .big a.mail.active:not(.no_hover){
+.contacts .big a.mail:not(.no_hover):hover,.contacts .big a.mail.active:not(.no_hover){
 	background: url("/images/share_profile.png") -300px 0px no-repeat;
 }
 .contacts .small{
@@ -393,4 +393,25 @@ section.contacts .title{
 }
 .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
 	background-color:rgba(255,255,255,0.9);
+}
+.popover{
+    border:1px solid #d7d7d7;
+    padding: 10px;
+    border-radius:10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea;
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: #FFF !important;
+}
+.popover.top > .arrow:after {
+    border-top-color: #FFF !important;
+}
+.popover.right > .arrow:after {
+    border-right-color: #fff !important;
+}
+.popover .popover-content{
+    background: #fff;
+    /*border: 1px solid #d7d7d7;*/
+    padding:0;
 }
