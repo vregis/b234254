@@ -3098,10 +3098,10 @@ Page Footer
     height: 30px !important;
     width: 30px !important;
     position: relative;
-/*    position: absolute;
+    position: absolute;
     top: 50%;
     margin-top: -15px;
-    left: 10px;*/
+    left: 8px;
     /*z-index: 999999999999;*/
     /*margin-right: 3px;*/
 }
@@ -3559,6 +3559,9 @@ div.ganttview-slide-container{
     border-left: 0;
     height: 45px;
 }
+.milestones .table.table-bordered thead>tr>th:last-child{
+    border-right:0;
+}
 .milestones .table.table-bordered tbody tr td{
     padding-left: 30px;
     color:#2a2a2a;
@@ -3583,7 +3586,7 @@ div.ganttview-slide-container{
     color:#5a5a5a;
     font-size:12px;
 }
-.milestones .table.table-bordered thead > tr > th :first-child{
+.milestones .table.table-bordered thead > tr > th:first-child{
     background: #fff;
     padding-left: 0px;
     border-left: 0 !important;
