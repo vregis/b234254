@@ -6,6 +6,7 @@ namespace modules\departments\site\controllers;
 use modules\departments\models\Department;
 use modules\departments\models\Team;
 use modules\departments\models\UserDo;
+use modules\tasks\models\DelegateTask;
 use modules\tasks\models\Task;
 use modules\tasks\models\TaskUser;
 use modules\tasks\models\UserTool;
@@ -80,8 +81,27 @@ class TeamController extends Controller {
     public function actionInviteUser(){
 
         $task = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
-        var_dump($task);
-        die();
+        if($task){
+            foreach($task as $t){
+                $tu = new TaskUser();
+                $tu->task_id = $t->id;
+                $tu->user_tool_id = $_POST['tool_id'];
+                if(!$tu->save()){
+                    var_dump($tu->getErrors()); die();
+                }else{
+                    $id = $tu->getPrimaryKey();
+                    $dt = new DelegateTask();
+                    $dt->delegate_user_id = $_POST['recipient'];
+                    $dt->task_user_id = $id;
+                    if(!$dt->save()) {
+                        var_dump($dt->getErrors());
+                        die();
+                    }
+                }
+
+
+            }
+        }
 
 
 

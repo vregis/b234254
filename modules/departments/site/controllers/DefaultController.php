@@ -108,7 +108,6 @@ class DefaultController extends Controller
             ->where(['is_hidden' => 0])
             ->all();
         array_unshift($milestones, Milestone::getAllMilestone());
-
         $departments = Department::find()->all();
         $avatar = Profile::find()->where(['user_id' => $userTool->user_id])->one();
 
@@ -181,7 +180,6 @@ class DefaultController extends Controller
         if($task_id != 0) {
             return $this->redirect(['/departments/task', 'id' => $task_id, 'first' => 1]);
         }
-
         return $this->render('index', [
             'ml' => $this->get_milestones($userTool),
             'task_open_id' => $task_id
@@ -274,6 +272,8 @@ class DefaultController extends Controller
 
         $is_my = $userTool->user_id == Yii::$app->user->id;
 
+
+
         if (!$is_my) {
             $tasks_request->andWhere(
                 [
@@ -288,12 +288,14 @@ class DefaultController extends Controller
             $tasks_request->andWhere(['!=', 'delegate_task.status', DelegateTask::$status_cancel]);
         }
 
+        //var_dump(count($tasks_request->all()));
+
+
         $tasks = [];
         $delegate_tasks = [];
         $specializations = [];
         if($milestone->is_pay == 0) {
             $tasks = $tasks_request->all();
-
             $specialization_ids_key = [];
             foreach ($tasks as $task) {
                 if ($task->specialization_id > 0) {
