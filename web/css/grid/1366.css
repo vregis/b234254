@@ -73,13 +73,16 @@
     }
     .hor-menu .btn .text{
         display: inline-block !important;
-        font-size: 13px;
+        font-size: 11px;
+        margin-right:15px;
     }
-    .hor-menu .btn i{
+    .hor-menu .btn i.fa{
         font-size: 18px !important;
         color: #fff;
-        position: absolute !important;
+        /*position: absolute !important;*/
         left: 8% !important;  
+        top:50% !important;
+        margin-top: 16px;
     }
 
     .hor-menu .btn i.fa {

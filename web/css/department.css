@@ -351,9 +351,11 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
 .list .table {
     margin-bottom: 0;
     border-collapse: collapse;
+    border: 0 !important;
 }
 .list .table tr td{
-    border-radius:o !important;
+    border-radius:0 !important;
+    background:#fff !important;
 }
 .popover{
     padding: 10px;
@@ -376,5 +378,5 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
 .popover .popover-content{
     border-radius: 10px !important;
     padding: 20px;
-    color: #5a5a5a;
+    color: #5a5a5a  ;
 }
