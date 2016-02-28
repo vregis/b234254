@@ -117,14 +117,8 @@ $this->registerJs($msgJs);
                             <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
                         </div>
                         <script>
+                        $(document).ready(function(){
                             $(".dropmenu<?php echo $i?>.history").popover({
-                                placement:"bottom",
-                                html:true,
-                                content:$("#huistory<?php echo $i?>"),
-                                container:$("body"),
-                                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
-                            });
-                            $(".dropmenu<?php echo $i?>.history1").popover({
                                 placement:"bottom",
                                 html:true,
                                 content:$("#huistory<?php echo $i?>"),
@@ -137,13 +131,24 @@ $this->registerJs($msgJs);
                             }).on('hide.bs.popover',function(){
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
                             });
-                            $(".dropmenu1.history<?php echo $i?>").on('show.bs.popover',function(){
+                        });
+                        $(".well > .nav-tabs li a").on('shown.bs.tab',function(){
+                            $(".dropmenu<?php echo $i?>.history").popover({
+                                placement:"bottom",
+                                html:true,
+                                content:$("#huistory<?php echo $i?>"),
+                                container:$("body"),
+                                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+                            });
+                            $(".dropmenu<?php echo $i?>.history").on('show.bs.popover',function(){
                                 $("#huistory<?php echo $i?>").show();
                                 $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
                             }).on('hide.bs.popover',function(){
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
                             });
+                        });
                         </script>
+
                             <?php endif;?>
                     <? endforeach; ?>
                     </tbody>
@@ -202,6 +207,39 @@ $this->registerJs($msgJs);
         border-radius:3px;
     }
 </style>
+<script>
+$(document).ready(function () {
+    $(".dropmenu1.history1").popover({
+        placement:"bottom",
+        html:true,
+        content:$("#huistory-one"),
+        container:$("body"),
+        template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+    });
+    $(".dropmenu-two.history1").on('show.bs.popover',function(){
+        $("#huistory-one").show();
+        $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+    }).on('hide.bs.popover',function(){
+        $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+    });
+    $(".well > .nav-tabs li a").on('shown.bs.tab',function(){
+        console.log("asdasd");
+        $(".dropmenu-two.history1").popover({
+            placement:"bottom",
+            html:true,
+            content:$("#huistory-one"),
+            container:$("body"),
+            template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+        });
+        $(".dropmenu-two.history1").on('show.bs.popover',function(){
+            $("#huistory-one").show();
+            $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+        }).on('hide.bs.popover',function(){
+            $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+        });
+    });
+});
+</script>
 <script>
     $(document).on('change',function(){
         $('.page-content').mCustomScrollbar({

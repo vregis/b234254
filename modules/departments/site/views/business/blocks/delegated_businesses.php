@@ -38,12 +38,8 @@ use yii\helpers\Url;
         ?>
 
         <tr id="toolid-<?php echo $userTool->id?>">
-                    <td>
-                <a href="javascript:;" class="dropmenu1 history1 btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="disabled"><a href="#">Business Dashboard</a></li>
-                    <li class="disabled"><a>Team</a></li>
-                </ul>
+                <td>
+                <a href="javascript:;" class="dropmenu-two history1 btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
             </td>
             <td style="text-transform: uppercase">
                 <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <!--<span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>-->
@@ -72,11 +68,10 @@ use yii\helpers\Url;
 <? endforeach; ?>
     </tbody>
 </table>
-<div id="huistory1" class="huistory" style="display:none;">
+<div id="huistory-one" class="huistory" style="display:none;">
     <ul>
         <li class="disabled"><a href="#">Business Dashboard</a></li>
         <li class="disabled"><a>Team</a></li>   
     </ul>
-
 </div>
 <? endif; ?>

@@ -350,15 +350,18 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
 
 .list .table {
     margin-bottom: 0;
+    border-collapse: collapse;
 }
-
+.list .table tr td{
+    border-radius:o !important;
+}
 .popover{
     padding: 10px;
     border-radius:10px !important;
     box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
     border: 1px solid #dae2ea !important;
 }
-.milestones .panel-heading .info > .pull-left{
+.milestones .panel-heading .info > .pull-left+.popover{
     left: 0 !important;
 }
 .popover.bottom > .arrow:after {
@@ -373,4 +376,5 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
 .popover .popover-content{
     border-radius: 10px !important;
     padding: 20px;
+    color: #5a5a5a;
 }

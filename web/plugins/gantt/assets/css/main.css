@@ -8650,7 +8650,7 @@ div.ganttview .ui-resizable-w {
     border-bottom:0;
   }
   div.ganttview-vtheader {
-    width: 390px;
+    width: 300px;
     /*border-right: 1px solid rgba(0, 0, 0, 0.12);*/
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   }
