@@ -6,6 +6,7 @@ namespace modules\departments\site\controllers;
 use modules\departments\models\Department;
 use modules\departments\models\Team;
 use modules\departments\models\UserDo;
+use modules\tasks\models\Task;
 use modules\tasks\models\TaskUser;
 use modules\tasks\models\UserTool;
 use yii\web\Controller;
@@ -78,8 +79,9 @@ class TeamController extends Controller {
 
     public function actionInviteUser(){
 
-        $tasks = TaskUser::find()->where(['user_tool_id' => $_POST['tool_id']])->all();
-        var_dump($tasks); die();
+        $task = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
+        var_dump($task);
+        die();
 
 
 
