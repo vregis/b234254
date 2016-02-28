@@ -3103,7 +3103,7 @@ Page Footer
     margin-top: -15px;
     left: 10px;*/
     /*z-index: 999999999999;*/
-    margin-right: 3px;
+    /*margin-right: 3px;*/
 }
 .hor-menu .btn-group-justified > .btn-group .btn .circle i{
     position: relative !important;
@@ -3452,7 +3452,7 @@ Page Footer
 }
 .milestones .panel-heading .info > .pull-left{
     cursor:pointer;
-    width: calc(100% - 130px);
+    width: calc(100% - 87px);
 }
 .milestones .panel-heading .info > .pull-left > *{
     line-height: 1.4;
@@ -3555,6 +3555,9 @@ div.ganttview-slide-container{
     font-size: 16px;
     padding-left: 30px;
     background: #fff;
+    border-color:#d7d7d7 !important;
+    border-left: 0;
+    height: 45px;
 }
 .milestones .table.table-bordered tbody tr td{
     padding-left: 30px;
@@ -3562,6 +3565,7 @@ div.ganttview-slide-container{
     font-size:12px;
     position: relative;
     border-color:#d7d7d7;
+    border-bottom:0 !important;
 }
 .milestones .table.table-bordered tbody tr td .label{
     margin-left: 10px;
@@ -3570,16 +3574,23 @@ div.ganttview-slide-container{
 }
 .milestones .table.table-bordered tbody tr td:first-child{
     padding-left: 10px;
+    border-left: 0 !important;
+}
+.milestones .table.table-bordered tbody tr td:last-child{
+    border-right:0 !important;
 }
 .milestones .table.table-bordered tbody tr td:first-child a{
     color:#5a5a5a;
     font-size:12px;
 }
-.milestones .table.table-bordered thead>tr>th:first-child{
+.milestones .table.table-bordered thead > tr > th :first-child{
     background: #fff;
     padding-left: 0px;
+    border-left: 0 !important;
 }
-
+.milestones .table.table-bordered thead > tr > th :last-child{
+    border-right:0 !important;
+}
 .milestones #datatable_ajax .milestones-users{
     height: auto;
     line-height: 34px;

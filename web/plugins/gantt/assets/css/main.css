@@ -8456,6 +8456,7 @@ div.ganttview-vtheader {
   margin-top: 0px;
   width: 240px;
   background-color: #fff;
+  border-bottom: 0 !important;
 }
 div.ganttview-vtheader-group {
   color: #212121;
@@ -8539,6 +8540,7 @@ div.ganttview-slide-container {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  border:0;
 }
 div.ganttview-grid-row {
   overflow: hidden;
