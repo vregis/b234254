@@ -351,3 +351,26 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
 .list .table {
     margin-bottom: 0;
 }
+
+.popover{
+    padding: 10px;
+    border-radius:10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea !important;
+}
+.milestones .panel-heading .info > .pull-left{
+    left: 0 !important;
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: #FFF !important;
+}
+.popover.top > .arrow:after {
+    border-top-color: #FFF !important;
+}
+.popover.right > .arrow:after {
+    border-right-color: #fff !important;
+}
+.popover .popover-content{
+    border-radius: 10px !important;
+    padding: 20px;
+}
