@@ -73,7 +73,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                 </div>
                 <div class="btns pull-right">
                     <button class="btn-empty btn-info" data-toggle="popover" data-content="<?= $ml->description ?>">i</button>
-                    <?php if($key = $ml->id!=-1):?>
+                    <?php if($ml->id!=-1):?>
                     <button class="btn-empty btn btn-primary delegate" style="height: 30px;width: 30px;line-height: 34px;" data-toggle="popover"><i class="ico-delegate"></i></button>
                     <?php endif; ?>
                     <div class="typeSwitch hide">
@@ -102,7 +102,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                             <?php if($dep->id != 9):?>
                                 <div data-id='<?php echo $dep->id?>' class="btn-group department open btn-idea dep <?php echo $class?> dep-color-<?php echo $dep->id?>">
                                     <div data-id='<?php echo $dep->id?>' class="btn">
-                                    <?php if($key = $ml->id==-1):?>
+                                    <?php if($ml->id==-1):?>
                                         <a data-toggle="popover" class="btn btn-empty circle"><i class="ico-delegate"></i></a>
                                     <?php endif; ?>
                                         <span class="text show568-"><?php echo $dep->name?></span>

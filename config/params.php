@@ -2,7 +2,7 @@
 
 return [
     'dbname' => 'bsb',
-    'domain' => 'http://bsb.local/',
-    'staticDomain' => 'http://bsb.local/statc/web/',
+    'domain' => 'http://bsb.loc/',
+    'staticDomain' => 'http://bsb.loc/statc/web/',
     'version' => require(__DIR__ . '/version.php')
 ];

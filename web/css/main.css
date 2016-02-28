@@ -3102,7 +3102,7 @@ Page Footer
     top: 50%;
     margin-top: -15px;
     left: 10px;*/
-    z-index: 999999999999;
+    /*z-index: 999999999999;*/
     margin-right: 3px;
 }
 .hor-menu .btn-group-justified > .btn-group .btn .circle i{
