@@ -192,8 +192,9 @@ a.milestone-link:hover {
 .dropdown-menu li {
     cursor: pointer;
     line-height: 30px;
-    color:#fff;
-    background: #545c63;
+     border-radius: 3px !important;
+    /*color:#fff;*/
+    /*background: #545c63;*/
 }
 .page-content .dropdown-toggle,
 .page-content .dropdown-menu li {
@@ -202,8 +203,13 @@ a.milestone-link:hover {
 .btn-group>.dropdown-menu:after, .dropdown-toggle>.dropdown-menu:after, .dropdown>.dropdown-menu:after{
     border-bottom-color: #545c63;
 }
-.dropdown-menu li:hover {
-    /*background-color: #f4f4f4;*/
+.th-status .dropdown-menu li:hover {
+    background: #8eb6f8 !important;
+    color: #fff !important;
+    border-radius: 3px;
+}
+.dropdown-menu li.specon{
+    color: #fff !important;
 }
 .dropdown-toggle span {
     font-style: normal;
@@ -233,13 +239,16 @@ table.dataTable#datatable_ajax thead td {
     padding: 0px;
 }
 .page-content .dropdown-menu li {
-    padding: 5px 10px;
+    padding: 0px 10px;
     -webkit-transition: 0.3s linear all;
     -moz-transition: 0.3s linear all;
     transition: 0.3s linear all;
+    margin-bottom:1px;
+    text-align:center;
+    color: #5a5a5a !important;
 }
 .dropdown-menu li:hover{
-    box-shadow: inset 0 0 10px 8px #fff !important;
+    /*box-shadow: inset 0 0 10px 8px #fff !important;*/
 }
 .dropdown-toggle{
     border:none;
@@ -298,28 +307,28 @@ table.dataTable#datatable_ajax thead td {
 }
 
 .color-1{
-    background: rgba(145,135,208,0.1) !important;
+    background: rgba(145,135,208,0.3) !important;
 }
 .color-2{
-    background: rgba(183,135,209,0.1) !important;
+    background: rgba(183,135,209,0.3) !important;
 }
 .color-3{
-    background: rgba(253,109,100,0.1) !important;
+    background: rgba(253,109,100,0.3) !important;
 }
 .color-4{
-    background: rgba(255,162,93,0.1) !important;
+    background: rgba(255,162,93,0.3) !important;
 }
 .color-5{
-    background: rgba(255,209,71,0.1) !important;
+    background: rgba(255,209,71,0.3) !important;
 }
 .color-6{
-    background: rgba(170,215,114,0.1) !important;
+    background: rgba(170,215,114,0.3) !important;
 }
 .color-7{
-    background: rgba(112,202,200,0.1) !important;
+    background: rgba(112,202,200,0.3) !important;
 }
 .color-8{
-    background: rgba(93,201,240,0.1) !important;
+    background: rgba(93,201,240,0.3) !important;
 }
 .ganttview-slide-container .mCSB_horizontal.mCSB_inside > .mCSB_container{
     margin-bottom: 0px;
@@ -357,8 +366,8 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
     border-radius:0 !important;
     /*background:#fff !important;*/
 }
-.popover{
-    padding: 10px;
+.popover, .th-status ul.dropdown-menu, .spec_list{
+    padding: 10px !important;
     border-radius:10px !important;
     box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
     border: 1px solid #dae2ea !important;
@@ -379,4 +388,31 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
     border-radius: 10px !important;
     padding: 20px;
     color: #5a5a5a  ;
+}
+.th-status{
+
+}
+.spec-color-1.specon{
+    background:rgba(145, 135, 208, 0.6) !important;
+}
+.spec-color-2.specon{
+    background:rgba(183, 135, 209, 0.6) !important;
+}   
+.spec-color-3.specon{
+    background:rgba(253, 109, 100, 0.6) !important;
+}
+.spec-color-4.specon{
+    background:rgba(255, 162, 93, 0.6) !important;
+}
+.spec-color-5.specon{
+    background:rgba(255, 209, 71, 0.6) !important;
+}
+.spec-color-6.specon{
+    background:rgba(170, 215, 114, 0.6) !important;
+}
+.spec-color-7.specon{
+    background:rgba(112, 202, 200, 0.6) !important;
+}
+.spec-color-8.specon{
+    background:rgba(145, 135, 208, 0.6) !important;
 }

@@ -372,30 +372,7 @@ $(".hor-menu .btn-group-justified > .btn-group .btn .circle").popover({
         background:#5dc9f0!important;
     }
 
-    .spec-color-1.specon{
-        background:#9187d0!important;
-    }
-    .spec-color-2.specon{
-        background:#b787d1!important;
-    }
-    .spec-color-3.specon{
-        background:#fd6d64!important;
-    }
-    .spec-color-4.specon{
-        background:#ffa25d!important;
-    }
-    .spec-color-5.specon{
-        background:#ffd147!important;
-    }
-    .spec-color-6.specon{
-        background:#aad772!important;
-    }
-    .spec-color-7.specon{
-        background:#70cac8!important;
-    }
-    .spec-color-8.specon{
-        background:#5dc9f0!important;
-    }
+
 
 
 
