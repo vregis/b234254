@@ -18,7 +18,7 @@
         <?php $us = TeamController::getInvitedUser($request->recipient_id);?>
         <tr class="user-row" data-page-id="0" style="">
             <td>
-                <a target="_blank" href="/user/social/shared-profile?id=<?php echo $us->id?>">
+                <a target="_blank" href="/user/social/shared-profile?id=<?php echo $us->user_id?>">
                     <img onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="gant_avatar" src="<?php echo $us->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$us->avatar:'/images/avatar/nophoto.png'?>" height="33" style="margin:0;">
                 </a>
             </td>
@@ -30,7 +30,7 @@
             <td><?php echo ($us->country)?$us->country:''?> <?php echo ($us->city_title)?', '.$us->city_title:''?></td>
             <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
             <td>
-                <button data-id = '<?php echo $us->id?>'  style="font-size: 10px;" class="btn btn-danger circle req_reject"><i class="ico-delete"></i></button>
+                <button data-id = '<?php echo $us->user_id?>'  style="font-size: 10px;" class="btn btn-danger circle req_reject"><i class="ico-delete"></i></button>
             </td>
         </tr>
 
@@ -211,7 +211,7 @@
                 data: {recipient:recipient, dep_id:dep_id, tool_id:tool_id},
                 dataType: 'json',
                 success: function(){
-                    //location.reload(); //refactor this
+                    location.reload(); //refactor this
                 }
             })
         })

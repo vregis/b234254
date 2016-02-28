@@ -52,11 +52,16 @@ class TeamController extends Controller {
 
         $departments = Department::find()->all();
         $search_html = $this->renderPartial('blocks/jobber_search', ['departments' => $departments, 'tool_id' => $id]);
-        return $this->render('team-request', ['departments' => $departments, 'search_html' => $search_html]);
+        $request_html = $this->renderPartial('blocks/jobber_request', ['departments' => $departments]);
+        return $this->render('team-request', ['departments' => $departments, 'search_html' => $search_html, 'request_html' => $request_html]);
     }
 
-    public static function getSearchChief($dep_id){
-
+    public static function getJobberRequest($dep_id,$tool_id){
+        $team = Team::find()
+            ->select('team.*, user_profile.avatar ava, user_profile.first_name fname, user_profile.last_name lname')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = team.sender_id')
+            ->where(['team.department' => $dep_id, 'team.user_tool_id' => $tool_id, 'team.recipient_id' => Yii::$app->user->id, 'team.status' => 0])->all();
+        return $team;
     }
 
     public function actionGetSearch(){
@@ -128,7 +133,6 @@ class TeamController extends Controller {
     }
 
     public function actionDeleteInviteUser(){
-        var_dump($_POST); die();
         if($_POST){
             $del = Team::find()->where([
                 'user_tool_id' => $_POST['tool_id'],
@@ -136,7 +140,6 @@ class TeamController extends Controller {
                 'sender_id' => Yii::$app->user->id,
                 'department' => $_POST['dep_id']
             ])->one();
-            var_dump($del); die();
             if($del){
                 $del->delete();
             }
