@@ -24,6 +24,7 @@ class TeamController extends Controller {
                         'allow' => true,
                         'actions' => [
                             'index',
+                            'request',
                             'get-search',
                             'invite-user',
                         ],
@@ -39,6 +40,10 @@ class TeamController extends Controller {
         $departments = Department::find()->all();
         $search_html = $this->renderPartial('blocks/team_search', ['departments' => $departments]);
         return $this->render('team', ['departments' => $departments, 'search_table' => $search_html]);
+    }
+
+    public function actionRequest($id){
+        return $this->render('team-request');
     }
 
     public function actionGetSearch(){
