@@ -138,7 +138,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
             </div>
             <div class="clearfix"></div>
         </div>
-        <div style="background:#EBEBEB;" id="collapseOne<?php echo $key?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne2">
+        <div id="collapseOne<?php echo $key?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne2">
             <div class="panel-body">
                 <?= $milestones_users ?>
                 <div class="wrapper list" style="position: absolute; display: none;">
