@@ -12,25 +12,54 @@
         </tr>
         </thead>
         <tbody id="user_request">
-        <?php $users = TeamController::getSearchUsers($dep->id);?>
-        <?php if($users):?>
-            <?php foreach($users as $us):?>
-                <tr class="user-row" data-page-id="0" style="">
-                    <td>
-                        <a target="_blank" href="/user/social/shared-profile?id=<?php echo $us->dname?>">
-                            <img onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="gant_avatar" src="<?php echo $us->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$us->ava:'/images/avatar/nophoto.png'?>" height="33" style="margin:0;">
-                        </a>
-                    </td>
-                    <?php if(!$us->fname && !$us->lname):?>
-                        <td>User</td>
-                    <?php else:?>
-                    <td><?php echo ($us->fname)?$us->fname:''?> <?php echo ($us->lname)?$us->lname:''?></td>
-                    <?php endif;?>
-                    <td><?php echo ($us->country)?$us->country:''?> <?php echo ($us->city)?', '.$us->city:''?></td>
-                    <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
-                    <td><button data-id = '<?php echo $us->dname?>' class="btn btn-primary circle invite_user"><i class="ico-add"></i></button></td>
-                </tr>
-            <?php endforeach;?>
+
+        <?php $request = \modules\departments\models\Team::find()->where(['user_tool_id' => $_GET['id'], 'department' => $dep->id, 'sender_id' => Yii::$app->user->id])->one();?>
+        <?php if($request):?>
+        <?php $us = TeamController::getInvitedUser($request->recipient_id);?>
+        <tr class="user-row" data-page-id="0" style="">
+            <td>
+                <a target="_blank" href="/user/social/shared-profile?id=<?php echo $us->id?>">
+                    <img onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="gant_avatar" src="<?php echo $us->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$us->avatar:'/images/avatar/nophoto.png'?>" height="33" style="margin:0;">
+                </a>
+            </td>
+            <?php if(!$us->first_name && !$us->last_name):?>
+                <td>User</td>
+            <?php else:?>
+                <td><?php echo ($us->first_name)?$us->first_name:''?> <?php echo ($us->last_name)?$us->last_name:''?></td>
+            <?php endif;?>
+            <td><?php echo ($us->country)?$us->country:''?> <?php echo ($us->city_title)?', '.$us->city_title:''?></td>
+            <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
+            <td>
+                <button data-id = '<?php echo $us->id?>'  style="font-size: 10px;" class="btn btn-danger circle req_reject"><i class="ico-delete"></i></button>
+            </td>
+        </tr>
+
+        <?php else:?>
+            <div class="search">
+            <?php $users = TeamController::getSearchUsers($dep->id);?>
+            <?php if($users):?>
+                <?php foreach($users as $us):?>
+                    <tr class="user-row" data-page-id="0" style="">
+                        <td>
+                            <a target="_blank" href="/user/social/shared-profile?id=<?php echo $us->dname?>">
+                                <img onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="gant_avatar" src="<?php echo $us->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$us->ava:'/images/avatar/nophoto.png'?>" height="33" style="margin:0;">
+                            </a>
+                        </td>
+                        <?php if(!$us->fname && !$us->lname):?>
+                            <td>User</td>
+                        <?php else:?>
+                        <td><?php echo ($us->fname)?$us->fname:''?> <?php echo ($us->lname)?$us->lname:''?></td>
+                        <?php endif;?>
+                        <td><?php echo ($us->country)?$us->country:''?> <?php echo ($us->city)?', '.$us->city:''?></td>
+                        <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
+                        <td>
+                            <button data-id = '<?php echo $us->dname?>' class="btn btn-primary circle invite_user"><i class="ico-add"></i></button>
+                            <button data-id = '<?php echo $us->dname?>' style="font-size: 10px; display:none" class="btn btn-danger circle"><i class="ico-delete"></i></button>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+            <?php endif;?>
+                </div>
         <?php endif;?>
         </tbody>
         <tfoot>
@@ -167,9 +196,24 @@
                     data: {recipient:recipient, dep_id:dep_id, tool_id:tool_id},
                     dataType: 'json',
                     success: function(){
-
+                        location.reload(); //refactor this
                     }
                 })
+        })
+
+        $('.req_reject').on('click', function(){
+            var recipient = $(this).attr('data-id');
+            var dep_id = $(this).closest('.team-user-table').attr('data-dep-id');
+            var tool_id = <?php echo $_GET['id']?>;
+            $.ajax({
+                url: '/departments/team/delete-invite-user',
+                type: 'post',
+                data: {recipient:recipient, dep_id:dep_id, tool_id:tool_id},
+                dataType: 'json',
+                success: function(){
+                    //location.reload(); //refactor this
+                }
+            })
         })
     })
 </script>

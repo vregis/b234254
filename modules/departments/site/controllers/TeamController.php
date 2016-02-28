@@ -10,6 +10,7 @@ use modules\tasks\models\DelegateTask;
 use modules\tasks\models\Task;
 use modules\tasks\models\TaskUser;
 use modules\tasks\models\UserTool;
+use modules\user\models\Profile;
 use yii\web\Controller;
 use yii\filters\AccessControl;
 use Yii;
@@ -31,6 +32,7 @@ class TeamController extends Controller {
                             'request',
                             'get-search',
                             'invite-user',
+                            'delete-invite-user',
                         ],
                         'roles' => ['@'],
 
@@ -78,6 +80,14 @@ class TeamController extends Controller {
 
     }
 
+    public static function getInvitedUser($id){
+        $user = Profile::find()
+            ->select('user_profile.*, geo_country.title_en country')
+            ->join('LEFT JOIN', 'geo_country', 'geo_country.id=user_profile.country_id')
+            ->where(['user_id' => $id])->one();
+        return $user;
+    }
+
     public function actionInviteUser(){
 
         $task = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
@@ -103,8 +113,6 @@ class TeamController extends Controller {
             }
         }
 
-
-
         if($_POST){
             $req = new Team();
             $req->user_tool_id = $_POST['tool_id'];
@@ -115,6 +123,25 @@ class TeamController extends Controller {
             $req->is_request = 0;
             $req->save();
         }
+
+        return json_encode($_POST);
+    }
+
+    public function actionDeleteInviteUser(){
+        var_dump($_POST); die();
+        if($_POST){
+            $del = Team::find()->where([
+                'user_tool_id' => $_POST['tool_id'],
+                'recipient_id'=>$_POST['recipient'],
+                'sender_id' => Yii::$app->user->id,
+                'department' => $_POST['dep_id']
+            ])->one();
+            var_dump($del); die();
+            if($del){
+                $del->delete();
+            }
+        }
+        return(json_encode($_POST));
     }
 
 }
