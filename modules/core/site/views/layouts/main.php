@@ -177,12 +177,12 @@ $this->beginPage();
                                         <?php endif;?>
                                         </a>
                                 </li>
-                                <li class="divider">
+<!--                                 <li class="divider">
                                 <li>
                                     <a href="#" id="showtoast" data-content="Will be available in the next version">
                                         <i class="icon-users"></i> <span>Team</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="divider">
                                 </li>
                                 <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->getId()])->one();?>

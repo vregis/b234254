@@ -1212,34 +1212,34 @@ thead .ui-datepicker-week-end {
     bottom:2px !important;
     right: -4px !important;
 }
-    .popover{
-        min-width: 420px;
-        border:1px solid #d7d7d7;
-        padding: 10px;
-        /*white-space: nowrap;*/
-        /*background: #ebebeb;*/
-        border-radius:10px !important;
-        box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
-        border: 1px solid #dae2ea;
-    }
-    .advanced-search-btn+.popover .popover-content{
-        padding:0;
-        width: 410px;
-        height:185px;
-    }
-    .popover.bottom > .arrow:after {
-        border-bottom-color: #FFF !important;
-    }
-    .popover.top > .arrow:after {
-        border-top-color: #FFF !important;
-    }
-    .popover.right > .arrow:after {
-        border-right-color: #fff !important;
-    }
-    .popover .popover-content,.advanced-search-btn+.popover .popover-content{
-        background: #fff;
-        /*border: 1px solid #d7d7d7;*/
-    }
+.popover{
+    min-width: 420px;
+    border:1px solid #d7d7d7;
+    padding: 10px;
+    /*white-space: nowrap;*/
+    /*background: #ebebeb;*/
+    border-radius:10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea;
+}
+.advanced-search-btn+.popover .popover-content{
+    padding:0;
+    width: 410px;
+    height:185px;
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: #FFF !important;
+}
+.popover.top > .arrow:after {
+    border-top-color: #FFF !important;
+}
+.popover.right > .arrow:after {
+    border-right-color: #fff !important;
+}
+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
+    background: #fff;
+    /*border: 1px solid #d7d7d7;*/
+}
     .dropselect,.dropselect1{
         min-width:195px !important;
         width:195px !important;
