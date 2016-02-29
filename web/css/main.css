@@ -3761,16 +3761,18 @@ div.ganttview-slide-container{
 }
 .gantt-complete-check{
     position: absolute;
-    width:20px;
-    height:17px;
+    width: 16px;
+    height: 16px;
     background: #fff;
     color: #53D769;
     text-align: center;
-    right:-4px;
-    top:50%;
-    margin-top:-10px;
-    border-radius:2px !important;
-    /*background: url("../images/galka.png") center center no-repeat;*/
+    right: 1px;
+    border-radius: 100% !important;
+    top: 50%;
+    font-size: 8px;
+    padding: 0;
+    line-height: 19px;
+    margin-top: -8px;
 }
 
 div.ganttview-block .label{

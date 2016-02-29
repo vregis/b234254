@@ -59,7 +59,10 @@ $this->registerJsFile("/js/milestone.js");?>
                     <?php endif;?>
                     color: "<?php if(isset($colors[$t->department_id])) echo $colors[$t->department_id]?>",
                     id: <?php echo $t->id?>,
-                    is_custom: <?php echo $t->is_custom?>
+                    is_custom: <?php echo $t->is_custom?>,
+                    <?php if($t->status!=null):?>
+                    status: <?php echo $t->status;?>
+                    <?php endif ?>
                 },
             <?php endforeach;?>
         ]
