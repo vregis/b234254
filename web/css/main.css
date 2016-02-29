@@ -3770,7 +3770,7 @@ div.ganttview-slide-container{
     top:50%;
     margin-top:-10px;
     border-radius:2px !important;
-    background: url("../images/galka.png") center center no-repeat;
+    /*background: url("../images/galka.png") center center no-repeat;*/
 }
 
 div.ganttview-block .label{

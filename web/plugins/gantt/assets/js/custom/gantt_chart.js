@@ -489,7 +489,7 @@
                         jQuery("<div>", {
                             "class": "ganttview-block-text"
                         }).html(''));
-                    block.append("<span style='display:none' class='gantt-complete-check'></span>");
+                    block.append("<span class='gantt-complete-check'><i class='ico-check1'></i></span>");
                    // block.append("<span style='display:none' class='label label-danger circle'>4</span>");
                     jQuery(rows[rowIdx]).append(block);
                     rowIdx++;
