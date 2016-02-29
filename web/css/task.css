@@ -503,7 +503,7 @@ span.title {
     margin: 0 4px;
     min-width: 105px;
 }
-.task-title .item .icon {
+#task .item .icon {
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -540,7 +540,7 @@ span.title {
     /*line-height: 32px;*/
     line-height: initial;
 }
-.task-title .item.time .btn{
+#task .item.time .btn{
     font-size: 16px !important;
     text-align: center;
     padding-top: 3px;
@@ -819,27 +819,22 @@ thead .ui-datepicker-week-end {
     position: relative;
     margin-top: 10px;
 }
-.slidePop > .arrow{
+
+#delegate > .arrow{
     content:"";
     display:block;
     position: absolute;
     top:-12px;
     width:24px;
     height:12px;
-    background: url("/images/corner.png") 0 0 no-repeat;
-    
-}
-#delegate > .arrow{
-    left: 780px !important;
-}
-#delegate > .arrow,#counter > .arrow{
+    background: url("/images/corner2.png") 0 0 no-repeat;
     content:"";
     display:block;
     position: absolute;
-    top:-10px;
+    top:-8px;
     width:24px;
     height:12px;
-    background: url("/images/corner2.png") 0 0 no-repeat;
+    left: 780px !important;
 }
 .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-header .ui-state-focus{
     background: #5184F3;
@@ -883,7 +878,53 @@ thead .ui-datepicker-week-end {
     padding: 0px;
     vertical-align: middle;
     height: 50px;
-    /*border-left: none;*/
+
+}
+#counter > .arrow,#counter > .arrow:after{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+#counter > .arrow{
+    left: 680px !important;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999999;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    top: -21px;
+    border-width: 11px;
+}
+#counter > .arrow:after{
+    content: " ";
+    border-width: 10px;
+    top: 1px;
+    margin-left: -10px;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+}
+#counter tbody tr td{
+    border-left: none;
+    border-right: 0;
+    text-align:left;
+    border-bottom:0;
+}
+#counter tbody tr:first-child td:first-child{
+    border-top-left-radius:10px !important;
+}
+#counter tbody tr:first-child td:last-child{
+    border-top-right-radius:10px !important;
+}
+#counter tbody tr:last-child td{
+    border-bottom:1px solid #d7d7d7;
+}
+#counter tbody tr:last-child td:first-child{
+    border-bottom-left-radius:10px !important;
+}
+#counter tbody tr:last-child td:last-child{
+    border-bottom-right-radius:10px !important;
 }
 #delegate thead tr th{
     border-bottom: 0 !important;
@@ -1708,4 +1749,9 @@ table th.rate .fa{
 }
 #counter thead tr th {
     border-bottom: 0 !important;
+}
+#input-price, #input-time{
+    width:62px;
+    display:inline-block;
+    text-align: center;
 }

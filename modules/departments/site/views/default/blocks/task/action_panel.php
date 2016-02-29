@@ -156,9 +156,9 @@ if($start_date != '') {
             <button class="btn btn-success disabled static payment-btn" style="width:93px;">Fund <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
         <? endif; ?>
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-primary confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-primary confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
@@ -200,14 +200,14 @@ if($start_date != '') {
             <?php if($delegate_task->status == 1):?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
             <?php else:?>
-                <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
+                <button class="btn btn-primary disabled static" style="width:93px;">Reject</button>
             <?php endif;?>
             <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
         <?php endif; ?>
         <!--<button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>-->
         <?php if(!isset($chk)):?>
             <?php if($delegate_task && $delegate_task->status == 6):?>
-                <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
+                <button class="btn btn-danger disabled static" style="width:93px;">Reject</button>
                 <button class="btn btn-success disabled static" style="width:93px">Accept</button>
             <?php else:?>
                 <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
