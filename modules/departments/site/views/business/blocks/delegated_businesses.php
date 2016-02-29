@@ -53,15 +53,15 @@ use yii\helpers\Url;
             </td>
             <td><?= isset($tasks_count_array[DelegateTask::$status_inactive]) ? $tasks_count_array[DelegateTask::$status_inactive] : '0' ?></td>
             <td>
-                11
-            </td>
-            <td>
                 <? $task_progress = isset($tasks_count_array[DelegateTask::$status_active]) ? $tasks_count_array[DelegateTask::$status_active] : 0;
                 $task_progress += isset($tasks_count_array[DelegateTask::$status_payment]) ? $tasks_count_array[DelegateTask::$status_payment] : 0;
                 $task_progress += isset($tasks_count_array[DelegateTask::$status_complete]) ? $tasks_count_array[DelegateTask::$status_complete] : 0;
                 $task_progress += isset($tasks_count_array[DelegateTask::$status_checked]) ? $tasks_count_array[DelegateTask::$status_checked] : 0;
                 echo $task_progress;
                 ?>
+            </td>
+            <td>
+                <?= isset($tasks_count_array[DelegateTask::$status_done]) ? $tasks_count_array[DelegateTask::$status_done] : '0' ?>
             </td>
 
         </tr>

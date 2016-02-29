@@ -31,21 +31,24 @@
     <div class="roww deps">
         <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
         <div data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="3" href="javascript:;" class="item background-3">Customers</div>
-        <div data-id="4" href="javascript:;" class="item background-4">Documents</div>
-        <div data-id="5" href="javascript:;" class="item background-5">Products</div>
-        <div data-id="6" href="javascript:;" class="item background-6">Numbers</div>
-        <div data-id="7" href="javascript:;" class="item background-7">IT</div>
-        <div data-id="8" href="javascript:;" class="item background-8">Team</div>
+        <div data-id="3" href="javascript:;" class="item background-3">Customers<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="4" href="javascript:;" class="item background-4">Documents<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="5" href="javascript:;" class="item background-5">Products<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="6" href="javascript:;" class="item background-6">Numbers<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="7" href="javascript:;" class="item background-7">IT<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="8" href="javascript:;" class="item background-8">Team<div class="arrow" style="left: 50%;"></div></div>
     </div>
 </div>
 
 <?php foreach($departments as $dep):?>
 
-    <?php $tasks = TeamController::getJobberTasks($dep->id, $_GET['id']);?>
+    <?php $array = TeamController::getJobberTasks($dep->id, $_GET['id']);?>
+
+    <?php if(isset($array)):?>
+
+        <?php $req = TeamController::getJobberRequests($dep->id, $_GET['id']);?>
 
 <div class="collapse fade" id="<?php echo $dep->icons?>1">
-    <?php var_dump($tasks);?>
     <table class="table table-bordered with-foot" style="width:100%;">
         <thead>
         <tr>
@@ -65,14 +68,27 @@
             <td>
                 <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
             </td>
-            <td>Simon Swerdlow <?php echo $dep->icons?></td>
+            <?php if(!$array['user']->first_name && !$array['user']->last_name):?>
+                <td>User</td>
+            <?php else:?>
+                <td><?php echo ($array['user']->first_name)?$array['user']->first_name:''?> <?php echo ($array['user']->last_name)?$array['user']->last_name:''?></td>
+            <?php endif;?>
             <td>40</td>
-            <td>15</td>
+            <td><?php echo $array['tasks']?></td>
             <td>4</td>
             <td>2</td>
             <td>1</td>
             <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
-            <td style="width:85px !important;"><button class="btn btn-primary circle btn-stat-toggle"><i class="ico-add"></i></button></td>
+            <td style="width:85px !important;">
+                <?php if($req):?>
+                    <?php if($req->status == 1):?>
+                    <?php else:?>
+                        <button data-dep="<?php echo $dep->id?>" data-sender-id="<?php echo $array['user']->user_id?>"  class="btn btn-danger circle del_request_jobber"><i class="ico-delete"></i></button>
+                    <?php endif;?>
+                    <?php else: ?>
+                    <button data-dep="<?php echo $dep->id?>" data-sender-id="<?php echo $array['user']->user_id?>"  class="btn btn-primary circle add_request_jobber"><i class="ico-add"></i></button>
+                <?php endif;?>
+            </td>
         </tr>
         </tbody>
         <tfoot>
@@ -85,4 +101,46 @@
 
 </div>
 
+<?php endif;?>
+
 <?php endforeach; ?>
+
+<script>
+    $('.add_request_jobber').click(function(){
+        var data = {
+            dep_id: $(this).attr('data-dep'),
+            sender_id: $(this).attr('data-sender-id'),
+            tool_id: <?php echo $_GET['id']?>,
+        }
+
+        $.ajax({
+            url: '/departments/team/add-jobber-request',
+            data: data,
+            type: 'post',
+            dataType: 'json',
+            success: function(){
+                location.reload();
+            }
+        })
+    })
+</script>
+
+<script>
+    $('.del_request_jobber').click(function(){
+        var data = {
+            dep_id: $(this).attr('data-dep'),
+            sender_id: $(this).attr('data-sender-id'),
+            tool_id: <?php echo $_GET['id']?>,
+        }
+
+        $.ajax({
+            url: '/departments/team/del-jobber-request',
+            data: data,
+            type: 'post',
+            dataType: 'json',
+            success: function(){
+                location.reload();
+            }
+        })
+    })
+</script>

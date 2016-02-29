@@ -36,6 +36,8 @@ class TeamController extends Controller {
                             'delete-invite-user',
                             'jobber-reject',
                             'jobber-accept',
+                            'add-jobber-request',
+                            'del-jobber-request',
                         ],
                         'roles' => ['@'],
 
@@ -48,7 +50,8 @@ class TeamController extends Controller {
     public function actionIndex($id){
         $departments = Department::find()->where(['is_additional' => 0])->all();
         $search_html = $this->renderPartial('blocks/team_search', ['departments' => $departments]);
-        return $this->render('team', ['departments' => $departments, 'search_table' => $search_html]);
+        $request_html = $this->renderPartial('blocks/team_request', ['departments' => $departments]);
+        return $this->render('team', ['departments' => $departments, 'search_table' => $search_html, 'request_table' => $request_html]);
     }
 
     public function actionRequest($id){
@@ -210,10 +213,40 @@ class TeamController extends Controller {
             // TODO delete already delegeted tasks
 
             $tasks = Task::find()->where(['department_id' => $dep_id])->all();
-            return $tasks;
-
+            $return = [];
+            $return['tasks'] = count($tasks);
+            $return['user'] = $user;
+            return $return;
         }
 
+    }
+
+    public function actionAddJobberRequest(){
+        $req = new Team();
+        $req->user_tool_id = $_POST['tool_id'];
+        $req->sender_id = $_POST['sender_id'];
+        $req->recipient_id = Yii::$app->user->id;
+        $req->department = $_POST['dep_id'];
+        $req->is_request = 1;
+        $req->save();
+        return json_encode($_POST);
+    }
+
+    public static function getJobberRequests($dep_id, $tool_id){
+        $req = Team::find()->where(['department' => $dep_id, 'user_tool_id' => $tool_id, 'recipient_id' => Yii::$app->user->id])->one();
+        return $req;
+    }
+
+    public function actionDelJobberRequest(){
+        $team = Team::find()->where([
+            'user_tool_id' => $_POST['tool_id'],
+            'sender_id' => $_POST['sender_id'],
+            'recipient_id' => Yii::$app->user->id,
+            'department' => $_POST['dep_id']
+        ])
+        ->one();
+        $team->delete();
+        return json_encode($_POST);
     }
 
 }
