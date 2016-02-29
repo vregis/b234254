@@ -1,30 +1,12 @@
 <?php use \modules\departments\site\controllers\TeamController;?>
 <div class="deps-wrap">
     <div class="roww action">
-        <div data-id="1" class="item background-1">
-            <button data-toggle="collapse" data-target="#idea" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
+        <?php foreach($departments as $dep):?>
+            <?php $business = TeamController::getJobberRequest($dep->id, $_GET['id']);?>
+        <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+            <button <?php echo (!$business)?'onclick="return false"':''?> data-toggle="collapse" data-target="#<?php echo $dep->icons?>" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
         </div>
-        <div data-id="2" class="item background-2">
-            <button data-toggle="collapse" data-target="#strategy" aria-expanded="false" aria-controls="strategy" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="3" class="item background-3">
-            <button data-toggle="collapse" data-target="#customers" aria-expanded="false" aria-controls="customers" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="4" class="item background-4">
-            <button data-toggle="collapse" data-target="#documents" aria-expanded="false" aria-controls="docs" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="5" class="item background-5">
-            <button data-toggle="collapse" data-target="#products" aria-expanded="false" aria-controls="products" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="6" class="item background-6">
-            <button data-toggle="collapse" data-target="#numbers" aria-expanded="false" aria-controls="numbers" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="7" class="item background-7">
-            <button data-toggle="collapse" data-target="#computers" aria-expanded="false" aria-controls="it" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="8" class="item background-8">
-            <button data-toggle="collapse" data-target="#people" aria-expanded="false" aria-controls="team" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
+        <?php endforeach?>
     </div>
     <div class="roww deps">
         <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
@@ -41,7 +23,7 @@
     <?php $business = TeamController::getJobberRequest($dep->id, $_GET['id']);?>
     <?php if($business):?>
 <div class="collapse fade" id="<?php echo $dep->icons?>" >
-    <table class="table table-bordered with-foot" style="width:100%;">
+    <table class="table table-bordered with-foot tbl-dep" data-dep="<?php echo $dep->id?>" style="width:100%;">
         <thead>
         <tr>
             <th width="60"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
@@ -76,8 +58,8 @@
                 <td>2</td>
                 <td>1</td>
                 <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
-                <td><button style="font-size: 10px;" class="btn btn-success circle"><i class="ico-check1"></i></button></td>
-                <td><button style="font-size: 10px;" class="btn btn-danger circle"><i class="ico-delete"></i></button></td>
+                <td><button data-user-id="<?php echo $bus->dname?>" style="font-size: 10px;" class="btn btn-success circle req_accept"><i class="ico-check1"></i></button></td>
+                <td><button data-user-id="<?php echo $bus->dname?>" style="font-size: 10px;" class="btn btn-danger req_rejct circle"><i class="ico-delete"></i></button></td>
             </tr>
             <?php endforeach;?>
 
@@ -181,3 +163,45 @@
 </div>
     <?php endif;?>
 <?php endforeach; ?>
+
+<script>
+    $('.req_rejct').on('click', function(){
+        if(!confirm('Approve reject')){
+            return false;
+        }
+        var tool_id = <?php echo $_GET['id']?>;
+        var sender_id = $(this).attr('data-user-id');
+        var dep_id = $(this).closest('.tbl-dep').attr('data-dep');
+
+        $.ajax({
+            url: '/departments/team/jobber-reject',
+            type: 'post',
+            dataType: 'json',
+            data: {tool_id:tool_id, sender_id:sender_id, dep_id:dep_id},
+            success: function(){
+                location.reload(); //refactor this
+            }
+        })
+    })
+
+    $('.req_accept').on('click', function(){
+        if(!confirm('Approve accept')){
+            return false;
+        }
+        var tool_id = <?php echo $_GET['id']?>;
+        var sender_id = $(this).attr('data-user-id');
+        var dep_id = $(this).closest('.tbl-dep').attr('data-dep');
+
+        $.ajax({
+            url: '/departments/team/jobber-accept',
+            type: 'post',
+            dataType: 'json',
+            data: {tool_id:tool_id, sender_id:sender_id, dep_id:dep_id},
+            success: function(){
+                location.reload(); //refactor this
+            }
+        })
+    })
+
+
+</script>

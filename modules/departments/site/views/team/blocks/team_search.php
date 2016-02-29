@@ -1,4 +1,29 @@
 <?php use modules\departments\site\controllers\TeamController;?>
+<div class="deps-wrap">
+    <div class="roww action">
+        <?php foreach($departments as $dep):?>
+        <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+            <?php $user = TeamController::getApprovedUser($dep->id, $_GET['id']);?>
+            <?php if($user):?>
+            <a target="_blank" href="/user/social/shared-profile?id=<?php echo $user->dname?>"><img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $user->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>" data-original-title="" title="">
+            <a href="javascript:;" data-dep-id="<?php echo $dep->id?>" data-user-id="<?php echo $user->dname?>" class="close-ava close"><i class="ico-times"></i></a>
+            <?php else: ?>
+                <button data-toggle="collapse" data-target="#<?php echo $dep->icons?>" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
+            <?php endif;?>
+            </div>
+        <?php endforeach;?>
+    </div>
+    <div class="roww deps">
+        <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="3" href="javascript:;" class="item background-3">Customers<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="4" href="javascript:;" class="item background-4">Documents<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="5" href="javascript:;" class="item background-5">Products<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="6" href="javascript:;" class="item background-6">Numbers<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="7" href="javascript:;" class="item background-7">IT<div class="arrow" style="left: 50%;"></div></div>
+        <div data-id="8" href="javascript:;" class="item background-8">Team<div class="arrow" style="left: 50%;"></div></div>
+    </div>
+</div>
 <?php foreach($departments as $dep): ?>
 <div class="collapse fade" id="<?php echo $dep->icons?>">
     <table data-dep-id="<?php echo $dep->id?>" class="table table-bordered with-foot team-user-table" style="width:100%;">
@@ -204,6 +229,24 @@
         $('.req_reject').on('click', function(){
             var recipient = $(this).attr('data-id');
             var dep_id = $(this).closest('.team-user-table').attr('data-dep-id');
+            var tool_id = <?php echo $_GET['id']?>;
+            $.ajax({
+                url: '/departments/team/delete-invite-user',
+                type: 'post',
+                data: {recipient:recipient, dep_id:dep_id, tool_id:tool_id},
+                dataType: 'json',
+                success: function(){
+                    location.reload(); //refactor this
+                }
+            })
+        })
+
+        $('.close-ava').on('click', function(){
+            if(!confirm('Approve reject')){
+                return false;
+            }
+            var recipient = $(this).attr('data-user-id');
+            var dep_id = $(this).attr('data-dep-id');
             var tool_id = <?php echo $_GET['id']?>;
             $.ajax({
                 url: '/departments/team/delete-invite-user',

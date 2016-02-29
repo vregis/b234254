@@ -30,46 +30,7 @@ $this->registerJs($msgJs);
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in in active" id="search-block">
-                <div class="deps-wrap">
-                    <div class="roww action">
-                        <div data-id="1" class="item background-1">
-                            <button data-toggle="collapse" data-target="#idea" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="2" class="item background-2">
-                            <button data-toggle="collapse" data-target="#strategy" aria-expanded="false" aria-controls="strategy" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="3" class="item background-3">
-                            <!--img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="/images/avatar/nophoto.png" data-original-title="" title="">
-                            <a href="javascript:;" class="close"><i class="ico-times"></i></a>-->
-                            <button data-toggle="collapse" data-target="#customers" aria-expanded="false" aria-controls="customers" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="4" class="item background-4">
-                            <button data-toggle="collapse" data-target="#documents" aria-expanded="false" aria-controls="docs" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="5" class="item background-5">
-                            <button data-toggle="collapse" data-target="#products" aria-expanded="false" aria-controls="products" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="6" class="item background-6">
-                            <button data-toggle="collapse" data-target="#numbers" aria-expanded="false" aria-controls="numbers" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="7" class="item background-7">
-                            <button data-toggle="collapse" data-target="#computers" aria-expanded="false" aria-controls="it" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                        <div data-id="8" class="item background-8">
-                            <button data-toggle="collapse" data-target="#people" aria-expanded="false" aria-controls="team" class="btn btn-primary circle"><i class="ico-add"></i></button>
-                        </div>
-                    </div>
-                    <div class="roww deps">
-                        <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="3" href="javascript:;" class="item background-3">Customers<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="4" href="javascript:;" class="item background-4">Documents<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="5" href="javascript:;" class="item background-5">Products<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="6" href="javascript:;" class="item background-6">Numbers<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="7" href="javascript:;" class="item background-7">IT<div class="arrow" style="left: 50%;"></div></div>
-                        <div data-id="8" href="javascript:;" class="item background-8">Team<div class="arrow" style="left: 50%;"></div></div>
-                    </div>
-                </div>
+
                 <?php echo $search_table;?>
             </div>
                 <div role="tabpanel" class="tab-pane fade" id="request-block">

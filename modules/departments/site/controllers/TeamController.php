@@ -33,6 +33,8 @@ class TeamController extends Controller {
                             'get-search',
                             'invite-user',
                             'delete-invite-user',
+                            'jobber-reject',
+                            'jobber-accept',
                         ],
                         'roles' => ['@'],
 
@@ -43,14 +45,14 @@ class TeamController extends Controller {
     }
 
     public function actionIndex($id){
-        $departments = Department::find()->all();
+        $departments = Department::find()->where(['is_additional' => 0])->all();
         $search_html = $this->renderPartial('blocks/team_search', ['departments' => $departments]);
         return $this->render('team', ['departments' => $departments, 'search_table' => $search_html]);
     }
 
     public function actionRequest($id){
 
-        $departments = Department::find()->all();
+        $departments = Department::find()->where(['is_additional' => 0])->all();
         $search_html = $this->renderPartial('blocks/jobber_search', ['departments' => $departments, 'tool_id' => $id]);
         $request_html = $this->renderPartial('blocks/jobber_request', ['departments' => $departments]);
         return $this->render('team-request', ['departments' => $departments, 'search_html' => $search_html, 'request_html' => $request_html]);
@@ -58,7 +60,7 @@ class TeamController extends Controller {
 
     public static function getJobberRequest($dep_id,$tool_id){
         $team = Team::find()
-            ->select('team.*, user_profile.avatar ava, user_profile.first_name fname, user_profile.last_name lname')
+            ->select('team.*, user_profile.avatar ava, user_profile.first_name fname, user_profile.last_name lname, user_profile.user_id dname')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = team.sender_id')
             ->where(['team.department' => $dep_id, 'team.user_tool_id' => $tool_id, 'team.recipient_id' => Yii::$app->user->id, 'team.status' => 0])->all();
         return $team;
@@ -145,6 +147,58 @@ class TeamController extends Controller {
             }
         }
         return(json_encode($_POST));
+    }
+
+    public function actionJobberReject(){
+        $team = Team::find()->where([
+            'user_tool_id' => $_POST['tool_id'],
+            'department' => $_POST['dep_id'],
+            'sender_id' => $_POST['sender_id'],
+            'recipient_id' => Yii::$app->user->id
+        ])->one();
+
+        if($team){
+            $team->delete();
+        }
+
+        //TODO reject tasks with reject business
+
+        return json_encode($_POST);
+    }
+
+    public function actionJobberAccept(){
+        $team = Team::find()->where([
+            'user_tool_id' => $_POST['tool_id'],
+            'department' => $_POST['dep_id'],
+            'sender_id' => $_POST['sender_id'],
+            'recipient_id' => Yii::$app->user->id
+        ])->one();
+
+        if($team){
+            $team->status = 1;
+            $team->save();
+        }
+    }
+
+    public static function getApprovedUser($dep_id, $tool_id){
+        $user = Team::find()
+            ->select('team.*, user_profile.avatar as ava, user_profile.user_id dname')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = team.recipient_id')
+            ->where([
+                'team.department' => $dep_id,
+                'team.user_tool_id' => $tool_id,
+                'team.sender_id' => Yii::$app->user->id,
+                'team.status' => 1
+            ])
+            ->all();
+
+        return $user;
+    }
+
+    public static function getJobberTasks($dep_id, $tool_id){
+        $tasks = null;
+
+        return $tasks;
     }
 
 }

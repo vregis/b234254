@@ -39,7 +39,7 @@ use yii\helpers\Url;
 
         <tr id="toolid-<?php echo $userTool->id?>">
                 <td>
-                <a href="javascript:;" class="dropmenu-two history1 btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                <a href="javascript:;" class="dropmenu-two history<?php echo $userTool->id?> btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
             </td>
             <td style="text-transform: uppercase">
                 <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <!--<span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>-->
@@ -64,14 +64,45 @@ use yii\helpers\Url;
             </td>
 
         </tr>
+
+                <div id="huistory-<?php echo $userTool->id?>" class="huistory" style="display:none;">
+                    <ul>
+                        <li class="disabled"><a target="_blank" href="/departments/business/shared-business?id=<?php echo $userTool->id?>">Business Dashboard</a></li>
+                        <li class="disabled"><a target="_blank" href="/departments/team/request?id=<?php echo $userTool->id?>">Team</a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+
+                        $(".dropmenu-two.history<?php echo $userTool->id?>").on('show.bs.popover',function(){
+                            $("#huistory-<?php echo $userTool->id?>").show();
+                            $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+                        }).on('hide.bs.popover',function(){
+                            $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+                        });
+                        $(".well > .nav-tabs li a").on('shown.bs.tab',function(){
+                            console.log("asdasd");
+                            $(".dropmenu-two.history<?php echo $userTool->id?>").popover({
+                                placement:"bottom",
+                                html:true,
+                                content:$("#huistory-<?php echo $userTool->id?>"),
+                                container:$("body"),
+                                template:'<div class="popover dropselect1" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+                            });
+                            $(".dropmenu-two.history<?php echo $userTool->id?>").on('show.bs.popover',function(){
+                                $("#huistory-<?php echo $userTool->id?>").show();
+                                $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
+                            }).on('hide.bs.popover',function(){
+                                $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
+                            });
+                        });
+                    });
+                </script>
+
     <? endif; ?>
 <? endforeach; ?>
     </tbody>
 </table>
-<div id="huistory-one" class="huistory" style="display:none;">
-    <ul>
-        <li class="disabled"><a href="#">Business Dashboard</a></li>
-        <li class="disabled"><a>Team</a></li>   
-    </ul>
-</div>
+
 <? endif; ?>

@@ -726,7 +726,9 @@ class DefaultController extends Controller
             ->where(['task.id' => $_POST['id']])
             ->one();
 
-        if(Yii::$app->user->can('admin') || $task->is_pay == 0) {
+        $user = User::find()->where(['id' => Yii::$app->user->id])->one();
+
+        if(Yii::$app->user->can('admin') || $task->is_pay == 0 || $user->role == 6) {
             $tool = UserTool::getCurrentUserTool();
             $task_user = TaskUser::getTaskUser($tool->id, $task->id, $task);
             $is_my = $tool->user_id == Yii::$app->user->id;

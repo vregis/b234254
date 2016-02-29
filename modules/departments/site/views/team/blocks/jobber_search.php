@@ -1,3 +1,4 @@
+<?php use modules\departments\site\controllers\TeamController;?>
 <div class="deps-wrap">
     <div class="roww action">
         <div data-id="1" class="item background-1">
@@ -40,7 +41,11 @@
 </div>
 
 <?php foreach($departments as $dep):?>
+
+    <?php $tasks = TeamController::getJobberTasks($dep->id, $_GET['id']);?>
+
 <div class="collapse fade" id="<?php echo $dep->icons?>1">
+    <?php var_dump($tasks);?>
     <table class="table table-bordered with-foot" style="width:100%;">
         <thead>
         <tr>
