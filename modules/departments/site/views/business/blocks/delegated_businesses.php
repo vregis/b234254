@@ -46,13 +46,14 @@ use yii\helpers\Url;
             </td>
             <td>
                 <?= count($tasks) ?>
+
             </td>
             <td>
-                <?= count($tasks) ?>
+                <?= isset($tasks_count_array[DelegateTask::$status_offer]) ? $tasks_count_array[DelegateTask::$status_offer] : '0' ?>
             </td>
             <td><?= isset($tasks_count_array[DelegateTask::$status_inactive]) ? $tasks_count_array[DelegateTask::$status_inactive] : '0' ?></td>
             <td>
-                <?= isset($tasks_count_array[DelegateTask::$status_inactive]) ? $tasks_count_array[DelegateTask::$status_inactive] : '0' ?>
+                11
             </td>
             <td>
                 <? $task_progress = isset($tasks_count_array[DelegateTask::$status_active]) ? $tasks_count_array[DelegateTask::$status_active] : 0;
