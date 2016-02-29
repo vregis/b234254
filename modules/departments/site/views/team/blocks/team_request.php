@@ -1,10 +1,15 @@
+<?php use modules\departments\site\controllers\TeamController;?>
 <div class="deps-wrap">
     <div class="roww action">
         <?php foreach($departments as $dep):?>
             <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
-                <!--<img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="/images/avatar/nophoto.png" data-original-title="" title="">-->
-                <!--<a href="javascript:;" class="close"><i class="ico-times"></i></a>-->
-                <button data-toggle="collapse" data-target="#<?php echo $dep->icons?>1" aria-expanded="false" aria-controls="<?php echo $dep->icons?>1" class="btn btn-primary circle"><i class="ico-add"></i></button>
+                <?php $user = TeamController::getApprovedUser($dep->id, $_GET['id']);?>
+                <?php if($user):?>
+                <a target="_blank" href="/user/social/shared-profile?id=<?php echo $user->dname?>"><img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $user->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>" data-original-title="" title="">
+                    <a href="javascript:;" data-dep-id="<?php echo $dep->id?>" data-user-id="<?php echo $user->dname?>" class="close-ava close"><i class="ico-times"></i></a>
+                    <?php else: ?>
+                        <button data-toggle="collapse" data-target="#<?php echo $dep->icons?>1" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    <?php endif;?>
             </div>
         <?php endforeach; ?>
     </div>

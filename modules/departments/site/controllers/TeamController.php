@@ -194,7 +194,7 @@ class TeamController extends Controller {
                 'team.sender_id' => Yii::$app->user->id,
                 'team.status' => 1
             ])
-            ->all();
+            ->one();
 
         return $user;
     }

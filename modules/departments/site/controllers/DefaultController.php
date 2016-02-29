@@ -286,6 +286,7 @@ class DefaultController extends Controller
                 ]
             );
             $tasks_request->andWhere(['!=', 'delegate_task.status', DelegateTask::$status_cancel]);
+            $tasks_request->andWhere(['!=', 'delegate_task.status', 7]);
         }
 
         //var_dump($tasks_request->all());
