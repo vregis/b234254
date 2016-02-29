@@ -16,7 +16,7 @@ $this->registerJsFile("/js/milestone.js");?>
         <div class="ganttview-vtheader-series">
             <?php foreach($tasks as $t):?>
                 <div class="ganttview-vtheader-series-row">
-                    <div class="series-content" data-id="<?php echo $t->id?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                    <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
                 </div>
             <?php endforeach; ?>
         </div>
