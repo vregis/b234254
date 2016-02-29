@@ -150,7 +150,7 @@ if($start_date != '') {
                 <input type="hidden" name="name">
                 <input type="hidden" name="sum">
                 <input type="hidden" value="<?php echo $delegate_task->id?>" name="id">
-                <button id="payment-paypal" onclick="return false" class="btn btn-success payment-btn" style="width:93px;">Fund</button> <!-- this is payment from client -->
+                <button id="payment-paypal" onclick="return false" class="btn btn-success payment-btn" style="width:93px;font-size: 14px;">Fund</button> <!-- this is payment from client -->
             </form>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
             <button class="btn btn-success disabled static payment-btn" style="width:93px;">Payment <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
@@ -186,7 +186,7 @@ if($start_date != '') {
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
-            <button id="get_money" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
+            <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;" data-toggle="popover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
         <?php else: ?>
