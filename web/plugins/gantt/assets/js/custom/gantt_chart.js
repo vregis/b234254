@@ -491,7 +491,7 @@
                             "class": "ganttview-block-text"
                         }).html(''));
                     if(series.status == 2){
-                        block.append("<span class='gantt-complete-check'><i class='ico-check1'></i></span>");
+                        block.append("<span class='gantt-complete-check'><i class='fa fa-check'></i></span>");
                     }
                    // block.append("<span style='display:none' class='label label-danger circle'>4</span>");
                     jQuery(rows[rowIdx]).append(block);

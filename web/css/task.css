@@ -1025,6 +1025,15 @@ thead .ui-datepicker-week-end {
     min-width:250px !important;
     top:100%;
 }
+.task-title #get_money_confirm+.popover{
+    width:435px !important;
+    min-width:435px !important;
+    left: auto !important;
+    right: 0 !important;
+}
+.task-title #get_money_confirm+.popover > .arrow{
+    left: 140px !important;
+}
 .task-title button.payment-btn+.popover .popover-content{
     /*padding:0;*/
     font-size: 16px;
