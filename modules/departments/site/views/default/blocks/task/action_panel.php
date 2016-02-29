@@ -170,7 +170,7 @@ if($start_date != '') {
 <? else : ?>
     <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
         <?php if($delegate_task->is_request == 1):?>
-            <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-primary disabled" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Payment</button>
+            <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-primary static disabled" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Payment</button>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
         <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-success offer <?= $delegate_task->is_request==0 ? '' :'' ?>">Request</button>
 
@@ -186,11 +186,11 @@ if($start_date != '') {
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
-            <button id="get_money" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover" data-trigger="hover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
+            <button id="get_money" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
         <?php else: ?>
-            <button class="btn btn-success disabled" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
+            <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
             <button class="btn btn-success disabled static payment-btn" style="width:93px;">Payment</button>
         <?php endif; ?>
         <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>

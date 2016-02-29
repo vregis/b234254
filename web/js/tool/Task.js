@@ -308,7 +308,8 @@ function Task(task_user_id, is_my, is_custom) {
         });
         $('#get_money').off();
         $('#get_money[data-toggle="popover"]').popover({
-            placement: 'bottom'
+            placement: 'bottom',
+            trigger:"click"
         });
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();
