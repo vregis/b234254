@@ -139,7 +139,7 @@ if($start_date != '') {
         <? if($task_user->status != 2) : ?>
             <button id="btn-delegate" class="btn btn-primary"
                 data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button>
-            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;"><? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete): ?><i class="ico-check" style="font-size: 10px;margin-right: 3px;"></i><?php endif; ?>Complete</button>
+            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;">Complete</button>
         <? else : ?>
             <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Delegate</button>
             <button id="restart" class="btn btn-success" style="width:93px;">Restart</button>
@@ -156,9 +156,9 @@ if($start_date != '') {
             <button class="btn btn-success disabled static payment-btn" style="width:93px;">Fund <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
         <? endif; ?>
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
-            <button style="display:inline-block;" class="btn btn-primary confirn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-primary confirn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
-            <button style="display:inline-block;" class="btn btn-primary confirn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-primary confirn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"

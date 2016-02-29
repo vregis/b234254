@@ -1007,6 +1007,7 @@ thead .ui-datepicker-week-end {
 }
 .task-title button.payment-btn{
     font-size: 11px;
+    padding-top: 2px;
 }
 .task-title button.payment-btn .label{
     /*position: relative;*/

@@ -476,6 +476,7 @@
                         "id": "task-id-"+series.id,
                         "title": $series_name,
                         "data-id": series.id,
+                        "status": series.status,
                         "css": {
                             "width": ((size * cellWidth) - 2) + "px",
                             "margin-left": ((offset * cellWidth)) + "px"
@@ -489,7 +490,9 @@
                         jQuery("<div>", {
                             "class": "ganttview-block-text"
                         }).html(''));
-                    block.append("<span style='display:none' class='gantt-complete-check'></span>");
+                    if(series.status == 2){
+                        block.append("<span class='gantt-complete-check'><i class='ico-check1'></i></span>");
+                    }
                    // block.append("<span style='display:none' class='label label-danger circle'>4</span>");
                     jQuery(rows[rowIdx]).append(block);
                     rowIdx++;
