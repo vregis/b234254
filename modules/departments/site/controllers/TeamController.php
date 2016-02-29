@@ -14,6 +14,7 @@ use modules\user\models\Profile;
 use yii\web\Controller;
 use yii\filters\AccessControl;
 use Yii;
+use yii\web\User;
 
 class TeamController extends Controller {
 
@@ -196,9 +197,23 @@ class TeamController extends Controller {
     }
 
     public static function getJobberTasks($dep_id, $tool_id){
-        $tasks = null;
+        $user = Profile::find()
+            ->select('user_profile.*')
+            ->join('LEFT JOIN', 'user_tool', 'user_profile.user_id = user_tool.user_id')
+            ->where(['user_tool.id' => $tool_id])
+            ->one();
 
-        return $tasks;
+        $do_department = UserDo::find()->where(['user_id' => $user->user_id, 'department_id' => $dep_id, 'status_do' => 1])->one();
+        if($do_department){
+            return null;
+        }else{
+            // TODO delete already delegeted tasks
+
+            $tasks = Task::find()->where(['department_id' => $dep_id])->all();
+            return $tasks;
+
+        }
+
     }
 
 }
