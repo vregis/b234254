@@ -189,19 +189,49 @@ function Task(task_user_id, is_my, is_custom) {
         var confirn = $('.confirn');
         confirn.off();
         confirn.on('click', function(e){
-            if($(this).hasClass('confirn-btn')){
+            if(confirn.hasClass('confirn-btn')){
                 console.log("click to cancel");
-                $(this).confirmation({
+                confirn.confirmation({
                     title: "Are you sure you want to cancel the delegated task?",
                     placement: "bottom",
                     btnOkClass: "btn btn-success",
                     btnCancelClass: "btn btn-danger",
                     btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
                     onConfirm: function (event) {
-                        this_confirmation.confirmation('destroy');
+                        var name = confirn.closest('.user-row').find('.field-name').html();
+                        var data = {
+                            _csrf: $("meta[name=csrf-token]").attr("content"),
+                            command : 'confirn',
+                            delegate_task_id: confirn.attr('data-delegate_task_id'),
+                            status: confirn.attr('data-status')
+                        };
+                        $.ajax({
+                            url: '/departments/tool-ajax',
+                            type: 'post',
+                            dataType: 'json',
+                            data: data,
+                            success: function(response){
+                                if(!response.error) {
+                                    var counter = $('#counter');
+                                    set_counter_offer(counter, response.html);
+                                    set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
+                                    set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
+
+                                    if(response.html_action_panel) {
+                                        counter.removeClass('in');
+                                        $('.counter-offer-row').each(function(){
+                                            $(this).remove();
+                                        });
+                                        set_action_panel($('#action_panel'), response.html_action_panel);
+                                        set_log($('#taskUserLogs'), response.html_task_user_logs);
+                                    }
+                                }
+                            }
+                        });
+                        confirn.confirmation('destroy');
                     },
                     onCancel: function (event) {
-                        this_confirmation.confirmation('destroy');
+                        confirn.confirmation('destroy');
                         return false;
                     }
                 });
