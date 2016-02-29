@@ -41,6 +41,7 @@ function Task(task_user_id, is_my, is_custom) {
         $('.task-body .block.chat .scroller').mCustomScrollbar({
             theme:"dark",
             axis:"y",
+            setHeight:255
         });
         $(".page-content") .mCustomScrollbar("destroy");
         setTimeout(function(){
@@ -1193,6 +1194,7 @@ function Task(task_user_id, is_my, is_custom) {
         $('.task-body .block.chat .scroller').mCustomScrollbar({
             theme:"dark",
             axis:"y",
+            setHeight:255
         });
 
         
@@ -1203,7 +1205,8 @@ function Task(task_user_id, is_my, is_custom) {
             $(".task-body .block.chat .scroller").mCustomScrollbar("scrollTo","bottom");
             $('.page-content').mCustomScrollbar({
                 setHeight: $('.page-content').css('minHeight'),
-                theme:"dark"
+                theme:"dark",
+                setHeight:255
             });
             check_status(false);
         },300);

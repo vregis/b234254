@@ -164,7 +164,7 @@ if($start_date != '') {
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
         <? else : ?>
-            Completed
+            <button class="btn btn-primary static disabled">Completed</button>
         <? endif; ?>
     <? endif; ?>
 <? else : ?>
@@ -187,7 +187,7 @@ if($start_date != '') {
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
             <?php $chk = 1;?>
-            <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;" data-toggle="popover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
+            <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;" data-toggle="popover" data-trigger="hover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
             <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
@@ -196,7 +196,7 @@ if($start_date != '') {
             <?php endif;?>
         <?php else: ?>
             <?php $chk = 1;?>
-            <button class="btn btn-success disabled static payment-btn" style="width:93px;">Payment</button>
+            <button class="btn btn-success disabled static payment-btn" style="width:93px;font-size:14px;">Payment</button>
             <?php if($delegate_task->status == 1):?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
             <?php else:?>
@@ -232,17 +232,17 @@ if($start_date != '') {
             <?php if($is_my): ?>
                 <label for="" class="col-sm-12">Pay with credit card</label>
             <?php else: ?>
-                <label for="" class="col-sm-4">You will receive</label>
-                <div class="col-sm-8 text-right">
-                    <button class="btn static circle" style="margin:0;">$</button> <span class="money">1000</span>
+                <label for="" style="text-align: left;" class="col-sm-6">You will receive</label>
+                <div class="col-sm-6 text-right">
+                    $ <span class="money">1000</span>
                 </div>
             <?php endif; ?>
         </div>
         <div class="row"><label for="" class="col-sm-12" style="text-align:left;">Enter payment information</label></div>
 
         <div class="row">
-            <label for="" class="col-sm-3" style="text-align: left;margin: 0;padding-right: 0;">Paypal login</label>
-            <div class="col-sm-9 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" name="paypal_login"></div>
+            <label for="" class="col-sm-6" style="text-align: left;margin: 0;padding-right: 0;">Paypal login</label>
+            <div class="col-sm-6 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" name="paypal_login"></div>
         </div>
         <div class="row text-center">
             <button style="margin:10px 0 0 0;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>

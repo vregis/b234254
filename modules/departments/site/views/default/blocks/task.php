@@ -376,20 +376,20 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                             <div class="ajax-content">
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="portlet_tab1">
-                                        <div class="scroller" style="height: 200px;">
+                                        <div class="scroller" style="height: 255px;">
                                             <ol id="taskUserNotes">
                                                 <?= $taskUserNotes ?>
                                             </ol>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="portlet_tab2">
-                                        <div class="scroller" style="height: 200px;">
+                                        <div class="scroller" style="height: 255px;">
                                             <ul id="taskUserMessages">
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="portlet_tab3">
-                                        <div class="scroller" style="height: 200px;">
+                                        <div class="scroller" style="height: 255px;">
                                             <ol id="taskUserLogs">
                                                 <?= $taskUserLogs ?>
                                             </ol>
