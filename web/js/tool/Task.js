@@ -188,11 +188,29 @@ function Task(task_user_id, is_my, is_custom) {
     function set_handler_confirn() {
         var confirn = $('.confirn');
         confirn.off();
-        confirn.on('click', function(){
-            if($(this).text() == 'Cancel'){
-                if (!confirm("Approve cancel")){
-                    return false;
-                }
+        confirn.on('click', function(e){
+            if($(this).hasClass('confirn-btn')){
+                console.log("click to cancel");
+                $(this).confirmation({
+                    title: "Are you sure you want to cancel the delegated task?",
+                    placement: "bottom",
+                    btnOkClass: "btn btn-success",
+                    btnCancelClass: "btn btn-danger",
+                    btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+                    onConfirm: function (event) {
+                        this_confirmation.confirmation('destroy');
+                    },
+                    onCancel: function (event) {
+                        this_confirmation.confirmation('destroy');
+                        return false;
+                    }
+                });
+                $(this).confirmation('show');
+                e.preventDefault();
+                return false;
+                // if (!confirm("Approve cancel")){
+                //     return false;
+                // }
             }
 
             var name = $(this).closest('.user-row').find('.field-name').html();
@@ -308,8 +326,7 @@ function Task(task_user_id, is_my, is_custom) {
         });
         $('#get_money').off();
         $('#get_money[data-toggle="popover"]').popover({
-            placement: 'bottom',
-            trigger:"click"
+            placement: 'bottom'
         });
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();

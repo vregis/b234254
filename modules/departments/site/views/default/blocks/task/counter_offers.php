@@ -14,6 +14,7 @@ function getData($data) {
 }
 
 ?>
+<div class="arrow"></div>
 <table style="width:100%;" class="table with-foot">
     <thead>
     <tr>

@@ -74,10 +74,10 @@
 		placement 		: 'right',
 		title 			: 'Are you sure?',
 		btnOkClass 		: 'btn btn-sm btn-danger',
-		btnOkLabel 		: 'Delete',
+		btnOkLabel 		: 'Yes',
 		btnOkIcon 		: 'glyphicon glyphicon-ok',
 		btnCancelClass 	: 'btn btn-sm btn-default',
-		btnCancelLabel 	: 'Cancel',
+		btnCancelLabel 	: 'No',
 		btnCancelIcon 	: 'glyphicon glyphicon-remove',
 		href 			: '#',
 		target 			: '_self',
@@ -90,8 +90,8 @@
 		template 		:   '<div class="popover"><div class="arrow"></div>'
 							+ '<h3 class="popover-title"></h3>'
 							+ '<div class="popover-content">'
-							+ '<button data-apply="confirmation">Yes</button>'
 							+ '<button data-dismiss="confirmation">No</button>'
+							+ '<button data-apply="confirmation">Yes</button>'
 							+ '</div>'
 							+ '</div>'
 	});
