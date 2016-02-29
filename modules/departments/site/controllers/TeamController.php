@@ -14,6 +14,7 @@ use modules\user\models\Profile;
 use yii\web\Controller;
 use yii\filters\AccessControl;
 use Yii;
+use yii\web\User;
 
 class TeamController extends Controller {
 
@@ -196,9 +197,12 @@ class TeamController extends Controller {
     }
 
     public static function getJobberTasks($dep_id, $tool_id){
-        $tasks = null;
+        $user = Profile::find()
+            ->join('user_tool', 'user_profile.user_id = user_tool.user_id')
+            ->where(['user_tool.id' => $tool_id])
+            ->one();
+        return $user;
 
-        return $tasks;
     }
 
 }
