@@ -25,6 +25,7 @@
     </div>
 </div>
 <?php foreach($departments as $dep):?>
+    <?php $user = TeamController::getApprovedUser($dep->id, $_GET['id']);?>
 <div class="collapse fade" id="<?php echo $dep->icons?>1">
     <table class="table table-bordered with-foot" style="width:100%;">
         <thead>

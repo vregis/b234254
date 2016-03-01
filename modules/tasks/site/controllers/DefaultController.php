@@ -102,7 +102,11 @@ class DefaultController extends Controller
         $task_user->save();
         $delegate_task = DelegateTask::getCurrentDelegateTask($id, true);
         if($delegate_task) {
-            $delegate_task->status = DelegateTask::$status_checked;
+            if($delegate_task->price == 0){
+                $delegate_task->status = DelegateTask::$status_done;
+            }else{
+                $delegate_task->status = DelegateTask::$status_checked;
+            }
             $delegate_task->save();
             TaskUserLog::sendLog($delegate_task->task_user_id, TaskUserLog::$log_checked);
         }
