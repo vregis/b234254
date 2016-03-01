@@ -204,7 +204,11 @@ if($start_date != '') {
             <?php if($delegate_task && $delegate_task->status == 1):?>
             <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
             <?php else:?>
+                <?php if($delegate_task && $delegate_task->status == 7):?>
+                    <button class="btn btn-success" onclick="location.reload()" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Complete</button>
+                    <?php else:?>
                 <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
+                    <?php endif;?>
             <?php endif;?>
         <?php endif; ?>
         <!--<button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>-->
