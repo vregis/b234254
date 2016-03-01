@@ -240,8 +240,8 @@ if($start_date != '') {
         <div class="row"><label for="" class="col-sm-12" style="text-align:center;">Enter payment information</label></div>
 
         <div class="row">
-            <div class="col-sm-6 col-xs-6"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
-            <div class="col-sm-6 col-xs-6"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6 noselect"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6 noselect"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_loginre"></div>
         </div>
         <div class="row text-center">
             <button style="margin:20px 0 10px;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
@@ -258,6 +258,34 @@ if($start_date != '') {
                     border-color:#fff;
                 }
             </style>
+                <script>
+                $(document).ready(function(){
+                    $('.noselect').bind("cut copy paste",function(e) {
+                        e.preventDefault();
+                    });
+                });
+
+                function clickIE4(){
+                    if (event.button==2 || event.button==86){
+                        return false;
+                    }
+                }
+                function clickNS4(e){
+                    if (document.layers||document.getElementById&&!document.all){
+                        if (e.which==2||e.which==3||e.which==86){
+                            return false;
+                        }
+                    }
+                }
+                if (document.layers){
+                    document.captureEvents(Event.MOUSEDOWN);
+                    document.onmousedown=clickNS4;
+                }
+                else if (document.all&&!document.getElementById){
+                    document.onmousedown=clickIE4;
+                }
+                document.oncontextmenu=new Function("return false")
+            </script>
         </div>
     </div>
 </div>

@@ -5,7 +5,32 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 
 ?>
-<? if(count($userTools) == 0): ?>
+<?php $ch = 0;?>
+<?php if(count($userTools) != 0):?>
+    <? foreach($userTools as $userTool) : ?>
+        <? if($userTool->user_id != Yii::$app->user->id) : ?>
+            <? $tasks = DelegateTask::find()->select('delegate_task.*,task_user.task_id task')
+                ->join('JOIN', 'task_user', 'task_user.id = delegate_task.task_user_id')
+                ->where([
+                    'user_tool_id' => $userTool->id,
+                    'delegate_task.delegate_user_id' => Yii::$app->user->id
+                ])
+                ->andWhere(['!=','delegate_task.status',DelegateTask::$status_cancel])
+                ->all();
+            $tasks_count_array = array_count_values(ArrayHelper::map($tasks,'id','status'));
+            ?>
+
+            <?php if(@$tasks_count_array[DelegateTask::$status_done] != count($tasks)):?>
+                <?php echo $ch++;?>
+            <?php endif;?>
+    <?php endif ?>
+        <?php endforeach;?>
+<?php endif;?>
+
+
+
+
+<? if(count($userTools) == 0 || $ch == 0): ?>
 <div class="text-center none" style="padding:22px 0;">
     Not a single task was yet delegated to you. But you can find tasks independently
 </div>
