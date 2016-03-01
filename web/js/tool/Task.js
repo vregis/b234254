@@ -361,9 +361,9 @@ function Task(task_user_id, is_my, is_custom) {
         });
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();
-            if(getPrice() == '' || getPrice() == 0){
-                return false;
-            }
+            // if(getPrice() == '' || getPrice() == 0){
+            //     return false;
+            // }
             $('.money').text(getPrice());
             $(this).popover({
                 placement:"bottom",
@@ -570,7 +570,14 @@ function Task(task_user_id, is_my, is_custom) {
                 type: 'post',
                 dataType: 'json',
                 success: function(response){
-                    alert(response.msg);
+                    btn_receive.popover({
+                        placement: "bottom",
+                        trigger:"hover",
+                        html:true,
+                        content:response.msg
+                    }).popover('show');
+                    setTimeout(function(){btn_receive.popover('destroy');},1000);
+                    //alert(response.msg);
                     if(response.error == false) {
                         var data = {
                             _csrf: $("meta[name=csrf-token]").attr("content"),

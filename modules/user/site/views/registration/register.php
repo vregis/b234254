@@ -103,7 +103,7 @@ $this->registerJs($msgJs);
             'template' => '<div class="input-icon"><i class="icon-check"></i>{input}</div>{error}',
             'inputOptions' => [
                 'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
-                'placeholder' => $model->getAttributeLabel('email_repeat'),
+                'placeholder' => "Email repeat",
             ],
         ]);?>
     </div>
@@ -125,7 +125,7 @@ $this->registerJs($msgJs);
     		'template' => '<div class="input-icon"><i class="icon-check"></i>{input}</div>{error}',
     		'inputOptions' => [
     			'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
-    			'placeholder' => Yii::t('user', 'Re-type Your Password'),
+    			'placeholder' => Yii::t('user', 'Re-type your password'),
     		],
     	])->passwordInput();?>
     </div>

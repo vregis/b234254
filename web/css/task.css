@@ -1091,7 +1091,7 @@ thead .ui-datepicker-week-end {
 }
 #payment-form{
     line-height: 34px;
-    padding: 0 0 15px;
+    /*padding: 0 0 15px;*/
 }
 #task .collapsing {
     -webkit-transition: none;

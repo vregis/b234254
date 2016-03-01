@@ -238,14 +238,14 @@ if($start_date != '') {
                 </div>
             <?php endif; ?>
         </div>
-        <div class="row"><label for="" class="col-sm-12" style="text-align:left;">Enter payment information</label></div>
+        <div class="row"><label for="" class="col-sm-12" style="text-align:center;">Enter payment information</label></div>
 
         <div class="row">
-            <label for="" class="col-sm-6" style="text-align: left;margin: 0;padding-right: 0;">Paypal login</label>
-            <div class="col-sm-6 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_login"></div>
         </div>
         <div class="row text-center">
-            <button style="margin:10px 0 0 0;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
+            <button style="margin:20px 0 0 0;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
             <style type="text/css">
                 [type="submit"] .label{
                     font-size:10px;
