@@ -267,6 +267,30 @@ if($start_date != '') {
                     $('.noselect').bind("cut copy paste",function(e) {
                         e.preventDefault();
                     });
+                        var text = $("#input-time").val();
+    if(!text.indexOf('h')){
+        $("#input-time").val($("#input-time").val()+"h");
+    }
+
+    $("#input-time").on('keydown',function(event){
+       // Allow only backspace and delete
+        if ( event.keyCode == 46 || event.keyCode == 8 ) {
+            // let it happen, don't do anything
+        }
+        else {
+            // Ensure that it is a number and stop the keypress
+            if (event.keyCode < 48 || event.keyCode > 57 ) {
+                event.preventDefault(); 
+            }   
+        }
+    }).on('focus',function(){
+        text = text.replace('h','');
+        $("#input-time").val(text);
+    }).on('blur',function(){
+        if(!text.indexOf('h')){
+            $("#input-time").val(text+"h");
+        }
+    });
                 });
 
                 function clickIE4(){
