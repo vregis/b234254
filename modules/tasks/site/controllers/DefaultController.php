@@ -103,7 +103,7 @@ class DefaultController extends Controller
         $delegate_task = DelegateTask::getCurrentDelegateTask($id, true);
         if($delegate_task) {
             if($delegate_task->price == 0){
-                $delegate_task->status = DelegateTask::$status_done;
+                $delegate_task->status = 8;
             }else{
                 $delegate_task->status = DelegateTask::$status_checked;
             }

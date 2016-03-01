@@ -157,12 +157,13 @@ if($start_date != '') {
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger offer static disabled" data-status="0">Cancel delegate</button>
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
         <? else : ?>
+            <button id="restart" class="btn btn-danger" style="width:93px;">Restart</button>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer restrt" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Restart</button>
         <? endif; ?>
     <? endif; ?>
@@ -191,7 +192,7 @@ if($start_date != '') {
             </button>
             <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
             <?php if($delegate_task && $delegate_task->status != DelegateTask::$status_payment):?>
-                <button class="btn btn-success disabled static" style="width:93px">Accept</button>
+                <button class="btn btn-success disabled static" style="width:93px">Submit</button>
             <?php endif;?>
         <?php else: ?>
             <?php $chk = 1;?>
