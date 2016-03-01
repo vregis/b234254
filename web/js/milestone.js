@@ -100,20 +100,30 @@ function openTask(id, is_custom){
             }).on('hide.bs.popover',function(){
                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
             });
-            $("#input-time, #input-price").inputmask({
+            $("#input-price").inputmask({
                 "mask": "9",
                 "repeat": 10,
                 "greedy": false,
-                "onincomplete":function(){
-                    var text = $("#input-time").val();
-                    $("#input-time").attr('value',text + "h");
-                }
             }); // ~ mask "9" or mask "99" or ... mask "9999999999"
-            $("#input-time").blur(function(){
-                var text = $("#input-time").val();
-                if(text.indexOf('h') == -1){
-                    $("#input-time").inputmask({'setvalue': text + "h"});
+            $("#input-time").val($("#input-time").val()+"h");
+            $("#input-time").on('keydown',function(event){
+               // Allow only backspace and delete
+                if ( event.keyCode == 46 || event.keyCode == 8 ) {
+                    // let it happen, don't do anything
                 }
+                else {
+                    // Ensure that it is a number and stop the keypress
+                    if (event.keyCode < 48 || event.keyCode > 57 ) {
+                        event.preventDefault(); 
+                    }   
+                }
+            }).on('focus',function(){
+                var text = $("#input-time").val();
+                text = text.replace('h','');
+                $("#input-time").val(text);
+            }).on('blur',function(){
+                var text = $("#input-time").val();
+                $("#input-time").val(text+"h");
             });
             $('.task-body .block.desc a[data-toggle="tab"]').on('shown.bs.tab',function(e){
                 $(this).tab('show');

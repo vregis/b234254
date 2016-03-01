@@ -3,7 +3,32 @@
  */
 
 var staticTask = null;
+function initTimeParse(){
+    var text = $("#input-time").val();
+    if(!text.indexOf('h')){
+        $("#input-time").val($("#input-time").val()+"h");
+    }
 
+    $("#input-time").on('keydown',function(event){
+       // Allow only backspace and delete
+        if ( event.keyCode == 46 || event.keyCode == 8 ) {
+            // let it happen, don't do anything
+        }
+        else {
+            // Ensure that it is a number and stop the keypress
+            if (event.keyCode < 48 || event.keyCode > 57 ) {
+                event.preventDefault(); 
+            }   
+        }
+    }).on('focus',function(){
+        text = text.replace('h','');
+        $("#input-time").val(text);
+    }).on('blur',function(){
+        if(!text.indexOf('h')){
+            $("#input-time").val(text+"h");
+        }
+    });
+}
 function Task(task_user_id, is_my, is_custom) {
     var thisTask = this;
     if(staticTask == null) {
@@ -18,6 +43,7 @@ function Task(task_user_id, is_my, is_custom) {
         setHeight:285,
         scrollbarPosition: "outside"
     });
+    initTimeParse();
     var offerall_btn = $('.offerall-btn');
     offerall_btn.off();
     offerall_btn.on('click', function(){
@@ -49,6 +75,7 @@ function Task(task_user_id, is_my, is_custom) {
                 setHeight: $('.page-content').css('minHeight'),
                 theme:"dark"
             });
+            initTimeParse();
         },300);
     }
 
@@ -160,6 +187,7 @@ function Task(task_user_id, is_my, is_custom) {
                     data: data,
                     success: function (response) {
                         if (!response.error) {
+
                             handleRequestMessage(response.html);
                             if (response.html_active_users) {
                                 set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
@@ -171,6 +199,7 @@ function Task(task_user_id, is_my, is_custom) {
                                 $('#badge-chat').html('');
                             }
                             $("#btn-tab-message").click();
+                            initTimeParse();
                         }
                     }
                 });
@@ -231,6 +260,7 @@ function Task(task_user_id, is_my, is_custom) {
                                         set_action_panel($('#action_panel'), response.html_action_panel);
                                         set_log($('#taskUserLogs'), response.html_task_user_logs);
                                     }
+                                    initTimeParse();
                                 }
                             }
                         });
@@ -276,6 +306,7 @@ function Task(task_user_id, is_my, is_custom) {
                             set_action_panel($('#action_panel'), response.html_action_panel);
                             set_log($('#taskUserLogs'), response.html_task_user_logs);
                         }
+                        initTimeParse();
                     }
                 }
             });
@@ -317,6 +348,7 @@ function Task(task_user_id, is_my, is_custom) {
                             $("#delegate").collapse('toggle');
                             get_delegate_users();
                             this_confirmation.confirmation('destroy');
+                            initTimeParse();
                         },
                         onCancel: function (event) {
                             this_confirmation.confirmation('destroy');
@@ -377,6 +409,7 @@ function Task(task_user_id, is_my, is_custom) {
                 content:$("#payment-form")
             });
             $(this).popover('show');
+            initTimeParse();
         });
 
         $('#get_money_confirm').on('show.bs.popover',function(e){
@@ -402,7 +435,6 @@ function Task(task_user_id, is_my, is_custom) {
                     trigger:"click",
                 });
             });
-
             $(".advanced-search-btn").popover({
                 placement:"auto top",
                 html:true,
@@ -482,6 +514,7 @@ function Task(task_user_id, is_my, is_custom) {
                         if(response.html_action_panel) {
                             set_action_panel($('#action_panel'), response.html_action_panel);
                             set_log($('#taskUserLogs'), response.html_task_user_logs);
+                            initTimeParse();
                         }
                     }
                 }
@@ -552,6 +585,7 @@ function Task(task_user_id, is_my, is_custom) {
                 success: function(response){
                     if(!response.error) {
                         set_action_panel($('#action_panel'), response.html);
+                        initTimeParse();
                     }
                 }
             });
@@ -604,6 +638,7 @@ function Task(task_user_id, is_my, is_custom) {
                                     setTimeout(function () {
                                         location.reload();
                                     }, 2000);
+                                    initTimeParse();
                                     //set_action_panel($('#action_panel'), response.html);
                                 }
                             }
@@ -631,6 +666,7 @@ function Task(task_user_id, is_my, is_custom) {
                     if(!response.error) {
                         set_action_panel($('#action_panel'), response.html);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
+                        initTimeParse();
                     }
                 }
             });
@@ -646,6 +682,7 @@ function Task(task_user_id, is_my, is_custom) {
             payment_paypal.popover('show');
             setTimeout(function() {payment_paypal.popover('hide')},3000);
         }
+        initTimeParse();
     }
 
     function set_counter_offer(_this,html) {
