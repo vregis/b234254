@@ -572,11 +572,11 @@ function Task(task_user_id, is_my, is_custom) {
                 success: function(response){
                     btn_receive.popover({
                         placement: "bottom",
-                        trigger:"hover",
+                        trigger:"click",
                         html:true,
                         content:response.msg
                     }).popover('show');
-                    setTimeout(function(){btn_receive.popover('destroy');},1000);
+                    // setTimeout(function(){btn_receive.popover('destroy');},1000);
                     //alert(response.msg);
                     if(response.error == false) {
                         var data = {
