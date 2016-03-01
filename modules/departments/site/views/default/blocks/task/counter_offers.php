@@ -27,22 +27,24 @@ function getData($data) {
                 <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>
                 <?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?>
             </td>
-            <td style="width: 126px;" class="<? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
-            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>">
-                <button style="margin-right: 5px;text-align: center;padding-top: 3px;font-size: 24px !important;" class="btn btn-primary circle icon static"><i class="ico-clock"></i></button>    
+            <td style="width: 126px;">
+                <button style="margin-right: 5px;text-align: center;padding-top: 3px;font-size: 24px !important;" class="btn btn-primary circle icon static <? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
+            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>"><i class="ico-clock"></i></button>    
                 <?php if($counter_offer->counter_time): ?>
-                <div style="display: inline-block;text-align: center;width:62px;">
+                <div class="<? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
+            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;">
                     <?= $counter_offer->counter_time ?>
                 </div>
                 h
             <?php else: ?>
-                <div style="display: inline-block;text-align: center;width:62px;"> - </div>
+                <div style="display: inline-block;text-align: center;width:62px;border:0 !important;"> - </div>
             <?php endif; ?>
             </td>
-            <td style="width: 123px;" class="<? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
-            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>">
-                <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-dollar"></i></button>
-                <div style="display: inline-block;text-align: center;width:62px;"><?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?></div>
+            <td style="width: 123px;" class="">
+                <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static <? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
+            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>"><i class="ico-dollar"></i></button>
+                <div class="<? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
+            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border:0 !important;"><?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?></div>
             </td>
             <td style="width: 360px;text-align:right;border-right: 1px solid #d7d7d7 !important;"><button style="display:inline-block;margin-right: 12px;" class="btn btn-danger confirn" data-status="0" data-delegate_task_id="<?= $counter_offer->id ?>">Reject</button>
                 <button style="display:inline-block;margin-right: 28px;" class="btn btn-success confirn" data-status="1" data-delegate_task_id="<?= $counter_offer->id ?>">Accept</button>
