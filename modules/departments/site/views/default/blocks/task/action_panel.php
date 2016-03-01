@@ -164,7 +164,7 @@ if($start_date != '') {
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
         <? else : ?>
-            <button id="restart" class="btn btn-success" style="width:93px;">Restart</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer restrt" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Restart</button>
         <? endif; ?>
     <? endif; ?>
 <? else : ?>
