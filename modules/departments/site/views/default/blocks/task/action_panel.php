@@ -106,7 +106,6 @@ if($start_date != '') {
             <span id="input-time"><?= $task_user->time ?></span>
         <? endif; ?>
     <? endif; ?>
-    h
 </div>
 <div class="item cost" style="margin-right: 33px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
