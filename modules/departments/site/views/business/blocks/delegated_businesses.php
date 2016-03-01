@@ -21,7 +21,7 @@ use yii\helpers\Url;
             ?>
 
             <?php if(@$tasks_count_array[DelegateTask::$status_done] != count($tasks)):?>
-                <?php echo $ch++;?>
+                <?php $ch++;?>
             <?php endif;?>
     <?php endif ?>
         <?php endforeach;?>
