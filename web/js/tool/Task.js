@@ -123,6 +123,7 @@ function Task(task_user_id, is_my, is_custom) {
                 $(".make-offer").removeClass('active');
             }
         });
+        initTimeParse();
     }
     function set_cancel_delegate_users(_this, html) {
         if(_this != undefined) {
@@ -632,8 +633,9 @@ function Task(task_user_id, is_my, is_custom) {
                                 if (!response.error) {
                                     setTimeout(function () {
                                         location.reload();
+                                        initTimeParse();
                                     }, 2000);
-                                    initTimeParse();
+                                    
                                     //set_action_panel($('#action_panel'), response.html);
                                 }
                             }
@@ -771,6 +773,7 @@ function Task(task_user_id, is_my, is_custom) {
             });
             $(this).removeClass('active');
         }
+        initTimeParse();
     });
     var cancel_offer = $('.cancel-offer');
     cancel_offer.off();

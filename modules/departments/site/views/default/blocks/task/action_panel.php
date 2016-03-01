@@ -226,7 +226,7 @@ if($start_date != '') {
 <? endif; ?>
 <a href="#" data-dismiss="modal" class="href-black task-close"></a>
 <div id="payment-form" style="display:none;">
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-top: 0;">
         <div class="row">
             <?php if($is_my): ?>
                 <label for="" class="col-sm-12">Pay with credit card</label>
@@ -240,11 +240,11 @@ if($start_date != '') {
         <div class="row"><label for="" class="col-sm-12" style="text-align:center;">Enter payment information</label></div>
 
         <div class="row">
-            <div class="col-sm-6 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
-            <div class="col-sm-6 col-xs-6"><input style="height:28px;margin:2px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_login"></div>
         </div>
         <div class="row text-center">
-            <button style="margin:20px 0 0 0;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
+            <button style="margin:20px 0 10px;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
             <style type="text/css">
                 [type="submit"] .label{
                     font-size:10px;
