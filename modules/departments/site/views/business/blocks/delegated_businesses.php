@@ -37,6 +37,8 @@ use yii\helpers\Url;
         $tasks_count_array = array_count_values(ArrayHelper::map($tasks,'id','status'));
         ?>
 
+        <?php if(@$tasks_count_array[DelegateTask::$status_done] != count($tasks)):?>
+
         <tr id="toolid-<?php echo $userTool->id?>">
                 <td>
                 <a href="javascript:;" class="dropmenu-two history<?php echo $userTool->id?> btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
@@ -65,6 +67,7 @@ use yii\helpers\Url;
             </td>
 
         </tr>
+        <?php endif; ?>
 
                 <div id="huistory-<?php echo $userTool->id?>" class="huistory" style="display:none;">
                     <ul>

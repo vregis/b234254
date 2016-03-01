@@ -221,8 +221,13 @@ function Task(task_user_id, is_my, is_custom) {
         confirn.on('click', function(e){
             if(confirn.hasClass('confirn-btn')){
                 console.log("click to cancel");
+                if($(this).hasClass('restrt')){
+                    var title = 'Are you sure you want to restart task?';
+                }else{
+                    var title = 'Are you sure you want to cancel the delegated task?';
+                }
                 confirn.confirmation({
-                    title: "Are you sure you want to cancel the delegated task?",
+                    title: title,
                     placement: "bottom",
                     btnOkClass: "btn btn-success",
                     btnCancelClass: "btn btn-danger",
@@ -625,8 +630,11 @@ function Task(task_user_id, is_my, is_custom) {
                             data: data,
                             success: function (response) {
                                 if (!response.error) {
-                                    set_action_panel($('#action_panel'), response.html);
+                                    setTimeout(function () {
+                                        location.reload();
+                                    }, 2000);
                                     initTimeParse();
+                                    //set_action_panel($('#action_panel'), response.html);
                                 }
                             }
                         });

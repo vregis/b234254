@@ -38,6 +38,7 @@ $this->registerCssFile("/fonts/Open Sans/OpenSans-Bold.css");
 <?php $this->registerJsFile("/plugins/gantt/assets/js/custom/gantt_chart.js");
 $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?>
 <?php $jj = 0; ?>
+<?php $chj = 0;?>
 <?php foreach($milestones as $ml):?>
 
     <?php $user = \modules\user\models\User::find()->where(['id'=>Yii::$app->user->id])->one();?>
@@ -47,6 +48,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
     <?php
     $response = Yii::$app->controller->sort($ml, false, $userTool, $avatar);
     if($userTool->user_id != Yii::$app->user->id && count($response['tasks']) == 0) {
+        $chj++;
         continue;
     }
     ?>
@@ -235,6 +237,11 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 
 <?php //endif;?>
 <?php endforeach;?>
+
+<?php if($jj == 0):?>
+    <?php header('location: /departments/business#delegated');?>
+    <?php die();?>
+<?php endif;?>
 
 <script>
     $(function(){
