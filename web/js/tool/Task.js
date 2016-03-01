@@ -562,6 +562,11 @@ function Task(task_user_id, is_my, is_custom) {
 
 
         var pp_login = $('input[name=paypal_login]').val();
+        var pp_loginre = $('input[name=paypal_loginre]').val();
+            if(pp_login != pp_loginre){
+                alert('emails is not match');
+                return false;
+            }
             if(pp_login == ''){
                 alert("cannot be empty");
                 return false;
