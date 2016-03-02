@@ -348,6 +348,9 @@ div.ganttview-slide-container{
 div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
     margin: 0px 13px;
 }
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color: rgba(84, 92, 99, 0.25) !important;
+}
 .mCSB_scrollTools .mCSB_dragger{
     height: 25% !important;
 }

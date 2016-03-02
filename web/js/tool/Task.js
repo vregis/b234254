@@ -5,8 +5,9 @@
 var staticTask = null;
 function initTimeParse(){
     var text = $("#input-time").val();
-    if(!text.indexOf('h')){
-        $("#input-time").val($("#input-time").val()+"h");
+    
+    if(text.indexOf('h') == -1){
+       $("#input-time").val($("#input-time").val()+"h");
     }
 
     $("#input-time").on('keydown',function(event){
@@ -20,12 +21,16 @@ function initTimeParse(){
                 event.preventDefault(); 
             }   
         }
+        console.log(text);
     }).on('focus',function(){
+        text = $("#input-time").val();
         text = text.replace('h','');
         $("#input-time").val(text);
     }).on('blur',function(){
-        if(!text.indexOf('h')){
-            $("#input-time").val(text+"h");
+        text = $("#input-time").val();
+        if(text.indexOf('h') == -1){
+            $("#input-time").val($("#input-time").val()+"h");
+            console.log("FUCK YEAH");
         }
     });
 }
