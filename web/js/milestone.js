@@ -105,7 +105,13 @@ function openTask(id, is_custom){
                 "repeat": 10,
                 "greedy": false,
             }); // ~ mask "9" or mask "99" or ... mask "9999999999"
-            $("#input-time").val($("#input-time").val()+"h");
+            $(document).ready(function(){
+                var text = $("#input-time").val();
+            console.log(text.indexOf('h'));
+            if(text.indexOf('h') == -1){
+               $("#input-time").val($("#input-time").val()+"h");
+            }
+
             $("#input-time").on('keydown',function(event){
                // Allow only backspace and delete
                 if ( event.keyCode == 46 || event.keyCode == 8 ) {
@@ -117,14 +123,20 @@ function openTask(id, is_custom){
                         event.preventDefault(); 
                     }   
                 }
+                console.log(text);
             }).on('focus',function(){
-                var text = $("#input-time").val();
+                text = $("#input-time").val();
                 text = text.replace('h','');
                 $("#input-time").val(text);
             }).on('blur',function(){
-                var text = $("#input-time").val();
-                $("#input-time").val(text+"h");
+                text = $("#input-time").val();
+                if(text.indexOf('h') == -1){
+                    $("#input-time").val($("#input-time").val()+"h");
+                    console.log("FUCK YEAH");
+                }
             });
+            });
+            
             $('.task-body .block.desc a[data-toggle="tab"]').on('shown.bs.tab',function(e){
                 $(this).tab('show');
                 $(".task-body .block.desc .tab-content > .tab-pane .item").popover({
