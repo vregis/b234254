@@ -150,7 +150,14 @@ use modules\user\site\controllers\ProfileController;
                     	<div class="roww action">
                             <?php foreach($departments as $dep):?>
                     		<div class="item">
+                                <?php $do = \modules\departments\site\controllers\BusinessController::checkDoDepartment($dep->id);?>
+                                <?php if($do):?>
+                                <a target="_blank" href="/user/social/shared-profile?id=<?php echo $do->idd?>">
+                                    <img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $do->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$do->ava:'/images/avatar/nophoto.png'?>" data-original-title="" title="">
+                                </a>
+                                <?php else:?>
                     			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
+                                <?php endif;?>
                     		</div>
                             <?php endforeach; ?>
                     	</div>

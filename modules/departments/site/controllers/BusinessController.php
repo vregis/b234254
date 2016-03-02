@@ -1167,4 +1167,12 @@ class BusinessController extends Controller
         return json_encode($response);
     }
 
+    public static function checkDoDepartment($dep_id){
+        $do = UserDo::find()
+            ->select('user_do.*, user_profile.avatar ava, user_profile.user_id idd')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_do.user_id')
+            ->where(['user_do.department_id' => $dep_id, 'user_do.user_id' => Yii::$app->user->id, 'user_do.status_do' => 1])->one();
+        return $do;
+    }
+
 }

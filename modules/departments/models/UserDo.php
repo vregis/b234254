@@ -17,6 +17,7 @@ class UserDo extends \yii\db\ActiveRecord
     public $lname = '';
     public $country = '';
     public $city = '';
+    public $idd = '';
 
     public static function tableName()
     {
