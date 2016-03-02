@@ -216,7 +216,7 @@ use modules\core\widgets\Flash;
 
 <!-- site footer -->
 <footer id="site-footer" class="text-center">
-    <a data-type="youtube" href="https://youtu.be/gtvL1q3r6z4" class="venobox btn btn-primary btn-empty btn-icon play"><i class="ico-play"></i></a>
+    <a data-type="youtube" href="http://youtu.be/Xo5IrI7yfjA" class="venobox btn btn-primary btn-empty btn-icon play"><i class="ico-play"></i></a>
     <a data-toggle="modal" href="#info-modal" class="btn btn-primary btn-empty btn-icon info"><i class="ico-info"></i></a>
     <a href="<?= Url::toRoute(['/departments?id=1']) ?>" class="btn btn-empty">Sell your skills</a>
     <a data-toggle="modal" href="#support" class="btn btn-empty">Support</a>
