@@ -172,7 +172,7 @@ use modules\user\site\controllers\ProfileController;
                     		<a href="javascript:;" class="item background-8">Team</a>
                     	</div>
                     </div>
-                    <a href="javascript:;" class="btn btn-lg btn-primary" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
+                    <a href="javascript:;" class="btn btn-lg btn-primary join-us" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
                 </section>
                 <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>
@@ -215,14 +215,14 @@ use modules\user\site\controllers\ProfileController;
         //     html: true,
         //     trigger:"manual",
         // });
-        $(".deps-wrap .action .item .btn").popover({
+        $(".deps-wrap .action .item .btn, .join-us").popover({
             placement: "top",
             content : 'Will be available in the next version',
             html: true,
             trigger:"manual",
         }).click(function(){
-            if($(".deps-wrap .action .item .btn").not($(this)).next("div").hasClass('popover')){
-                $(".deps-wrap .action .item .btn").not($(this)).popover("hide");
+            if($(".deps-wrap .action .item .btn, .join-us").not($(this)).next("div").hasClass('popover')){
+                $(".deps-wrap .action .item .btn, .join-us").not($(this)).popover("hide");
             }
             $(this).popover('toggle');
         });
@@ -237,12 +237,12 @@ use modules\user\site\controllers\ProfileController;
             $(this).popover('toggle');
         });
 
-        $(".contacts .big a,.deps-wrap .action .item .btn").on('show.bs.popover',function(){
+        $(".contacts .big a,.deps-wrap .action .item .btn, .join-us").on('show.bs.popover',function(){
             $("body").on("click", function(e){
-                $('.contacts .big a,.deps-wrap .action .item .btn').each(function () {
+                $('.contacts .big a,.deps-wrap .action .item .btn, .join-us').each(function () {
                     //the 'is' for buttons that trigger popups
                     //the 'has' for icons within a button that triggers a popup
-                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.deps-wrap .action .item .btn, .contacts .big .popover').has(e.target).length === 0) {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.join-us, .deps-wrap .action .item .btn, .contacts .big .popover').has(e.target).length === 0) {
                         $(this).popover('hide');
                     }
                 });
