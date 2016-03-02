@@ -63,7 +63,7 @@
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-1" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(284);?> <div class="text-center">Completed</div>'
+            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(284);?> <div class='text-center'>Completed</div>"
         });
     });
 </script>
