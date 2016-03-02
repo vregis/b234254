@@ -11,6 +11,7 @@ use yii\helpers\ArrayHelper;
 
 $this->registerCssFile("/css/business.css");
 $this->registerCssFile("/css/task.css");
+$this->registerCssFile("/css/contribute-modal.css");
 
 $msgJs = <<<JS
     $(document).ready(function(){
@@ -174,6 +175,21 @@ $this->registerJs($msgJs);
 
     </div>
 </div>
+<div id="contribute-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="title1">During the introductory stage</div>
+        <div class="title2">PAYMENT IS OPTIONAL</div>
+          <div class="arrow one"></div>
+            <div class="arrow two"></div>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <style>
 .table .btn{
     margin:0;
@@ -209,6 +225,7 @@ $this->registerJs($msgJs);
 </style>
 <script>
 $(document).ready(function () {
+    //$("#contribute-modal").modal();
     $(".dropmenu1.history1").popover({
         placement:"bottom",
         html:true,

@@ -57,6 +57,8 @@ function Task(task_user_id, is_my, is_custom) {
             $(".make-offer").addClass('active');
         });
     });
+
+
     var cancelall_btn = $('.cancelall-btn');
     cancelall_btn.off();
     cancelall_btn.on('click', function(){
@@ -220,7 +222,7 @@ function Task(task_user_id, is_my, is_custom) {
         });
     }
     set_delegate_active_users($('#delegate_active_users'));
-
+    
     function set_handler_confirn() {
         var confirn = $('.confirn');
         confirn.off();
@@ -663,25 +665,44 @@ initTimeParse();
         var restart = $('#restart');
         restart.off();
         restart.on('click', function(){
-
-            var data = {
+        console.log("click to restart");
+        restart.confirmation({
+            title: 'Are you sure you want to restart task?',
+            placement: "bottom",
+            btnOkClass: "btn btn-success",
+            btnCancelClass: "btn btn-danger",
+            btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+            onConfirm: function (event) {
+                var data = {
                 _csrf: $("meta[name=csrf-token]").attr("content"),
                 command : 'restart',
                 task_user_id: task_user_id
-            };
-            $.ajax({
-                url: '/departments/tool-ajax',
-                type: 'post',
-                dataType: 'json',
-                data: data,
-                success: function(response){
-                    if(!response.error) {
-                        set_action_panel($('#action_panel'), response.html);
-                        set_log($('#taskUserLogs'), response.html_task_user_logs);
-                        initTimeParse();
+                };
+                $.ajax({
+                    url: '/departments/tool-ajax',
+                    type: 'post',
+                    dataType: 'json',
+                    data: data,
+                    success: function(response){
+                        if(!response.error) {
+                            set_action_panel($('#action_panel'), response.html);
+                            set_log($('#taskUserLogs'), response.html_task_user_logs);
+                            initTimeParse();
+                        }
                     }
-                }
-            });
+                });
+                restart.confirmation('destroy');
+            },
+            onCancel: function (event) {
+                restart.confirmation('destroy');
+                return false;
+            }
+        });
+
+            $(this).confirmation('show');
+            e.preventDefault();
+            return false;
+            initTimeParse();
         });
         set_handler_confirn();
 
