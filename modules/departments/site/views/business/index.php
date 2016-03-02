@@ -11,6 +11,7 @@ use yii\helpers\ArrayHelper;
 
 $this->registerCssFile("/css/business.css");
 $this->registerCssFile("/css/task.css");
+$this->registerCssFile("/css/contribute-modal.css");
 
 $msgJs = <<<JS
     $(document).ready(function(){
@@ -113,7 +114,7 @@ $this->registerJs($msgJs);
                         </tr>
                         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
                             <a href="<?= Url::toRoute(['/departments/business/dashboard-editing','id' => $current_userTool->id]) ?>">Business Dashboard</a>
-                            <a href="/departments/team/index?id=<?php echo $current_userTool->id?>" >Team</a>
+                            <a href="javascript:;" class="team" data-toggle="popover" >Team</a>
                             <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
                         </div>
                         <script>
@@ -142,6 +143,13 @@ $this->registerJs($msgJs);
                             });
                             $(".dropmenu<?php echo $i?>.history").on('show.bs.popover',function(){
                                 $("#huistory<?php echo $i?>").show();
+                                $(".huistory a.team").popover({
+                                    container: 'body',
+                                    placement: "right",
+                                    html:true,
+                                    template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                                    content : 'Will be available in the next version'
+                                });
                                 $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
                             }).on('hide.bs.popover',function(){
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
@@ -174,7 +182,29 @@ $this->registerJs($msgJs);
 
     </div>
 </div>
+<div id="contribute-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="title1">During the introductory stage</div>
+        <div class="title2">PAYMENT IS OPTIONAL</div>
+          <div class="arrow one"></div>
+            <div class="arrow two"></div>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <style>
+.popover.delegation{
+    min-width:auto !important;
+    width:auto !important;
+}
+.popover.delegation .popover-content {
+    padding: 9px 14px !important;
+}
 .table .btn{
     margin:0;
 }
@@ -209,6 +239,14 @@ $this->registerJs($msgJs);
 </style>
 <script>
 $(document).ready(function () {
+    $(".huistory a.team").popover({
+        container: 'body',
+        placement: "right",
+        html:true,
+        template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+        content : 'Will be available in the next version'
+    });
+    //$("#contribute-modal").modal();
     $(".dropmenu1.history1").popover({
         placement:"bottom",
         html:true,

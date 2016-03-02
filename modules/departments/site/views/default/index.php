@@ -89,20 +89,23 @@ $this->registerJs($msgJs);
 </div>
 <script>
 
-$(".hor-menu .btn-group-justified > .btn-group .btn .circle").popover({
-    container: 'body',
-    placement: "bottom",
-    content : 'Will be available in the next version'
-});
+    $(".hor-menu .btn-group-justified > .btn-group .btn .circle").popover({
+        container: 'body',
+        template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+        placement: "bottom",
+        content : 'Will be available in the next version'
+    });
     $(document).on('click', '.on', function(e){
+        
         var target = $(e.target);
+        console.log(target);
         if (target.is("li"))
             return;
         i = 0;
         var count = $(this).closest('.milestones').find('.on').each(function(){
             i++;
         })
-        if(i == 1){
+        if(i == 1 || target.is(".ico-delegate")){
             return false;
         }
         $(this).removeClass('on');
@@ -114,11 +117,11 @@ $(".hor-menu .btn-group-justified > .btn-group .btn .circle").popover({
     })
 
     $(document).on('click', '.off', function(e){
-
         var target = $(e.target);
+        console.log(target);
         if (target.is("li"))
             return;
-        if($(this).hasClass('disabled')){
+        if($(this).hasClass('disabled') || target.is(".ico-delegate")){
             return false;
         }
 

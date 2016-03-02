@@ -72,7 +72,7 @@
         height: 45px !important;
     }
     .hor-menu .btn .text{
-        display: inline-block !important;
+        display: block !important;
         font-size: 11px;
         /*margin-right:15px;*/
     }

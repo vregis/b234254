@@ -445,4 +445,25 @@ section.contacts .title{
 .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
 	background-color:rgba(255,255,255,0.9);
 }
-
+.popover{
+    border:1px solid #d7d7d7;
+    padding: 10px;
+    /*white-space: nowrap;*/
+    /*background: #ebebeb;*/
+    border-radius:10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+    border: 1px solid #dae2ea;
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: #FFF !important;
+}
+.popover.top > .arrow:after {
+    border-top-color: #FFF !important;
+}
+.popover.right > .arrow:after {
+    border-right-color: #fff !important;
+}
+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
+    background: #fff;
+    /*border: 1px solid #d7d7d7;*/
+}

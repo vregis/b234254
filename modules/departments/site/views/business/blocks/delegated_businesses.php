@@ -97,7 +97,7 @@ use yii\helpers\Url;
                 <div id="huistory-<?php echo $userTool->id?>" class="huistory" style="display:none;">
                     <ul>
                         <li class="disabled"><a target="_blank" href="/departments/business/shared-business?id=<?php echo $userTool->id?>">Business Dashboard</a></li>
-                        <li class="disabled"><a target="_blank" href="/departments/team/request?id=<?php echo $userTool->id?>">Team</a></li>
+                        <li class="disabled"><a class="team" href="javascript:;" data-toggle="popover" >Team</a></li>
                     </ul>
                 </div>
 
@@ -121,6 +121,13 @@ use yii\helpers\Url;
                             });
                             $(".dropmenu-two.history<?php echo $userTool->id?>").on('show.bs.popover',function(){
                                 $("#huistory-<?php echo $userTool->id?>").show();
+                                $(".huistory a.team").popover({
+                                    container: 'body',
+                                    placement: "right",
+                                    html:true,
+                                    template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                                    content : 'Will be available in the next version'
+                                });
                                 $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
                             }).on('hide.bs.popover',function(){
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');

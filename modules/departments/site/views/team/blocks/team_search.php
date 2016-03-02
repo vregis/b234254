@@ -247,22 +247,6 @@
             })
         })
 
-        $('.close-ava').on('click', function(){
-            if(!confirm('Approve reject')){
-                return false;
-            }
-            var recipient = $(this).attr('data-user-id');
-            var dep_id = $(this).attr('data-dep-id');
-            var tool_id = <?php echo $_GET['id']?>;
-            $.ajax({
-                url: '/departments/team/delete-invite-user',
-                type: 'post',
-                data: {recipient:recipient, dep_id:dep_id, tool_id:tool_id},
-                dataType: 'json',
-                success: function(){
-                    location.reload(); //refactor this
-                }
-            })
-        })
+
     })
 </script>

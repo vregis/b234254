@@ -28,7 +28,7 @@
 	top:7px;
 	right:7px;
 }
-.deps-wrap .action .item .btn{
+.deps-wrap .action .item > .btn{
 	line-height: 34px !important;
 	background:transparent;
 }
@@ -376,4 +376,24 @@
 }
 .popover.chat .popover-content{
 	padding:20px;
+}
+.deps-wrap .action .item a+.popover{
+    min-width:250px !important;
+    width:250px !important;
+    line-height: 50px;
+    padding: 10px !important;
+    top: 50px !important;
+}
+.deps-wrap .action .item a+.popover > .popover-title,.deps-wrap .action .item a+.popover > .popover-content{
+    text-align:center;
+    background:none;
+    border:none;
+    padding: 0;
+}
+.deps-wrap .action .item a+.popover .btn{
+    width: 93px;
+    margin-right: 12px;
+}
+.deps-wrap .action .item a{
+    display:block;
 }

@@ -7,6 +7,7 @@ use modules\tasks\models\TaskUser;
 use modules\departments\models\Idea;
 use modules\user\models\User;
 use yii\helpers\ArrayHelper;
+$this->registerJsFile("/js/bootstrap-confirmation.js");
 $this->registerCssFile("/css/business.css");
 // $this->registerCssFile("/css/task.css");
 $this->registerCssFile("/css/team.css");
@@ -43,11 +44,51 @@ $this->registerJs($msgJs);
 </div>
 </div>
 <script>
+$(document).ready(function(){
+    $('.close-ava').on('click', function(e){
+    var __this = $(this);
+    var targ = $(this).prev('a');
+    targ.confirmation({
+        title: 'Are you sure you want to exclude a member of the team?',
+        placement: "bottom",
+        btnOkClass: "btn btn-success",
+        btnCancelClass: "btn btn-danger",
+        btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+        onConfirm: function (event) {
+            var recipient = __this.attr('data-user-id');
+            var dep_id = __this.attr('data-dep-id');
+            var tool_id = <?php echo $_GET['id']?>;
+            $.ajax({
+                url: '/departments/team/delete-invite-user',
+                type: 'post',
+                data: {recipient:recipient, dep_id:dep_id, tool_id:tool_id},
+                dataType: 'json',
+                success: function(){
+                    location.reload(); //refactor this
+                }
+            })
+            targ.confirmation('destroy');
+        },
+        onCancel: function (event) {
+            targ.confirmation('destroy');
+            return false;
+        }
+    });
+
+    targ.confirmation('show');
+});
+});
 $('[data-toggle="collapse"]').click(function(){
     var el = $(this).parents('.item').attr('data-id');
-    console.log(el);
-    $('.deps .item').removeClass('active');
-    $('.deps').find('[data-id='+el+']').toggleClass('active');
+    $('[data-toggle="collapse"], .deps .item').removeClass('active');
+
+    if($(this).attr('aria-expanded') == 'false'){
+        $(this).addClass('active');
+        $('.deps').find('[data-id='+el+']').addClass('active');
+    }else{
+        $(this).removeClass('active');
+        $('.deps').find('[data-id='+el+']').removeClass('active');
+    }
 });
 $('.collapse').on('show.bs.collapse',function(){
     $(".btn-chat").popover({
