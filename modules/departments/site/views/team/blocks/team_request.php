@@ -40,17 +40,26 @@
         </tr>
         </thead>
         <tbody id="user_request">
-        <tr class="user-row" data-page-id="0" style="">
-            <td>
-                <img class="gant_avatar" src="/images/avatar/nophoto.png" height="33" style="margin:0;">
-            </td>
-            <td>Simon Swerdlow</td>
-            <td>Idea</td>
-            <td>USA, Jupiter</td>
-            <td><button class="btn btn-primary btn-chat circle"><i class="ico-chat"></i></button></td>
-            <td><button style="font-size: 10px;" class="btn btn-success circle"><i class="ico-check1"></i></button></td>
-            <td><button style="font-size: 10px;" class="btn btn-danger circle"><i class="ico-delete"></i></button></td>
-        </tr>
+        <?php $users = TeamController::getRequestFromJobber($dep->id, $_GET['id']);?>
+        <?php if($users):?>
+            <?php foreach($users as $us):?>
+                <tr class="user-row" data-page-id="0" style="">
+                    <td>
+                        <img class="gant_avatar" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src="<?php echo $us->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$us->ava:'/images/avatar/nophoto.png'?>" height="33" style="margin:0;">
+                    </td>
+                    <?php if(!$us->fname && !$us->lname):?>
+                        <td>User</td>
+                    <?php else:?>
+                        <td><?php echo ($us->fname)?$us->fname:''?> <?php echo ($us->lname)?$us->lname:''?></td>
+                    <?php endif;?>
+                    <td><?php echo $dep->name?></td>
+                    <td><?php echo ($us->country)?$us->country:''?> <?php echo ($us->city)?', '.$us->city:''?></td>
+                    <td><button class="btn btn-primary btn-chat circle"><i class="ico-chat"></i></button></td>
+                    <td><button data-id="<?php echo $us->id?>" style="font-size: 10px;" class="btn btn-success circle accept_r"><i class="ico-check1"></i></button></td>
+                    <td><button data-id="<?php echo $us->id?>" style="font-size: 10px;" class="btn btn-danger circle reject_r"><i class="ico-delete"></i></button></td>
+                </tr>
+                <?php endforeach;?>
+        <?php endif;?>
         </tbody>
         <tfoot>
         <tr>
@@ -83,3 +92,33 @@
 </div>
 
 <?php endforeach; ?>
+
+<script>
+    $('.accept_r').on('click', function(){
+        var id = $(this).attr('data-id');
+
+        $.ajax({
+            url: '/departments/team/accept-req',
+            data: {id:id},
+            dataType: 'json',
+            type: 'post',
+            success: function(){
+            location.reload();
+        }
+        })
+    })
+
+    $('.reject_r').on('click', function(){
+        var id = $(this).attr('data-id');
+
+        $.ajax({
+            url: '/departments/team/del-req',
+            data: {id:id},
+            dataType: 'json',
+            type: 'post',
+            success: function(){
+                location.reload();
+            }
+        })
+    })
+</script>

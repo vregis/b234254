@@ -38,6 +38,8 @@ class TeamController extends Controller {
                             'jobber-accept',
                             'add-jobber-request',
                             'del-jobber-request',
+                            'accept-req',
+                            'del-req',
                         ],
                         'roles' => ['@'],
 
@@ -222,6 +224,40 @@ class TeamController extends Controller {
     }
 
     public function actionAddJobberRequest(){
+
+
+
+        $tasks = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
+        if($tasks){
+            foreach($tasks as $t){
+                $tu = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $_POST['tool_id']])->one();
+                if($tu){
+                    $dt = new DelegateTask();
+                    $dt->task_user_id = $tu->id;
+                    $dt->delegate_user_id = Yii::$app->user->id;
+                    $dt->time = $tu->time;
+                    $dt->price = $tu->price;
+                    $dt->save();
+                }else{
+                    $tu = new TaskUser();
+                    $tu->user_tool_id = $_POST['tool_id'];
+                    $tu->task_id = $t->id;
+                    if(!$tu->save()){
+                        var_dump($tu->getErrors());
+                    }
+
+                    $tu_id = $tu->getPrimaryKey();
+                    $dt = new DelegateTask();
+                    $dt->task_user_id = $tu_id;
+                    $dt->delegate_user_id = Yii::$app->user->id;
+                    if(!$dt->save()){
+                        var_dump($dt->getErrors());
+                    }
+                }
+            }
+        }
+
+
         $req = new Team();
         $req->user_tool_id = $_POST['tool_id'];
         $req->sender_id = $_POST['sender_id'];
@@ -229,6 +265,9 @@ class TeamController extends Controller {
         $req->department = $_POST['dep_id'];
         $req->is_request = 1;
         $req->save();
+
+
+
         return json_encode($_POST);
     }
 
@@ -247,6 +286,36 @@ class TeamController extends Controller {
         ->one();
         $team->delete();
         return json_encode($_POST);
+    }
+
+    public static function getRequestFromJobber($dep_id, $tool_id){
+        $team = Team::find()
+            ->select('team.*, user_profile.first_name fname, user_profile.last_name lname, user_profile.avatar ava, user_profile.city_title city')
+            ->join('LEFT JOIN', 'user_profile', 'team.recipient_id = user_profile.user_id')
+            ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->where([
+                'team.user_tool_id' => $tool_id,
+                'team.department' => $dep_id,
+                'team.sender_id' => Yii::$app->user->id,
+                'team.is_request' => 1])
+            ->all();
+        return $team;
+    }
+
+    public function actionAcceptReq(){
+        $team = Team::find()->where(['id' => $_POST['id']])->one();
+        if($team){
+            $team->status = 1;
+            $team->save();
+        }
+        return json_encode($_POST);
+    }
+
+    public function actionDelReq(){
+        $team = Team::find()->where(['id' => $_POST['id']])->one();
+        if($team){
+            $team->delete();
+        }
     }
 
 }

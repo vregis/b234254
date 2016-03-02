@@ -38,7 +38,7 @@
         </thead>
         <tbody id="user_request">
 
-        <?php $request = \modules\departments\models\Team::find()->where(['user_tool_id' => $_GET['id'], 'department' => $dep->id, 'sender_id' => Yii::$app->user->id])->one();?>
+        <?php $request = \modules\departments\models\Team::find()->where(['user_tool_id' => $_GET['id'], 'department' => $dep->id, 'sender_id' => Yii::$app->user->id, 'is_request' => 0])->one();?>
         <?php if($request):?>
         <?php $us = TeamController::getInvitedUser($request->recipient_id);?>
         <tr class="user-row" data-page-id="0" style="">
