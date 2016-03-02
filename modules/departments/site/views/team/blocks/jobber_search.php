@@ -73,7 +73,7 @@
             <?php else:?>
                 <td><?php echo ($array['user']->first_name)?$array['user']->first_name:''?> <?php echo ($array['user']->last_name)?$array['user']->last_name:''?></td>
             <?php endif;?>
-            <td>40</td>
+            <td><?php echo $array['milestones']?></td>
             <td><?php echo $array['tasks']?></td>
             <td>4</td>
             <td>2</td>

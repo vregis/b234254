@@ -82,7 +82,7 @@ class TeamController extends Controller {
             ->select('user_profile.avatar ava, user_profile.first_name fname, user_profile.last_name lname,
              user_profile.user_id dname, user_profile.city_title city, geo_country.title_en country')
             ->join('INNER JOIN','user_profile', 'user_profile.user_id = user_do.user_id')
-            ->join('JOIN', 'geo_country', 'geo_country.id = user_profile.country_id')
+            ->join('LEFT OUTER JOIN', 'geo_country', 'geo_country.id = user_profile.country_id')
             ->where(['user_do.status_sell' => 1, 'user_do.department_id' => $dep_id])
             ->orderBy(['user_profile.user_id' => SORT_DESC])
             ->groupBy('user_profile.user_id')
@@ -215,8 +215,10 @@ class TeamController extends Controller {
             // TODO delete already delegeted tasks
 
             $tasks = Task::find()->where(['department_id' => $dep_id])->all();
+            $milestones = Task::find()->where(['department_id' => $dep_id])->groupBy('milestone_id')->all();
             $return = [];
             $return['tasks'] = count($tasks);
+            $return['milestones'] = count($milestones);
             $return['user'] = $user;
             return $return;
         }
@@ -224,39 +226,6 @@ class TeamController extends Controller {
     }
 
     public function actionAddJobberRequest(){
-
-
-
-        $tasks = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
-        if($tasks){
-            foreach($tasks as $t){
-                $tu = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $_POST['tool_id']])->one();
-                if($tu){
-                    $dt = new DelegateTask();
-                    $dt->task_user_id = $tu->id;
-                    $dt->delegate_user_id = Yii::$app->user->id;
-                    $dt->time = $tu->time;
-                    $dt->price = $tu->price;
-                    $dt->save();
-                }else{
-                    $tu = new TaskUser();
-                    $tu->user_tool_id = $_POST['tool_id'];
-                    $tu->task_id = $t->id;
-                    if(!$tu->save()){
-                        var_dump($tu->getErrors());
-                    }
-
-                    $tu_id = $tu->getPrimaryKey();
-                    $dt = new DelegateTask();
-                    $dt->task_user_id = $tu_id;
-                    $dt->delegate_user_id = Yii::$app->user->id;
-                    if(!$dt->save()){
-                        var_dump($dt->getErrors());
-                    }
-                }
-            }
-        }
-
 
         $req = new Team();
         $req->user_tool_id = $_POST['tool_id'];
@@ -316,6 +285,16 @@ class TeamController extends Controller {
         if($team){
             $team->delete();
         }
+    }
+
+    public static function checkDo($dep_id){
+        $do = UserDo::find()->where(['department_id' => $dep_id, 'user_id' => Yii::$app->user->id, 'status_do' => 1])->one();
+        return $do;
+    }
+
+    public static function getUserProfile(){
+        $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();
+        return $profile;
     }
 
 }
