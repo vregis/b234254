@@ -94,7 +94,13 @@ $this->registerJs($msgJs);
                                 <a href="javascript:;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                             </td>
                             <td style="text-transform: uppercase">
-                                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
+                                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"
+                                <?php if(strlen($current_userTool->name) >30):?>
+                                     data-toggle="popover" data-placement="bottom" data-content="<?= $current_userTool->name ?>"
+                                <?php endif;?>
+                                 style="display: block;width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;" 
+                                 class="name"
+                                ><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
                             </td>
                             <td>
                                 <?= (new DateTime($current_userTool->create_date))->format("m/d/Y") ?>
@@ -298,6 +304,10 @@ $(document).ready(function () {
     });
 
     $(document).ready(function () {
+            $("table tr td a.name").popover({
+                container:$("body"),
+                trigger:"hover"
+            });
         $(".page-content-wrapper").mCustomScrollbar("destroy");
         $('.page-content-wrapper').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),
@@ -309,6 +319,10 @@ $(document).ready(function () {
             }
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
+            $("table tr td a.name").popover({
+                container:$("body"),
+                trigger:"hover"
+            });
             window.location.hash = $(this).attr('href');
             $(".page-content-wrapper").mCustomScrollbar("destroy");
             $('.page-content-wrapper').mCustomScrollbar({

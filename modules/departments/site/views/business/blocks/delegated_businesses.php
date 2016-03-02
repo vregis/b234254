@@ -69,7 +69,13 @@ use yii\helpers\Url;
                 <a href="javascript:;" class="dropmenu-two history<?php echo $userTool->id?> btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
             </td>
             <td style="text-transform: uppercase">
-                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"><?= isset($userTool->name) ? $userTool->name : 'No name' ?></a> <!--<span style="right: 15px;top: 50%;margin-top: -6px; display:none;" class="label label-danger circle">3</span>-->
+                <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"
+                <?php if(strlen($userTool->name) >30):?>
+                     data-toggle="popover" data-placement="bottom" data-content="<?= $userTool->name ?>"
+                <?php endif;?>
+                class="name" 
+                 style="display: block;width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;"
+                ><?= $userTool->name ? $userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
             </td>
             <td>
                 <?= count($tasks) ?>
