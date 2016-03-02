@@ -260,6 +260,7 @@ function Task(task_user_id, is_my, is_custom) {
                                         });
                                         set_action_panel($('#action_panel'), response.html_action_panel);
                                         set_log($('#taskUserLogs'), response.html_task_user_logs);
+                                        initTimeParse();
                                     }
                                     initTimeParse();
                                 }
@@ -275,6 +276,7 @@ function Task(task_user_id, is_my, is_custom) {
                 $(this).confirmation('show');
                 e.preventDefault();
                 return false;
+                initTimeParse();
                 // if (!confirm("Approve cancel")){
                 //     return false;
                 // }
@@ -298,7 +300,7 @@ function Task(task_user_id, is_my, is_custom) {
                         set_counter_offer(counter, response.html);
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
-
+initTimeParse();
                         if(response.html_action_panel) {
                             counter.removeClass('in');
                             $('.counter-offer-row').each(function(){
@@ -306,9 +308,11 @@ function Task(task_user_id, is_my, is_custom) {
                             });
                             set_action_panel($('#action_panel'), response.html_action_panel);
                             set_log($('#taskUserLogs'), response.html_task_user_logs);
+initTimeParse();
                         }
                         initTimeParse();
                     }
+                    initTimeParse();
                 }
             });
         });
@@ -316,6 +320,7 @@ function Task(task_user_id, is_my, is_custom) {
     function set_action_panel(_this,html) {
         if(html != undefined) {
             _this.html(html);
+            initTimeParse();
         }
         var input_time = $('#input-time');
         input_time.off();
@@ -987,9 +992,11 @@ function Task(task_user_id, is_my, is_custom) {
                     });
                     if (response.html_messages) {
                         handleRequestMessage(response.html_messages, true);
+                        initTimeParse();
                     }
                     if (response.html_active_users) {
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
+                        initTimeParse();
                     }
                     if (response.html_action_panel) {
                         set_action_panel($('#action_panel'), response.html_action_panel);
@@ -997,14 +1004,17 @@ function Task(task_user_id, is_my, is_custom) {
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
 
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
+                        initTimeParse();
                     }
                     if (response.html_counter_offers) {
                         set_counter_offer($('#counter'), response.html_counter_offers);
+                        initTimeParse();
                     }
                     if (response.new_message) {
                         response.new_message.forEach(function (item) {
                             $('.select-delegate[data-delegate_task_id="' + item.delegate_task_id + '"]').find('.badge').html(item.count);
                         });
+                        initTimeParse();
                     }
                     if (response.all_new_message) {
                         $('#badge-chat').html(response.all_new_message.count);

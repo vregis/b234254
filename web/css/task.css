@@ -1075,6 +1075,7 @@ thead .ui-datepicker-week-end {
 .task-title #get_money_confirm+.popover > .arrow{
     left: 140px !important;
 }
+
 .task-title button.payment-btn+.popover .popover-content{
     /*padding:0;*/
     font-size: 16px;
@@ -1754,4 +1755,11 @@ table th.rate .fa{
     width:62px;
     display:inline-block;
     text-align: center;
+}
+#action_panel button.restrt+.popover{
+    left: auto !important;
+    right: 0 !important; 
+}
+#action_panel button.restrt+.popover > .arrow{
+    left: 200px !important;
 }

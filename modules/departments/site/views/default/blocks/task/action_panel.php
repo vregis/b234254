@@ -93,7 +93,7 @@ if($start_date != '') {
     </button>
     <? if($is_my) : ?>
         <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
-            <span id="input-time"><?= $task_user->time ?></span>
+            <span id="input-time"><?= $task_user->time ?>h</span>
         <? else : ?>
             <input id="input-time" value="<?= $task_user->time ?>" type="text">
         <? endif; ?>
@@ -101,9 +101,9 @@ if($start_date != '') {
         <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
             <input id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>" type="text">
         <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
-            <span id="input-time"><?= $delegate_task->counter_time ?></span>
+            <span id="input-time"><?= $delegate_task->counter_time ?>h</span>
         <? else : ?>
-            <span id="input-time"><?= $task_user->time ?></span>
+            <span id="input-time"><?= $task_user->time ?>h</span>
         <? endif; ?>
     <? endif; ?>
 </div>
@@ -164,7 +164,7 @@ if($start_date != '') {
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
         <? else : ?>
             <button id="restart" class="btn btn-danger" style="width:93px;">Restart</button>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer restrt" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Restart</button>
+            <button style="width:93px;" class="btn btn-danger confirn confirn-btn offer restrt" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Restart</button>
         <? endif; ?>
     <? endif; ?>
 <? else : ?>
@@ -187,7 +187,7 @@ if($start_date != '') {
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
             <?php $chk = 1;?>
-            <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;" data-toggle="popover" data-trigger="hover" data-content="Your payment has been processed successfully. Wait for your task acceptance to get it">
+            <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
             <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
