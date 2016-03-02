@@ -1455,7 +1455,7 @@ thead .ui-datepicker-week-end {
 .b-page-checkbox-wrap.off{
     background: rgba(0, 0, 0, 0) url("/images/tests/bg-checkbox-wrap-off.png") repeat-x scroll center center;
 }
-#btn-delegate+.popover > *, #btn-accept+.popover > *, button#restart+.popover > *{
+#btn-delegate+.popover > *, #btn-accept+.popover > *, button#restart+.popover > *, button.confirn+.popover > *{
     text-align:center;
     background:none;
     border:none;
@@ -1467,12 +1467,16 @@ thead .ui-datepicker-week-end {
     right:0 !important;
     left:auto !important;
 }
-button#restart+.popover > .arrow{
+button#restart+.popover > .arrow, button.confirn+.popover > .arrow{
     margin-left: 0px !important;
 }
 #btn-accept+.popover > .arrow{
     left: auto !important;
     right: 72px !important;
+}
+button.confirn-btn+.popover > .arrow{
+    left: auto !important;
+    right: 135px !important
 }
 table th.rate .fa{
         position:absolute;
@@ -1762,4 +1766,10 @@ table th.rate .fa{
 }
 #action_panel button#restart+.popover > .arrow{
     left: 195px !important;
+}
+.popover.offer-name{
+    padding:0;
+}
+.popover.offer-name .popover-content{
+    padding: 10px !important;
 }
