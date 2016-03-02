@@ -32,7 +32,7 @@ function getData($data) {
             elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>"><i class="ico-clock"></i></button>    
                 <?php if($counter_offer->counter_time): ?>
                 <div class="<? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
-            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;">
+            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border: none;">
                     <?= $counter_offer->counter_time ?>h
                 </div>
             <?php else: ?>

@@ -110,7 +110,7 @@ use modules\user\site\controllers\ProfileController;
                 <section id="user">
                     <img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src="<?php echo $model->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$model->avatar:'/images/avatar/nophoto.png'?>" height="125" width="125" alt="" class="avatar">
                     <div class="name"><?php echo ($model->first_name)?$model->first_name:''?> <?php echo ($model->last_name)?$model->last_name:''?> <?php echo (!$model->first_name && !$model->last_name)?'User':''?></div>
-                    <div class="adres"><i class="ico-location"></i> <?php echo ($model->country_id)?$model->country_title:''?><?php echo ($model->city_title)?', '.$model->city_title:''?><?php echo ($model->zip)?', '.$model->zip:''?></div>
+                    <div class="adres"><i class="ico-location"></i> <?php echo ($model->country_id)?$model->country_title:''?><?php echo ($model->city_title)?', '.$model->city_title:''?></div>
                     <div class="status"><?php echo ($model->status)?$model->status:''?></div>
                 </section>
                 <section id="services">

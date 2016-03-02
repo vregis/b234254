@@ -121,6 +121,7 @@ table tbody tr td .label{
 .table tbody tr td,.table thead tr th,.table tfoot tr th{
     border-right:0 !important;
     border-bottom:0 !important;
+    height: 61px;
 }
 .table tbody tr td:first-child,.table thead tr th:first-child,.table tfoot tr th:first-child{
     border-left:0 !important;
@@ -151,3 +152,6 @@ table tbody tr td .label{
 .dropdown-menu .mCSB_container{
     padding:0 !important;
 }
+/*.table tbody td{
+    height: 61px;
+}*/

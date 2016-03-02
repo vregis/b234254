@@ -4,13 +4,13 @@
 
 var staticTask = null;
 function initTimeParse(){
-    var text = $("#input-time").val();
-    
-    if(text.indexOf('h') == -1){
-       $("#input-time").val($("#input-time").val()+"h");
-    }
-
-    $("#input-time").on('keydown',function(event){
+    // var text = $("#input-time").val();
+    // console.log(text.indexOf('h'));
+    // if(text.indexOf('h') == -1){
+    //    $("#input-time").val($("#input-time").val()+"h");
+    // }
+    console.log($("#input-time").val());
+    $("#input-time").on('keypress',function(event){
        // Allow only backspace and delete
         if ( event.keyCode == 46 || event.keyCode == 8 ) {
             // let it happen, don't do anything
@@ -21,7 +21,7 @@ function initTimeParse(){
                 event.preventDefault(); 
             }   
         }
-        console.log(text);
+        console.log($("#input-time").val());
     }).on('focus',function(){
         text = $("#input-time").val();
         text = text.replace('h','');
@@ -29,8 +29,8 @@ function initTimeParse(){
     }).on('blur',function(){
         text = $("#input-time").val();
         if(text.indexOf('h') == -1){
-            $("#input-time").val($("#input-time").val()+"h");
-            console.log("FUCK YEAH");
+            $("#input-time").val(text+"h");
+            console.log("FUCK YEAH " + text.indexOf('h'));
         }
     });
 }
@@ -232,19 +232,19 @@ function Task(task_user_id, is_my, is_custom) {
                 }else{
                     var title = 'Are you sure you want to cancel the delegated task?';
                 }
-                confirn.confirmation({
+                $('.restrt').confirmation({
                     title: title,
                     placement: "bottom",
                     btnOkClass: "btn btn-success",
                     btnCancelClass: "btn btn-danger",
                     btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
                     onConfirm: function (event) {
-                        var name = confirn.closest('.user-row').find('.field-name').html();
+                        var name = $('.restrt').closest('.user-row').find('.field-name').html();
                         var data = {
                             _csrf: $("meta[name=csrf-token]").attr("content"),
                             command : 'confirn',
-                            delegate_task_id: confirn.attr('data-delegate_task_id'),
-                            status: confirn.attr('data-status')
+                            delegate_task_id: $('.restrt').attr('data-delegate_task_id'),
+                            status: $('.restrt').attr('data-status')
                         };
                         $.ajax({
                             url: '/departments/tool-ajax',
