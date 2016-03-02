@@ -149,28 +149,28 @@ use modules\user\site\controllers\ProfileController;
                     <div class="deps-wrap">
                     	<div class="roww action">
                     		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                     		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                 			<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                 			<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                     		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                     		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                     		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                     		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
                     	</div>
                     	<div class="roww deps">
@@ -227,6 +227,17 @@ use modules\user\site\controllers\ProfileController;
         //     html: true,
         //     trigger:"manual",
         // });
+        $(".deps-wrap .action .item .btn").popover({
+            placement: "top",
+            content : 'Will be available in the next version',
+            html: true,
+            trigger:"manual",
+        }).click(function(){
+            if($(".deps-wrap .action .item .btn").not($(this)).next("div").hasClass('popover')){
+                $(".deps-wrap .action .item .btn").not($(this)).popover("hide");
+            }
+            $(this).popover('toggle');
+        });
         $(".contacts .big .tel, .contacts .big .mail,.contacts .skype").not(".no_hover").popover({
             placement:"top",
             html: true,
@@ -238,12 +249,12 @@ use modules\user\site\controllers\ProfileController;
             $(this).popover('toggle');
         });
 
-        $(".contacts .big a").on('show.bs.popover',function(){
+        $(".contacts .big a,.deps-wrap .action .item .btn").on('show.bs.popover',function(){
             $("body").on("click", function(e){
-                $('.contacts .big a').each(function () {
+                $('.contacts .big a,.deps-wrap .action .item .btn').each(function () {
                     //the 'is' for buttons that trigger popups
                     //the 'has' for icons within a button that triggers a popup
-                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.contacts .big .popover').has(e.target).length === 0) {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.deps-wrap .action .item .btn, .contacts .big .popover').has(e.target).length === 0) {
                         $(this).popover('hide');
                     }
                 });
@@ -305,6 +316,7 @@ use modules\user\site\controllers\ProfileController;
         $('body').mCustomScrollbar({
             theme:"dark"
         });
+
         $(document).on('click', '#send-btn', function(e){
             e.preventDefault();
             var text = $('#comment-area').val();

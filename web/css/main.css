@@ -3089,6 +3089,7 @@ Page Footer
     color: #fff;
     background: none;
     border-bottom:none !important;
+    padding: 0 20px 0 38px;
 }
 .hor-menu .btn-group-justified > .btn-group .btn{
     width:100% !important;
@@ -3846,4 +3847,7 @@ div.ganttview-block .label{
     color: rgba(255, 59, 48, 0.6);
     background: transparent;
     border: 1px solid rgba(255, 59, 48, 0.6);
+}
+.popover.delegation .popover-content {
+    padding: 9px 14px !important;
 }

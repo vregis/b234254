@@ -110,7 +110,7 @@
         height: 45px !important;
     }
     .hor-menu .btn .text{
-        display: inline-block !important;
+        display: block !important;
         font-size: 10px;
     }
     .hor-menu .btn i.fa {
