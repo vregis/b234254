@@ -152,6 +152,7 @@ use modules\user\site\controllers\ProfileController;
                     		<div class="item">
                     			<button data-toggle="popover" class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
+                            <?php endforeach; ?>
                     	</div>
                     	<div class="roww deps">
                     		<a href="javascript:;" class="item background-1">Idea</a>
