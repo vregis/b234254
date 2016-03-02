@@ -1,6 +1,6 @@
 <? if(count($users) > 5): ?>
 <tr>
-    <td colspan="8" style="padding: 0; border: none;">
+    <td colspan="8" style="padding: 0; border: none;height:0">
         <ul class="pagination">
             <li class="disabled">
                 <a class="prev-page">

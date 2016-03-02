@@ -95,11 +95,11 @@ if($start_date != '') {
         <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
             <span id="input-time"><?= $task_user->time ?>h</span>
         <? else : ?>
-            <input id="input-time" value="<?= $task_user->time ?>" type="text">
+            <input id="input-time" value="<?= $task_user->time ?>h" type="text">
         <? endif; ?>
     <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
-            <input id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>" type="text">
+            <input id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>h" type="text">
         <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
             <span id="input-time"><?= $delegate_task->counter_time ?>h</span>
         <? else : ?>
@@ -141,7 +141,7 @@ if($start_date != '') {
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;">Complete</button>
         <? else : ?>
             <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Delegate</button>
-            <button id="restart" class="btn btn-success" style="width:93px;">Restart</button>
+            <button id="restart" style="width:93px;" data-toggle="popover" class="btn btn-danger offer restrt">Restart</button>
         <? endif; ?>
     <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
@@ -164,7 +164,6 @@ if($start_date != '') {
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
         <? else : ?>
             <button id="restart" class="btn btn-danger" style="width:93px;">Restart</button>
-            <button style="width:93px;" class="btn btn-danger confirn confirn-btn offer restrt" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Restart</button>
         <? endif; ?>
     <? endif; ?>
 <? else : ?>
@@ -268,30 +267,6 @@ if($start_date != '') {
                     $('.noselect').bind("cut copy paste",function(e) {
                         e.preventDefault();
                     });
-                        var text = $("#input-time").val();
-    if(!text.indexOf('h')){
-        $("#input-time").val($("#input-time").val()+"h");
-    }
-
-    $("#input-time").on('keydown',function(event){
-       // Allow only backspace and delete
-        if ( event.keyCode == 46 || event.keyCode == 8 ) {
-            // let it happen, don't do anything
-        }
-        else {
-            // Ensure that it is a number and stop the keypress
-            if (event.keyCode < 48 || event.keyCode > 57 ) {
-                event.preventDefault(); 
-            }   
-        }
-    }).on('focus',function(){
-        text = text.replace('h','');
-        $("#input-time").val(text);
-    }).on('blur',function(){
-        if(!text.indexOf('h')){
-            $("#input-time").val(text+"h");
-        }
-    });
                 });
 
                 function clickIE4(){
