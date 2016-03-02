@@ -21,7 +21,7 @@ function getData($data) {
         <tr class="counter-offer-row">
             <td style="width:224px;border-left: 1px solid #d7d7d7 !important;padding-left: 28px;">
                 <img style="margin-right: 5px;"  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>">
-                <?= $counter_offer->name ?>
+                <div <?php if(strlen($counter_offer->name) >28):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 140px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
             </td>
             <td style="width: 149px;">
                 <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>

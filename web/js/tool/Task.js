@@ -234,19 +234,19 @@ function Task(task_user_id, is_my, is_custom) {
                 }else{
                     var title = 'Are you sure you want to cancel the delegated task?';
                 }
-                $('.restrt').confirmation({
+                confirn.confirmation({
                     title: title,
                     placement: "bottom",
                     btnOkClass: "btn btn-success",
                     btnCancelClass: "btn btn-danger",
                     btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
                     onConfirm: function (event) {
-                        var name = $('.restrt').closest('.user-row').find('.field-name').html();
+                        var name = confirn.closest('.user-row').find('.field-name').html();
                         var data = {
                             _csrf: $("meta[name=csrf-token]").attr("content"),
                             command : 'confirn',
-                            delegate_task_id: $('.restrt').attr('data-delegate_task_id'),
-                            status: $('.restrt').attr('data-status')
+                            delegate_task_id: confirn.attr('data-delegate_task_id'),
+                            status: confirn.attr('data-status')
                         };
                         $.ajax({
                             url: '/departments/tool-ajax',
@@ -398,6 +398,12 @@ initTimeParse();
             //     axis:"y",
             //     setHeight:245
             // });
+            $(".counter-offer-row td div[data-toggle='popover']").popover({
+                trigger:"hover",
+                html:true,
+                placement:"top",
+                template:'<div class="popover offer-name" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+            });
             $("#task .collapse").not($(this)).collapse('hide');
             $(".btn[aria-controls='counter']").addClass('active');
             $("#counter .arrow").css({'left':$(".btn[aria-controls='counter']").position().left + 25});

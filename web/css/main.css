@@ -3089,7 +3089,7 @@ Page Footer
     color: #fff;
     background: none;
     border-bottom:none !important;
-    padding: 0 20px 0 38px;
+    /*padding: 0 20px 0 38px;*/
 }
 .hor-menu .btn-group-justified > .btn-group .btn{
     width:100% !important;

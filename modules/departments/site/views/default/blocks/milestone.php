@@ -100,7 +100,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 
                             <?php if($dep->id != 9):?>
                                 <div data-id='<?php echo $dep->id?>' class="btn-group department open btn-idea dep <?php echo $class?> dep-color-<?php echo $dep->id?>">
-                                    <div data-id='<?php echo $dep->id?>' class="btn">
+                                    <div <?php if($ml->id==-1):?>style="padding: 0 20px 0 38px;" <?php endif; ?>data-id='<?php echo $dep->id?>' class="btn">
                                     <?php if($ml->id==-1):?>
                                         <a data-toggle="popover" class="btn btn-empty circle"><i class="ico-delegate"></i></a>
                                     <?php endif; ?>
