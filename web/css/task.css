@@ -1760,6 +1760,6 @@ table th.rate .fa{
     left: auto !important;
     right: 0 !important; 
 }
-#action_panel button#restart > .arrow{
-    left: 200px !important;
+#action_panel button#restart+.popover > .arrow{
+    left: 195px !important;
 }
