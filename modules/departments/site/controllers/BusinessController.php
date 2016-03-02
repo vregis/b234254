@@ -1092,7 +1092,7 @@ class BusinessController extends Controller
     public function actionSharedBusiness($id){
         $this->layout = false;
 
-
+        $departments = Department::find()->where(['is_additional' => 0])->all();
 
 
         $model = UserTool::find()
@@ -1120,7 +1120,15 @@ class BusinessController extends Controller
         $likes = $this->renderPartial('blocks/likes', ['id'=>$id]);
         $idea = $this->renderPartial('blocks/idea', ['id'=>$id]);
 
-        return $this->render('shared_business', ['model' => $model, 'comments' => $comments, 'count'=> $count, 'likes'=>$likes, 'idea' => $idea, 'profile' => $profile]);
+        return $this->render('shared_business', [
+            'model' => $model,
+            'comments' => $comments,
+            'count'=> $count,
+            'likes'=>$likes,
+            'idea' => $idea,
+            'profile' => $profile,
+            'departments' => $departments
+        ]);
     }
 
     public function actionAddComment(){

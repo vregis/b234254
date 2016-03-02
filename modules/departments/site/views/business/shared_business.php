@@ -148,30 +148,11 @@ use modules\user\site\controllers\ProfileController;
                 	 <div class="title" style="margin:25px auto;font-size:24px;">Vacancy</div>
                     <div class="deps-wrap">
                     	<div class="roww action">
+                            <?php foreach($departments as $dep):?>
                     		<div class="item">
                     			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
                     		</div>
-                    		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
-                			<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
-                			<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
-                    		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
-                    		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
-                    		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
-                    		<div class="item">
-                    			<button class="btn btn-primary circle"><i class="ico-add"></i></button>
-                    		</div>
+                            <?php endforeach;?>
                     	</div>
                     	<div class="roww deps">
                     		<a href="javascript:;" class="item background-1">Idea</a>
