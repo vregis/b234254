@@ -42,9 +42,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 <?php foreach($milestones as $ml):?>
 
     <?php $user = \modules\user\models\User::find()->where(['id'=>Yii::$app->user->id])->one();?>
-    <?php if($user->role==6 || $user->role == 10):?>
-        <?php $ml->is_pay = 0;?>
-    <?php endif;?>
+
     <?php
     $response = Yii::$app->controller->sort($ml, false, $userTool, $avatar);
     if($userTool->user_id != Yii::$app->user->id && count($response['tasks']) == 0) {
@@ -52,6 +50,11 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
         continue;
     }
     ?>
+    <?php if(count($response['tasks']) > 0):?>
+        <?php $ml->is_pay = 0;?>
+    <?php else:?>
+        <?php $ml->is_pay = 1;?>
+    <?php endif; ?>
     <?php $jj++; ?>
 
     <?php $table = $response['table'];?>

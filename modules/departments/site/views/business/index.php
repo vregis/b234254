@@ -174,7 +174,13 @@ $this->registerJs($msgJs);
                 
                 <? require __DIR__.'/blocks/find_job.php' ?>
                 <div class="text-center btn-div" style="padding-top:30px;">
+                    <?php $do = \modules\departments\models\UserDo::find()->where(['user_id' => Yii::$app->user->id, 'status_sell' => 1])->all();?>
+                    <?php if(count($do) == 0):?>
+                        <p>Fill in the information about your skills before look for a job</p>
+                        <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>
+                    <?php else:?>
                     <a href="#delegated#open" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search <i style="font-size: 20px;position: absolute;top: 14px;margin-left: 10px;" class="fa fa-angle-down"></i></a>
+                    <?php endif;?>
                 </div>
                 
             </div>
