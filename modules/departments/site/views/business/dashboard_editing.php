@@ -15,7 +15,7 @@ use yii\helpers\Url;
     <div class="well" style="margin: 60px auto; max-width: 1000px">
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#idea" aria-controls="my" role="tab" data-toggle="tab">Idea</a></li>
-            <li role="presentation"><a id="btn-statistic" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Will be available in the next version">Statistic</a></li>
+            <li role="presentation" class="disabled"><a id="btn-statistic" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Will be available in the next version">Statistic</a></li>
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="active" id="idea">
