@@ -61,6 +61,7 @@ use modules\user\site\controllers\ProfileController;
 
 
     <script type="text/javascript" src="/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+    <script type="text/javascript" src="/web/metronic/theme/assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.js"></script>
 
 
 
@@ -78,7 +79,8 @@ use modules\user\site\controllers\ProfileController;
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/shared_business.css">
 
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="/favicon.ico"/>
     <sctipt src="/js/comments.js"></sctipt>
@@ -104,15 +106,43 @@ use modules\user\site\controllers\ProfileController;
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
                 <div class="site-name">My business without busyness</div>
+                <button id="btn-save" class="btn btn-primary btn-empty circle" style="display:none;"><i class="fa fa-floppy-o"></i></button>
+                <button id="btn-edit" class="btn btn-primary btn-empty circle"><i class="ico-edit"></i></button>
             </div>
             <div class="page-content">
             	<section id="about">
-            		<div class="title"><?php echo $model->idea_name?></div>
-            		<div class="subtitle"><?php echo $model->industry_name?></div>
+            		<div class="title">
+                        <div class="edit-block">
+                            <div class="value"><?php echo $model->idea_name?></div>
+                            <div class="editor"><input maxlength="150" type="text" id="idea-name" value="<?php echo $model->idea_name?>" class="form-control"></div>
+                        </div>
+                    </div>
+            		<div class="subtitle">
+                        <div class="edit-block">
+                            <div class="value"><?php echo $model->industry_name?></div>
+                            <div class="editor">
+                            <select name="" id="idea-industry" class="selectpicker">
+                                <option value="<?php echo $model->industry_name?>"><?php echo $model->industry_name?></option>
+                                <option value="Bar/Restaurant">Bar/Restaurant</option>
+                                <option value="Animals">Animals</option>
+                            </select>
+                            </div>
+                        </div> 
+                    </div>
             		<table class="text">
             			<tr>
-            				<td style="width:50%;border-right:1px solid rgba(90, 90, 90, 0.6);vertical-align: top;padding-right:40px;"><?php echo $model->idea_description_like?></td>
-            				<td style="width:50%;vertical-align: top;padding-left:40px;"><?php echo $model->idea_description_problem?></td>
+            				<td style="width:50%;border-right:1px solid rgba(90, 90, 90, 0.6);vertical-align: top;padding-right:20px;">
+                                <div class="edit-block">
+                                    <div class="value"><?php echo $model->idea_description_like?></div>
+                                    <div class="editor"><textarea maxlength="300" name="" id="idea-desc_like" cols="30" rows="10" class="form-control"><?php echo $model->idea_description_like?></textarea></div>
+                                </div>
+                            </td>
+            				<td style="width:50%;vertical-align: top;padding-left:20px;">
+                                <div class="edit-block">
+                                    <div class="value"><?php echo $model->idea_description_problem?></div>
+                                    <div class="editor"><textarea maxlength="300" name="" id="idea-desc_problem" cols="30" rows="10" class="form-control"><?php echo $model->idea_description_problem?></textarea></div>
+                                </div>
+                            </td>
             			</tr>
             		</table>
             		<div data-tool-id = '<?php echo $model->id?>' class="step">
@@ -129,9 +159,24 @@ use modules\user\site\controllers\ProfileController;
 		            			<td><div class="digit">3</div></td>
 		            		</tr>
 		            		<tr>
-		            			<td><div class="desc"><?php echo $model->benefit_first?></div></td>
-		            			<td><div class="desc"><?php echo $model->benefit_second?></div></td>
-								<td><div class="desc"><?php echo $model->benefit_third?></div></td>
+		            			<td><div class="desc">
+                                    <div class="edit-block">
+                                        <div class="value"><?php echo $model->benefit_first?></div>
+                                        <div class="editor"><textarea maxlength="200" id="benefit-first" class="form-control"><?php echo $model->benefit_first?></textarea></div>
+                                    </div>
+                                </div></td>
+		            			<td><div class="desc">
+                                    <div class="edit-block">
+                                        <div class="value"><?php echo $model->benefit_second?></div>
+                                        <div class="editor"><textarea maxlength="200" id="benefit-second" class="form-control"><?php echo $model->benefit_second?></textarea></div>
+                                    </div>               
+                                </div></td>
+								<td><div class="desc">
+                                    <div class="edit-block">
+                                        <div class="value"><?php echo $model->benefit_third?></div>
+                                        <div class="editor"><textarea maxlength="200" id="benefit-third" class="form-control"><?php echo $model->benefit_third?></textarea></div>
+                                    </div>                        
+                                </div></td>
 		            		</tr>
 		            		<tr class="like-block" data-user-tool-id = '<?php echo $model->id ?>'>
 		            			<?php echo $likes?>
@@ -197,24 +242,98 @@ use modules\user\site\controllers\ProfileController;
                             <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
                         </div>
                     </div>
-                    <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>
+                    <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span> <button style="display:inline-block;width:100px;background: transparent;position: absolute;top: 21px;right: 0;" class="btn btn-primary">Close</button>
                 </div>
             </div>
         </div>
     </div>
 <script>
     $(document).ready(function(){
+        $('body').mCustomScrollbar({
+            theme:"dark"
+        });
+        $("#benefits .content table tr td .left-circle").hover(function(){
+            $(this).find('i').removeClass('ico-dislike').addClass('ico-dislike1');
+        },function(){
+            $(this).find('i').removeClass('ico-dislike1').addClass('ico-dislike');
+        });
+        $("#benefits .content table tr td .right-circle").hover(function(){
+            $(this).find('i').removeClass('ico-like').addClass('ico-like1');
+        },function(){
+            $(this).find('i').removeClass('ico-like1').addClass('ico-like');
+        });
+        $("#btn-edit").click(function(){
+            $(".edit-block > .value").fadeOut(500);
+            setTimeout(function(){$(".editor").fadeIn(500);},500);
+            $(this).fadeOut(500);
+            setTimeout(function(){$("#btn-save").fadeIn(500);},500);
+            $('[maxlength]').maxlength({
+                alwaysShow: true,
+                appendToParent: true,
+                limitReachedClass: "label label-danger",
+            });
+        });
+        $("#btn-save").click(function(){
+            $.each($(".edit-block"),function(){
+                $(this).find('.value').html($(this).find('.form-control').val());
+                $(this).find('.value').html($(this).find('select').val());
+            });
+            $(".editor").fadeOut(500);
+            setTimeout(function(){$(".edit-block > .value").fadeIn(500);},500);
+            $(this).fadeOut(500);
+            setTimeout(function(){$("#btn-edit").fadeIn(500);},500);
+        });
+        $(document).on('click', '#send-btn', function(e){
+            e.preventDefault();
+            var text = $('#comment-area').val();
+            var data = {
+                _csrf: $("meta[name=csrf-token]").attr("content"),
+                text: text,
+                user_id: <?php echo $_GET['id']?>
+            }
+            if(text == ''){
+                alert('Cannot be empty'); //Stylize alert
+                return false;
+            }else{
+                $.ajax({
+                    url:'/departments/business/add-comment',
+                    type: 'post',
+                    dataType: 'json',
+                    data: data,
+                    success: function(response){
+                       $('.dinamic_comments').html(response.html);
+                        $('.count').text(response.count);
+                        $('#comment-area').val('');
+                    }
+                })
+            }
+        });
+
+        $(".selectpicker").selectpicker({});
+        setTimeout(function(){
+            // $.each($('.dropdown-menu.inner'),function(){
+            //     var els = $(this).find('li');
+            //     console.log(els.length);
+            //     if(els.length > 8){
+            //         $(this).mCustomScrollbar({
+            //             setHeight: 252,
+            //             theme:"dark",
+            //             scrollbarPosition:"outside"
+            //         });  
+            //     }else{
+            //         $(this).mCustomScrollbar({
+            //             theme:"dark",
+            //             scrollbarPosition:"outside"
+            //         });  
+            //     }
+            // });
+        },400);
         $(".contacts .no_hover").popover({
             placement:"top",
             html: true,
             trigger:"click",
             content:"User has hidden this information"
         });
-        // $(".contacts .skype").not(".no_hover").popover({
-        //     placement:"top",
-        //     html: true,
-        //     trigger:"manual",
-        // });
         $(".deps-wrap .action .item .btn, .join-us").popover({
             placement: "top",
             content : 'Will be available in the next version',
@@ -296,43 +415,6 @@ use modules\user\site\controllers\ProfileController;
            flag=0;
        }
    });
-
-</script>
-
-<script>
-    $(function(){
-        $('body').mCustomScrollbar({
-            theme:"dark"
-        });
-
-        $(document).on('click', '#send-btn', function(e){
-            e.preventDefault();
-            var text = $('#comment-area').val();
-            var data = {
-                _csrf: $("meta[name=csrf-token]").attr("content"),
-                text: text,
-                user_id: <?php echo $_GET['id']?>
-            }
-            if(text == ''){
-                alert('Cannot be empty'); //Stylize alert
-                return false;
-            }else{
-                $.ajax({
-                    url:'/departments/business/add-comment',
-                    type: 'post',
-                    dataType: 'json',
-                    data: data,
-                    success: function(response){
-                       $('.dinamic_comments').html(response.html);
-                        $('.count').text(response.count);
-                        $('#comment-area').val('');
-                    }
-                })
-            }
-        })
-
-
-    })
 
     $(document).on('click', '.add-thumb', function(){
         var tool = $(this).closest('.like-block').attr('data-user-tool-id');
