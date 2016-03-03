@@ -145,10 +145,10 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
         </div>
         <div id="collapseOne<?php echo $key?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne2">
             <div class="panel-body">
-                <?= $milestones_users ?>
-                <div class="wrapper list" style="position: absolute; display: none;">
-                    <div class="">
-                        <table id="datatable_ajax" class="table table-bordered table-condensed flip-content" style="display:none" >
+                
+                <div class="wrapper list" style="position: absolute; width:100%;height: 100%;min-height: 100%;">
+                    <div class="" style="height: 100%;min-height: 100%;">
+                        <table id="datatable_ajax" class="table table-bordered table-condensed flip-content" style="display:none;height: 100%;min-height: 100%;" >
                             <thead>
                             <tr role="row" class="heading no-sort">
                                 <th class="no-sort" style="width:300px;">
@@ -186,7 +186,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                 <div class="wrapper gant ganttable<?php echo $key?>">
                     <?php echo $gant?>
                 </div>
-
+                <?= $milestones_users ?>
             </div>
         </div>
     </div>
@@ -199,21 +199,25 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
         if(changeCheckbox<?php echo $key?>){
             changeCheckbox<?php echo $key?>.onchange = function() {
                 console.log(changeCheckbox<?php echo $key?>.checked);
-                if(changeCheckbox<?php echo $key?>.checked == true){
+               if(changeCheckbox<?php echo $key?>.checked == true){
                     var panel = $(changeCheckbox<?php echo $key?>).closest('.panel.panel-default');
-                    panel.find(".wrapper.gant").css('position','static');
-                    panel.find(".wrapper.list").css('position','absolute');
-                    panel.find(".wrapper.list").fadeOut(500);
-                    panel.find(".wrapper.gant").fadeIn(500);
+                    
+                    panel.find(".wrapper.list").animate({'opacity':0},250);
+                    setTimeout(function(){panel.find(".wrapper.gant").animate({'opacity':1},250);},250);
+                    // panel.find(".wrapper.list").fadeOut(500);
+                    // panel.find(".wrapper.gant").fadeIn(500);
                     panel.removeClass('list');
                     panel.addClass('gant');
+                    console.log("asdas");   
+
                 }else{
                     var panel = $(changeCheckbox<?php echo $key?>).closest('.panel.panel-default');
-                    panel.find(".wrapper.list").css('position','static');
-                    panel.find(".wrapper.gant").css('position','absolute');
-                    panel.find(".wrapper.gant").css('bottom',0);
-                    panel.find(".wrapper.gant").fadeOut(500);
-                    panel.find(".wrapper.list").fadeIn(500);
+                    panel.find(".wrapper.gant").animate({'opacity':0},250);
+                    setTimeout(function(){panel.find(".wrapper.list").animate({'opacity':1},250);},250);
+                    
+                    // panel.find(".wrapper.gant").css('bottom',0);
+                    // panel.find(".wrapper.gant").fadeOut(500);
+                    // panel.find(".wrapper.list").fadeIn(500);
                     panel.find('.flip-content').show();
                     panel.removeClass('gant');
                     panel.addClass('list');
