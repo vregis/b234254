@@ -13,6 +13,7 @@ use modules\departments\models\Idea;
 use modules\departments\models\Industry;
 use modules\tasks\models\Task;
 use modules\tasks\models\UserTool;
+use modules\user\models\User;
 use Yii;
 use yii\helpers\ArrayHelper;
 
@@ -32,6 +33,10 @@ class TaskIdea extends TaskIdeaMilestone
             $tool->status = UserTool::STATUS_IDEA_FILLED;
             $tool->save(false);
             Yii::$app->session['tool_id'] = $tool->id;
+
+            $user = User::find()->where(['id' => Yii::$app->user->id])->one();
+            $user->user_type = 0;
+            $user->save();
 
             $idea->user_tool_id = $tool->id;
             $idea->create_date = ''.date('Y-m-d');

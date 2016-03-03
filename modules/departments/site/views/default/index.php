@@ -96,7 +96,6 @@ $this->registerJs($msgJs);
         content : 'Will be available in the next version'
     });
     $(document).on('click', '.on', function(e){
-        
         var target = $(e.target);
         console.log(target);
         if (target.is("li"))

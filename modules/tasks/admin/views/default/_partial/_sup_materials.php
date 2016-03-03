@@ -157,8 +157,11 @@ $this->registerJs($initJs);
                 <table class="table table-striped table-hover table-bordered" id="link_editable">
                     <thead>
                     <tr>
-                        <th class="no-sort" width="80%">
+                        <th class="no-sort" width="40%">
                             Links
+                        </th>
+                        <th class="no-sort" width="40%">
+                            Name
                         </th>
                         <th class="no-sort">
                             Action
@@ -168,8 +171,11 @@ $this->registerJs($initJs);
                     <tbody>
                     <? foreach($task_links as $task_link) : ?>
                         <tr>
-                            <td class="editable-field" width="80%">
+                            <td class="editable-field" width="30%">
                                 <a href="<?= $task_link->name ?>" onclick="return !window.open(this.href)"><?= $task_link->name ?></a>
+                            </td>
+                            <td class="editable-field" width="30%">
+                                <a href="<?= $task_link->desc ?>" onclick="return !window.open(this.href)"><?= $task_link->desc ?></a>
                             </td>
                             <td>
                                 <a class="btn default btn-xs purple edit"><i class="fa fa-edit"></i> Edit </a><a class="btn btn-danger btn-xs black delete"><i class="fa fa-trash-o"></i> Delete </a>
@@ -197,10 +203,10 @@ $this->registerJs($initJs);
                     </tr>
                     </thead>
                     <tbody>
-                    <? foreach($task_links as $task_link) : ?>
+                    <? foreach($task_notes as $task_note) : ?>
                         <tr>
                             <td class="editable-field" width="80%">
-                                <a href="<?= $task_link->name ?>"><?= $task_link->name ?></a>
+                                <a href="<?= $task_note->name ?>"><?= $task_note->name ?></a>
                             </td>
                             <td>
                                 <a class="btn default btn-xs purple edit"><i class="fa fa-edit"></i> Edit </a><a class="btn btn-danger btn-xs black delete"><i class="fa fa-trash-o"></i> Delete </a>

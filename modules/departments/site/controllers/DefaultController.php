@@ -518,6 +518,8 @@ class DefaultController extends Controller
             $delegate_task = DelegateTask::getCurrentDelegateTask($task_user->id, $is_my);
         }
 
+
+
         $noteController = new NoteController('note', Yii::$app->getModule('tasks'));
 
         $taskUserNotes = null;

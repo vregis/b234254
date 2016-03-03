@@ -94,6 +94,10 @@ class DelegateTask extends \yii\db\ActiveRecord
         }
         return $delegate_task;
     }
+
+
+
+
     public static function getCurrentDelegateTasks($task_user_id, $is_my = true) {
 
         $delegate_tasks = DelegateTask::find()->select('*,delegate_task.id id,user_profile.avatar delegate_avatar')
