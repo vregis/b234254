@@ -89,7 +89,7 @@ if($start_date != '') {
 </div>
 <div class="item time">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
-        <i class="ico-clock"></i>
+        <i class="ico-clock1"></i>
     </button>
     <? if($is_my) : ?>
         <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>

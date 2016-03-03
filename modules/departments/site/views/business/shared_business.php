@@ -242,7 +242,7 @@ use modules\user\site\controllers\ProfileController;
                             <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
                         </div>
                     </div>
-                    <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span> <button style="display:inline-block;width:100px;background: transparent;position: absolute;top: 21px;right: 0;" class="btn btn-primary">Close</button>
+                    <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span> <a style="display:inline-block;width:100px;background: transparent;position: absolute;top: 21px;right: 0;" class="btn btn-primary" href="/departments/business">Close</a>
                 </div>
             </div>
         </div>
