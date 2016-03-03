@@ -3125,6 +3125,7 @@ Page Footer
     border: none !important;
     z-index: 9;
     box-shadow: none !important;
+    z-index: 99999999;
 }
 .hor-menu .btn:last-child{
     border-right: 1px solid #d3d3d3 !important;
@@ -3509,6 +3510,7 @@ Page Footer
 }
 .milestones .panel-body{
     padding: 0;
+    position:relative;
 }
 div.ganttview-slide-container{
     border-top:none;
@@ -3528,6 +3530,8 @@ div.ganttview-slide-container{
 }
 .panel-collapse .milestones-users{
     position: absolute;
+    top:0;
+    left: 0;
 }
 .milestones-users > img{
     display: inline-block;

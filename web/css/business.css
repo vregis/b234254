@@ -155,3 +155,8 @@ table tbody tr td .label{
 /*.table tbody td{
     height: 61px;
 }*/
+.popover.tname{
+    min-width:auto !important;
+    width:auto !important;
+    max-width:250px !important;
+}

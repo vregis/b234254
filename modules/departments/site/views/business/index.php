@@ -304,10 +304,11 @@ $(document).ready(function () {
     });
 
     $(document).ready(function () {
-            $("table tr td a.name").popover({
-                container:$("body"),
-                trigger:"hover"
-            });
+        $("table tr td a.name").popover({
+            container:$("body"),
+            trigger:"hover",
+            template:'<div class="popover tname" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+        });
         $(".page-content-wrapper").mCustomScrollbar("destroy");
         $('.page-content-wrapper').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),
@@ -321,7 +322,8 @@ $(document).ready(function () {
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").on('show.bs.tab',function(){
             $("table tr td a.name").popover({
                 container:$("body"),
-                trigger:"hover"
+                trigger:"hover",
+                template:'<div class="popover tname" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
             });
             window.location.hash = $(this).attr('href');
             $(".page-content-wrapper").mCustomScrollbar("destroy");
