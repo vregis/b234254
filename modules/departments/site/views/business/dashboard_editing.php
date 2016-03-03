@@ -3,14 +3,13 @@ use yii\helpers\Url;
 ?>
 <?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
 <?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
-<?php $user = \modules\user\models\User::find()->where(['id'=>Yii::$app->user->id])->one();?>
-<?php $tool2 = \modules\tasks\models\UserTool::find()->where(['user_id' => Yii::$app->user->id])->all();?>
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>\
 <?php if($user):?>
-    <?php if($user->user_type == 0 && count($tool2) < 3):?>
-<div id="side_road">
-    <?php require_once Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
-</div>
-        <?php endif; ?>
+    <?php if($user->user_type == 0 && $user->is_new == 0):?>
+        <div id="side_road">
+            <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
+        </div>
+    <?php endif;?>
 <?php endif;?>
 <div id="dashboard-editing" class="col-md-12" data-tool-id="<?= $tool->id ?>">
     <div class="well" style="margin: 60px auto; max-width: 1000px">
@@ -69,8 +68,8 @@ use yii\helpers\Url;
                     </div>
                 </div>
                 <div class="button-panel" style="overflow: hidden">
-                    <a style="margin:15px auto 0;" target="_blank" href="<?= Url::toRoute(['/departments/business/shared-business?id='.$tool->id.'']) ?>" class="btn btn-primary btn-lg pull-left">Share</a>
-                    <a style="margin:15px auto 0;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right">Close</a>
+                    <a style="margin:15px auto 0;" target="_blank" href="<?= Url::toRoute(['/departments/business/shared-business?id='.$tool->id.'']) ?>" class="btn btn-primary btn-lg pull-left fix_is_new">Share</a>
+                    <a style="margin:15px auto 0;" href="<?= Url::toRoute(['/departments/business']) ?>" class="btn btn-primary btn-lg pull-right fix_is_new">Close</a>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="statistic">
@@ -334,4 +333,13 @@ $(document).ready(function(){
         });
         $(this).removeClass('active');
     });
+
+    $('.fix_is_new').click(function(){
+        $.ajax({
+            'url': '/departments/fix-is-new',
+            success: function(){
+
+            }
+        })
+    })
 </script>

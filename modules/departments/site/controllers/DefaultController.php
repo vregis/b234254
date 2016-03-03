@@ -77,7 +77,8 @@ class DefaultController extends Controller
                             'get-count-by-business',
                             'team',
                             'team-steve',
-                            'get-task'
+                            'get-task',
+                            'fix-is-new'
                         ],
                         'roles' => ['@'],
 
@@ -947,4 +948,13 @@ class DefaultController extends Controller
     public function actionTeamSteve(){
         return $this->render('team-steve');
     }
+
+    public function actionFixIsNew(){
+        $user = User::find()->where(['id' => Yii::$app->user->id])->one();
+        if($user){
+            $user->is_new = 1;
+            $user->save();
+        }
+    }
+
 }

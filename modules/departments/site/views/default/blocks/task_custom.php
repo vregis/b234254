@@ -42,18 +42,14 @@ if($task->specialization_id > 0) {
 <link rel="stylesheet" type="text/css" href="/css/task.css">
 <link rel="stylesheet" type="text/css" href="/css/task-custom.css">
 <?php $tool = \modules\tasks\models\UserTool::find()->where(['user_id' => Yii::$app->user->id])->all();?>
-<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
-<?php if(isset($_GET['first']) || count($tool) < 3):?>
-    <?php if($_SERVER['REQUEST_URI'] != '/departments/task?id=37'):?>
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>\
     <?php if($user):?>
-        <?php if($user->user_type == 0):?>
+        <?php if($user->user_type == 0 && $user->is_new == 0):?>
             <div id="side_road">
                 <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
             </div>
         <?php endif;?>
-            <?php endif;?>
-    <?php endif;?>
-<?php endif;?>
+        <?php endif;?>
 <div class="task task-custom well well-sm" style="margin:30px auto;max-width:1024px;">
     <div class="hidden-task-id" style="display:none"><?php echo $task->id?></div>
     <div class="row">
