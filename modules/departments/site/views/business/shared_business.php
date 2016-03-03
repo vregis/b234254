@@ -252,12 +252,12 @@ use modules\user\site\controllers\ProfileController;
         $('body').mCustomScrollbar({
             theme:"dark"
         });
-        $("#benefits .content table tr td .left-circle").hover(function(){
+        $("#benefits .content table tr td .btn.left-circle").hover(function(){
             $(this).find('i').removeClass('ico-dislike').addClass('ico-dislike1');
         },function(){
             $(this).find('i').removeClass('ico-dislike1').addClass('ico-dislike');
         });
-        $("#benefits .content table tr td .right-circle").hover(function(){
+        $("#benefits .content table tr td .btn.right-circle").hover(function(){
             $(this).find('i').removeClass('ico-like').addClass('ico-like1');
         },function(){
             $(this).find('i').removeClass('ico-like1').addClass('ico-like');
