@@ -12,7 +12,7 @@
                     <a href="" onclick="return false" class="btn btn-primary <?php echo (!$can)?'add-thumb':(($can->like ==1)?'hover':'')?> left-circle static"><i class="ico-dislike"></i></a>
                     <a href="" onclick="return false" class="btn btn-primary <?php echo (!$can)?'add-thumb':(($can->like ==1)?'hover':'')?> right-circle like static"><i class="ico-like"></i></a>
                     <br>
-                    <div class="text-right" style="display: inline-block;width: 49%;font-size: 14px;"><?php echo count($likes)?></div>
+                    <div class="text-center" style="display: inline-block;width: 49%;font-size: 14px;"><?php echo count($likes)?></div>
                     <!--<div class="text-left" style="display: inline-block;width: 49%;font-size: 14px;"><?php //echo count($likes)?></div>-->
                     
                     
