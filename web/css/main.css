@@ -3657,6 +3657,13 @@ div.ganttview-slide-container{
     border-style: solid;
     color: #818588;
 }
+.popover.avatar .btn.disabled,.popover.avatar .btn.disabled:hover{
+    cursor: not-allowed !important;
+    pointer-events: auto !important;
+    background: #fff !important;
+    color: #818588 !important;
+    border-color: #818588 !important;
+}
 .btn:hover,.open > .btn-primary.dropdown-toggle{
     border-color:#fff !important;
     /*box-shadow: inset 0 0 10px 5px #fff !important;*/

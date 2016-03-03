@@ -8,7 +8,7 @@
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.</p><div class="clearfix"></div> <a target="_blank" href="/user/social/shared-profile?id=<?php echo $user->uid?>" class="btn btn-primary pull-left">My profile</a>
-        <?php echo ($tool)?'<a target="_blank" href="/departments/business/shared-business?id='.$user->tool.'" class="btn btn-primary pull-right">My business</a>':'<a href="#" class="btn btn-primary pull-right">My business</a>'?> <div class="clearfix"></div>' class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></td>
+        <?php echo ($tool)?'<a target="_blank" href="/departments/business/shared-business?id='.$user->tool.'" class="btn btn-primary pull-right">My business</a>':'<a href="#" class="btn btn-primary pull-right static disabled">My business</a>'?> <div class="clearfix"></div>' class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></td>
         <td width="290" style="text-align:left;" class="name">
             <div data-toggle="popover" data-placement="bottom" <?php if(strlen($user->task_name) >30):?>data-content="<?= $user->task_name ?>"<?php endif;?> class="pull-left" style="width: 240px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;"><?= $user->task_name ?>
             </div>
