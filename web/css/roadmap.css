@@ -139,6 +139,7 @@
 #side_road .popover{
 	z-index: 999;
 	min-width: 274px;
+    min-height:208px;
     padding: 15px 30px 30px;
     text-align: justify;
     left:50px !important;
@@ -181,13 +182,16 @@
     top: 189px !important;
 }
 #side_road .item-4.popover .arrow{
-    top: 51px !important;
+    top: auto !important;
+    bottom: 180px;
 }
 #side_road .item-5.popover .arrow{
-    top: 119px !important;
+    top: auto !important;
+    bottom: 110px;
 }
 #side_road .item-6.popover .arrow{
-    top: 189px !important;
+    top: auto !important;
+    bottom: 40px;
 }
 #side_road .item-2.popover.completed .arrow{
     top: 121px !important;
@@ -196,11 +200,14 @@
     top: 189px !important;
 }
 #side_road .item-4.popover.completed .arrow{
-    top: 93px !important;
+    top: auto !important;
+    bottom: 180px;
 }
 #side_road .item-5.popover.completed .arrow{
-    top: 163px !important;
+    top: auto !important;
+    bottom: 110px;
 }
 #side_road .item-6.popover.completed .arrow{
-    top: 202px !important;
+    top: auto !important;
+    bottom: 40px;
 }

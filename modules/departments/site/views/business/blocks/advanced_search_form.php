@@ -15,8 +15,9 @@
         <div class="col-sm-6">
             <label for="">Level</label> <br>
             <select id="select-country" class="form-control selectpicker country">
+                <option value="0"></option>
                 <?php foreach($levellist as $c):?>
-                    <option <?php //echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->name?></option>
+                    <option <?php echo $c->id == $profile->country_id?'selected':''?> value="<?php echo $c->id?>"><?php echo $c->name?></option>
                 <?php endforeach; ?>
             </select>
         </div>
@@ -39,6 +40,7 @@
         <div class="col-sm-6">
             <label for="">Department</label> <br>
             <select id="select-department" class="form-control selectpicker country">
+            <option value="0"></option>
                 <?php foreach($departments as $dep_id => $dep_name):?>
                     <option value="<?php echo $dep_id?>"><?php echo $dep_name?></option>
                 <?php endforeach; ?>
