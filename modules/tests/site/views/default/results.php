@@ -27,6 +27,7 @@ $this->title = 'Your role in business';
                        $progressWidth = 35;
                    } 
             ?>
+                <?php //$test_result_inform[$i]['user_result']['points']; - это число поинтов?>
             <?php if($i == 0):?>
 
                     <?php $ud = new \modules\departments\models\UserDo();?>

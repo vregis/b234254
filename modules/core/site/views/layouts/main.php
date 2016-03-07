@@ -269,6 +269,22 @@ $this->beginPage();
             </div>
             <div class="modal-body">
                 <div class="form-group">
+                    <label>First name</label>
+                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control first_name">
+                </div>
+                <div class="form-group">
+                    <label>Last name</label>
+                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control last_name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control email">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control phone">
+                </div>
+                <div class="form-group">
                     <label>Theme</label>
                     <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control support_theme">
                 </div>
@@ -597,6 +613,10 @@ $this->beginPage();
 
         var theme = $('.support_theme').val();
         var desc = $('.support_description').val();
+        var first_name = $('.first_name').val();
+        var last_name = $('.last_name').val();
+        var phone = $('.phone').val();
+        var email = $('.email').val();
 
         App.blockUI({
             target: '.modal-content',
@@ -610,7 +630,7 @@ $this->beginPage();
         $.ajax({
             url: '/core/supportform',
             method: 'post',
-            data: {theme:theme, desc:desc},
+            data: {theme:theme, desc:desc, first_name:first_name, last_name:last_name, phone:phone, email:email},
             dataType: 'json',
             success: function(response){
                 if(response.error == true){

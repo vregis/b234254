@@ -524,12 +524,23 @@ HTML;
     }
 
     public function actionSupportform(){
+
+        $msg = '';
+
+        $msg .= '
+        <p>First Name: '.$_POST["first_name"].'</p>
+        <p>Last Name: '.$_POST["last_name"].'</p>
+        <p>Email: '.$_POST["email"].'</p>
+        <p>Phone: '.$_POST["phone"].'</p>
+        <p>Description: '.$_POST["desc"].'</p>
+        ';
+
         $response = [];
         Yii::$app->mailer->compose()
             ->setFrom(['support@bigsbusiness.com' => 'Bigsbusiness'])
             ->setTo('countent@bsb.com')
             ->setSubject(Yii::t('mail', $_POST['theme']))
-            ->setHtmlBody($_POST['desc'])
+            ->setHtmlBody($msg)
             ->send();
         $response['error'] = false;
         die(json_encode($response));
