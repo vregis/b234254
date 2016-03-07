@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
 #contribute-modal .arrow{
 	position: absolute;
     display: block;
@@ -13,10 +14,10 @@
     border-top-color: #f5f5f5;
 }
 #contribute-modal .arrow.one{
-	left:155px;
+	left:176px;
 }
 #contribute-modal .arrow.two{
-	right:155px;
+	right:170px;
 }
 #contribute-modal .modal-content{
 	border-radius: 10px;
@@ -41,4 +42,92 @@
 	font-weight:bold;
 	font-size:20px;
 	color:#5a5a5a;
+}
+#contribute-modal .top{
+	text-align:center;
+	padding:15px 0;
+	color:rgba(90,90,90,0.7);
+}
+#contribute-modal .top .title{
+	font-size:16px;
+	text-transform: uppercase;
+	font-weight:700;
+	margin:5px 0;
+}
+#contribute-modal .top .subtitle{
+	font-weight:300;
+	font-size:16px;
+}
+#contribute-modal .top .icon{
+	width:60px;
+	height:60px;
+    line-height: 68px;
+	font-size:30px;
+	margin:0 auto;
+	border-radius:100% !important;
+	border:1px solid rgba(90,90,90,0.7);
+	color:rgba(90,90,90,0.7);
+}
+#contribute-modal .pay{
+	width:85px;
+	margin:20px auto 5px;
+    margin-left: 78px;
+}
+#contribute-modal .content{
+	color:rgba(90,90,90,0.7);
+}
+#contribute-modal .pay .input-group-addon{
+    border: none;
+    font-size: 20px;
+    padding: 7px 8px;
+}
+#contribute-modal .modal-body{
+    padding: 15px 30px 35px;
+}
+#contribute-modal .content ul li{
+	font-size:30px;
+    line-height: 16px;
+	height:62px;
+	color:rgba(90,90,90,0.7);
+	word-break: break-all;
+	padding-right: 36px;
+}
+#contribute-modal .content ul li span{
+	font-size:16px;
+}
+#contribute-modal .content ul{
+	margin:0;
+	padding:0;
+    list-style-position: inside;
+}
+#contribute-modal .md-radio-list{
+	margin:0;
+}
+#contribute-modal .md-radio-list .md-radio{
+	margin-bottom:0;
+	height:60px;
+	font-size: 16px;
+    border-right: 1px solid #d7d7d7;
+}
+#contribute-modal .md-radio-list .md-radio:last-child{
+    height: 42px;
+}
+#contribute-modal .md-radio label > .box{
+    height: 13px !important;
+    border-width: 1px !important;
+    border-color:#d7d7d7 !important;
+    width: 13px !important;
+    top: 3px !important;
+}
+#contribute-modal .md-radio label > .check{
+	background: #2d3135 !important;
+    top: 6px !important;
+    left: 3px !important;
+    height: 7px !important;
+    width: 7px !important;
+}
+#contribute-modal .md-radio label{
+    padding-left: 34px;
+    margin: 0;
+    text-indent: 0;
 }

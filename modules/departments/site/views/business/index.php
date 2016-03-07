@@ -195,19 +195,92 @@ $this->registerJs($msgJs);
     </div>
 </div>
 <div id="contribute-modal" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="title1">During the introductory stage</div>
-        <div class="title2">PAYMENT IS OPTIONAL</div>
-          <div class="arrow one"></div>
-            <div class="arrow two"></div>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="title1">During the introductory stage</div>
+                <div class="title2">PAYMENT IS OPTIONAL</div>
+                <div class="arrow one"></div>
+                <div class="arrow two"></div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row top">
+                        <div class="col-sm-6">
+                            <div class="icon"><i class="ico-recycle"></i></div>
+                            <div class="title">REFUSE</div>
+                            <div class="subtitle">Specify the reason</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="icon" style="font-size: 24px;"><i class="ico-dollar1"></i></div>
+                            <div class="title">CONTRIBUTE</div>
+                            <div class="subtitle">Same functions with additional benefits.</div>
+                            <div class="pay">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="ico-dollar"></i>
+                                    </span>
+                                    <input type="text" class="form-control"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">
+                            <div class="form-group form-md-radios">
+                                <div class="md-radio-list">
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio1" name="radio1" class="md-radiobtn">
+                                        <label for="radio1">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>I don’t care how you guys grow</label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio2" name="radio1" class="md-radiobtn" checked="">
+                                        <label for="radio2">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> I don’t have a few dollars </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio3" name="radio1" class="md-radiobtn">
+                                        <label for="radio3">
+                                            <span></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> I don’t see value in this tool </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio4" name="radio1" class="md-radiobtn">
+                                        <label for="radio4">
+                                            <span></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span> I like to save anywhere I can </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul>
+                                <li><span>Special "Supporter" status</span></li>
+                                <li><span>Exclusive offers and deals</span></li>
+                                <li><span>Claim your username</span></li>
+                                <li><span>Your feedback takes precedence</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="text-center col-sm-6">
+                            <button style="width:100px;" class="btn btn-danger">Refuse</button>
+                        </div>
+                        <div class="text-center col-sm-6">
+                            <button style="width:100px;" class="btn btn-success">Contribute</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <style>
 .popover.delegation{
@@ -258,7 +331,7 @@ $(document).ready(function () {
         template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
         content : 'Will be available in the next version'
     });
-    //$("#contribute-modal").modal();
+    $("#contribute-modal").modal();
     $(".dropmenu1.history1").popover({
         placement:"bottom",
         html:true,
