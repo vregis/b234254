@@ -54,24 +54,23 @@ use yii\widgets\ActiveForm;
     </div>
     <?php $form = ActiveForm::begin() ?>
     <div id="idea" class="col-md-12">
-        <div class="row form-group <?= isset($benefit->errors['first']) ? 'has-error' : '' ?>">
-            <div class="col-sm-12">
-                <input type="text" maxlength="200" class="form-control" placeholder="First benefit (No more than 200 characters)" value="<?= $benefit->first ?>" name="Benefit[first]">
+        <div class="row form-group <?= isset($benefit->errors['first']) || isset($benefit->errors['second']) || isset($benefit->errors['third'])? 'has-error' : '' ?>">
+            <div class="col-sm-4">
+                <div class="digit">1</div>
+                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="First benefit (No more than 200 characters)"  name="Benefit[first]"><?= $benefit->first ?></textarea>
             </div>
-        </div>
-        <div class="row form-group <?= isset($benefit->errors['second']) ? 'has-error' : '' ?>">
-            <div class="col-sm-12">
-                <input type="text" maxlength="200" class="form-control" placeholder="Second benefit (No more than 200 characters)" value="<?= $benefit->second ?>" name="Benefit[second]">
+            <div class="col-sm-4">
+                <div class="digit">2</div>
+                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="Second benefit (No more than 200 characters)"  name="Benefit[second]"><?= $benefit->second ?></textarea>
             </div>
-        </div>
-        <div class="row form-group <?= isset($benefit->errors['third']) ? 'has-error' : '' ?>">
-            <div class="col-sm-12">
-                <input type="text" maxlength="200" class="form-control" placeholder="Third benefit (No more than 200 characters)" value="<?= $benefit->third ?>" name="Benefit[third]">
+            <div class="col-sm-4">
+                <div class="digit">3</div>
+                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="Third benefit (No more than 200 characters)"  name="Benefit[third]"><?= $benefit->third ?></textarea>
             </div>
         </div>
         <div class="row form-group" style="margin-bottom:0;">
             <div class="col-sm-12">
-                <? require __DIR__.'/idea/idea_block.php'; ?>
+                <? //require __DIR__.'/idea/idea_block.php'; ?>
                 <?= Html::submitButton('Continue', [
                     'class' => 'btn btn-success btn-lg',
                     'style' => 'margin:0px auto 0;'
@@ -129,8 +128,14 @@ use yii\widgets\ActiveForm;
     });
 </script>
 <style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
     #side_road .progress{
         height:75%;
+    }
+    .digit{
+        font-size: 45px;
+        font-weight: 100;
+        text-align:center;
     }
 </style>
 

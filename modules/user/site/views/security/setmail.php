@@ -58,7 +58,7 @@ $this->registerJs($msgJs);
         <img src="/images/logo_new.png" alt=""/>
     </a>
     <form method="post" action="/user/security/sendforgotpass">
-        <h3 c>Forgot your password?</h3>
+        <h3>Forgot your password?</h3>
         <div class="desc">
             To recieve your password reset instructions, please enter the address you provided during the registration process
         </div>

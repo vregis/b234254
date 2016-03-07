@@ -1104,6 +1104,12 @@ $('.support_send').on('click', function(){
 
 })
 $(document).ready(function(){
+  $("#info-modal").on('shown.bs.modal',function(){
+    $("#info-modal .modal-dialog").css({'margin-top':$(window).height()/2 - $("#info-modal .modal-dialog").height() / 2});
+  });
+  $("#support").on('shown.bs.modal',function(){
+    $("#support .modal-dialog").css({'margin-top':$(window).height()/2 - $("#support .modal-dialog").height() / 2});
+  });
   if($(".btn-icon.play").length > 0){
     $(".btn-icon.play").venobox({
         // framewidth: '70%',        // default: ''

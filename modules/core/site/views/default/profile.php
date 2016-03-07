@@ -331,7 +331,7 @@ $this->registerJs($msgJs);
                                             <h4 class="panel-title">
                                                 <div class="accordion-toggle collapsed" style="background-color:<?php echo $t['result']['color']?>">
 
-                                                    <div class="do"> <a style="color:<?php echo $t['result']['color']?>" class="do_department check <?php echo $class_do?>" ><i class="ico-check"></i></a>Do</div>
+                                                    <div class="do"> <a style="color:<?php echo $t['result']['color']?>" class="do_department check <?php echo $class_do?>" ><i class="ico-check"></i></a>Do for you business</div>
                                                     <div class="do sell"> <a style="color:<?php echo $t['result']['color']?>" class="sell_department check <?php echo $class_sell?>" data-toggle="collapse" href="#collapse_3_<?php echo $i?>" aria-expanded="true"><i class="ico-check"></i></a>Sell your skills</div>
                                                     <?php $dep = Department::find()->where(['id' => $t['result']['department_id']])->one();?>
                                                     <div class="icon"><i class="ico-<?php echo $dep->icons?>"></i></div>
@@ -460,7 +460,7 @@ $this->registerJs($msgJs);
         <div class="row">
             <div class="col-sm-12">
                 <div class="pull-left">
-                    <a target="_blank" href="/user/social/shared-profile?id=<?php echo Yii::$app->user->id?>" class="btn btn-primary share" style="margin-top: 15px;width:100px;margin-left:200px;">Share</a>
+                    <a target="_blank" href="/user/social/shared-profile?id=<?php echo Yii::$app->user->id?>" class="btn btn-primary share" style="margin-top: 15px;width:100px;margin-left:200px;">Preview</a>
                 </div>
                 <div class="pull-right">
                     <button class="btn btn-success save" style="margin-top: 15px;width:100px;margin-right:200px;">Continue</button>
