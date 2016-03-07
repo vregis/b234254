@@ -144,6 +144,9 @@ $this->beginPage();
                     <a href="/"><img src="/images/logo-default.png" alt="logo" class="logo-default"></a>
                 </div>
                 <!-- END LOGO -->
+                <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+                <?php if($user):?>
+                    <?php if(!isset($_GET['first'])):?>
                 <? if(Yii::$app->controller->module->id == 'tasks' || Yii::$app->controller->module->id ==  'departments' || Yii::$app->controller->module->id ==  'core') : ?>
                 <div class="typeSwitch">
                     <a class="btn disabled off">Life </a>
@@ -206,6 +209,8 @@ $this->beginPage();
                     </ul>
                 </div>
                 <? endif; ?>
+                                    <?php endif;?>
+                <?php endif;?>
                 <!-- END TOP NAVIGATION MENU -->
             </div>
         </div>

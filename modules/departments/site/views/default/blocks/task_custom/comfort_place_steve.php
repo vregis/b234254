@@ -49,5 +49,6 @@
 	}
 	.b-page-checkbox-wrap .md-radio label > .box{
 	    border-color: #26C281 !important;
+	    color: #26C281 !important;
 	}
 </style>

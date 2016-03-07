@@ -66,6 +66,8 @@ $this->title = 'Your role in business';
                                 </div>
                                 <div class="hui2"><?php echo $test_result_inform[$i]['result']->name?></div>
                             </div>
+                            <div class="result-integer">0.0001</div>
+                            <i class="fa fa-angle-up"></i>
                         </div>
                     </div>
                 </div>
@@ -124,6 +126,8 @@ $this->title = 'Your role in business';
                                 </div>
                                 <div class="hui2"><?php echo $test_result_inform[$i]['result']->name?></div>
                             </div>
+                            <div class="result-integer">0.0001</div>
+                            <i class="fa fa-angle-down"></i>
                         </div>
                     </div>
                 </div>
@@ -178,7 +182,10 @@ $this->title = 'Your role in business';
                                 </div>
                                 <div class="hui2"><?php echo $test_result_inform[$i]['result']->name?></div>
                             </div>
+                            <div class="result-integer">0.0001</div>
+                            <i class="fa fa-angle-down"></i>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -228,11 +235,11 @@ $this->title = 'Your role in business';
 </script>
 <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
 <?php if($user):?>
-<?php if($user->user_type == 0):?>
-<div id="side_road">
-    <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
-</div>
-<?php endif;?>
+    <?php if($user->user_type == 0 && isset($_GET['first'])):?>
+        <div id="side_road">
+            <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
+        </div>
+    <?php endif;?>
 <?php endif;?>
 <script>
     $(document).ready(function(){

@@ -120,7 +120,7 @@ class RegistrationForm extends Model
     public function attributeLabels()
     {
         return [
-            'email' => Yii::t('user', 'E-mail'),
+            'email' => Yii::t('user', 'Email'),
             'password' => Yii::t('user', 'Password'),
             'password_repeat' => Yii::t('user', 'Repeat password'),
             'captcha' => Yii::t('user', 'Каптча'),

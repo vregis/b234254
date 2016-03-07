@@ -83,7 +83,8 @@ use modules\core\widgets\Flash;
                 </div>
 
                 <!-- header brand -->
-                <div class="small-login">
+                <?php if(Yii::$app->user->isGuest): ?>
+<!--                 <div class="small-login">
                     <form method="post" class="form-inline" action="/user/security/login-from-main-page" autocomplete="off">
                         <div class="form-group">
                             <div class="input-icon"><i class="ico-mail"></i><input type="text" id="loginform-email" class="form-control placeholder-no-fix" name="LoginForm[email]" placeholder="Email" autocomplete="off"></div>
@@ -93,8 +94,8 @@ use modules\core\widgets\Flash;
                         </div>
                         <button type="submit" class="btn btn-default"><i class="ico-login"></i></button>
                     </form>
-                </div>
-
+                </div> -->
+                <?php endif; ?>
                 <!-- header toggle-->
 
 
