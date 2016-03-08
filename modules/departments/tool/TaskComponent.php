@@ -581,7 +581,12 @@ class TaskComponent extends Component
             $task_user->end = $delegate_task->end;
             $task_user->time = $delegate_task->counter_time;
             $task_user->price = $delegate_task->counter_price;
-            $task_user->rate = intval($task_user->price/$task_user->time);
+            if($task_user->time == 0){
+                $zero = 1;
+            }else{
+                $zero = $task_user->time;
+            }
+            $task_user->rate = intval($task_user->price/$zero);
             $task_user->is_delegate = 1;
             $task_user->save(false);
             $delegate_tasks = DelegateTask::getCurrentDelegateTasks($delegate_task->task_user_id, true);

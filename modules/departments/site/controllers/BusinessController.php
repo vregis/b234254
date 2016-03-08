@@ -452,7 +452,7 @@ class BusinessController extends Controller
             ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id')
             ->where([
                 'delegate_task.delegate_user_id' => Yii::$app->user->id,
-                'delegate_task.status' => DelegateTask::$status_inactive
+                'delegate_task.status' => 1 // проверить все ли ок
             ])->all();
     }
     private function render_user_request($users = null) {
@@ -584,7 +584,7 @@ class BusinessController extends Controller
             ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id')
             ->where([
                 'delegate_task.delegate_user_id' => Yii::$app->user->id,
-                'delegate_task.status' => DelegateTask::$status_inactive,
+                'delegate_task.status' => 1, // проверить все ли ок
                 'specialization.id' => $special_ids
             ])->all();
 

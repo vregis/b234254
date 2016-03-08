@@ -104,7 +104,8 @@ class DefaultController extends CommonController
                             'change-do-department',
                             'change-sell-department',
                             'change-show-department',
-                            'privacy-settings'
+                            'privacy-settings',
+                            'del-specialization'
                         ],
                         'roles' => ['@']
                     ],
@@ -662,6 +663,21 @@ HTML;
             $model->save();
             //$model->save();
         }
+    }
+
+    public function actionDelSpecialization(){
+        $response['error'] = false;
+        if($_POST){
+            $spec = UserSpecialization::find()->where(['id' => $_POST['id']])->one();
+            if($spec){
+                $spec->delete();
+            }else{
+                $response['error'] = true;
+            }
+        }else{
+            $response['error'] = true;
+        }
+        return(json_encode($response));
     }
 
 }

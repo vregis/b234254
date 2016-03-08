@@ -377,13 +377,34 @@ $this->registerJs($msgJs);
                     <h3 style="margin-left:12px;">Industry</h3>
                     <div style="clear:both"></div>
                 </div>
+
                 <div class="industry">
+
+                    <?php $specializations = \modules\user\models\UserSpecialization::find()->where(['user_id' => Yii::$app->user->id])->all(); ?>
+                    <?php if($specializations):?>
+                        <?php foreach($specializations as $sp):?>
+                            <div class="dynamic-block col-md-4">
+                                <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                                    <select class="update form-control selectpicker">
+                                        <option class="start" value="0">Select Industry</option>
+                                        <?php foreach(Specialization::find()->all() as $spec):?>
+                                            <option <?php echo $sp->specialization_id == $spec->id?'selected':''?> value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div data-id = '<?php echo $sp->id?>' class="action_btn btn btn-primary circle del_special"><i class="ico-delete"></i></div>
+                            </div>
+                         <?php endforeach;?>
+
+                    <?php else:?>
+
                     <div class="dynamic-block col-md-4">
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                             <select class="update form-control selectpicker">
                                 <option class="start" value="0">Select Industry</option>
-                                <option value="1">Food | Drinks</option>
-                                <option value="2">Select Industry</option>
+                                <?php foreach(Specialization::find()->all() as $spec):?>
+                                    <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
@@ -392,8 +413,9 @@ $this->registerJs($msgJs);
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                             <select class="update form-control selectpicker">
                                 <option class="start" value="0">Select Industry</option>
-                                <option value="1">Food | Drinks</option>
-                                <option value="2">Select Industry</option>
+                                <?php foreach(Specialization::find()->all() as $spec):?>
+                                    <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
@@ -402,12 +424,14 @@ $this->registerJs($msgJs);
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                             <select class="update form-control selectpicker">
                                 <option class="start" value="0">Select Industry</option>
-                                <option value="1">Food | Drinks</option>
-                                <option value="2">Select Industry</option>
+                                <?php foreach(Specialization::find()->all() as $spec):?>
+                                    <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
                     </div>
+                    <?php endif;?>
                 </div>
             </div>
         </div>
@@ -658,6 +682,22 @@ $this->registerJs($msgJs);
             data: {field:field, value:value},
             success: function(){
 
+            }
+        })
+    })
+
+    $(document).on('click', '.del_special', function(){
+        var id = $(this).attr('data-id');
+        var _this = $(this);
+        $.ajax({
+            url: '/core/del-specialization',
+            type: 'post',
+            data: {id:id},
+            dataType: 'json',
+            success: function(response){
+                if(response.error == false){
+                    _this.closest('.dynamic-block').remove();
+                }
             }
         })
     })
