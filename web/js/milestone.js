@@ -64,6 +64,15 @@ function openTask(id, is_custom){
     task.off();
     task.on('show.bs.modal', function (e) {
         setTimeout(function(){
+            $("#counter").on('show.bs.collapse',function(){
+                console.log("show counter");
+                $("#btn-delegate, #btn-delegate+button.btn-success").addClass('static disabled');
+                $("#btn-delegate+button.btn-success").removeClass('active');
+            }).on('hide.bs.collapse',function(){
+                $("#btn-delegate, #btn-delegate+button.btn-success").removeClass('static disabled');
+                $("#btn-delegate+button.btn-success").addClass('active');
+                console.log("hide counter");
+            });
             $(".advanced-search-btn").on('show.bs.popover',function(){
                 $(".advanced-search-btn").addClass('active');
             }).on('hide.bs.popover',function(){

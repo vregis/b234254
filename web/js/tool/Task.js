@@ -39,6 +39,7 @@ function Task(task_user_id, is_my, is_custom) {
     if(staticTask == null) {
         staticTask = thisTask;
     }
+
     $('input[type="radio"][disabled]').click(function(e){
         e.preventDefault();
     });

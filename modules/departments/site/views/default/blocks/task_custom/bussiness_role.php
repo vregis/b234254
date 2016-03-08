@@ -5,20 +5,20 @@
 	<div class="name text-center" style="margin:15px auto 30px;"><?= $task->description ?></div>
 	<div class="clearfix"></div>
 	<div class="task-body">
-		<a href="<?= Url::toRoute(['/tests/progress']) ?>" class="btn btn-primary btn-lg">Take a test</a>
+		<a href="<?= Url::toRoute(['/tests/progress?first=1']) ?>" class="btn btn-primary btn-lg">Take a test</a>
 	</div>
 </div>
 </div>
 <script>
 	$(document).ready(function(){
 		$(".b-page-checkbox-wrap .md-radio:nth-child(3)").addClass('active');
-		$("#side_road .item-2").popover({
+$("#side_road .item-2").popover({
             placement:"right auto",
             html:true,
             trigger:'hover',
             container:$("#side_road .wrapper"),
-            template:'<div class="popover top-fix" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(282);?>"
+            template:'<div class="popover top-fix item-2" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(282);?>'
         });
         $("#side_road .item-3").popover({
             placement:"right auto",
@@ -26,7 +26,7 @@
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-3" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-4").popover({
             placement:"right auto",
@@ -34,7 +34,7 @@
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-4" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content: "<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?>'
         });
         $("#side_road .item-5").popover({
             placement:"right auto",
@@ -42,7 +42,7 @@
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-5" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(38);?>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(38);?>'
         });
         $("#side_road .item-6").popover({
             placement:"right auto",
@@ -50,7 +50,7 @@
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-6" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(39);?>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(39);?>'
         });
 	});
 </script>
