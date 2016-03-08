@@ -64,10 +64,12 @@ use yii\widgets\ActiveForm;
     <div id="idea" class="col-md-12">
 
         <div class="row form-group">
-            <div class="col-sm-10 <?= isset($idea->errors['name']) ? 'has-error' : '' ?>">
+            <div class="col-sm-12 <?= isset($idea->errors['name']) ? 'has-error' : '' ?>">
                 <input type="text" maxlength="150" placeholder="Idea name (No more than 150 characters)" name="Idea[name]" value="<?= $idea->name ?>" class="form-control">
             </div>
-            <div class="col-sm-2 <?= isset($idea->errors['industry_id']) ? 'has-error' : '' ?>" style="padding-left: 0;">
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-4 col-sm-offset-4 <?= isset($idea->errors['industry_id']) ? 'has-error' : '' ?>" style="padding-left: 0;">
                 <select class="form-control selectpicker" name="Idea[industry_id]">
                     <option value="">Select industry</option>
                     <?php foreach($industries as $industrie):?>
@@ -76,19 +78,17 @@ use yii\widgets\ActiveForm;
                 </select>
             </div>
         </div>
-        <div class="row form-group <?= isset($idea->errors['description_like']) ? 'has-error' : '' ?>">
-            <div class="col-sm-12">
-                <textarea style="height:75px;resize:none;" maxlength="300" name="Idea[description_like]" placeholder="Small description of your idea (No more than 300 characters)" class="form-control"><?= $idea->description_like ?></textarea>
+        <div class="row form-group <?= isset($idea->errors['description_like']) || isset($idea->errors['description_problem']) ? 'has-error' : '' ?>">
+            <div class="col-sm-6">
+                <textarea style="height:150px;resize:none;" maxlength="300" name="Idea[description_like]" placeholder="Small description of your idea (No more than 300 characters)" class="form-control"><?= $idea->description_like ?></textarea>
             </div>
-        </div>
-        <div class="row form-group <?= isset($idea->errors['description_problem']) ? 'has-error' : '' ?>">
-            <div class="col-sm-12">
-                <textarea style="height:75px;resize:none;" maxlength="300" placeholder="What problem is solving? (No more than 300 characters)" name="Idea[description_problem]" class="form-control"><?= $idea->description_problem ?></textarea>
+            <div class="col-sm-6">
+                <textarea style="height:150px;resize:none;" maxlength="300" placeholder="What problem is solving? (No more than 300 characters)" name="Idea[description_problem]" class="form-control"><?= $idea->description_problem ?></textarea>
             </div>
         </div>
         <div class="row form-group" style="margin-bottom:0;">
             <div class="col-sm-12">
-                <? require __DIR__.'/idea/idea_block.php'; ?>
+                <? //require __DIR__.'/idea/idea_block.php'; ?>
                 <?= Html::submitButton('Continue', [
                     'class' => 'btn btn-success btn-lg',
                     'style' => 'margin:0px auto 0;'

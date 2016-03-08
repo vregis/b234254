@@ -37,7 +37,7 @@
 	<div class="name text-center"><?=$task->description?></div>
 	<div class="clearfix"></div>
 	<div class="task-body">
-		<a href="<?= Url::toRoute(['/tests/progress']) ?>" class="btn btn-primary btn-lg">Take test</a>
+		<a href="<?= Url::toRoute(['/tests/progress']) ?>" class="btn btn-primary btn-lg">Take a test</a>
 	</div>
 </div>
 </div>
@@ -50,6 +50,7 @@
 	}
 	.b-page-checkbox-wrap .md-radio:nth-child(1) label > .box,.b-page-checkbox-wrap .md-radio:nth-child(2) label > .box{
 	    border-color: #26C281 !important;
+        color: #26C281;
 	}
 </style>
 

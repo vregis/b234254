@@ -81,8 +81,9 @@ $this->registerJs($msgJs);
     <a href="/user/security/login" class="signin-btn">
         <span class="icon"></span>Sign in
     </a>
-    <div class="clearfix"></div>
+    <div class="clearfix" style="height: 30px !important;"></div>
 </div>
+<div class="text-center" style="color: rgba(91,91,91,.6);margin: 0 auto 15px;">You are steps away from the magic</div>
 	<?= Yii::$app->session->getFlash('error');?>
 	<?= Yii::$app->session->getFlash('success');?>
 <div class="row">
@@ -125,7 +126,7 @@ $this->registerJs($msgJs);
     		'template' => '<div class="input-icon"><i class="icon-check"></i>{input}</div>{error}',
     		'inputOptions' => [
     			'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
-    			'placeholder' => Yii::t('user', 'Re-type your password'),
+    			'placeholder' => Yii::t('user', 'Confirm password'),
     		],
     	])->passwordInput();?>
     </div>

@@ -25,15 +25,15 @@ if (count($flashes)):
         if(array_key_exists('verified', $flashes)){
             $title = 'CONGRATULATIONS!';
             $icon = 'dialog-box-check.png';
-            $message = 'Your email has been successfully confirmed';
+            $message = 'Your email has been successfully confirmed.';
         }elseif(array_key_exists('confirm_link', $flashes)){
-            $title = 'INFORMATION!';
+            $title = 'Thank you!';
             $icon = 'dialog-box-mail.png';
-            $message = 'A confirmation link was sent to your email';
+            $message = 'A confirmation link was sent to your email. Check out the Spam folder.';
         }elseif(array_key_exists('already', $flashes)){
             $title = 'INFORMATION!';
             $icon = 'dialog-box-info.png';
-            $message = 'This email has been already confirmed';
+            $message = 'This email has been already confirmed.';
         }
 
 

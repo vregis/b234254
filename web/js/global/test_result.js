@@ -23,17 +23,22 @@ function resizePage() {
         var widthResult = test_result.find(".name-cell").attr('aria-valuenow');;
         // test_result.find('.name-cell').css('height',heightResult + 'px');
         // test_result.find('.name-cell').css('lineHeight',heightResult + 'px');
-        if($(window).width() < 1025){
-            test_desc.css('width','100%');
-        }else{
-            test_desc.css('width',"calc("+widthResult + '% - 10px)');
-        }
-                test_result.find(".name-table").animate({
-            width: widthResult + '%',
-        }, 1000 );
+        // if($(window).width() < 1025){
+        //     test_desc.css('width','100%');
+        // }else{
+        //     test_desc.css('width',"calc("+widthResult + '% - 10px)');
+        // }
+        test_desc.css('width','100%');
+        test_result.find(".name-table").css('width','100%');
+        // test_result.find(".name-table").animate({
+        //     width: widthResult + '%',
+        // }, 1000 );
         test_result.click(function() {
             var collapse = $('#collapse' + test_result.attr('id'));
             if(!collapse.hasClass('in')) {
+                $('.name-cell .fa').removeClass('fa-angle-up').addClass('fa-angle-down');
+                $(this).find('.fa').removeClass('fa-angle-down').addClass('fa-angle-up');
+
                 collapse.collapse('toggle');
                 $('.collapse').each(function () {
                     if ($(this) != collapse) {
@@ -54,15 +59,16 @@ function loadPage() {
         var test_desc = $(this).parent('.test-line').next('.collapse').find('.test-description');
         var widthResult = test_result.find(".name-cell").attr('aria-valuenow');;
         
-        if($(window).width() < 1025){
-            test_desc.css('width','100%');
-        }else{
-            test_desc.css('width',"calc("+widthResult + '% - 10px)');
-        }
-        
-        test_result.find(".name-table").animate({
-            width: widthResult + '%',
-        }, 1000 );
+        // if($(window).width() < 1025){
+        //     test_desc.css('width','100%');
+        // }else{
+        //     test_desc.css('width',"calc("+widthResult + '% - 10px)');
+        // }
+        test_desc.css('width','100%');
+        test_result.find(".name-table").css('width','100%');
+        // test_result.find(".name-table").animate({
+        //     width: widthResult + '%',
+        // }, 1000 );
 
     });
     

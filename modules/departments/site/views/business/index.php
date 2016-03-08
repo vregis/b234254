@@ -45,7 +45,7 @@ $this->registerJs($msgJs);
     <div class="well" style="margin: 0 auto; max-width: 1000px">
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="<?= count($self_userTools) != 0 ? 'active' : '' ?>"><a href="#my" aria-controls="my" role="tab" data-toggle="tab">My business</a></li>
-            <li role="presentation" class="<?= count($self_userTools) == 0 ? 'active' : '' ?>"><a id="btn-offered-block" href="#delegated" aria-controls="delegated" role="tab" data-toggle="tab">Delegated busineses <!--<span class="label label-danger circle"></span>--></a></li>
+            <li role="presentation" class="<?= count($self_userTools) == 0 ? 'active' : '' ?>"><a id="btn-offered-block" href="#delegated" aria-controls="delegated" role="tab" data-toggle="tab">Delegated business <!--<span class="label label-danger circle"></span>--></a></li>
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in <?= count($self_userTools) != 0 ? 'in active' : '' ?>" id="my">
@@ -177,8 +177,6 @@ $this->registerJs($msgJs);
                 <div id="delegated_businesses">
                     <?= $delegated_businesses ?>
                 </div>
-                
-                <? require __DIR__.'/blocks/find_job.php' ?>
                 <div class="text-center btn-div" style="padding-top:30px;">
                     <?php $do = \modules\departments\models\UserDo::find()->where(['user_id' => Yii::$app->user->id, 'status_sell' => 1])->all();?>
                     <?php if(count($do) == 0):?>
@@ -188,7 +186,7 @@ $this->registerJs($msgJs);
                     <a href="#delegated#open" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search <i style="font-size: 20px;position: absolute;top: 14px;margin-left: 10px;" class="fa fa-angle-down"></i></a>
                     <?php endif;?>
                 </div>
-                
+                <? require __DIR__.'/blocks/find_job.php' ?>           
             </div>
         </div>
 
@@ -415,11 +413,11 @@ $(document).ready(function () {
                 $('.page-content-wrapper').mCustomScrollbar({
                     setHeight: $('.page-content').css('minHeight'),
                     theme:"dark",
-                    advanced:{
-                autoScrollOnFocus: false,
-                updateOnContentResize: true,
-                updateOnBrowserResize: true
-            }
+                        advanced:{
+                        autoScrollOnFocus: false,
+                        updateOnContentResize: true,
+                        updateOnBrowserResize: true
+                    }
                 });
             });
             $("#find_job").on('hidden.bs.collapse',function(){
@@ -437,9 +435,17 @@ $(document).ready(function () {
             });
         });
         $(".tables-business > .well > .nav-tabs a[data-toggle='tab']").click(function(){
+            
+            $("#find_job").on('shown.bs.collapse',function(){
+                $(".toggle-findjod .fa").removeClass('fa-angle-down').addClass('fa-angle-up');
+            });
+            $("#find_job").on('hidden.bs.collapse',function(){
+                $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+            });
             $("#find_job").collapse('hide');
             //$(".toggle-findjod").attr('href', '/departments/business#delegated');
             $(".toggle-findjod .fa").removeClass('fa-angle-up').addClass('fa-angle-down');
+
         });
     });
 
