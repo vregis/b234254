@@ -280,6 +280,13 @@ $this->registerJs($msgJs);
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<script>
+    $(document).ready(function(){
+        $("#contribute-modal").on('shown.bs.modal',function(){
+            $("#contribute-modal .modal-dialog").css({'margin-top':$(window).outerHeight()/2 - $("#contribute-modal .modal-dialog").outerHeight()/2});
+        });
+    });
+</script>
 <style>
 .popover.delegation{
     min-width:auto !important;

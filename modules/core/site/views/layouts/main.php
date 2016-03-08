@@ -146,7 +146,7 @@ $this->beginPage();
                 <!-- END LOGO -->
                 <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
                 <?php if($user):?>
-                    <?php if(!isset($_GET['first'])):?>
+                    <?php if($user->is_new != 0):?>
                 <? if(Yii::$app->controller->module->id == 'tasks' || Yii::$app->controller->module->id ==  'departments' || Yii::$app->controller->module->id ==  'core') : ?>
                 <div class="typeSwitch">
                     <a class="btn disabled off">Life </a>
