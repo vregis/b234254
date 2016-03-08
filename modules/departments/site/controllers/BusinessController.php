@@ -759,6 +759,7 @@ class BusinessController extends Controller
                     $delegateTask->price = $task_user->price;
                     $delegateTask->date = '' . date('Y-m-d h:i:s');
                     $delegateTask->is_request = 1;
+                    $delegateTask->status = 1;
                     $delegateTask->save();
                 }
                 $i++;
