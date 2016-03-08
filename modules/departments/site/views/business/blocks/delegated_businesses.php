@@ -62,7 +62,7 @@ use yii\helpers\Url;
         $tasks_count_array = array_count_values(ArrayHelper::map($tasks,'id','status'));
         ?>
 
-        <?php if(@$tasks_count_array[DelegateTask::$status_done] != count($tasks)):?>
+        <?php //if(@$tasks_count_array[DelegateTask::$status_done] != count($tasks)):?>
 
         <tr id="toolid-<?php echo $userTool->id?>">
                 <td>
@@ -98,7 +98,7 @@ use yii\helpers\Url;
             </td>
 
         </tr>
-        <?php endif; ?>
+        <?php //endif; ?>
 
                 <div id="huistory-<?php echo $userTool->id?>" class="huistory" style="display:none;">
                     <ul>
