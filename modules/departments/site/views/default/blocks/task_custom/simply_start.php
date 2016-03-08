@@ -9,7 +9,7 @@ use modules\tasks\models\Task;
 </div>
     <div class="task-body">
         <? if($task->id == Task::$task_roadmap_personal_id) : ?>
-            <a href="<?= Url::toRoute(['/departments/task','id' => Task::$task_bussiness_role_id]) ?>" class="btn btn-primary btn-lg">Continue</a><!-- person goal -->
+            <a href="<?= Url::toRoute(['/departments/task','id' => Task::$task_bussiness_role_id]) ?>?first=1" class="btn btn-primary btn-lg">Continue</a><!-- person goal -->
         <? else : ?>
             <div class="pull-right inline">
                 <a href="#" data-dismiss="modal" class="href-black task-close"></a>

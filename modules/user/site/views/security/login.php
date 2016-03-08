@@ -70,7 +70,7 @@ $this->registerJs($msgJs);
           ])->textInput(
                 [
                     'class' => 'form-control placeholder-no-fix',
-                    'placeholder' => 'E-mail'
+                    'placeholder' => 'Email'
                 ]
             ) ?>
           </div>

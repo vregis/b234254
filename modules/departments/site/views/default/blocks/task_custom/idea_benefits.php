@@ -91,7 +91,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-2" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(282);?><div class='text-center'>Completed</div>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(282);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-3").popover({
             placement:"right auto",
@@ -99,15 +99,15 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-3" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?><div class='text-center'>Completed</div>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-4").popover({
             placement:"right auto",
             html:true,
             trigger:'hover',
             container:$("#side_road .wrapper"),
-            template:'<div class="popover bottom-fix item-4 completed" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?><div class='text-center'>Completed</div>"
+            template:'<div class="popover bottom-fix item-4" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?><div class="text-center">Completed</div>'
         });
         $("#side_road .item-5").popover({
             placement:"right auto",
@@ -115,7 +115,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-5" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(38);?>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(38);?>'
         });
         $("#side_road .item-6").popover({
             placement:"right auto",
@@ -123,7 +123,7 @@ use yii\widgets\ActiveForm;
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover bottom-fix item-6" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:"<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(39);?>"
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(39);?>'
         });
     });
 </script>
@@ -136,6 +136,12 @@ use yii\widgets\ActiveForm;
         font-size: 45px;
         font-weight: 100;
         text-align:center;
+    }
+        .form-group {
+        margin-bottom: 30px;
+    }
+    .b-page-checkbox-wrap .md-radio.has-test label > .box {
+        line-height: 23px;
     }
 </style>
 
