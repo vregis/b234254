@@ -87,10 +87,10 @@ use modules\core\widgets\Flash;
 <!--                 <div class="small-login">
                     <form method="post" class="form-inline" action="/user/security/login-from-main-page" autocomplete="off">
                         <div class="form-group">
-                            <div class="input-icon"><i class="ico-mail"></i><input type="text" id="loginform-email" class="form-control placeholder-no-fix" name="LoginForm[email]" placeholder="Email" autocomplete="off"></div>
+                            <div class="input-icon"><i class="ico-mail"></i><input type="text" id="loginform-email" class="form-control1 placeholder-no-fix" name="LoginForm[email]" placeholder="Email" autocomplete="off"></div>
                         </div>
                         <div class="form-group">
-                            <div class="input-icon"><i class="ico-pass"></i><input type="password" id="loginform-password" class="form-control placeholder-no-fix" name="LoginForm[password]" placeholder="Password"  autocomplete="off"></div>
+                            <div class="input-icon"><i class="ico-pass"></i><input type="password" id="loginform-password" class="form-control1 placeholder-no-fix" name="LoginForm[password]" placeholder="Password"  autocomplete="off"></div>
                         </div>
                         <button type="submit" class="btn btn-default"><i class="ico-login"></i></button>
                     </form>
@@ -114,7 +114,7 @@ use modules\core\widgets\Flash;
             <h2 class="section-title">Newsletter</h2>
             <!-- subscribe form -->
             <form id="form-subscribe" class="form-lg container">
-                <input type="text" name="email" class="form-control" placeholder="Email address">
+                <input type="text" name="email" class="form-control1" placeholder="Email address">
                 <button type="submit">
                     <i class="ion-email"></i>
                 </button>
@@ -150,7 +150,7 @@ use modules\core\widgets\Flash;
                 'template' => '{label}<div class="input-icon"><i class="fa fa-envelope-o"></i>{input}</div>{error}',
             ])->textInput(
                 [
-                    'class' => 'form-control placeholder-no-fix',
+                    'class' => 'form-control1 placeholder-no-fix',
                     'placeholder' => 'E-mail'
                 ]
             )->label(false)  ?>
@@ -159,7 +159,7 @@ use modules\core\widgets\Flash;
                 'template' => '{label}<div class="input-icon"><i class="fa fa-lock"></i>{input}</div>{error}',
             ])->passwordInput(
                 [
-                    'class' => 'form-control placeholder-no-fix',
+                    'class' => 'form-control1 placeholder-no-fix',
                     'placeholder' => 'Password'
                 ]
             )->label(false) ?>
@@ -228,23 +228,29 @@ use modules\core\widgets\Flash;
 <div style="color: rgb(169, 169, 169); font-size:14px" class="modal fade md-dial" id="support" tabindex="-1" role="status" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Send message</h4>
-            </div>
-            <div class="modal-body">
+            <div class="modal-body" style="padding-bottom: 5px;">
                 <div class="form-group">
-                    <label>Theme</label>
-                    <input required placeholder="theme" style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; font-size:14px" type="text" class="form-control support_theme">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="First name" class="form-control1 first_name">
                 </div>
                 <div class="form-group">
-                    <label>Problem description</label>
-                    <textarea rows="10" style="width:100%" class="support_description"></textarea>
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Last name" class="form-control1 last_name">
+                </div>
+                <div class="form-group">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Email" class="form-control1 email">
+                </div>
+                <div class="form-group">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Phone (optional)" class="form-control1 phone">
+                </div>
+                <div class="form-group">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Subject" class="form-control1 support_theme">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" rows="10" style="width:100%; padding:10px;color:rgba(90,90,90,0.5);resize:none;height: 290px;border-color: rgb(215, 215, 215);" class="form-control1 support_description"></textarea>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary support_send">Send</button>
+            <div class="modal-footer" style="border: 0;padding-top: 0;">
+                <button type="button" class="btn btn-danger" style="width:85px;" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary support_send" style="width:85px;">Send</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -270,6 +276,103 @@ use modules\core\widgets\Flash;
     </div>
     <!-- /.modal-dialog -->
 </div>
+<style>
+    #support .form-group{
+        margin-bottom: 10px;
+    }
+    #support .modal-dialog{
+        width:800px;
+    }
+    #support .modal-content {
+        border-radius: 10px !important;
+    }
+    #support .form-control1{
+    display: block;
+    font-family: "Roboto Light", sans-serif;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    background-image: none;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    border:1px solid rgb(215, 215, 215);
+    }
+.btn-primary,.btn-success,.btn-danger,.btn-danger:focus{
+    border-radius: 20px;
+    background: #fff;
+    border-width: 1px;
+    border-color: #818588;
+    border-style: solid;
+    color: #818588;
+    font-family: "Roboto Light", sans-serif;
+}
+.btn:hover,.open > .btn-primary.dropdown-toggle{
+    border-color:#fff !important;
+    /*box-shadow: inset 0 0 10px 5px #fff !important;*/
+    color:#fff !important;
+}
+.btn-primary,.btn-success, .btn-danger{
+    position: relative;
+}
+.btn-danger:hover{
+    background-color: #FF5252 !important;
+}
+
+.btn-primary:hover:before,.btn-success:hover:before,.btn-danger:hover:before,.open > .btn-primary.dropdown-toggle:before{
+    opacity: 1;
+}
+.btn-primary.active:before,.btn-success.active:before,.btn-danger.active:hover:before{
+    opacity: 1;
+}
+.btn-success:focus, .btn-success.focus,.btn-primary:focus, .btn-primary.focus{
+    background: none !important;
+    border: 1px solid #818588 !important;
+    color: #818588 !important;
+}
+.btn-success.active, .btn-success:hover{
+    border-color: #0f9d58 !important;
+    background-color: #0f9d58 !important;
+    color: #ffffff !important;
+}
+.btn-primary.active, .btn-primary:hover, .open > .btn-primary.dropdown-toggle {
+    border-color: #5184f3 !important;
+    background-color: #5184f3 !important;
+    color: #ffffff !important;
+}
+.btn-danger.active, .btn-danger:hover {
+    border-color: #FF5252 !important;
+    background-color: #FF5252 !important;
+    color: #ffffff !important;
+}
+.btn.active:hover,*.active > .btn:hover{
+    box-shadow: none !important;
+}
+.btn.static:hover, .btn.static:focus{
+    box-shadow: none !important;
+    background: #fff !important;
+    border-width: 1px !important;
+    border-color: #818588 !important;
+    border-style: solid !important;
+    color: #818588 !important;
+}
+.btn.static:hover:before{
+    opacity: 0;
+}
+.btn.circle{
+    width:32px !important;
+    height: 32px;
+    line-height:32px !important;
+    text-align: center;
+    padding: 0;
+    border-radius: 100% !important;
+}
+</style>
 <!-- script -->
 <script src='/js/mainpage/vendor/jquery-2.1.4.min.js'></script>
 <!--[if lte IE 9]><!-->

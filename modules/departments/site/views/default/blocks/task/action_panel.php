@@ -101,7 +101,7 @@ if($start_date != '') {
         <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
             <input id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>h" type="text">
         <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
-            <span id="input-time"><?= $delegate_task->counter_time ?>h</span>
+            <span id="input-time"><?= $delegate_task->counter_time ?></span>
         <? else : ?>
             <span id="input-time"><?= $task_user->time ?>h</span>
         <? endif; ?>
