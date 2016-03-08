@@ -42,7 +42,7 @@ if($task->specialization_id > 0) {
 <link rel="stylesheet" type="text/css" href="/css/task.css">
 <link rel="stylesheet" type="text/css" href="/css/task-custom.css">
 <?php $tool = \modules\tasks\models\UserTool::find()->where(['user_id' => Yii::$app->user->id])->all();?>
-<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>\
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
     <?php if($user):?>
         <?php if($user->user_type == 0 && $user->is_new == 0):?>
             <div id="side_road">

@@ -120,7 +120,7 @@ use modules\user\site\controllers\ProfileController;
                                 ->select('user_do.*, test_result.title_medium as high, test_result.name as dname, test_result.color as color, department.icons as icon')
                                 ->join('LEFT JOIN', 'test_result', 'test_result.department_id = user_do.department_id')
                                 ->join('LEFT JOIN', 'department', 'test_result.department_id = department.id')
-                                ->where(['status_sell' => 1, 'user_id' => Yii::$app->user->id])->all();?>
+                                ->where(['status_sell' => 1, 'user_id' => $_GET['id']])->all();?>
                             <?php if($departments):?>
                                 <?php $i = 0;?>
                                 <?php foreach($departments as $dep):?>
@@ -129,7 +129,7 @@ use modules\user\site\controllers\ProfileController;
                                         ->select('user_specialization.*, specialization.department_id as dep_id, specialization.name as dname, skill_list.name as skillname')
                                         ->join('LEFT JOIN', 'specialization', 'specialization.id = user_specialization.specialization_id')
                                         ->join('LEFT OUTER JOIN', 'skill_list', 'skill_list.id = user_specialization.exp_type')
-                                        ->where(['user_specialization.user_id' => Yii::$app->user->id, 'specialization.department_id' => $dep->department_id])->all()?>
+                                        ->where(['user_specialization.user_id' => $_GET['id'], 'specialization.department_id' => $dep->department_id])->all()?>
                                     <?php $i++; ?>
                                     <?php if($spec):?>
                                         <?php //var_dump($spec); die();?>

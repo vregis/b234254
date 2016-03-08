@@ -42,6 +42,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
 <?php foreach($milestones as $ml):?>
 
     <?php $user = \modules\user\models\User::find()->where(['id'=>Yii::$app->user->id])->one();?>
+    <?php $user_p = \modules\user\models\Profile::find()->where(['user_id'=>Yii::$app->user->id])->one();?>
 
     <?php
     $response = Yii::$app->controller->sort($ml, false, $userTool, $avatar);
@@ -105,7 +106,18 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                                 <div data-id='<?php echo $dep->id?>' class="btn-group department open btn-idea dep <?php echo $class?> dep-color-<?php echo $dep->id?>">
                                     <div <?php if($ml->id==-1):?>style="padding: 0 20px 0 38px;" <?php endif; ?>data-id='<?php echo $dep->id?>' class="btn">
                                     <?php if($ml->id==-1):?>
-                                        <a data-toggle="popover" class="btn btn-empty circle"><i class="ico-delegate"></i></a>
+                                        <?php $do_dep = \modules\departments\models\UserDo::find()->where(['department_id' => $dep->id, 'user_id' => Yii::$app->user->id, 'status_do' => 1])->one();?>
+                                        <?php if($do_dep):?>
+                                            <a data-toggle="popover" class="btn btn-empty circle"><img style="margin:0" class="gant_avatar" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src = '<?php echo $user_p->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user_p->avatar:'/images/avatar/nophoto.png'?>'></a>
+                                        <?php else:?>
+                                            <?php $delegate_dep = \modules\departments\models\Team::find()->where(['sender_id' => Yii::$app->user->id, 'department' => $dep->id, 'status' => 1, 'user_tool_id' => $userTool->id])->one();?>
+                                            <?php if($delegate_dep):?>
+                                                <?php $del_us = Profile::find()->where(['user_id' => $delegate_dep->recipient_id])->one();?>
+                                                <a data-toggle="popover" class="btn btn-empty circle"><img style="margin:0" class="gant_avatar" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src = '<?php echo $del_us->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$del_us->avatar:'/images/avatar/nophoto.png'?>'></a>
+                                            <?php else:?>
+                                            <a data-toggle="popover" class="btn btn-empty circle"><i class="ico-delegate"></i></a>
+                                                <?php endif;?>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                         <span class="text show568-"><?php echo $dep->name?></span>
                                     </div>

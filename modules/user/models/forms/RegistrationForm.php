@@ -41,7 +41,7 @@ class RegistrationForm extends Model
             // PurifierBehavior
             [
                 'class' => PurifierBehavior::className(),
-                'textAttributes' => ['email', 'password', 'password_repeat', 'username','agree','im18years', 'email_repeat'],
+                'textAttributes' => ['email', 'password', 'password_repeat', 'username','agree','im18years'],
             ],
         ];
     }
@@ -67,7 +67,7 @@ class RegistrationForm extends Model
                 'message' => Yii::t('user', 'This email is already exists')
             ],
 
-            ['email_repeat', 'string'],
+         /*   ['email_repeat', 'string'],
             ['email_repeat', 'trim'],
             ['email_repeat', 'required'],
             [
@@ -76,7 +76,7 @@ class RegistrationForm extends Model
                 'compareAttribute' => 'email',
                 'message'=>Yii::t('user', 'Emails do not match')
             ],
-
+*/
 
 
 

@@ -97,18 +97,18 @@ $this->registerJs($msgJs);
         ]);?>
     </div>
 </div>
-
+<!--
 <div class="row">
     <div class="col-sm-12">
-        <?=	$form->field($model, 'email_repeat', [
+        <? /*=	$form->field($model, 'email_repeat', [
             'template' => '<div class="input-icon"><i class="icon-check"></i>{input}</div>{error}',
             'inputOptions' => [
                 'class' => 'form-control placeholder-no-fixform-control placeholder-no-fix noselect',
                 'placeholder' => "Email repeat",
             ],
-        ]);?>
+        ]);*/?>
     </div>
-</div>
+</div>-->
 <div class="row">
     <div class="col-sm-12">
         <?= $form->field($model, 'password', [
