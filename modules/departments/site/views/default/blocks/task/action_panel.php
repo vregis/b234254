@@ -138,7 +138,7 @@ if($start_date != '') {
         <? if($task_user->status != 2) : ?>
             <button id="btn-delegate" class="btn btn-primary"
                 data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button>
-            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;">Complete</button>
+            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success active" style="width:93px;">Complete</button>
         <? else : ?>
             <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Delegate</button>
             <button id="restart" style="width:93px;" class="btn btn-danger offer restrt">Restart</button>
@@ -174,14 +174,14 @@ if($start_date != '') {
         <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-success offer <?= $delegate_task->is_request==0 ? '' :'' ?>">Request</button>
 
         <?php else:?>
-            <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Payment</button>
+            <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary active offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Payment</button>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-primary" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
             <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-success" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
         <?php endif;?>
 
         <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_checked && $task_user->status = 2) : ?>
-            <button id="get_money_confirm" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover">
+            <button id="get_money_confirm" onclick="return false" class="btn btn-primary active payment-btn" style="width:93px;" data-toggle="popover">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
@@ -205,7 +205,7 @@ if($start_date != '') {
             <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
             <?php else:?>
                 <?php if($delegate_task && $delegate_task->status == 7):?>
-                    <button class="btn btn-success" onclick="location.reload()" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Complete</button>
+                    <button class="btn btn-success active" onclick="location.reload()" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Complete</button>
                     <?php else:?>
                 <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
                     <?php endif;?>
@@ -224,7 +224,7 @@ if($start_date != '') {
             <?php if($delegate_task && $delegate_task->status != DelegateTask::$status_payment):?>
             <?php else: ?>
         <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/submit','id' => $delegate_task->id]) ?>'"
-                class="btn btn-success" style="width:93px;">Submit</button>
+                class="btn btn-success active" style="width:93px;">Submit</button>
             <?php endif; ?>
     <? endif; ?>
 <? endif; ?>
