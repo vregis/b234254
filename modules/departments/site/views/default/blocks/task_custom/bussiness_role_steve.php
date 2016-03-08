@@ -37,7 +37,7 @@
 	<div class="name text-center"><?=$task->description?></div>
 	<div class="clearfix"></div>
 	<div class="task-body">
-		<a href="<?= Url::toRoute(['/tests/progress']) ?>" class="btn btn-primary btn-lg">Take a test</a>
+		<a href="<?= Url::toRoute(['/tests/progress?first=1']) ?>" class="btn btn-primary btn-lg">Take a test</a>
 	</div>
 </div>
 </div>

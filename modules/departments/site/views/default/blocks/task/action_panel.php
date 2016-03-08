@@ -157,7 +157,7 @@ if($start_date != '') {
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger offer static disabled" data-status="0">Cancel delegate</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger offer" data-status="0">Cancel delegate</button>
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
