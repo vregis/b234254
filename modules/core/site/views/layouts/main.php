@@ -265,49 +265,49 @@ $this->beginPage();
 <?php $this->endBody() ?>
 
 
-<div style="color: rgb(169, 169, 169); font-size:14px" class="modal fade" id="support" tabindex="-1" role="status" class="md-dial" aria-hidden="true">
+<div style="color: rgb(215, 215, 215); font-size:14px" class="modal fade" id="support" tabindex="-1" role="status" class="md-dial" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Send message</h4>
-            </div>
-            <div class="modal-body">
+            <div class="modal-body" style="padding-bottom: 5px;">
                 <div class="form-group">
-                    <label>First name</label>
-                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control first_name">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="First name" class="form-control first_name">
                 </div>
                 <div class="form-group">
-                    <label>Last name</label>
-                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control last_name">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Last name" class="form-control last_name">
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
-                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control email">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Email" class="form-control email">
                 </div>
                 <div class="form-group">
-                    <label>Phone</label>
-                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control phone">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Phone (optional)" class="form-control phone">
                 </div>
                 <div class="form-group">
-                    <label>Theme</label>
-                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; padding:3px; font-size:14px" type="text" class="form-control support_theme">
+                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Subject" class="form-control support_theme">
                 </div>
                 <div class="form-group">
-                    <label>Problem description</label>
-                    <textarea rows="10" style="width:100%; padding:10px" class="support_description"></textarea>
+                    <textarea placeholder="Message" rows="10" style="width:100%; padding:10px;color:rgba(90,90,90,0.5);resize:none;height: 290px;border-color: rgb(215, 215, 215);" class="form-control support_description"></textarea>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary support_send">Send</button>
+            <div class="modal-footer" style="border: 0;padding-top: 0;">
+                <button type="button" class="btn btn-danger" style="width:85px;" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary support_send" style="width:85px;">Send</button>
             </div>
         </div>
         <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
 </div>
-
+<style>
+    #support .form-group{
+        margin-bottom: 10px;
+    }
+    #support .modal-dialog{
+        width:800px;
+    }
+    #support .modal-content {
+        border-radius: 10px !important;
+    }
+</style>
 <script>
     $.uniform.restore("#typeSwitch");
     $.uniform.restore("#typeSwitch1");
@@ -359,7 +359,10 @@ $this->beginPage();
 
 
     $(document).ready(function() {
-
+        $("#support").on('shown.bs.modal',function(){
+            $("#support .modal-dialog").css({'margin-top':$(window).outerHeight()/2 - $("#support .modal-dialog").outerHeight()/2});
+        });
+        
         if((navigator.userAgent.indexOf ('Linux')!= -1 && navigator.userAgent.indexOf ('Android')== -1) || navigator.userAgent.indexOf ('Windows NT') != -1 || (navigator.userAgent.indexOf ('Mac')!= -1 && navigator.userAgent.indexOf ('iPad') == -1 && navigator.userAgent.indexOf ('iPhone') == -1)){
             // console.log("desktop");
         }else{
@@ -562,7 +565,7 @@ $this->beginPage();
 </body>
 <!-- END BODY -->
 
-<div style="color: rgb(169, 169, 169); font-size:14px" class="modal fade" id="support" tabindex="-1" role="status" class="md-dial" aria-hidden="true">
+<div style="color: rgb(215, 215, 215); font-size:14px" class="modal fade" id="support" tabindex="-1" role="status" class="md-dial" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -572,7 +575,7 @@ $this->beginPage();
             <div class="modal-body">
                 <div class="form-group">
                     <label>Theme</label>
-                    <input required style="border-color: rgb(169, 169, 169); color: rgb(169, 169, 169); text-align:left; font-size:14px" type="text" class="form-control support_theme">
+                    <input required style="border-color: rgb(215, 215, 215); color: rgb(215, 215, 215); text-align:left; font-size:14px" type="text" class="form-control support_theme">
                 </div>
                 <div class="form-group">
                     <label>Problem description</label>

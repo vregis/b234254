@@ -19,17 +19,17 @@ function getData($data) {
     <tbody id="counter_users">
     <? foreach($counter_offers as $counter_offer) : ?>
         <tr class="counter-offer-row">
-            <td style="width:224px;border-left: 1px solid #d7d7d7 !important;padding-left: 28px;">
+            <td style="width:256px;border-left: 1px solid #d7d7d7 !important;">
                 <img style="margin-right: 5px;"  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>">
-                <div <?php if(strlen($counter_offer->name) >28):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 140px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
+                <div <?php if(strlen($counter_offer->name) >37):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 200px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
             </td>
-            <td style="width: 149px;">
+            <td style="width: 118px;">
                 <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>
                 <?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?>
             </td>
-            <td style="width: 114px;">
+            <td style="width: 118px;">
                 <button style="margin-right: 5px;text-align: center;padding-top: 3px;font-size: 24px !important;" class="btn btn-primary circle icon static <? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
-            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>"><i class="ico-clock"></i></button>    
+            elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>"><i class="ico-clock1"></i></button>    
                 <?php if($counter_offer->counter_time): ?>
                 <div class="<? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
             elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border: none;">
