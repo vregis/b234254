@@ -372,6 +372,47 @@ $this->registerJs($msgJs);
         <div class="row" style="margin-right: 0;"><?= $languageData->render() ?></div>
         <hr>
         <div class="row" style="margin-right: 0;">
+            <div>
+                <div class="col-md-12">
+                    <h3 style="margin-left:12px;">Industry</h3>
+                    <div style="clear:both"></div>
+                </div>
+                <div class="industry">
+                    <div class="dynamic-block col-md-4">
+                        <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                            <select class="update form-control selectpicker">
+                                <option class="start" value="0">Select Industry</option>
+                                <option value="1">Food | Drinks</option>
+                                <option value="2">Select Industry</option>
+                            </select>
+                        </div>
+                        <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                    </div>
+                    <div class="dynamic-block col-md-4">
+                        <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                            <select class="update form-control selectpicker">
+                                <option class="start" value="0">Select Industry</option>
+                                <option value="1">Food | Drinks</option>
+                                <option value="2">Select Industry</option>
+                            </select>
+                        </div>
+                        <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                    </div>
+                    <div class="dynamic-block col-md-4">
+                        <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                            <select class="update form-control selectpicker">
+                                <option class="start" value="0">Select Industry</option>
+                                <option value="1">Food | Drinks</option>
+                                <option value="2">Select Industry</option>
+                            </select>
+                        </div>
+                        <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row" style="margin-right: 0;">
             <div class="col-md-5" style="padding-right:0;">
                 <div class="contact_show">
                     <h3 style="margin-left: 57px;">Contacts</h3>
