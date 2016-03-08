@@ -55,7 +55,7 @@ $this->registerJs($msgJs);
                 <div class="signin-btn active">
             <span class="icon"></span>Sign in
         </div>
-        <div class="clearfix" style="height: 30px !important;"></div>
+        <div class="clearfix" style="height: 60px !important;"></div>
     </div>
         <div class="alert alert-danger display-hide">
             <button class="close" data-close="alert"></button>
