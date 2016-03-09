@@ -337,7 +337,7 @@ function Task(task_user_id, is_my, is_custom) {
                             if(payment_paypal.length) {
                                 payment_paypal.popover({placement: 'bottom auto', content:"Please pay delegated task"});
                                 payment_paypal.popover('show');
-                                setTimeout(function() {payment_paypal.popover('hide')},3000);
+                                setTimeout(function() {payment_paypal.popover('destroy');payment_paypal.removeAttr('data-toggle').off();},3000);
                             }
                         }
                         initTimeParse();
