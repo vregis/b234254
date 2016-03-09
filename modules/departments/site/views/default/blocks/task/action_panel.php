@@ -181,21 +181,11 @@ if($start_date != '') {
 
         <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_checked && $task_user->status = 2) : ?>
-            <button id="get_money_confirm" onclick="return false" class="btn btn-primary payment-btn" style="width:93px;" data-toggle="popover">
-                Payment <span class="label label-primary circle active"><i class="fa fa-plus"></i></span>
+            <button id="get_money_confirm" onclick="return false" class="btn btn-primary payment-btn active" style="width:93px;" data-toggle="popover">
+                Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
             <?php $chk = 1;?>
-<!--             <script>
-                $('#get_money[data-toggle="popover"]').popover({
-                    placement:"bottom",
-                    html:true,
-                    trigger:"click",
-                    content:$("#payment-form")
-                });
-                $('#get_money[data-toggle="popover"]').popover('show');
-                initTimeParse();
-            </script> -->
             <!-- Засунь скрипт для всплывашки вот сюда -->
             <button id="get_money" data-toggle="popover" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
