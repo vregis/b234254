@@ -438,8 +438,9 @@ function Task(task_user_id, is_my, is_custom) {
         $('#get_money[data-toggle="popover"]').popover({
             placement: 'bottom',
             html:true,
+            container:$("#task"),
             trigger:"click",
-            content:$("#payment-form")
+            content:"Payment has been reserved"
         });
 
 
