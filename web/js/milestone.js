@@ -64,7 +64,7 @@ function openTask(id, is_custom){
     task.off();
     task.on('show.bs.modal', function (e) {
         setTimeout(function(){
-            $("#counter").on('show.bs.collapse',function(){
+            $("#counter").on('shown.bs.collapse',function(){
                 console.log("show counter");
                 $("#btn-delegate, #btn-delegate+button.btn-success").addClass('static disabled');
                 $("#btn-delegate+button.btn-success").removeClass('active');
@@ -77,7 +77,8 @@ function openTask(id, is_custom){
                 container: $("#task"),
                 placement: "bottom",
                 html:true,
-                trigger:"hover"
+                trigger:"hover",
+                template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
             }); 
             $(".advanced-search-btn").on('show.bs.popover',function(){
                 $(".advanced-search-btn").addClass('active');

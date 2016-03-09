@@ -13,7 +13,7 @@
 <script>
 	$(document).ready(function(){
 		$(".b-page-checkbox-wrap .md-radio:nth-child(4)").addClass('active');
-		$(".b-page-checkbox-wrap .md-radio:nth-child(3)").addClass('done');
+		$(".b-page-checkbox-wrap .md-radio:nth-child(3), .md-radio.item-2").addClass('done');
 		$("#side_road .item-2").popover({
             placement:"right auto",
             html:true,

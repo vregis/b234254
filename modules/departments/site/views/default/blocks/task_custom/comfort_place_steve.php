@@ -44,10 +44,10 @@
     .well{
         width:675px !important;
     }
-	.progress{
+	.well .progress{
 	    width:100%;
 	}
-	.b-page-checkbox-wrap .md-radio label > .box{
+	.well .b-page-checkbox-wrap .md-radio label > .box{
 	    border-color: #26C281 !important;
 	    color: #26C281 !important;
 	}

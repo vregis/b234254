@@ -132,6 +132,9 @@ use yii\widgets\ActiveForm;
     #side_road .progress{
         height:75%;
     }
+    .task-custom .btn-lg{
+        line-height: 23px;
+    }
     .digit{
         font-size: 45px;
         font-weight: 100;

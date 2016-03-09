@@ -3736,6 +3736,7 @@ div.ganttview-slide-container{
     border-color: #818588;
     border-style: solid;
     color: #818588;
+    cursor: auto;
 }
 /*.has-error{
     border: 1px solid #FF5252;
@@ -3861,4 +3862,11 @@ div.ganttview-block .label{
 }
 .popover.delegation .popover-content {
     padding: 9px 14px !important;
+}
+.hor-menu .btn-group-justified > .btn-group .btn .circle .gant_avatar{
+    margin: 0px;
+    top: -1px;
+    position: absolute;
+    left: -1px;
+    border: none;
 }
