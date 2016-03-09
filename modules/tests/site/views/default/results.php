@@ -16,6 +16,14 @@ $this->title = 'Your role in business';
 
 //var_dump($test_result_inform); die();
 ?>
+<?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+<?php if($user):?>
+<?php if($user->user_type == 0):?>
+    <div id="side_road">
+        <?php require Yii::getAlias('@modules').'/departments/site/views/default/blocks/task_custom/roadmap_side.php'; ?>
+    </div>
+<?php endif;?>
+<?php endif;?>
 <div class="well" style="max-width: 1170px;margin: 0 auto;padding:0 70px !important;">
     <div class="test-body">
     <div class="header text-center" style="font-size:20px;color:#777879;line-height:70px;">Your business roles</div>
@@ -245,7 +253,7 @@ $this->title = 'Your role in business';
 <script>
     $(document).ready(function(){
         $(".b-page-checkbox-wrap .md-radio:nth-child(3)").addClass('active');
-$("#side_road .item-2").popover({
+        $("#side_road .item-2").popover({
             placement:"right auto",
             html:true,
             trigger:'hover',
@@ -259,7 +267,7 @@ $("#side_road .item-2").popover({
             trigger:'hover',
             container:$("#side_road .wrapper"),
             template:'<div class="popover top-fix item-3" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?><div class="text-center">Completed</div>'
+            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?>'
         });
         $("#side_road .item-4").popover({
             placement:"right auto",

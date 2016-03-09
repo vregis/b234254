@@ -64,7 +64,7 @@ function openTask(id, is_custom){
     task.off();
     task.on('show.bs.modal', function (e) {
         setTimeout(function(){
-            $("#counter").on('show.bs.collapse',function(){
+            $("#counter").on('shown.bs.collapse',function(){
                 console.log("show counter");
                 $("#btn-delegate, #btn-delegate+button.btn-success").addClass('static disabled');
                 $("#btn-delegate+button.btn-success").removeClass('active');
