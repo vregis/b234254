@@ -161,7 +161,7 @@ if($start_date != '') {
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
-                class="btn btn-success active <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled static' ?>" style="width:93px;">Complete</button>
+                class="btn btn-success active <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete) echo 'disabled' ?>" style="width:93px;">Complete</button>
         <? else : ?>
             <button id="restart" class="btn btn-danger" style="width:93px;">Restart</button>
         <? endif; ?>
@@ -186,7 +186,7 @@ if($start_date != '') {
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
             <?php $chk = 1;?>
-            <script>
+<!--             <script>
                 $('#get_money[data-toggle="popover"]').popover({
                     placement:"bottom",
                     html:true,
@@ -195,9 +195,9 @@ if($start_date != '') {
                 });
                 $('#get_money[data-toggle="popover"]').popover('show');
                 initTimeParse();
-            </script>
+            </script> -->
             <!-- Засунь скрипт для всплывашки вот сюда -->
-            <button id="get_money" data-toggle="popover" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
+            <button id="get_money_confirm" data-toggle="popover" onclick="return false" class="btn btn-primary disabled payment-btn" style="width:93px;">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
             <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>
