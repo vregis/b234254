@@ -437,8 +437,11 @@ function Task(task_user_id, is_my, is_custom) {
         $('#get_money').off();
         $('#get_money[data-toggle="popover"]').popover({
             placement: 'bottom',
-
+            html:true,
+            trigger:"click",
+            content:$("#payment-form")
         });
+        $('#get_money[data-toggle="popover"]').popover('show');
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();
             // if(getPrice() == '' || getPrice() == 0){

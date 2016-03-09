@@ -186,7 +186,7 @@ if($start_date != '') {
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
             <?php $chk = 1;?>
-            <script>
+<!--             <script>
                 $('#get_money[data-toggle="popover"]').popover({
                     placement:"bottom",
                     html:true,
@@ -195,7 +195,7 @@ if($start_date != '') {
                 });
                 $('#get_money[data-toggle="popover"]').popover('show');
                 initTimeParse();
-            </script>
+            </script> -->
             <!-- Засунь скрипт для всплывашки вот сюда -->
             <button id="get_money" data-toggle="popover" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
