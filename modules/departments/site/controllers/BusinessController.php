@@ -105,6 +105,7 @@ class BusinessController extends Controller
 
         $delegated_businesses = $this->render_delegated_businesses();
 
+
         $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();
         $countrylist = Country::findBySql('SELECT * FROM geo_country gc ORDER BY id=1 DESC, title_en ASC')->all();
         $skill_list = Skilllist::find()->all();
@@ -234,6 +235,7 @@ class BusinessController extends Controller
             ->where(['delegate_task.delegate_user_id' => Yii::$app->user->id])
             ->andWhere(['!=','delegate_task.status',DelegateTask::$status_cancel])
             ->all();
+
         return $this->renderPartial('blocks/delegated_businesses',
             [
                 'userTools' => $userTools

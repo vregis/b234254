@@ -189,6 +189,10 @@ class DefaultController extends Controller
                     $i++;
                 }
             }
+            if($task->id == 37 || $task->id == 38 || $task->id == 39){
+                $task->description_road = $_POST['Task']['description_road'];
+            }
+
             if($task->save()) {
                 return $this->redirect(['/milestones/view', 'id' => $task->milestone_id]);
             }

@@ -17,6 +17,7 @@ $this->registerJsFile("/js/global/components-dropdowns.js");
 $this->registerJsFile("/metronic/theme/assets/global/plugins/bootstrap-summernote/summernote.min.js");
 
 $string_description = addslashes($task->description);
+$string_description_road = addslashes($task->description_road);
 $initJs = <<<JS
     ComponentsDropdowns.init();
     $('#element').popover({
@@ -33,6 +34,16 @@ $initJs = <<<JS
         });
     summernote.code('$string_description');
 
+
+    var summernote2 = $('#summernote_2');
+    summernote2.summernote({
+            height: 200,
+            minHeight: 170
+        });
+    summernote2.code('$string_description_road');
+
+
+
     $('#btn-submit').on( "click", function() {
         var tasks = [];
         $( ".preceding_task_name" ).each(function( i ) {
@@ -40,6 +51,10 @@ $initJs = <<<JS
         });
         $('#input-preceding-tasks').val(JSON.stringify(tasks));
         $('#task-description').val($('#summernote_1').code());
+        $('#task-description_road').val($('#summernote_2').code());
+
+
+
         var date_timepicker_start = $('#date_timepicker_start');
         if(date_timepicker_start.val() != '') {
             date_timepicker_start.val(date_timepicker_start.val() + ':00')
@@ -88,6 +103,20 @@ $this->registerJs($initJs);
             'type' => 'hidden'
         ]
     ) ?>
+
+    <?php if($task->id == 37 || $task->id == 38 || $task->id == 39):?>
+    <?php echo
+        $form->field($task, 'description_road', [
+            'template' => '{label}{input}<div name="summernote2" id="summernote_2"></div>{error}',
+        ])->textInput(
+            [
+                'type' => 'hidden'
+            ]
+        ) ?>
+
+    <?php endif; ?>
+
+
     <?=
     $form->field($task, 'director_name')->textInput(
         [

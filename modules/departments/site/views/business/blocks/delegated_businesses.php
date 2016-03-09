@@ -6,6 +6,8 @@ use yii\helpers\Url;
 
 ?>
 <?php $ch = 0;?>
+
+
 <?php if(count($userTools) != 0):?>
     <? foreach($userTools as $userTool) : ?>
         <? if($userTool->user_id != Yii::$app->user->id) : ?>
@@ -30,7 +32,7 @@ use yii\helpers\Url;
 
 
 
-<? if(count($userTools) == 0 || $ch == 0): ?>
+<? if(count($userTools) == 0): ?>
 <div class="text-center none" style="padding:22px 0;">
     Not a single task was yet delegated to you. But you can find tasks independently
 </div>
