@@ -396,6 +396,10 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
     padding: 20px;
     color: #5a5a5a  ;
 }
+.popover.gant_av .popover-content{
+    padding:0 !important;
+    text-align: center;
+}
 .th-status{
 
 }

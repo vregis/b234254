@@ -152,12 +152,12 @@ if($start_date != '') {
                 <button id="payment-paypal" onclick="return false" class="btn btn-success payment-btn" style="width:93px;font-size: 14px;">Fund</button> <!-- this is payment from client -->
             </form>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
-            <button id="payment-paypal" class="btn btn-success disabled static payment-btn" style="width:93px;">Fund <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
+            <button id="payment-paypal" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
         <? endif; ?>
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger offer" data-status="0">Cancel delegate</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger confirn confirn-btn offer" data-delegate_task_id="<?= $delegate_task->id ?>" data-status="0">Cancel delegate</button>
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
@@ -169,7 +169,7 @@ if($start_date != '') {
 <? else : ?>
     <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
         <?php if($delegate_task->is_request == 1):?>
-            <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-primary static disabled" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Payment</button>
+            <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-primary disabled" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Payment</button>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
         <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-success offer <?= $delegate_task->is_request==0 ? '' :'' ?>">Request</button>
 
@@ -186,7 +186,7 @@ if($start_date != '') {
             </button>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment && $delegate_task->status < DelegateTask::$status_checked) : ?>
             <?php $chk = 1;?>
-            <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
+            <button id="get_money" data-toggle="popover" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
                 Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
             </button>
             <button class="btn btn-primary disabled static static" style="width:93px;">Reject</button>

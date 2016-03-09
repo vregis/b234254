@@ -73,6 +73,12 @@ function openTask(id, is_custom){
                 $("#btn-delegate+button.btn-success").addClass('active');
                 console.log("hide counter");
             });
+            $("#task .gant_avatar").popover({
+                container: $("#task"),
+                placement: "bottom",
+                html:true,
+                trigger:"hover"
+            }); 
             $(".advanced-search-btn").on('show.bs.popover',function(){
                 $(".advanced-search-btn").addClass('active');
             }).on('hide.bs.popover',function(){

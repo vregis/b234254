@@ -88,13 +88,32 @@ $this->registerJs($msgJs);
     </div>
 </div>
 <script>
-
+    $(".milestones-users .gant_avatar").popover({
+        placement: "bottom",
+        html:true,
+        container: $("body"),
+        trigger:"hover",
+        template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+    }); 
     $(".hor-menu .btn-group-justified > .btn-group .btn .circle").popover({
         container: 'body',
         template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
         placement: "bottom",
         content : 'Will be available in the next version'
     });
+    $(".collapse").on('show.bs.collapse',function(){
+        console.log('show milestone');
+        //setTimeout(function(){
+        $(".milestones-users .gant_avatar").popover({
+            placement: "bottom",
+            html:true,
+            container: $("body"),
+            trigger:"hover",
+            template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+        }); 
+        //}, 500);
+    });
+
     $(document).on('click', '.on', function(e){
         var target = $(e.target);
         console.log(target);
@@ -172,7 +191,7 @@ $this->registerJs($msgJs);
 
     function setHandlerMilestones() {
         var img = $('.milestones-users').find('img');
-        img.off();
+        // img.off();
         img.on('click',function(){
             var milestones_users = $(this).closest('.milestones-users');
             var count = 0;
@@ -185,7 +204,9 @@ $this->registerJs($msgJs);
                 $(this).toggleClass('active');
                 getattributes($(this).closest('.milestones'));
             }
+
         });
+
     }
     setHandlerMilestones();
 
@@ -267,6 +288,13 @@ $this->registerJs($msgJs);
                 milestones_users.after(response.milestones_users);
                 milestones_users.remove();
                 setHandlerMilestones();
+                $(".milestones-users .gant_avatar").popover({
+                    placement: "bottom",
+                    html:true,
+                    container: $("body"),
+                    trigger:"hover",
+                    template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
+                }); 
                 $(".panel-collapse.in div.ganttview-slide-container").mCustomScrollbar("update");
                 $(".panel-collapse.in div.ganttview-slide-container").mCustomScrollbar({
                     theme:"dark",
