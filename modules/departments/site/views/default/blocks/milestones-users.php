@@ -26,7 +26,7 @@ use yii\helpers\Url; ?>
                 }
             }
             ?>
-             <img data-toggle="popover" data-content="<?=$avatar->first_name." ".$avatar->last_name; ?>" class="gant_avatar <?= $is_find? 'active' : '' ?>" data-id="<?= $d_task->id ?>" src="<?php echo $d_task->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$d_task->ava:'/images/avatar/nophoto.png'?>">
+             <img data-toggle="popover" data-content="<?=$d_task->fname." ".$d_task->lname; ?>" class="gant_avatar <?= $is_find? 'active' : '' ?>" data-id="<?= $d_task->id ?>" src="<?php echo $d_task->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$d_task->ava:'/images/avatar/nophoto.png'?>">
         <? endforeach; ?>
     <?php endif;;?>
 </div>
