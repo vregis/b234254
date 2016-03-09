@@ -35,8 +35,11 @@ class TaskIdea extends TaskIdeaMilestone
             Yii::$app->session['tool_id'] = $tool->id;
 
             $user = User::find()->where(['id' => Yii::$app->user->id])->one();
-            $user->user_type = 0;
-            $user->save();
+            if($user->user_type == 1){
+                $user->user_type = 2;
+                $user->save();
+            }
+
 
             $idea->user_tool_id = $tool->id;
             $idea->create_date = ''.date('Y-m-d');
