@@ -3125,7 +3125,7 @@ Page Footer
     border: none !important;
     z-index: 9;
     box-shadow: none !important;
-    z-index: 99999999;
+    z-index: 99;
 }
 .hor-menu .btn:last-child{
     border-right: 1px solid #d3d3d3 !important;
@@ -3869,4 +3869,6 @@ div.ganttview-block .label{
     position: absolute;
     left: -1px;
     border: none;
+    height: 30px;
+    width: 30px;
 }

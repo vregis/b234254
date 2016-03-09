@@ -4,6 +4,22 @@
 
 var staticTask = null;
 function initTimeParse(){
+    $("#counter").on('shown.bs.collapse',function(){
+        console.log("show counter");
+        $("#btn-delegate, #btn-delegate+button.btn-success").addClass('static disabled');
+        $("#btn-delegate+button.btn-success").removeClass('active');
+    }).on('hide.bs.collapse',function(){
+        $("#btn-delegate, #btn-delegate+button.btn-success").removeClass('static disabled');
+        $("#btn-delegate+button.btn-success").addClass('active');
+        console.log("hide counter");
+    });
+    $("#task .gant_avatar").popover({
+        container: $("#task"),
+        placement: "bottom",
+        html:true,
+        trigger:"hover",
+        template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+    }); 
     // var text = $("#input-time").val();
     // console.log(text.indexOf('h'));
     // if(text.indexOf('h') == -1){
@@ -308,7 +324,7 @@ function Task(task_user_id, is_my, is_custom) {
                         set_counter_offer(counter, response.html);
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
-initTimeParse();
+                        initTimeParse();
                         if(response.html_action_panel) {
                             counter.removeClass('in');
                             $('.counter-offer-row').each(function(){
@@ -316,13 +332,13 @@ initTimeParse();
                             });
                             set_action_panel($('#action_panel'), response.html_action_panel);
                             set_log($('#taskUserLogs'), response.html_task_user_logs);
-initTimeParse();
-var payment_paypal = $('#payment-paypal');
-        if(payment_paypal.length) {
-            payment_paypal.popover({placement: 'bottom auto', content:"Please pay delegated task"});
-            payment_paypal.popover('show');
-            setTimeout(function() {payment_paypal.popover('hide')},3000);
-        }
+                        initTimeParse();
+                        var payment_paypal = $('#payment-paypal');
+                            if(payment_paypal.length) {
+                                payment_paypal.popover({placement: 'bottom auto', content:"Please pay delegated task"});
+                                payment_paypal.popover('show');
+                                setTimeout(function() {payment_paypal.popover('hide')},3000);
+                            }
                         }
                         initTimeParse();
                     }
@@ -420,7 +436,8 @@ var payment_paypal = $('#payment-paypal');
         });
         $('#get_money').off();
         $('#get_money[data-toggle="popover"]').popover({
-            placement: 'bottom'
+            placement: 'bottom',
+
         });
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();
