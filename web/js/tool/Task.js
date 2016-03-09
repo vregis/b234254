@@ -317,6 +317,12 @@ initTimeParse();
                             set_action_panel($('#action_panel'), response.html_action_panel);
                             set_log($('#taskUserLogs'), response.html_task_user_logs);
 initTimeParse();
+var payment_paypal = $('#payment-paypal');
+        if(payment_paypal.length) {
+            payment_paypal.popover({placement: 'bottom auto', content:"Please pay delegated task"});
+            payment_paypal.popover('show');
+            setTimeout(function() {payment_paypal.popover('hide')},3000);
+        }
                         }
                         initTimeParse();
                     }
