@@ -73,7 +73,7 @@ if($start_date != '') {
 <input type="hidden" id="taskuser-start" data-value="<?= $start_date ?>" value="<?= $start_date ?>">
 <input type="hidden" id="taskuser-end" data-value="<?= $end_date ?>" value="<?= $end_date ?>">
 
-<div class="item date">
+<div class="item date" style="min-width: 141px;">
     <input type="hidden" id="input-href" name="href" value="none">
     <? if($is_my || ($delegate_task->status == DelegateTask::$status_inactive)) : ?>
         <button class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="false" aria-controls="datepicker">
