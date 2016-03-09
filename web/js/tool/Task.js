@@ -442,10 +442,11 @@ function Task(task_user_id, is_my, is_custom) {
             content:$("#payment-form")
         });
 
-        $('#get_money[data-toggle="popover"]').popover('show');
-        $('#get_money').on('show.bs.popover',function(e){
+
+        $('#get_money').on('shown.bs.popover',function(e){
             $("#payment-form").show();
         });
+        $('#get_money[data-toggle="popover"]').popover('show');
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();
             // if(getPrice() == '' || getPrice() == 0){
