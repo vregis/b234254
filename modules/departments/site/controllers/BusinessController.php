@@ -1156,7 +1156,11 @@ class BusinessController extends Controller
         $like = new BenefitLike();
         $like->benefit_id = $_POST['benefit'];
         $like->user_tool_id = $_POST['tool'];
-        $like->like = $_POST['like'];
+        if($_POST['like'] == 1) {
+            $like->like = $_POST['like'];
+        }else{
+            $like->dislike = 1;
+        }
         $like->ip_address = $_SERVER['REMOTE_ADDR'];
         $like->save();
         $response['html'] = $this->renderPartial('blocks/likes', ['id'=>$_POST['tool']]);
@@ -1165,7 +1169,17 @@ class BusinessController extends Controller
 
     public function actionAddLikeIdea(){
         $idea = new IdeaLike();
-        $idea->like = $_POST['point'];
+
+        if($_POST['point'] == 0){
+            $idea->dislike = 2;
+        }elseif($_POST['point'] == 1){
+            $idea->dislike = 1;
+        }elseif($_POST['point'] == 2){
+            $idea->like = 1;
+        }elseif($_POST['points'] == 3){
+            $idea->like = 2;
+        }
+
         $idea->ip_address = $_SERVER['REMOTE_ADDR'];
         $idea->idea_id = $_POST['tool'];
         $idea->save();

@@ -424,6 +424,7 @@ use modules\user\site\controllers\ProfileController;
         }else{
             var like = 0;
         }
+
         var data = {
             tool:tool,
             benefit: benefit,
@@ -450,6 +451,7 @@ use modules\user\site\controllers\ProfileController;
             point:point,
             tool:tool
         }
+
         $.ajax({
             url: '/departments/business/add-like-idea',
             type: 'post',
