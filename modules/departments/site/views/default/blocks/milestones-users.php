@@ -11,8 +11,14 @@ use yii\helpers\Url; ?>
             }
         }
     }
+
+    if($avatar->first_name == null || $avatar->last_name == null){
+        $content = $avatar->email;
+    }else{
+        $content = $avatar->first_name." ".$avatar->last_name;
+    }
     ?>
-    <img data-content="<?=$avatar->first_name." ".$avatar->last_name; ?>" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar <?= $is_find? 'active' : '' ?>" data-id="0" src="<?php echo $avatar->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$avatar->avatar:'/images/avatar/nophoto.png'?>">
+    <img data-content="<?=$content; ?>" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar <?= $is_find? 'active' : '' ?>" data-id="0" src="<?php echo $avatar->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$avatar->avatar:'/images/avatar/nophoto.png'?>">
     <?php if($delegate_tasks):?>
         <? foreach($delegate_tasks as $d_task) : ?>
             <?
