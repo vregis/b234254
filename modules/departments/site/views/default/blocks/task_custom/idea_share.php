@@ -56,7 +56,7 @@ use yii\helpers\Url;
         <div class="row form-group" style="margin-bottom: 0;">
             <div class="col-sm-12">
                 <? require __DIR__.'/idea/idea_block.php'; ?>
-                <a style="margin:0px auto 0;" href="<?= Url::toRoute(['/departments/business/shared-business','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg">Preview</a>
+                <a style="margin:0px auto 0;" href="<?= Url::toRoute(['/departments/business/shared-business','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg fix_is_new">Preview</a>
             </div>
         </div>
     </div>
@@ -148,6 +148,15 @@ use yii\helpers\Url;
         window.location.hash="no-back-button";
         window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
         window.onhashchange=function(){window.location.hash="no-back-button";}
+    })
+
+    $('.fix_is_new').on('click', function(){
+        $.ajax({
+            'url': '/departments/fix-is-new',
+            success: function(){
+
+            }
+        })
     })
 
 </script>
