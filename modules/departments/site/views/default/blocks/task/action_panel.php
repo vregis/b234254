@@ -149,13 +149,13 @@ if($start_date != '') {
                 <input type="hidden" name="name">
                 <input type="hidden" name="sum">
                 <input type="hidden" value="<?php echo $delegate_task->id?>" name="id">
-                <button id="payment-paypal" onclick="return false" class="btn btn-success payment-btn active" style="width:93px;font-size: 14px;">Fund</button> <!-- this is payment from client -->
+                <button id="<?php echo $delegate_task->show_popup == 0?'payment-paypal':''?>" onclick="return false" class="btn btn-success payment-btn active" style="width:93px;font-size: 14px;">Fund</button> <!-- this is payment from client -->
             </form>
         <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
-            <button id="payment-paypal" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
+            <button id="" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
         <? endif; ?>
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
-            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
+            <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer delegate-task-id" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger confirn confirn-btn offer" data-delegate_task_id="<?= $delegate_task->id ?>" data-status="0">Cancel delegate</button>
         <? endif; ?>

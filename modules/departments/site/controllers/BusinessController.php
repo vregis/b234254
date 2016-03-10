@@ -74,7 +74,8 @@ class BusinessController extends Controller
                             'add-comment',
                             'add-like',
                             'add-like-idea',
-                            'shared-business'
+                            'shared-business',
+                            'change-show'
                         ],
                         'roles' => ['@']
                     ],
@@ -1195,6 +1196,16 @@ class BusinessController extends Controller
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_do.user_id')
             ->where(['user_do.department_id' => $dep_id, 'user_do.user_id' => Yii::$app->user->id, 'user_do.status_do' => 1])->one();
         return $do;
+    }
+
+    public function actionChangeShow(){
+        $delegate_task_id = $_POST['del_id'];
+        $del_t = DelegateTask::find()->where(['id' => $delegate_task_id, 'show_popup' => 0])->one();
+        if($del_t){
+            $del_t->show_popup = 1;
+            $del_t->save();
+        }
+
     }
 
 }
