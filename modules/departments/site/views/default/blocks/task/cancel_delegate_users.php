@@ -5,7 +5,7 @@
         <td><?= $user->level ? $user->level : '-' ?></td>
         <td><?= $user->rate_h ? $user->rate_h.'$' : '-' ?></td>
         <td><?= $user->country ? $user->country : '' ?><?= $user->city ? ($user->country ? ', ' : '').$user->city : '' ?></td>
-        <td><button data-id="<?= $user->id ?>" class="btn btn-primary circle offerall cancel-delegate-select"><i class="ico-cancel"></i></button></td>
+        <td><button data-id="<?= $user->id ?>" class="btn btn-danger circle offerall cancel-delegate-select"><i class="ico-cancel"></i></button></td>
     </tr>
 
 <? endforeach; ?>

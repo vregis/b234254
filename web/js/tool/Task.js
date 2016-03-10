@@ -477,6 +477,9 @@ function Task(task_user_id, is_my, is_custom) {
                 content:$("#invite-form"),
                 // container:$("#delegate"),
             });
+            $("#btn-delegate").next().addClass('disabled');
+            $("#btn-delegate").prev('.non-dis').addClass('disabled');
+            
             $(".task-body .block.desc .footer .btn").on('shown.bs.tab',function(){
                 $(".tab-content > .tab-pane .item").popover({
                     placement:"auto top",
@@ -541,6 +544,8 @@ function Task(task_user_id, is_my, is_custom) {
         });
         delegate.on('hide.bs.collapse',function(){
             $(".btn[aria-controls='delegate']").removeClass('active');
+            $("#btn-delegate").next().removeClass('disabled');
+            $("#btn-delegate").prev('.non-dis').removeClass('disabled');
         });
 
         function accept() {

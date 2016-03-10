@@ -131,7 +131,7 @@ if($start_date != '') {
 <? if($is_my) : ?>
     <? if(!$delegate_task || $delegate_task->status <= DelegateTask::$status_offer) : ?>
         <? if(count($counter_offers) > 0) : ?>
-            <button onclick="return false" data-toggle="collapse" data-target="#counter" aria-expanded="false" aria-controls="counter" class="btn btn-primary offer">Offers <!--<span class="label label-danger circle"><? //=count($counter_offers) ?></span>--></button>
+            <button onclick="return false" data-toggle="collapse" data-target="#counter" aria-expanded="false" aria-controls="counter" class="btn btn-primary offer no-dis">Offers <!--<span class="label label-danger circle"><? //=count($counter_offers) ?></span>--></button>
         <? else : ?>
             <button class="btn btn-primary offer disabled static">Offers</button>
         <? endif; ?>
@@ -146,6 +146,7 @@ if($start_date != '') {
     <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
             <form style="display:inline-block;" action="/tasks/paypal/createpayment" id="paypal-form" method="post" target="_blank">
+            <!-- Как же Ваня заебал -->
                 <input type="hidden" name="name">
                 <input type="hidden" name="sum">
                 <input type="hidden" value="<?php echo $delegate_task->id?>" name="id">
