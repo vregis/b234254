@@ -48,36 +48,72 @@
 }
 
 .enter-btn{
-    background: url('/images/enter.png') center center no-repeat;
-    /* background: url('/images/Power_button_animated.gif') center center no-repeat; */
     display: block;
     margin: 0 auto;
     z-index: 99;
     position: absolute;
-    left: 25%;
-    top: 25%;
-    width: 50%;
-    height: 50%;
+    left: calc(50% - 85px);
+    top: calc(50% - 85px);
+    width: 170px;
+    height: 170px;
+    line-height:170px;
     background-size: contain;
+    text-align:center;
+    border-radius:100%;
+    font-size:3em;
+    /* box-shadow: 0 0 30px 15px #fff; */
+    
 }
-.enter-btn .hover{
-    background: url('/images/enter-hover.png') center center no-repeat;
-    opacity: 0;
+.enter-btn:not(:hover){
+    animation: pulse 2s infinite linear;
+}
+@keyframes pulse {
+  0% {
+        box-shadow: 0;
+    }
+  50% {
+        box-shadow: 0 0 30px 15px rgba(255,255,255,0.6);
+    }
+  100% {
+        box-shadow: 0;
+    }
+}
+@keyframes pulse2 {
+  0% {
+        box-shadow: 0;
+    }
+  50% {
+        box-shadow:inset 0 0 190px 1px rgba(255,255,255,0.6);
+    }
+  100% {
+        box-shadow: 0;
+    }
+}
+
+ .enter-btn .hover:not(:hover){
+    animation: pulse2 2s infinite linear;
+ }
+ .enter-btn:hover{
+    box-shadow: 0 0 10px 10px rgba(255,255,255,0.2);
+}
+ .enter-btn .hover{
     -webkit-transition: 0.3s linear all;
     -moz-transition: 0.3s linear all;
     -o-transition: 0.3s linear all;
     -ms-transition: 0.3s linear all;
     transition: 0.3s linear all;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
+    left: -1px;
+    top: -1px;
+    width: 101%;
+    height: 101%;
+    border-radius:100%;
+    border:15px solid #fff;
+    
 }
 .enter-btn:hover .hover{
-    opacity: 1;
-}
+    box-shadow:inset 0 0 100px 10px rgba(255,255,255,0.6);
+} 
 .btn-empty{
     color:#fff !important;
     border:1px solid #fff !important;
@@ -170,7 +206,18 @@
 @media (min-width:1600px) and (max-height:1079px){
      .section-header{
         margin-bottom:34%;
-    }  
+    } 
+    .enter-btn{
+        left: calc(50% - 110px);
+        top: calc(50% - 110px);
+        width: 220px;
+        height: 220px;
+        line-height:220px;
+        font-size:3.5em;
+    }   
+    .enter-btn .hover{
+        border:20px solid #fff;
+    }
 }
 @media (min-width:1920px){
     .section-title{
@@ -178,6 +225,16 @@
     }
    .section-header{
         margin-bottom:41%;
+    }
+    .enter-btn{
+        left: calc(50% - 110px);
+        top: calc(50% - 110px);
+        width: 220px;
+        height: 220px;
+        line-height:220px;
+    }   
+    .enter-btn .hover{
+        border:20px solid #fff;
     }
 }
 @media (min-width:1921px){
