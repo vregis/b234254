@@ -270,22 +270,28 @@ $this->beginPage();
         <div class="modal-content">
             <div class="modal-body" style="padding-bottom: 5px;">
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="First name" class="form-control first_name">
+                    <input required type="text" placeholder="First name" class="form-control first_name">
+                    <div class="help-block hidden">First name cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Last name" class="form-control last_name">
+                    <input required type="text" placeholder="Last name" class="form-control last_name">
+                    <div class="help-block hidden">Last name cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Email" class="form-control email">
+                    <input required type="text" placeholder="Email" class="form-control email">
+                    <div class="help-block hidden">Email name cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Phone (optional)" class="form-control phone">
+                    <input required type="text" placeholder="Phone (optional)" class="form-control phone">
+                    <div class="help-block hidden">Phone cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Subject" class="form-control support_theme">
+                    <input required type="text" placeholder="Subject" class="form-control support_theme">
+                    <div class="help-block hidden">Subject cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Message" rows="10" style="width:100%; padding:10px;color:rgba(90,90,90,0.5);resize:none;height: 290px;border-color: rgb(215, 215, 215);" class="form-control support_description"></textarea>
+                    <textarea placeholder="Message" rows="10" class="form-control support_description"></textarea>
+                    <div class="help-block hidden">Message cannot be blank.</div>
                 </div>
             </div>
             <div class="modal-footer" style="border: 0;padding-top: 0;">
@@ -298,6 +304,22 @@ $this->beginPage();
     <!-- /.modal-dialog -->
 </div>
 <style>
+    #support input, #support textarea{
+        padding:0 10px;
+        border-color: rgb(215, 215, 215);
+        color:rgba(90,90,90,0.5);
+        text-align:left; 
+        font-size:14px;
+    }
+    #support textarea{
+        width:100%; 
+        padding:10px;
+        resize:none;
+        height: 290px;
+    }
+    .has-error .form-control{
+        border-color: #e73d4a !important;
+    }
     #support .form-group{
         margin-bottom: 10px;
     }
@@ -565,33 +587,6 @@ $this->beginPage();
 </body>
 <!-- END BODY -->
 
-<div style="color: rgb(215, 215, 215); font-size:14px" class="modal fade" id="support" tabindex="-1" role="status" class="md-dial" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Send message</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Theme</label>
-                    <input required style="border-color: rgb(215, 215, 215); color: rgb(215, 215, 215); text-align:left; font-size:14px" type="text" class="form-control support_theme">
-                </div>
-                <div class="form-group">
-                    <label>Problem description</label>
-                    <textarea rows="10" style="width:100%; padding:10px" class="support_description"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary support_send">Send</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-
 <div id="task" class="modal fade" tabindex="-1" role="status" aria-hidden="true">
 </div>
 
@@ -625,34 +620,66 @@ $this->beginPage();
         var last_name = $('.last_name').val();
         var phone = $('.phone').val();
         var email = $('.email').val();
-
-        App.blockUI({
-            target: '.modal-content',
-            animate: true
-        });
-
-        /*window.setTimeout(function() {
-         App.unblockUI('#blockui_sample_1_portlet_body');
-         }, 2000);*/
-
-        $.ajax({
-            url: '/core/supportform',
-            method: 'post',
-            data: {theme:theme, desc:desc, first_name:first_name, last_name:last_name, phone:phone, email:email},
-            dataType: 'json',
-            success: function(response){
-                if(response.error == true){
-                    bootbox.alert("Something wrong. Please try again", function(){
-                        window.location.reload();
-                    });
-                }else{
-                    bootbox.alert("Your message has been sent", function(){
-                        window.location.reload();
-                    });
-                }
+        if(theme == '' || desc == '' || first_name == '' || last_name == '' || email == ''){
+            if(theme == ''){
+                $('.support_theme').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.support_theme').parent().removeClass('has-error');
+                $('.support_theme').parent().find('.help-block').addClass('hidden');
             }
-        })
+            if(desc == ''){
+                $('.support_description').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.support_description').parent().removeClass('has-error');
+                $('.support_description').parent().find('.help-block').addClass('hidden');
+            }
+            if(first_name == ''){
+                $('.first_name').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.first_name').parent().removeClass('has-error');
+                $('.first_name').parent().find('.help-block').addClass('hidden');
+            }
+            if(last_name == ''){
+                $('.last_name').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.last_name').parent().removeClass('has-error');
+                $('.last_name').parent().find('.help-block').addClass('hidden');
+            }
 
+            if(email == ''){
+                $('.email').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.email').parent().removeClass('has-error');
+                $('.email').parent().find('.help-block').addClass('hidden');
+            }
+        }else{
+            App.blockUI({
+                target: '.modal-content',
+                animate: true
+            });
+
+            /*window.setTimeout(function() {
+             App.unblockUI('#blockui_sample_1_portlet_body');
+             }, 2000);*/
+
+            $.ajax({
+                url: '/core/supportform',
+                method: 'post',
+                data: {theme:theme, desc:desc, first_name:first_name, last_name:last_name, phone:phone, email:email},
+                dataType: 'json',
+                success: function(response){
+                    if(response.error == true){
+                        bootbox.alert("Something wrong. Please try again", function(){
+                            window.location.reload();
+                        });
+                    }else{
+                        bootbox.alert("Your message has been sent", function(){
+                            window.location.reload();
+                        });
+                    }
+                }
+            })
+        }
 
     })
 </script>
