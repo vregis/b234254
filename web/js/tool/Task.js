@@ -307,6 +307,7 @@ function Task(task_user_id, is_my, is_custom) {
             }
 
             var name = $(this).closest('.user-row').find('.field-name').html();
+
             var data = {
                 _csrf: $("meta[name=csrf-token]").attr("content"),
                 command : 'confirn',
@@ -337,6 +338,7 @@ function Task(task_user_id, is_my, is_custom) {
                             if(payment_paypal.length) {
                                 payment_paypal.popover({placement: 'bottom auto', content:"Please pay delegated task"});
                                 payment_paypal.popover('show');
+
                                 setTimeout(function() {payment_paypal.popover('destroy');payment_paypal.removeAttr('data-toggle').off();},3000);
                             }
                         }
@@ -747,6 +749,16 @@ function Task(task_user_id, is_my, is_custom) {
         if(payment_paypal.length) {
             payment_paypal.popover({placement: 'bottom auto', content:"Please pay delegated task"});
             payment_paypal.popover('show');
+            var _del_id = $('.delegate-task-id').attr('data-delegate_task_id');
+            $.ajax({
+                url: '/departments/business/change-show',
+                type: 'post',
+                data: {del_id:_del_id},
+                dataType: 'json',
+                success: function(){
+
+                }
+            })
             setTimeout(function() {payment_paypal.popover('hide')},3000);
         }
         initTimeParse();
