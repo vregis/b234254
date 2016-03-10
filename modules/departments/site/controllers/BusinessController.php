@@ -1179,7 +1179,7 @@ class BusinessController extends Controller
             $idea->dislike = 1;
         }elseif($_POST['point'] == 2){
             $idea->like = 1;
-        }elseif($_POST['points'] == 3){
+        }elseif($_POST['point'] == 3){
             $idea->like = 2;
         }
 

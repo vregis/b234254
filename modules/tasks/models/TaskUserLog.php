@@ -13,9 +13,9 @@ class TaskUserLog extends \yii\db\ActiveRecord
     public static $log_cancel_offer_specialist = 'Offer cancel for: %s';
     public static $log_counter_offer = '%s Make an offer';
     public static $log_cancel_counter_offer = 'Cancel an offer';
-    public static $log_payment = 'Fund';
+    public static $log_payment = 'Task funded for %s';
     public static $log_delegate = 'Task delegated %s';
-    public static $log_complete_specialist = 'Submit';
+    public static $log_complete_specialist = 'Task submited by %s';
     public static $log_checked = 'Complete';
     public static $log_complete = 'Complete';
     public static $log_payment_received = 'Payment';

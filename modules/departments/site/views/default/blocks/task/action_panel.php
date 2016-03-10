@@ -176,7 +176,7 @@ if($start_date != '') {
         <?php else:?>
             <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Payment</button>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-primary" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
-            <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-success" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
+            <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-success accept-change" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
         <?php endif;?>
 
         <? else : ?>
@@ -263,6 +263,14 @@ if($start_date != '') {
                     border-color:#fff;
                 }
             </style>
+
+            <script>
+                $(document).on('keyup', '#input-price', function(){
+                    $('.accept-change').text('Counter offer');
+                })
+            </script>
+
+
                 <script>
                 $(document).ready(function(){
                     $('.noselect').bind("cut copy paste",function(e) {

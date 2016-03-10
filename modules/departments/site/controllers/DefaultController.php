@@ -355,7 +355,7 @@ class DefaultController extends Controller
 
             if ($is_my) {
                 $delegate_tasks = User::find()->select(
-                    'delegate_task.*, user.id id, user_profile.avatar ava, task_user.id task_user, user_profile.first_name fname, user_profile.last_name lname'
+                    'delegate_task.*, user.id id, user_profile.avatar ava, task_user.id task_user, user_profile.first_name fname, user_profile.last_name lname, user.email email'
                 )
                     ->join('JOIN', 'delegate_task', 'delegate_task.delegate_user_id = user.id')
                     ->join('JOIN', 'user_profile', 'user_profile.user_id = user.id')

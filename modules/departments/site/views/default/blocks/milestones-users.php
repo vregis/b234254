@@ -32,7 +32,11 @@ use yii\helpers\Url; ?>
                 }
             }
             ?>
+            <?php if(!$d_task->fname && !$d_task->lname):?>
+                <img data-toggle="popover" data-content="<?=$d_task->email; ?>" class="gant_avatar <?= $is_find? 'active' : '' ?>" data-id="<?= $d_task->id ?>" src="<?php echo $d_task->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$d_task->ava:'/images/avatar/nophoto.png'?>">
+            <?php else:?>
              <img data-toggle="popover" data-content="<?=$d_task->fname." ".$d_task->lname; ?>" class="gant_avatar <?= $is_find? 'active' : '' ?>" data-id="<?= $d_task->id ?>" src="<?php echo $d_task->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$d_task->ava:'/images/avatar/nophoto.png'?>">
-        <? endforeach; ?>
+            <?php endif;?>
+            <? endforeach; ?>
     <?php endif;;?>
 </div>
