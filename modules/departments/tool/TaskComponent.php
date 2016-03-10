@@ -486,7 +486,7 @@ class TaskComponent extends Component
         $task_user = TaskUser::find()->where(['id' => $task_user_id])->one();
         $response['error'] = false;
         $delegate_task = DelegateTask::getCurrentDelegateTask($task_user_id, false);
-        $delegate_task->status = 8;
+        $delegate_task->status = 7;
         $delegate_task->save();
         TaskUserLog::sendLog($delegate_task->task_user_id, TaskUserLog::$log_payment_received);
         $response['html'] = Yii::$app->controller->renderPartial(
