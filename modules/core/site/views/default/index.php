@@ -173,7 +173,7 @@ use modules\core\widgets\Flash;
 </div>
 <!-- /subscribe -->
 <div class="planet">
-    <a href="<?= Url::toRoute(['/departments']) ?>" class="enter-btn"><div class="hover"></div></a>
+    <a href="<?= Url::toRoute(['/departments']) ?>" class="enter-btn"><div class="hover"></div><i class="ico-power1"></i></a>
 </div>
 
 <!-- site main -->
@@ -217,8 +217,8 @@ use modules\core\widgets\Flash;
 
 <!-- site footer -->
 <footer id="site-footer" class="text-center">
-    <a data-type="youtube" href="http://youtu.be/Xo5IrI7yfjA" class="venobox btn btn-primary btn-empty btn-icon play"><i class="ico-play1"></i></a>
-    <a data-toggle="modal" href="#info-modal" class="btn btn-primary btn-empty btn-icon info"><i class="ico-info"></i></a>
+    <a data-type="youtube" href="http://youtu.be/Xo5IrI7yfjA" class="venobox btn btn-empty btn-icon play"><i class="ico-play1"></i></a>
+    <a data-toggle="modal" href="#info-modal" class="btn btn-empty btn-icon info"><i class="ico-info"></i></a>
     <a href="<?= Url::toRoute(['/departments?id=1']) ?>" class="btn btn-empty">Sell your skills</a>
     <a data-toggle="modal" href="#support" class="btn btn-empty">Support</a>
 
