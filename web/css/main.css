@@ -3733,10 +3733,11 @@ div.ganttview-slide-container{
 }
 .btn.disabled:hover{
     border-width: 1px;
-    border-color: #818588;
+    border-color: #818588 !important;
     border-style: solid;
-    color: #818588;
+    color: #818588 !important;
     cursor: auto;
+    background: transparent !important;
 }
 /*.has-error{
     border: 1px solid #FF5252;
@@ -3871,4 +3872,8 @@ div.ganttview-block .label{
     border: none;
     height: 30px;
     width: 30px;
+}
+#task .popover.gant_av{
+    width: auto !important;
+    min-width: auto !important;
 }

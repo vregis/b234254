@@ -49,6 +49,7 @@
 
 .enter-btn{
     background: url('/images/enter.png') center center no-repeat;
+    /* background: url('/images/Power_button_animated.gif') center center no-repeat; */
     display: block;
     margin: 0 auto;
     z-index: 99;

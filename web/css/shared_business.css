@@ -627,6 +627,7 @@ textarea{
 	padding:0px 5px !important;
 	line-height:16px !important;
 	font-size:12px !important;
+	display:none !important;
 }
 .label-success{
 	background-color: #0f9d58 !important;

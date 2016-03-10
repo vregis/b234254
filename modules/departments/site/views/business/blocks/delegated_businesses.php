@@ -41,7 +41,7 @@ use yii\helpers\Url;
 <table class="table table-bordered">
     <thead>
     <tr>
-        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 42px !important;"><i class="ico-history"></i></a></th>
+        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 42px !important;padding-left: 1px;padding-top: 1px;"><i class="ico-history"></i></a></th>
         <th> Business Name </th>
         <th width="130"> Tasks </th>
         <th width="130"> Pending </th>
