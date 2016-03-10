@@ -1069,41 +1069,77 @@ window on resize
 })(jQuery);
 
 
-$('.support_send').on('click', function(){
-
-  var theme = $('.support_theme').val();
-  var desc = $('.support_description').val();
-
-    App.blockUI({
-      target: '.modal-content',
-      animate: true
-    });
-
-    /*window.setTimeout(function() {
-      App.unblockUI('#blockui_sample_1_portlet_body');
-    }, 2000);*/
-
-  $.ajax({
-    url: '/core/supportform',
-    method: 'post',
-    data: {theme:theme, desc:desc},
-    dataType: 'json',
-    success: function(response){
-      if(response.error == true){
-        bootbox.alert("Something wrong. Please try again", function(){
-          window.location.reload();
-        });
-      }else{
-        bootbox.alert("Your message has been sent", function(){
-          window.location.reload();
-        });
-      }
-    }
-  })
-
-
-})
 $(document).ready(function(){
+      $('.support_send').on('click', function(){
+
+        var theme = $('.support_theme').val();
+        var desc = $('.support_description').val();
+        var first_name = $('.first_name').val();
+        var last_name = $('.last_name').val();
+        var phone = $('.phone').val();
+        var email = $('.email').val();
+        if(theme == '' || desc == '' || first_name == '' || last_name == '' || email == ''){
+            if(theme == ''){
+                $('.support_theme').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.support_theme').parent().removeClass('has-error');
+                $('.support_theme').parent().find('.help-block').addClass('hidden');
+            }
+            if(desc == ''){
+                $('.support_description').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.support_description').parent().removeClass('has-error');
+                $('.support_description').parent().find('.help-block').addClass('hidden');
+            }
+            if(first_name == ''){
+                $('.first_name').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.first_name').parent().removeClass('has-error');
+                $('.first_name').parent().find('.help-block').addClass('hidden');
+            }
+            if(last_name == ''){
+                $('.last_name').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.last_name').parent().removeClass('has-error');
+                $('.last_name').parent().find('.help-block').addClass('hidden');
+            }
+
+            if(email == ''){
+                $('.email').parent().addClass('has-error').find('.help-block').removeClass('hidden');
+            }else{
+                $('.email').parent().removeClass('has-error');
+                $('.email').parent().find('.help-block').addClass('hidden');
+            }
+        }else{
+            App.blockUI({
+                target: '.modal-content',
+                animate: true
+            });
+
+            /*window.setTimeout(function() {
+             App.unblockUI('#blockui_sample_1_portlet_body');
+             }, 2000);*/
+
+            $.ajax({
+                url: '/core/supportform',
+                method: 'post',
+                data: {theme:theme, desc:desc, first_name:first_name, last_name:last_name, phone:phone, email:email},
+                dataType: 'json',
+                success: function(response){
+                    if(response.error == true){
+                        bootbox.alert("Something wrong. Please try again", function(){
+                            window.location.reload();
+                        });
+                    }else{
+                        bootbox.alert("Your message has been sent", function(){
+                            window.location.reload();
+                        });
+                    }
+                }
+            })
+        }
+
+    })
   $("#info-modal").on('shown.bs.modal',function(){
     $("#info-modal .modal-dialog").css({'margin-top':$(window).height()/2 - $("#info-modal .modal-dialog").height() / 2});
   });

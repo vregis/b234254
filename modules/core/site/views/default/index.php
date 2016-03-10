@@ -229,23 +229,30 @@ use modules\core\widgets\Flash;
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body" style="padding-bottom: 5px;">
+            <div class="modal-body" style="padding-bottom: 5px;">
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="First name" class="form-control1 first_name">
+                    <input required type="text" placeholder="First name" class="form-control1 first_name">
+                    <div class="help-block hidden">First name cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Last name" class="form-control1 last_name">
+                    <input required type="text" placeholder="Last name" class="form-control1 last_name">
+                    <div class="help-block hidden">Last name cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Email" class="form-control1 email">
+                    <input required type="text" placeholder="Email" class="form-control1 email">
+                    <div class="help-block hidden">Email name cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Phone (optional)" class="form-control1 phone">
+                    <input required type="text" placeholder="Phone (optional)" class="form-control1 phone">
+                    <div class="help-block hidden">Phone cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <input required style=" padding:0 10px;border-color: rgb(215, 215, 215);color:rgba(90,90,90,0.5); text-align:left; font-size:14px" type="text" placeholder="Subject" class="form-control1 support_theme">
+                    <input required type="text" placeholder="Subject" class="form-control1 support_theme">
+                    <div class="help-block hidden">Subject cannot be blank.</div>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Message" rows="10" style="width:100%; padding:10px;color:rgba(90,90,90,0.5);resize:none;height: 290px;border-color: rgb(215, 215, 215);" class="form-control1 support_description"></textarea>
+                    <textarea placeholder="Message" rows="10" class="form-control1 support_description"></textarea>
+                    <div class="help-block hidden">Message cannot be blank.</div>
                 </div>
             </div>
             <div class="modal-footer" style="border: 0;padding-top: 0;">
@@ -372,6 +379,22 @@ use modules\core\widgets\Flash;
     padding: 0;
     border-radius: 100% !important;
 }
+    #support input, #support textarea{
+        padding:0 10px;
+        border-color: rgb(215, 215, 215);
+        color:rgba(90,90,90,0.5);
+        text-align:left; 
+        font-size:14px;
+    }
+    #support textarea{
+        width:100%; 
+        padding:10px;
+        resize:none;
+        height: 290px !important;
+    }
+    .has-error .form-control1{
+        border-color: #e73d4a !important;
+    }
 </style>
 <!-- script -->
 <script src='/js/mainpage/vendor/jquery-2.1.4.min.js'></script>
