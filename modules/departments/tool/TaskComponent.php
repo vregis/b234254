@@ -636,6 +636,16 @@ class TaskComponent extends Component
             $task_user->status = 1;
             $task_user->save();
             TaskUserLog::sendLog($task_user->id, TaskUserLog::$log_restart);
+
+            $del_task = DelegateTask::find()->where(['task_user_id' => $task_user->id])->all();
+            if($del_task){
+                foreach($del_task as $d_t){
+                    $d_t->status = 8;
+                    $d_t->save();
+                }
+            }
+
+
         }
         $counter_offers = DelegateTask::getCurrentCounterOffers($task_user->id);
         $response['html'] = Yii::$app->controller->renderPartial(

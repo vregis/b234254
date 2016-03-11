@@ -164,7 +164,7 @@ if($start_date != '') {
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
         <? else : ?>
-            <button id="restart" class="btn btn-danger" style="width:93px;">Restart</button>
+            <button id="restart" class="btn btn-danger " style="width:93px;">Restart</button>
         <? endif; ?>
     <? endif; ?>
 <? else : ?>
@@ -207,7 +207,7 @@ if($start_date != '') {
             <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
             <?php else:?>
                 <?php if($delegate_task && $delegate_task->status == 7):?>
-                    <button class="btn btn-success" onclick="location.reload()" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Complete</button>
+                    <button class="btn btn-success disabled static" onclick="return false" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Complete</button>
                     <?php else:?>
                 <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
                     <?php endif;?>

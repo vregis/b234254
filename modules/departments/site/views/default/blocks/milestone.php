@@ -67,6 +67,13 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
     <?php $milestones_users = $response['milestones_users'] ?>
     <?php //if(count($tasks) > 0):?>
 
+    <?php $kk = 0;?>
+    <?php foreach($tasks as $ts):?>
+        <?php if($ts->status == 2):?>
+            <?php $kk++;?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
     <? $key = $ml->id!=-1 ? $ml->id : 'All'?>
 
 <div style="display:none" class="panel-group milestones start<?php echo $jj?>" data-milestone_id = "<?php echo $key?>" id="accordion<?php echo $key?>">
@@ -84,7 +91,11 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                         <input data-color="#53d769" type="checkbox" id="typeSwitch<?php echo $key?>" checked class="js-switch js-check-change" name="view">
                         <!--<label class="control-label bus">G</label>-->
                     </div>
+                    <?php if($kk == count($tasks) && count($tasks) != 0):?>
+                        <span class="label label-lg"><?php //echo count($tasks) == 0?'<img src="/images/galka-2.png" alt="" class="check">':''; ?><img src="/images/galka-2.png" alt="" class="check"></span>
+                    <?php else:?>
                     <span class="label label-lg"><?php //echo count($tasks) == 0?'<img src="/images/galka-2.png" alt="" class="check">':''; ?>  <?php echo count($tasks)!=0?count($tasks):''?> <span style="display:none" class="label2 label-danger circle">3</span></span>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="menu">
