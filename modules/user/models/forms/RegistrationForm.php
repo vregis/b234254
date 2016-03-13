@@ -64,7 +64,7 @@ class RegistrationForm extends Model
                 'email',
                 'unique',
                 'targetClass' => $this->module->manager->userClass,
-                'message' => Yii::t('user', 'This email is already exists')
+                'message' => Yii::t('user', 'This email is already taken.')
             ],
 
          /*   ['email_repeat', 'string'],

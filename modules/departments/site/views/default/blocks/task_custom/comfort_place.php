@@ -6,7 +6,7 @@
 	<div class="clearfix"></div>
 
 	<div class="row task-body">
-		<a href="<?= Url::toRoute(['/core/profile']) ?>?first=1" class="btn btn-primary btn-lg">Go to profile</a>
+		<a href="<?= Url::toRoute(['/core/profile']) ?>?first=1" class="btn btn-primary btn-lg">Continue</a>
 	</div>
 </div>
 </div>

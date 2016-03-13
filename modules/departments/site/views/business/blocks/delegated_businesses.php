@@ -104,8 +104,8 @@ use yii\helpers\Url;
 
                 <div id="huistory-<?php echo $userTool->id?>" class="huistory" style="display:none;">
                     <ul>
-                        <li class="disabled"><a target="_blank" href="/departments/business/shared-business?id=<?php echo $userTool->id?>">Business Dashboard</a></li>
-                        <li class="disabled"><a class="team" href="javascript:;" data-toggle="popover" >Team</a></li>
+                        <li class="disabled"><a target="_blank" href="/departments/business/shared-business?id=<?php echo $userTool->id?>">View Profile</a></li>
+                        <li class="disabled"><a class="team" href="javascript:;" data-toggle="popover" >View Team</a></li>
                     </ul>
                 </div>
 

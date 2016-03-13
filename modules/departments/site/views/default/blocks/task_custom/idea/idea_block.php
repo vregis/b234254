@@ -50,7 +50,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="links">
                     <? foreach($task_links as $task_link) : ?>
-                        <a href="<?= $task_link->name ?>" data-toggle="popover" data-content="&nbsp;" class="item">
+                        <a target="_blank" href="<?= $task_link->name ?>" data-toggle="popover" data-content="&nbsp;" class="item">
                             <i class="ico-link"></i> <br>
                         </a>
                     <? endforeach; ?>

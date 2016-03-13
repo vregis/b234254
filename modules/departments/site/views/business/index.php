@@ -8,7 +8,7 @@ use modules\tasks\models\TaskUser;
 use modules\departments\models\Idea;
 use modules\user\models\User;
 use yii\helpers\ArrayHelper;
-
+$this->registerJsFile("/js/bootstrap-confirmation.js");
 $this->registerCssFile("/css/business.css");
 $this->registerCssFile("/css/task.css");
 $this->registerCssFile("/css/contribute-modal.css");
@@ -57,8 +57,7 @@ $this->registerJs($msgJs);
                 <?php endforeach;?>
             <? if(count($self_userTools) == 0 || $i == 0) : ?>
                 <div class="text-center" style="padding:22px 0;">
-                    You do not yet have own business. But you have an idea certainly.<br>
-                    Realize it
+                    Everyone can start a business. All you need is just an idea!
                 </div>
                 <div style="border-top:1px solid #d7d7d7;height:1px;"></div>
             <?php else: ?>
@@ -119,9 +118,13 @@ $this->registerJs($msgJs);
                             </td>
                         </tr>
                         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
-                            <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">Business Dashboard</a>
-                            <a href="javascript:;" class="team" data-toggle="popover" >Team</a>
-                            <a href="<?= Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]) ?>">Delete Business</a>
+                            <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Profile</a>
+                            <a href="javascript:;" class="team" data-toggle="popover">View Team</a>
+                            <a data-toggle="popover" class="delete" href="javascript:;">Delete Business</a>
+                            <?php 
+                            // эта ссылка наверное нужна, так шо оставлю. PS: ваня ХУЙ
+                            //echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id])
+                             ?>
                         </div>
                         <script>
                         $(document).ready(function(){
@@ -156,6 +159,23 @@ $this->registerJs($msgJs);
                                     template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
                                     content : 'Will be available in the next version'
                                 });
+                                $(".huistory a.delete").click(function(){
+                                    $(this).confirmation({
+                                        title: "Are you sure you want to delete [NAME]?",
+                                        placement: "right",
+                                        btnOkClass: "btn btn-success",
+                                        btnCancelClass: "btn btn-danger",
+                                        btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+                                        onConfirm: function (event) {
+                                            $(this).confirmation('destroy');
+                                        },
+                                        onCancel: function (event) {
+                                            $(this).confirmation('destroy');
+                                            return false;
+                                        }
+                                    });
+                                    $(this).confirmation('show');
+                                });
                                 $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
                             }).on('hide.bs.popover',function(){
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
@@ -170,7 +190,7 @@ $this->registerJs($msgJs);
 
                 <? endif; ?>
                 <div class="text-center btn-div" style="padding-top:30px;">
-                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary">Create new business</a>
+                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary">Add business idea</a>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane fade <?= count($self_userTools) == 0 ? 'in active' : '' ?>" id="delegated">
@@ -275,6 +295,11 @@ $this->registerJs($msgJs);
                             <button style="width:100px;" class="btn btn-success">Contribute</button>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center" style="margin-top: 17px;margin-bottom: -15px;">
+                            <a href="#" style="color:#5184f3 !important;">Remind me later</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div><!-- /.modal-content -->
@@ -326,6 +351,21 @@ $this->registerJs($msgJs);
         color:#fff !important;
         border-radius:3px;
     }
+    .huistory a.delete+.popover,.huistory a.delete+.popover .popover-title{
+        background: #fff;
+    border: none;
+    text-align: center;
+    padding:0;
+    }
+    .huistory a.delete+.popover{
+        padding:15px 10px 6px;
+            min-width: 250px;
+    }
+    .huistory a.delete+.popover button{
+        width:83px;
+        margin:15px 5px;
+
+    }
 </style>
 <script>
 $(document).ready(function () {
@@ -336,6 +376,23 @@ $(document).ready(function () {
         template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
         content : 'Will be available in the next version'
     });
+    $(".huistory a.delete").click(function(){
+            $(this).confirmation({
+                title: "Are you sure you want to delete [NAME] ?",
+                placement: "right",
+                btnOkClass: "btn btn-success",
+                btnCancelClass: "btn btn-danger",
+                btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+                onConfirm: function (event) {
+                    $(this).confirmation('destroy');
+                },
+                onCancel: function (event) {
+                    $(this).confirmation('destroy');
+                    return false;
+                }
+            });
+            $(this).confirmation('show');
+        });
     $("#contribute-modal").modal();
     $(".dropmenu1.history1").popover({
         placement:"bottom",

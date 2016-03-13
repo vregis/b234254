@@ -65,13 +65,13 @@ use yii\widgets\ActiveForm;
 
         <div class="row form-group">
             <div class="col-sm-12 <?= isset($idea->errors['name']) ? 'has-error' : '' ?>">
-                <input type="text" maxlength="150" placeholder="Idea name (No more than 150 characters)" name="Idea[name]" value="<?= $idea->name ?>" class="form-control">
+                <input type="text" maxlength="150" placeholder="Idea name" name="Idea[name]" value="<?= $idea->name ?>" class="form-control">
             </div>
         </div>
         <div class="row form-group">
             <div class="col-sm-4 col-sm-offset-4 <?= isset($idea->errors['industry_id']) ? 'has-error' : '' ?>" style="padding-left: 0;">
                 <select class="form-control selectpicker" name="Idea[industry_id]">
-                    <option value="">Select industry</option>
+                    <option value="">Industry</option>
                     <?php foreach($industries as $industrie):?>
                         <option <?php echo $idea && $industrie->id==$idea->industry_id ? 'selected':''?> value="<?php echo $industrie->id?>"><?php echo $industrie->name?></option>
                     <?php endforeach;?>

@@ -129,7 +129,7 @@ $this->registerJs($msgJs);
                                 <?= $form->field($model, 'last_name')->textInput(['placeholder'=>'Last name', 'class'=>'form-control'])->label(false); ?>
                             </div>
                             <div class="col-sm-12">
-                                <?= $form->field($model, 'status')->textInput(['placeholder'=>'My motto', 'class'=>'form-control'])->label(false); ?>
+                                <?= $form->field($model, 'status')->textInput(['placeholder'=>'Your motto', 'class'=>'form-control'])->label(false); ?>
                             </div>
                         </td>
                     </tr>

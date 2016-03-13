@@ -57,15 +57,15 @@ use yii\widgets\ActiveForm;
         <div class="row form-group <?= isset($benefit->errors['first']) || isset($benefit->errors['second']) || isset($benefit->errors['third'])? 'has-error' : '' ?>">
             <div class="col-sm-4">
                 <div class="digit">1</div>
-                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="First benefit (No more than 200 characters)"  name="Benefit[first]"><?= $benefit->first ?></textarea>
+                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="First benefit"  name="Benefit[first]"><?= $benefit->first ?></textarea>
             </div>
             <div class="col-sm-4">
                 <div class="digit">2</div>
-                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="Second benefit (No more than 200 characters)"  name="Benefit[second]"><?= $benefit->second ?></textarea>
+                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="Second benefit"  name="Benefit[second]"><?= $benefit->second ?></textarea>
             </div>
             <div class="col-sm-4">
                 <div class="digit">3</div>
-                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="Third benefit (No more than 200 characters)"  name="Benefit[third]"><?= $benefit->third ?></textarea>
+                <textarea style="height:100px;resize:none;" maxlength="200" class="form-control" placeholder="Third benefit"  name="Benefit[third]"><?= $benefit->third ?></textarea>
             </div>
         </div>
         <div class="row form-group" style="margin-bottom:0;">

@@ -250,7 +250,7 @@ $this->beginPage();
 <div class="page-footer">
     <div class="container">
         <span><?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>
-            <a data-toggle="modal" href="#support" class="btn-support">Support</a>
+            <a data-toggle="modal" href="#support" class="btn-support">Support us</a>
 
     </div>
 </div>

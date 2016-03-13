@@ -55,8 +55,9 @@ $this->registerJs($msgJs);
                 <div class="signin-btn active">
             <span class="icon"></span>Sign in
         </div>
-        <div class="clearfix" style="height: 60px !important;"></div>
+        <div class="clearfix" style="height: 30px !important;"></div>
     </div>
+    <div class="text-center" style="color: rgba(91,91,91,.6);margin: 0 auto 15px;">Let’s Get Started!</div>
         <div class="alert alert-danger display-hide">
             <button class="close" data-close="alert"></button>
             <div class="has-error"><?= $form->errorSummary($model, ['class' => 'help-block']) ?></div>
