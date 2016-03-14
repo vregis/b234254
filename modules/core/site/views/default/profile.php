@@ -385,7 +385,7 @@ $this->registerJs($msgJs);
                         <?php foreach($specializations as $sp):?>
                             <div class="dynamic-block col-md-4">
                                 <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
-                                    <select class="update form-control selectpicker">
+                                    <select data-id = '<?php echo $sp->id?>' class="update change-industry form-control selectpicker">
                                         <option class="start" value="0">Select Industry</option>
                                         <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                             <option <?php echo $sp->specialization_id == $spec->id?'selected':''?> value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
@@ -395,41 +395,79 @@ $this->registerJs($msgJs);
                                 <div data-id = '<?php echo $sp->id?>' class="action_btn btn btn-primary circle del_special"><i class="ico-delete"></i></div>
                             </div>
                          <?php endforeach;?>
+                        <?php if(count($specializations) == 1):?>
+                            <div class="dynamic-block col-md-4">
+                                <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                                    <select class="update form-control add-industry selectpicker">
+                                        <option class="start" value="0">Select Industry</option>
+                                        <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
+                                            <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="action_btn btn btn-primary circle del_special"><i class="ico-delete"></i></div>
+                            </div>
+                            <div class="dynamic-block col-md-4">
+                                <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                                    <select class="update form-control add-industry selectpicker">
+                                        <option class="start" value="0">Select Industry</option>
+                                        <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
+                                            <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                            </div>
+                        <?php endif;?>
+
+                        <?php if(count($specializations) == 2):?>
+                            <div class="dynamic-block col-md-4">
+                                <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
+                                    <select class="update form-control add-industry selectpicker">
+                                        <option class="start" value="0">Select Industry</option>
+                                        <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
+                                            <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                            </div>
+                        <?php endif; ?>
 
                     <?php else:?>
 
                     <div class="dynamic-block col-md-4">
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
-                            <select class="update form-control selectpicker">
+                            <select class="update form-control add-industry selectpicker">
                                 <option class="start" value="0">Select Industry</option>
                                 <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                     <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                        <div class="action_btn btn btn-primary circle del_special"><i class="ico-delete"></i></div>
                     </div>
                     <div class="dynamic-block col-md-4">
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
-                            <select class="update form-control selectpicker">
+                            <select class="update form-control add-industry selectpicker">
                                 <option class="start" value="0">Select Industry</option>
                                 <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                     <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                        <div class="action_btn btn btn-primary circle del_special"><i class="ico-delete"></i></div>
                     </div>
                     <div class="dynamic-block col-md-4">
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
-                            <select class="update form-control selectpicker">
+                            <select class="update form-control add-industry selectpicker">
                                 <option class="start" value="0">Select Industry</option>
                                 <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                     <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                        <div class="action_btn btn btn-primary circle plus add-industry"><i class="ico-add"></i></div>
                     </div>
                     <?php endif;?>
                 </div>
@@ -681,6 +719,43 @@ $this->registerJs($msgJs);
             dataType: 'json',
             data: {field:field, value:value},
             success: function(){
+
+            }
+        })
+    })
+
+    $(document).on('click', '.ico-add', function(){
+        $.ajax({
+            url: '/core/add-industry',
+            dataType: 'json',
+            type: 'post',
+            success: function(response){
+                $('.industry').append(response.html);
+            }
+        })
+    })
+
+    $('.add-industry').change(function(){
+        $(this).removeClass('add-industry');
+        $(this).addClass('change-industry');
+        $.ajax({
+            url: '/core/add-new-ind',
+            data: {id:$(this).val()},
+            dataType: 'json',
+            type: 'post',
+            success: function(response){
+
+            }
+        })
+    })
+
+    $('.change-industry').change(function(){
+        $.ajax({
+            url: '/core/change-ind',
+            data: {id:$(this).val(), ind:$(this).attr('data-id')},
+            dataType: 'json',
+            type: 'post',
+            success: function(response){
 
             }
         })

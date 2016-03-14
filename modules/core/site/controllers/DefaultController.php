@@ -105,7 +105,10 @@ class DefaultController extends CommonController
                             'change-sell-department',
                             'change-show-department',
                             'privacy-settings',
-                            'del-specialization'
+                            'del-specialization',
+                            'add-industry',
+                            'add-new-ind',
+                            'change-ind'
                         ],
                         'roles' => ['@']
                     ],
@@ -678,6 +681,25 @@ HTML;
             $response['error'] = true;
         }
         return(json_encode($response));
+    }
+
+    public function actionAddIndustry(){
+        $response['html'] = $this->renderPartial('blocks/industry_block');
+        return json_encode($response);
+    }
+
+    public function actionAddNewInd(){
+        $ind = new UserSpecialization();
+        $ind->user_id = Yii::$app->user->id;
+        $ind->specialization_id = $_POST['id'];
+        $ind->save();
+    }
+
+    public function actionChangeInd(){
+        $ind = UserSpecialization::find()->where(['id' => $_POST['ind']])->one();
+
+        $ind->specialization_id = $_POST['id'];
+        $ind->save(false);
     }
 
 }
