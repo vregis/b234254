@@ -376,6 +376,7 @@ class User extends ActiveRecord implements IdentityInterface
         }
         else {
             $this->user_type = User::TYPE_SPECIALIST;
+            $this->user_registration_type = 1;
         }
         if ($this->save()) {
 

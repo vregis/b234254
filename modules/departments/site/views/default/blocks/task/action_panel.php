@@ -276,7 +276,7 @@ if($start_date != '') {
                         url: '/tasks/get-current-delegate-task',
                         type: 'post',
                         dataType: 'json',
-                        data: {id:'<?php echo $delegate_task->id?>'},
+                        data: {id:'<?php echo @$delegate_task->id?>'},
                         success: function(response){
                             if($('#input-price').val() == response.price && $('#input-time').val() == response.time){
                                 $('.accept-change').html('Accept');
