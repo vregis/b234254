@@ -121,10 +121,16 @@ $this->registerJs($msgJs);
                             <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Profile</a>
                             <a href="javascript:;" class="team" data-toggle="popover">View Team</a>
                             <a data-toggle="popover" class="delete<?php echo $i?> delete" href="javascript:;">Delete Business</a>
-                            <?php 
-                            // эта ссылка наверное нужна, так шо оставлю. PS: ваня ХУЙ
-                            //echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id])
-                             ?>
+                            <div id="delete-block" style="display: none;">
+                                Are you sure you want to delete <?php echo $current_userTool->name?> ?
+                                <br>
+                                <button class="btn btn-danger">
+                                    <i class="glyphicon glyphicon-remove"></i> No
+                                </button>
+                                <button class="btn btn-success" href="#" target="_self">
+                                    <i class="glyphicon glyphicon-ok"></i> <i class="icon-ok-sign icon-white"></i> Yes
+                                </button>
+                            </div>
                         </div>
                         <script>
                         $(document).ready(function(){
@@ -160,22 +166,17 @@ $this->registerJs($msgJs);
                                     content : 'Will be available in the next version'
                                 });
                                 $(".huistory a.delete").click(function(){
-                                    $(this).confirmation({
-                                        title: "Are you sure you want to delete <?php echo $current_userTool->name?>?",
-                                        placement: "right",
-                                        btnOkClass: "btn btn-success",
-                                        btnCancelClass: "btn btn-danger",
-                                        btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
-                                        onConfirm: function (event) {
-                                            $(this).confirmation('destroy');
-                                            document.location.href = '<?php echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]);?>';
-                                        },
-                                        onCancel: function (event) {
-                                            $(this).confirmation('destroy');
-                                            return false;
-                                        }
+                                    var delBlock = $(this).next('#delete-block');
+                                    var toHide = $(this).parent().find('a');
+                                    delBlock.show();
+                                    toHide.hide();
+                                    delBlock.find(".btn-success").click(function(){
+                                        document.location.href = '<?php echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]);?>';
                                     });
-                                    $(this).confirmation('show');
+                                    delBlock.find(".btn-danger").click(function(){
+                                        delBlock.hide();
+                                        toHide.show();
+                                    });
                                 });
                                 $(this).find('.fa').removeClass("fa-angle-down").addClass('fa-angle-up');
                             }).on('hide.bs.popover',function(){
@@ -185,22 +186,17 @@ $this->registerJs($msgJs);
 
 
                         $(".huistory a.delete<?php echo $i?>").click(function(){
-                            $(this).confirmation({
-                                title: "Are you sure you want to delete <?php echo $current_userTool->name?> ?",
-                                placement: "right",
-                                btnOkClass: "btn btn-success",
-                                btnCancelClass: "btn btn-danger",
-                                btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
-                                onConfirm: function (event) {
-                                    $(this).confirmation('destroy');
-                                    document.location.href = '<?php echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]);?>';
-                                },
-                                onCancel: function (event) {
-                                    $(this).confirmation('destroy');
-                                    return false;
-                                }
+                            var delBlock = $(this).next('#delete-block');
+                            var toHide = $(this).parent().find('a');
+                            delBlock.show();
+                            toHide.hide();
+                            delBlock.find(".btn-success").click(function(){
+                                document.location.href = '<?php echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]);?>';
                             });
-                            $(this).confirmation('show');
+                            delBlock.find(".btn-danger").click(function(){
+                                delBlock.hide();
+                                toHide.show();
+                            });
                         });
 
                         </script>
@@ -338,6 +334,13 @@ $this->registerJs($msgJs);
 .popover.delegation{
     min-width:auto !important;
     width:auto !important;
+}
+#delete-block{
+    text-align:center;
+}
+#delete-block button{
+    margin-top:5px;
+    width:75px;
 }
 .popover.delegation .popover-content {
     padding: 9px 14px !important;
