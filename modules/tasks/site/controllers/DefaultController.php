@@ -48,7 +48,8 @@ class DefaultController extends Controller
                             'reject',
                             'sendfeedback',
                             'submit',
-                            'readlog'
+                            'readlog',
+                            'get-current-delegate-task'
                         ],
                         'roles' => ['@']
                     ]
@@ -151,6 +152,13 @@ class DefaultController extends Controller
             }
         }
         return json_encode($_POST);
+    }
+
+    public function actionGetCurrentDelegateTask(){
+        $task = DelegateTask::find()->where(['id' => $_POST['id']])->one();
+        $response['time'] = $task->time;
+        $response['price'] = $task->price;
+        return json_encode($response);
     }
 
 }

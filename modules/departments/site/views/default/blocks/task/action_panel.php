@@ -95,11 +95,11 @@ if($start_date != '') {
         <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
             <span id="input-time"><?= $task_user->time ?>h</span>
         <? else : ?>
-            <input id="input-time" value="<?= $task_user->time ?>h" type="text">
+            <input class="chngval" id="input-time" value="<?= $task_user->time ?>h" type="text">
         <? endif; ?>
     <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
-            <input id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>h" type="text">
+            <input class="chngval" id="input-time" data-value="<?= $delegate_task->time ?>" value="<?= $delegate_task->time ?>h" type="text">
         <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
             <span id="input-time"><?= $delegate_task->counter_time ?></span>
         <? else : ?>
@@ -115,11 +115,11 @@ if($start_date != '') {
         <? if($delegate_task && $delegate_task->status >= DelegateTask::$status_active) : ?>
             <span id="input-price"><?= $task_user->price ?></span>
         <? else : ?>
-            <input id="input-price" value="<?= $task_user->price ?>" type="text">
+            <input class="chngval" id="input-price" value="<?= $task_user->price ?>" type="text">
         <? endif; ?>
     <? else : ?>
         <? if($delegate_task->status == DelegateTask::$status_inactive) : ?>
-            <input id="input-price" data-value="<?= $delegate_task->price ?>" value="<?= $delegate_task->price ?>" type="text">
+            <input class="chngval" id="input-price" data-value="<?= $delegate_task->price ?>" value="<?= $delegate_task->price ?>" type="text">
         <? elseif($delegate_task->status == DelegateTask::$status_offer) : ?>
             <span id="input-price"><?= $delegate_task->counter_price ?></span>
         <? else : ?>
@@ -158,8 +158,12 @@ if($start_date != '') {
         <? if($delegate_task->status == DelegateTask::$status_active) : ?>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" class="btn btn-danger confirn confirn-btn offer delegate-task-id" data-status="0" data-delegate_task_id="<?= $delegate_task->id ?>">Cancel delegate</button>
         <? else : ?>
+            <?php if($delegate_task->status == 7):?>
+                <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger disabled static" data-delegate_task_id="<?= $delegate_task->id ?>" data-status="0">Delegate</button>
+            <?php else:?>
             <button style="display: inline-block;font-size: 12px;padding: 0 10px;line-height: 1;" onclick="return false" class="btn btn-danger confirn confirn-btn offer" data-delegate_task_id="<?= $delegate_task->id ?>" data-status="0">Cancel delegate</button>
-        <? endif; ?>
+            <?php endif;?>
+            <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
@@ -207,7 +211,7 @@ if($start_date != '') {
             <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
             <?php else:?>
                 <?php if($delegate_task && $delegate_task->status == 7):?>
-                    <button class="btn btn-success disabled static" onclick="return false" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Complete</button>
+                    <button class="btn btn-success disabled static" onclick="return false" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
                     <?php else:?>
                 <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
                     <?php endif;?>
@@ -266,14 +270,29 @@ if($start_date != '') {
             </style>
 
             <script>
-                $(document).on('keyup', '#input-price', function(){
-                    $('.accept-change').html('Counter <br/ > offer').css({
-                        'width': '93px',
-                        'display': 'inline-block',
-                        'font-size': '12px',
-                        'padding': '0 13px',
-                        'line-height': 1,
-                    });
+                $(document).on('keyup', '.chngval', function(){
+
+                    $.ajax({
+                        url: '/tasks/get-current-delegate-task',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {id:'<?php echo $delegate_task->id?>'},
+                        success: function(response){
+                            if($('#input-price').val() == response.price && $('#input-time').val() == response.time){
+                                $('.accept-change').html('Accept');
+                            }else{
+                                $('.accept-change').html('Counter <br/ > offer').css({
+                                    'width': '93px',
+                                    'display': 'inline-block',
+                                    'font-size': '12px',
+                                    'padding': '0 13px',
+                                    'line-height': 1,
+                                });
+                            }
+                        }
+                    })
+
+
                 })
             </script>
 

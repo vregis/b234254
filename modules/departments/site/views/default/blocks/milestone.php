@@ -101,7 +101,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                     <?php if($kk == count($tasks) && count($tasks) != 0):?>
                         <span class="label label-lg"><?php //echo count($tasks) == 0?'<img src="/images/galka-2.png" alt="" class="check">':''; ?><img src="/images/galka-2.png" alt="" class="check"></span>
                     <?php else:?>
-                    <span class="label label-lg"><?php //echo count($tasks) == 0?'<img src="/images/galka-2.png" alt="" class="check">':''; ?>  <?php echo count($tasks)!=0?count($tasks):''?> <span style="display:none" class="label2 label-danger circle">3</span></span>
+                    <span class="label label-lg"><?php //echo count($tasks) == 0?'<img src="/images/galka-2.png" alt="" class="check">':''; ?>  <?php echo count($tasks)!=0?count($tasks)-$kk:''?> <span style="display:none" class="label2 label-danger circle">3</span></span>
                     <?php endif;?>
                 </div>
             </div>
