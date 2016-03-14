@@ -74,7 +74,36 @@ use modules\user\site\controllers\ProfileController;
     <link rel="stylesheet" type="text/css" href="/metronic/theme/assets/global/plugins/bootstrap-toastr/toastr.min.css">
     <link rel="stylesheet" type="text/css" href="/plugins/custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <script type="text/javascript" src="/plugins/custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <link href="/fonts/Open Sans/OpenSans.css" rel="stylesheet">
+    <!-- <link rel='stylesheet' href='/css/mainpage/bootstrap.min.css'> -->
+    <link rel='stylesheet' href='/metronic/theme/assets/global/plugins/simple-line-icons/simple-line-icons.css'>
 
+
+
+
+
+    <?php
+    $this->registerJsFile("/js/global/index.js");
+    $this->registerJsFile("/js/bootbox.min.js");
+    // $this->registerJsFile("/js/jquery.blockui.min.js");
+    $this->registerJsFile("/js/app.js");
+    $this->registerCssFile("/plugins/venobox/venobox.css");
+    $this->registerJsFile("/plugins/venobox/venobox.min.js");
+    ?>
+    <!-- <link rel='stylesheet' href='/css/mainpage/style.css'> -->
+    <link rel='stylesheet' href='/css/mainpage/color.css'>
+    <link rel='stylesheet' href='/css/mainpage/vendor.css'>
+    <!-- <link rel='stylesheet' href='/css/mainpage/title-size.css'> -->
+    <link rel='stylesheet' href='/css/mainpage/custom.css'>
+        <!-- script -->
+<!--[if lte IE 9]><!-->
+<script src='/js/mainpage/vendor/html5shiv.min.js'></script>
+<!--<![endif]-->
+<!-- <script src='/js/mainpage/vendor/bootstrap.min.js'></script> -->
+<script src='/js/mainpage/vendor/vendor.js'></script>
+<script src='/js/mainpage/variable.js'></script>
+<script src='/js/mainpage/main.js'></script>
+<!-- /script -->
     <link rel="stylesheet" type="text/css" href="/plugins/bsb-icons/style.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/shared_business.css">
@@ -90,7 +119,19 @@ use modules\user\site\controllers\ProfileController;
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 <body style="opacity:1">
-
+<div id="bg">
+    <div id="img"></div>
+    <div id="video"></div>
+    <div id="overlay"></div>
+    <div id="effect">
+        <img src="/images/mainpage/bg/cloud-01.png" alt="" id="cloud1">
+        <img src="/images/mainpage/bg/cloud-02.png" alt="" id="cloud2">
+        <img src="/images/mainpage/bg/cloud-03.png" alt="" id="cloud3">
+        <img src="/images/mainpage/bg/cloud-04.png" alt="" id="cloud4">
+    </div>
+    <canvas id="js-canvas"></canvas>
+</div>
+<div id="site-main">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -247,9 +288,10 @@ use modules\user\site\controllers\ProfileController;
             </div>
         </div>
     </div>
+</div>
 <script>
     $(document).ready(function(){
-        $('body').mCustomScrollbar({
+        $('#site-main').mCustomScrollbar({
             theme:"dark"
         });
         $("#benefits .content table tr td .btn.left-circle").hover(function(){
