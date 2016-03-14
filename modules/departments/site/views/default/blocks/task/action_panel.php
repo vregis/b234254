@@ -267,7 +267,13 @@ if($start_date != '') {
 
             <script>
                 $(document).on('keyup', '#input-price', function(){
-                    $('.accept-change').text('Counter offer');
+                    $('.accept-change').html('Counter <br/ > offer').css({
+                        'width': '93px',
+                        'display': 'inline-block',
+                        'font-size': '12px',
+                        'padding': '0 13px',
+                        'line-height': 1,
+                    });
                 })
             </script>
 

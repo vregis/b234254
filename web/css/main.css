@@ -3382,7 +3382,7 @@ Page Footer
     text-decoration:none;
     color:black;
 }
-.btn-support{
+.btn-support,.btn-support:focus{
     color:#999;
     font-size:15px;
     text-align:center;
@@ -3397,7 +3397,7 @@ Page Footer
     right:37px;
     bottom:5px;
 }
-.btn-support:hover,.btn-support:focus{
+.btn-support:hover{
     background:rgba(153,153,153,0.4);
     color:rgb(219,219,219);
 }

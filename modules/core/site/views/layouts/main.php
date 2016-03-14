@@ -295,8 +295,8 @@ $this->beginPage();
                 </div>
             </div>
             <div class="modal-footer" style="border: 0;padding-top: 0;">
-                <button type="button" class="btn btn-danger" style="width:85px;" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary support_send" style="width:85px;">Send</button>
+                <button type="button" class="btn btn-primary" style="width:85px;" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success support_send" style="width:85px;">Send</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -315,7 +315,7 @@ $this->beginPage();
         width:100%; 
         padding:10px;
         resize:none;
-        height: 290px;
+        height: 150px;
     }
     .has-error .form-control{
         border-color: #e73d4a !important;
