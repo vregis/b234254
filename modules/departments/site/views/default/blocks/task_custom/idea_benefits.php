@@ -13,8 +13,8 @@ use yii\widgets\ActiveForm;
 ?>
 <div class="container-fluid">
   <div class="row task-title" style="margin-bottom: 8px;">
-      <?php $tool = \modules\tasks\models\UserTool::find()->where(['user_id' => Yii::$app->user->id])->all();?>
-      <?php if(count($tool) > 2):?>
+      <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
+      <?php if(!isset($_GET['first']) || $user->is_new == 1 || $user->user_registration_type == 1):?>
           <div class="row task-body" style="margin-top:40px;">
         <div class="desc" style="padding:0 15px;">
             <div class="step">
@@ -49,7 +49,11 @@ use yii\widgets\ActiveForm;
         <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Benefits</div>
       <?php endif; ?>
         <div class="name text-center">
-            <span id="title-task text-center"><?= $task->name ?></span>
+            <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>
+                <span id="title-task text-center"><?php echo $task->description_road?></span>
+            <?php else:?>
+                <span id="title-task text-center"><?= $task->name ?></span>
+            <?php endif;?>
         </div>
     </div>
     <?php $form = ActiveForm::begin() ?>
