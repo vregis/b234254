@@ -387,7 +387,7 @@ $this->registerJs($msgJs);
                                 <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                                     <select class="update form-control selectpicker">
                                         <option class="start" value="0">Select Industry</option>
-                                        <?php foreach(Specialization::find()->all() as $spec):?>
+                                        <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                             <option <?php echo $sp->specialization_id == $spec->id?'selected':''?> value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                         <?php endforeach; ?>
                                     </select>
@@ -402,7 +402,7 @@ $this->registerJs($msgJs);
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                             <select class="update form-control selectpicker">
                                 <option class="start" value="0">Select Industry</option>
-                                <?php foreach(Specialization::find()->all() as $spec):?>
+                                <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                     <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                 <?php endforeach; ?>
                             </select>
@@ -413,7 +413,7 @@ $this->registerJs($msgJs);
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                             <select class="update form-control selectpicker">
                                 <option class="start" value="0">Select Industry</option>
-                                <?php foreach(Specialization::find()->all() as $spec):?>
+                                <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                     <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                 <?php endforeach; ?>
                             </select>
@@ -424,7 +424,7 @@ $this->registerJs($msgJs);
                         <div class="col-sm-11" style="padding-left: 0;padding-right: 0;">
                             <select class="update form-control selectpicker">
                                 <option class="start" value="0">Select Industry</option>
-                                <?php foreach(Specialization::find()->all() as $spec):?>
+                                <?php foreach(\modules\departments\models\Industry::find()->all() as $spec):?>
                                     <option value="<?php echo $spec->id?>"><?php echo $spec->name?></option>
                                 <?php endforeach; ?>
                             </select>

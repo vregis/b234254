@@ -120,7 +120,7 @@ $this->registerJs($msgJs);
                         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
                             <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Profile</a>
                             <a href="javascript:;" class="team" data-toggle="popover">View Team</a>
-                            <a data-toggle="popover" class="delete" href="javascript:;">Delete Business</a>
+                            <a data-toggle="popover" class="delete<?php echo $i?> delete" href="javascript:;">Delete Business</a>
                             <?php 
                             // эта ссылка наверное нужна, так шо оставлю. PS: ваня ХУЙ
                             //echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id])
@@ -161,13 +161,14 @@ $this->registerJs($msgJs);
                                 });
                                 $(".huistory a.delete").click(function(){
                                     $(this).confirmation({
-                                        title: "Are you sure you want to delete [NAME]?",
+                                        title: "Are you sure you want to delete <?php echo $current_userTool->name?>?",
                                         placement: "right",
                                         btnOkClass: "btn btn-success",
                                         btnCancelClass: "btn btn-danger",
                                         btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
                                         onConfirm: function (event) {
                                             $(this).confirmation('destroy');
+                                            document.location.href = '<?php echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]);?>';
                                         },
                                         onCancel: function (event) {
                                             $(this).confirmation('destroy');
@@ -181,6 +182,27 @@ $this->registerJs($msgJs);
                                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
                             });
                         });
+
+
+                        $(".huistory a.delete<?php echo $i?>").click(function(){
+                            $(this).confirmation({
+                                title: "Are you sure you want to delete <?php echo $current_userTool->name?> ?",
+                                placement: "right",
+                                btnOkClass: "btn btn-success",
+                                btnCancelClass: "btn btn-danger",
+                                btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+                                onConfirm: function (event) {
+                                    $(this).confirmation('destroy');
+                                    document.location.href = '<?php echo Url::toRoute(['/departments/business/delete','id' => $current_userTool->id]);?>';
+                                },
+                                onCancel: function (event) {
+                                    $(this).confirmation('destroy');
+                                    return false;
+                                }
+                            });
+                            $(this).confirmation('show');
+                        });
+
                         </script>
 
                             <?php endif;?>
@@ -376,9 +398,9 @@ $(document).ready(function () {
         template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
         content : 'Will be available in the next version'
     });
-    $(".huistory a.delete").click(function(){
+  /*  $(".huistory a.delete").click(function(){
             $(this).confirmation({
-                title: "Are you sure you want to delete [NAME] ?",
+                title: "Are you sure you want to delete <?php echo $current_userTool->name?> ?",
                 placement: "right",
                 btnOkClass: "btn btn-success",
                 btnCancelClass: "btn btn-danger",
@@ -392,7 +414,7 @@ $(document).ready(function () {
                 }
             });
             $(this).confirmation('show');
-        });
+        });*/
     $("#contribute-modal").modal();
     $(".dropmenu1.history1").popover({
         placement:"bottom",

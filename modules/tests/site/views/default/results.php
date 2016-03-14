@@ -75,7 +75,7 @@ $this->title = 'Your role in business';
                                 </div>
                                 <div class="hui2"><?php echo $test_result_inform[$i]['result']->name?></div>
                             </div>
-                            <div class="result-integer"><?=$test_result_inform[$i]['user_result']['points']?></div>
+                            <div class="result-integer"><?php echo floor($test_result_inform[$i]['user_result']->points*(100/$max_points))?>%<? //=$test_result_inform[$i]['user_result']['points']?></div>
                             <i class="fa fa-angle-up"></i>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ $this->title = 'Your role in business';
                                 </div>
                                 <div class="hui2"><?php echo $test_result_inform[$i]['result']->name?></div>
                             </div>
-                            <div class="result-integer"><?=$test_result_inform[$i]['user_result']['points']?></div>
+                            <div class="result-integer"><?php echo floor($test_result_inform[$i]['user_result']->points*(100/$max_points))?>%<? //=$test_result_inform[$i]['user_result']['points']?></div>
                             <i class="fa fa-angle-down"></i>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ $this->title = 'Your role in business';
                                 </div>
                                 <div class="hui2"><?php echo $test_result_inform[$i]['result']->name?></div>
                             </div>
-                            <div class="result-integer"><?=$test_result_inform[$i]['user_result']['points']?></div>
+                            <div class="result-integer"><?php echo floor($test_result_inform[$i]['user_result']->points*(100/$max_points))?>%<? //=$test_result_inform[$i]['user_result']['points']?></div>
                             <i class="fa fa-angle-down"></i>
                         </div>
 

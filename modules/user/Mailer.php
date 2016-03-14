@@ -84,9 +84,9 @@ class Mailer extends Component
     {
 //vd($user->password_hash.'*'.$user->auth_key );
         Yii::$app->mailer->compose(['html' => 'confirmation-common'], ['hash'=> $user->password_hash,'key'=> $user->auth_key])
-            ->setFrom(['support@bigsbusiness.com' => 'Bigsbusiness'])
+            ->setFrom(['support@bigsbusiness.com' => 'Big S Business'])
             ->setTo($user->email)
-            ->setSubject(Yii::t('mail','Registration complete'))
+            ->setSubject(Yii::t('mail','Confirm your email'))
 //            ->setTextBody('<b>HTML content</b>')
             ->send();
     }
