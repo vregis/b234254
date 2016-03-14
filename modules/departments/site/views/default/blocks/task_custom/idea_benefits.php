@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 <div class="container-fluid">
   <div class="row task-title" style="margin-bottom: 8px;">
       <?php $user = \modules\user\models\User::find()->where(['id' => Yii::$app->user->id])->one();?>
-      <?php if(!isset($_GET['first']) || $user->is_new == 1 || $user->user_registration_type == 1):?>
+      <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>
           <div class="row task-body" style="margin-top:40px;">
         <div class="desc" style="padding:0 15px;">
             <div class="step">
