@@ -128,24 +128,24 @@ use yii\widgets\ActiveForm;
     });
 </script>
 <style>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic); */
     #side_road .progress{
         height:75%;
     }
-    .task-custom .btn-lg{
+/*     .task-custom .btn-lg{
         line-height: 23px;
-    }
+    } */
     .digit{
         font-size: 45px;
         font-weight: 100;
         text-align:center;
     }
-        .form-group {
+    .form-group {
         margin-bottom: 30px;
     }
-    .b-page-checkbox-wrap .md-radio.has-test label > .box {
+/*     .b-page-checkbox-wrap .md-radio.has-test label > .box {
         line-height: 23px;
-    }
+    } */
 </style>
 
 <style>
