@@ -400,7 +400,7 @@ $(document).ready(function () {
     });
   /*  $(".huistory a.delete").click(function(){
             $(this).confirmation({
-                title: "Are you sure you want to delete <?php echo $current_userTool->name?> ?",
+                title: "Are you sure you want to delete <?php //echo $current_userTool->name?> ?",
                 placement: "right",
                 btnOkClass: "btn btn-success",
                 btnCancelClass: "btn btn-danger",

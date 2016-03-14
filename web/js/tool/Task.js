@@ -437,13 +437,16 @@ function Task(task_user_id, is_my, is_custom) {
             $(".btn[aria-controls='counter']").removeClass('active');
         });
         $('#get_money').off();
-        $('#get_money[data-toggle="popover"]').popover({
-            placement: 'bottom',
-            html:true,
-            trigger:"click",
-            content:"Payment has been reserved"
-        });
-        setTimeout(function(){$('#get_money[data-toggle="popover"]').popover('show');}, 500);
+        // пока убрали
+        if($("#input-price").text() != 0){
+            $('#get_money[data-toggle="popover"]').popover({
+                placement: 'bottom',
+                html:true,
+                trigger:"hover",
+                content:"Payment has been reserved"
+            });
+        }
+        // setTimeout(function(){$('#get_money[data-toggle="popover"]').popover('show');}, 500);
         
         $('#get_money_confirm').on('click', function(e){
             e.preventDefault();
