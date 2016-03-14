@@ -143,6 +143,7 @@ use yii\widgets\ActiveForm;
         font-size: 45px;
         font-weight: 100;
         text-align:center;
+            margin-top: -10px;
     }
     .form-group {
         margin-bottom: 30px;

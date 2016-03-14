@@ -90,7 +90,7 @@ $this->registerJs($msgJs);
                             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
                             ?>
                             <td>
-                                <a href="javascript:;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                                <a href="javascript:;" style="padding-top: 1px;padding-left: 1px;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                             </td>
                             <td style="text-transform: uppercase">
                                 <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"

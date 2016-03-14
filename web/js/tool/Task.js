@@ -584,7 +584,7 @@ function Task(task_user_id, is_my, is_custom) {
 
             if(getPrice() == 0) {
                 $(this).confirmation({
-                    title: "Are you trying to confirm the task without payment?",
+                    title: "Are you trying to accept the task without payment?",
                     placement: "bottom",
                     btnOkClass: "btn btn-success huinya-1",
                     btnCancelClass: "btn btn-danger huinya-2",

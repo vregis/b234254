@@ -68,7 +68,7 @@ use yii\helpers\Url;
 
         <tr id="toolid-<?php echo $userTool->id?>">
                 <td>
-                <a href="javascript:;" class="dropmenu-two history<?php echo $userTool->id?> btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                <a href="javascript:;" style="padding-top: 1px;padding-left: 1px;" class="dropmenu-two history<?php echo $userTool->id?> btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
             </td>
             <td style="text-transform: uppercase">
                 <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $userTool->id]) ?>"
