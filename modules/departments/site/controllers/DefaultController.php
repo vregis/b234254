@@ -181,6 +181,16 @@ class DefaultController extends Controller
         if($task_id != 0) {
             return $this->redirect(['/departments/task', 'id' => $task_id, 'first' => 1]);
         }
+
+        if(isset($_GET['start']) && $_GET['start'] == 1){
+            if($user->user_type == 0){
+                return $this->redirect(['/departments/business']);
+            }else{
+                return $this->redirect(['/departments/business#delegated']);
+            }
+
+        }
+
         return $this->render('index', [
             'ml' => $this->get_milestones($userTool),
             'task_open_id' => $task_id

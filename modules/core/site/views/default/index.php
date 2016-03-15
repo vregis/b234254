@@ -173,7 +173,7 @@ use modules\core\widgets\Flash;
 </div>
 <!-- /subscribe -->
 <div class="planet">
-    <a href="<?= Url::toRoute(['/departments']) ?>" class="enter-btn"><div class="hover"></div><i class="ico-power1"></i></a>
+    <a href="<?= Url::toRoute(['/departments?start=1']) ?>" class="enter-btn"><div class="hover"></div><i class="ico-power1"></i></a>
 </div>
 
 <!-- site main -->
