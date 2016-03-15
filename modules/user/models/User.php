@@ -371,7 +371,7 @@ class User extends ActiveRecord implements IdentityInterface
         //vd($this->getErrors());
         //vd($this);
         $previous = Url::previous();
-        if($previous == Url::toRoute(['/departments'])) {
+        if($previous == Url::toRoute(['/departments']) || $previous == Url::toRoute(['/departments?start=1'])) {
             $this->user_type = User::TYPE_EMPLOYER;
         }
         else {
