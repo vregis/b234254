@@ -118,7 +118,7 @@ $this->registerJs($msgJs);
                             </td>
                         </tr>
                         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
-                            <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Profile</a>
+                            <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Business</a>
                             <a href="javascript:;" class="team" data-toggle="popover">View Team</a>
                             <a data-toggle="popover" class="delete<?php echo $i?> delete" href="javascript:;">Delete Business</a>
                             <div id="delete-block" style="display: none;">
