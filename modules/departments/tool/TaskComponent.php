@@ -484,6 +484,8 @@ class TaskComponent extends Component
         $post = Yii::$app->request->post();
         $task_user_id = $post['task_user_id'];
         $task_user = TaskUser::find()->where(['id' => $task_user_id])->one();
+        $task_user->status = 2;
+        $task_user->save(false);
         $response['error'] = false;
         $delegate_task = DelegateTask::getCurrentDelegateTask($task_user_id, false);
         $delegate_task->status = 7;

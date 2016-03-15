@@ -103,9 +103,12 @@ class DefaultController extends Controller
         $task_user->save();
         $delegate_task = DelegateTask::getCurrentDelegateTask($id, true);
         if($delegate_task) {
-            if($delegate_task->price == 0){
+            if($delegate_task->price == 0 && $delegate_task->counter_price == 0){
                 $delegate_task->status = 7;
             }else{
+                $task_user = TaskUser::find()->where(['id' => $id])->one();
+                $task_user->status = 1;
+                $task_user->save();
                 $delegate_task->status = DelegateTask::$status_checked;
             }
             $delegate_task->save();
