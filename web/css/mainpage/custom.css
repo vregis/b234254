@@ -245,6 +245,19 @@
         margin-bottom:47%;
     }
     .enter-btn{
+        left: calc(50% - 118px);
+        top: calc(50% - 118px);
+        width: 236px;
+        height: 236px;
+        line-height:236px;
+        font-size:3.5em;
+    }   
+    .enter-btn .hover{
+        border:20px solid #fff;
+    }
+}
+@media (min-width:1600px) and (max-height:1200px){
+    .enter-btn{
         left: calc(50% - 120px);
         top: calc(50% - 120px);
         width: 240px;
@@ -256,7 +269,6 @@
         border:20px solid #fff;
     }
 }
-
 @media (min-width:1600px) and (max-height:1079px){
      .section-header{
         margin-bottom:34%;
@@ -267,14 +279,26 @@
         width: 200px;
         height: 200px;
         line-height:200px;
-        font-size:3.7em;
+        font-size:3.3em;
     }   
     .enter-btn .hover{
         border:20px solid #fff;
     }
 }
-
-@media (min-width:1920px){
+@media (min-width:1600px) and (max-height:900px){
+    .enter-btn{
+        left: calc(50% - 95px);
+        top: calc(50% - 95px);
+        width: 190px;
+        height: 190px;
+        line-height:190px;
+        font-size:3.3em;
+    }   
+    .enter-btn .hover{
+        border:20px solid #fff;
+    }
+}
+@media (min-width:1920px) and (max-height:1080px){
     .section-title{
         font-size:2.7em;
     }
@@ -282,15 +306,28 @@
         margin-bottom:41%;
     }
     .enter-btn{
+        left: calc(50% - 120px);
+        top: calc(50% - 120px);
+        width: 240px;
+        height: 240px;
+        line-height:240px;
+        font-size:3.7em;
+    }   
+    .enter-btn .hover{
+        border:25px solid #fff;
+    }
+}
+@media (min-width:1920px) and (max-height:1200px){
+    .enter-btn{
         left: calc(50% - 130px);
         top: calc(50% - 130px);
         width: 260px;
         height: 260px;
         line-height:260px;
-        font-size:3.8em;
+        font-size:3.7em;
     }   
     .enter-btn .hover{
-        border:23px solid #fff;
+        border:25px solid #fff;
     }
 }
 @media (min-width:1921px){

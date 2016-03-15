@@ -64,8 +64,13 @@ class Paypal extends Component
 
     public function init()
     {
-        $this->clientId     = 'AeAQSEzvflz8ymiU9QC1awrfpQXszDXwrVIgRPk7E7-RDaL-O0dLhSrAnwLJ5XmnF6bJRNs2I034XcHF';
+        /*$this->clientId     = 'AeAQSEzvflz8ymiU9QC1awrfpQXszDXwrVIgRPk7E7-RDaL-O0dLhSrAnwLJ5XmnF6bJRNs2I034XcHF';
         $this->clientSecret = 'EPgWBd3sfwZCgxgeCKWInrXn_09uomJdjCvkclD-TTnTl-HzqxB4u1hhkQbEI9luAFEBcRJgnbhirn4c';
+        */
+
+        $this->clientId     = 'AQpHxAqOLeouvXl-uwkESRcuqGuNlZCpQbbw8c9vrk-ryeFA9VLYCWuCDgduHkgnwBM1IgS4yZnOyIQ7';
+        $this->clientSecret = 'EMBxvqpcupjFjFX_VSZOBuBsNhJBG6-nmlBhOhfNE0VqhMScW0TnrxYvLX50oJWD1s8doYERfdbLKzsB';
+
     }
 
     public function authorize()
@@ -190,6 +195,10 @@ class Paypal extends Component
         $senderBatchHeader->setSenderBatchId(uniqid())
             ->setEmailSubject("You have a Payout!");
 
+        $percent = $post['sum'] * 0.05 + 0.5;
+
+        $total = $post['sum'] - $percent;
+
         $senderItem = new \PayPal\Api\PayoutItem();
         $senderItem->setRecipientType('Email')
             ->setNote('Thanks for your patronage!')
@@ -197,7 +206,7 @@ class Paypal extends Component
             ->setReceiver($post['login'])
             ->setSenderItemId("2014031400023")
             ->setAmount(new \PayPal\Api\Currency('{
-                        "value":"'.$post["sum"].'",
+                        "value":"'.$total.'",
                         "currency":"USD"
                     }'));
         $payouts->setSenderBatchHeader($senderBatchHeader)

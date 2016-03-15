@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="411baeb6-ed34-49f4-b37a-037d71951563" name="Default" comment="add team functional">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/contribute-modal.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/d.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/ss.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log.2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log.2" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log.3" />
+    <list default="true" id="411baeb6-ed34-49f4-b37a-037d71951563" name="Default" comment="fixed a little buugs">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/Avd_icons.png" afterPath="$PROJECT_DIR$/web/images/Avd_icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/Power_button_animated.gif" afterPath="$PROJECT_DIR$/web/images/Power_button_animated.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/index/bg-header-l - ª®¯¨ï.png" afterPath="$PROJECT_DIR$/web/images/index/bg-header-l - ª®¯¨ï.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/profile/shared_bg.jpg" afterPath="$PROJECT_DIR$/web/images/profile/shared_bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/share_steps.png" afterPath="$PROJECT_DIR$/web/images/share_steps.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/share_steps1.png" afterPath="$PROJECT_DIR$/web/images/share_steps1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/step-side-bg.png" afterPath="$PROJECT_DIR$/web/images/step-side-bg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/db.php" afterPath="$PROJECT_DIR$/config/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/grid/1280.css" afterPath="$PROJECT_DIR$/web/css/grid/1280.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/grid/1366.css" afterPath="$PROJECT_DIR$/web/css/grid/1366.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/main.css" afterPath="$PROJECT_DIR$/web/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/params.php" afterPath="$PROJECT_DIR$/config/params.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/business/index.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/business/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/marciocamello/yii2-paypal/Paypal.php" afterPath="$PROJECT_DIR$/vendor/marciocamello/yii2-paypal/Paypal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/contribute-modal.css" afterPath="$PROJECT_DIR$/web/css/contribute-modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/mainpage/custom.css" afterPath="$PROJECT_DIR$/web/css/mainpage/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/roadmap.css" afterPath="$PROJECT_DIR$/web/css/roadmap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/shared_business.css" afterPath="$PROJECT_DIR$/web/css/shared_business.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/task.css" afterPath="$PROJECT_DIR$/web/css/task.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/team.css" afterPath="$PROJECT_DIR$/web/css/team.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/tool/Task.js" afterPath="$PROJECT_DIR$/web/js/tool/Task.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log.1" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log.4" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log.4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii2/logs/site/error.log.5" afterPath="$PROJECT_DIR$/yii2/logs/site/error.log.5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii2/logs/site/error404.log" afterPath="$PROJECT_DIR$/yii2/logs/site/error404.log" />
     </list>
     <list id="80854a28-7d0e-42fe-a75a-6c28826850fa" name="Failed commit: Default" comment="add steve roadmap" />
-    <list id="74f35fa7-13e7-4074-8f8d-047554f26009" name="Failed commit: Default (2)" comment="add team functional">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/business/blocks/delegated_businesses.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/business/blocks/delegated_businesses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/business/index.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/business/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/default/index.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/default/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/departments/site/views/team/team.php" afterPath="$PROJECT_DIR$/modules/departments/site/views/team/team.php" />
-    </list>
+    <list id="74f35fa7-13e7-4074-8f8d-047554f26009" name="Failed commit: Default (2)" comment="add team functional" />
     <ignored path="bsb.local.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -52,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TeamController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/TeamController.php">
+      <file leaf-file-name="bussiness_role.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.037037">
-              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="80" />
+            <state vertical-scroll-proportion="6.0">
+              <caret line="3" column="106" selection-start-line="3" selection-start-column="106" selection-end-line="3" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -65,107 +59,45 @@
       <file leaf-file-name="shared_business.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
+            <state vertical-scroll-proportion="2.9827585">
+              <caret line="302" column="11" selection-start-line="302" selection-start-column="11" selection-end-line="302" selection-end-column="11" />
               <folding>
-                <element signature="e#21#38#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#section#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1458053052976" expanded="false" signature="25:311" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/index.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2594235">
-              <caret line="212" column="31" selection-start-line="212" selection-start-column="31" selection-end-line="212" selection-end-column="31" />
+            <state vertical-scroll-proportion="97.63793">
+              <caret line="599" column="58" selection-start-line="599" selection-start-column="54" selection-end-line="599" selection-end-column="58" />
               <folding>
-                <marker date="1456945839284" expanded="true" signature="458:626" placeholder="{...}" />
-                <marker date="1456945839284" expanded="true" signature="533:618" placeholder="{...}" />
-                <marker date="1456945839284" expanded="true" signature="657:1218" placeholder="{...}" />
-                <marker date="1456945839284" expanded="true" signature="699:1112" placeholder="{...}" />
-                <marker date="1456945839284" expanded="true" signature="1130:1208" placeholder="{...}" />
+                <marker date="1458039746704" expanded="true" signature="22077:22138" placeholder="SELECT * FRO... geo_country" />
+                <marker date="1458039746704" expanded="true" signature="27851:27912" placeholder="SELECT * FRO... geo_country" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BusinessController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.827586">
-              <caret line="1131" column="5" selection-start-line="1131" selection-start-column="5" selection-end-line="1131" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.7726751">
+              <caret line="1246" column="9" selection-start-line="1246" selection-start-column="9" selection-end-line="1246" selection-end-column="9" />
               <folding>
-                <marker date="1456945627252" expanded="true" signature="3681:3742" placeholder="SELECT * FRO... geo_country" />
+                <marker date="1458052886920" expanded="true" signature="3768:3829" placeholder="SELECT * FRO... geo_country" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jobber_request.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/jobber_request.php">
+      <file leaf-file-name="UserTool.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/tasks/models/UserTool.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="team_search.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jobber_search.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/jobber_search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="team_request.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_request.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/tool/Task.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding>
-                <marker date="1456945839292" expanded="true" signature="95:101" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specials_filter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/specials_filter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5925926">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -179,55 +111,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_request.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_task.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks.php" />
-        <option value="$PROJECT_DIR$/modules/departments/models/UserDo.php" />
-        <option value="$PROJECT_DIR$/config/site/main.php" />
-        <option value="$PROJECT_DIR$/modules/departments/models/Team.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start_steve.php" />
-        <option value="$PROJECT_DIR$/modules/tests/site/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place_steve.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/business/dashboard_editing.php" />
         <option value="$PROJECT_DIR$/config/db.php" />
-        <option value="$PROJECT_DIR$/modules/tasks/models/Task.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php" />
-        <option value="$PROJECT_DIR$/modules/tests/site/views/default/results.php" />
-        <option value="$PROJECT_DIR$/modules/tests/site/views/default/progress.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/roadmap_side.php" />
-        <option value="$PROJECT_DIR$/modules/departments/tool/task_custom/TaskBenefit.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/models/DelegateTask.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/admin/views/default/_partial/_sup_materials.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/index.php" />
+        <option value="$PROJECT_DIR$/modules/user/site/views/social/shared_profile.php" />
+        <option value="$PROJECT_DIR$/modules/user/models/forms/RegistrationForm.php" />
+        <option value="$PROJECT_DIR$/modules/user/site/views/registration/register.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom.php" />
+        <option value="$PROJECT_DIR$/modules/core/site/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/likes.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/idea.php" />
+        <option value="$PROJECT_DIR$/modules/departments/tool/task_custom/TaskIdea.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/delegate_active_users.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/admin/views/default/form.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/admin/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/delegated_businesses.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/models/TaskUserLog.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestones-users.php" />
+        <option value="$PROJECT_DIR$/web/js/tool/Task.js" />
+        <option value="$PROJECT_DIR$/modules/departments/tool/TaskComponent.php" />
+        <option value="$PROJECT_DIR$/modules/user/Mailer.php" />
+        <option value="$PROJECT_DIR$/modules/tests/site/views/default/results.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/business/index.php" />
+        <option value="$PROJECT_DIR$/modules/user/site/views/emails/confirmation-common.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/site/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestone.php" />
+        <option value="$PROJECT_DIR$/modules/core/site/views/default/blocks/industy_block.php" />
+        <option value="$PROJECT_DIR$/modules/core/site/views/default/blocks/industry_block.php" />
         <option value="$PROJECT_DIR$/modules/core/site/views/default/profile.php" />
+        <option value="$PROJECT_DIR$/modules/core/site/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/modules/core/site/views/default/index.php" />
+        <option value="$PROJECT_DIR$/modules/user/models/User.php" />
+        <option value="$PROJECT_DIR$/config/params.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/modules/user/admin/views/default/index.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role_steve.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place_steve.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_benefits.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_share.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/business/dashboard_editing.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/find_job.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/delegate_users.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task.php" />
-        <option value="$PROJECT_DIR$/modules/tasks/models/TaskUserLog.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/business/index.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/team-request.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks/jobber_request.php" />
-        <option value="$PROJECT_DIR$/web/js/milestone.js" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/index.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/gantt.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/team.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestones.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestone.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/business/blocks/delegated_businesses.php" />
-        <option value="$PROJECT_DIR$/modules/departments/tool/TaskComponent.php" />
-        <option value="$PROJECT_DIR$/modules/tasks/site/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/web/js/tool/Task.js" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_request.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/views/team/blocks/jobber_search.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/controllers/TeamController.php" />
-        <option value="$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/person_goal.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start_steve.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role.php" />
+        <option value="$PROJECT_DIR$/modules/tasks/models/UserTool.php" />
         <option value="$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php" />
+        <option value="$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php" />
       </list>
     </option>
   </component>
@@ -271,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,142 +223,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsb.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="departments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bella" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cars.local" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -477,192 +283,6 @@
       <created>1456430725762</created>
       <option name="number" value="Default" />
       <updated>1456430725762</updated>
-    </task>
-    <task id="LOCAL-00001" summary="sd">
-      <created>1456433262002</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1456433262002</updated>
-    </task>
-    <task id="LOCAL-00002" summary="a little fixes">
-      <created>1456436979429</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1456436979429</updated>
-    </task>
-    <task id="LOCAL-00003" summary="a little fixes">
-      <created>1456444071094</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1456444071094</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add steve roadmap">
-      <created>1456491341796</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1456491341796</updated>
-    </task>
-    <task id="LOCAL-00005" summary="start work with team">
-      <created>1456510218721</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1456510218721</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add steve roadmap">
-      <created>1456512707815</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1456512707815</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add steve roadmap">
-      <created>1456519463691</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1456519463691</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add dinamic roadmap">
-      <created>1456522180735</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1456522180735</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add dinamic roadmap">
-      <created>1456523899480</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1456523899480</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add dinamic roadmap">
-      <created>1456523927791</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1456523927791</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add dinamic roadmap">
-      <created>1456530697264</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1456530697264</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add dinamic roadmap">
-      <created>1456592894952</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1456592894952</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fixed pending">
-      <created>1456598544990</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1456598544990</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fixed pending">
-      <created>1456598675518</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1456598675518</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fixed pending">
-      <created>1456609931744</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1456609931744</updated>
-    </task>
-    <task id="LOCAL-00016" summary="start work with team">
-      <created>1456652775177</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1456652775177</updated>
-    </task>
-    <task id="LOCAL-00017" summary="fixed pending">
-      <created>1456664008363</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1456664008363</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fixed pending">
-      <created>1456666153177</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1456666153177</updated>
-    </task>
-    <task id="LOCAL-00019" summary="work with task user">
-      <created>1456671122589</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1456671122589</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Lucy way">
-      <created>1456679111504</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1456679111504</updated>
-    </task>
-    <task id="LOCAL-00021" summary="add road Lucy functional">
-      <created>1456687793999</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1456687793999</updated>
-    </task>
-    <task id="LOCAL-00022" summary="fixed pending">
-      <created>1456744174435</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1456744174435</updated>
-    </task>
-    <task id="LOCAL-00023" summary="fixed pending">
-      <created>1456749758393</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1456749758393</updated>
-    </task>
-    <task id="LOCAL-00024" summary="fixed pending">
-      <created>1456753320013</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1456753320013</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fixed fucking task">
-      <created>1456764189437</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1456764189437</updated>
-    </task>
-    <task id="LOCAL-00026" summary="fixed pending">
-      <created>1456777458149</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1456777458149</updated>
-    </task>
-    <task id="LOCAL-00027" summary="fixed tables with count tasks, start work with Lucy`s team functional">
-      <created>1456787027373</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1456787027373</updated>
-    </task>
-    <task id="LOCAL-00028" summary="fixed pending">
-      <created>1456790222969</created>
-      <option name="number" value="00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1456790222969</updated>
-    </task>
-    <task id="LOCAL-00029" summary="fixed tasks">
-      <created>1456834107582</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1456834107582</updated>
-    </task>
-    <task id="LOCAL-00030" summary="fixed task table">
-      <created>1456839232396</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1456839232396</updated>
-    </task>
-    <task id="LOCAL-00031" summary="add redirect after receive">
-      <created>1456839500535</created>
-      <option name="number" value="00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1456839500535</updated>
     </task>
     <task id="LOCAL-00032" summary="fixed paypal window">
       <created>1456846734987</created>
@@ -718,19 +338,260 @@
       <option name="project" value="LOCAL" />
       <updated>1456945827959</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="hotfix">
+      <created>1456946164642</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1456946164642</updated>
+    </task>
+    <task id="LOCAL-00042" summary="hotfix">
+      <created>1456946726425</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1456946726425</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed PP">
+      <created>1456955322250</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1456955322250</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fixed bus link and search button">
+      <created>1456962539344</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1456962539344</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fixed roadmap">
+      <created>1456964088046</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1456964088046</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fixed a little bugs">
+      <created>1457018781597</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1457018781597</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fixed a little bugs">
+      <created>1457038406850</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1457038406851</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fixed a little bugs">
+      <created>1457039056675</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1457039056675</updated>
+    </task>
+    <task id="LOCAL-00049" summary="fixed a little bugs">
+      <created>1457347919748</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1457347919748</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fixed a little bugs">
+      <created>1457423081464</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1457423081471</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fixed a little bugs">
+      <created>1457434109184</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1457434109184</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fixed Steve`s request">
+      <created>1457438439039</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1457438439039</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fixed delegated business">
+      <created>1457449379661</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1457449379678</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fixed delegated business">
+      <created>1457469308995</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1457469309001</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add like &amp; idealike functional">
+      <created>1457520961374</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1457520961390</updated>
+    </task>
+    <task id="LOCAL-00056" summary="add like &amp; idealike functional">
+      <created>1457523517083</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1457523517083</updated>
+    </task>
+    <task id="LOCAL-00057" summary="sasha">
+      <created>1457525199936</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1457525199937</updated>
+    </task>
+    <task id="LOCAL-00058" summary="fixed task in adminka">
+      <created>1457535379014</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1457535379014</updated>
+    </task>
+    <task id="LOCAL-00059" summary="mark place for script">
+      <created>1457537658513</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1457537658513</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fixed buttons">
+      <created>1457542185139</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1457542185139</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fixed buttons">
+      <created>1457544719835</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1457544719835</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fixed buttons">
+      <created>1457548823464</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1457548823466</updated>
+    </task>
+    <task id="LOCAL-00063" summary="fixed buttons">
+      <created>1457565046811</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1457565046812</updated>
+    </task>
+    <task id="LOCAL-00064" summary="fixed popup">
+      <created>1457603572448</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1457603572471</updated>
+    </task>
+    <task id="LOCAL-00065" summary="fixed popup">
+      <created>1457603612462</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1457603612462</updated>
+    </task>
+    <task id="LOCAL-00066" summary="fixed Lucy`s roadmap">
+      <created>1457611225507</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1457611225507</updated>
+    </task>
+    <task id="LOCAL-00067" summary="fixed a little bugs">
+      <created>1457624625623</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1457624625623</updated>
+    </task>
+    <task id="LOCAL-00068" summary="fixed task">
+      <created>1457628854875</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1457628854875</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fixed task">
+      <created>1457689567522</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1457689567523</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fixed milestones">
+      <created>1457707629294</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1457707629294</updated>
+    </task>
+    <task id="LOCAL-00071" summary="fixed milestones">
+      <created>1457947525884</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1457947525904</updated>
+    </task>
+    <task id="LOCAL-00072" summary="fixed not my tool, delegate and Do">
+      <created>1457948519976</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1457948519976</updated>
+    </task>
+    <task id="LOCAL-00073" summary="fixed a little buugs">
+      <created>1457964372534</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1457964372534</updated>
+    </task>
+    <task id="LOCAL-00074" summary="fixed a little buugs">
+      <created>1457972826707</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1457972826747</updated>
+    </task>
+    <task id="LOCAL-00075" summary="fixed a little buugs">
+      <created>1457978022656</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1457978022656</updated>
+    </task>
+    <task id="LOCAL-00076" summary="fixed road map">
+      <created>1457982401919</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1457982401919</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fixed a little buugs">
+      <created>1457984571045</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1457984571045</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fixed a little buugs">
+      <created>1458031219298</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1458031219299</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fixed roadmap">
+      <created>1458037452969</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1458037452969</updated>
+    </task>
+    <task id="LOCAL-00080" summary="add dinamic shared">
+      <created>1458052948448</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1458052948449</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3305694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3012714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3514077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2148071" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -738,9 +599,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1418144" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -757,415 +618,454 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sd" />
-    <MESSAGE value="a little fixes" />
-    <MESSAGE value="add steve roadmap" />
-    <MESSAGE value="add dinamic roadmap" />
-    <MESSAGE value="start work with team" />
-    <MESSAGE value="work with task user" />
-    <MESSAGE value="Lucy way" />
-    <MESSAGE value="add road Lucy functional" />
-    <MESSAGE value="fixed fucking task" />
-    <MESSAGE value="fixed tables with count tasks, start work with Lucy`s team functional" />
-    <MESSAGE value="fixed pending" />
-    <MESSAGE value="fixed tasks" />
-    <MESSAGE value="fixed task table" />
-    <MESSAGE value="add redirect after receive" />
-    <MESSAGE value="fixed paypal window" />
-    <MESSAGE value="fixed task" />
-    <MESSAGE value="fixed reload after 0 paid task" />
     <MESSAGE value="add redirect after rec" />
     <MESSAGE value="fixed restarts" />
     <MESSAGE value="pizdets" />
     <MESSAGE value="add team functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="add team functional" />
+    <MESSAGE value="hotfix" />
+    <MESSAGE value="fixed PP" />
+    <MESSAGE value="fixed bus link and search button" />
+    <MESSAGE value="fixed Steve`s request" />
+    <MESSAGE value="fixed delegated business" />
+    <MESSAGE value="add like &amp; idealike functional" />
+    <MESSAGE value="sasha" />
+    <MESSAGE value="fixed task in adminka" />
+    <MESSAGE value="mark place for script" />
+    <MESSAGE value="fixed buttons" />
+    <MESSAGE value="fixed popup" />
+    <MESSAGE value="fixed Lucy`s roadmap" />
+    <MESSAGE value="fixed a little bugs" />
+    <MESSAGE value="fixed task" />
+    <MESSAGE value="fixed milestones" />
+    <MESSAGE value="fixed not my tool, delegate and Do" />
+    <MESSAGE value="fixed road map" />
+    <MESSAGE value="fixed a little buugs" />
+    <MESSAGE value="fixed roadmap" />
+    <MESSAGE value="add dinamic shared" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/tasks/site/views/default/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="84.55556">
-          <caret line="130" column="76" selection-start-line="130" selection-start-column="76" selection-end-line="130" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/pagination.php">
+    <entry file="file://$PROJECT_DIR$/vendor/marciocamello/yii2-paypal/Paypal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/dashboard_editing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/tasks/models/TaskUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/QuestionaryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/tasks/site/controllers/PaypalController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/tasks/models/DelegateTask.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0">
-          <caret line="80" column="98" selection-start-line="80" selection-start-column="98" selection-end-line="80" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestones-users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.068966">
-          <caret line="221" column="39" selection-start-line="221" selection-start-column="38" selection-end-line="221" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/site/views/default/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0776054">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/user/site/views/registration/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6666665">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="72" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.333333">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-41.407406">
-          <caret line="242" column="9" selection-start-line="242" selection-start-column="9" selection-end-line="242" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/cancel_delegate_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/delegate_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/delegate_active_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_share.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/person_goal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/one_gant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="167.33333">
-          <caret line="286" column="14" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/advanced_search_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7407408">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/accept-tasks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/specials.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/likes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/idea.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/find_job.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/deps_filter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/user_task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/form-goal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="85" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/form-idea.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/delegated_businesses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/tool/TaskComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="488" column="34" selection-start-line="488" selection-start-column="34" selection-end-line="488" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/tasks/site/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="42" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="172" column="101" selection-start-line="172" selection-start-column="101" selection-end-line="172" selection-end-column="101" />
-          <folding>
-            <marker date="1456945839284" expanded="true" signature="3039:3100" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/jobber_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/jobber_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/team/blocks/team_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
-          <folding />
+          <caret line="66" column="45" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/tool/Task.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <caret line="715" column="41" selection-start-line="715" selection-start-column="41" selection-end-line="715" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/TaskComponent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="643" column="33" selection-start-line="643" selection-start-column="33" selection-end-line="643" selection-end-column="33" />
           <folding>
-            <marker date="1456945839292" expanded="true" signature="95:101" placeholder="{...}" />
+            <element signature="e#6#91#0#PHP" expanded="false" />
+            <element signature="e#130#168#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/blocks/specials_filter.php">
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/RecoveryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/TeamController.php">
+    <entry file="file://$PROJECT_DIR$/modules/tasks/models/DelegateTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.037037">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="80" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php">
+    <entry file="file://$PROJECT_DIR$/modules/tasks/models/TaskUserLog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.827586">
-          <caret line="1131" column="5" selection-start-line="1131" selection-start-column="5" selection-end-line="1131" selection-end-column="5" />
-          <folding>
-            <marker date="1456945627252" expanded="true" signature="3681:3742" placeholder="SELECT * FRO... geo_country" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php">
+    <entry file="file://$PROJECT_DIR$/modules/tests/site/views/default/tester.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
-          <folding>
-            <element signature="e#21#38#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#section#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#section#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tests/site/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tests/site/views/default/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="188" column="20" selection-start-line="188" selection-start-column="20" selection-end-line="188" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2594235">
-          <caret line="212" column="31" selection-start-line="212" selection-start-column="31" selection-end-line="212" selection-end-column="31" />
+        <state vertical-scroll-proportion="-19.518518">
+          <caret line="195" column="154" selection-start-line="195" selection-start-column="154" selection-end-line="195" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/Mailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.0">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/index_static.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/views/emails/confirmation-common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.0">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/views/emails/confirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tasks/site/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.444445">
+          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-55.592594">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/tool/task_custom/TaskIdea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.296296">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task/action_panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8448277">
+          <caret line="278" column="47" selection-start-line="278" selection-start-column="47" selection-end-line="278" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/version.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/views/default/blocks/industry_block.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/views/default/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="754" column="62" selection-start-line="754" selection-start-column="62" selection-end-line="754" selection-end-column="62" />
           <folding>
-            <marker date="1456945839284" expanded="true" signature="458:626" placeholder="{...}" />
-            <marker date="1456945839284" expanded="true" signature="533:618" placeholder="{...}" />
-            <marker date="1456945839284" expanded="true" signature="657:1218" placeholder="{...}" />
-            <marker date="1456945839284" expanded="true" signature="699:1112" placeholder="{...}" />
-            <marker date="1456945839284" expanded="true" signature="1130:1208" placeholder="{...}" />
+            <marker date="1457977603957" expanded="true" signature="1960:2141" placeholder="{...}" />
+            <marker date="1457977603957" expanded="true" signature="10489:10550" placeholder="SELECT * FRO... geo_country" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestones-users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/milestone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4444447">
+          <caret line="226" column="38" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/views/default/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="175" column="52" selection-start-line="175" selection-start-column="52" selection-end-line="175" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/SocialController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/SettingsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.8891354">
+          <caret line="258" column="30" selection-start-line="258" selection-start-column="23" selection-end-line="258" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="48.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.62963">
+          <caret line="373" column="106" selection-start-line="373" selection-start-column="106" selection-end-line="373" selection-end-column="106" />
+          <folding>
+            <marker date="1458037306776" expanded="true" signature="21363:21376" placeholder="..." />
+            <marker date="1458037306776" expanded="true" signature="21517:21530" placeholder="..." />
+            <marker date="1458037306776" expanded="true" signature="21735:21748" placeholder="..." />
+            <marker date="1458037306776" expanded="true" signature="21887:21900" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.296296">
+          <caret line="369" column="35" selection-start-line="369" selection-start-column="35" selection-end-line="369" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/site/controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.310345">
+          <caret line="142" column="30" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="30" />
+          <folding>
+            <marker date="1455806459227" expanded="true" signature="2735:2805" placeholder="SELECT MAX(i... " />
+            <marker date="1455806459227" expanded="true" signature="3322:3386" placeholder="SELECT MAX(i... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/site/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="81" column="39" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="39" />
+          <folding>
+            <element signature="e#49#93#0#PHP" expanded="true" />
+            <marker date="1457977709649" expanded="true" signature="7086:7329" placeholder="..." />
+            <marker date="1457977709649" expanded="true" signature="7127:7322" placeholder="..." />
+            <marker date="1457977709649" expanded="true" signature="7774:7786" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/admin/views/default/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/admin/views/default/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.074074">
+          <caret line="117" column="49" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
+          <folding>
+            <marker date="1458040098448" expanded="true" signature="3258:3271" placeholder="..." />
+            <marker date="1458040098448" expanded="true" signature="3460:3473" placeholder="..." />
+            <marker date="1458040098448" expanded="true" signature="3728:3741" placeholder="..." />
+            <marker date="1458040098448" expanded="true" signature="3912:3925" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role_steve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25926">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.925926">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/comfort_place_steve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25926">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.925926">
+          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_benefits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.925926">
+          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/idea_share.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.592592">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start_steve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.925926">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/simply_start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.666666">
+          <caret line="6" column="103" selection-start-line="6" selection-start-column="103" selection-end-line="6" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/person_goal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.666668">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/default/blocks/task_custom/bussiness_role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.0">
+          <caret line="3" column="106" selection-start-line="3" selection-start-column="106" selection-end-line="3" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/tasks/models/UserTool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5925926">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/views/business/shared_business.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.9827585">
+          <caret line="302" column="11" selection-start-line="302" selection-start-column="11" selection-end-line="302" selection-end-column="11" />
+          <folding>
+            <marker date="1458053052976" expanded="false" signature="25:311" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="97.63793">
+          <caret line="599" column="58" selection-start-line="599" selection-start-column="54" selection-end-line="599" selection-end-column="58" />
+          <folding>
+            <marker date="1458039746704" expanded="true" signature="22077:22138" placeholder="SELECT * FRO... geo_country" />
+            <marker date="1458039746704" expanded="true" signature="27851:27912" placeholder="SELECT * FRO... geo_country" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/departments/site/controllers/BusinessController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7726751">
+          <caret line="1246" column="9" selection-start-line="1246" selection-start-column="9" selection-end-line="1246" selection-end-column="9" />
+          <folding>
+            <marker date="1458052886920" expanded="true" signature="3768:3829" placeholder="SELECT * FRO... geo_country" />
           </folding>
         </state>
       </provider>
