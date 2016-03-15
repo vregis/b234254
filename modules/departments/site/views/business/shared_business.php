@@ -147,7 +147,7 @@ use modules\user\site\controllers\ProfileController;
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
                 <div class="site-name">My business without busyness</div>
-                <button id="btn-save" class="btn btn-primary btn-empty circle" style="display:none;"><i class="fa fa-floppy-o"></i></button>
+                <button id="btn-save" class="btn btn-primary btn-empty circle" style="display:none;"><i style="position:absolute;top: 50%;margin-top: -7px;left: 50%;margin-left: -6px;" class="fa fa-floppy-o"></i></button>
                 <button id="btn-edit" class="btn btn-primary btn-empty circle"><i class="ico-edit"></i></button>
             </div>
             <div class="page-content">
