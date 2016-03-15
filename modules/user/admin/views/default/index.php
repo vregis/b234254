@@ -115,7 +115,7 @@ $this->registerJs($msgJs);
                 [
                     'attribute' => 'created_at',
                     'value' => function ($model) {
-                        return date('Y-m-d', $model->created_at);
+                        return date('Y-m-d, H:i:s', $model->created_at);
                     }
                 ],
                 [

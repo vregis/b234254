@@ -75,7 +75,8 @@ class BusinessController extends Controller
                             'add-like',
                             'add-like-idea',
                             'shared-business',
-                            'change-show'
+                            'change-show',
+                            'edit-shared'
                         ],
                         'roles' => ['@']
                     ],
@@ -1098,11 +1099,13 @@ class BusinessController extends Controller
 
         $departments = Department::find()->where(['is_additional' => 0])->all();
 
+        $industry = Industry::find()->all();
+
 
         $model = UserTool::find()
             ->select('user_tool.*, benefit.first benefit_first, benefit.second benefit_second, benefit.third benefit_third,
             idea.name idea_name, idea.description_like idea_description_like, idea.description_problem idea_description_problem,
-            industry.name industry_name')
+            industry.name industry_name, idea.industry_id industry_id')
             ->join('JOIN','benefit', 'benefit.user_tool_id = user_tool.id')
             ->join('JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
             ->join('JOIN', 'industry', 'industry.id = idea.industry_id')
@@ -1136,7 +1139,8 @@ class BusinessController extends Controller
             'likes'=>$likes,
             'idea' => $idea,
             'profile' => $profile,
-            'departments' => $departments
+            'departments' => $departments,
+            'industry' => $industry
         ]);
     }
 
@@ -1190,11 +1194,20 @@ class BusinessController extends Controller
         return json_encode($response);
     }
 
-    public static function checkDoDepartment($dep_id){
+    public static function checkDoDepartment($dep_id, $id){
+
+        $user_id = UserTool::find()->where(['id' => $id])->one();
+
+        if($user_id){
+            $uid = $user_id->user_id;
+        }else{
+            $uid = Yii::$app->user->id;
+        }
+
         $do = UserDo::find()
             ->select('user_do.*, user_profile.avatar ava, user_profile.user_id idd')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_do.user_id')
-            ->where(['user_do.department_id' => $dep_id, 'user_do.user_id' => Yii::$app->user->id, 'user_do.status_do' => 1])->one();
+            ->where(['user_do.department_id' => $dep_id, 'user_do.user_id' => $uid, 'user_do.status_do' => 1])->one();
         return $do;
     }
 
@@ -1205,6 +1218,35 @@ class BusinessController extends Controller
             $del_t->show_popup = 1;
             $del_t->save();
         }
+
+    }
+
+    public function actionEditShared(){
+
+        $idea = Idea::find()->where(['user_tool_id' => $_POST['id']])->one();
+        if($idea){
+            $idea->name = $_POST['idea_name'];
+            $idea->description_like = $_POST['idea_like'];
+            $idea->description_problem = $_POST['idea_problem'];
+
+            $ind = Industry::find()->where(['name' => $_POST['industry']])->one();
+            if($ind){
+                $idea->industry_id = $ind->id;
+            }
+
+            $idea->save();
+        }
+
+        $benefit = Benefit::find()->where(['user_tool_id' => $_POST['id']])->one();
+
+        if($benefit){
+            $benefit->first = $_POST['first_benefit'];
+            $benefit->second = $_POST['second_benefit'];
+            $benefit->third = $_POST['third_benefit'];
+            $benefit->save();
+        }
+
+        return json_encode($_POST);
 
     }
 

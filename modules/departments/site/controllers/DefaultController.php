@@ -548,10 +548,19 @@ class DefaultController extends Controller
             }
         }
         else {
-            $delegate_user = User::find()->select('*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava')
-                ->join('JOIN', 'user_profile', 'user_profile.user_id = user.id')
-                /*->where(['user.id' => $tool->user_id])*/
-                ->one();
+            $tool = UserTool::find()->where(['id' => $task_user->user_tool_id])->one();
+            if($tool){
+                $delegate_user = User::find()->select('*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava')
+                    ->join('JOIN', 'user_profile', 'user_profile.user_id = user.id')
+                    ->where(['user.id' => $tool->user_id])
+                    ->one();
+            }else{
+                $delegate_user = User::find()->select('*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava')
+                    ->join('JOIN', 'user_profile', 'user_profile.user_id = user.id')
+                    /*->where(['user.id' => $tool->user_id])*/
+                    ->one();
+            }
+
         }
 
         $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();

@@ -21,6 +21,7 @@ class UserTool extends \yii\db\ActiveRecord
     public $benefit_first;
     public $benefit_second;
     public $benefit_third;
+    public $industry_id;
 
 
 

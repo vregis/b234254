@@ -148,24 +148,26 @@ use modules\user\site\controllers\ProfileController;
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
                 <div class="site-name">My business without busyness</div>
                 <button id="btn-save" class="btn btn-primary btn-empty circle" style="display:none;"><i class="fa fa-floppy-o"></i></button>
+                <?php if(Yii::$app->user->id == $model->user_id):?>
                 <button id="btn-edit" class="btn btn-primary btn-empty circle"><i class="ico-edit"></i></button>
+                <?php endif;?>
             </div>
             <div class="page-content">
             	<section id="about">
             		<div class="title">
                         <div class="edit-block">
                             <div class="value"><?php echo $model->idea_name?></div>
-                            <div class="editor"><input maxlength="150" type="text" id="idea-name" value="<?php echo $model->idea_name?>" class="form-control"></div>
+                            <div class="editor"><input name="idea_name" maxlength="150" type="text" id="idea-name" value="<?php echo $model->idea_name?>" class="form-control"></div>
                         </div>
                     </div>
             		<div class="subtitle">
                         <div class="edit-block">
                             <div class="value"><?php echo $model->industry_name?></div>
                             <div class="editor">
-                            <select name="" id="idea-industry" class="selectpicker">
-                                <option value="<?php echo $model->industry_name?>"><?php echo $model->industry_name?></option>
-                                <option value="Bar/Restaurant">Bar/Restaurant</option>
-                                <option value="Animals">Animals</option>
+                            <select name="industry" id="idea-industry" class="selectpicker">
+                                <?php foreach($industry as $ind):?>
+                                    <option <?php echo $ind->id == $model->industry_id?'selected':''?> value="<?php echo $ind->name?>"><?php echo $ind->name?></option>
+                                <?php endforeach;?>
                             </select>
                             </div>
                         </div> 
@@ -175,13 +177,13 @@ use modules\user\site\controllers\ProfileController;
             				<td style="width:50%;border-right:1px solid rgba(90, 90, 90, 0.6);vertical-align: top;padding-right:20px;">
                                 <div class="edit-block">
                                     <div class="value"><?php echo $model->idea_description_like?></div>
-                                    <div class="editor"><textarea maxlength="300" name="" id="idea-desc_like" cols="30" rows="10" class="form-control"><?php echo $model->idea_description_like?></textarea></div>
+                                    <div class="editor"><textarea maxlength="300" name="idea_like" id="idea-desc_like" cols="30" rows="10" class="form-control"><?php echo $model->idea_description_like?></textarea></div>
                                 </div>
                             </td>
             				<td style="width:50%;vertical-align: top;padding-left:20px;">
                                 <div class="edit-block">
                                     <div class="value"><?php echo $model->idea_description_problem?></div>
-                                    <div class="editor"><textarea maxlength="300" name="" id="idea-desc_problem" cols="30" rows="10" class="form-control"><?php echo $model->idea_description_problem?></textarea></div>
+                                    <div class="editor"><textarea maxlength="300" name="idea_problem" id="idea-desc_problem" cols="30" rows="10" class="form-control"><?php echo $model->idea_description_problem?></textarea></div>
                                 </div>
                             </td>
             			</tr>
@@ -203,19 +205,19 @@ use modules\user\site\controllers\ProfileController;
 		            			<td><div class="desc">
                                     <div class="edit-block">
                                         <div class="value"><?php echo $model->benefit_first?></div>
-                                        <div class="editor"><textarea maxlength="200" id="benefit-first" class="form-control"><?php echo $model->benefit_first?></textarea></div>
+                                        <div class="editor"><textarea maxlength="200" id="benefit-first" name="first_benefit" class="form-control"><?php echo $model->benefit_first?></textarea></div>
                                     </div>
                                 </div></td>
 		            			<td><div class="desc">
                                     <div class="edit-block">
                                         <div class="value"><?php echo $model->benefit_second?></div>
-                                        <div class="editor"><textarea maxlength="200" id="benefit-second" class="form-control"><?php echo $model->benefit_second?></textarea></div>
+                                        <div class="editor"><textarea maxlength="200" id="benefit-second" name="second_benefit" class="form-control"><?php echo $model->benefit_second?></textarea></div>
                                     </div>               
                                 </div></td>
 								<td><div class="desc">
                                     <div class="edit-block">
                                         <div class="value"><?php echo $model->benefit_third?></div>
-                                        <div class="editor"><textarea maxlength="200" id="benefit-third" class="form-control"><?php echo $model->benefit_third?></textarea></div>
+                                        <div class="editor"><textarea maxlength="200" id="benefit-third" name="third_benefit" class="form-control"><?php echo $model->benefit_third?></textarea></div>
                                     </div>                        
                                 </div></td>
 		            		</tr>
@@ -236,7 +238,7 @@ use modules\user\site\controllers\ProfileController;
                     	<div class="roww action">
                             <?php foreach($departments as $dep):?>
                     		<div class="item">
-                                <?php $do = \modules\departments\site\controllers\BusinessController::checkDoDepartment($dep->id);?>
+                                <?php $do = \modules\departments\site\controllers\BusinessController::checkDoDepartment($dep->id, $_GET['id']);?>
                                 <?php if($do):?>
                                 <a target="_blank" href="/user/social/shared-profile?id=<?php echo $do->idd?>">
                                     <img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $do->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$do->ava:'/images/avatar/nophoto.png'?>" data-original-title="" title="">
@@ -316,10 +318,32 @@ use modules\user\site\controllers\ProfileController;
             });
         });
         $("#btn-save").click(function(){
+
+            var idea_name = $('input[name=idea_name]').val();
+            var idea_like = $('textarea[name=idea_like]').val();
+            var idea_problem = $('textarea[name=idea_problem]').val();
+            var industry = $('select[name=industry]').val();
+            var first_benefit = $('textarea[name=first_benefit]').val();
+            var second_benefit = $('textarea[name=second_benefit]').val();
+            var third_benefit = $('textarea[name=third_benefit]').val();
+            var id = <?php echo $_GET['id'];?>
+
+            $.ajax({
+                url: '/departments/business/edit-shared',
+                type: 'post',
+                dataType: 'json',
+                data: {idea_name:idea_name, idea_like:idea_like, id:id, idea_problem:idea_problem, industry:industry, first_benefit:first_benefit, second_benefit:second_benefit, third_benefit:third_benefit},
+                success: function(){
+
+                }
+            })
+
             $.each($(".edit-block"),function(){
                 $(this).find('.value').html($(this).find('.form-control').val());
                 $(this).find('.value').html($(this).find('select').val());
             });
+
+
             $(".editor").fadeOut(500);
             setTimeout(function(){$(".edit-block > .value").fadeIn(500);},500);
             $(this).fadeOut(500);
