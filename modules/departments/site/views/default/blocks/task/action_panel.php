@@ -279,7 +279,7 @@ if($start_date != '') {
                         data: {id:'<?php echo @$delegate_task->id?>'},
                         success: function(response){
                             if($('#input-price').val() == response.price && $('#input-time').val() == response.time){
-                                $('.accept-change').html('Accept');
+                                $('.accept-change').html('Accept').removeAttr('style');
                             }else{
                                 $('.accept-change').html('Counter <br/ > offer').css({
                                     'width': '93px',
