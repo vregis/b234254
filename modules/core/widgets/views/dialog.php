@@ -29,7 +29,9 @@ if (count($flashes)):
         }elseif(array_key_exists('confirm_link', $flashes)){
             $title = 'Thank you!';
             $icon = 'dialog-box-mail.png';
-            $message = 'A confirmation link was sent to your email. (keep in mind the Spam/Junk folder)';
+            $message = 'A confirmation link was sent to your email.  <br>
+Give it up to 5 min.<br>
+(keep in mind the Spam/Junk folder)';
         }elseif(array_key_exists('already', $flashes)){
             $title = 'INFORMATION!';
             $icon = 'dialog-box-info.png';
