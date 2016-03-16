@@ -68,8 +68,61 @@ class TeamController extends Controller {
         $team = Team::find()
             ->select('team.*, user_profile.avatar ava, user_profile.first_name fname, user_profile.last_name lname, user_profile.user_id dname')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = team.sender_id')
-            ->where(['team.department' => $dep_id, 'team.user_tool_id' => $tool_id, 'team.recipient_id' => Yii::$app->user->id, 'team.status' => 0])->all();
-        return $team;
+            ->where(['team.department' => $dep_id, 'team.user_tool_id' => $tool_id, 'team.recipient_id' => Yii::$app->user->id, 'team.status' => 0, 'is_request' => 0])->all();
+
+
+        $task = Task::find()->where(['department_id' => $dep_id])->all();
+        $milestones = Task::find()->where(['department_id' => $dep_id])->groupBy('milestone_id')->all();
+        $task_user_complete = TaskUser::find()
+            ->join('LEFT JOIN', 'task', 'task_user.task_id = task.id')
+            ->join('LEFT JOIN', 'user_tool', 'task_user.user_tool_id = user_tool.id')
+            ->where(['task.department_id' => $dep_id, 'user_tool_id' => $tool_id, 'task_user.status' => 2])
+            ->all();
+
+        $task_user_active = TaskUser::find()
+            ->join('LEFT JOIN', 'task', 'task_user.task_id = task.id')
+            ->join('LEFT JOIN', 'user_tool', 'task_user.user_tool_id = user_tool.id')
+            ->where(['task.department_id' => $dep_id, 'user_tool_id' => $tool_id, 'task_user.status' => 1])
+            ->all();
+
+        if($task){
+            $count_task = count($task);
+        }else{
+            $count_task = 0;
+        }
+
+        if($milestones){
+            $count_milestones = count($milestones);
+        }else{
+            $count_milestones = 0;
+        }
+
+        if($task_user_complete){
+            $count_task_complete = count($task_user_complete);
+        }else{
+            $count_task_complete = 0;
+        }
+
+        if($task_user_active){
+            $count_task_active = count($task_user_active);
+        }else{
+            $count_task_active = 0;
+        }
+
+        $count_task_new = $count_task - ($count_task_active+$count_task_complete);
+
+
+        $return['tasks'] = $count_task;
+        $return['tasks_active'] = $count_task_active;
+        $return['tasks_complete'] = $count_task_complete;
+        $return['tasks_new'] = $count_task_new;
+        $return['team'] = $team;
+        $return['milestones'] = $count_milestones;
+
+
+
+
+        return $return;
     }
 
     public function actionGetSearch(){
@@ -106,9 +159,33 @@ class TeamController extends Controller {
         $task = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
         if($task){
             foreach($task as $t){
-                $tu = new TaskUser();
-                $tu->task_id = $t->id;
-                $tu->user_tool_id = $_POST['tool_id'];
+
+                $exist = TaskUser::find()
+                    ->join('LEFT JOIN', 'delegate_task', 'task_user.id=delegate_task.task_user_id')
+                    ->where([
+                        'task_user.task_id' => $t->id,
+                        'task_user.user_tool_id' => $_POST['tool_id'],
+                    ])
+                    ->andWhere(['!=', 'delegate_task.status', '7'])
+                    ->andWhere(['!=', 'delegate_task.status', '8'])
+                    ->andWhere(['!=', 'delegate_task.status', '0'])
+                    ->all();
+
+                if($exist && count($exist) > 0){
+                    continue;
+                }
+
+
+
+                $tu = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $_POST['tool_id']])->one();
+
+                if($tu){
+                    $tu->status = 0;
+                }else{
+                    $tu = new TaskUser();
+                    $tu->task_id = $t->id;
+                    $tu->user_tool_id = $_POST['tool_id'];
+                }
                 if(!$tu->save()){
                     var_dump($tu->getErrors()); die();
                 }else{
@@ -152,6 +229,33 @@ class TeamController extends Controller {
                 $del->delete();
             }
         }
+
+
+
+
+        $task = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
+
+        if($task){
+            foreach($task as $t){
+
+                $task_user = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $_POST['tool_id']])->all();
+                if($task_user){
+                    foreach($task_user as $tu){
+                        $del = DelegateTask::find()->where(['task_user_id' => $tu->id, 'delegate_user_id' => $_POST['recipient'], 'status' => 0])->all();
+                        if($del){
+                            foreach($del as $d){
+                                $d->status = 8;
+                                $d->save();
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+
         return(json_encode($_POST));
     }
 
@@ -164,10 +268,32 @@ class TeamController extends Controller {
         ])->one();
 
         if($team){
-            $team->delete();
+            if($team){
+
+                $task = Task::find()->where(['department_id' => $team->department])->all();
+
+                if($task){
+                    foreach($task as $t){
+
+                        $task_user = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $team->user_tool_id])->all();
+                        if($task_user){
+                            foreach($task_user as $tu){
+                                $del = DelegateTask::find()->where(['task_user_id' => $tu->id, 'delegate_user_id' => $team->recipient_id, 'status' => 0])->all();
+                                foreach($del as $d){
+                                    $d->status = 8;
+                                    $d->save();
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                $team->delete();
+            }
         }
 
-        //TODO reject tasks with reject business
+
 
         return json_encode($_POST);
     }
@@ -184,6 +310,9 @@ class TeamController extends Controller {
             $team->status = 1;
             $team->save();
         }
+
+        return json_encode($_POST);
+
     }
 
     public static function getApprovedUser($dep_id, $tool_id){
@@ -201,6 +330,24 @@ class TeamController extends Controller {
         return $user;
     }
 
+    public static function getDelegatedTasks($dep_id, $tool_id){
+
+        $delegated_tasks = Task::find()
+            ->join('LEFT JOIN', 'task_user', 'task_user.task_id = task.id')
+            ->join('LEFT JOIN', 'delegated_task', 'delegated_task.task_user_id = task_user.id')
+            ->where([
+                'task_user.user_tool_id' => $tool_id,
+                'task.department_id' => $dep_id,
+            ])
+            ->andWhere(['!=', 'delegate_task.status', '0'])
+            ->andWhere(['!=', 'delegate_task.status', '7'])
+            ->andWhere(['!=', 'delegate_task.status', '8'])
+            ->all();
+
+        return $delegated_tasks;
+
+    }
+
     public static function getJobberTasks($dep_id, $tool_id){
         $user = Profile::find()
             ->select('user_profile.*')
@@ -212,12 +359,40 @@ class TeamController extends Controller {
         if($do_department){
             return null;
         }else{
-            // TODO delete already delegeted tasks
-
             $tasks = Task::find()->where(['department_id' => $dep_id])->all();
+
+            $task_complete = TaskUser::find()
+                            ->join('LEFT JOIN', 'task', 'task.id = task_user.task_id')
+                            ->where(['task.department_id' => $dep_id, 'task_user.user_tool_id' => $tool_id, 'status' => 2])
+                            ->all();
+
+
+            $task_active = TaskUser::find()
+                ->join('LEFT JOIN', 'task', 'task.id = task_user.task_id')
+                ->where(['task.department_id' => $dep_id, 'task_user.user_tool_id' => $tool_id, 'status' => 1])
+                ->all();
+
+            if($task_complete){
+                $count_task_complete = count($task_complete);
+            }else{
+                $count_task_complete = 0;
+            }
+
+            if($task_active){
+                $count_task_active = count($task_active);
+            }else{
+                $count_task_active = 0;
+            }
+
+            $count_task_new = count($tasks) - ($count_task_complete + $count_task_active);
+
+
             $milestones = Task::find()->where(['department_id' => $dep_id])->groupBy('milestone_id')->all();
             $return = [];
             $return['tasks'] = count($tasks);
+            $return['tasks_complete'] = $count_task_complete;
+            $return['tasks_new'] = $count_task_new;
+            $return['tasks_active'] = $count_task_active;
             $return['milestones'] = count($milestones);
             $return['user'] = $user;
             return $return;
@@ -235,6 +410,55 @@ class TeamController extends Controller {
         $req->is_request = 1;
         $req->save();
 
+        $task = Task::find()->where(['department_id' => $_POST['dep_id']])->all();
+
+        if($task){
+            foreach($task as $t){
+
+                $exist = TaskUser::find()
+                    ->join('LEFT JOIN', 'delegate_task', 'task_user.id=delegate_task.task_user_id')
+                    ->where([
+                        'task_user.task_id' => $t->id,
+                        'task_user.user_tool_id' => $_POST['tool_id'],
+                    ])
+                    ->andWhere(['!=', 'delegate_task.status', '7'])
+                    ->andWhere(['!=', 'delegate_task.status', '8'])
+                    ->andWhere(['!=', 'delegate_task.status', '0'])
+                    ->all();
+
+                if($exist && count($exist) > 0){
+                    continue;
+                }
+
+                $tu = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $_POST['tool_id']])->one();
+
+                if($tu){
+                    $tu->status = 0;
+                }else{
+                    $tu = new TaskUser();
+                    $tu->task_id = $t->id;
+                    $tu->user_tool_id = $_POST['tool_id'];
+                }
+                if(!$tu->save()){
+                    var_dump($tu->getErrors()); die();
+                }else{
+                    $id = $tu->getPrimaryKey();
+                    $dt = new DelegateTask();
+                    $dt->delegate_user_id = Yii::$app->user->id;
+                    $dt->task_user_id = $id;
+                    $dt->is_request = 1;
+                    if(!$dt->save()) {
+                        var_dump($dt->getErrors());
+                        die();
+                    }
+                }
+
+
+            }
+        }
+
+
+
 
 
         return json_encode($_POST);
@@ -242,6 +466,8 @@ class TeamController extends Controller {
 
     public static function getJobberRequests($dep_id, $tool_id){
         $req = Team::find()->where(['department' => $dep_id, 'user_tool_id' => $tool_id, 'recipient_id' => Yii::$app->user->id])->one();
+
+
         return $req;
     }
 
@@ -282,9 +508,35 @@ class TeamController extends Controller {
 
     public function actionDelReq(){
         $team = Team::find()->where(['id' => $_POST['id']])->one();
+
+
+
         if($team){
+
+            $task = Task::find()->where(['department_id' => $team->department])->all();
+
+            if($task){
+                foreach($task as $t){
+
+                    $task_user = TaskUser::find()->where(['task_id' => $t->id, 'user_tool_id' => $team->user_tool_id])->all();
+                    if($task_user){
+                        foreach($task_user as $tu){
+                            $del = DelegateTask::find()->where(['task_user_id' => $tu->id, 'delegate_user_id' => $team->recipient_id, 'status' => 0])->all();
+                            foreach($del as $d){
+                                $d->status = 8;
+                                $d->save();
+                            }
+                        }
+                    }
+
+                }
+            }
+
             $team->delete();
         }
+
+        return json_encode($_POST);
+
     }
 
     public static function checkDo($dep_id){
@@ -295,6 +547,28 @@ class TeamController extends Controller {
     public static function getUserProfile(){
         $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();
         return $profile;
+    }
+
+    public static function getDoDepartment($id, $dep_id){
+        $do = Profile::find()
+            ->select('user_profile.*')
+            ->join('LEFT JOIN', 'user_tool', 'user_tool.user_id = user_profile.user_id')
+            ->join('LEFT JOIN', 'user_do', 'user_do.user_id = user_profile.user_id ')
+            ->where(['user_tool.id' => $id, 'user_do.department_id' => $dep_id, 'user_do.status_do' => 1])
+            ->one();
+
+        return $do;
+    }
+
+    public static function getDelegateDepartment($id, $dep_id){
+        $deleg = Profile::find()
+            ->select('user_profile.*')
+            ->join('LEFT JOIN', 'team', 'team.recipient_id = user_profile.user_id')
+            ->join('LEFT JOIN', 'user_tool', 'user_tool.user_id = team.sender_id')
+            ->where(['user_tool.id' => $id, 'team.department' => $dep_id, 'team.status' => 1])
+            ->one();
+
+        return $deleg;
     }
 
 }

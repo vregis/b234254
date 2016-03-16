@@ -3,25 +3,42 @@
     <div class="roww action">
         <?php foreach($departments as $dep):?>
             <?php $business = TeamController::getJobberRequest($dep->id, $_GET['id']);?>
-        <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
-            <button <?php echo (!$business)?'onclick="return false"':''?> data-toggle="collapse" data-target="#<?php echo $dep->icons?>" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
+            <?php $do = TeamController::getDoDepartment($_GET['id'], $dep->id);
+            ?>
+
+            <?php if($do):?>
+                <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+                    <a target="_blank" href="/user/social/shared-profile?id=<?php echo $do->user_id?>"><img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $do->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$do->avatar:'/images/avatar/nophoto.png'?>" data-original-title="" title=""></a>
+                </div>
+            <?php else: ?>
+
+                <?php $deleg = TeamController::getDelegateDepartment($_GET['id'], $dep->id);
+                ?>
+                <?php if($deleg):?>
+                    <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+                        <a target="_blank" href="/user/social/shared-profile?id=<?php echo $deleg->user_id?>"><img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $deleg->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$deleg->avatar:'/images/avatar/nophoto.png'?>" data-original-title="" title=""></a>
+                    </div>
+                <?php else:?>
+                    <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+                        <button <?php echo (!$business['team'])?'onclick="return false"':''?> data-toggle="collapse" data-target="#<?php echo $dep->icons?>" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    </div>
+                <?php endif;?>
+
+
+
+            <?php endif;?>
         <?php endforeach?>
     </div>
     <div class="roww deps">
-        <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="2" href="javascript:;" class="item background-2">Strategy<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="3" href="javascript:;" class="item background-3">Customers<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="4" href="javascript:;" class="item background-4">Documents<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="5" href="javascript:;" class="item background-5">Products<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="6" href="javascript:;" class="item background-6">Numbers<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="7" href="javascript:;" class="item background-7">IT<div class="arrow" style="left: 50%;"></div></div>
-        <div data-id="8" href="javascript:;" class="item background-8">Team<div class="arrow" style="left: 50%;"></div></div>
+        <?php foreach($departments as $dep):?>
+
+        <div data-id="<?php echo $dep->id?>" href="javascript:;" class="item background-<?php echo $dep->id?>"><?php echo $dep->name?><div class="arrow" style="left: 50%;"></div></div>
+        <?php endforeach; ?>
     </div>
 </div>
 <?php foreach($departments as $dep):?>
     <?php $business = TeamController::getJobberRequest($dep->id, $_GET['id']);?>
-    <?php if($business):?>
+    <?php if($business['team']):?>
 <div class="collapse fade" id="<?php echo $dep->icons?>" >
     <table class="table table-bordered with-foot tbl-dep" data-dep="<?php echo $dep->id?>" style="width:100%;">
         <thead>
@@ -42,7 +59,7 @@
 
 
 
-            <?php foreach($business as $bus):?>
+            <?php foreach($business['team'] as $bus):?>
             <tr class="user-row" data-page-id="0" style="">
                 <td>
                     <img class="gant_avatar" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" src="<?php echo $bus->ava != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$bus->ava:'/images/avatar/nophoto.png'?>" height="33" style="margin:0;">
@@ -52,11 +69,11 @@
                 <?php else:?>
                     <td><?php echo ($bus->fname)?$bus->fname:''?> <?php echo ($bus->lname)?$bus->lname:''?></td>
                 <?php endif;?>
-                <td>40</td>
-                <td>15</td>
-                <td>4</td>
-                <td>2</td>
-                <td>1</td>
+                <td><?php echo $business['milestones']?></td>
+                <td><?php echo $business['tasks']?></td>
+                <td><?php echo $business['tasks_new']?></td>
+                <td><?php echo $business['tasks_active']?></td>
+                <td><?php echo $business['tasks_complete']?></td>
                 <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
                 <td><button data-user-id="<?php echo $bus->dname?>" style="font-size: 10px;" class="btn btn-success circle req_accept"><i class="ico-check1"></i></button></td>
                 <td><button data-user-id="<?php echo $bus->dname?>" style="font-size: 10px;" class="btn btn-danger req_rejct circle"><i class="ico-delete"></i></button></td>

@@ -260,7 +260,15 @@ use modules\user\site\controllers\ProfileController;
                     		<a href="javascript:;" class="item background-8">Team</a>
                     	</div>
                     </div>
-                    <a href="javascript:;" class="btn btn-lg btn-primary join-us" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
+                    <?php $tool = \modules\tasks\models\UserTool::find()->where(['id' => $_GET['id']])->one();?>
+                    <?php if($tool):?>
+                        <?php if($tool->user_id == Yii::$app->user->id):?>
+                            <a target="_blank" href="/departments/team/index?id=<?php echo $tool->id?>" class="btn btn-lg btn-primary join-us" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
+                        <?php else: ?>
+                            <a target="_blank" href="/departments/team/request?id=<?php echo $tool->id?>" class="btn btn-lg btn-primary join-us" style="width:185px;border-radius: 30px;background: transparent;">JOIN US</a>
+                         <?php endif;?>
+
+                    <?php endif;?>
                 </section>
                 <section id="comments">
                     <textarea placeholder="Place your comment" name="" id="comment-area" cols="30" rows="10"></textarea>

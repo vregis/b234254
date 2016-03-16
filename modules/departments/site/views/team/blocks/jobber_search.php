@@ -1,32 +1,33 @@
 <?php use modules\departments\site\controllers\TeamController;?>
 <div class="deps-wrap">
     <div class="roww action">
-        <div data-id="1" class="item background-1">
-            <button data-toggle="collapse" data-target="#idea1" aria-expanded="false" aria-controls="idea1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="2" class="item background-2">
-            <button data-toggle="collapse" data-target="#strategy1" aria-expanded="false" aria-controls="strategy1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="3" class="item background-3">
-            <!--<img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="/images/avatar/nophoto.png" data-original-title="" title="">
-            <a href="javascript:;" class="close"><i class="ico-times"></i></a>-->
-            <button style="" data-toggle="collapse" data-target="#customers1" aria-expanded="false" aria-controls="customers1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="4" class="item background-4">
-            <button data-toggle="collapse" data-target="#documents1" aria-expanded="false" aria-controls="docs1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="5" class="item background-5">
-            <button data-toggle="collapse" data-target="#products1" aria-expanded="false" aria-controls="products1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="6" class="item background-6">
-            <button data-toggle="collapse" data-target="#numbers1" aria-expanded="false" aria-controls="numbers1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="7" class="item background-7">
-            <button data-toggle="collapse" data-target="#computers1" aria-expanded="false" aria-controls="it1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
-        <div data-id="8" class="item background-8">
-            <button data-toggle="collapse" data-target="#people1" aria-expanded="false" aria-controls="team1" class="btn btn-primary circle"><i class="ico-add"></i></button>
-        </div>
+        <?php foreach($departments as $dep):?>
+            <?php $business = TeamController::getJobberRequest($dep->id, $_GET['id']);?>
+            <?php $do = TeamController::getDoDepartment($_GET['id'], $dep->id);
+            ?>
+
+            <?php if($do):?>
+                <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+                    <a target="_blank" href="/user/social/shared-profile?id=<?php echo $do->user_id?>"><img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $do->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$do->avatar:'/images/avatar/nophoto.png'?>" data-original-title="" title=""></a>
+                </div>
+            <?php else: ?>
+
+                <?php $deleg = TeamController::getDelegateDepartment($_GET['id'], $dep->id);
+                ?>
+                <?php if($deleg):?>
+                    <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+                        <a target="_blank" href="/user/social/shared-profile?id=<?php echo $deleg->user_id?>"><img width="30" onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" data-toggle="popover" class="gant_avatar active mCS_img_loaded" data-id="0" src="<?php echo $deleg->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$deleg->avatar:'/images/avatar/nophoto.png'?>" data-original-title="" title=""></a>
+                    </div>
+                <?php else:?>
+                    <div data-id="<?php echo $dep->id?>" class="item background-<?php echo $dep->id?>">
+                        <button data-toggle="collapse" data-target="#<?php echo $dep->icons?>1" aria-expanded="false" aria-controls="idea" class="btn btn-primary circle"><i class="ico-add"></i></button>
+                    </div>
+                <?php endif;?>
+
+
+
+            <?php endif;?>
+        <?php endforeach?>
     </div>
     <div class="roww deps">
         <div data-id="1" href="javascript:;" class="item background-1">Idea<div class="arrow" style="left: 50%;"></div></div>
@@ -75,9 +76,9 @@
             <?php endif;?>
             <td><?php echo $array['milestones']?></td>
             <td><?php echo $array['tasks']?></td>
-            <td>4</td>
-            <td>2</td>
-            <td>1</td>
+            <td><?php echo $array['tasks_new']?></td>
+            <td><?php echo $array['tasks_active']?></td>
+            <td><?php echo $array['tasks_complete']?></td>
             <td><button class="btn btn-primary circle btn-chat"><i class="ico-chat"></i></button></td>
             <td style="width:85px !important;">
                 <?php if($req):?>

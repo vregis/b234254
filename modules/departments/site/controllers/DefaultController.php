@@ -524,6 +524,7 @@ class DefaultController extends Controller
         $task_notes = TaskNote::find()->where(['task_id' => $task->id])->all();
 
         $delegate_task = null;
+
         if($task_user) {
             $delegate_task = DelegateTask::getCurrentDelegateTask($task_user->id, $is_my);
         }
@@ -600,7 +601,10 @@ class DefaultController extends Controller
                 $tool->status = UserTool::STATUS_IDEA_SHARED;
                 $tool->save(false);
             }
+
+
         }
+
         return $this->renderPartial($task_view, [
             'task' => $task,
             'task_user' => $task_user,
