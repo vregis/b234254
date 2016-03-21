@@ -325,8 +325,13 @@ $(function(){
                 date:date
             },
             success: function(response){
-                $('.form_saved').show();
-                window.location.href = '/departments/business';
+                if(response.is_first == 1){
+                    window.location.href = '/departments/business';
+                }else{
+                    window.open('/user/social/shared-profile?id='+response.id+'', '_blank');
+                }
+               // $('.form_saved').show();
+              //  window.location.href = '/departments/business';
             }
         })
     })
