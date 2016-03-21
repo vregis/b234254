@@ -562,10 +562,11 @@ $this->registerJs($msgJs);
         </div>
         <div class="row">
             <div class="col-sm-12">
-<!--                 <div class="pull-left">
-                    <a target="_blank" href="/user/social/shared-profile?id=<?php //echo Yii::$app->user->id?>" class="btn btn-primary share" style="margin-top: 15px;width:100px;margin-left:200px;">Preview</a>
-                </div> -->
-                    <button class="btn btn-success btn-lg save" style="margin: 15px auto;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Continue</button>
+                    <?php if(isset($_GET['first']) && $_GET['first'] == 1):?>
+                        <button class="btn btn-success btn-lg save" style="margin: 15px auto;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Continue</button>
+                    <?php else:?>
+                        <button class="btn btn-success btn-lg save" style="margin: 15px auto;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Preview</button>
+                    <?php endif; ?>
             </div>
         </div>
     </div>
