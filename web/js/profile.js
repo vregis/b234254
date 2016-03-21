@@ -69,6 +69,7 @@ $(document).ready(function() {
                 }else{
                     var type = 'update';
                 }
+
                 var data = {
                     _csrf: $("meta[name=csrf-token]").attr("content"),
                     spec_id: $(this).attr('data-id'),
