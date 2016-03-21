@@ -6,9 +6,6 @@ use modules\tasks\models\Task;
 <?php //echo $task->name; //this is task name?>
 
 <div class="container-fluid">
- <div class="row task-title" style="margin-bottom: 0px;">
-    <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);"><?php echo $task->name; ?></div>
-</div>
     <div class="row task-body" style="margin-top:40px;">
         <div class="desc" style="padding:0 15px;">
             <div class="step">
@@ -37,6 +34,9 @@ use modules\tasks\models\Task;
                 </div>
             </div>
         </div>
+    </div>
+     <div class="row task-title" style="margin-bottom: 0px;">
+        <div class="text-center" style="font-size:30px;font-weight: bold;color: rgba(90,90,90,0.50);"><?php echo $task->name; ?></div>
     </div>
     <div class="name text-center">
         <span id="title-task"><?=$task->description?></span>
