@@ -507,6 +507,7 @@ class BusinessController extends Controller
         if(!$user_specials) {
             $user_specials = $this->get_user_specials();
         }
+
         $this->apply_filters($user_specials, $post, true,$is_dep);
         return $this->renderPartial('blocks/specials_filter',
             [

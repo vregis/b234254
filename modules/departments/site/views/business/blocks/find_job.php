@@ -566,7 +566,7 @@
             setHandlerPagination(_this.closest('.table'));
             var on = $('.on');
             on.off();
-            on.on('click',function(e) {
+            on.on('click',function(e) { //TODO this function
                 var count = $(this).closest('div').find('.on').length;
                 if(count > 1) {
                     $(this).removeClass('on');

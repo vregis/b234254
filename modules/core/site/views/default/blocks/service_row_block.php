@@ -36,9 +36,15 @@ use modules\departments\models\Specialization;
         </div>
         <div class="col-sm-4">
             <select data-key="exp_type" <? if(!$service) echo 'disabled'; ?> class="form-control update selectpicker sel2">
-                <? if(!$service || $service->exp_type == 0) : ?>
-                    <option class="start" value="0">Select</option>
-                <? endif; ?>
+                <? //if(!$service || $service->exp_type == 0) : ?>
+                    <!--<option class="start" value="0">Select1</option>-->
+                <? //endif; ?>
+                <?php if(!$service):?>
+                <option class="start" value="0">Select</option>
+                <?php endif; ?>
+                <?php if($sklist):?>
+                    <?php $sklist = array_reverse($sklist);?>
+                <?php endif;?>
                 <?php foreach($sklist as $sklst):?>
                     <option <?php echo isset($service) && $service->exp_type == $sklst->id?'selected':''?> value="<?php echo $sklst->id?>"><?php echo $sklst->name?></option>
                 <?php endforeach;?>

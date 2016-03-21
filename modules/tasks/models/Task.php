@@ -26,9 +26,12 @@ class Task extends \yii\db\ActiveRecord
     static public $task_steve_roadmap_personal_id = 287;
     static public $task_steve_bussiness_role_id = 285;
     static public $task_steve_comfort_place_id = 286;
-    static public $task_roadmap_personal_id = 284;
+    static public $task_roadmap_personal_id = 287;
+    static public $task_bussiness_role_id = 285;
+    static public $task_comfort_place_id = 286;
+    /*static public $task_roadmap_personal_id = 284;
     static public $task_bussiness_role_id = 282;
-    static public $task_comfort_place_id = 283;
+    static public $task_comfort_place_id = 283;*/
     static public $task_person_goal_id = 168;
     static public $task_idea_id = 37;
     static public $task_idea_benefits_id = 38;
@@ -58,7 +61,7 @@ class Task extends \yii\db\ActiveRecord
 
             ['is_roadmap', 'integer'],
 
-            [['market_rate'], 'string'],
+            [['market_rate', 'button_name'], 'string'],
 
             [['name','description','director_name','priority','performed_immediately'], 'required'],
             [['department_id'],'required', 'message' => 'Please choose department']

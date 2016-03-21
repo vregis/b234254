@@ -71,6 +71,7 @@ class DefaultController extends Controller
             if(isset($post['temp_id'])) {
                 $temp_id = $post['temp_id'];
             }
+
             $tasksInMilestone = Task::find()->where(['milestone_id' => $milestone_id])->orderBy('sort')->all();
             $task->sort = count($tasksInMilestone) + 1;
             $i = 1;
@@ -151,6 +152,7 @@ class DefaultController extends Controller
         }
 
         $post = Yii::$app->request->post();
+
         if (count($post) != 0) {
             $preceding_tasks_array = json_decode($post['preceding-tasks']);
             foreach ($preceding_tasks_array as $preceding_task) {

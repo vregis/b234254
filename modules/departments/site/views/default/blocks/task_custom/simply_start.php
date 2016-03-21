@@ -2,71 +2,60 @@
 use yii\helpers\Url;
 use modules\tasks\models\Task;
 ?>
+
+<?php //echo $task->name; //this is task name?>
+
 <div class="container-fluid">
- <div class="row task-title" style="margin-bottom: 0px;">
-    <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Start</div>
-    <div class="name text-center" style="margin:15px auto 30px;"><?= $task->description ?></div>
+ <div class="row task-title" style="margin-bottom: 8px;">
+    <div class="row task-body" style="margin-top:40px;">
+        <div class="desc" style="padding:0 15px;">
+            <div class="step">
+                <div class="form-md-radios md-radio-inline b-page-checkbox-wrap">
+                    <? $name[0] = 'Start'; ?>
+                    <? $name[1] = 'Discover'; ?>
+                    <? $name[2] = 'Go'; ?>
+                    <? for($i = 0; $i < 3; $i++) : ?>
+                        <div class="md-radio even has-test b-page-checkbox">
+                            <div class="task-name">
+                                <?= $name[$i] ?>
+                            </div>
+                            <input type="radio" id="Roadmap[<?= $i ?>]" name="Roadmap" class="md-radiobtn" value="<?= $i ?>">
+                            <label for="Roadmap[<?= $i ?>]">
+                                <span></span>
+                                <span class="check"></span>
+                                <span class="box" style="cursor: default" onclick="return false;"><?=$i==0 ? '<i class="fa fa-check font-green-jungle"></i>' : $i + 1?></span>
+                            </label>
+                            <div class="text-desc-task" style="display: none">
+                                <?= $task->description ?>
+                            </div>
+                        </div>
+                    <? endfor; ?>
+                    <div style="display:inline-block;width:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="name text-center">
+        <span id="title-task"><?=$task->description?></span>
+    </div>
 </div>
     <div class="task-body">
-        <? if($task->id == Task::$task_roadmap_personal_id) : ?>
-            <a href="<?= Url::toRoute(['/departments/task','id' => Task::$task_bussiness_role_id]) ?>&first=1" class="btn btn-primary btn-lg">Continue</a><!-- person goal -->
-        <? else : ?>
-            <div class="pull-right inline">
+        <? //if($task->id == Task::$task_roadmap_personal_id) : ?>
+            <a href="<?= Url::toRoute(['/departments/task','id' => Task::$task_steve_bussiness_role_id]) ?>&first=1" class="btn btn-primary btn-lg"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a><!-- person goal -->
+        <? //else : ?>
+            <!--<div class="pull-right inline">
                 <a href="#" data-dismiss="modal" class="href-black task-close"></a>
-            </div>
-        <? endif; ?>
+            </div>-->
+        <? //endif; ?>
     </div>
 </div>   
 </div>
-<script>
-    $(document).ready(function(){
-        $("#side_road .item-2").popover({
-            placement:"right auto",
-            html:true,
-            trigger:'hover',
-            container:$("#side_road .wrapper"),
-            template:'<div class="popover top-fix item-2" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(282);?>'
-        });
-        $("#side_road .item-3").popover({
-            placement:"right auto",
-            html:true,
-            trigger:'hover',
-            container:$("#side_road .wrapper"),
-            template:'<div class="popover top-fix item-3" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(283);?><div class="text-center">Completed</div>'
-        });
-        $("#side_road .item-4").popover({
-            placement:"right auto",
-            html:true,
-            trigger:'hover',
-            container:$("#side_road .wrapper"),
-            template:'<div class="popover bottom-fix item-4" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(37);?>'
-        });
-        $("#side_road .item-5").popover({
-            placement:"right auto",
-            html:true,
-            trigger:'hover',
-            container:$("#side_road .wrapper"),
-            template:'<div class="popover bottom-fix item-5" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(38);?>'
-        });
-        $("#side_road .item-6").popover({
-            placement:"right auto",
-            html:true,
-            trigger:'hover',
-            container:$("#side_road .wrapper"),
-            template:'<div class="popover bottom-fix item-6" role="tooltip"><div class="arrow"></div><div class="popover-title"></div><div class="popover-content"></div></div>',
-            content:'<?php echo \modules\departments\tool\TaskComponent::getTaskDesc(39);?>'
-        });
-    });
-</script>
 <style>
     .well{
         width:675px !important;
     }
-/*    .b-page-checkbox-wrap .md-radio:nth-child(1) label > .box{
+    .b-page-checkbox-wrap .md-radio:nth-child(1) label > .box{
         border-color: #26C281 !important;
-    }*/
+    }
 </style>

@@ -182,6 +182,20 @@ $this->registerJs($initJs);
     <?=
     $form->field($task, 'is_roadmap')->checkbox() ?>
 
+    <?php if($task->id == 287 || $task->id == 286 || $task->id == 285):?>
+
+        <?php echo $form->field($task, 'button_name')->textInput(
+            [
+                'class' => 'form-control placeholder-no-fix',
+                'placeholder' => 'Button Label'
+            ]
+        ) ?>
+
+    <?php endif;?>
+
+
+
+
     <div class="portlet">
         <div class="portlet-title">
             <div class="caption tools pull-left">
