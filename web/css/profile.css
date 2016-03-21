@@ -573,9 +573,6 @@ overflow: hidden;
 .mCSB_outside + .mCSB_scrollTools {
     right: -5px !important;
 }
-.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"]{
-    display:none;
-}
 .del_special{
     font-size:10px !important;
 }
