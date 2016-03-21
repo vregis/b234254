@@ -155,7 +155,7 @@ class ServiceData extends DynamicData
                 $us = new UserSpecialization();
                 $us->specialization_id = $spec;
                 $us->user_id = Yii::$app->user->id;
-                $us->exp_type = 1;
+                $us->exp_type = 4;
                 if (!$us->save()) {
                     var_dump($us->getErrors());
                 }
