@@ -1,4 +1,4 @@
-<? if(count($users) > 5): ?>
+<? //if(count($users) > 5): ?>
 <tr>
     <td colspan="8" style="padding: 0; border: none;height:0">
         <ul class="pagination">
@@ -7,12 +7,12 @@
                     <i class="fa fa-angle-left"></i>
                 </a>
             </li>
-            <? for($i = 0, $page_id=0; $i<count($users);$i+=5,$page_id++) : ?>
-                <li class="<?= $page_id==0? 'active' : ''?>">
-                    <a class="go-page" data-page-id="<?= $page_id ?>"> <?= $page_id+1 ?> </a>
+            <? //for($i = 0, $page_id=0; $i<count($users);$i+=5,$page_id++) : ?>
+                <li class="<? //echo $page_id==0? 'active' : ''?>">
+                    <a class="go-page" data-page-id="<? //echo $page_id ?>"> <? //echo $page_id+1 ?> </a>
                 </li>
-            <? endfor; ?>
-            <li class="<?= count($users) <= 5 ? 'disabled':'' ?>">
+            <? //endfor; ?>
+            <li class="<? //echo count($users) <= 5 ? 'disabled':'' ?>">
                 <a class="next-page">
                     <i class="fa fa-angle-right"></i>
                 </a>
@@ -20,4 +20,4 @@
         </ul>
     </td>
 </tr>
-<? endif; ?>
+<? //endif; ?>
