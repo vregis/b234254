@@ -576,3 +576,6 @@ overflow: hidden;
 .bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"]{
     display:none;
 }
+.del_special{
+    font-size:10px !important;
+}
