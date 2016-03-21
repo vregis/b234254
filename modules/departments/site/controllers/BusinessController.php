@@ -101,9 +101,25 @@ class BusinessController extends Controller
 
     public function actionIndex()
     {
-        $self_userTools = UserTool::find()->select('user_tool.*,idea.name name')
+        $self_userTools = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
             ->join('LEFT OUTER JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
-            ->where(['user_id' => Yii::$app->user->id])->all();
+            ->join('LEFT OUTER JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
+            ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->where(['user_tool.user_id' => Yii::$app->user->id])->all();
+
+        $guestUserTools = UserTool::find()
+            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+            ->join('LEFT OUTER JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('LEFT OUTER JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->join('LEFT OUTER JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
+            ->join('LEFT OUTER JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->orderBy(['user_tool.id' => SORT_DESC])
+            ->where(['!=', 'user_tool.user_id', Yii::$app->user->id])
+            ->all();
+
+
+
 
         $delegated_businesses = $this->render_delegated_businesses();
 
@@ -159,6 +175,7 @@ class BusinessController extends Controller
 
         return $this->render('index',[
             'self_userTools' => $self_userTools,
+            'guestTools' => $guestUserTools,
             'delegated_businesses' => $delegated_businesses,
             'profile' => $profile,
             'countrylist' => $countrylist,
