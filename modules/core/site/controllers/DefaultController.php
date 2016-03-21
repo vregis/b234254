@@ -355,15 +355,26 @@ HTML;
                     }
                 }
 
-                if($user->user_type == User::TYPE_EMPLOYER && $_POST['is_first'] == 1){
-                    return $this->redirect(['/departments']);
+                if($_POST['is_first'] == 1){
+                    $response['is_first'] = 1;
+                    $response['id'] = Yii::$app->user->id;
+                    die(json_encode($response));
+                }else{
+                    $response['is_first'] = 0;
+                    $response['id'] = Yii::$app->user->id;
+                    die(json_encode($response));
+                }
+
+
+                /*if($_POST['is_first'] == 1){
+                    return $this->redirect(['/departments/business']);
                 }
 
                 if($user->user_type == 1){
                     return $this->redirect(['/departments/business#delegated']);
-                }
+                }*/
 
-                return $this->redirect(['/departments/business']);
+                //return $this->redirect(['/departments/business']);
             }else{
                 $response['error'] = true;
                 var_dump($profile->getErrors());
