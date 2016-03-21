@@ -31,6 +31,7 @@ use modules\user\models\Skilllist;
 use modules\user\models\Skills;
 use modules\user\models\SkillTag;
 use modules\user\models\User;
+use modules\user\models\UserIndustry;
 use modules\user\models\UserSpecialization;
 use modules\user\models\UserServise;
 use Yii;
@@ -595,6 +596,7 @@ HTML;
         if($_POST['type'] == 'add'){
             $us = new UserSpecialization();
             $us->user_id = Yii::$app->user->id;
+            $us->exp_type = 1;
         }else{
             $us = UserSpecialization::find()->where(['id' => $_POST['tu_id']])->one();
         }
@@ -626,7 +628,10 @@ HTML;
         return json_encode($_POST);
     }
 
+
+
     public function actionChangeSellDepartment(){
+
         $model = UserDo::find()->where(['department_id' => $_POST['dep'], 'user_id' => Yii::$app->user->id])->one();
         if($model){
             if($_POST['check'] == 0){
@@ -682,7 +687,7 @@ HTML;
     public function actionDelSpecialization(){
         $response['error'] = false;
         if($_POST){
-            $spec = UserSpecialization::find()->where(['id' => $_POST['id']])->one();
+            $spec = UserIndustry::find()->where(['id' => $_POST['id']])->one();
             if($spec){
                 $spec->delete();
             }else{
@@ -700,16 +705,16 @@ HTML;
     }
 
     public function actionAddNewInd(){
-        $ind = new UserSpecialization();
+        $ind = new UserIndustry();
         $ind->user_id = Yii::$app->user->id;
-        $ind->specialization_id = $_POST['id'];
+        $ind->industry_id = $_POST['id'];
         $ind->save();
     }
 
     public function actionChangeInd(){
-        $ind = UserSpecialization::find()->where(['id' => $_POST['ind']])->one();
+        $ind = UserIndustry::find()->where(['id' => $_POST['ind']])->one();
 
-        $ind->specialization_id = $_POST['id'];
+        $ind->industry_id = $_POST['id'];
         $ind->save(false);
     }
 
