@@ -216,6 +216,11 @@ $this->registerJs($msgJs);
                     <a href="#delegated#open" style="font-size: 20px;vertical-align: middle;width: 45px !important;height: 45px;line-height: 50px !important;" class="btn btn-primary circle toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false"><i class="ico-search"></i></a>
                     <?php //endif;?>
                 </div>
+
+
+        <?php echo $allToolsCount; ?>
+
+
                 <div id="find_job" class="collapse in slidePop">
                 <?php $i = 0;?>
                 <? foreach($guestTools as $cur) : ?>
