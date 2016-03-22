@@ -46,7 +46,7 @@ use yii\helpers\Url;
         </div>
     </div>
     <?php //else:?>
-        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Share</div>
+        <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Share</div>
     <?php //endif;?>
         <div class="name text-center">
             <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>

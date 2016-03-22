@@ -1674,7 +1674,7 @@ table th.rate .fa{
 .task .dropdown-menu .mCSB_container{
     padding:0 !important;
 }
-.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"]{
+.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"].start{
     display:none;
 }
 .md-radio label > span.inc{

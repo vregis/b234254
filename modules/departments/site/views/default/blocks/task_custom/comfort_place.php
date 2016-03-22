@@ -39,7 +39,7 @@
 	<div class="clearfix"></div>
 
 	<div class="row task-body">
-		<a style="margin-top: 15px;" href="<?= Url::toRoute(['/core/profile?user=spec&first=1']) ?>" class="btn btn-primary btn-lg"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a>
+		<a style="margin-top: 15px;" href="<?= Url::toRoute(['/core/profile?user=spec&first=1']) ?>" class="btn btn-success btn-lg active"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a>
 	</div>
 </div>
 </div>

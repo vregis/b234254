@@ -43,7 +43,7 @@ use modules\tasks\models\Task;
     </div>
     <div class="task-body">
         <? //if($task->id == Task::$task_roadmap_personal_id) : ?>
-            <a href="<?= Url::toRoute(['/departments/task','id' => Task::$task_steve_bussiness_role_id]) ?>&first=1" class="btn btn-primary btn-lg"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a><!-- person goal -->
+            <a href="<?= Url::toRoute(['/departments/task','id' => Task::$task_steve_bussiness_role_id]) ?>&first=1" class="btn btn-success btn-lg active"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a><!-- person goal -->
         <? //else : ?>
             <!--<div class="pull-right inline">
                 <a href="#" data-dismiss="modal" class="href-black task-close"></a>
