@@ -1328,9 +1328,27 @@ class BusinessController extends Controller
             ->offset($offset)
             ->all();
 
-        $dynamic_table = $this->renderPartial('blocks/dynamic_table', ['allToolsCount' => $countGuestTools, 'guestTools' => $guestUserTools, 'current' => $page]);
+        $locations = UserTool::findBySql('SELECT `user_tool`.*, `idea`.`name` AS `name`, `industry`.`name` AS `industry_name`, `geo_country`.`title_en` AS `country`, `geo_country`.`id` AS `location_id` FROM `user_tool` LEFT JOIN `idea` ON idea.user_tool_id = user_tool.id LEFT JOIN `industry` ON industry.id = idea.industry_id LEFT JOIN `user_profile` ON user_profile.user_id = user_tool.user_id LEFT JOIN `geo_country` ON user_profile.country_id = geo_country.id WHERE (`user_tool`.`user_id` != 272) AND (NOT (`idea`.`name` IS NULL)) GROUP BY `geo_country`.`title_en`');
+
+        $industries = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country, industry.id industry_id')
+            ->join('LEFT JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
+            ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->where(['!=', 'user_tool.user_id', Yii::$app->user->id])
+            ->AndWhere(['not', ['idea.name' => NULL]])
+            ->groupBy('industry.name')
+            ->all();
+
+        $filters = $this->renderPartial('blocks/business_filters', ['industries' => $industries, 'locations' => $locations]);
+
+        $dynamic_table = $this->renderPartial('blocks/dynamic_table', ['allToolsCount' => $countGuestTools, 'guestTools' => $guestUserTools, 'current' => $page, 'filters' => $filters]);
 
         return $dynamic_table;
+    }
+
+    public function getBusinessFilters($page){
+
     }
 
 }
