@@ -292,6 +292,11 @@ $(function(){
         var zip = $('input[name="ProfileForm[zip]"]').val();
         var is_first = $('input[name="is_first"]').val();
 
+        if(country == 0){
+            alert('Choose the country');
+            return false;
+        }
+
         var input_count_money = $('input[name="ProfileForm[count_money]"]');
         var count_money = undefined;
         if(input_count_money.length > 0)
