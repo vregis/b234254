@@ -674,12 +674,16 @@ $(document).ready(function () {
         line-height: 30px;
     }
     .pagination{
-        position: absolute;
+        /* position: absolute; */
         z-index: 1;
-        margin: 0;
+            margin: 30px auto 0;
         display: block;
-        margin-top: 17px;
-        left:50%;
+        /* margin-top: 17px; */
+        /* left:50%; */
+            text-align: center;
+    }
+    .pagination > li{
+            display: inline-block;
     }
     .btn.info {
         width: 18px !important;
