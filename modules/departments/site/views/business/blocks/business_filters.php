@@ -96,6 +96,24 @@ $(document).on('change', 'select[name=industry]', function(){
                     }
                 });
             });
+                                    $(".selectpicker").on('changed.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
+            });
         }
     })
 })
