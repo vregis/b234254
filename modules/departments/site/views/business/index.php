@@ -47,9 +47,7 @@ $this->registerJs($msgJs);
 <?php $this->registerCssFile("/metronic/theme/assets/global/plugins/select2/css/select2-bootstrap.min.css"); ?>
 <div class="col-md-12 tables-business">
     <div class="well" style="margin: 0 auto; max-width: 1000px">
-                <div class="text-center btn-div" style="padding-bottom:30px;">
-                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary">Add new idea</a>
-                </div>
+
                 <?php $i = 0;?>
                 <? foreach($self_userTools as $cur) : ?>
                     <?php if($cur->name):?>
@@ -217,7 +215,15 @@ $this->registerJs($msgJs);
                         <!--<p>Fill in the information about your skills before look for a job</p>
                         <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
                     <?php //else:?>
-                    <a href="#delegated#open" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search</a>
+                    <div class="pull-left">
+                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width:270px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary">START YOUR BUSINESS</a>
+                        <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">All you need is an idea!</div>
+                    </div>
+                    <div class="pull-right">
+                        <a href="#delegated#open" style="width:270px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESS</a>
+                        <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">Based on your settings</div>
+                    </div>
+                    <div class="clearfix"></div>
                     <?php //endif;?>
                 </div>
 
