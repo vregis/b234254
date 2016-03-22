@@ -331,7 +331,7 @@ $this->registerJs($msgJs);
                                             <h4 class="panel-title">
                                                 <div class="accordion-toggle collapsed" style="background-color:<?php echo $t['result']['color']?>">
 
-                                                    <div class="do"> <a style="color:<?php echo $t['result']['color']?>" class="do_department check <?php echo $class_do?>" ><i class="ico-check"></i></a>Do for you business</div>
+                                                    <div class="do"> <a style="color:<?php echo $t['result']['color']?>" class="do_department check <?php echo $class_do?>" ><i class="ico-check"></i></a>Do for your business</div>
                                                     <div class="do sell"> <a style="color:<?php echo $t['result']['color']?>" class="sell_department check <?php echo $class_sell?>" data-toggle="collapse" href="#collapse_3_<?php echo $i?>" aria-expanded="true"><i class="ico-check"></i></a>Sell your skills</div>
                                                     <?php $dep = Department::find()->where(['id' => $t['result']['department_id']])->one();?>
                                                     <div class="icon"><i class="ico-<?php echo $dep->icons?>"></i></div>
@@ -569,7 +569,7 @@ $this->registerJs($msgJs);
         <div class="row">
             <div class="col-sm-12">
                 <?php if(isset($_GET['first']) && $_GET['first'] == 1):?>
-                    <button class="btn btn-success btn-lg save" style="margin: 15px auto 0;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Continue</button>
+                    <button class="btn btn-success btn-lg save active" style="margin: 15px auto 0;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Continue</button>
                 <?php else:?>
                     <button class="btn btn-success btn-lg save" style="margin: 15px auto 0;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Preview</button>
                 <?php endif; ?>

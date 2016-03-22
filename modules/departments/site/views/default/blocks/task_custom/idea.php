@@ -48,7 +48,7 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
         <?php //else:?>
-        <div class="text-center" style="font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Idea</div>
+        <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Idea</div>
         <?php //endif;?>
         <?php endif;?>
         <div class="name text-center">

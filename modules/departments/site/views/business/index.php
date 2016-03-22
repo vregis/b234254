@@ -711,9 +711,52 @@ $(document).ready(function () {
     table .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
         width:150px;
     }
+    .business-switch.hover{
+            -webkit-transition: 0.3s linear all;
+    -moz-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+    box-shadow: inset 0 0 10px 5px #fff !important;
+    }
 </style>
 <script>
     $( document ).ready(function() {
+                setTimeout(function(){
+            $.each($('.dropdown-menu.inner'),function(){
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+            });
+        },400);
+        $.each($('.dropdown-menu.inner'),function(){
+            var els = $(this).find('li');
+            console.log(els.length);
+            if(els.length > 8){
+                $(this).mCustomScrollbar({
+                    setHeight: 252,
+                    theme:"dark",
+                    scrollbarPosition:"outside"
+                });  
+            }else{
+                $(this).mCustomScrollbar({
+                    theme:"dark",
+                    scrollbarPosition:"outside"
+                });  
+            }
+        });
+        if(window.location.pathname == '/departments/business'){
+            $(".business-switch").addClass('hover');
+        }
         $("#find_job").on('shown.bs.collapse',function(){
             $(".btn.info").popover({
                 placement:"top",

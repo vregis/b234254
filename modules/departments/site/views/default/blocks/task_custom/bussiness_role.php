@@ -40,7 +40,7 @@
 	<div class="name text-center"><?=$task->description?></div>
 	<div class="clearfix"></div>
 	<div class="task-body">
-		<a href="<?= Url::toRoute(['/tests/progress?first=1']) ?>" class="btn btn-primary btn-lg"><?php echo $task->button_name == ''?'Take a test':$task->button_name?></a>
+		<a href="<?= Url::toRoute(['/tests/progress?first=1']) ?>" class="btn btn-success btn-lg active"><?php echo $task->button_name == ''?'Take a test':$task->button_name?></a>
 	</div>
 </div>
 </div>
