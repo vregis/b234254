@@ -859,6 +859,17 @@ $(document).ready(function () {
         min-width:185px;
         color:#5a5a5a;
     }
+    table .bootstrap-select .btn{
+        border: 0;
+        background: transparent !important;
+        text-align: center;
+    }
+    table .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+        text-align:center;
+    }
+    table .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+        width:150px;
+    }
 </style>
 <script>
     $( document ).ready(function() {
