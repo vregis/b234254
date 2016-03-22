@@ -1,6 +1,36 @@
 <?php use modules\tasks\models\Task;?>
 <?php use modules\tasks\models\TaskUser;?>
 <?php use yii\helpers\Url;?>
+
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 42px !important;padding-left: 1px;padding-top: 1px;"><i class="ico-history"></i></a></th>
+        <th width="260"> Business Name </th>
+        <th style="width: 52px;"> <button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button> </th>
+        <th width="170">
+            <select name="industry" id="" class="selectpicker">
+                <option value="" class="start">Industry</option>
+                <option value="">Art</option>
+                <option value="">Bar</option>
+            </select>
+        </th>
+
+        <th width="170">
+            <select name="industry" id="" class="selectpicker">
+                <option value="" class="start">Location</option>
+                <option value="">Art</option>
+                <option value="">Bar</option>
+            </select>
+        </th>
+        <th width="100"> Total tasks </th>
+        <th width="100"> My tasks </th>
+    </tr>
+    </thead>
+    <tbody class="">
+
+
 <?php $i = 0;?>
 <?php $k = 0;?>
 <? foreach($guestTools as $current_userTool) : ?>
@@ -136,22 +166,19 @@
     <?php endif;?>
 <? endforeach; ?>
 
+    </tbody>
+</table>
 
-<tr>
-    <td colspan="8" style="padding: 0; border: none;height:0">
-
-        <?php $countPage = round($allToolsCount/5);?>
+<?php $countPage = round($allToolsCount/5);?>
 
 
-        <ul class="pagination">
-            <? for($i = 1; $i<=$countPage;$i++): ?>
-                <li class="<? echo $i==$current? 'active' : ''?>">
-                    <a class="go-page" data-page-id="<?php echo $i?>"> <?php echo $i ?> </a>
-                </li>
-            <? endfor; ?>
-        </ul>
-    </td>
-</tr>
+<ul class="pagination">
+    <? for($i = 1; $i<=$countPage;$i++): ?>
+        <li class="<? echo $i==$current? 'active' : ''?>">
+            <a class="go-page" data-page-id="<?php echo $i?>"> <?php echo $i ?> </a>
+        </li>
+    <? endfor; ?>
+</ul>
 
 <script>
     $(document).on('click', '.go-page', function(){
@@ -163,7 +190,7 @@
             dataType: 'json',
             type: 'post',
             success: function(response){
-                $('.dynamic_body').html(response.html);
+                $('.dynamic_block').html(response.html);
             }
         })
     })
