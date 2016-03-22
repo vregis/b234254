@@ -169,10 +169,12 @@
 <script>
     $(document).on('click', '.go-page', function(){
         var id = $(this).attr('data-page-id');
+        var loc = $('select[name=location]').val();
+        var ind = $('select[name=industry]').val();
 
         $.ajax({
             url: '/departments/business/pagination-business',
-            data: {id:id},
+            data: {id:id, loc:loc, ind:ind},
             dataType: 'json',
             type: 'post',
             success: function(response){
