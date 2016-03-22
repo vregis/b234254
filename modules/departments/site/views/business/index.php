@@ -726,40 +726,43 @@ $(document).ready(function () {
 </style>
 <script>
     $( document ).ready(function() {
-                setTimeout(function(){
-            $.each($('.dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 252,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
+        setTimeout(function(){
+            $(".selectpicker").on('rendered.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
+            });        },400);
+            $(".selectpicker").on('rendered.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
             });
-        },400);
-        $.each($('.dropdown-menu.inner'),function(){
-            var els = $(this).find('li');
-            console.log(els.length);
-            if(els.length > 8){
-                $(this).mCustomScrollbar({
-                    setHeight: 252,
-                    theme:"dark",
-                    scrollbarPosition:"outside"
-                });  
-            }else{
-                $(this).mCustomScrollbar({
-                    theme:"dark",
-                    scrollbarPosition:"outside"
-                });  
-            }
-        });
         if(window.location.pathname == '/departments/business'){
             $(".business-switch").addClass('hover');
         }
@@ -769,6 +772,24 @@ $(document).ready(function () {
                 html:true
             });
             $(".selectpicker").selectpicker();
+                        $(".selectpicker").on('rendered.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
+            });
             $("table th.rate,table th.time").click(function(){
                 if($(this).find('i').hasClass('fa-angle-down'))
                     $(this).find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
