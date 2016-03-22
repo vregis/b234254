@@ -103,18 +103,18 @@ $this->registerJs($msgJs);
                                 ><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
                             </td>
                             <td>
-                                <a href="/user/social/shared-profile?id=88" target="_blank">
+                                <a href="/user/social/shared-profile?id=<?php echo $current_userTool->user_id?>" target="_blank">
                                     <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="/images/avatar/nophoto.png" >
                                 </a>
                             </td>
                             <td>
-                                Industry
+                                <?php echo $current_userTool->industry_name?>
                             </td>
                             <td>
-                                Location
+                                <?php echo $current_userTool->country?>
                             </td>
                             <td>
-                                23
+                                <?php echo $task_count; ?>
                             </td>
                             <td>
                                 12
@@ -205,7 +205,7 @@ $this->registerJs($msgJs);
 
                             <?php endif;?>
                     <? endforeach; ?>
-                    <? require __DIR__.'/blocks/pagination.php' ?>
+                    <? //require __DIR__.'/blocks/pagination.php' ?>
                     </tbody>
                 </table>
 
@@ -213,16 +213,21 @@ $this->registerJs($msgJs);
 
                 <div class="text-center btn-div" style="padding-top:30px;">
                     <?php $do = \modules\departments\models\UserDo::find()->where(['user_id' => Yii::$app->user->id, 'status_sell' => 1])->all();?>
-                    <?php if(count($do) == 0):?>
-                        <p>Fill in the information about your skills before look for a job</p>
-                        <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>
-                    <?php else:?>
+                    <?php //if(count($do) == 0):?>
+                        <!--<p>Fill in the information about your skills before look for a job</p>
+                        <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
+                    <?php //else:?>
                     <a href="#delegated#open" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search</a>
-                    <?php endif;?>
+                    <?php //endif;?>
                 </div>
+
+
+        <?php echo $allToolsCount; ?>
+
+
                 <div id="find_job" class="collapse in slidePop">
                 <?php $i = 0;?>
-                <? foreach($self_userTools as $cur) : ?>
+                <? foreach($guestTools as $cur) : ?>
                     <?php if($cur->name):?>
                         <?php $i++;?>
                     <?php endif;?>
@@ -240,11 +245,12 @@ $this->registerJs($msgJs);
                                 <option value="">Bar</option>
                             </select>
                         </th>
-                        <th class="dropmenu filter-task deps" width="170">
+
+                        <th width="170">
                             <select name="industry" id="" class="selectpicker">
                                 <option value="" class="start">Location</option>
-                                <option value="">USA</option>
-                                <option value="">Ukraine</option>
+                                <option value="">Art</option>
+                                <option value="">Bar</option>
                             </select>
                         </th>
                         <th width="100"> Total tasks </th>
@@ -253,10 +259,13 @@ $this->registerJs($msgJs);
                     </thead>
                     <tbody>
                     <?php $i = 0;?>
-                    <? foreach($self_userTools as $current_userTool) : ?>
+                    <?php $k = 0;?>
+                    <? foreach($guestTools as $current_userTool) : ?>
                         <?php $i++; ?>
+
                         <?php if(!$current_userTool->name):?>
                         <?php else:?>
+                            <?php $k++;?>
                         <tr>
                             <?
                             $task_count = Task::find()
@@ -267,8 +276,9 @@ $this->registerJs($msgJs);
                             $count_progress = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_active])->count();
                             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
                             ?>
+                            <?php if($k > 5){ continue; } //TODO DELETE THIS!!!!!!!!!!?>
                             <td>
-                                <a href="javascript:;" style="padding-top: 1px;padding-left: 1px;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
+                                <a target ='_blank' href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" style="padding-top: 1px;padding-left: 1px;" class="history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
                             </td>
                             <td style="text-transform: uppercase">
                                 <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $current_userTool->id]) ?>"
@@ -280,18 +290,18 @@ $this->registerJs($msgJs);
                                 ><?= $current_userTool->name ? $current_userTool->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
                             </td>
                             <td>
-                                <a href="/user/social/shared-profile?id=88" target="_blank">
+                                <a href="/user/social/shared-profile?id=<?php echo $current_userTool->user_id?>" target="_blank">
                                     <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="/images/avatar/nophoto.png" >
                                 </a>
                             </td>
                             <td>
-                                Industry
+                                <?php echo $current_userTool->industry_name?>
                             </td>
                             <td>
-                                Location
+                                <?php echo $current_userTool->country?>
                             </td>
                             <td>
-                                23
+                                <?php echo $task_count; ?>
                             </td>
                             <td>
                                 12
@@ -382,7 +392,7 @@ $this->registerJs($msgJs);
 
                             <?php endif;?>
                     <? endforeach; ?>
-                    <? require __DIR__.'/blocks/pagination.php' ?>
+                    <? //require __DIR__.'/blocks/pagination.php' ?>
                     </tbody>
                 </table>
                 </div>
