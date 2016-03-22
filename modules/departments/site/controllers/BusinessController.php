@@ -76,6 +76,7 @@ class BusinessController extends Controller
                             'add-like-idea',
                             'shared-business',
                             'change-show',
+                            'pagination-business',
                             'edit-shared'
                         ],
                         'roles' => ['@']
@@ -132,6 +133,8 @@ class BusinessController extends Controller
             ->AndWhere(['not', ['idea.name' => NULL]])
             ->limit(5)
             ->all();
+
+        $dynamic_table = $this->getDynamicTable(1);
 
 
 
@@ -206,7 +209,8 @@ class BusinessController extends Controller
             'specials_filter_pending' => $specials_filter_pending,
             'deps_request_filter' => $deps_request_filter,
             'specials_request_filter' => $specials_request_filter,
-            'allToolsCount' => $countGuestTools
+            'allToolsCount' => $countGuestTools,
+            'dynamic_table' => $dynamic_table
         ]);
     }
 
@@ -1282,6 +1286,51 @@ class BusinessController extends Controller
 
         return json_encode($_POST);
 
+    }
+
+    public function actionPaginationBusiness(){
+
+        if($_POST){
+            $response['html'] = $this->getDynamicTable($_POST['id']);
+        }
+
+        return json_encode($response);
+
+
+    }
+
+    private function getDynamicTable($page){
+
+        $offset = 5*($page - 1);
+
+        $countGuestTools = $guestUserTools = UserTool::find()
+            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+            ->join('LEFT JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
+            ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->where(['!=', 'user_tool.user_id', Yii::$app->user->id])
+            ->AndWhere(['not', ['idea.name' => NULL]])
+            ->all();
+
+        $countGuestTools = count($countGuestTools);
+
+
+        $guestUserTools = UserTool::find()
+            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+            ->join('LEFT JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
+            ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->where(['!=', 'user_tool.user_id', Yii::$app->user->id])
+            ->AndWhere(['not', ['idea.name' => NULL]])
+            ->limit(5)
+            ->offset($offset)
+            ->all();
+
+        $dynamic_table = $this->renderPartial('blocks/dynamic_table', ['allToolsCount' => $countGuestTools, 'guestTools' => $guestUserTools, 'current' => $page]);
+
+        return $dynamic_table;
     }
 
 }
