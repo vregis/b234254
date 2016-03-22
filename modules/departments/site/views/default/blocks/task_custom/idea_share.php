@@ -60,7 +60,8 @@ use yii\helpers\Url;
         <div class="row form-group" style="margin-bottom: 0;">
             <div class="col-sm-12">
                 <? require __DIR__.'/idea/idea_block.php'; ?>
-                <a style="margin:0px auto 0;" href="<?= Url::toRoute(['/departments/business/shared-business','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg fix_is_new">Preview</a>
+                <a style="margin:0px auto 0;margin-left: 200px;" href="<?= Url::toRoute(['/departments/business/shared-business','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg fix_is_new pull-left">Preview</a>
+                <a style="margin:0px auto 0;margin-right: 200px;" href="<?= Url::toRoute(['/departments/business/']) ?>" class="btn btn-primary btn-lg fix_is_new pull-right">Continue</a>
             </div>
         </div>
     </div>

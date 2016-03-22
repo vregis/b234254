@@ -39,12 +39,16 @@ $msgJs = <<<JS
         $(window).resize(function() { fontSize(); });
 JS;
 $this->registerJs($msgJs);
-?>
 
+?>
+<?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
+<?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
+<?php $this->registerCssFile("/metronic/theme/assets/global/plugins/select2/css/select2.min.css"); ?>
+<?php $this->registerCssFile("/metronic/theme/assets/global/plugins/select2/css/select2-bootstrap.min.css"); ?>
 <div class="col-md-12 tables-business">
     <div class="well" style="margin: 0 auto; max-width: 1000px">
                 <div class="text-center btn-div" style="padding-bottom:30px;">
-                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="font-size: 20px;vertical-align: middle;width: 45px !important;height: 45px;line-height: 50px !important;" class="btn circle btn-primary"><i class="ico-add"></i></a>
+                    <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary">Add new idea</a>
                 </div>
                 <?php $i = 0;?>
                 <? foreach($self_userTools as $cur) : ?>
@@ -213,7 +217,7 @@ $this->registerJs($msgJs);
                         <!--<p>Fill in the information about your skills before look for a job</p>
                         <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
                     <?php //else:?>
-                    <a href="#delegated#open" style="font-size: 20px;vertical-align: middle;width: 45px !important;height: 45px;line-height: 50px !important;" class="btn btn-primary circle toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false"><i class="ico-search"></i></a>
+                    <a href="#delegated#open" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">Search</a>
                     <?php //endif;?>
                 </div>
 
@@ -231,21 +235,20 @@ $this->registerJs($msgJs);
                         <th style="width: 52px;"><a href="#" class="btn btn-primary circle static" style="margin:0;border:none !important;font-size: 24px;line-height: 42px !important;padding-left: 1px;padding-top: 1px;"><i class="ico-history"></i></a></th>
                         <th width="260"> Business Name </th>
                         <th style="width: 52px;"> <button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button> </th>
-                        <th class="dropmenu filter-task deps" width="170">
-                            <div style="position:relative;">
-                                <div class="trigger">Industry <i class="fa fa-angle-down"></i></div>
-                                <div class="popover dropselect fade bottom in deps-menu" role="tooltip">
-                                     <?=$deps_filter ?>
-                                </div>
-                            </div>
+                        <th width="170">
+                            <select name="industry" id="" class="selectpicker">
+                                <option value="" class="start">Industry</option>
+                                <option value="">Art</option>
+                                <option value="">Bar</option>
+                            </select>
                         </th>
-                        <th class="dropmenu filter-task deps" width="170">
-                            <div style="position:relative;">
-                                <div class="trigger">Location <i class="fa fa-angle-down"></i></div>
-                                <div class="popover dropselect fade bottom in deps-menu" role="tooltip">
-                                     <?=$deps_filter ?>
-                                </div>
-                            </div>
+
+                        <th width="170">
+                            <select name="industry" id="" class="selectpicker">
+                                <option value="" class="start">Location</option>
+                                <option value="">Art</option>
+                                <option value="">Bar</option>
+                            </select>
                         </th>
                         <th width="100"> Total tasks </th>
                         <th width="100"> My tasks </th>
@@ -594,10 +597,10 @@ $(document).ready(function () {
         min-width:195px !important;
         width:195px !important;
     }
-    .dropselect1{
+/*     .dropselect1{
         min-width:150px !important;
         width:150px !important;
-    }
+    } */
     .dropselect .popover-content,.dropselect1 .popover-content{
         padding: 0;
     }
@@ -719,6 +722,17 @@ $(document).ready(function () {
         min-width:185px;
         color:#5a5a5a;
     }
+    table .bootstrap-select .btn{
+        border: 0;
+        background: transparent !important;
+        text-align: center;
+    }
+    table .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+        text-align:center;
+    }
+    table .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+        width:150px;
+    }
 </style>
 <script>
     $( document ).ready(function() {
@@ -727,6 +741,7 @@ $(document).ready(function () {
                 placement:"top",
                 html:true
             });
+            $(".selectpicker").selectpicker();
             $("table th.rate,table th.time").click(function(){
                 if($(this).find('i').hasClass('fa-angle-down'))
                     $(this).find('i').removeClass('fa-angle-down').addClass('fa-angle-up');

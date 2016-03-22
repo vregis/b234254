@@ -569,9 +569,9 @@ $this->registerJs($msgJs);
         <div class="row">
             <div class="col-sm-12">
                 <?php if(isset($_GET['first']) && $_GET['first'] == 1):?>
-                    <button class="btn btn-success btn-lg save" style="margin: 15px auto;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Continue</button>
+                    <button class="btn btn-success btn-lg save" style="margin: 15px auto 0;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Continue</button>
                 <?php else:?>
-                    <button class="btn btn-success btn-lg save" style="margin: 15px auto;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Preview</button>
+                    <button class="btn btn-success btn-lg save" style="margin: 15px auto 0;width: 170px;display: block;border-radius: 32px !important;font-size: 22px;">Preview</button>
                 <?php endif; ?>
             </div>
         </div>

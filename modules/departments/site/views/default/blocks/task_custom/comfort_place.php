@@ -33,13 +33,13 @@
 		</div>
 	</div>
  <div class="row task-title" style="margin-bottom: 0px;">
-    <div class="text-center" style="font-size:30px;font-weight: bold;color: rgba(90,90,90,0.50);"><?php echo $task->name; ?></div>
+    <div class="text-center" style="font-size:30px;margin: 20px 0;font-weight: bold;color: rgba(90,90,90,0.50);"><?php echo $task->name; ?></div>
 </div>
 	<div class="name text-center"><?= $task->description ?></div>
 	<div class="clearfix"></div>
 
 	<div class="row task-body">
-		<a href="<?= Url::toRoute(['/core/profile?user=spec&first=1']) ?>" class="btn btn-primary btn-lg"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a>
+		<a style="margin-top: 15px;" href="<?= Url::toRoute(['/core/profile?user=spec&first=1']) ?>" class="btn btn-primary btn-lg"><?php echo $task->button_name == ''?'Continue':$task->button_name?></a>
 	</div>
 </div>
 </div>
