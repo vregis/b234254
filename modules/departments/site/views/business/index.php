@@ -209,12 +209,12 @@ $this->registerJs($msgJs);
 
                 <div class="text-center btn-div" style="padding-top:30px;">
                     <?php $do = \modules\departments\models\UserDo::find()->where(['user_id' => Yii::$app->user->id, 'status_sell' => 1])->all();?>
-                    <?php if(count($do) == 0):?>
-                        <p>Fill in the information about your skills before look for a job</p>
-                        <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>
-                    <?php else:?>
+                    <?php //if(count($do) == 0):?>
+                        <!--<p>Fill in the information about your skills before look for a job</p>
+                        <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
+                    <?php //else:?>
                     <a href="#delegated#open" style="font-size: 20px;vertical-align: middle;width: 45px !important;height: 45px;line-height: 50px !important;" class="btn btn-primary circle toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false"><i class="ico-search"></i></a>
-                    <?php endif;?>
+                    <?php //endif;?>
                 </div>
                 <div id="find_job" class="collapse in slidePop">
                 <?php $i = 0;?>
@@ -233,7 +233,7 @@ $this->registerJs($msgJs);
                             <div style="position:relative;">
                                 <div class="trigger">Industry <i class="fa fa-angle-down"></i></div>
                                 <div class="popover dropselect fade bottom in deps-menu" role="tooltip">
-                                     <? //= $deps_filter ?>
+                                     <?=$deps_filter ?>
                                 </div>
                             </div>
                         </th>
@@ -241,7 +241,7 @@ $this->registerJs($msgJs);
                             <div style="position:relative;">
                                 <div class="trigger">Location <i class="fa fa-angle-down"></i></div>
                                 <div class="popover dropselect fade bottom in deps-menu" role="tooltip">
-                                     <? //= $deps_filter ?>
+                                     <?=$deps_filter ?>
                                 </div>
                             </div>
                         </th>
