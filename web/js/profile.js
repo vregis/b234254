@@ -297,6 +297,12 @@ $(function(){
             return false;
         }
 
+        indstr = $(document).find('.change-industry').val();
+        if(typeof(indstr) == 'undefined'){
+            alert('industry cannot be blank');
+            return false;
+        }
+
         var input_count_money = $('input[name="ProfileForm[count_money]"]');
         var count_money = undefined;
         if(input_count_money.length > 0)

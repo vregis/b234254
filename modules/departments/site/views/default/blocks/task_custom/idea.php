@@ -93,7 +93,7 @@ use yii\widgets\ActiveForm;
         <div class="row form-group" style="margin-bottom:0;">
             <div class="col-sm-12">
                 <? //require __DIR__.'/idea/idea_block.php'; ?>
-                <?= Html::submitButton('Continue', [
+                <?= Html::submitButton($task->button_name==''?'Continue':$task->button_name, [
                     'class' => 'btn btn-success btn-lg',
                     'style' => 'margin:0px auto 0;'
                 ]) ?>

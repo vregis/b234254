@@ -182,12 +182,23 @@ $this->registerJs($initJs);
     <?=
     $form->field($task, 'is_roadmap')->checkbox() ?>
 
-    <?php if($task->id == 287 || $task->id == 286 || $task->id == 285):?>
+    <?php if($task->id == 287 || $task->id == 286 || $task->id == 285 || $task->id ==37 || $task->id == 38 || $task->id == 39):?>
 
         <?php echo $form->field($task, 'button_name')->textInput(
             [
                 'class' => 'form-control placeholder-no-fix',
                 'placeholder' => 'Button Label'
+            ]
+        ) ?>
+
+    <?php endif;?>
+
+    <?php if($task->id == 39):?>
+
+        <?php echo $form->field($task, 'second_button_name')->textInput(
+            [
+                'class' => 'form-control placeholder-no-fix',
+                'placeholder' => 'Second Button Label'
             ]
         ) ?>
 
