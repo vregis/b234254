@@ -46,9 +46,9 @@ use yii\helpers\Url;
         </div>
     </div>
     <?php //else:?>
-        <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Share</div>
+<!--         <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Share</div> -->
     <?php //endif;?>
-        <div class="name text-center">
+        <div class="name text-center" style="margin-top: 20px;">
             <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>
                 <span id="title-task text-center"><?php echo $task->description_road?></span>
             <?php else:?>

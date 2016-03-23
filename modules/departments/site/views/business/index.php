@@ -40,7 +40,7 @@ $msgJs = <<<JS
 JS;
 $this->registerJs($msgJs);
 
-?>
+?><?php $this->registerJsFile("/metronic/theme/assets/global/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"); ?>
 <?php $this->registerCssFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css");?>
 <?php $this->registerJsFile("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js");?>
 <?php $this->registerCssFile("/metronic/theme/assets/global/plugins/select2/css/select2.min.css"); ?>
@@ -215,12 +215,12 @@ $this->registerJs($msgJs);
                         <!--<p>Fill in the information about your skills before look for a job</p>
                         <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
                     <?php //else:?>
-                    <div class="pull-left">
-                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width:270px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary">START YOUR BUSINESS</a>
+                    <div class="pull-left" style="margin-left: 170px;">
+                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width:200px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary">START YOUR BUSINESS</a>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">All you need is an idea!</div>
                     </div>
-                    <div class="pull-right">
-                        <a href="#delegated#open" style="width:270px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESS</a>
+                    <div class="pull-right" style="margin-right: 170px;">
+                        <a href="#delegated#open" style="width:200px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESS</a>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">Based on your settings</div>
                     </div>
                     <div class="clearfix"></div>
