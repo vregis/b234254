@@ -600,8 +600,8 @@ $this->registerJs($msgJs);
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary change_pass">Save changes</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-success change_pass">Save changes</button>
         </div>
     </div>
     <!-- /.modal-content -->
@@ -617,7 +617,10 @@ $this->registerJs($msgJs);
                 <h4 class="modal-title">Privacy Settings</h4>
             </div>
             <div style="text-align:center" class="modal-body">
-                    <div class="form-group">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                                                <div class="form-group">
                         <label style="text-align:left"><img style="margin:5px" width="20" src="/images/phone.png"> Show it in profile</label>
                         <input type="checkbox" <?php echo $model->show_phone == 1?'checked':''?> id="show_phone" class="form-control show_soc">
                     </div>
@@ -633,7 +636,9 @@ $this->registerJs($msgJs);
                         <label><img width="20" style="margin:5px" src="/images/tw.png"> Show it in profile</label>
                         <input type="checkbox" <?php echo $model->show_tw == 1?'checked':''?> id="show_tw" class="form-control show_soc">
                     </div>
-                    <div class="form-group">
+                        </div>
+                        <div class="col-sm-6">
+                                                <div class="form-group">
                         <label><img width="20" style="margin:5px" src="/images/fb.png"> Show it in profile</label>
                         <input type="checkbox" <?php echo $model->show_fb == 1?'checked':''?> id="show_fb" class="form-control show_soc">
                     </div>
@@ -649,9 +654,12 @@ $this->registerJs($msgJs);
                         <label><img width="20" style="margin:5px" src="/images/lin.png"> Show it in profile</label>
                         <input type="checkbox" <?php echo $model->show_ln == 1?'checked':''?> id="show_ln" class="form-control show_soc">
                     </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -684,6 +692,16 @@ $this->registerJs($msgJs);
 <script>
 
     $(function () {
+        $("#privacy").on('shown.bs.modal',function(){
+            $("#privacy .modal-dialog").css({
+                'margin-top':$(window).height()/2 - $("#privacy .modal-dialog").height()/2
+            });
+        });
+        $("#basic").on('shown.bs.modal',function(){
+            $("#basic .modal-dialog").css({
+                'margin-top':$(window).height()/2 - $("#basic .modal-dialog").height()/2
+            });
+        });
         $('.page-content').mCustomScrollbar({
             setHeight: $('.page-content').css('minHeight'),
             theme:"dark"

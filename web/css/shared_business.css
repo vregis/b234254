@@ -16,7 +16,7 @@ body{
 	background:rgba(255,255,255,0.9);
 }
 .well .header{
-	height: 76px;
+	height: 100px;
 	line-height: 76px;
 	text-align: center;
 	border-radius: 10px 10px 0 0 !important;
@@ -411,18 +411,19 @@ section.contacts .title{
 	background: url("/images/share_profile.png") -288px -60px no-repeat;
 }
 
-.page-footer .contacts{
+.header .contacts{
 	position: absolute;
-	top: 20px;
-	left:30px;
-	width:380px;
+	top: 55px;
+	left:50%;
+	width:144px;
 	line-height: 32px;
 	border: none;
 	text-align: left;
 	color:#5a5a5a;
+	margin-left: -72px;
 }
-.page-footer .contacts .small{
-	width:180px;
+.header .contacts .small{
+	width:75px;
 	margin-left:30px;
 	margin-top: 13px;
 	text-align: left;
@@ -431,10 +432,10 @@ section.contacts .title{
 	vertical-align: middle;
     height: 30px;
 }
-.page-footer .contacts .small a{
+.header .contacts .small a{
 	margin:0 2px;
 }
-.page-footer .contacts  label{
+.header .contacts  label{
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 30px;

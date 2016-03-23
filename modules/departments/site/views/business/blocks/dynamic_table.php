@@ -153,18 +153,23 @@
 <? endforeach; ?>
 
     </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="7">
+                <?php $countPage = ceil($allToolsCount/5);?>
+                <ul class="pagination">
+                    <? for($i = 1; $i<=$countPage;$i++): ?>
+                        <li class="<? echo $i==$current? 'active' : ''?>">
+                            <a class="go-page" data-page-id="<?php echo $i?>"> <?php echo $i ?> </a>
+                        </li>
+                    <? endfor; ?>
+                </ul>
+            </th>
+        </tr>
+    </tfoot>
 </table>
 
-<?php $countPage = ceil($allToolsCount/5);?>
 
-
-<ul class="pagination">
-    <? for($i = 1; $i<=$countPage;$i++): ?>
-        <li class="<? echo $i==$current? 'active' : ''?>">
-            <a class="go-page" data-page-id="<?php echo $i?>"> <?php echo $i ?> </a>
-        </li>
-    <? endfor; ?>
-</ul>
 
 <script>
     $(document).on('click', '.go-page', function(){

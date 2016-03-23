@@ -55,10 +55,10 @@ $this->registerJs($msgJs);
                     <?php endif;?>
                 <?php endforeach;?>
             <? if(count($self_userTools) == 0 || $i == 0) : ?>
-                <div class="text-center" style="padding:22px 0;">
+<!--                 <div class="text-center" style="padding:22px 0;">
                     Everyone can start a business. All you need is just an idea!
                 </div>
-                <div style="border-top:1px solid #d7d7d7;height:1px;"></div>
+                <div style="border-top:1px solid #d7d7d7;height:1px;"></div> -->
             <?php else: ?>
                 <table class="table table-bordered">
                     <thead>
@@ -209,7 +209,7 @@ $this->registerJs($msgJs);
 
                 <? endif; ?>
 
-                <div class="text-center btn-div" style="padding-top:30px;">
+                <div class="text-center btn-div" style="padding: 30px 0 20px;">
                     <?php $do = \modules\departments\models\UserDo::find()->where(['user_id' => Yii::$app->user->id, 'status_sell' => 1])->all();?>
                     <?php //if(count($do) == 0):?>
                         <!--<p>Fill in the information about your skills before look for a job</p>
@@ -220,7 +220,7 @@ $this->registerJs($msgJs);
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">All you need is an idea!</div>
                     </div>
                     <div class="pull-right" style="margin-right: 170px;">
-                        <a href="#delegated#open" style="width:200px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESS</a>
+                        <a href="javascript:;" style="width:200px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESS</a>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">Based on your settings</div>
                     </div>
                     <div class="clearfix"></div>
@@ -228,7 +228,7 @@ $this->registerJs($msgJs);
                 </div>
 
 
-                <div id="find_job" class="collapse in slidePop">
+                <div id="find_job" class="collapse slidePop">
                 <?php $i = 0;?>
                 <? foreach($guestTools as $cur) : ?>
                     <?php if($cur->name):?>
@@ -324,7 +324,7 @@ $this->registerJs($msgJs);
                             <button style="width:100px;" class="btn btn-danger">Refuse</button>
                         </div>
                         <div class="text-center col-sm-6">
-                            <button style="width:100px;" class="btn btn-success">Contribute</button>
+                            <button style="width:100px;" class="btn btn-success active">Contribute</button>
                         </div>
                     </div>
                     <div class="row">
@@ -498,7 +498,7 @@ $(document).ready(function () {
                 trigger:"hover",
                 template:'<div class="popover tname" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
             });
-            window.location.hash = $(this).attr('href');
+            // window.location.hash = $(this).attr('href');
             $(".page-content-wrapper").mCustomScrollbar("destroy");
             $('.page-content-wrapper').mCustomScrollbar({
                 setHeight: $('.page-content').css('minHeight'),
@@ -511,6 +511,43 @@ $(document).ready(function () {
             });
             $(".toggle-findjod").click(function(){
                $(this).toggleClass('active');
+                           $(".selectpicker").selectpicker();
+             $(".selectpicker").on('changed.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
+            });
+            $(".selectpicker").on('rendered.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
+            });
             });
     });
 </script>
@@ -546,7 +583,7 @@ $(document).ready(function () {
         border:none;
     }
     .popover{
-        min-width: 420px;
+        /* min-width: 420px; */
         border:1px solid #d7d7d7;
         padding: 10px;
         /*white-space: nowrap;*/
@@ -682,14 +719,15 @@ $(document).ready(function () {
     .pagination{
         /* position: absolute; */
         z-index: 1;
-            margin: 30px auto 0;
+            margin: 0;
         display: block;
         /* margin-top: 17px; */
         /* left:50%; */
             text-align: center;
     }
     .pagination > li{
-            display: inline-block;
+        display: inline-block;
+        vertical-align:middle;
     }
     .btn.info {
         width: 18px !important;
@@ -713,6 +751,7 @@ $(document).ready(function () {
     }
     table .bootstrap-select.btn-group .dropdown-toggle .filter-option{
         text-align:center;
+            font-size: 16px;
     }
     table .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
         width:150px;
@@ -955,17 +994,17 @@ $(document).ready(function () {
             $("#search-block .pagination").css({
                 'margin-left': "-" + ($("#search-block .pagination").width() / 2) + "px",
             });
-            $('#find_job a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                e.target // newly activated tab
-                e.relatedTarget // previous active tab
-                $(".pagination").css({
-                    'margin-left': "-" + ($($(this).attr('href')).find(".pagination").width() / 2) + "px",
-                });
-                $(".btn.info").popover({
-                    placement:"top",
-                    html:true
-                });
-            });
+            // $('#find_job a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            //     e.target // newly activated tab
+            //     e.relatedTarget // previous active tab
+            //     $(".pagination").css({
+            //         'margin-left': "-" + ($($(this).attr('href')).find(".pagination").width() / 2) + "px",
+            //     });
+            //     $(".btn.info").popover({
+            //         placement:"top",
+            //         html:true
+            //     });
+            // });
         });
         $('.selectpicker').selectpicker({});
         $("#input-rate-start,#input-rate-end").inputmask({
