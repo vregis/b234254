@@ -79,7 +79,7 @@ use modules\core\widgets\Flash;
                 <div class="header-brand">
                     <img class="header-logo logo-light" src="/images/mainpage/logo-light.png" alt="">
                     <img class="header-logo logo-dark" src="/images/mainpage/logo-dark.png" alt="">
-                    <span class="alpha">Alpha version</span>
+                    <span class="alpha">Beta version</span>
                 </div>
 
                 <!-- header brand -->

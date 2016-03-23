@@ -48,10 +48,10 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
         <?php //else:?>
-        <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Idea</div>
+<!--         <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Idea</div> -->
         <?php //endif;?>
         <?php endif;?>
-        <div class="name text-center">
+        <div class="name text-center" style="margin-top: 20px;">
             <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>
                 <span id="title-task text-center"><?php echo $task->description_road?></span>
             <?php else:?>
@@ -209,22 +209,24 @@ use yii\widgets\ActiveForm;
                     });  
                 }
             });
-        },400);
-        $.each($('.dropdown-menu.inner'),function(){
-            var els = $(this).find('li');
-            console.log(els.length);
-            if(els.length > 8){
-                $(this).mCustomScrollbar({
-                    setHeight: 252,
-                    theme:"dark",
-                    scrollbarPosition:"outside"
-                });  
-            }else{
-                $(this).mCustomScrollbar({
-                    theme:"dark",
-                    scrollbarPosition:"outside"
-                });  
-            }
-        });
+        },500);
+            $(".selectpicker").on('rendered.bs.select',function(e){
+                $.each($('.dropdown-menu.inner'),function(){
+                    var els = $(this).find('li');
+                    console.log(els.length);
+                    if(els.length > 8){
+                        $(this).mCustomScrollbar({
+                            setHeight: 252,
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }else{
+                        $(this).mCustomScrollbar({
+                            theme:"dark",
+                            scrollbarPosition:"outside"
+                        });  
+                    }
+                });
+            });
     });
 </script>

@@ -46,9 +46,9 @@ use yii\helpers\Url;
         </div>
     </div>
     <?php //else:?>
-        <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Share</div>
+<!--         <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Share</div> -->
     <?php //endif;?>
-        <div class="name text-center">
+        <div class="name text-center" style="margin-top: 20px;">
             <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>
                 <span id="title-task text-center"><?php echo $task->description_road?></span>
             <?php else:?>
@@ -60,7 +60,7 @@ use yii\helpers\Url;
         <div class="row form-group" style="margin-bottom: 0;">
             <div class="col-sm-12">
                 <? require __DIR__.'/idea/idea_block.php'; ?>
-                <a style="margin:0px auto 0;margin-left: 200px;" href="<?= Url::toRoute(['/departments/business/shared-business','id' => $user_tool_id]) ?>" class="btn btn-primary btn-lg fix_is_new pull-left">Preview</a>
+                <a style="margin:0px auto 0;margin-left: 200px;" href="<?= Url::toRoute(['/departments/business/shared-business','id' => $user_tool_id]) ?>" target="_blank" class="btn btn-primary btn-lg fix_is_new pull-left">Preview</a>
                 <a style="margin:0px auto 0;margin-right: 200px;" href="<?= Url::toRoute(['/departments/business/']) ?>" class="btn btn-primary btn-lg fix_is_new pull-right">Continue</a>
             </div>
         </div>
