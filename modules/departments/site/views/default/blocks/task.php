@@ -85,6 +85,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                     <th colspan="5" style="border-right:0;">
                                         <div class="pull-left" style="margin-left: 10px;">
                                             <div id="invite-form" class="no-autoclose" style="display:none;">
+                                            <legend>Delegate by email</legend>
                                                 <div class="form-group">
                                                     <input type="text" id="input-invite-email" class="form-control" placeholder="Email Address">
                                                 </div>
@@ -99,6 +100,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                                 </div>
                                             </div>
                                             <div id="advanced-search-form" class="no-autoclose" style="display:none;">
+                                                <legend>Advanced search</legend>
                                                 <div class="row form-group">
                                                     <div class="col-sm-6">
                                                         <label for="">Rate by/H</label> <br>
@@ -153,11 +155,11 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                             <button class="btn btn-primary circle invite-by-email" data-toggle="popover">
                                             <i class="ico-mail"></i>
                                             </button>
-                                            Delegate by email
+                                            <!-- Delegate by email -->
                                             <button style="margin-left: 11px;" class="btn btn-primary circle advanced-search-btn" data-toggle="popover" data-not_autoclose="1">
                                             <i class="ico-search"></i>
                                             </button>
-                                            Advanced search
+                                            <!-- Advanced search -->
                                         </div>
                                         <div class="pull-right">
                                         </div>
