@@ -85,7 +85,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                     <th colspan="5" style="border-right:0;">
                                         <div class="pull-left" style="margin-left: 10px;">
                                             <div id="invite-form" class="no-autoclose" style="display:none;">
-                                            Delegate by email
+                                            <legend>Delegate by email</legend>
                                                 <div class="form-group">
                                                     <input type="text" id="input-invite-email" class="form-control" placeholder="Email Address">
                                                 </div>
@@ -100,7 +100,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                                 </div>
                                             </div>
                                             <div id="advanced-search-form" class="no-autoclose" style="display:none;">
-                                                Advanced search
+                                                <legend>Advanced search</legend>
                                                 <div class="row form-group">
                                                     <div class="col-sm-6">
                                                         <label for="">Rate by/H</label> <br>
