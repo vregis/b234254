@@ -204,6 +204,59 @@ $this->registerJs($msgJs);
                             <?php endif;?>
                     <? endforeach; ?>
                     <? //require __DIR__.'/blocks/pagination.php' ?>
+
+                    <?php if($delegated_tools):?>
+                        <?php foreach($delegated_tools as $dt):?>
+                            <tr>
+                                <?
+                                $task_count = Task::find()
+                                    ->join('JOIN','milestone','milestone.id = task.milestone_id')
+                                    ->join('JOIN', 'department', 'department.id = task.department_id')
+                                    ->where(['is_hidden' => '0','department.is_additional' => 0])
+                                    ->count();
+                                $count_progress = TaskUser::find()->where(['user_tool_id' => $dt->id,'status' => TaskUser::$status_active])->count();
+                                $count_completed = TaskUser::find()->where(['user_tool_id' => $dt->id,'status' => TaskUser::$status_completed])->count();
+
+                                $count_my = TaskUser::find()
+                                    ->join('LEFT JOIN', 'delegate_task', 'task_user.id = delegate_task.task_user_id')
+                                    ->where(['task_user.user_tool_id' => $dt->id, 'task_user.status' => TaskUser::$status_active, 'delegate_user_id' => Yii::$app->user->id])
+                                    ->all();
+                                ?>
+                                <td>
+                                    <a target="_blank" href="/departments/business/shared-business?id=<?php echo $dt->id?>" style="padding-top: 1px;padding-left: 1px;" class=" btn btn-primary circle" data-not_autoclose="1"><i class="ico-history"></i></a>
+                                </td>
+                                <td style="text-transform: uppercase">
+                                    <a href="<?= Url::toRoute(['/departments/business/select-tool', 'id' => $dt->id]) ?>"
+                                        <?php if(strlen($dt->name) >37):?>
+                                            data-toggle="popover" data-placement="bottom" data-content="<?= $dt->name ?>"
+                                        <?php endif;?>
+                                       style="display: block;width: 269px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;"
+                                       class="name"
+                                    ><?= $dt->name ? $dt->name : 'No name' ?> <!--<span class="label label-danger circle"></span>--></a>
+                                </td>
+                                <td>
+                                    <a href="/user/social/shared-profile?id=<?php echo $dt->user_id?>" target="_blank">
+                                        <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="/images/avatar/nophoto.png" >
+                                    </a>
+                                </td>
+                                <td>
+                                    <?php echo $dt->industry_name?>
+                                </td>
+                                <td>
+                                    <?php echo $dt->country?>
+                                </td>
+                                <td>
+                                    <?php echo $task_count; ?>
+                                </td>
+                                <td>
+                                    <?php echo count($count_my); ?>
+                                </td>
+                            </tr>
+                        <?php endforeach;?>
+
+                    <?php endif;?>
+
+
                     </tbody>
                 </table>
 

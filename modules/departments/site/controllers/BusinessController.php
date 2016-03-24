@@ -120,6 +120,18 @@ class BusinessController extends Controller
             ->AndWhere(['not', ['idea.name' => NULL]])
             ->all();
 
+
+        $delegatedTools = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+            ->join('JOIN', 'task_user', 'task_user.user_tool_id = user_tool.id')
+            ->join('JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id')
+            ->join('INNER JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
+            ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
+            ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
+            ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+            ->where(['delegate_task.delegate_user_id' => Yii::$app->user->id])
+            ->andWhere(['!=','delegate_task.status',DelegateTask::$status_cancel])
+            ->all();
+
         $countGuestTools = count($countGuestTools);
 
 
@@ -135,6 +147,8 @@ class BusinessController extends Controller
             ->all();
 
         $dynamic_table = $this->getDynamicTable(1, 0, 0);
+
+
 
 
 
@@ -210,7 +224,8 @@ class BusinessController extends Controller
             'deps_request_filter' => $deps_request_filter,
             'specials_request_filter' => $specials_request_filter,
             'allToolsCount' => $countGuestTools,
-            'dynamic_table' => $dynamic_table
+            'dynamic_table' => $dynamic_table,
+            'delegated_tools' => $delegatedTools
         ]);
     }
 
