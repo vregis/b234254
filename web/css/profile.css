@@ -576,3 +576,7 @@ overflow: hidden;
 .del_special{
     font-size:10px !important;
 }
+.open > .dropdown-menu {
+    border-radius: 10px !important;
+        box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
+}

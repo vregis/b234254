@@ -147,6 +147,15 @@ use modules\user\site\controllers\ProfileController;
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
                 <div class="site-name">My business without busyness</div>
+                                    <div class="contacts">
+                        <label for="">Share on</label>
+                        <div class="small">
+                            <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
+                            <?php $fblink =$_SERVER['REQUEST_URI'];?>
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
+                            <a style="position: relative; bottom: 12px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
+                        </div>
+                    </div>
                 <button id="btn-save" class="btn btn-primary btn-empty circle" style="display:none;"><i style="position:absolute;top: 50%;margin-top: -7px;left: 50%;margin-left: -6px;" class="fa fa-floppy-o"></i></button>
                 <?php if(Yii::$app->user->id == $model->user_id):?>
                 <button id="btn-edit" class="btn btn-primary btn-empty circle"><i class="ico-edit"></i></button>
@@ -284,16 +293,9 @@ use modules\user\site\controllers\ProfileController;
             </div>
             <div class="page-footer">
                 <div class="text-center">
-                    <div class="contacts">
-                        <label for="">Share on</label>
-                        <div class="small">
-                            <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
-                            <?php $fblink =$_SERVER['REQUEST_URI'];?>
-                            <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
-                            <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
-                        </div>
-                    </div>
-                    <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span> <a style="display:inline-block;width:100px;background: transparent;position: absolute;top: 21px;right: 0;" class="btn btn-primary" href="/departments/business">Close</a>
+
+                    <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span> 
+<!--                     <a style="display:inline-block;width:100px;background: transparent;position: absolute;top: 21px;right: 0;" class="btn btn-primary" href="/departments/business">Close</a> -->
                 </div>
             </div>
         </div>

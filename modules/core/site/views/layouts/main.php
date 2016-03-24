@@ -364,6 +364,11 @@ $this->beginPage();
             placement: "bottom",
             content : 'Will be available in the next version'
         });
+        $(".page-header .switchery").on('show.bs.popover',function(){
+            setTimeout(function(){
+                $(".page-header .switchery").popover('hide');
+            }, 1500);
+        });
     }
    /* if(changeCheckbox1){
         if(changeCheckbox1.checked == true){
