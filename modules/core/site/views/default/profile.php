@@ -585,6 +585,15 @@ $this->registerJs($msgJs);
 </div>
 <!-- /.modal-dialog -->
 </div>
+<div id="alert-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <?php $this->registerJsFile("/js/profile.js");?>
 <script>
 

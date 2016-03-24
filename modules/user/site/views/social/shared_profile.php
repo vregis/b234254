@@ -147,7 +147,16 @@ use modules\user\site\controllers\ProfileController;
         <div class="well">
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
-                <div class="site-name">Business without busyness</div>
+                <!-- <div class="site-name">Business without busyness</div> -->
+                                    <div class="contacts">
+                        <label for="">Share on</label>
+                        <div class="small">
+                            <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
+                            <?php $fblink =$_SERVER['REQUEST_URI'];?>
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
+                            <a style="position: relative; bottom: 12px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
+                        </div>
+                    </div>
             </div>
             <div class="page-content">
                 <section id="user">
@@ -328,15 +337,7 @@ use modules\user\site\controllers\ProfileController;
             </div>
             <div class="page-footer">
                 <div class="text-center">
-                    <div class="contacts">
-                        <label for="">Share on</label>
-                        <div class="small">
-                            <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
-                            <?php $fblink =$_SERVER['REQUEST_URI'];?>
-                            <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $link?>" class="tw active"></a>
-                            <a style="position: relative; bottom: 11px;" href="#" class="fb active share_fb"><div class="fb-share-button" data-href="<?php echo $fblink?>" data-layout="button_count"></div></a>
-                        </div>
-                    </div>
+
                     <span> <?php echo date('Y');?> © BSB</span> <span>All rights reserved</span>
                     <!-- <a href="/core/profile" class="btn btn-primary" style="position:absolute;right:30px;top:25px;">Close</a> -->
                 </div>

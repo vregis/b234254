@@ -107,7 +107,6 @@ table tbody tr td .label{
 }
 .tables-business .well{
     position: relative;
-    border-top-left-radius:0 !important;
     margin-top:60px !important;
     margin-bottom:60px !important;
     padding: 30px !important;
@@ -160,4 +159,7 @@ table tbody tr td .label{
     min-width:auto !important;
     width:auto !important;
     max-width:250px !important;
+}
+.bootstrap-select.btn-group .dropdown-menu li[data-original-index="0"] a.start{
+    display: none;
 }

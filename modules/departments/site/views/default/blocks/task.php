@@ -71,10 +71,10 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                 <thead>
                                     <tr>
                                         <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
-                                        <th width="180">Name</th>
-                                        <th width="210">Level</th>
-                                        <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                                        <th width="230">Location</th>
+                                        <th width="280">Name</th>
+                                        <th width="165">Level</th>
+                                        <th width="105" class="rate">Rate by h <i class="fa fa-angle-up"></i></th>
+                                        <th width="250">Location</th>
                                         <th width="130" class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search<i class="fa fa-angle-down"></i></th>
                                     </tr>
                                 </thead>
@@ -156,7 +156,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                             <i class="ico-mail"></i>
                                             </button>
                                             <!-- Delegate by email -->
-                                            <button style="margin-left: 11px;" class="btn btn-primary circle advanced-search-btn" data-toggle="popover" data-not_autoclose="1">
+                                            <button style="margin-left: 32px;" class="btn btn-primary circle advanced-search-btn" data-toggle="popover" data-not_autoclose="1">
                                             <i class="ico-search"></i>
                                             </button>
                                             <!-- Advanced search -->
@@ -445,6 +445,15 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
     </div>
 </div>
 </div>
+<div id="invite-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </div>
 <style>
 #btn-delegate+.popover{
