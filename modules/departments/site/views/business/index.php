@@ -120,7 +120,7 @@ $this->registerJs($msgJs);
                         </tr>
                         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
                             <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Business</a>
-                            <a data-toggle="popover" class="delete<?php echo $i?> delete" href="javascript:;">Delete Business</a>
+                            <a data-toggle="popover" class="delete<?php echo $current_userTool->id?>" href="javascript:;">Delete Business</a>
                             <div id="delete-block" style="display: none;">
                                 Are you sure you want to delete <?php echo $current_userTool->name?> ?
                                 <br>
@@ -165,7 +165,7 @@ $this->registerJs($msgJs);
                                     template:'<div class="popover delegation" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
                                     content : 'Will be available in the next version'
                                 });
-                                $(".huistory a.delete").click(function(){
+                                $(".huistory a.delete<?php echo $current_userTool->id?>").click(function(){
                                     var delBlock = $(this).next('#delete-block');
                                     var toHide = $(this).parent().find('a');
                                     delBlock.show();
@@ -185,7 +185,7 @@ $this->registerJs($msgJs);
                         });
 
 
-                        $(".huistory a.delete<?php echo $i?>").click(function(){
+                        $(".huistory a.delete<?php echo $current_userTool->id?>").click(function(){
                             var delBlock = $(this).next('#delete-block');
                             var toHide = $(this).parent().find('a');
                             delBlock.show();

@@ -644,57 +644,6 @@ $this->registerJs($msgJs);
         })
     })
 
-    $(document).on('click', '.ico-add', function(){
-        $.ajax({
-            url: '/core/add-industry',
-            dataType: 'json',
-            type: 'post',
-            success: function(response){
-                $('.industry').append(response.html);
-            }
-        })
-    })
 
-    $('.add-industry').change(function(){
-        $(this).removeClass('add-industry');
-        $(this).addClass('change-industry');
-        $.ajax({
-            url: '/core/add-new-ind',
-            data: {id:$(this).val()},
-            dataType: 'json',
-            type: 'post',
-            success: function(response){
-
-            }
-        })
-    })
-
-    $('.change-industry').change(function(){
-        $.ajax({
-            url: '/core/change-ind',
-            data: {id:$(this).val(), ind:$(this).attr('data-id')},
-            dataType: 'json',
-            type: 'post',
-            success: function(response){
-               $('.dynamic_industry').html(response.html);
-            }
-        })
-    })
-
-    $(document).on('click', '.del_special', function(){
-        var id = $(this).attr('data-id');
-        var _this = $(this);
-        $.ajax({
-            url: '/core/del-specialization',
-            type: 'post',
-            data: {id:id},
-            dataType: 'json',
-            success: function(response){
-                if(response.error == false){
-                    _this.closest('.dynamic-block').remove();
-                }
-            }
-        })
-    })
 
 </script>
