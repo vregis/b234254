@@ -21,7 +21,11 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
+                <?php if(count($specializations) > 2):?>
+                    <div class="action_btn btn btn-primary circle plus"><i class="ico-add"></i></div>
+                <?php else:?>
                     <div data-id = '<?php echo $sp->id?>' class="action_btn btn btn-primary circle del_special"><i class="ico-delete"></i></div>
+                <?php endif; ?>
             </div>
         <?php endforeach;?>
         <?php if(count($specializations) == 1):?>
@@ -109,6 +113,9 @@
             type: 'post',
             success: function(response){
                 $('.industry').append(response.html);
+                $('.selectpicker').selectpicker({
+
+                });
             }
         })
     })

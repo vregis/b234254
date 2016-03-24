@@ -164,7 +164,7 @@ class DefaultController extends Controller
             }
         }
         //var_dump($user);
-        if($task_id == 0) {
+        /*if($task_id == 0) {
             if ($userTool->status == UserTool::STATUS_CREATION) {
                 $task_id = Task::$task_idea_id;
             } else {
@@ -176,7 +176,7 @@ class DefaultController extends Controller
                     }
                 }
             }
-        }
+        }*/
 
         if($task_id != 0) {
             return $this->redirect(['/departments/task', 'id' => $task_id, 'first' => 1]);
