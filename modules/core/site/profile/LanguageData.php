@@ -51,16 +51,20 @@ class LanguageData extends DynamicData
             $sqlstr = $this->getSqlString($languages);
 
             if($sqlstr == '') {
-                $this->languages = Languages::findBySql("SELECT * FROM language GROUP BY Language ORDER BY language = 'English' DESC, language ASC ")->all();
+                $this->languages = Languages::findBySql("SELECT * FROM language GROUP BY Language ORDER BY language = 'English' DESC, language = 'French' DESC,
+                                    language = 'Dutch' DESC, language = 'Italian' DESC, language = 'Spanish' DESC, language = 'Portuguese' DESC, language = 'Chinese' DESC, language = 'Japanese' DESC, language = 'Russian' DESC, language ASC ")->all();
             }else{
-                $this->languages = Languages::findBySql("SELECT * FROM language WHERE language NOT IN (" . $sqlstr . ") GROUP BY Language ORDER BY language = 'English' DESC, language ASC ")->all();
+                $this->languages = Languages::findBySql("SELECT * FROM language WHERE language NOT IN (" . $sqlstr . ") GROUP BY Language ORDER BY language = 'English' DESC, language = 'French' DESC,
+                                    language = 'Dutch' DESC, language = 'Italian' DESC, language = 'Spanish' DESC, language = 'Portuguese' DESC, language = 'Chinese' DESC, language = 'Japanese' DESC, language = 'Russian' DESC, language ASC ")->all();
 
             }
         }else{
             if($string == ''){
-                $this->languages = Languages::findBySql("SELECT * FROM language GROUP BY Language ORDER BY language = 'English' DESC, language ASC ")->all();
+                $this->languages = Languages::findBySql("SELECT * FROM language GROUP BY Language ORDER BY language = 'English' DESC, language = 'French' DESC,
+                                    language = 'Dutch' DESC, language = 'Italian' DESC, language = 'Spanish' DESC, language = 'Portuguese' DESC, language = 'Chinese' DESC, language = 'Japanese' DESC, language = 'Russian' DESC, language ASC ")->all();
             }else{
-                $this->languages = Languages::findBySql("SELECT * FROM language WHERE language NOT IN (".$string.") GROUP BY Language ORDER BY language = 'English' DESC, language ASC ")->all();
+                $this->languages = Languages::findBySql("SELECT * FROM language WHERE language NOT IN (".$string.") GROUP BY Language ORDER BY language = 'English' DESC, language = 'French' DESC,
+                                    language = 'Dutch' DESC, language = 'Italian' DESC, language = 'Spanish' DESC, language = 'Portuguese' DESC, language = 'Chinese' DESC, language = 'Japanese' DESC, language = 'Russian' DESC, language ASC ")->all();
             }
 
         }

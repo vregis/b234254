@@ -50,7 +50,7 @@ $this->title = 'Your role in business';
                         <?php $user->user_status = 3;?>
                         <?php $user->save();?>
                     <?php endif;?>
-                    <?php $ud->save();?>
+                    <?php //$ud->save();?>
 
 
             <div class="test-line">

@@ -382,6 +382,8 @@ HTML;
             }
         }
 
+        $ind = $this->getIndustry();
+
         return $this->render('profile', [
             'model'=>$profile,
             'departments'=>$departments,
@@ -390,7 +392,8 @@ HTML;
             'educationData' => $educationData,
             'skillData' => $skillData,
             'testData' => $test_result_inform,
-            'goal' => $goal
+            'goal' => $goal,
+            'ind' => $ind
         ]);
     }
     public function actionEducationAjax(){
@@ -716,6 +719,14 @@ HTML;
 
         $ind->industry_id = $_POST['id'];
         $ind->save(false);
+        $response['html'] = $this->getIndustry();
+        return json_encode($response);
+    }
+
+
+    private function getIndustry(){
+        $html = $this->renderPartial('blocks/dynamic_industry_block');
+        return $html;
     }
 
 }
