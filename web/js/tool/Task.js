@@ -1023,12 +1023,29 @@ function Task(task_user_id, is_my, is_custom) {
                 dataType: 'json',
                 success: function (response) {
                     if (response.error == true) {
-                        bootbox.alert("Something wrong. Please try again", function () {
-                            unlockForm();
+                        $("#invite-modal .modal-body").text("Something wrong. Please try again");
+                        $("#invite-modal").modal('show');
+                        $("#invite-modal").on('shown.bs.modal',function(){
+                            $("#invite-modal .modal-dialog").css({
+                                'margin-top':$(window).height() / 2 - $("#invite-modal .modal-dialog").height() / 2
+                            });
+                            setTimeout(function(){
+                                $("#invite-modal").modal('hide');
+                                unlockForm();
+                            }, 2000);
                         });
                     } else {
-                        bootbox.alert("Your message has been sent", function () {
-                            unlockForm();
+                        $(".invite-by-email").popover('hide');
+                        $("#invite-modal .modal-body").text("Your invite has been sent");
+                        $("#invite-modal").modal('show');
+                        $("#invite-modal").on('shown.bs.modal',function(){
+                            $("#invite-modal .modal-dialog").css({
+                                'margin-top':$(window).height() / 2 - $("#invite-modal .modal-dialog").height() / 2
+                            });
+                            setTimeout(function(){
+                                $("#invite-modal").modal('hide');
+                                unlockForm();
+                            }, 2000);
                         });
                     }
                 }

@@ -984,7 +984,7 @@ thead .ui-datepicker-week-end {
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
     max-width:433px;
     left:0 !important;
-    top: 34px !important;
+    top: -15px !important;
 }
 .invite-by-email+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
     /*background: #ebebeb;*/
@@ -1000,7 +1000,7 @@ thead .ui-datepicker-week-end {
 }
 .advanced-search-btn+.popover{
     max-width:433px;
-    left:170px !important;
+    left:73px !important;
     /*top: 5px !important;*/
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
 }
@@ -1476,24 +1476,24 @@ button#restart+.popover > .arrow, button.confirn+.popover > .arrow{
 }
 button.confirn-btn+.popover > .arrow{
     left: auto !important;
-    right: 135px !important
+    right: 135px !important;
+}
+#delegate table{
+    border-color:#5184f3;
 }
 table th.rate .fa{
         position:absolute;
         cursor:pointer;
         margin-left: 7px;
     }
-    table th.rate .fa-angle-up{
-        margin-top:-4px;
-    }
-    table th.rate .fa-angle-down{
-        margin-top:10px;
+    table th.rate .fa{
+        margin-top:1px;
     }
     table th.rate{
         text-align:right;
-        padding-right:30px !important;
-        padding-left:0 !important;
-        width:150px;
+        padding-right: 15px !important;
+        padding-left: 0 !important;
+        width: 111px;
     }
     .dropselect .popover-content,.dropselect1 .popover-content{
         padding: 0;
@@ -1772,4 +1772,8 @@ table th.rate .fa{
 }
 .popover.offer-name .popover-content{
     padding: 10px !important;
+}
+#invite-modal .modal-dialog{
+    text-align:center;
+    width:300px !important;
 }

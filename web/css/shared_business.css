@@ -16,7 +16,7 @@ body{
 	background:rgba(255,255,255,0.9);
 }
 .well .header{
-	height: 100px;
+	height: 76px;
 	line-height: 76px;
 	text-align: center;
 	border-radius: 10px 10px 0 0 !important;
@@ -413,7 +413,7 @@ section.contacts .title{
 
 .header .contacts{
 	position: absolute;
-	top: 55px;
+	top: 25px;
 	left:50%;
 	width:144px;
 	line-height: 32px;

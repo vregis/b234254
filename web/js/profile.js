@@ -291,15 +291,61 @@ $(function(){
         var phone = $('input[name="ProfileForm[phone]"]').val();
         var zip = $('input[name="ProfileForm[zip]"]').val();
         var is_first = $('input[name="is_first"]').val();
-
+        // var money = $('input[data-key="rate"]').val();
         if(country == 0){
-            alert('Choose the country');
+            $("#alert-modal .modal-body").text("Choose the country");
+            $("#alert-modal").modal('show');
+            $("#alert-modal").on('shown.bs.modal',function(){
+                $("#alert-modal .modal-dialog").css({
+                    'margin-top':$(window).height() / 2 - $("#alert-modal .modal-dialog").height() / 2
+                });
+                setTimeout(function(){
+                    $("#alert-modal").modal('hide');
+                }, 2000);
+            });
             return false;
         }
-
+        $.each($('.collapse.in input[data-key="rate"]'),function (e) {
+            if($(this).val() == ''){
+                $("#alert-modal .modal-body").text("Rate / h can't be blank");
+                $("#alert-modal").modal('show');
+                $("#alert-modal").on('shown.bs.modal',function(){
+                    $("#alert-modal .modal-dialog").css({
+                        'margin-top':$(window).height() / 2 - $("#alert-modal .modal-dialog").height() / 2
+                    });
+                    setTimeout(function(){
+                        $("#alert-modal").modal('hide');
+                    }, 2000);
+                });
+                e.preventDefault();
+                return false;
+            }
+        });
+        // if(money == ''){
+        //     $("#alert-modal .modal-body").text("Input cost");
+        //     $("#alert-modal").modal('show');
+        //     $("#alert-modal").on('shown.bs.modal',function(){
+        //         $("#alert-modal .modal-dialog").css({
+        //             'margin-top':$(window).height() / 2 - $("#alert-modal .modal-dialog").height() / 2
+        //         });
+        //         setTimeout(function(){
+        //             $("#alert-modal").modal('hide');
+        //         }, 2000);
+        //     });
+        //     return false;
+        // }
         indstr = $(document).find('.change-industry').val();
         if(typeof(indstr) == 'undefined'){
-            alert('industry cannot be blank');
+            $("#alert-modal .modal-body").text("Industry cannot be blank");
+            $("#alert-modal").modal('show');
+            $("#alert-modal").on('shown.bs.modal',function(){
+                $("#alert-modal .modal-dialog").css({
+                    'margin-top':$(window).height() / 2 - $("#alert-modal .modal-dialog").height() / 2
+                });
+                setTimeout(function(){
+                    $("#alert-modal").modal('hide');
+                }, 2000);
+            });
             return false;
         }
 

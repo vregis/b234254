@@ -48,17 +48,17 @@ $this->registerJs($msgJs);
 <div class="col-md-12 tables-business">
     <div class="well" style="margin: 0 auto; max-width: 1000px">
 
-                <?php $i = 0;?>
+            <?php $i = 0;?>
                 <? foreach($self_userTools as $cur) : ?>
                     <?php if($cur->name):?>
                         <?php $i++;?>
                     <?php endif;?>
                 <?php endforeach;?>
             <? if(count($self_userTools) == 0 || $i == 0) : ?>
-<!--                 <div class="text-center" style="padding:22px 0;">
-                    Everyone can start a business. All you need is just an idea!
+                <div class="text-center" style="padding:22px 0;font-size: 30px;margin-top: 20px;font-weight: bold;color: rgba(90,90,90,0.50);">
+                    Great! You are ready for a business of your dream.
                 </div>
-                <div style="border-top:1px solid #d7d7d7;height:1px;"></div> -->
+                <!-- <div style="border-top:1px solid #d7d7d7;height:1px;"></div> -->
             <?php else: ?>
                 <table class="table table-bordered">
                     <thead>
@@ -216,11 +216,11 @@ $this->registerJs($msgJs);
                         <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
                     <?php //else:?>
                     <div class="pull-left" style="margin-left: 170px;">
-                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width:200px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary">START YOUR BUSINESS</a>
+                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-success active">START YOUR BUSINESS</a>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">All you need is an idea!</div>
                     </div>
                     <div class="pull-right" style="margin-right: 170px;">
-                        <a href="javascript:;" style="width:200px;padding:0;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-primary toggle-findjod" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESS</a>
+                        <a href="javascript:;" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-primary toggle-findjod active" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESSES</a>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">Based on your settings</div>
                     </div>
                     <div class="clearfix"></div>
@@ -510,7 +510,7 @@ $(document).ready(function () {
             }
             });
             $(".toggle-findjod").click(function(){
-               $(this).toggleClass('active');
+               // $(this).toggleClass('active');
                            $(".selectpicker").selectpicker();
              $(".selectpicker").on('changed.bs.select',function(e){
                 $.each($('.dropdown-menu.inner'),function(){

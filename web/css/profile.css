@@ -580,3 +580,7 @@ overflow: hidden;
     border-radius: 10px !important;
         box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
 }
+#alert-modal .modal-dialog{
+    text-align:center;
+    width:300px !important;
+}

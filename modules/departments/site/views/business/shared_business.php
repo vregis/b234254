@@ -146,8 +146,8 @@ use modules\user\site\controllers\ProfileController;
         <div class="well">
             <div class="header text-center">
                 <a href="/" class="logo-wrap"><img src="/images/logo_new.png" alt="logo" class="logo-default"></a>
-                <div class="site-name">My business without busyness</div>
-                                    <div class="contacts">
+                <!-- <div class="site-name">My business without busyness</div> -->
+                    <div class="contacts">
                         <label for="">Share on</label>
                         <div class="small">
                             <?php $link = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];?>
