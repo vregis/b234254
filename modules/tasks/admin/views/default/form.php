@@ -204,6 +204,15 @@ $this->registerJs($initJs);
 
     <?php endif;?>
 
+    <?php if($task->id ==37 || $task->id == 38 || $task->id == 39):?>
+        <?php echo $form->field($task, 'roadmap_name')->textInput(
+            [
+                'class' => 'form-control placeholder-no-fix',
+                'placeholder' => 'Roadmap Name'
+            ]
+        ) ?>
+    <?php endif;?>
+
 
 
 

@@ -50,7 +50,7 @@
             </td>
             <td>
                 <a href="/user/social/shared-profile?id=<?php echo $current_userTool->user_id?>" target="_blank">
-                    <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="/images/avatar/nophoto.png" >
+                    <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="<?php echo $current_userTool->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$current_userTool->avatar:'/images/avatar/nophoto.png'?>" >
                 </a>
             </td>
             <td>

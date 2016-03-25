@@ -61,7 +61,7 @@ class Task extends \yii\db\ActiveRecord
 
             ['is_roadmap', 'integer'],
 
-            [['market_rate', 'button_name', 'second_button_name'], 'string'],
+            [['market_rate', 'button_name', 'second_button_name', 'roadmap_name'], 'string'],
 
             [['name','description','director_name','priority','performed_immediately'], 'required'],
             [['department_id'],'required', 'message' => 'Please choose department']

@@ -9,7 +9,9 @@ use modules\tasks\models\Task;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+$idea_task = Task::find()->where(['id' => 37])->one();
+$benefits_task = Task::find()->where(['id' => 38])->one();
+$share_task = Task::find()->where(['id' => 39])->one();
 ?>
 <div class="container-fluid">
 <div class="row task-title" style="margin-bottom: 8px;">
@@ -20,9 +22,9 @@ use yii\helpers\Url;
             <div class="step">
                 <div class="progress"></div>
                 <div class="form-md-radios md-radio-inline b-page-checkbox-wrap">
-                    <? $name[0] = 'Idea'; ?>
-                    <? $name[1] = 'Benefits'; ?>
-                    <? $name[2] = 'Share'; ?>
+                    <? $name[0] = $idea_task->roadmap_name==''?'Idea':$idea_task->roadmap_name; ?>
+                    <? $name[1] = $benefits_task->roadmap_name==''?'Benefits':$benefits_task->roadmap_name; ?>
+                    <? $name[2] = $share_task->roadmap_name==''?'Share':$share_task->roadmap_name; ?>
                     <? for($i = 0; $i < 3; $i++) : ?>
                         <div class="md-radio even has-test b-page-checkbox">
                             <div class="task-name">

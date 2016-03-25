@@ -54,7 +54,7 @@ $this->registerJs($msgJs);
                         <?php $i++;?>
                     <?php endif;?>
                 <?php endforeach;?>
-            <? if(count($self_userTools) == 0 || $i == 0) : ?>
+            <? if(count($self_userTools) == 0 && $count_guest_tools == 0) : ?>
                 <div class="text-center" style="padding:22px 0;font-size: 30px;margin-top: 20px;font-weight: bold;color: rgba(90,90,90,0.50);">
                     Great! You are ready for a business of your dream.
                 </div>
@@ -102,7 +102,7 @@ $this->registerJs($msgJs);
                             </td>
                             <td>
                                 <a href="/user/social/shared-profile?id=<?php echo $current_userTool->user_id?>" target="_blank">
-                                    <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="/images/avatar/nophoto.png" >
+                                    <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="<?php echo $current_userTool->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$current_userTool->avatar:'/images/avatar/nophoto.png'?>" >
                                 </a>
                             </td>
                             <td>
@@ -236,7 +236,7 @@ $this->registerJs($msgJs);
                                 </td>
                                 <td>
                                     <a href="/user/social/shared-profile?id=<?php echo $dt->user_id?>" target="_blank">
-                                        <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="/images/avatar/nophoto.png" >
+                                       <img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" style="margin:0;" class="active gant_avatar mCS_img_loaded" src="<?php echo $dt->avatar != ''?$folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$dt->avatar:'/images/avatar/nophoto.png'?>" >
                                     </a>
                                 </td>
                                 <td>
@@ -269,7 +269,11 @@ $this->registerJs($msgJs);
                         <a href="/core/profile" style="padding: 0px 75px;line-height: 45px !important;height: 45px;vertical-align: middle;" class="btn btn-lg btn-primary" >Go To Profile</a>-->
                     <?php //else:?>
                     <div class="pull-left" style="margin-left: 170px;">
-                        <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-success active">START YOUR BUSINESS</a>
+                        <?php if(count($self_userTools) == 0):?>
+                            <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-success active">START YOUR BUSINESS</a>
+                        <?php else:?>
+                            <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-success active">ADD A BUSINESS</a>
+                        <?php endif;?>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">All you need is an idea!</div>
                     </div>
                     <div class="pull-right" style="margin-right: 170px;">

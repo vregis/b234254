@@ -102,16 +102,18 @@ class BusinessController extends Controller
 
     public function actionIndex()
     {
-        $self_userTools = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+        $self_userTools = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country, user_profile.avatar avatar')
             ->join('LEFT OUTER JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
             ->join('LEFT OUTER JOIN', 'industry', 'industry.id = idea.industry_id')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
             ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
-            ->where(['user_tool.user_id' => Yii::$app->user->id])->all();
+            ->where(['user_tool.user_id' => Yii::$app->user->id])
+            ->AndWhere(['not', ['idea.name' => NULL]])
+            ->all();
 
 
         $countGuestTools = $guestUserTools = UserTool::find()
-            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country, user_profile.avatar avatar')
             ->join('LEFT JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
             ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
@@ -121,7 +123,7 @@ class BusinessController extends Controller
             ->all();
 
 
-        $delegatedTools = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+        $delegatedTools = UserTool::find()->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country, user_profile.avatar avatar')
             ->join('JOIN', 'task_user', 'task_user.user_tool_id = user_tool.id')
             ->join('JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id')
             ->join('INNER JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
@@ -225,7 +227,8 @@ class BusinessController extends Controller
             'specials_request_filter' => $specials_request_filter,
             'allToolsCount' => $countGuestTools,
             'dynamic_table' => $dynamic_table,
-            'delegated_tools' => $delegatedTools
+            'delegated_tools' => $delegatedTools,
+            'count_guest_tools' => $countGuestTools
         ]);
     }
 
