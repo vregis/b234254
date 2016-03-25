@@ -46,9 +46,12 @@ function LanguageData(main_class) {
     function beforeUpdate(row) {
         row.find('.disabled').each(function() {
             $(this).removeClass('disabled');
+            $(this).find('.start').parent().remove();
         });
         row.find('select.update').each(function() {
             $(this).attr('disabled', false);
+            $(this).find('.start').parent().remove();
+            alert("asdasdas");
         });
         row.find('input.update').each(function() {
             $(this).attr('disabled', false);

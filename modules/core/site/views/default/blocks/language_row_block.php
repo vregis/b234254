@@ -12,7 +12,7 @@
         <div class="col-md-6">
             <select <? if(!$model) echo 'disabled'; ?> class="update form-control selectpicker" data-key="language_skill_id">
                 <? if(!$model) : ?>
-                    <!--<option class="start" value="0">Select level</option>-->
+                    <option class="start" value="0">Select level</option>
                 <? endif; ?>
                 <?php foreach($language_skills as $language_skill):?>
                     <option <?php echo $model && $language_skill->id==$model->language_skill_id ? 'selected':''?> value="<?php echo $language_skill->id?>"><?php echo $language_skill->name?></option>
