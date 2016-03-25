@@ -712,7 +712,7 @@ HTML;
         $ind->user_id = Yii::$app->user->id;
         $ind->industry_id = $_POST['id'];
         $ind->save();
-        $response['html'] = $this->renderPartial('blocks/industry_block');
+        $response['html'] = $this->renderPartial('blocks/dynamic_industry_block');
         return json_encode($response);
     }
 
