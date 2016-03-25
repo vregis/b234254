@@ -392,7 +392,8 @@ hr{
 }
 .services .service .multiselect .dropdown-content{
     display: none;
-    box-shadow: 5px 5px rgba(102, 102, 102, 0.1);
+    border-radius: 10px !important;
+    box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
     left: 0;
     position: absolute;
     z-index: 1000;
@@ -402,13 +403,14 @@ hr{
     background-color: #ffffff;
     border: 1px solid #eee;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    border-radius: 4px;
     width: 100%;
     top:100%;
+}
+.services .service .multiselect .dropdown-content li:first-child{
+    border-radius:10px 10px 0 0 !important;
+}
+.services .service .multiselect .dropdown-content li:last-child{
+    border-radius:0 0 10px 10px !important;
 }
 .services .service .multiselect .dropdown-content.open{
     display: block;
@@ -576,11 +578,19 @@ overflow: hidden;
 .del_special{
     font-size:10px !important;
 }
-.open > .dropdown-menu {
+.settings+.dropdown-menu {
     border-radius: 10px !important;
         box-shadow: 0 0 32px 0 rgba(139,139,143,0.34) !important;
 }
 #alert-modal .modal-dialog{
     text-align:center;
-    width:300px !important;
+    width:470px !important;
+    height:225px;
+}
+#alert-modal .modal-dialog .modal-body{
+    width: 470px !important;
+    height: 225px;
+    line-height: 195px;
+    font-size: 2em;
+    color: rgba(90,90,90,0.5);
 }
