@@ -604,7 +604,7 @@ $(function(){
                 "greedy": false,
             }); // 
         },500);
-                setTimeout(function(){
+        setTimeout(function(){
             $.each($('.dropdown-menu.inner'),function(){
                 var els = $(this).find('li');
                 console.log(els.length);
@@ -621,7 +621,7 @@ $(function(){
                     });  
                 }
             });
-        },400);
+        },450);
     }
 
     function renderNewField(_this){
@@ -673,7 +673,7 @@ $(function(){
                     });  
                 }
             });
-        },400);
+        },450);
             }
         })
     }
@@ -728,7 +728,7 @@ $(function(){
                     });  
                 }
             });
-        },400);
+        },500);
             }
         })
 
@@ -855,7 +855,7 @@ $(function(){
                     });  
                 }
             });
-        },400);
+        },500);
             }
         });
     });

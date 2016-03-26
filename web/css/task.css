@@ -992,6 +992,13 @@ thead .ui-datepicker-week-end {
     height: 199px;
     padding: 9px;
 }
+.invite-by-email+.popover legend, .advanced-search-btn+.popover legend{
+    color: #5a5a5a;
+    font-size: 16px;
+    /* line-height: 50px; */
+    /* border: none; */
+    margin: 0;
+}
 .invite-by-email+.popover.top > .arrow,.advanced-search-btn+.popover.top > .arrow{
     left: 25px !important;
 }
