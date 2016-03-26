@@ -155,7 +155,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <th colspan="7" style="6height: 30px;">
+            <th colspan="7" style="height: 30px;">
                 <?php $countPage = ceil($allToolsCount/5);?>
                 <ul class="pagination">
                     <? for($i = 1; $i<=$countPage;$i++): ?>
