@@ -15,8 +15,21 @@ $this->registerJsFile("/js/milestone.js");?>
         </div>
         <div class="ganttview-vtheader-series">
             <?php foreach($tasks as $t):?>
+                <?php $is_del = \modules\tasks\models\TaskUser::find()
+                    ->join('LEFT JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id')
+                    ->where(['task_user.task_id' => $t->id, 'delegate_task.delegate_user_id' => Yii::$app->user->id, 'task_user.user_tool_id' => $userTool->id])
+                    ->andWhere(['!=', 'delegate_task.status','8'])
+                    ->all();?>
                 <div class="ganttview-vtheader-series-row">
-                    <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                    <?php if($userTool->user_id == Yii::$app->user->id):?>
+                        <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                    <?php else:?>
+                        <?php if($is_del):?>
+                            <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                        <?php else:?>
+                            <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                        <?php endif;?>
+                    <?php endif;?>
                 </div>
             <?php endforeach; ?>
         </div>
