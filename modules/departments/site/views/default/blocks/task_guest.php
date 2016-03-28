@@ -425,5 +425,20 @@
 
     })
 </script>
-
+<style>
+    #request-modal .modal-dialog{
+    text-align:center;
+    width:470px !important;
+    height:225px;
+    border-radius:10px;
+}
+#request-modal .modal-dialog .modal-body{
+    width: 470px !important;
+    height: 225px;
+    line-height: 195px;
+    font-size: 2em;
+    color: rgba(90,90,90,0.5);
+    border-radius:10px;
+}
+</style>
 
