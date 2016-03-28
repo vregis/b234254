@@ -220,7 +220,6 @@ use modules\core\widgets\Flash;
     <a data-type="youtube" href="http://youtu.be/Xo5IrI7yfjA" class="venobox btn btn-empty btn-icon play"><i class="ico-play1"></i></a>
     <a data-toggle="modal" href="#info-modal" class="btn btn-empty btn-icon info"><i class="ico-info"></i></a>
     <a data-toggle="modal" href="#support" class="btn btn-empty">Support</a>
-
 </footer>
 <!-- /site footer -->
 
@@ -263,7 +262,8 @@ use modules\core\widgets\Flash;
     </div>
     <!-- /.modal-dialog -->
 </div>
-<div class="modal fade bs-modal-md" id="info-modal" tabindex="-1" role="dialog" aria-hidden="true" style="color: #34495e;display: none; padding-right: 17px;">
+</div>
+<div class="modal fade bs-modal-md" id="info-modal" tabindex="-1" role="dialog" aria-hidden="true" style="color: #34495e;padding-right: 17px;">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-body text-center" style="padding-left:50px; padding-right:50px;">
@@ -282,6 +282,27 @@ use modules\core\widgets\Flash;
     </div>
     <!-- /.modal-dialog -->
 </div>
+<div class="modal fade bs-modal-md" id="mobile-modal" tabindex="-1" role="dialog" aria-hidden="true" style="color: #34495e;padding-right: 17px;">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-body text-center" style="padding-left:15px; padding-right:15px;font-family: "Roboto Light", sans-serif;">
+                <p>Hi and thanks for checking us out!</p>
+
+                <p>Mobile version is in the works. Computer is required to access the platform.</p>
+
+                <p>See you soon! <br>
+                Team Big S</p>
+
+                <p>Send yourself a reminder:</p>
+                <p><input type="text" class="form-control1"></p>
+                <div class="text-center"><button class="btn btn-primary">Remind me</button></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
 <style>
     #support .form-group{
         margin-bottom: 10px;
@@ -292,7 +313,7 @@ use modules\core\widgets\Flash;
     #support .modal-content {
         border-radius: 10px !important;
     }
-    #support .form-control1{
+    .form-control1{
     display: block;
     font-family: "Roboto Light", sans-serif;
     border-radius:0 !important;
