@@ -66,6 +66,7 @@ class DefaultController extends Controller
                             'sort',
                             'getpopupdata',
                             'getpopuptask',
+                            'getpopuptaskguest',
                             'unsetsession',
                             'updategant',
                             'get-milestone-from-task-id',
@@ -624,7 +625,7 @@ class DefaultController extends Controller
             }
         }
         else {
-            $tool = UserTool::find()->where(['id' => $task_user->user_tool_id])->one();
+            $tool = UserTool::find()->where(['id' => $task_user->user_tool_id])->one(); //fixed delete from sessions guest tool
             if($tool){
                 $delegate_user = User::find()->select('*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava')
                     ->join('JOIN', 'user_profile', 'user_profile.user_id = user.id')
@@ -1055,6 +1056,37 @@ class DefaultController extends Controller
             $user->is_new = 1;
             $user->save();
         }
+    }
+
+
+    public function actionGetpopuptaskguest(){
+        $response = [];
+
+        $is_custom = filter_var($_POST['is_custom'], FILTER_VALIDATE_BOOLEAN);
+        $task = Task::find()
+            ->select('task.*, specialization.name as spec, milestone.is_pay is_pay')
+            ->join('JOIN', 'milestone', 'milestone.id = task.milestone_id')
+            ->join('LEFT OUTER JOIN', 'specialization', 'task.specialization_id = specialization.id')
+            ->where(['task.id' => $_POST['id']])
+            ->one();
+
+        $user = User::find()->where(['id' => Yii::$app->user->id])->one();
+
+        if(Yii::$app->user->can('admin') || $task->is_pay == 0 || $user->role == 6) {
+            $tool = UserTool::getCurrentUserTool();
+            $task_user = TaskUser::getTaskUser($tool->id, $task->id, $task);
+            $is_my = $tool->user_id == Yii::$app->user->id;
+
+            //$response['html'] = $this->getTaskHtml($tool,$task,$task_user,$is_my,$is_custom);
+            $response['html'] = 'ahsdfkj';
+            $response['task_user_id'] = $task_user->id;
+            $response['is_my'] = $is_my;
+            $response['error'] = false;
+        }else {
+            $response['error'] = true;
+        }
+
+        return json_encode($response);
     }
 
 }

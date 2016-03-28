@@ -8502,6 +8502,11 @@ div.ganttview-vtheader-series-row .series-content{
   color:#5a5a5a;
 }
 
+div.ganttview-vtheader-series-row .series-content-guest{
+  cursor:pointer;
+  color:#5a5a5a;
+}
+
 div.ganttview-vtheader-series-row a:hover{
   text-decoration: none;
 }

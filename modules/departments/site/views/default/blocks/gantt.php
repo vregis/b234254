@@ -27,7 +27,7 @@ $this->registerJsFile("/js/milestone.js");?>
                         <?php if($is_del):?>
                             <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
                         <?php else:?>
-                            <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                            <div class="series-content-guest" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
                         <?php endif;?>
                     <?php endif;?>
                 </div>
