@@ -219,9 +219,9 @@ function openTaskGuest(id, is_custom){
                 task.modal();
                 task.css('position', 'absolute');
                 task.css('top', '50%');
-                var offs = $(window).height()/2 - task.height()/2;
+                // var offs = $(window).height()/2 - task.height()/2;
                 // console.log($(window).height()/2 - task.height()/2);
-                task.css('margin-top', '-'+offs);
+                task.css('margin-top', '-310px');
                 $('.collapse').collapse({
                     toggle: false
                 });
