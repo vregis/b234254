@@ -213,7 +213,7 @@ function openTaskGuest(id, is_custom){
         },
         success: function(response){
 
-
+        console.log(response.html);
 
             if(!response.error) {
                 var task = $('#task');

@@ -1078,7 +1078,7 @@ class DefaultController extends Controller
             $is_my = $tool->user_id == Yii::$app->user->id;
 
             //$response['html'] = $this->getTaskHtml($tool,$task,$task_user,$is_my,$is_custom);
-            $response['html'] = 'ahsdfkj';
+            $response['html'] = $this->renderPartial('blocks/task_guest');
             $response['task_user_id'] = $task_user->id;
             $response['is_my'] = $is_my;
             $response['error'] = false;
