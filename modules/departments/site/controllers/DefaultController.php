@@ -79,7 +79,8 @@ class DefaultController extends Controller
                             'team',
                             'team-steve',
                             'get-task',
-                            'fix-is-new'
+                            'fix-is-new',
+                            'create-user-request'
                         ],
                         'roles' => ['@'],
 
@@ -1086,7 +1087,7 @@ class DefaultController extends Controller
             $is_my = $tool->user_id == Yii::$app->user->id;
 
             //$response['html'] = $this->getTaskHtml($tool,$task,$task_user,$is_my,$is_custom);
-            $response['html'] = $this->renderPartial('blocks/task_guest');
+            $response['html'] = $this->renderPartial('blocks/task_guest', ['task' => $task]);
             $response['task_user_id'] = $task_user->id;
             $response['is_my'] = $is_my;
             $response['error'] = false;
@@ -1095,6 +1096,40 @@ class DefaultController extends Controller
         }
 
         return json_encode($response);
+    }
+
+    public function actionCreateUserRequest(){
+
+        $tool = UserTool::getCurrentUserTool();
+        $exist = TaskUser::find()->where(['task_id' => $_POST['id'], 'user_tool_id' => $tool->id])->one();
+
+        if($exist){
+            $delegate = new DelegateTask();
+            $delegate->task_user_id = $exist->id;
+            $delegate->delegate_user_id = Yii::$app->user->id;
+            $delegate->counter_time = $_POST['time'];
+            $delegate->counter_price = $_POST['price'];
+            $delegate->is_request = 1;
+            $delegate->status = 1;
+            $delegate->save();
+        }else{
+            $tu = new TaskUser();
+            $tu->task_id = $_POST['id'];
+            $tu->user_tool_id = $tool->id;
+            if($tu->save()){
+                $delegate = new DelegateTask();
+                $delegate->task_user_id = $tu->id;
+                $delegate->delegate_user_id = Yii::$app->user->id;
+                $delegate->counter_time = $_POST['time'];
+                $delegate->counter_price = $_POST['price'];
+                $delegate->is_request = 1;
+                $delegate->status = 1;
+                $delegate->save();
+            }
+        }
+
+        return json_encode($_POST);
+
     }
 
 }
