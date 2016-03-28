@@ -556,7 +556,7 @@ $this->registerJs($msgJs);
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
         <!-- /.modal-content -->
