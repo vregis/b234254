@@ -478,7 +478,7 @@ $this->registerJs($msgJs);
 <div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
 <div class="modal-dialog">
     <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="border-bottom:0;">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
             <h4 class="modal-title">Change password</h4>
         </div>
@@ -496,7 +496,7 @@ $this->registerJs($msgJs);
                 <input type="text" class="form-control conf_pass">
             </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="border-top:0;">
             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-success change_pass">Save changes</button>
         </div>
@@ -509,7 +509,7 @@ $this->registerJs($msgJs);
 <div class="modal fade" id="privacy" tabindex="-1" role="basic" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="border-bottom:0;">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                 <h4 class="modal-title">Privacy Settings</h4>
             </div>
@@ -555,7 +555,7 @@ $this->registerJs($msgJs);
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" style="border-top:0;">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
