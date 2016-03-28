@@ -94,6 +94,7 @@ $this->registerJsFile("/js/milestone.js");?>
                             /*var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
                             console.log('click');*/
                            openTask(data.id, data.is_custom);
+                           // openTaskGuest(data.id, data.is_custom);
                         },
                         onResize: function (data) {
                             var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
