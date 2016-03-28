@@ -390,7 +390,15 @@
 </div>
 </div><div id="mCSB_5_scrollbar_vertical" class="mCSB_scrollTools mCSB_5_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_5_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 155px; height: 0px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 155px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
 </div>
-
+<div id="request-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                Request was sent
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script>
     $('.create-request').on('click', function(){
 
@@ -404,8 +412,14 @@
             dataType: 'json',
             data: {id:id, price:price, time:time},
             success: function(response){
-                alert('Request was sent'); // create good alert
-                location.reload();
+                $("#request-modal").modal('show');
+                // alert('Request was sent'); // create good alert
+                $("#request-modal").on('shown.bs.modal',function(){
+                    $("#request-modal .modal-dialog").css({
+                        'margin-top':$(window).height()/2 - $("#request-modal .modal-dialog").height()/2
+                    });
+                });
+                setTimeout(function(){location.reload();},2000);
             }
         })
 
