@@ -54,7 +54,7 @@ $share_task = Task::find()->where(['id' => 39])->one();
 <!--         <div class="text-center" style="    margin-top: 10px;font-size:40px;font-weight: bold;color: rgba(90,90,90,0.50);">Idea</div> -->
         <?php //endif;?>
         <?php endif;?>
-        <div class="name text-center" style="margin-top: 20px;">
+        <div class="name text-center" style="margin-top: 20px;font-size:30px;margin-top: 20px;font-weight: bold;color: rgba(90,90,90,0.50);line-height: 32px;">
             <?php if($user->is_new == 1 || $user->user_registration_type == 1):?>
                 <span id="title-task text-center"><?php echo $task->description_road?></span>
             <?php else:?>
