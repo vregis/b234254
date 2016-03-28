@@ -404,7 +404,8 @@
             dataType: 'json',
             data: {id:id, price:price, time:time},
             success: function(response){
-
+                alert('Request was sent'); // create good alert
+                location.reload();
             }
         })
 
