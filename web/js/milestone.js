@@ -213,14 +213,15 @@ function openTaskGuest(id, is_custom){
         },
         success: function(response){
 
-        console.log(response.html);
             if(!response.error) {
                 var task = $('#task');
                 task.html(response.html);
                 task.modal();
                 task.css('position', 'absolute');
                 task.css('top', '50%');
-                task.css('margin-top', '-310px');
+                var offs = $(window).height()/2 - task.height()/2;
+                // console.log($(window).height()/2 - task.height()/2);
+                task.css('margin-top', '-'+offs);
                 $('.collapse').collapse({
                     toggle: false
                 });
