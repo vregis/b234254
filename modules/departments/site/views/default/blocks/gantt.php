@@ -20,14 +20,19 @@ $this->registerJsFile("/js/milestone.js");?>
                     ->where(['task_user.task_id' => $t->id, 'delegate_task.delegate_user_id' => Yii::$app->user->id, 'task_user.user_tool_id' => $userTool->id])
                     ->andWhere(['!=', 'delegate_task.status','8'])
                     ->all();?>
+                <?php if($userTool->user_id == Yii::$app->user->id):?>
+                    <?php $delegate_array[$t->id] = 1;?>
+                <?php else:?>
+                <?php $delegate_array[$t->id] = $is_del==null?0:1;?>
+                <?php endif;?>
                 <div class="ganttview-vtheader-series-row">
                     <?php if($userTool->user_id == Yii::$app->user->id):?>
                         <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
                     <?php else:?>
                         <?php if($is_del):?>
-                            <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                            <div class="series-content" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>" data-guest="0"><?php echo $t->name?></div>
                         <?php else:?>
-                            <div class="series-content-guest" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>"><?php echo $t->name?></div>
+                            <div class="series-content-guest" data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>" data-guest="1"><?php echo $t->name?></div>
                         <?php endif;?>
                     <?php endif;?>
                 </div>
@@ -58,6 +63,7 @@ $this->registerJsFile("/js/milestone.js");?>
             <?php foreach($tasks as $t):?>
                 {
                     name: "<?php echo $t->name?>",
+                    is_del: '<?php echo $delegate_array[$t->id]?>',
                     <?php if($t->start != null):?>
                     start: '<?php echo date('m/d/Y', strtotime($t->start));?>',
                     <?php else:?>
@@ -93,7 +99,11 @@ $this->registerJsFile("/js/milestone.js");?>
                         onClick: function (data) {
                             /*var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
                             console.log('click');*/
-                           openTask(data.id, data.is_custom);
+                            if(data.is_del == 1) {
+                                openTask(data.id, data.is_custom);
+                            }else{
+                                openTaskGuest(data.id, data.is_custom);
+                            }
                         },
                         onResize: function (data) {
                             var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
