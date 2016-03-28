@@ -148,9 +148,7 @@ $this->registerJs($msgJs);
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu">
                         <li style="text-align:center; padding-top:10px"><button class="btn btn-primary" data-toggle="modal" href="#basic">Change Password</button></li>
-                        <li class="divider"> </li>
                         <li style="text-align:center; padding-top:10px"><button style="width:142px" class="btn btn-primary" data-toggle="modal" href="#privacy">Privacy Settings</button></li>
-                        <li class="divider"> </li>
                        <!-- <li class="check">
                             <span>Show test results</span><div><input class="shows" name="show_test_result" <?php echo $model->show_test_result == 1?'checked':''?>  type="checkbox"></div>
                         </li>
@@ -163,7 +161,6 @@ $this->registerJs($msgJs);
                             <span>Show social network</span><div><input name="show_socials" class="shows" <?php echo $model->show_socials == 1?'checked':''?> type="checkbox"></div>
                         </li>-->
                         <?php if(Yii::$app->user->id == 25 || Yii::$app->user->id == 155): // clear test from admin?>
-                        <li class="divider"> </li>
                         <li class="check">
                             <a href="/tests/clear">Reset test</a>
                         </li>
