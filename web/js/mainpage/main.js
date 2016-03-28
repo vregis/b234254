@@ -1139,7 +1139,18 @@ $(document).ready(function(){
             })
         }
 
-    })
+    });
+      if($(window).width() < 768){
+         $("#mobile-modal").modal('show');
+      }
+ 
+  $("#mobile-modal").on('shown.bs.modal',function(){
+    $("#mobile-modal .modal-dialog").css({'margin-top':$(window).height()/2 - $("#mobile-modal .modal-dialog").height() / 2});
+  });
+    $("#mobile-modal").on('hide.bs.modal',function(e){
+      e.preventDefault();
+    // $("#mobile-modal .modal-dialog").css({'margin-top':$(window).height()/2 - $("#mobile-modal .modal-dialog").height() / 2});
+  });
   $("#info-modal").on('shown.bs.modal',function(){
     $("#info-modal .modal-dialog").css({'margin-top':$(window).height()/2 - $("#info-modal .modal-dialog").height() / 2});
   });

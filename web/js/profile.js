@@ -266,7 +266,7 @@ $(function(){
                             });  
                         }
                     });
-                },400);
+                },450);
                 console.log("hui");
             }
         })
@@ -597,6 +597,7 @@ $(function(){
                 placement:"top"
             });
         }
+
         setTimeout(function(){
             $('.services .service input.form-control[data-key="rate"]').inputmask({
                 "mask": "9",
@@ -604,24 +605,7 @@ $(function(){
                 "greedy": false,
             }); // 
         },500);
-        setTimeout(function(){
-            $.each($('.dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 252,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
-            });
-        },450);
+
     }
 
     function renderNewField(_this){
@@ -650,30 +634,31 @@ $(function(){
                 $('.sel2').selectpicker({});
                 $('input[type=checkbox]').uniform();
                 setTimeout(function(){
+                    alert('asdasd');
+                    $.each($('.dropdown-menu.inner'),function(){
+                        var els = $(this).find('li');
+                        console.log(els.length);
+                        if(els.length > 8){
+                            $(this).mCustomScrollbar({
+                                setHeight: 252,
+                                theme:"dark",
+                                scrollbarPosition:"outside"
+                            });  
+                        }else{
+                            $(this).mCustomScrollbar({
+                                theme:"dark",
+                                scrollbarPosition:"outside"
+                            });  
+                        }
+                    });
+                },450);
+                setTimeout(function(){
                     $('.services .service input.form-control[data-key="rate"]').inputmask({
                         "mask": "9",
                         "repeat": 3,
                         "greedy": false,
                     }); // 
                 },500);
-                        setTimeout(function(){
-            $.each($('.dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 252,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
-            });
-        },450);
             }
         })
     }
