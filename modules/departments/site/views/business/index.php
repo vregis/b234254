@@ -54,7 +54,7 @@ $this->registerJs($msgJs);
                         <?php $i++;?>
                     <?php endif;?>
                 <?php endforeach;?>
-            <? if(count($self_userTools) == 0 && $count_guest_tools == 0) : ?>
+            <? if($i == 0 && !$delegated_tools) : ?>
                 <div class="text-center" style="padding:22px 0;font-size: 30px;margin-top: 20px;font-weight: bold;color: rgba(90,90,90,0.50);">
                     Great! You are ready for a business of your dream.
                 </div>

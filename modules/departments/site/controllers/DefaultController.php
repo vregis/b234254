@@ -571,6 +571,14 @@ class DefaultController extends Controller
         unset(Yii::$app->session['milestone_id']);
     }
     public function getTaskHtml($tool,$task,$task_user,$is_my,$is_custom){
+
+
+        if($task->id == 37){
+            unset(Yii::$app->session['tool_id']);
+            $is_my = true;
+        }
+
+
         if($task_user) {
             if ($task_user->status == TaskUser::$status_new) {
                 $task_user->status = TaskUser::$status_active;
