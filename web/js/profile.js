@@ -23,7 +23,7 @@ $(document).ready(function() {
             "repeat": 3,
             "greedy": false,
         }); // 
-        setTimeout(function(){
+        // setTimeout(function(){
             $.each($('.dropdown-menu.inner'),function(){
                 var els = $(this).find('li');
                 console.log(els.length);
@@ -40,7 +40,7 @@ $(document).ready(function() {
                     });  
                 }
             });
-        },500);
+        // },500);
     });
     $(document).on('click', '.spec', function(){
             console.log("asdasdasd");
