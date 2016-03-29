@@ -1,4 +1,22 @@
 $(document).ready(function() {
+        setTimeout(function(){
+            $.each($('.dropdown-menu.inner'),function(){
+                var els = $(this).find('li');
+                console.log(els.length);
+                if(els.length > 8){
+                    $(this).mCustomScrollbar({
+                        setHeight: 252,
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }else{
+                    $(this).mCustomScrollbar({
+                        theme:"dark",
+                        scrollbarPosition:"outside"
+                    });  
+                }
+            });
+        },300);
     $(document).on('change',function(){
         $('.services .service input.form-control[data-key="rate"]').inputmask({
             "mask": "9",
