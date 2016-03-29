@@ -270,14 +270,14 @@ $this->registerJs($msgJs);
                     <?php //else:?>
                     <div class="pull-left" style="margin-left: 170px;">
                         <?php if(count($self_userTools) == 0):?>
-                            <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-success active">START YOUR BUSINESS</a>
+                            <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 5px;display: block;border-radius: 32px !important;" class="btn btn-success active">START YOUR BUSINESS</a>
                         <?php else:?>
-                            <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-success active">ADD A BUSINESS</a>
+                            <a href="<?= Url::toRoute(['/departments/business/create']) ?>" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 5px;display: block;border-radius: 32px !important;" class="btn btn-success active">ADD A BUSINESS</a>
                         <?php endif;?>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">All you need is an idea!</div>
                     </div>
                     <div class="pull-right" style="margin-right: 170px;">
-                        <a href="javascript:;" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 15px;display: block;border-radius: 32px !important;" class="btn btn-primary toggle-findjod active" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESSES</a>
+                        <a href="javascript:;" style="width: 170px;padding: 0;line-height: 50px !important;vertical-align: middle;height: 50px;margin: 0 auto 5px;display: block;border-radius: 32px !important;" class="btn btn-primary toggle-findjod active" data-toggle="collapse" data-target="#find_job" aria-expanded="false">SEARCH BUSINESSES</a>
                         <div style="line-height: 30px;    color: rgba(90,90,90,0.5);">Based on your settings</div>
                     </div>
                     <div class="clearfix"></div>
