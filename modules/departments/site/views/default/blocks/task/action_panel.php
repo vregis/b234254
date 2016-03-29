@@ -203,12 +203,12 @@ if($start_date != '') {
             <?php $chk = 1;?>
             <button class="btn btn-success disabled static payment-btn" style="width:93px;font-size:14px;">Payment</button>
             <?php if($delegate_task->status == 1):?>
-            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
+            <button onclick="" class="btn btn-danger disabled static" style="width:93px;<? //= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Counter Offer</button>
             <?php else:?>
                 <button class="btn btn-primary disabled static" style="width:93px;">Reject</button>
             <?php endif;?>
             <?php if($delegate_task && $delegate_task->status == 1):?>
-            <button class="btn btn-success disabled static" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>
+            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;">Cancel</button>
             <?php else:?>
                 <?php if($delegate_task && $delegate_task->status == 7):?>
                     <button class="btn btn-success disabled static" onclick="return false" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Submit</button>

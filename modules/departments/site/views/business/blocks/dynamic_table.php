@@ -10,8 +10,8 @@
         <th width="260"> Business Name </th>
         <th style="width: 52px;"> <button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button> </th>
         <?php echo $filters?>
-        <th width="100"> Total tasks </th>
-        <th width="100"> My tasks </th>
+        <th width="100"> Tasks </th>
+        <!--<th width="100"> My tasks </th>-->
     </tr>
     </thead>
     <tbody class="">
@@ -62,9 +62,9 @@
             <td>
                 <?php echo $task_count; ?>
             </td>
-            <td>
+            <!--<td>
                 12
-            </td>
+            </td>-->
         </tr>
         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
             <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Business</a>

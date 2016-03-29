@@ -68,8 +68,8 @@ $this->registerJs($msgJs);
                         <th style="width: 52px;"> <button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button> </th>
                         <th width="170"> Industry </th>
                         <th width="170"> Location </th>
-                        <th width="100"> Total tasks </th>
-                        <th width="100"> My tasks </th>
+                        <th width="100"> Tasks </th>
+                        <!--<th width="100"> My tasks </th>-->
                     </tr>
                     </thead>
                     <tbody>
@@ -114,9 +114,9 @@ $this->registerJs($msgJs);
                             <td>
                                 <?php echo $task_count; ?>
                             </td>
-                            <td>
+                            <!--<td>
                                 12
-                            </td>
+                            </td>-->
                         </tr>
                         <div id="huistory<?php echo $i?>" class="huistory" style="display:none;">
                             <a href="<?= Url::toRoute(['/departments/business/shared-business','id' => $current_userTool->id]) ?>" target="_blank">View Business</a>
@@ -248,9 +248,9 @@ $this->registerJs($msgJs);
                                 <td>
                                     <?php echo $task_count; ?>
                                 </td>
-                                <td>
-                                    <?php echo count($count_my); ?>
-                                </td>
+                                <!--<td>
+                                    <?php //echo count($count_my); ?>
+                                </td>-->
                             </tr>
                         <?php endforeach;?>
 

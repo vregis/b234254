@@ -5,7 +5,7 @@ use modules\departments\models\Specialization;
 <div class="dynamic-block col-md-8 col-md-offset-2 service-wrapper" data-id="<?php echo (isset($service))?$service->id:''?>"  style="margin-bottom: 10px;">
     <div class="row">
         <div class="col-sm-5" style="padding: 0;">
-            <div class="multiselect <?php echo $type == 'add'?'add':''?>">
+            <div  class="multiselect <?php echo $type == 'add'?'add':''?> <?php echo $last == true?'disabled':''?>">
                     <div class="btn-group bootstrap-select update form-control open specialization-wrapper">
                         <button type="button" class="btn dropdown-toggle btn-default spec" title="Native" aria-expanded="true">
                             <span class="filter-option pull-left selected-specialization-name">Select </span>&nbsp;

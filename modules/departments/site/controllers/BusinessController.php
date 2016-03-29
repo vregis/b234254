@@ -1341,7 +1341,7 @@ class BusinessController extends Controller
 
 
         $guestUserTools = UserTool::find()
-            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country')
+            ->select('user_tool.*,idea.name name, industry.name industry_name, geo_country.title_en country, user_profile.avatar avatar')
             ->join('LEFT JOIN', 'idea', 'idea.user_tool_id = user_tool.id')
             ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
@@ -1360,7 +1360,7 @@ class BusinessController extends Controller
             ->all();
 
         $sql = 'SELECT `user_tool`.*, `idea`.`name` AS `name`, `industry`.`name` AS `industry_name`,
-        `geo_country`.`title_en` AS `country`, `geo_country`.`id` AS `location_id` FROM `user_tool`
+        `geo_country`.`title_en` AS `country`, `geo_country`.`id` AS `location_id`, `user_profile`.`avatar` AS `avatar` FROM `user_tool`
         LEFT JOIN `idea` ON idea.user_tool_id = user_tool.id LEFT JOIN `industry` ON industry.id = idea.industry_id
         LEFT JOIN `user_profile` ON user_profile.user_id = user_tool.user_id LEFT JOIN `geo_country` ON user_profile.country_id = geo_country.id ';
         if($ind != 0){
