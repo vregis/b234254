@@ -22,7 +22,7 @@ $(document).ready(function() {
                     });  
                 }
             });
-        },400);
+        },300);
     });
     $(document).on('click', '.spec', function(){
             console.log("asdasdasd");
@@ -123,7 +123,7 @@ $(function(){
                     });  
                 }
             });
-        },400);
+        },300);
         var targ = $(this);
         /*App.blockUI({
             target: targ,
@@ -266,7 +266,7 @@ $(function(){
                             });  
                         }
                     });
-                },450);
+                },350);
                 console.log("hui");
             }
         })
@@ -651,7 +651,7 @@ $(function(){
                             });  
                         }
                     });
-                },450);
+                },350);
                 setTimeout(function(){
                     $('.services .service input.form-control[data-key="rate"]').inputmask({
                         "mask": "9",
@@ -696,24 +696,24 @@ $(function(){
                         "greedy": false,
                     }); // 
                 },500);
-                        setTimeout(function(){
-            $.each($('.dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 252,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
-            });
-        },500);
+                setTimeout(function(){
+                    $.each($('.dropdown-menu.inner'),function(){
+                        var els = $(this).find('li');
+                        console.log(els.length);
+                        if(els.length > 8){
+                            $(this).mCustomScrollbar({
+                                setHeight: 252,
+                                theme:"dark",
+                                scrollbarPosition:"outside"
+                            });  
+                        }else{
+                            $(this).mCustomScrollbar({
+                                theme:"dark",
+                                scrollbarPosition:"outside"
+                            });  
+                        }
+                    });
+                },300);
             }
         })
 
@@ -823,24 +823,24 @@ $(function(){
                         "greedy": false,
                     }); // 
                 },500);
-                        setTimeout(function(){
-            $.each($('.dropdown-menu.inner'),function(){
-                var els = $(this).find('li');
-                console.log(els.length);
-                if(els.length > 8){
-                    $(this).mCustomScrollbar({
-                        setHeight: 252,
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }else{
-                    $(this).mCustomScrollbar({
-                        theme:"dark",
-                        scrollbarPosition:"outside"
-                    });  
-                }
-            });
-        },500);
+                setTimeout(function(){
+                    $.each($('.dropdown-menu.inner'),function(){
+                        var els = $(this).find('li');
+                        console.log(els.length);
+                        if(els.length > 8){
+                            $(this).mCustomScrollbar({
+                                setHeight: 252,
+                                theme:"dark",
+                                scrollbarPosition:"outside"
+                            });  
+                        }else{
+                            $(this).mCustomScrollbar({
+                                theme:"dark",
+                                scrollbarPosition:"outside"
+                            });  
+                        }
+                    });
+                },300);
             }
         });
     });
