@@ -35,9 +35,9 @@
                         <input class="chngval" id="input-price" value="0" type="text">
             </div>
 <input type="hidden" id="taskuser-status" name="TaskUser[status]" value="1">
-                        <button data-id = '<?php echo $task->id?>' class="btn btn-primary offer create-request">Request</button>
+                        <button class="btn btn-primary offer disabled static">Payment</button>
                             <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Reject</button>
-            <button class="btn btn-success disabled static" style="width:93px;">Submit</button>
+                            <button data-id = '<?php echo $task->id?>' class="btn btn-primary offer create-request">Request</button>
             <a href="#" data-dismiss="modal" class="href-black task-close"></a>
 <div id="payment-form" style="display:none;">
     <div class="container-fluid" style="padding-top: 0;">
