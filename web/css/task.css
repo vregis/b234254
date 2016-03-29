@@ -462,6 +462,8 @@ span.title {
 .task .title{
     line-height: 38px;
     margin-top: 3px;
+    color: rgba(90,90,90,0.5);
+        font-size: 14px;
 }
 .task .name{
     overflow: hidden;
@@ -469,6 +471,8 @@ span.title {
     text-overflow: ellipsis;
     white-space: nowrap;
     width:205px;
+        font-weight: bold;
+        font-size: 18px;
 }
 .task-custom .name{
     width: auto !important;
