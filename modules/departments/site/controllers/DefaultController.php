@@ -321,6 +321,28 @@ class DefaultController extends Controller
             //var_dump($tasks_request->all());
 
         }else{
+
+            $delt = DelegateTask::find()
+                ->select('delegate_task.*, task.id task')
+                ->join('LEFT JOIN', 'task_user', 'task_user.id = delegate_task.task_user_id')
+                ->join('LEFT JOIN', 'task', 'task.id = task_user.task_id')
+                ->where(['<','delegate_task.status', '8'])
+                ->andWhere(['!=', 'delegate_task.delegate_user_id', Yii::$app->user->id])
+                ->andWhere(['task_user.user_tool_id' => $userTool->id])
+                ->all();
+
+            if($delt){
+                $i = 0;
+                $deleg_array = [];
+                foreach($delt as $d){
+                    $deleg_array[$i] = $d->task;
+                    $i++;
+                }
+            }
+
+
+
+
             $tasks_request = Task::find()->select(
                 'task.*, specialization.name as task, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay'
             )
@@ -329,11 +351,15 @@ class DefaultController extends Controller
                 ->join(
                     'LEFT OUTER JOIN',
                     'task_user',
-                    'task_user.task_id = task.id and task_user.user_tool_id = ' . $userTool->id
+                    'task_user.task_id = task.id and task_user.user_tool_id = ' . $userTool->id.' and task_user.status != 2'
                 )
                 ->join('LEFT OUTER JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id');
 
+
+
             $tasks_request->orderBy('sort');
+
+
 
             if($milestone->id != -1) {
                 $tasks_request->where(
@@ -355,26 +381,6 @@ class DefaultController extends Controller
                 $tasks_request->orderBy('task.milestone_id');
             }
 
-
-
-
-
-         /*   if (!$is_my) {
-                $tasks_request->andWhere(
-                    [
-                        'task_user.user_tool_id' => $userTool->id
-                    ]
-                );
-                $tasks_request->andWhere(
-                    [
-                        'delegate_task.delegate_user_id' => Yii::$app->user->id
-                    ]
-                );
-                $tasks_request->andWhere(['!=', 'delegate_task.status', DelegateTask::$status_cancel]);
-                //$tasks_request->andWhere(['!=', 'delegate_task.status', 7]);
-            }*/
-
-            //var_dump($tasks_request->all());
         }
 
 

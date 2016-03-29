@@ -32,8 +32,10 @@
                 ->join('JOIN', 'department', 'department.id = task.department_id')
                 ->where(['is_hidden' => '0','department.is_additional' => 0])
                 ->count();
+
             $count_progress = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_active])->count();
             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
+            $count_new = $task_count - ($count_progress + $count_completed);
             ?>
             <?php if($k > 5){ continue; } //TODO DELETE THIS!!!!!!!!!!?>
             <td>
@@ -60,7 +62,7 @@
                 <?php echo $current_userTool->country?>
             </td>
             <td>
-                <?php echo $task_count; ?>
+                <?php echo $count_new; ?>
             </td>
             <!--<td>
                 12

@@ -39,7 +39,7 @@ $share_task = Task::find()->where(['id' => 39])->one();
                                 <span class="box" style="cursor: default;" onclick="return false;"><?=$i==0 ? '<i class="fa fa-check font-green-jungle"></i>' : $i + 1?></span>
                             </label>
                             <div class="text-desc-task" style="display: none">
-                                <?= $task->description ?>
+                                <?= strip_tags($task->description) ?>
                             </div>
                         </div>
                     <? endfor; ?>

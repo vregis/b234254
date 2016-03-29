@@ -87,6 +87,7 @@ $this->registerJs($msgJs);
                                 ->count();
                             $count_progress = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_active])->count();
                             $count_completed = TaskUser::find()->where(['user_tool_id' => $current_userTool->id,'status' => TaskUser::$status_completed])->count();
+                            $count_new = $task_count - ($count_progress + $count_completed);
                             ?>
                             <td>
                                 <a href="javascript:;" style="padding-top: 1px;padding-left: 1px;" class="dropmenu<?php echo $i?> history btn btn-primary circle" data-toggle="popover" data-not_autoclose="1"><i class="ico-history"></i></a>
@@ -112,7 +113,7 @@ $this->registerJs($msgJs);
                                 <?php echo $current_userTool->country?>
                             </td>
                             <td>
-                                <?php echo $task_count; ?>
+                                <?php echo $count_new; ?>
                             </td>
                             <!--<td>
                                 12
