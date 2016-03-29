@@ -16,7 +16,7 @@ $(document).ready(function() {
                     });  
                 }
             });
-        },300);
+        },500);
     $(document).on('change',function(){
         $('.services .service input.form-control[data-key="rate"]').inputmask({
             "mask": "9",
@@ -40,7 +40,7 @@ $(document).ready(function() {
                     });  
                 }
             });
-        },300);
+        },500);
     });
     $(document).on('click', '.spec', function(){
             console.log("asdasdasd");
@@ -141,7 +141,7 @@ $(function(){
                     });  
                 }
             });
-        },300);
+        },500);
         var targ = $(this);
         /*App.blockUI({
             target: targ,
@@ -284,7 +284,7 @@ $(function(){
                             });  
                         }
                     });
-                },350);
+                },500);
                 console.log("hui");
             }
         })
@@ -669,7 +669,7 @@ $(function(){
                             });  
                         }
                     });
-                },350);
+                },500);
                 setTimeout(function(){
                     $('.services .service input.form-control[data-key="rate"]').inputmask({
                         "mask": "9",
@@ -731,7 +731,7 @@ $(function(){
                             });  
                         }
                     });
-                },300);
+                },500);
             }
         })
 
@@ -858,7 +858,7 @@ $(function(){
                             });  
                         }
                     });
-                },300);
+                },500);
             }
         });
     });
