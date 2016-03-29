@@ -148,7 +148,7 @@ $this->registerJs($msgJs);
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu">
                         <li style="text-align:center; padding-top:10px"><button class="btn btn-primary" data-toggle="modal" href="#basic">Change Password</button></li>
-                        <li style="text-align:center; padding-top:10px"><button style="width:142px" class="btn btn-primary" data-toggle="modal" href="#privacy">Privacy Settings</button></li>
+                        <li style="text-align:center; padding-top:10px;padding-bottom: 10px;"><button style="width:142px" class="btn btn-primary" data-toggle="modal" href="#privacy">Privacy Settings</button></li>
                        <!-- <li class="check">
                             <span>Show test results</span><div><input class="shows" name="show_test_result" <?php echo $model->show_test_result == 1?'checked':''?>  type="checkbox"></div>
                         </li>
