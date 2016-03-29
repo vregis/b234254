@@ -984,7 +984,8 @@ thead .ui-datepicker-week-end {
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
     max-width:433px;
     left:0 !important;
-    top: -15px !important;
+        top: 12px !important;
+    /* top: -15px !important; */
 }
 .invite-by-email+.popover .popover-content,.advanced-search-btn+.popover .popover-content{
     /*background: #ebebeb;*/
@@ -1008,7 +1009,7 @@ thead .ui-datepicker-week-end {
 .advanced-search-btn+.popover{
     max-width:433px;
     left:73px !important;
-    /*top: 5px !important;*/
+    top: 95px !important;
     box-shadow: 10px 10px 5px 0 rgba(102, 102, 102, 0.3);
 }
 .advanced-search-btn+.popover.top > .arrow{
