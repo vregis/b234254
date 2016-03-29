@@ -70,6 +70,10 @@ use modules\departments\models\Specialization;
 </div>
 
 <script>
+    $(".multiselect.disabled .specialization-wrapper").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    });
     $('li.spec-selected').each(function(){
         var name = $(this).find('.spec-name').text();
         var id = $(this).find('.spec-name').attr('data-id');
