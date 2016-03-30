@@ -1132,6 +1132,8 @@ class BusinessController extends Controller
         $idea_like->like = $_POST['like'];
         $idea_like->save();
 
+        $this->calculateLike($_POST['tool_id']);
+
         $response['error'] = false;
         return json_encode($response);
     }
@@ -1145,9 +1147,43 @@ class BusinessController extends Controller
         }
         $benefit_like->like = $_POST['like'];
         $benefit_like->save();
+        $this->calculateLike($_POST['tool_id']);
 
         $response['error'] = false;
         return json_encode($response);
+    }
+
+    private function calculateLike($tool_id){
+        $likes = 0;
+        $dislikes = 0;
+
+        $benefits = BenefitLike::find()->where(['user_tool_id' => $tool_id])->all();
+        if($benefits){
+
+            foreach($benefits as $ben){
+                $likes = $likes + $ben->like;
+                $dislikes = $dislikes + $ben->dislike;
+            }
+        }
+
+        $idea = IdeaLike::find()->where(['idea_id' => $tool_id])->all();
+
+        if($idea){
+            foreach($idea as $i){
+                $likes = $likes + $i->like;
+                $dislikes = $dislikes + $i->dislike;
+            }
+        }
+
+        $business = Idea::find()->where(['user_tool_id' => $tool_id])->one();
+
+        if($business){
+            $business->count_like = $likes;
+            $business->count_dislike = $dislikes;
+            $business->save();
+        }
+
+
     }
 
     public function actionSharedBusiness($id){
@@ -1226,6 +1262,7 @@ class BusinessController extends Controller
         }
         $like->ip_address = $_SERVER['REMOTE_ADDR'];
         $like->save();
+        $this->calculateLike($_POST['tool']);
         $response['html'] = $this->renderPartial('blocks/likes', ['id'=>$_POST['tool']]);
         return json_encode($response);
     }
@@ -1246,6 +1283,7 @@ class BusinessController extends Controller
         $idea->ip_address = $_SERVER['REMOTE_ADDR'];
         $idea->idea_id = $_POST['tool'];
         $idea->save();
+        $this->calculateLike($_POST['tool']);
         $response['html'] = $this->renderPartial('blocks/idea', ['id'=>$_POST['tool']]);
         return json_encode($response);
     }
@@ -1346,6 +1384,8 @@ class BusinessController extends Controller
             ->join('LEFT JOIN', 'industry', 'industry.id = idea.industry_id')
             ->join('LEFT JOIN', 'user_profile', 'user_profile.user_id = user_tool.user_id')
             ->join('LEFT JOIN', 'geo_country', 'user_profile.country_id = geo_country.id')
+
+
             ->where(['!=', 'user_tool.user_id', Yii::$app->user->id])
             ->AndWhere(['not', ['idea.name' => NULL]]);
         if($ind != 0){
@@ -1354,6 +1394,9 @@ class BusinessController extends Controller
         if($loc != 0){
             $guestUserTools = $guestUserTools->andWhere(['user_profile.country_id' => $loc]);
         }
+
+        $guestUserTools = $guestUserTools->orderBy('(idea.count_like - idea.count_dislike) DESC, idea.count_like DESC');
+
         $guestUserTools = $guestUserTools
             ->limit(5)
             ->offset($offset)

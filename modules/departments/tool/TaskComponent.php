@@ -102,6 +102,7 @@ class TaskComponent extends Component
         $this->setFindUsersCondition($users, $exclude_user_ids);
         $this->setFindUsersCondition($users, $exclude_user_ids);
 
+
         return Yii::$app->controller->renderPartial('blocks/task/delegate_users',
             [
                 'users' => $users,
@@ -110,6 +111,8 @@ class TaskComponent extends Component
     }
 
     public function get_delegate_users_advanced($task_user_id, $post) {
+
+
         $is_advanced = false;
         if(isset($post['is_advanced'])) {
             $is_advanced = filter_var($post['is_advanced'], FILTER_VALIDATE_BOOLEAN);
@@ -157,6 +160,9 @@ class TaskComponent extends Component
         }
         $this->setFindUsersCondition($users, $exclude_user_ids);
         $this->setFindUsersCondition($users, $exclude_user_ids);
+
+        var_dump($users);
+
 
         return Yii::$app->controller->renderPartial('blocks/task/delegate_users',
             [

@@ -218,6 +218,8 @@ $this->registerJs($msgJs);
                                 $count_progress = TaskUser::find()->where(['user_tool_id' => $dt->id,'status' => TaskUser::$status_active])->count();
                                 $count_completed = TaskUser::find()->where(['user_tool_id' => $dt->id,'status' => TaskUser::$status_completed])->count();
 
+                                $count_new = $task_count - ($count_progress + $count_completed);
+
                                 $count_my = TaskUser::find()
                                     ->join('LEFT JOIN', 'delegate_task', 'task_user.id = delegate_task.task_user_id')
                                     ->where(['task_user.user_tool_id' => $dt->id, 'task_user.status' => TaskUser::$status_active, 'delegate_user_id' => Yii::$app->user->id])
@@ -247,7 +249,7 @@ $this->registerJs($msgJs);
                                     <?php echo $dt->country?>
                                 </td>
                                 <td>
-                                    <?php echo $task_count; ?>
+                                    <?php echo $count_new; ?>
                                 </td>
                                 <!--<td>
                                     <?php //echo count($count_my); ?>

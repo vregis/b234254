@@ -26,6 +26,9 @@ class UserTool extends \yii\db\ActiveRecord
     public $location_id;
     public $avatar;
 
+    public $idea_like;
+    public $idea_dislike;
+
 
 
 
