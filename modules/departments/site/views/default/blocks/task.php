@@ -68,121 +68,8 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="search-block" style="border: 1px solid #5184f3;border-radius: 10px !important;overflow: hidden;">
                             <table id="offers" style="width:100%">
-                                <tbody>
-                                    <tr>
-                                        <td width="50"><a target="_blank" href="/user/social/shared-profile?id=2"><img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="/images/avatar/nophoto.png" data-original-title="" title=""></a></td>
-                                        <td width="273">User Name</td>
-                                        <td width="165">
-                                            <div class="date" style="min-width: 141px;">
-                                                <input type="hidden" id="input-href" name="href" value="none">
-                                                        <button style="padding-top: 2px;font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
-                                                        <i class="ico-calendar"></i>
-                                                    </button>
-                                                    <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
-                                                <span class="title-value end">19</span> <span class="title-caption end">Apr</span>
-                                            </div>
-                                        </td>
-                                        <td width="105" style="text-align: left;">
-                                            <div class="cost">
-                                                <button style="display: inline-block;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
-                                                    <i class="ico-dollar"></i>
-                                                </button>
-                                                <span  style="width: 62px;display: inline-block;text-align: center;">123</span>
-                                            </div>
-                                        </td>
-                                        <td width="50">
-                                            <a style="display: inline-block;padding-top: 1px;" href="#" class="btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
-                                        </td>
-                                        <td style="text-align: right;padding-right: 20px;">
-                                            <button style="display: inline-block;" class="btn btn-primary">Cancel</button>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td width="50"><a target="_blank" href="/user/social/shared-profile?id=2"><img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="/images/avatar/nophoto.png" data-original-title="" title=""></a></td>
-                                        <td width="275">User Name</td>
-                                        <td width="165">
-                                            <div class="date" style="min-width: 141px;">
-                                                <input type="hidden" id="input-href" name="href" value="none">
-                                                        <button style="padding-top: 2px;font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
-                                                        <i class="ico-calendar"></i>
-                                                    </button>
-                                                    <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
-                                                <span class="title-value end">19</span> <span class="title-caption end">Apr</span>
-                                            </div>
-                                        </td>
-                                        <td width="105" style="text-align: left;">
-                                            <div class="cost">
-                                                <button style="display: inline-block;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
-                                                    <i class="ico-dollar"></i>
-                                                </button>
-                                                <span  style="width: 62px;display: inline-block;text-align: center;">123</span>
-                                            </div>
-                                        </td>
-                                        <td width="50">
-                                            <a style="display: inline-block;padding-top: 1px;" href="#" class="btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
-                                        </td>
-                                        <td style="text-align: right;padding-right: 20px;">
-                                            <button style="display: inline-block;" class="btn btn-primary">Cancel</button>
-                                        </td>
-                                    </tr>
-                                                                            <tr>
-                                        <td width="50"><a target="_blank" href="/user/social/shared-profile?id=2"><img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="/images/avatar/nophoto.png" data-original-title="" title=""></a></td>
-                                        <td width="275">User Name</td>
-                                        <td width="165">
-                                            <div class="date" style="min-width: 141px;">
-                                                <input type="hidden" id="input-href" name="href" value="none">
-                                                        <button style="padding-top: 2px;font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
-                                                        <i class="ico-calendar"></i>
-                                                    </button>
-                                                    <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
-                                                <span class="title-value end">19</span> <span class="title-caption end">Apr</span>
-                                            </div>
-                                        </td>
-                                        <td width="105" style="text-align: left;">
-                                            <div class="cost">
-                                                <button style="display: inline-block;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
-                                                    <i class="ico-dollar"></i>
-                                                </button>
-                                               <input class="chngval" value="0" type="text">
-                                            </div>
-                                        </td>
-                                        <td width="50">
-                                            <a style="display: inline-block;padding-top: 1px;" href="#" class="btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
-                                        </td>
-                                        <td style="text-align: right;padding-right: 20px;">
-                                            <button style="display: inline-block;" class="btn btn-danger">Reject</button>
-                                            <button style="display: inline-block;" class="btn btn-success">Accept</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="50"><a target="_blank" href="/user/social/shared-profile?id=2"><img onerror="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="/images/avatar/nophoto.png" data-original-title="" title=""></a></td>
-                                        <td width="275">User Name</td>
-                                        <td width="165">
-                                            <div class="date" style="min-width: 141px;">
-                                                <input type="hidden" id="input-href" name="href" value="none">
-                                                        <button style="padding-top: 2px;font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
-                                                        <i class="ico-calendar"></i>
-                                                    </button>
-                                                    <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
-                                                <span class="title-value end">19</span> <span class="title-caption end">Apr</span>
-                                            </div>
-                                        </td>
-                                        <td width="105" style="text-align: left;">
-                                            <div class="cost">
-                                                <button style="display: inline-block;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
-                                                    <i class="ico-dollar"></i>
-                                                </button>
-                                               <input class="chngval" value="0" type="text">
-                                            </div>
-                                        </td>
-                                        <td width="50">
-                                            <a style="display: inline-block;padding-top: 1px;" href="#" class="btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
-                                        </td>
-                                        <td style="text-align: right;padding-right: 20px;">
-                                            <button style="display: inline-block;" class="btn btn-danger">Reject</button>
-                                            <button style="display: inline-block;" class="btn btn-primary">Conter offer</button>
-                                        </td>
-                                    </tr>
+                                <tbody id="cancel_delegate_users">
+                                    <?= $html_cancel_delegate_users ?>
                                 </tbody>
                             </table>
                             <table style="width:100%;margin-bottom:0;" class="table with-foot table-bordered">
@@ -190,9 +77,9 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                     <tr>
                                         <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                                         <th width="280">Name</th>
-                                        <th width="250">Location</th>
+                                        <th width="160">Location</th>
                                         <th width="105" class="rate">Rate / h</th>
-                                        <th width="165">Level</th>
+                                        <th>Level</th>
                                         <th width="130">Offers</th>
                                     </tr>
                                 </thead>
@@ -285,35 +172,6 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                     </th>
                                     <th style="border-left:0;">
                                         <button class="btn btn-primary make-offer" style="width:96px;font-size:11px !important;padding: 0px 15px !important;white-space: initial;">Make <br> an offer</button>
-                                    </th>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="offered-block">
-                            <table style="width:100%;" class="table with-foot table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
-                                        <th width="180">Name</th>
-                                        <th width="210">Level</th>
-                                        <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                                        <th width="230">Location</th>
-                                        <th width="130" class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Offered <i class="fa fa-angle-down"></i></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="cancel_delegate_users">
-                                    <?= $html_cancel_delegate_users ?>
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th colspan="5" style="border-right:0;">
-                                        <div class="pull-right">
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </th>
-                                    <th style="border-left:0;">
-                                        <button class="btn btn-primary cancel-offer" style="width:96px;font-size:11px !important;padding: 0px 15px !important;white-space: initial;">Cancel <br> an offer</button>
                                     </th>
                                 </tr>
                                 </tfoot>
@@ -492,6 +350,10 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                         <? endif; ?>
                     </div>
                     <div class="block chat">
+                        <div id="active-user-info" style="display: none;">
+                            Иван Ч., USA, Califonia <br>
+                            30 Mar - 19 Apr, $60
+                        </div>
                         <div class="content">
                             <div class="ajax-content">
                                 <div class="tab-content">
