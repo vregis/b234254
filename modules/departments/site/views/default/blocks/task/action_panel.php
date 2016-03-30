@@ -87,7 +87,7 @@ if($start_date != '') {
     <span class="title-value start"><?= $start_d ?></span> <span class="title-caption start"><?= $start_m ?></span> -
     <span class="title-value end"><?= $end_d ?></span> <span class="title-caption end"><?= $end_m ?></span>
 </div>
-<div class="item time">
+<!-- <div class="item time">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-clock1"></i>
     </button>
@@ -106,7 +106,7 @@ if($start_date != '') {
             <span id="input-time"><?= $task_user->time ?>h</span>
         <? endif; ?>
     <? endif; ?>
-</div>
+</div> -->
 <div class="item cost" style="margin-right: 33px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-dollar"></i>
