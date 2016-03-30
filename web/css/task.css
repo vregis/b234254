@@ -470,7 +470,7 @@ span.title {
     word-wrap: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width:205px;
+    width:330px;
         font-weight: bold;
         font-size: 18px;
 }
@@ -519,7 +519,7 @@ span.title {
     font-size:17px;
     /*line-height: initial !important;*/
 }
-.task-title .item input[type="text"]{
+#task input[type="text"]{
     line-height:32px;
     height: 32px;
     width:auto;
@@ -969,7 +969,7 @@ thead .ui-datepicker-week-end {
     width: 32px;
 }
 #delegate table .btn.circle:hover{
-    color:#fff !important;
+    /* color:#fff !important; */
 }
 .dp-start-highlight a{
     background: #5184F3 !important;
@@ -1491,7 +1491,10 @@ button.confirn-btn+.popover > .arrow{
     right: 135px !important;
 }
 #delegate table{
-    border-color:#5184f3;
+    /* border-color:#5184f3; */
+}
+#offers tr td{
+    border:0 !important;
 }
 table th.rate .fa{
         position:absolute;
