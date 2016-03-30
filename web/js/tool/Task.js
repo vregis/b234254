@@ -55,7 +55,12 @@ function Task(task_user_id, is_my, is_custom) {
     if(staticTask == null) {
         staticTask = thisTask;
     }
-
+    $("#delegate_active_users a img").click(function(){
+        $("#active-user-info").show();
+        var usrHtml = $(this).parent().attr('data-name') +", "+$(this).parent().attr('data-location') +"<br/> "+$(this).parent().attr('data-date') +", "+$(this).parent().attr('data-rate');
+        // alert(usrHtml);
+        $("#active-user-info").html(usrHtml);
+    });
     $('input[type="radio"][disabled]').click(function(e){
         e.preventDefault();
     });
@@ -183,6 +188,7 @@ function Task(task_user_id, is_my, is_custom) {
                 _this.html('');
             }
         }
+
         var btn_message = $('#btn-tab-message');
         if($('#delegate_active_users').html() == 0) {
             if($('#portlet_tab2').hasClass('active')) {
@@ -225,6 +231,12 @@ function Task(task_user_id, is_my, is_custom) {
                             }
                             $("#btn-tab-message").click();
                             initTimeParse();
+                            $("#delegate_active_users a img").click(function(){
+                                $("#active-user-info").show();
+                                var usrHtml = $(this).parent().attr('data-name') +", "+$(this).parent().attr('data-location') +"<br/> "+$(this).parent().attr('data-date') +", "+$(this).parent().attr('data-rate');
+                                // alert(usrHtml);
+                                $("#active-user-info").html(usrHtml);
+                            });
                         }
                     }
                 });
@@ -504,6 +516,7 @@ function Task(task_user_id, is_my, is_custom) {
                 var usrHtml = $(this).attr('data-name') +", "+$(this).attr('data-location') +"<br/> "+$(this).attr('data-date') +", "+$(this).attr('data-rate');
                 $("#active-user-info").html(usrHtml);
             });
+
             $(".offerall-btn").click(function(){
                 // $(this).toggleClass('active');
                 if($(this).hasClass('active')){
