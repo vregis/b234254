@@ -462,13 +462,17 @@ span.title {
 .task .title{
     line-height: 38px;
     margin-top: 3px;
+    color: rgba(90,90,90,0.5);
+        font-size: 14px;
 }
 .task .name{
     overflow: hidden;
     word-wrap: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width:205px;
+    width:330px;
+        font-weight: bold;
+        font-size: 18px;
 }
 .task-custom .name{
     width: auto !important;
@@ -515,7 +519,7 @@ span.title {
     font-size:17px;
     /*line-height: initial !important;*/
 }
-.task-title .item input[type="text"]{
+#task input[type="text"]{
     line-height:32px;
     height: 32px;
     width:auto;
@@ -965,7 +969,7 @@ thead .ui-datepicker-week-end {
     width: 32px;
 }
 #delegate table .btn.circle:hover{
-    color:#fff !important;
+    /* color:#fff !important; */
 }
 .dp-start-highlight a{
     background: #5184F3 !important;
@@ -1487,7 +1491,10 @@ button.confirn-btn+.popover > .arrow{
     right: 135px !important;
 }
 #delegate table{
-    border-color:#5184f3;
+    /* border-color:#5184f3; */
+}
+#offers tr td{
+    border:0 !important;
 }
 table th.rate .fa{
         position:absolute;
@@ -1784,4 +1791,9 @@ table th.rate .fa{
 #invite-modal .modal-dialog{
     text-align:center;
     width:300px !important;
+}
+#active-user-info{
+    border-bottom:1px solid #d7d7d7;
+    padding:0 10px;
+    text-align: center;
 }

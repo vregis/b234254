@@ -497,6 +497,13 @@ function Task(task_user_id, is_my, is_custom) {
                 content:$("#advanced-search-form"),
                 // container:$("#delegate"),
             });
+            $('.to-chat').click(function(){
+                delegate.collapse('toggle');
+                $("#btn-delegate").removeClass('active');
+                $("#active-user-info").show();
+                var usrHtml = $(this).attr('data-name') +", "+$(this).attr('data-location') +"<br/> "+$(this).attr('data-date') +", "+$(this).attr('data-rate');
+                $("#active-user-info").html(usrHtml);
+            });
             $(".offerall-btn").click(function(){
                 // $(this).toggleClass('active');
                 if($(this).hasClass('active')){

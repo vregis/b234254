@@ -66,16 +66,21 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                     <!-- Nav tabs -->
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="search-block">
-                            <table style="width:100%;" class="table with-foot table-bordered">
+                        <div role="tabpanel" class="tab-pane active" id="search-block" style="border: 1px solid #5184f3;border-radius: 10px !important;overflow: hidden;">
+                            <table id="offers" style="width:100%">
+                                <tbody id="cancel_delegate_users">
+                                    <?= $html_cancel_delegate_users ?>
+                                </tbody>
+                            </table>
+                            <table style="width:100%;margin-bottom:0;" class="table with-foot table-bordered">
                                 <thead>
                                     <tr>
                                         <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
                                         <th width="280">Name</th>
-                                        <th width="165">Level</th>
-                                        <th width="105" class="rate">Rate by h <i class="fa fa-angle-up"></i></th>
-                                        <th width="250">Location</th>
-                                        <th width="130" class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Search<i class="fa fa-angle-down"></i></th>
+                                        <th width="160">Location</th>
+                                        <th width="105" class="rate">Rate / h</th>
+                                        <th>Level</th>
+                                        <th width="130">Offers</th>
                                     </tr>
                                 </thead>
                                 <tbody id="delegate_users">
@@ -167,35 +172,6 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                     </th>
                                     <th style="border-left:0;">
                                         <button class="btn btn-primary make-offer" style="width:96px;font-size:11px !important;padding: 0px 15px !important;white-space: initial;">Make <br> an offer</button>
-                                    </th>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="offered-block">
-                            <table style="width:100%;" class="table with-foot table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th width="50"><button style="margin:0;border:none !important;font-size: 24px;line-height: 20px !important;" class="btn btn-primary static circle"><i class="ico-user1"></i></button></th>
-                                        <th width="180">Name</th>
-                                        <th width="210">Level</th>
-                                        <th width="150" class="rate">Rate by hour <i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></th>
-                                        <th width="230">Location</th>
-                                        <th width="130" class="dropmenu1 status" data-toggle="popover" data-not_autoclose="1">Offered <i class="fa fa-angle-down"></i></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="cancel_delegate_users">
-                                    <?= $html_cancel_delegate_users ?>
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th colspan="5" style="border-right:0;">
-                                        <div class="pull-right">
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </th>
-                                    <th style="border-left:0;">
-                                        <button class="btn btn-primary cancel-offer" style="width:96px;font-size:11px !important;padding: 0px 15px !important;white-space: initial;">Cancel <br> an offer</button>
                                     </th>
                                 </tr>
                                 </tfoot>
@@ -374,6 +350,10 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                         <? endif; ?>
                     </div>
                     <div class="block chat">
+                        <div id="active-user-info" style="display: none;">
+                            Иван Ч., USA, Califonia <br>
+                            30 Mar - 19 Apr, $60
+                        </div>
                         <div class="content">
                             <div class="ajax-content">
                                 <div class="tab-content">
