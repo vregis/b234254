@@ -181,7 +181,6 @@ $(function(){
         $(collapseEl).collapse('toggle');
     });
     $(".services .accordion .panel .panel-title .check").click(function(e){
-
         if($(this).hasClass('sell_department')){
             checkSell($(this));
             checkShow($(this));
@@ -513,22 +512,22 @@ $(function(){
 
 
     $('select.lang_name').on('change', function(){
-        $(this).closest('div.lang_name').find('.start').hide();
+        // $(this).closest('div.lang_name').find('.start').hide();
     })
     $('select.skill_year').on('change', function(){
-        $(this).closest('div.skill_year').find('.start').hide();
+        // $(this).closest('div.skill_year').find('.start').hide();
     })
     $('select.lang_skill').on('change', function(){
-        $(this).closest('div.lang_skill').find('.start').hide();
+        // $(this).closest('div.lang_skill').find('.start').hide();
     })
     $('select.country').on('change', function(){
-        $(this).closest('div.country').find('.start').hide();
-        $(this).children('.start').hide();
+        // $(this).closest('div.country').find('.start').hide();
+        // $(this).children('.start').hide();
 
     })
 
     $(document).on('change', '.servises select.specialization', function(){
-        $(this).closest('div.specialization').find('.start').hide();
+        // $(this).closest('div.specialization').find('.start').hide();
         var id = $(this).val();
         var parent = $(this);
         $.ajax({
