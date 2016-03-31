@@ -107,7 +107,7 @@ if($start_date != '') {
         <? endif; ?>
     <? endif; ?>
 </div>
-<div class="item cost" style="margin-right: 138px;margin-left: 0px;">
+<div class="item cost" style="margin-right: 143px;margin-left: 0px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-dollar"></i>
     </button>
@@ -184,7 +184,7 @@ if($start_date != '') {
         <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-success offer <?= $delegate_task->is_request==0 ? '' :'' ?>">Request</button>
 
         <?php else:?>
-            <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Payment</button>
+<!--             <button id="<?= $delegate_task->is_request==1 ? 'btn-accept' :'' ?>" aria-expanded="false" class="btn btn-primary offer <?= $delegate_task->is_request==0 ? 'static disabled' :'' ?>">Payment</button> -->
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-primary" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Reject</button>
             <button id="<?= $delegate_task->is_request==0 ? 'btn-accept' :'' ?>" class="btn btn-success accept-change" style="width:93px;<?= $delegate_task->is_request==1?'visibility: hidden;':'' ?>">Accept</button>
         <?php endif;?>
