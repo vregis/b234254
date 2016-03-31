@@ -2,7 +2,7 @@
 <? foreach($users as $user) : ?>
     <tr class="user-row">
         <td width="50"><a target="_blank" href="/user/social/shared-profile?id=<?= $user->id ?>"><img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></a></td>
-        <td class="field-name" width="273"><?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?></td>
+        <td class="field-name" width="263"><?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?></td>
         <td width="165">
             <div class="date" style="min-width: 141px;">
                 <input type="hidden" id="input-href" name="href" value="none">
