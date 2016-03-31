@@ -57,11 +57,9 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                 </tr>
                             </table>
                         </div>
-                        <? if($is_my) : ?>
-                        <div id="counter" class="collapse slidePop"> <div class="arrow"></div>
-                        <? require_once __DIR__.'/task/counter_offers.php' ?>
+
                     </div>
-                    <? endif; ?>
+
                     <div id="delegate" class="collapse slidePop"> <div class="arrow"></div>
                     <!-- Nav tabs -->
                     <!-- Tab panes -->
@@ -69,6 +67,10 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                         <div role="tabpanel" class="tab-pane active" id="search-block" style="border: 1px solid #5184f3;border-radius: 10px !important;overflow: hidden;">
                             <table id="offers" style="width:100%">
                                 <tbody id="cancel_delegate_users">
+                                <? if($is_my) : ?>
+                                <div id="counter" class="collapse slidePop"> <div class="arrow"></div>
+                                    <? require_once __DIR__.'/task/counter_offers.php' ?>
+                                    <? endif; ?>
                                     <?= $html_cancel_delegate_users ?>
                                 </tbody>
                             </table>

@@ -32,8 +32,11 @@ class TaskComponent extends Component
         foreach ($exclude_user_ids as $key => $value) {
             $users_find->andWhere(['!=', 'user.id', $key]);
         }
+        $users_find = $users_find->orderBy(['user_specialization.exp_type' => SORT_DESC]);
         $users_find->limit(5 - count($users));
+
         $users_find = $users_find->all();
+
         $users = array_merge($users,$users_find);
         $exclude_user_ids = $exclude_user_ids + ArrayHelper::map($users_find, 'id', 'username');
     }
@@ -51,6 +54,9 @@ class TaskComponent extends Component
             if($where) {
                 $users_find->where($where);
             }
+
+
+
             $this->getFindUsers($users_find, $users, $exclude_user_ids, $where);
         }
     }
@@ -135,33 +141,62 @@ class TaskComponent extends Component
             $delegate_user_ids[$d_task->delegate_user_id] = '';
         }
 
-        $users = [];
-        $exclude_user_ids = $delegate_user_ids;
-        $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
-        $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
-        if (isset($post['rate_start']) && $post['rate_start'] != '' && isset($post['rate_end']) && $post['rate_end'] != '') {
-            $this->setFindUsersCondition($users, $exclude_user_ids, ['between', 'user_profile.rate', $post['rate_start'], $post['rate_end']]);
-        }
-        if (isset($post['level']) && $post['level'] != '' && $post['level'] != '0') {
-            $this->setFindUsersCondition($users, $exclude_user_ids,['skill_list.id' => $post['level']]
-            );
-        }
-        if (isset($post['city']) && $post['city'] != '') {
-            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_profile.city_title' => $post['city']]);
-        }
-        if (isset($post['country']) && $post['country'] != '') {
-            $this->setFindUsersCondition($users, $exclude_user_ids,['user_profile.country_id' => $post['country']]
-            );
-        }
-        if (isset($post['skills_ids']) && $post['skills_ids'] != '' && count($post['skills_ids']) > 0) {
-            foreach($post['skills_ids'] as $skill) {
-                $this->setFindUsersCondition($users, $exclude_user_ids,['user_skills.skill_tag' => intval($skill)]);
+        if(!isset($post['is_advanced'])){
+            $users = [];
+            $exclude_user_ids = $delegate_user_ids;
+            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
+            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
+            if (isset($post['rate_start']) && $post['rate_start'] != '' && isset($post['rate_end']) && $post['rate_end'] != '') {
+                $this->setFindUsersCondition($users, $exclude_user_ids, ['between', 'user_profile.rate', $post['rate_start'], $post['rate_end']]);
             }
-        }
-        $this->setFindUsersCondition($users, $exclude_user_ids);
-        $this->setFindUsersCondition($users, $exclude_user_ids);
+            if (isset($post['level']) && $post['level'] != '' && $post['level'] != '0') {
+                $this->setFindUsersCondition($users, $exclude_user_ids,['skill_list.id' => $post['level']]
+                );
+            }
+            if (isset($post['city']) && $post['city'] != '') {
+                $this->setFindUsersCondition($users, $exclude_user_ids, ['user_profile.city_title' => $post['city']]);
+            }
+            if (isset($post['country']) && $post['country'] != '') {
+                $this->setFindUsersCondition($users, $exclude_user_ids,['user_profile.country_id' => $post['country']]
+                );
+            }
+            if (isset($post['skills_ids']) && $post['skills_ids'] != '' && count($post['skills_ids']) > 0) {
+                foreach($post['skills_ids'] as $skill) {
+                    $this->setFindUsersCondition($users, $exclude_user_ids,['user_skills.skill_tag' => intval($skill)]);
+                }
+            }
+            $this->setFindUsersCondition($users, $exclude_user_ids);
+            $this->setFindUsersCondition($users, $exclude_user_ids); // this place
 
-        var_dump($users);
+        }else{
+            $users = [];
+            $exclude_user_ids = $delegate_user_ids;
+            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
+            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
+            if (isset($post['rate_start']) && $post['rate_start'] != '' && isset($post['rate_end']) && $post['rate_end'] != '') {
+                $this->setFindUsersCondition($users, $exclude_user_ids, ['between', 'user_profile.rate', $post['rate_start'], $post['rate_end']]);
+            }
+            if (isset($post['level']) && $post['level'] != '' && $post['level'] != '0') {
+                $this->setFindUsersCondition($users, $exclude_user_ids,['skill_list.id' => $post['level']]
+                );
+            }
+            if (isset($post['city']) && $post['city'] != '') {
+                $this->setFindUsersCondition($users, $exclude_user_ids, ['user_profile.city_title' => $post['city']]);
+            }
+            if (isset($post['country']) && $post['country'] != '') {
+                $this->setFindUsersCondition($users, $exclude_user_ids,['user_profile.country_id' => $post['country']]
+                );
+            }
+            if (isset($post['skills_ids']) && $post['skills_ids'] != '' && count($post['skills_ids']) > 0) {
+                foreach($post['skills_ids'] as $skill) {
+                    $this->setFindUsersCondition($users, $exclude_user_ids,['user_skills.skill_tag' => intval($skill)]);
+                }
+            }
+            $this->setFindUsersCondition($users, $exclude_user_ids);
+            $this->setFindUsersCondition($users, $exclude_user_ids); // this place
+        }
+
+
 
 
         return Yii::$app->controller->renderPartial('blocks/task/delegate_users',
