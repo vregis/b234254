@@ -156,19 +156,20 @@ if($start_date != '') {
             <?php endif;?>
             <? endif; ?>
         <? if($task_user->status != 2) : ?>
-                <? if($delegate_task->status == DelegateTask::$status_active) : ?>
-            <form style="display:inline-block;" action="/tasks/paypal/createpayment" id="paypal-form" method="post" target="_blank">
-            <!-- Как же Ваня заебал -->
-                <input type="hidden" name="name">
-                <input type="hidden" name="sum">
-                <input type="hidden" value="<?php echo $delegate_task->id?>" name="id">
-                <button id="<?php echo $delegate_task->show_popup == 0?'payment-paypal':''?>" onclick="return false" class="btn btn-success payment-btn active" style="width:93px;font-size: 14px;">Fund</button> <!-- this is payment from client -->
-            </form>
-        <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
-            <button id="" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button>
-           <? else : ?> 
-            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
+            <? if($delegate_task->status == DelegateTask::$status_active) : ?>
+                <form style="display:inline-block;" action="/tasks/paypal/createpayment" id="paypal-form" method="post" target="_blank">
+                <!-- Как же Ваня заебал -->
+                    <input type="hidden" name="name">
+                    <input type="hidden" name="sum">
+                    <input type="hidden" value="<?php echo $delegate_task->id?>" name="id">
+                    <button id="<?php echo $delegate_task->show_popup == 0?'payment-paypal':''?>" onclick="return false" class="btn btn-success payment-btn active" style="width:93px;font-size: 14px;">Fund</button> <!-- this is payment from client -->
+                </form>
+            <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
+<!--                 <button id="" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button> -->
+                                <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
+           <? //else : ?> 
+
         <? endif; ?>
 
         <? else : ?>
