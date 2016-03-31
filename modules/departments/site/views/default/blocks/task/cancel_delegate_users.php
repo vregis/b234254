@@ -2,8 +2,8 @@
 <? foreach($users as $user) : ?>
     <tr class="user-row">
         <td width="50"><a target="_blank" href="/user/social/shared-profile?id=<?= $user->id ?>"><img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></a></td>
-        <td class="field-name" width="263"><?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?></td>
-        <td width="165">
+        <td class="field-name" width="273"><?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?></td>
+        <td width="165" style="text-align: left;">
             <div class="date" style="min-width: 141px;">
                 <input type="hidden" id="input-href" name="href" value="none">
                         <button style="padding-top: 2px;font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
@@ -30,7 +30,7 @@
             <a data-date="20 Mar - 1 May" data-rate="<?=$user->rate_h?$user->rate_h:"-"?>" data-location="<?= $user->country ? $user->country : '' ?><?= $user->city ? ($user->country ? ', ' : '').$user->city : '' ?>" data-name="<?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?>" style="display: inline-block;padding-top: 1px;" href="#" class="to-chat btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
         </td>
         <td style="text-align: right;padding-right: 20px;">
-            <button delegate-data-id="<?= $user->del_id ?>" style="display: inline-block;" class="offerall cancel-delegate-select btn btn-primary btn btn-danger confirn confirn-btn offer open">Cancel</button>
+            <button data-id="<?= $user->id ?>" data-delegate_task_id="<?= $user->del_id ?>" style="display: inline-block;" class="cancel-delegate-select btn btn-primary btn btn-danger">Cancel</button>
         </td>
     </tr>
 <? endforeach; ?>

@@ -107,7 +107,7 @@ if($start_date != '') {
         <? endif; ?>
     <? endif; ?>
 </div>
-<div class="item cost" style="margin-right: 33px;">
+<div class="item cost" style="margin-right: 128px;margin-left: 10px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-dollar"></i>
     </button>
