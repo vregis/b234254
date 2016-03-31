@@ -509,7 +509,7 @@ function Task(task_user_id, is_my, is_custom) {
                 content:$("#advanced-search-form"),
                 // container:$("#delegate"),
             });
-            $('.to-chat').click(function(){
+            $(document).on('click', '.to-chat', function(){
                 delegate.collapse('toggle');
                 $("#btn-delegate").removeClass('active');
                 $("#active-user-info").show();
