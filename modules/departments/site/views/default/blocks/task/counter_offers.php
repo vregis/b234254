@@ -22,15 +22,16 @@ function getData($data) {
     <? foreach($counter_offers as $counter_offer) : ?>
 
         <tr class="counter-offer-row">
-            <td style="width:221px;border-left: 1px solid #d7d7d7 !important;padding-left: 14px;">
-                <img style="margin-right: 5px;" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>">
-                <div <?php if(strlen($counter_offer->name) >32):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 160px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
+            <td width="50">
+                <a target="_blank" href="/user/social/shared-profile?id=<?= $counter_offer->id ?>"><img style="margin-right: 5px;" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>"></a>
             </td>
-            <td style="width: 156px;">
+            <td class="field-name" width="263"><div <?php if(strlen($counter_offer->name) >32):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 160px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
+            </td>
+            <td width="165">
                 <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>
                 <?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?>
             </td>
-            <td style="width: 118px;">
+            <td width="105" style="text-align: left;">
                 <button style="margin-right: 5px;text-align: center;padding-top: 3px;font-size: 24px !important;" class="btn btn-primary circle icon static <? if($counter_offer->counter_time > $counter_offer->time) echo 'bg-red-pink';
             elseif($counter_offer->counter_time < $counter_offer->time) echo 'bg-green-jungle' ?>"><i class="ico-clock1"></i></button>    
                 <?php if($counter_offer->counter_time): ?>
