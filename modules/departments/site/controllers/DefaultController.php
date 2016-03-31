@@ -253,6 +253,8 @@ class DefaultController extends Controller
 
     public function sort($milestone = null, $is_filters = true, $userTool = null, $avatar = null) {
 
+        $posttype =100;
+
         if($milestone == null){
             if($_POST['milestone_id'] != 'All') {
                 $milestone = Milestone::find()->where(['id' => $_POST['milestone_id']])->one();
@@ -296,6 +298,40 @@ class DefaultController extends Controller
                         'department.is_additional' => 0,
                     ]
                 );
+
+                if(isset($_POST['type'])){
+                    $posttype = $_POST['type'];
+                }else{
+                    $posttype = 100;
+                }
+
+                if(isset($_POST['type'])){
+                    if($_POST['type'] != 100 && $_POST['type'] != 0){
+                       // $tasks_request = $tasks_request->andWhere(['delegate_task.status' => $_POST['type']]);
+                    }
+
+                    if($_POST['type'] == 0){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 0 OR delegate_task.status IS NULL');
+                    }elseif($_POST['type'] == 2){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 1');
+                    }elseif($_POST['type'] == 1){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 0');
+                    }elseif($_POST['type'] == 3){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 2');
+                    }elseif($_POST['type'] == 4){
+                    $tasks_request = $tasks_request->andWhere('delegate_task.status = 3');
+                }elseif($_POST['type'] == 5){
+                    $tasks_request = $tasks_request->andWhere('delegate_task.status = 5');
+                }
+
+
+                    if($_POST['type'] == 7){
+                        $tasks_request = $tasks_request->andWhere('task_user.status = 2');
+                    }
+
+
+                }
+
                 $tasks_request->orderBy('task.milestone_id');
             }
 
@@ -378,6 +414,37 @@ class DefaultController extends Controller
                         'department.is_additional' => 0,
                     ]
                 );
+
+
+                if(isset($_POST['type'])){
+                    if($_POST['type'] != 100 && $_POST['type'] != 0){
+                        // $tasks_request = $tasks_request->andWhere(['delegate_task.status' => $_POST['type']]);
+                    }
+
+                    if($_POST['type'] == 0){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 0 OR delegate_task.status IS NULL');
+                    }elseif($_POST['type'] == 2){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 1');
+                    }elseif($_POST['type'] == 1){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 0');
+                    }elseif($_POST['type'] == 6){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 6');
+                    }elseif($_POST['type'] == 4){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 3');
+                    }elseif($_POST['type'] == 5){
+                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 5');
+                    }
+
+
+                    if($_POST['type'] == 7){
+                        $tasks_request = $tasks_request->andWhere('task_user.status = 2');
+                    }
+
+
+                }
+
+
+
                 $tasks_request->orderBy('task.milestone_id');
             }
 
@@ -511,12 +578,18 @@ class DefaultController extends Controller
             $tables['gant'] = '';
         }
 
+        $milestoneFilters = $this->renderPartial('blocks/milestone-filters', ['user_tool' => $userTool,
+            'task_type' => $posttype,/* 'mfilter' => $m_filter*/]);
+
         $tables['tasks'] = $tasks;
         $tables['delegate_tasks'] = $delegate_tasks;
         $tables['specializations'] = $specializations;
         $tables['milestones_users'] = $this->renderPartial('blocks/milestones-users', [
             'delegate_tasks' => $delegate_tasks,
-            'avatar' => $avatar
+            'avatar' => $avatar,
+            'user_tool' => $userTool,
+            'milestone_filters' => $milestoneFilters
+
         ]);
         return $tables;
     }

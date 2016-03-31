@@ -30,7 +30,7 @@
             <a data-date="20 Mar - 1 May" data-rate="<?=$user->rate_h?$user->rate_h:"-"?>" data-location="<?= $user->country ? $user->country : '' ?><?= $user->city ? ($user->country ? ', ' : '').$user->city : '' ?>" data-name="<?= $user->fname && $user->lname ? $user->fname.' '.$user->lname : $user->email ?>" style="display: inline-block;padding-top: 1px;" href="#" class="to-chat btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
         </td>
         <td style="text-align: right;padding-right: 20px;">
-            <button delegate-data-id="<?= $user->del_id ?>" style="display: inline-block;" class="offerall cancel-delegate-select btn btn-primary btn btn-danger confirn confirn-btn offer open">Cancel</button>
+            <button data-delegate-id="<?= $user->del_id ?>" style="display: inline-block;" class="btn btn-primary btn btn-danger confirn-btn  cancel-offer">Cancel</button>
         </td>
     </tr>
 <? endforeach; ?>

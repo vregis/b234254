@@ -150,6 +150,10 @@ $this->registerJs($msgJs);
 
     })
 
+    $(document).on('change', '.task_type', function(){
+        getattributes($(this).closest('.milestones'));
+    })
+
 
 
     $(document).on('click', '.specon', function(e){
@@ -236,7 +240,10 @@ $this->registerJs($msgJs);
             }
         });
 
-        sendajax(dep, spec, status, milestone_id, users);
+        var type = milestones.find('select.task_type').val();
+        //type = $('select.task_type').val();
+
+        sendajax(dep, spec, status, milestone_id, users, type);
     }
 
     function enableallspec(dep){
@@ -268,7 +275,7 @@ $this->registerJs($msgJs);
         })
     }
 
-    function sendajax(dep, spec, status, milestone_id, users){
+    function sendajax(dep, spec, status, milestone_id, users, type){
         $.ajax({
             url: '/departments/sort',
             type: 'post',
@@ -278,7 +285,8 @@ $this->registerJs($msgJs);
                 spec:spec,
                 status:status,
                 milestone_id:milestone_id,
-                users:users
+                users:users,
+                type:type
             },
             success: function(response){
                 $('.ganttable'+milestone_id+'').html(response.gant);
