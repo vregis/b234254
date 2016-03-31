@@ -1796,4 +1796,5 @@ table th.rate .fa{
     border-bottom:1px solid #d7d7d7;
     padding:10px;
     text-align: center;
+    cursor:pointer;
 }

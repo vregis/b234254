@@ -569,6 +569,8 @@ var cancel_offer = $('.cancel-delegate-select');
                 delegate.collapse('toggle');
                 $("#btn-delegate").removeClass('active');
                 $("#active-user-info").show();
+                $("#delegate_active_users a img").removeClass('active');
+                $("#delegate_active_users a[data-delegate_task_id='"+$(this).attr('data-delegate_task_id')+"'] img").addClass('active');
                 var usrHtml = $(this).attr('data-name') +", "+$(this).attr('data-location') +"<br/> "+$(this).attr('data-date') +", "+$(this).attr('data-rate');
                 $("#active-user-info").html(usrHtml);
             });
@@ -889,8 +891,6 @@ var cancel_offer = $('.cancel-delegate-select');
     var make_offer = $('.make-offer');
     make_offer.off();
     make_offer.on('click', function(){
-
-
 
         var ids = [];
         var names = "";

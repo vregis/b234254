@@ -33,11 +33,15 @@ function getData2($data) {
             <td width="50" style="border:0;">
                 <a target="_blank" href="/user/social/shared-profile?id=<?= $counter_offer->id ?>"><img style="margin-right: 5px;" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>"></a>
             </td>
-            <td style="border:0;" class="field-name" width="260"><div <?php if(strlen($counter_offer->name) >32):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 160px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
+            <td style="border:0;" class="field-name" width="273"><div <?php if(strlen($counter_offer->name) >32):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 160px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
             </td>
             <td width="165" style="text-align: right;padding-right: 8px;border:0;">
                 <button style="margin-right: 5px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>
-                <?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?>
+                <?php if (getData2($counter_offer->start) == '' || getData2($counter_offer->end)): ?>
+                    <span style="width:36px;display: inline-block;"></span>
+                <?php else: ?>
+                    <?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?>
+                <?php endif; ?>
             </td>
             <td width="105" style="text-align: left;border:0;">
                 <button style="margin-right: 5px;font-size: 17px;" class="btn btn-primary circle icon static <? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';

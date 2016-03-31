@@ -84,8 +84,12 @@ if($start_date != '') {
             <i class="ico-calendar"></i>
         </button>
     <? endif; ?>
+    <?php if($start_d == '' || $end_d == ''): ?>
+        <span style="width:32px;display: inline-block;"></span>
+    <?php else: ?>
     <span class="title-value start"><?= $start_d ?></span> <span class="title-caption start"><?= $start_m ?></span> -
     <span class="title-value end"><?= $end_d ?></span> <span class="title-caption end"><?= $end_m ?></span>
+    <?php endif; ?>
 </div>
 <div class="item time hidden">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
@@ -107,7 +111,7 @@ if($start_date != '') {
         <? endif; ?>
     <? endif; ?>
 </div>
-<div class="item cost" style="margin-right: 143px;margin-left: 0px;">
+<div class="item cost" style="margin-right: 130px;margin-left: 0px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-dollar"></i>
     </button>
@@ -166,7 +170,7 @@ if($start_date != '') {
                 </form>
             <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
 <!--                 <button id="" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button> -->
-                                <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
+                <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
                 class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
            <? //else : ?> 
 
