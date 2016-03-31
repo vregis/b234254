@@ -365,7 +365,7 @@ class TaskComponent extends Component
                 $user = User::find()->where(['id' => $cancel_delegate_user_id])->one();
                 $delegateTask = DelegateTask::find()->where(
                     [
-                        'task_us2er_id' => $post['task_user_id'],
+                        'task_user_id' => $post['task_user_id'],
                         'delegate_user_id' => $cancel_delegate_user_id,
                     ]
                 )->andWhere(['!=','status',DelegateTask::$status_done])
