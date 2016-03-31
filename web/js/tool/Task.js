@@ -62,6 +62,9 @@ function Task(task_user_id, is_my, is_custom) {
         // alert(usrHtml);
         $("#active-user-info").html(usrHtml);
     });
+    $("#active-user-info").on('click',function(){
+        $("#delegate").collapse('toggle');
+    });
     $('input[type="radio"][disabled]').click(function(e){
         e.preventDefault();
     });

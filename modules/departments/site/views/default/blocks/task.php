@@ -356,10 +356,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                         <? endif; ?>
                     </div>
                     <div class="block chat">
-                        <div id="active-user-info" style="display: none;">
-                            Иван Ч., USA, Califonia <br>
-                            30 Mar - 19 Apr, $60
-                        </div>
+                        <div id="active-user-info" style="display: none;"></div>
                         <div class="content">
                             <div class="ajax-content">
                                 <div class="tab-content">
