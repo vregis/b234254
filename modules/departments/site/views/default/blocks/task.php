@@ -68,7 +68,6 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                             <table id="offers" style="width:100%">
                                 <tbody id="cancel_delegate_users">
                                 <? if($is_my) : ?>
-                                <div id="counter" class="collapse slidePop"> <div class="arrow"></div>
                                     <? require_once __DIR__.'/task/counter_offers.php' ?>
                                     <? endif; ?>
                                     <?= $html_cancel_delegate_users ?>

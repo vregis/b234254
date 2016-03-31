@@ -14,9 +14,10 @@ function getData($data) {
 }
 
 ?>
+<!--
 <div class="arrow"></div>
 <table style="width:100%;" class="table">
-    <tbody id="counter_users">
+    <tbody id="counter_users">-->
     <? foreach($counter_offers as $counter_offer) : ?>
         <tr class="counter-offer-row">
             <td style="width:221px;border-left: 1px solid #d7d7d7 !important;padding-left: 14px;">
@@ -50,5 +51,5 @@ function getData($data) {
             </td>
         </tr>
     <? endforeach; ?>
-    </tbody>
-</table>
+    <!--</tbody>
+</table>-->
