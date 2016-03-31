@@ -6,7 +6,7 @@
         <td width="165" style="text-align: left;">
             <div class="date" style="min-width: 141px;">
                 <input type="hidden" id="input-href" name="href" value="none">
-                        <button style="padding-top: 2px;font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
+                        <button style="font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
                         <i class="ico-calendar"></i>
                     </button>
                     <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
@@ -15,7 +15,7 @@
         </td>
         <td width="105" style="text-align: left;">
             <div class="cost">
-                <button style="display: inline-block;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
+                <button style="display: inline-block;font-size: 17px;" class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
                     <i class="ico-dollar"></i>
                 </button>
                 <? if($user->rate_h){ ?>
@@ -23,7 +23,6 @@
                 <?	} else{ ?>
                 	<span  style="width: 62px;display: inline-block;text-align: center;">-</span>
                 <?	} ?>
-                <input class="chngval"  value="0" type="text" style="display:none;">
             </div>
         </td>
         <td width="50">

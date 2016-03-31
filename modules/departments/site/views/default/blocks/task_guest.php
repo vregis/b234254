@@ -1,3 +1,7 @@
+<?
+use modules\tasks\models\TaskUser;
+use yii\helpers\Url;
+use modules\tasks\models\DelegateTask; ?>
 <link rel="stylesheet" type="text/css" href="/css/task.css">
 <div class="well well-sm" style="margin:0px auto;max-width:1024px;padding: 10px !important;">
 <div class="task mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="height: 620px;"><div id="mCSB_5" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
@@ -22,20 +26,15 @@
         <span class="title-value start"></span> <span class="title-caption start"></span> -
     <span class="title-value end"></span> <span class="title-caption end"></span>
 </div>
-<div class="item time">
-    <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
-        <i class="ico-clock1"></i>
-    </button>
-                        <input class="chngval" id="input-time" value="1h" type="text">
-            </div>
-<div class="item cost" style="margin-right: 33px;">
+<div class="item cost" style="margin-right: 128px;margin-left: 10px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-dollar"></i>
     </button>
                         <input class="chngval" id="input-price" value="0" type="text">
             </div>
 <input type="hidden" id="taskuser-status" name="TaskUser[status]" value="1">
-                            <button data-id = '<?php echo $task->id?>' class="btn btn-primary offer create-request">Apply</button>
+            <button data-id='<?php echo $task->id?>' class="btn btn-primary offer create-request">Apply</button>
+                        <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task->id]) ?>'" class="btn btn-danger" style="width:93px;">Cancel</button>
             <a href="#" data-dismiss="modal" class="href-black task-close"></a>
 <div id="payment-form" style="display:none;">
     <div class="container-fluid" style="padding-top: 0;">

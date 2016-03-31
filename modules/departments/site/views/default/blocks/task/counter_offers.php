@@ -36,14 +36,14 @@ function getData2($data) {
             <td style="border:0;" class="field-name" width="273"><div <?php if(strlen($counter_offer->name) >32):?>data-toggle="popover" data-placement="bottom" data-content="<?= $counter_offer->name ?>"<?php endif;?> style="width: 160px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block;line-height: 32px;vertical-align: middle;"><?= $counter_offer->name ?></div>
             </td>
             <td width="165" style="text-align: left;border:0;">
-                <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>
+                <button style="margin-right: 5px;font-size: 17px;" class="btn btn-primary circle icon static"><i class="ico-calendar"></i></button>
                 <?= getData($counter_offer->start) ?> - <?= getData($counter_offer->end) ?>
             </td>
             <td width="105" style="text-align: left;border:0;">
-                <button style="margin-right: 5px;padding-top: 2px;font-size: 17px;" class="btn btn-primary circle icon static <? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
+                <button style="margin-right: 5px;font-size: 17px;" class="btn btn-primary circle icon static <? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
             elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>"><i class="ico-dollar"></i></button>
                 <div class="<? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
-            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border:0 !important;"><?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?></div>
+            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border:0 !important;"><input class="chngval" value="<?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?>" type="text"></div>
             </td>
             <td style="border:0;" width="50">
                 <a data-date="<?= getData2($counter_offer->start) ?> - <?= getData2($counter_offer->end) ?>" data-rate="<?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?>" data-location="<?= $counter_offer->country ? $counter_offer->country : '' ?><?= $counter_offer->city ? ($counter_offer->country ? ', ' : '').$counter_offer->city : '' ?>" data-name="<?= $counter_offer->name ?>" style="display: inline-block;padding-top: 1px;" href="#" class="to-chat btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
