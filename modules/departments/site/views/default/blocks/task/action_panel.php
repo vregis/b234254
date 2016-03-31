@@ -131,9 +131,9 @@ if($start_date != '') {
 <? if($is_my) : ?>
     <? if(!$delegate_task || $delegate_task->status <= DelegateTask::$status_offer) : ?>
         <? if(count($counter_offers) > 0) : ?>
-            <button onclick="return false" data-toggle="collapse" data-target="#counter" aria-expanded="false" aria-controls="counter" class="btn btn-primary offer no-dis">Offers <!--<span class="label label-danger circle"><? //=count($counter_offers) ?></span>--></button>
+            <!--<button onclick="return false" data-toggle="collapse" data-target="#counter" aria-expanded="false" aria-controls="counter" class="btn btn-primary offer no-dis">Offers <!--<span class="label label-danger circle"><? //=count($counter_offers) ?></span></button>-->
         <? else : ?>
-            <button class="btn btn-primary offer disabled static">Offers</button>
+            <!--<button class="btn btn-primary offer disabled static">Offers</button>-->
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button id="btn-delegate" class="btn btn-primary"

@@ -18,7 +18,9 @@ function getData($data) {
 <div class="arrow"></div>
 <table style="width:100%;" class="table">
     <tbody id="counter_users">-->
+<div class="counter_users">
     <? foreach($counter_offers as $counter_offer) : ?>
+
         <tr class="counter-offer-row">
             <td style="width:221px;border-left: 1px solid #d7d7d7 !important;padding-left: 14px;">
                 <img style="margin-right: 5px;" onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $counter_offer->delegate_avatar ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$counter_offer->delegate_avatar:'/images/avatar/nophoto.png'?>">
@@ -50,6 +52,8 @@ function getData($data) {
                 <button style="display:inline-block;margin-right: 28px;" class="btn btn-success confirn" data-status="1" data-delegate_task_id="<?= $counter_offer->id ?>">Accept</button>
             </td>
         </tr>
+
     <? endforeach; ?>
+    </div>
     <!--</tbody>
 </table>-->

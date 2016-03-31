@@ -219,7 +219,7 @@ class TaskComponent extends Component
     public function get_cancel_delegate_users($task_user_id) {
 
         $users = User::find()->select(
-            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city'
+            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city, delegate_task.id del_id'
         )
             ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
             ->join('JOIN','delegate_task', 'delegate_task.delegate_user_id = user.id')
