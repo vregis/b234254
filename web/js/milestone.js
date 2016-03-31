@@ -116,7 +116,7 @@ function openTask(id, is_custom){
             }).on('hide.bs.popover',function(){
                 $(this).find('.fa').removeClass("fa-angle-up").addClass('fa-angle-down');
             });
-            $("#input-price").inputmask({
+            $(".chngval").inputmask({
                 "mask": "9",
                 "repeat": 10,
                 "greedy": false,

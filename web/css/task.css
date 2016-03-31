@@ -470,7 +470,7 @@ span.title {
     word-wrap: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width:330px;
+    width:320px;
         font-weight: bold;
         font-size: 18px;
 }
@@ -488,7 +488,7 @@ span.title {
     width: 83px;
     height: 32px;
     color: #818588;
-    font-size: 14px;
+    font-size: 14px !important;
     /* Приближение из-за подстановки шрифтов */
     font-weight: 400;
     line-height: 50px;
@@ -504,7 +504,7 @@ span.title {
 }
 
 .task-title .item {
-    margin: 0 4px;
+    margin: 0 12px;
     min-width: 105px;
 }
 #task .item .icon {
@@ -538,7 +538,7 @@ span.title {
     color:#fff;
 }
 .task-title .item.date .btn{
-    /*padding-top: 3px;*/
+    padding-top: 0px !important;
 }
 .task-title .item.cost .btn{
     /*line-height: 32px;*/
@@ -838,7 +838,7 @@ thead .ui-datepicker-week-end {
     top:-8px;
     width:24px;
     height:12px;
-    left: 780px !important;
+    left: 765px !important;
 }
 .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-header .ui-state-focus{
     background: #5184F3;

@@ -65,12 +65,16 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="search-block" style="border: 1px solid #5184f3;border-radius: 10px !important;overflow: hidden;">
+                            <table style="width:100%">
+                                <tbody class="counter_users">
+                                    <? if($is_my) : ?>
+                                        <? require_once __DIR__.'/task/counter_offers.php' ?>
+                                    <? endif; ?>
+                                </tbody>
+                            </table>
                             <table id="offers" style="width:100%">
                                 <tbody id="cancel_delegate_users">
-                                <? if($is_my) : ?>
-                                <div id="counter" class="collapse slidePop"> <div class="arrow"></div>
-                                    <? require_once __DIR__.'/task/counter_offers.php' ?>
-                                    <? endif; ?>
+
                                     <?= $html_cancel_delegate_users ?>
                                 </tbody>
                             </table>
@@ -352,10 +356,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                         <? endif; ?>
                     </div>
                     <div class="block chat">
-                        <div id="active-user-info" style="display: none;">
-                            Иван Ч., USA, Califonia <br>
-                            30 Mar - 19 Apr, $60
-                        </div>
+                        <div id="active-user-info" style="display: none;"></div>
                         <div class="content">
                             <div class="ajax-content">
                                 <div class="tab-content">

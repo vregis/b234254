@@ -251,31 +251,31 @@ section.contacts .title{
 .contacts .small a.tw{
 	background: url("/images/share_profile.png") 0 -60px no-repeat;
 }
-.contacts .small a.tw:not(.no_hover):hover{
+.contacts .small a.tw:not(.no_hover):hover,.contacts .small a.tw:not(.no_hover):focus,.contacts .small a.tw.active:not(.no_hover){
 	background: url("/images/share_profile.png") -32px -60px no-repeat;
 }
 .contacts .small a.fb{
 	background: url("/images/share_profile.png") -64px -60px no-repeat;
 }
-.contacts .small a.fb:not(.no_hover):hover{
+.contacts .small a.fb:not(.no_hover):hover,.contacts .small a.fb:not(.no_hover):focus,.contacts .small a.fb.active:not(.no_hover){
 	background: url("/images/share_profile.png") -96px -60px no-repeat;
 }
 .contacts .small a.gp{
 	background: url("/images/share_profile.png") -128px -60px no-repeat;
 }
-.contacts .small a.gp:not(.no_hover):hover{
+.contacts .small a.gp:not(.no_hover):hover,.contacts .small a.gp:not(.no_hover):focus,.contacts .small a.gp.active:not(.no_hover){
 	background: url("/images/share_profile.png") -160px -60px no-repeat;
 }
 .contacts .small a.inst{
 	background: url("/images/share_profile.png") -192px -60px no-repeat;
 }
-.contacts .small a.inst:not(.no_hover):hover{
+.contacts .small a.inst:not(.no_hover):hover,.contacts .small a.inst:not(.no_hover):focus,.contacts .small a.inst.active:not(.no_hover){
 	background: url("/images/share_profile.png") -224px -60px no-repeat;
 }
 .contacts .small a.lin{
 	background: url("/images/share_profile.png") -256px -60px no-repeat;
 }
-.contacts .small a.lin:not(.no_hover):hover{
+.contacts .small a.lin:not(.no_hover):hover,.contacts .small a.lin:not(.no_hover):focus,.contacts .small a.lin.active:not(.no_hover){
 	background: url("/images/share_profile.png") -288px -60px no-repeat;
 }
 .contacts .small > div{
