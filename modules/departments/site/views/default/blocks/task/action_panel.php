@@ -215,7 +215,7 @@ if($start_date != '') {
             <?php else:?>
                 <!--<button class="btn btn-primary disabled static" style="width:93px;">Reject</button>-->
             <?php endif;?>
-            <?php var_dump($delegate_task->status);?>
+            <?php //var_dump($delegate_task->status);?>
             <?php if($delegate_task && $delegate_task->status == 1):?>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;">Cancel</button>
             <?php elseif($delegate_task && $delegate_task->status == 2):?>
