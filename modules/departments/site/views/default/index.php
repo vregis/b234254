@@ -150,9 +150,9 @@ $this->registerJs($msgJs);
 
     })
 
-    $(document).on('change', '.task_type', function(){
-        getattributes($(this).closest('.milestones'));
-    })
+   /* $(document).on('click', '.m_filters', function(){
+         getattributes($(this).closest('.milestones'));
+    })*/
 
 
 
@@ -240,7 +240,12 @@ $this->registerJs($msgJs);
             }
         });
 
-        var type = milestones.find('select.task_type').val();
+        var type = [];
+        milestones.find('.m_filters').each(function(){
+            if($(this).hasClass('active')){
+                type.push($(this).attr('data-value'));
+            }
+        })
         //type = $('select.task_type').val();
 
         sendajax(dep, spec, status, milestone_id, users, type);
@@ -346,6 +351,11 @@ $this->registerJs($msgJs);
         e.stopPropagation();
         $(this).toggleClass('active');
         // вот здесь функционал пиши
+
+        getattributes($(this).closest('.milestones'));
+
+
+
     });
 </script>
 
