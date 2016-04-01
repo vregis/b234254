@@ -268,7 +268,7 @@ class DefaultController extends Controller
 
         if($is_my){
             $tasks_request = Task::find()->select(
-                'task.*, specialization.name as task, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay'
+                'task.*, specialization.name as task, delegate_task.status del_id, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay'
             )
                 ->join('JOIN', 'milestone', 'milestone.id = task.milestone_id')
                 ->join('LEFT OUTER JOIN', 'specialization', 'specialization.id = task.specialization_id')
@@ -306,6 +306,7 @@ class DefaultController extends Controller
                 }
 
                 if(isset($_POST['type'])) {
+
                     $sql = [];
                     foreach ($posttype as $p) {
 

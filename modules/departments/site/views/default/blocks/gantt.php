@@ -16,17 +16,18 @@ $this->registerJsFile("/js/milestone.js");?>
         <div class="ganttview-vtheader-series">
             <?php foreach($tasks as $t):?>
                 <?php $is_del = \modules\tasks\models\TaskUser::find()
-                    ->select('delegate_task.status delegate_task, delegate_task.is_request is_request')
+                    ->select('delegate_task.status delegate_task')
                     ->join('LEFT JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id')
                     ->where(['task_user.task_id' => $t->id, 'delegate_task.delegate_user_id' => Yii::$app->user->id, 'task_user.user_tool_id' => $userTool->id])
                     ->andWhere(['!=', 'delegate_task.status','8'])
                     ->all();?>
 
                 <?php $del_status = \modules\tasks\models\TaskUser::find()
-                    ->select('delegate_task.status delegate_task')
+                    ->select('delegate_task.status delegate_task, delegate_task.is_request is_request')
                     ->join('LEFT JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id')
                     ->where(['task_user.task_id' => $t->id, 'task_user.user_tool_id' => $userTool->id])
                     ->andWhere(['!=', 'delegate_task.status','8'])
+                    ->andWhere(['!=', 'delegate_task.status','0'])
                     ->one();?>
 
                 <?php if($userTool->user_id == Yii::$app->user->id):?>
@@ -35,22 +36,24 @@ $this->registerJsFile("/js/milestone.js");?>
                 <?php $delegate_array[$t->id] = $is_del==null?0:1;?>
                 <?php endif;?>
                 <?php if($del_status):?>
-                    <?php $del_st = $del_status->delegate_task;?>
 
-                    <?php if($del_status->delegate_task == 1 /*&& $del_status->is_request == 1*/):?>
+
+                    <?php if($del_status->delegate_task == 1 ):?>
+                        <?php if($del_status->is_request == 1):?>
                         <?php $liter[$t->id] = 'a';?>
-                    <?php elseif($del_status->delegate_task == 1 && $del_status->is_request == 0):?>
+                        <?php else:?>
                         <?php $liter[$t->id] = 'o';?>
+                        <?php endif;?>
                     <?php elseif($del_status->delegate_task == 2):?>
                         <?php $liter[$t->id] = 'd';?>
                     <?php elseif($del_status->delegate_task == 3):?>
                         <?php $liter[$t->id] = 'f';?>
                     <?php elseif($del_status->delegate_task == 5):?>
-                        <?php $liter[$t->id] = 'c';?>
+                        <?php $liter[$t->id] = 's';?>
                     <?php elseif($del_status->delegate_task == 6):?>
                         <?php $liter[$t->id] = 'p'?>
                     <?php else:?>
-                        <?php $liter[$t->id] = $del_status->delegate_task;?>
+                        <?php $liter[$t->id] = '';?>
 
                     <?php endif;?>
 

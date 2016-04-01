@@ -1,4 +1,3 @@
-
 <? foreach($users as $user) : ?>
     <tr class="user-row">
         <td width="50"><a target="_blank" href="/user/social/shared-profile?id=<?= $user->id ?>"><img  onError="this.onerror=null;this.src='/images/avatar/nophoto.png';" class="active gant_avatar" src="<?php echo $user->ava ? $folder_assets = Yii::$app->params['staticDomain'] .'avatars/'.$user->ava:'/images/avatar/nophoto.png'?>"></a></td>
