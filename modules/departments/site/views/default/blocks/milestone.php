@@ -268,14 +268,14 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
                     panel.removeClass('gant');
                     panel.addClass('list');
                 }
-                            $(".milestones-users .gant_avatar").popover({
-                placement: "bottom",
-                html:true,
-                container: $("body"),
-                trigger:"hover",
-                template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
-                content : 'Steve Ballmer'
-            });
+                $(".milestones-users .gant_avatar").popover({
+                    placement: "bottom",
+                    html:true,
+                    container: $("body"),
+                    trigger:"hover",
+                    template:'<div class="popover gant_av" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
+                    content : 'Steve Ballmer'
+                });
             };
         }
 

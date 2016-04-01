@@ -45,6 +45,6 @@ use yii\helpers\Url; ?>
 
 </div>
 
-<span class="milestones-filters">
-        <?php echo $milestone_filters?>
-    </span>
+<div class="milestones-filters btn-group">
+    <?php echo $milestone_filters?>
+</div>

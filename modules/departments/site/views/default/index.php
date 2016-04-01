@@ -341,7 +341,12 @@ $this->registerJs($msgJs);
             });
         });
     })(jQuery);
-
+    $(document).on('click','.milestones-filters li', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).toggleClass('active');
+        // вот здесь функционал пиши
+    });
 </script>
 
 <script>

@@ -427,7 +427,15 @@ div.ganttview-slide-container .mCSB_scrollTools .mCSB_draggerContainer{
 .spec-color-8.specon{
     background:rgba(145, 135, 208, 0.6) !important;
 }
-.mil-fil{
-    position:absolute;
-    right:0;
+.milestones-filters{
+    position: absolute !important;
+    top: 7px;
+    left: 250px;
+}
+.milestones-filters li{
+    font-size: 14px;
+    width: 150px;
+}
+.milestones-filters li:hover,.milestones-filters li.active{
+    background-color:#ebebeb;
 }
