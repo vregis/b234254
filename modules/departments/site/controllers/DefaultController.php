@@ -346,7 +346,7 @@ class DefaultController extends Controller
 
 
                 }else{
-                    $tasks_request = $tasks_request->andWhere('task_user.status != 2');
+                    //$tasks_request = $tasks_request->andWhere('task_user.status != 2');
                 }
 
 
@@ -484,7 +484,7 @@ class DefaultController extends Controller
                     $tasks_request = $tasks_request->andWhere($sql_request);
 
                 }else{
-                    $tasks_request = $tasks_request->andWhere('task_user.status != 2');
+                   // $tasks_request = $tasks_request->andWhere('task_user.status != 2');
                 }
 
 

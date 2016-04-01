@@ -47,14 +47,14 @@ function getData2($data) {
                 <button style="margin-right: 5px;font-size: 17px;" class="btn btn-primary circle icon static <? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
             elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>"><i class="ico-dollar"></i></button>
                 <div class="<? if($counter_offer->counter_price > $counter_offer->price) echo 'bg-red-pink';
-            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border:0 !important;"><input class="chngval" value="<?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?>" type="text"></div>
+            elseif($counter_offer->counter_price < $counter_offer->price) echo 'bg-green-jungle' ?>" style="display: inline-block;text-align: center;width:62px;border:0 !important;"><input class="chngval-accept" value="<?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?>" type="text"></div>
             </td>
             <td style="border:0;" width="50">
                 <a data-date="<?= getData2($counter_offer->start) ?> - <?= getData2($counter_offer->end) ?>" data-rate="<?= $counter_offer->counter_price ? $counter_offer->counter_price : '-' ?>" data-location="<?= $counter_offer->country ? $counter_offer->country : '' ?><?= $counter_offer->city ? ($counter_offer->country ? ', ' : '').$counter_offer->city : '' ?>" data-name="<?= $counter_offer->name ?>" style="display: inline-block;padding-top: 1px;" href="#" class="to-chat btn btn-primary circle"><i class="ico-chat" style="margin-left: -2px;"></i></a>
             </td>
             <td style="text-align: right;padding-right: 20px;border:0;">
                 <button style="display:inline-block;" class="btn btn-danger confirn" data-status="0" data-delegate_task_id="<?= $counter_offer->id ?>">Reject</button>
-                <button style="display:inline-block;" class="btn btn-success confirn" data-status="1" data-delegate_task_id="<?= $counter_offer->id ?>">Accept</button>
+                <button style="display:inline-block;" class="btn btn-success confirn accept-counter" data-status="1" data-delegate_task_id="<?= $counter_offer->id ?>">Accept</button>
             </td>
         </tr>
 
@@ -62,3 +62,10 @@ function getData2($data) {
     <!-- </div> -->
     <!--</tbody>
 </table>-->
+
+<script>
+    $('.chngval-accept').keyup(function(){
+        $(this).closest('tr').find('.accept-counter').html('<div style="font-size:12px">Counter<br/>Offer</div>');
+    })
+</script>
+
