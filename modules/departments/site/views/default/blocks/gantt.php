@@ -27,7 +27,7 @@ $this->registerJsFile("/js/milestone.js");?>
                     ->join('LEFT JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id')
                     ->where(['task_user.task_id' => $t->id, 'task_user.user_tool_id' => $userTool->id])
                     ->andWhere(['!=', 'delegate_task.status','8'])
-                    ->andWhere(['!=', 'delegate_task.status','0'])
+                    //->andWhere(['!=', 'delegate_task.status','0'])
                     ->one();?>
 
                 <?php if($userTool->user_id == Yii::$app->user->id):?>
@@ -36,7 +36,6 @@ $this->registerJsFile("/js/milestone.js");?>
                 <?php $delegate_array[$t->id] = $is_del==null?0:1;?>
                 <?php endif;?>
                 <?php if($del_status):?>
-
 
                     <?php if($del_status->delegate_task == 1 ):?>
                         <?php if($del_status->is_request == 1):?>
@@ -52,6 +51,8 @@ $this->registerJsFile("/js/milestone.js");?>
                         <?php $liter[$t->id] = 's';?>
                     <?php elseif($del_status->delegate_task == 6):?>
                         <?php $liter[$t->id] = 'p'?>
+                        <?php elseif($del_status->delegate_task == 0):?>
+                        <?php $liter[$t->id] = 'o';?>
                     <?php else:?>
                         <?php $liter[$t->id] = '';?>
 

@@ -351,7 +351,6 @@ $this->registerJs($msgJs);
         e.stopPropagation();
         $(this).toggleClass('active');
         // вот здесь функционал пиши
-
         getattributes($(this).closest('.milestones'));
 
 

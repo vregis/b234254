@@ -52,7 +52,7 @@ $this->registerJsFile("/plugins/gantt/assets/js/pages/plugins_gantt_chart.js");?
     <?php $user_p = \modules\user\models\Profile::find()->where(['user_id'=>Yii::$app->user->id])->one();?>
 
     <?php
-    $response = Yii::$app->controller->sort($ml, false, $userTool, $avatar);
+    $response = Yii::$app->controller->sort($ml, false, $userTool, $avatar, 1);
     if($userTool->user_id != Yii::$app->user->id && count($response['tasks']) == 0) {
         $chj++;
         continue;

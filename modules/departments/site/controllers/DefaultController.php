@@ -251,7 +251,7 @@ class DefaultController extends Controller
         return $this->redirect(['/departments']);
     }
 
-    public function sort($milestone = null, $is_filters = true, $userTool = null, $avatar = null) {
+    public function sort($milestone = null, $is_filters = true, $userTool = null, $avatar = null, $is_new = null) {
 
         $posttype =100;
 
@@ -312,11 +312,12 @@ class DefaultController extends Controller
 
 
                         if ($p == 0) {
-                            array_push($sql, 'delegate_task.status = 0 OR delegate_task.status IS NULL');
+                            array_push($sql, 'delegate_task.status IS NULL');
                         } elseif ($p == 2) {
                             array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 1');
                         } elseif ($p == 1) {
                             array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 0');
+                            array_push($sql, 'delegate_task.status = 0');
                         } elseif ($p == 3) {
                             array_push($sql, 'delegate_task.status = 2');
                         } elseif ($p == 4) {
@@ -408,7 +409,7 @@ class DefaultController extends Controller
                 ->join(
                     'LEFT OUTER JOIN',
                     'task_user',
-                    'task_user.task_id = task.id and task_user.user_tool_id = ' . $userTool->id.' and task_user.status != 2'
+                    'task_user.task_id = task.id and task_user.user_tool_id = ' . $userTool->id.''
                 )
                 ->join('LEFT OUTER JOIN', 'delegate_task', 'delegate_task.task_user_id = task_user.id');
 
@@ -623,8 +624,13 @@ class DefaultController extends Controller
             $tables['gant'] = '';
         }
 
-        $milestoneFilters = $this->renderPartial('blocks/milestone-filters', ['user_tool' => $userTool,
-            'task_type' => $posttype,/* 'mfilter' => $m_filter*/]);
+        if($is_new){
+            $milestoneFilters = $this->renderPartial('blocks/milestone-filters', ['user_tool' => $userTool,
+                'task_type' => $posttype,/* 'mfilter' => $m_filter*/]);
+        }else{
+            $milestoneFilters = null;
+        }
+
 
         $tables['tasks'] = $tasks;
         $tables['delegate_tasks'] = $delegate_tasks;

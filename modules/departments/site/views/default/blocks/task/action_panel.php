@@ -171,7 +171,7 @@ if($start_date != '') {
             <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
 <!--                 <button id="" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button> -->
                 <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
-                class="btn btn-success <? if($delegate_task && $delegate_task->status < DelegateTask::$status_complete){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
+                class="btn btn-success <? if(($delegate_task && $delegate_task->status < DelegateTask::$status_complete) || $delegate_task->status == 6){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
            <? //else : ?> 
 
         <? endif; ?>
