@@ -141,7 +141,7 @@ if($start_date != '') {
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
             <button id="btn-delegate" class="btn btn-primary"
-                data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button>
+                data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button> <!--this delegate-->
 
            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;">Complete</button>
         <? else : ?>
