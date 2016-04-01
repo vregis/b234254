@@ -301,7 +301,7 @@ if($start_date != '') {
                                 $('.accept-change').html('Counter <br/ > offer').css({
                                     'width': '93px',
                                     'display': 'inline-block',
-                                    'font-size': '12px',
+                                    'font-size': '12px !important',
                                     'padding': '0 13px',
                                     'line-height': 1,
                                 });
