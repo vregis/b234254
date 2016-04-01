@@ -41,8 +41,10 @@ use yii\helpers\Url; ?>
     <?php endif;;?>
 
 
-    <span class="milestones-filters">
-        <?php echo $milestone_filters?>
-    </span>
+
 
 </div>
+
+<span class="milestones-filters">
+        <?php echo $milestone_filters?>
+    </span>
