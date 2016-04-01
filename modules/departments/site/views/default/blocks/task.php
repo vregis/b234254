@@ -177,7 +177,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                         <div class="clearfix"></div>
                                     </th>
                                     <th style="border-left:0;">
-                                        <button class="btn btn-primary make-offer" style="width:96px;font-size:11px !important;padding: 0px 15px !important;white-space: initial;">Make <br> an offer</button>
+                                        <!-- <button class="btn btn-primary make-offer" style="width:96px;font-size:11px !important;padding: 0px 15px !important;white-space: initial;">Make <br> an offer</button> -->
                                     </th>
                                 </tr>
                                 </tfoot>

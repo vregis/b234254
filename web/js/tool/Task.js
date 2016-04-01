@@ -75,16 +75,16 @@ function Task(task_user_id, is_my, is_custom) {
         scrollbarPosition: "outside"
     });
     initTimeParse();
-    var offerall_btn = $('.offerall-btn');
-    offerall_btn.off();
-    offerall_btn.on('click', function(){
-        $('.delegate-select').each(function() {
-            $(this).addClass("active");
-            $(".make-offer").addClass('active');
-        });
-        set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
-        set_handler_confirn();
-    });
+    // var offerall_btn = $('.offerall-btn');
+    // offerall_btn.off();
+    // offerall_btn.on('click', function(){
+    //     $('.delegate-select').each(function() {
+    //         $(this).addClass("active");
+    //         $(".make-offer").addClass('active');
+    //     });
+        // set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
+        // set_handler_confirn();
+    // });
 
 
     // var cancelall_btn = $('.cancelall-btn');
@@ -148,16 +148,16 @@ function Task(task_user_id, is_my, is_custom) {
 
     function set_delegate_users(_this, html) {
         _this.html(html);
-        var delegate_delegate = $('.delegate-select');
-        delegate_delegate.off();
-        delegate_delegate.on('click', function(){
-            $(this).toggleClass("active");
+        // var delegate_delegate = $('.delegate-select');
+        // delegate_delegate.off();
+        // delegate_delegate.on('click', function(){
+        //     $(this).toggleClass("active");
 
-            $(".make-offer").addClass('active');
-            if($('.delegate-select.active').length == 0){
-                $(".make-offer").removeClass('active');
-            }
-        });
+        //     $(".make-offer").addClass('active');
+        //     if($('.delegate-select.active').length == 0){
+        //         $(".make-offer").removeClass('active');
+        //     }
+        // });
         initTimeParse();
     }
     function set_cancel_delegate_users(_this, html) {
@@ -575,15 +575,15 @@ var cancel_offer = $('.cancel-delegate-select');
                 $("#active-user-info").html(usrHtml);
             });
 
-            $(".offerall-btn").click(function(){
-                // $(this).toggleClass('active');
-                if($(this).hasClass('active')){
-                    $(".offerall.delegate-task").addClass('active');
-                }else{
-                    $(".offerall.delegate-task").removeClass('active');
-                }
-                $(".offerall.delegate-task").toggleClass('active');
-            });
+            // $(".offerall-btn").click(function(){
+            //     // $(this).toggleClass('active');
+            //     if($(this).hasClass('active')){
+            //         $(".offerall.delegate-task").addClass('active');
+            //     }else{
+            //         $(".offerall.delegate-task").removeClass('active');
+            //     }
+            //     $(".offerall.delegate-task").toggleClass('active');
+            // });
 
             $(".invite-by-email").on('shown.bs.popover',function(){
                 $(".advanced-search-btn").popover('hide');
@@ -888,23 +888,23 @@ var cancel_offer = $('.cancel-delegate-select');
         }
     });
 
-    var make_offer = $('.make-offer');
-    make_offer.off();
-    make_offer.on('click', function(){
-
+    // var make_offer = $('.offerall');
+    // make_offer.off();
+    $(document).on('click','.offerall', function(){
+        // alert('test');
         var ids = [];
         var names = "";
         var i=0;
-        $('.delegate-select').each(function() {
-            if($(this).hasClass("active")) {
+        // $('.delegate-select').each(function() {
+        //     if($(this).hasClass("active")) {
                 ids.push($(this).attr('data-id'));
-                if(i != 0) {
-                    names += ", ";
-                }
+                // if(i != 0) {
+                //     names += ", ";
+                // }
                 names += $(this).closest('.user-row').find('.field-name').html();
-                i++;
-            }
-        });
+        //         i++;
+        //     }
+        // });
 
         if(ids.length > 0) {
             var data = {
@@ -928,13 +928,12 @@ var cancel_offer = $('.cancel-delegate-select');
                         // toastr["success"]("Make offers: " + names, "Success");
                         set_delegate_users($('#delegate_users'), response.html_users);
                         set_counter_offer($('.counter_users'), response.html);
-
+                       
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
-                        $(".dropmenu1.status").popover('show').on('shown.bs.popover',function(){
-                            showLi(1);
-                        }).popover('hide');
+                         set_handler_confirn();
+
                         console.log("make offer");
                     }
                 }
