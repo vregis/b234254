@@ -1,3 +1,15 @@
+<div class="mil-fil">
+    <button class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+        <img src="/images/mil-fil.jpg" height="30" alt="">
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li>All tasks</li>
+        <li>Offered</li>
+        <li>Offered</li>
+        <li>Offered</li>
+    </ul>
+</div>
+
 <?php if($user_tool->user_id == Yii::$app->user->id):?>
     <select name="task_type" class="task_type">
         <option <?php echo $task_type == 100?'selected':''?> id="type100" value="100">All tasks</option>
