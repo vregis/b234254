@@ -275,7 +275,6 @@
                 kineticScroll(div);
             }
         }
-
         // Creates a 3 dimensional array [year][month][day] of every day
         // between the given start and end dates
         function getDates(start, end) {
