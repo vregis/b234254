@@ -54,7 +54,7 @@ function getData2($data) {
             </td>
             <td style="text-align: right;padding-right: 20px;border:0;">
                 <button style="display:inline-block;" class="btn btn-danger confirn" data-status="0" data-delegate_task_id="<?= $counter_offer->id ?>">Reject</button>
-                <button style="display:inline-block;" class="btn btn-success confirn accept-counter" data-status="1" data-delegate_task_id="<?= $counter_offer->id ?>">Accept</button>
+                <button style="display:inline-block;" class="btn btn-success confirn accept-counter" data-status="1" data-delegate_task_id="<?= $counter_offer->id ?>"><?php echo $counter_offer->counter_price == $counter_offer->price?'Accept':'<div style="font-size:12px">Counter<br/>Offer</div>'?></button>
             </td>
         </tr>
 
