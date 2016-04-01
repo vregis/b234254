@@ -494,7 +494,7 @@
                         block.append("<span class='gantt-complete-check'><i class='fa fa-check'></i></span>");
                     }
                     if (data[i].series[j].liter != '') {
-                        block.append("<span class='gantt-complete-check' style='width: 14px;height: 14px;margin-top: -7.5px;right: 2px;border-radius: 3px !important;font-weight:bold;text-transform:uppercase;'>"+data[i].series[j].liter+"</span>");
+                        block.append("<span class='gantt-complete-check' style='line-height: 16px;color:"+data[i].series[j].color+" !important;"+"width: 14px;height: 14px;margin-top: -7.5px;right: 2px;border-radius: 3px !important;font-weight:bold;text-transform:uppercase;'>"+data[i].series[j].liter+"</span>");
                     }
                     
                    // block.append("<span style='display:none' class='label label-danger circle'>4</span>");
