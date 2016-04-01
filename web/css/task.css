@@ -519,7 +519,7 @@ span.title {
     font-size:17px;
     /*line-height: initial !important;*/
 }
-#task input[type="text"]{
+#task input[type="text"]:not(#input-invite-email){
     line-height:32px;
     height: 32px;
     width:auto;
@@ -1001,7 +1001,7 @@ thead .ui-datepicker-week-end {
     color: #5a5a5a;
     font-size: 16px;
     /* line-height: 50px; */
-    /* border: none; */
+    border: none;
     margin: 0;
 }
 .invite-by-email+.popover.top > .arrow,.advanced-search-btn+.popover.top > .arrow{
