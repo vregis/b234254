@@ -306,30 +306,47 @@ class DefaultController extends Controller
                 }
 
                 if(isset($_POST['type'])) {
-                    $sql = '';
+                    $sql = [];
                     foreach ($posttype as $p) {
 
 
                         if ($p == 0) {
-                            $tasks_request = $tasks_request->andWhere('delegate_task.status = 0 OR delegate_task.status IS NULL');
+                            array_push($sql, 'delegate_task.status = 0 OR delegate_task.status IS NULL');
                         } elseif ($p == 2) {
-                            $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 1');
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 1');
                         } elseif ($p == 1) {
-                            $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 0');
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 0');
                         } elseif ($p == 3) {
-                            $tasks_request = $tasks_request->andWhere('delegate_task.status = 2');
+                            array_push($sql, 'delegate_task.status = 2');
                         } elseif ($p == 4) {
-                            $tasks_request = $tasks_request->andWhere('delegate_task.status = 3');
+                            array_push($sql, 'delegate_task.status = 3');
                         } elseif ($p == 5) {
-                            $tasks_request = $tasks_request->andWhere('delegate_task.status = 5');
-                        }
-
-
-                        if ($p == 7) {
-                            $tasks_request = $tasks_request->andWhere('task_user.status = 2');
+                            array_push($sql, 'delegate_task.status = 5');
+                        } elseif ($p == 7) {
+                            array_push($sql, '`task_user`.`status` = 2');
                         }
 
                     }
+
+                    $sql_request = '';
+                    $i = 0;
+                    if(count($sql) > 0){
+                        foreach($sql as $s){
+                            if($i > 0){
+                                $sql_request .= ' OR ';
+                            }else{
+                                $sql_request .= ' ';
+                            }
+                            $sql_request .= $s;
+                            $i++;
+                        }
+                    }
+
+                    $tasks_request = $tasks_request->andWhere($sql_request);
+
+
+                }else{
+                    $tasks_request = $tasks_request->andWhere('task_user.status != 2');
                 }
 
 
@@ -418,32 +435,56 @@ class DefaultController extends Controller
                     ]
                 );
 
+                if(isset($_POST['type'])){
+                    $posttype = $_POST['type'];
+                }else{
+                    $posttype = 100;
+                }
+
 
                 if(isset($_POST['type'])){
-                    if($_POST['type'] != 100 && $_POST['type'] != 0){
-                        // $tasks_request = $tasks_request->andWhere(['delegate_task.status' => $_POST['type']]);
+
+                $sql = [];
+
+                    foreach($posttype as $p){
+
+
+                        if($p == 0){
+                            array_push($sql, 'delegate_task.status = 0 OR delegate_task.status IS NULL');
+                        }elseif($p == 2){
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 1');
+                        }elseif($p == 1){
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 0');
+                        }elseif($p == 6){
+                            array_push($sql, 'delegate_task.status = 6');
+                        }elseif($p == 4){
+                            array_push($sql, 'delegate_task.status = 3');
+                        }elseif($p == 5){
+                            array_push($sql, 'delegate_task.status = 5');
+                        }elseif($p == 7){
+                            array_push($sql, 'task_user.status = 2');
+                        }
+
                     }
 
-                    if($_POST['type'] == 0){
-                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 0 OR delegate_task.status IS NULL');
-                    }elseif($_POST['type'] == 2){
-                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 1');
-                    }elseif($_POST['type'] == 1){
-                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 1 AND delegate_task.is_request = 0');
-                    }elseif($_POST['type'] == 6){
-                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 6');
-                    }elseif($_POST['type'] == 4){
-                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 3');
-                    }elseif($_POST['type'] == 5){
-                        $tasks_request = $tasks_request->andWhere('delegate_task.status = 5');
+                    $sql_request = '';
+                    $i = 0;
+                    if(count($sql) > 0){
+                        foreach($sql as $s){
+                            if($i > 0){
+                                $sql_request .= ' OR ';
+                            }else{
+                                $sql_request .= ' ';
+                            }
+                            $sql_request .= $s;
+                            $i++;
+                        }
                     }
 
+                    $tasks_request = $tasks_request->andWhere($sql_request);
 
-                    if($_POST['type'] == 7){
-                        $tasks_request = $tasks_request->andWhere('task_user.status = 2');
-                    }
-
-
+                }else{
+                    $tasks_request = $tasks_request->andWhere('task_user.status != 2');
                 }
 
 

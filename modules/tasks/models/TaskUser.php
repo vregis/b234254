@@ -15,6 +15,7 @@ class TaskUser extends \yii\db\ActiveRecord
     public $name;
     public $delegate_task;
     public $spec;
+    public $is_request;
 
     public function rules()
     {
