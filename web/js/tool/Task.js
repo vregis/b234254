@@ -413,7 +413,9 @@ var cancel_offer = $('.cancel-delegate-select');
                         initTimeParse();
 
                     }
-                    alert("accept");
+                    setTimeout(function(){
+                        $("#delegate").collapse('toggle');
+                    }, 500);
                     initTimeParse();
                 }
             });
