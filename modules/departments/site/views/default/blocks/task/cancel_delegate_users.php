@@ -9,7 +9,7 @@
                         <button style="font-size: 17px;margin-right: 5px !important;" class="btn btn-primary circle icon" id="btn-datepicker" data-toggle="collapse" data-target="#datepicker" aria-expanded="true" aria-controls="datepicker">
                         <i class="ico-calendar"></i>
                     </button>
-                    <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
+                <span class="title-value start">30</span> <span class="title-caption start">Mar</span> -
                 <span class="title-value end">19</span> <span class="title-caption end">Apr</span>
             </div>
         </td>
