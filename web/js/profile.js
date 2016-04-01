@@ -551,7 +551,7 @@ $(function(){
         $(this).closest('div.form-group').find('select.lang_skill').attr('disabled', false);
         alert("sadasd");
         $(this).closest('div.form-group').find('select[data-key="language_skill_id"].selectpicker').selectpicker('val', '1');
-    })
+    });
 
     $(document).on('click', '.change_status', function(e){
         var new_status = $('input.status').val();

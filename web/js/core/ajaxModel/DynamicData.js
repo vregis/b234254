@@ -84,6 +84,9 @@ function DynamicData(main_class) {
         row.find('input.update').each(function() {
             $(this).attr('disabled', false);
         });
+
+        console.log(row.find('.col-md-6.level-sel'));
+        row.find('.col-md-6.level-sel').find('select[data-key="language_skill_id"].selectpicker').selectpicker('val', '1');
     }
 
     $(document).on('change', g_point_class + ' select.update', function(){

@@ -9,7 +9,7 @@
                 <?php endforeach;?>
             </select>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 level-sel">
             <select <? if(!$model) echo 'disabled'; ?> class="update form-control selectpicker" data-key="language_skill_id">
                 <? if(!$model) : ?>
                     <option class="start" value="0">Select level</option>
