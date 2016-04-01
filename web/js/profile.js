@@ -549,7 +549,7 @@ $(function(){
     $(document).on('change', 'select.lang_name', function(){
         $(this).closest('div.form-group').find('.disabled').removeClass('disabled');
         $(this).closest('div.form-group').find('select.lang_skill').attr('disabled', false);
-        // alert("sadasd");
+        alert("sadasd");
         $(this).closest('div.form-group').find('select[data-key="language_skill_id"].selectpicker').selectpicker('val', '1');
     })
 
