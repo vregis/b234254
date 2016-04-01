@@ -411,7 +411,9 @@ var cancel_offer = $('.cancel-delegate-select');
                             }
                         }
                         initTimeParse();
+
                     }
+                    alert("accept");
                     initTimeParse();
                 }
             });

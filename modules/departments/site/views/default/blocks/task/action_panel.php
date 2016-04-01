@@ -111,7 +111,7 @@ if($start_date != '') {
         <? endif; ?>
     <? endif; ?>
 </div>
-<div class="item cost" style="margin-right: 130px;margin-left: 0px;">
+<div class="item cost" style="margin-right: 135px;margin-left: 0px;">
     <button class="btn btn-primary circle icon static" data-toggle="popover" data-placement="bottom" data-content="test">
         <i class="ico-dollar"></i>
     </button>
@@ -220,7 +220,7 @@ if($start_date != '') {
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;">Cancel</button>
             <?php elseif($delegate_task && $delegate_task->status == 2):?>
                 <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/submit','id' => $delegate_task->id]) ?>'"
-                        class="btn btn-success active" style="width:93px;">Submit</button>
+                        class="btn btn-success" style="width:93px;">Submit</button>
             <?php elseif($delegate_task && $delegate_task->status == 3):?>
                 <button id="get_money_confirm" onclick="return false" class="btn btn-primary payment-btn active" style="width:93px;" data-toggle="popover">
                     Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span>
