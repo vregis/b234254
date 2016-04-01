@@ -275,7 +275,6 @@
                 kineticScroll(div);
             }
         }
-
         // Creates a 3 dimensional array [year][month][day] of every day
         // between the given start and end dates
         function getDates(start, end) {
@@ -470,7 +469,7 @@
                     var size = DateUtils.daysBetween(series.start, series.end) + 1;
                     var offset = DateUtils.daysBetween(start, series.start);
                     var $series_name = (series.name).replace(/(<([^>]+)>)/ig, " ");
-
+                    // console.log(series);
                     var block = jQuery("<div>", {
                         "class": "ganttview-block",
                         "id": "task-id-"+series.id,
@@ -485,6 +484,7 @@
                     addBlockData(block, data[i], series);
                     if (data[i].series[j].color) {
                         block.css("background-color", data[i].series[j].color);
+                        block.css("color", data[i].series[j].color+" !important");
                     }
                     block.append(
                         jQuery("<div>", {
@@ -493,6 +493,10 @@
                     if(series.status == 2){
                         block.append("<span class='gantt-complete-check'><i class='fa fa-check'></i></span>");
                     }
+                    if (data[i].series[j].liter != '') {
+                        block.append("<span class='gantt-complete-check' style='width: 14px;height: 14px;margin-top: -7.5px;right: 2px;border-radius: 3px !important;font-weight:bold;text-transform:uppercase;'>"+data[i].series[j].liter+"</span>");
+                    }
+                    
                    // block.append("<span style='display:none' class='label label-danger circle'>4</span>");
                     jQuery(rows[rowIdx]).append(block);
                     rowIdx++;
