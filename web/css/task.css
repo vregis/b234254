@@ -1798,3 +1798,7 @@ table th.rate .fa{
     text-align: center;
     cursor:pointer;
 }
+
+.pagination-search.active {
+    font-weight:bold;
+}

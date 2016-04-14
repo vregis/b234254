@@ -1,5 +1,6 @@
 <? use modules\user\models\Profile;
 use yii\helpers\Url; ?>
+
 <div class="milestones-users">
     <?
     $is_find = true;

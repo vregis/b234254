@@ -3877,3 +3877,7 @@ div.ganttview-block .label{
     width: auto !important;
     min-width: auto !important;
 }
+
+.pagination-search.active {
+    font-weight:bold;
+}

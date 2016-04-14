@@ -177,7 +177,7 @@ function Task(task_user_id, is_my, is_custom) {
         //         $(".cancel-offer").removeClass('active');
         //     }
         // });
-var cancel_offer = $('.cancel-delegate-select');
+var cancel_offer = $('.cancel-delegate-select'); //this!!!!!!!!!!!!!!
     cancel_offer.off();
     cancel_offer.on('click', function(){
         // alert('sadasda');
@@ -214,6 +214,7 @@ var cancel_offer = $('.cancel-delegate-select');
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
+                        $('.pagination-offer').html(response.count);
                         // set_handler_confirn();
                         // if(response.html_active_users == 'none' || response.html_user_request == "undefined"){
                         //     // Сюда впили переход на серч
@@ -278,6 +279,7 @@ var cancel_offer = $('.cancel-delegate-select');
                             handleRequestMessage(response.html);
                             if (response.html_active_users) {
                                 set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
+                                $('.pagination-offer').html(response.count);
                                 set_log($('#taskUserLogs'), response.html_task_user_logs);
                             }
                             if (response.all_new_message) {
@@ -447,26 +449,37 @@ var cancel_offer = $('.cancel-delegate-select');
             if(!$(this).hasClass('disabled')) {
                 var this_confirmation = $(this);
                 if (getPrice() == 0 && !$('#delegate').hasClass('in')) {
-                    this_confirmation.confirmation({
-                        title: "Are you trying to delegate a task without payment?",
-                        placement: "bottom",
-                        btnOkClass: "btn btn-success",
-                        btnCancelClass: "btn btn-danger",
-                        btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
-                        onConfirm: function (event) {
-                            // collapsed_btn_delegate.attr('data-toggle','collapse');
-                            $("#delegate").collapse('toggle');
+
+                    if($(this).hasClass('offer')){
+                        this_confirmation.confirmation('destroy');
+                        $("#delegate").collapse('toggle');
+                        if (!$('#delegate').hasClass('in')) {
                             get_delegate_users();
-                            this_confirmation.confirmation('destroy');
-                            initTimeParse();
-                        },
-                        onCancel: function (event) {
-                            this_confirmation.confirmation('destroy');
-                            return false;
                         }
-                    });
-                    this_confirmation.confirmation('show');
-                    e.preventDefault();
+                    }else{
+                        this_confirmation.confirmation({
+                            title: "Are you trying to delegate a task without payment?",
+                            placement: "bottom",
+                            btnOkClass: "btn btn-success",
+                            btnCancelClass: "btn btn-danger",
+                            btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes',
+                            onConfirm: function (event) {
+                                // collapsed_btn_delegate.attr('data-toggle','collapse');
+                                $("#delegate").collapse('toggle');
+                                get_delegate_users();
+                                this_confirmation.confirmation('destroy');
+                                initTimeParse();
+                            },
+                            onCancel: function (event) {
+                                this_confirmation.confirmation('destroy');
+                                return false;
+                            }
+                        });
+                        this_confirmation.confirmation('show');
+                        e.preventDefault();
+                    }
+
+
                 } else {
                     this_confirmation.confirmation('destroy');
                     $("#delegate").collapse('toggle');
@@ -480,12 +493,17 @@ var cancel_offer = $('.cancel-delegate-select');
         var datepicker = $("#datepicker");
         datepicker.off();
         datepicker.on('show.bs.collapse',function(){
+
             $("#task .collapse").not($(this)).collapse('hide');
             $(".task-title .item.date .icon").addClass('active');
             $("#datepicker .arrow").css({'left':$(".task-title .item.date").position().left});
         });
         datepicker.on('hidden.bs.collapse',function(){
             $(".task-title .item.date .icon").removeClass('active');
+
+            $('.current_clk').each(function(){
+                $(this).removeClass('current_clk');
+            })
         });
         var counter = $(".counter_users");
         counter.off();
@@ -936,6 +954,7 @@ var cancel_offer = $('.cancel-delegate-select');
                         set_cancel_delegate_users($('#cancel_delegate_users'), response.html_cancel_users);
                         set_delegate_active_users($('#delegate_active_users'), response.html_active_users);
                         set_log($('#taskUserLogs'), response.html_task_user_logs);
+                        $('.pagination-offer').html(response.count);
                          set_handler_confirn();
 
                         console.log("make offer");
@@ -1003,7 +1022,12 @@ var cancel_offer = $('.cancel-delegate-select');
         }
     });
 
-    function get_delegate_users() {
+    function get_delegate_users(id) {
+
+        if(id == undefined){
+            id = 1;
+        }
+
         var rate_start = 0;
         if($('#input-rate-start').length > 0) {
             rate_start = $('#input-rate-start').val();
@@ -1048,7 +1072,8 @@ var cancel_offer = $('.cancel-delegate-select');
             time: getTime(),
             price: getPrice(),
             count: 0,
-            is_my: is_my
+            is_my: is_my,
+            id: id
         };
         $.ajax({
             url: '/departments/tool-ajax',
@@ -1058,10 +1083,18 @@ var cancel_offer = $('.cancel-delegate-select');
             success: function(response){
                 if(!response.error) {
                     set_delegate_users($('#delegate_users'),response.html);
+                    $('.pagination-offer').html(response.count);
                 }
             }
         });
     }
+
+    $(document).on('click', '.pagination-search', function(){
+        get_delegate_users($(this).data('id'));
+    })
+
+
+
     var advanced_send = $('#advanced-search-send');
     advanced_send.off();
     advanced_send.on('click',function(e) {
@@ -1166,6 +1199,7 @@ var cancel_offer = $('.cancel-delegate-select');
             })
             .done(function (response) {
                 if(!response.error) {
+                    console.log(response.html_action_panel);
                     console.log(response);
                     $('.select-delegate').each(function () {
                         $(this).find('.badge').html('');
@@ -1204,7 +1238,8 @@ var cancel_offer = $('.cancel-delegate-select');
                     }
                 }
                 else {
-                    document.location.href='/departments/business';
+                    set_action_panel($('#action_panel'), response.html_action_panel);
+                    //document.location.href='/departments/business';
                 }
             })
             .always(function () {
@@ -1540,9 +1575,51 @@ var cancel_offer = $('.cancel-delegate-select');
         }
     }
 
+    function setDataDelegate(start,end, del_id) {
+        if(end == undefined) {
+            end = start;
+        }
+        if(end == '') {
+            return;
+        }
+        if(is_my) {
+            var data = {
+                _csrf: $("meta[name=csrf-token]").attr("content"),
+                command: 'set_date_delegate',
+                del_id: del_id,
+                start: start,
+                end: end
+            };
+            $.ajax({
+                url: '/departments/tool-ajax',
+                type: 'post',
+                dataType: 'json',
+                data: data,
+                success: function (response) {
+                    if (!response.error) {
+                        //updGant(task_user_id);
+                    }
+                }
+            });
+        }
+        else {
+            var input_start = $("#taskuser-start");
+            var input_end = $("#taskuser-end");
+            if (input_start.val() != input_start.attr('data-value') ||
+                input_end.val() != input_end.attr('data-value')) {
+                $('.offer').removeClass('disabled');
+            }
+        }
+    }
+
     function setStart(str) {
         $("#taskuser-start").val(str);
-        setData(str);
+        if($('.current_clk').length){
+            var del_id = $('.current_clk').attr('data-t-id');
+            setDataDelegate(str, undefined, del_id);
+        }else{
+            setData(str);
+        }
         $str_m = '';
         $str_d = '';
         if(str != '') {
@@ -1550,12 +1627,24 @@ var cancel_offer = $('.cancel-delegate-select');
             $str_m = date.toLocaleString("en", {month: 'short'});
             $str_d = date.getDate();
         }
-        $(".title-caption.start").html($str_m);
-        $(".title-value.start").html($str_d);
+        if($('.current_clk').length){
+            $('.current_clk').closest('.date').find(".title-caption.start").html($str_m);
+            $('.current_clk').closest('.date').find(".title-value.start").html($str_d);
+        }else{
+            $(".title-caption.start").html($str_m);
+            $(".title-value.start").html($str_d);
+        }
+
     }
     function setEnd(str) {
         $("#taskuser-end").val(str);
-        setData($("#taskuser-start").val(),str);
+        if($('.current_clk').length){
+            var del_id = $('.current_clk').attr('data-t-id');
+            setDataDelegate($("#taskuser-start").val(),str, del_id);
+        }else{
+            setData($("#taskuser-start").val(),str);
+        }
+
         $str_m = '';
         $str_d = '';
         if(str != '') {
@@ -1563,8 +1652,13 @@ var cancel_offer = $('.cancel-delegate-select');
             $str_m = date.toLocaleString("en", {month: 'short'});
             $str_d = date.getDate();
         }
-        $(".title-caption.end").html($str_m);
-        $(".title-value.end").html($str_d);
+        if($('.current_clk').length) {
+            $('.current_clk').closest('.date').find(".title-caption.end").html($str_m);
+            $('.current_clk').closest('.date').find(".title-value.end").html($str_d);
+        }else{
+            $(".title-caption.end").html($str_m);
+            $(".title-value.end").html($str_d);
+        }
     }
     $("#startDate").datepicker({
         dateFormat: "yy-mm-dd",
@@ -1593,7 +1687,6 @@ var cancel_offer = $('.cancel-delegate-select');
             var date2 = $.datepicker.parseDate("yy-mm-dd", $("#taskuser-end").val());
 
             if (!date1 || date2) {
-
                 setStart(dateText);
                 setEnd("");
             } else {

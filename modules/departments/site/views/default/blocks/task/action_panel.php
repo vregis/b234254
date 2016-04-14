@@ -6,6 +6,16 @@ use modules\tasks\models\DelegateTask;
 $start_m = '';
 $start_d = '';
 
+
+
+if((!isset($delegate_task->status) || !$delegate_task->status) && !$is_my && $delegate_task->status != 0){?>
+    <div style="height:50px">
+    <button class="btn btn-success accept-change" style="width:93px;">Accept</button>
+
+    </div>
+    <a href="#" data-dismiss="modal" class="href-black task-close"></a>
+<?php }else{
+
 if(!isset($start_date)) {
     if($is_my) {
         $start_date = $task_user->start;
@@ -85,7 +95,8 @@ if($start_date != '') {
         </button>
     <? endif; ?>
     <?php if($start_d == '' || $end_d == ''): ?>
-        <span style="width:32px;display: inline-block;"></span>
+        <span class="title-value start"></span> <span class="title-caption start"></span>
+        <span class="title-value end"></span> <span class="title-caption end"></span>
     <?php else: ?>
     <span class="title-value start"><?= $start_d ?></span> <span class="title-caption start"><?= $start_m ?></span> -
     <span class="title-value end"><?= $end_d ?></span> <span class="title-caption end"><?= $end_m ?></span>
@@ -140,12 +151,16 @@ if($start_date != '') {
             <!--<button class="btn btn-primary offer disabled static">Offers</button>-->
         <? endif; ?>
         <? if($task_user->status != 2) : ?>
-            <button id="btn-delegate" class="btn btn-primary"
-                data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button> <!--this delegate-->
-
+                <?php if(!$delegate_task):?>
+                    <button id="btn-delegate" class="btn btn-primary"
+                            data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Delegate</button>
+                <?php else:?>
+            <button id="btn-delegate" class="btn btn-primary offer"
+                data-task_user_id="<?= $task_user->id ?>" data-target="#delegate" aria-expanded="false" aria-controls="delegate" style="width:93px;">Offers</button> <!--this delegate-->
+                <?php endif;?>
            <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'" class="btn btn-success" style="width:93px;">Complete</button>
         <? else : ?>
-            <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Delegate</button>
+            <button id="btn-delegate" class="btn btn-primary disabled static" style="width:93px;">Delegate1</button>
             <button id="restart" style="width:93px;" class="btn btn-danger offer restrt">Restart</button>
         <? endif; ?>
     <? else : ?>
@@ -171,8 +186,8 @@ if($start_date != '') {
             <? elseif($delegate_task->status >= DelegateTask::$status_payment) : ?>
 <!--                 <button id="" class="btn btn-success disabled static payment-btn" style="width:93px;">Funded <span class="label label-success circle"><i class="fa fa-check"></i></span></button> -->
                 <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/complete','id' => $task_user->id]) ?>'"
-                class="btn btn-success <? if(($delegate_task && $delegate_task->status < DelegateTask::$status_complete) || $delegate_task->status == 6){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;">Complete</button>
-           <? //else : ?> 
+                class="btn btn-success <? if(($delegate_task && $delegate_task->status < DelegateTask::$status_complete) || $delegate_task->status == 6){ echo 'disabled static';}else{echo 'active';} ?>" style="width:93px;"><?php if($delegate_task->status == 6):?>Restart<?php else:?>Complete<?php endif;?></button> <!--this-->
+           <? //else : ?>
 
         <? endif; ?>
 
@@ -217,8 +232,15 @@ if($start_date != '') {
             <?php endif;?>
             <?php //var_dump($delegate_task->status);?>
             <?php if($delegate_task && $delegate_task->status == 1):?>
+                <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
+                    Payment
+                </button>
             <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/reject','id' => $task_user->id]) ?>'" class="btn btn-danger" style="width:93px;">Cancel</button>
+
             <?php elseif($delegate_task && $delegate_task->status == 2):?>
+                    <button id="get_money" onclick="return false" class="btn btn-primary static disabled payment-btn" style="width:93px;">
+                        Payment
+                    </button>
                 <button onclick="if(!$(this).hasClass('disabled')) document.location.href='<?= Url::toRoute(['/tasks/submit','id' => $delegate_task->id]) ?>'"
                         class="btn btn-success" style="width:93px;">Submit</button>
             <?php elseif($delegate_task && $delegate_task->status == 3):?>
@@ -250,6 +272,10 @@ if($start_date != '') {
                 class="btn btn-success active" style="width:93px;">Submit</button>
             <?php endif; ?>
     <? endif; ?>
+    <?php if($delegate_task && $delegate_task->status == 7):?>
+        <button class="btn btn-primary disabled static static" style="width:93px;">Payment <span class="label label-primary circle"><i class="fa fa-plus"></i></span></button>
+        <button class="btn btn-success disabled static" style="width:93px;">Submit</button>
+    <?php endif; ?>
 <? endif; ?>
 <a href="#" data-dismiss="modal" class="href-black task-close"></a>
 <div id="payment-form" style="display:none;">
@@ -267,8 +293,8 @@ if($start_date != '') {
         <div class="row"><label for="" class="col-sm-12" style="text-align:center;">Enter payment information</label></div>
 
         <div class="row">
-            <div class="col-sm-6 col-xs-6 noselect"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
-            <div class="col-sm-6 col-xs-6 noselect"><input style="height:32px;margin:9px 0;" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_loginre"></div>
+            <div class="col-sm-6 col-xs-6 noselect"><input style="height:32px;margin:9px 0; width:168px" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Paypal login" name="paypal_login"></div>
+            <div class="col-sm-6 col-xs-6 noselect"><input style="height:32px;margin:9px 0; width:168px" type="text" class="form-control" data-inputmask="'alias': 'email'" placeholder="Re-type paypal login" name="paypal_loginre"></div>
         </div>
         <div class="row text-center">
             <button style="margin:20px 0 10px;" id="btn-<?= ($is_my) ? "pay" : "receive" ?>" type="submit" class="btn btn-primary"><?= ($is_my) ? "Fund <span class='label' data-toggle='popover'>?</span>" : "Recieve" ?></button>
@@ -296,7 +322,7 @@ if($start_date != '') {
                         data: {id:'<?php echo @$delegate_task->id?>'},
                         success: function(response){
                             if($('#input-price').val() == response.price && $('#input-time').val() == response.time){
-                                $('.accept-change').html('Accept').removeAttr('style');
+                                $('.accept-change').html('Accept').removeAttr('style').removeClass('steve_counter');
                             }else{
                                 $('.accept-change').html('Counter <br/ > offer').css({
                                     'width': '93px',
@@ -304,13 +330,14 @@ if($start_date != '') {
                                     'font-size': '12px !important',
                                     'padding': '0 13px',
                                     'line-height': 1,
-                                });
+                                }).addClass('steve_counter');
                             }
                         }
                     })
 
 
                 })
+
             </script>
 
 
@@ -345,3 +372,4 @@ if($start_date != '') {
         </div>
     </div>
 </div>
+<?php } ?>

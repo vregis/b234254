@@ -53,7 +53,7 @@ class ServiceData extends DynamicData
             $this->departments = Department::find()->all();
         }
         if($this->sklist == null) {
-            $this->sklist = Skilllist::find()->all();
+            $this->sklist = Skilllist::find()->orderBy(['id' => SORT_DESC])->all();
         }
         $tasks = '';
 

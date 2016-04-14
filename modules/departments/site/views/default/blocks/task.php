@@ -93,7 +93,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th colspan="5" style="border-right:0;">
+                                    <th colspan="6" style="border-right:0;">
                                         <div class="pull-left" style="margin-left: 10px;">
                                             <div id="invite-form" class="no-autoclose" style="display:none;">
                                             <legend>Delegate by email</legend>
@@ -152,7 +152,7 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <label for="">City</label>
-                                                        <input id="input-city"  type="text" value="<?=$profile->city_title ?>" class="form-control">
+                                                        <input style="width:auto" id="input-city"  type="text" value="<?=$profile->city_title ?>" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="row form-group">
@@ -172,6 +172,10 @@ $specialization = Specialization::find()->where(['id' => $task->specialization_i
                                             </button>
                                             <!-- Advanced search -->
                                         </div>
+
+                                        <div style="height:32px; padding-top:9px" class="pull-center pagination-offer">
+                                        </div>
+
                                         <div class="pull-right">
                                         </div>
                                         <div class="clearfix"></div>

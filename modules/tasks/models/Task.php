@@ -20,6 +20,9 @@ class Task extends \yii\db\ActiveRecord
     var $delegate_user;
     var $is_pay;
     var $dname;
+     public $delegate_task_status;
+    public $task_user_status;
+    public $is_request;
 
     public $spec_name;
 

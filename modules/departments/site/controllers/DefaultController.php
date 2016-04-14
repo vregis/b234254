@@ -80,7 +80,8 @@ class DefaultController extends Controller
                             'team-steve',
                             'get-task',
                             'fix-is-new',
-                            'create-user-request'
+                            'create-user-request',
+                            'set-delegate-sum',
                         ],
                         'roles' => ['@'],
 
@@ -268,7 +269,7 @@ class DefaultController extends Controller
 
         if($is_my){
             $tasks_request = Task::find()->select(
-                'task.*, specialization.name as task, delegate_task.status del_id, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay'
+                'task.*, specialization.name as task, delegate_task.status del_id, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay, delegate_task.status delegate_task_status, task_user.status task_user_status, delegate_task.is_request is_request'
             )
                 ->join('JOIN', 'milestone', 'milestone.id = task.milestone_id')
                 ->join('LEFT OUTER JOIN', 'specialization', 'specialization.id = task.specialization_id')
@@ -287,6 +288,51 @@ class DefaultController extends Controller
                         'task.milestone_id' => $milestone->id
                     ]
                 );
+                if(isset($_POST['type'])){
+                    $sql = [];
+
+                    foreach($_POST['type'] as $p){
+
+
+                        if($p == 0){
+                            array_push($sql, 'delegate_task.status IS NULL');
+                        }elseif($p == 2){
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 1');
+
+                        }elseif($p == 1){
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 0');
+                            array_push($sql, 'delegate_task.status = 0');
+                        }elseif($p == 6){
+                            array_push($sql, 'delegate_task.status = 6');
+                        }elseif($p == 4){
+                            array_push($sql, 'delegate_task.status = 3');
+                        }elseif($p == 5){
+                            array_push($sql, 'delegate_task.status = 5');
+                        }elseif($p == 7){
+                            array_push($sql, 'task_user.status = 2');
+                        }
+
+                    }
+
+                    $sql_request = '';
+                    $i = 0;
+                    if(count($sql) > 0){
+                        foreach($sql as $s){
+                            if($i > 0){
+                                $sql_request .= ' OR ';
+                            }else{
+                                $sql_request .= ' ';
+                            }
+                            $sql_request .= $s;
+                            $i++;
+                        }
+                    }
+
+                    $tasks_request = $tasks_request->andWhere($sql_request);
+
+                }else{
+                    // $tasks_request = $tasks_request->andWhere('task_user.status != 2');
+                }
             }
             else {
                 $tasks_request
@@ -402,7 +448,7 @@ class DefaultController extends Controller
 
 
             $tasks_request = Task::find()->select(
-                'task.*, specialization.name as task, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay'
+                'task.*, specialization.name as task, task_user.start as start, task_user.end as end, task_user.status as status, task_user.id task_user, milestone.is_pay is_pay, delegate_task.status delegate_task_status, task_user.status task_user_status, delegate_task.is_request is_request'
             )
                 ->join('JOIN', 'milestone', 'milestone.id = task.milestone_id')
                 ->join('LEFT OUTER JOIN', 'specialization', 'specialization.id = task.specialization_id')
@@ -425,6 +471,51 @@ class DefaultController extends Controller
                         'task.milestone_id' => $milestone->id
                     ]
                 );
+                if(isset($_POST['type'])){
+
+                    $sql = [];
+
+                    foreach($_POST['type'] as $p){
+
+
+                        if($p == 0){
+                            array_push($sql, 'delegate_task.status IS NULL');
+                        }elseif($p == 2){
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 1');
+                        }elseif($p == 1){
+                            array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 0');
+                            array_push($sql, 'delegate_task.status = 0');
+                        }elseif($p == 6){
+                            array_push($sql, 'delegate_task.status = 6');
+                        }elseif($p == 4){
+                            array_push($sql, 'delegate_task.status = 3');
+                        }elseif($p == 5){
+                            array_push($sql, 'delegate_task.status = 5');
+                        }elseif($p == 7){
+                            array_push($sql, 'task_user.status = 2');
+                        }
+
+                    }
+
+                    $sql_request = '';
+                    $i = 0;
+                    if(count($sql) > 0){
+                        foreach($sql as $s){
+                            if($i > 0){
+                                $sql_request .= ' OR ';
+                            }else{
+                                $sql_request .= ' ';
+                            }
+                            $sql_request .= $s;
+                            $i++;
+                        }
+                    }
+
+                    $tasks_request = $tasks_request->andWhere($sql_request);
+
+                }else{
+                    // $tasks_request = $tasks_request->andWhere('task_user.status != 2');
+                }
             }
             else {
                 $tasks_request
@@ -452,11 +543,12 @@ class DefaultController extends Controller
 
 
                         if($p == 0){
-                            array_push($sql, 'delegate_task.status = 0 OR delegate_task.status IS NULL');
+                            array_push($sql, 'delegate_task.status IS NULL');
                         }elseif($p == 2){
                             array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 1');
                         }elseif($p == 1){
                             array_push($sql, 'delegate_task.status = 1 AND delegate_task.is_request = 0');
+                            array_push($sql, 'delegate_task.status = 0');
                         }elseif($p == 6){
                             array_push($sql, 'delegate_task.status = 6');
                         }elseif($p == 4){
@@ -623,10 +715,9 @@ class DefaultController extends Controller
             $tables['table'] = '';
             $tables['gant'] = '';
         }
-
         if($is_new){
             $milestoneFilters = $this->renderPartial('blocks/milestone-filters', ['user_tool' => $userTool,
-                'task_type' => $posttype,/* 'mfilter' => $m_filter*/]);
+                'task_type' => $posttype, 'tasks' => $tasks]);
         }else{
             $milestoneFilters = null;
         }
@@ -639,7 +730,7 @@ class DefaultController extends Controller
             'delegate_tasks' => $delegate_tasks,
             'avatar' => $avatar,
             'user_tool' => $userTool,
-            'milestone_filters' => $milestoneFilters
+            'milestone_filters' => $milestoneFilters,
 
         ]);
         return $tables;
@@ -778,6 +869,7 @@ class DefaultController extends Controller
             }
 
         }
+
 
         $profile = Profile::find()->where(['user_id' => Yii::$app->user->id])->one();
         $countrylist = Country::findBySql('SELECT * FROM geo_country gc ORDER BY id=1 DESC, title_en ASC')->all();
@@ -960,13 +1052,18 @@ class DefaultController extends Controller
     public function actionGetpopuptask(){
         $response = [];
 
-        $is_custom = filter_var($_POST['is_custom'], FILTER_VALIDATE_BOOLEAN);
+        if(isset($_POST['is_custom'])){
+            $is_custom = filter_var($_POST['is_custom'], FILTER_VALIDATE_BOOLEAN);
+        }
+
         $task = Task::find()
             ->select('task.*, specialization.name as spec, milestone.is_pay is_pay')
             ->join('JOIN', 'milestone', 'milestone.id = task.milestone_id')
             ->join('LEFT OUTER JOIN', 'specialization', 'task.specialization_id = specialization.id')
             ->where(['task.id' => $_POST['id']])
             ->one();
+
+
 
         $user = User::find()->where(['id' => Yii::$app->user->id])->one();
 
@@ -1237,7 +1334,8 @@ class DefaultController extends Controller
             $delegate = new DelegateTask();
             $delegate->task_user_id = $exist->id;
             $delegate->delegate_user_id = Yii::$app->user->id;
-            $delegate->counter_time = $_POST['time'];
+            $delegate->start = $_POST['start'];
+            $delegate->end = $_POST['end'];
             $delegate->counter_price = $_POST['price'];
             $delegate->is_request = 1;
             $delegate->status = 1;
@@ -1250,7 +1348,8 @@ class DefaultController extends Controller
                 $delegate = new DelegateTask();
                 $delegate->task_user_id = $tu->id;
                 $delegate->delegate_user_id = Yii::$app->user->id;
-                $delegate->counter_time = $_POST['time'];
+                $delegate->start = $_POST['start'];
+                $delegate->end = $_POST['end'];
                 $delegate->counter_price = $_POST['price'];
                 $delegate->is_request = 1;
                 $delegate->status = 1;
@@ -1260,6 +1359,17 @@ class DefaultController extends Controller
 
         return json_encode($_POST);
 
+    }
+
+    public function actionSetDelegateSum(){
+        $delegate = DelegateTask::find()->where(['id' => $_POST['id']])->one();
+        if($delegate){
+            $delegate->price = $_POST['sum'];
+            $delegate->status = 0;
+            $delegate->is_request = 0;
+            $delegate->save();
+        }
+        die(json_encode($_POST));
     }
 
 }

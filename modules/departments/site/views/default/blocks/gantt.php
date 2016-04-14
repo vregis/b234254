@@ -41,7 +41,11 @@ $this->registerJsFile("/js/milestone.js");?>
                         <?php if($del_status->is_request == 1):?>
                         <?php $liter[$t->id] = 'a';?>
                         <?php else:?>
-                        <?php $liter[$t->id] = 'o';?>
+                            <?php if($userTool->user_id != Yii::$app->user->id):?>
+                                    <?php $liter[$t->id] = 'a';?>
+                                <?php else:?>
+                                    <?php $liter[$t->id] = 'o';?>
+                                <?php endif;?>
                         <?php endif;?>
                     <?php elseif($del_status->delegate_task == 2):?>
                         <?php $liter[$t->id] = 'd';?>
@@ -50,7 +54,11 @@ $this->registerJsFile("/js/milestone.js");?>
                     <?php elseif($del_status->delegate_task == 5):?>
                         <?php $liter[$t->id] = 's';?>
                     <?php elseif($del_status->delegate_task == 6):?>
-                        <?php $liter[$t->id] = 'p'?>
+                        <?php if($userTool->user_id == Yii::$app->user->id):?>
+                            <?php $liter[$t->id] = '<i class="fa fa-check" data-original-title="" title=""></i>'?>
+                        <?php else:?>
+                            <?php $liter[$t->id] = 'p'?>
+                        <?php endif;?>
                         <?php elseif($del_status->delegate_task == 0):?>
                         <?php $liter[$t->id] = 'o';?>
                     <?php else:?>
@@ -70,7 +78,7 @@ $this->registerJsFile("/js/milestone.js");?>
                         <?php if($is_del):?>
                             <div class="series-content" data-delegate-status = '<?php echo $liter[$t->id]?>' data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>" data-guest="0"><?php echo $t->name?></div>
                         <?php else:?>
-                            <div class="series-content-guest" data-delegate-status = '<?php echo $liter[$t->id]?>' data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>" data-guest="1"><?php echo $t->name?></div>
+                            <div class="series-content" data-delegate-status = '<?php echo $liter[$t->id]?>' data-id="<?php echo $t->id?>" data-status="<?php echo $t->status?>" data-is-custom="<?php echo $t->is_custom ?>" data-guest="1"><?php echo $t->name?></div>
                         <?php endif;?>
                     <?php endif;?>
                 </div>

@@ -158,7 +158,7 @@ if($task->specialization_id > 0) {
 	                                                        </div>
 	                                                        <div class="col-sm-6">
 	                                                            <label for="">City</label>
-	                                                            <input id="input-city"  type="text" value="<?=$profile->city_title ?>" class="form-control">
+	                                                            <input style="width:auto" id="input-city"  type="text" value="<?=$profile->city_title ?>" class="form-control">
 	                                                        </div>
 	                                                    </div>
 	                                                    <div class="row form-group">

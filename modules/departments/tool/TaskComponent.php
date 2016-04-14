@@ -32,7 +32,8 @@ class TaskComponent extends Component
         foreach ($exclude_user_ids as $key => $value) {
             $users_find->andWhere(['!=', 'user.id', $key]);
         }
-        $users_find = $users_find->orderBy(['user_specialization.exp_type' => SORT_DESC]);
+        $users_find = $users_find->orderBy(['user_specialization.exp_type' => SORT_ASC]);
+        //$users_find = $users_find->orderBy(['user_specialization.exp_type' => 'is NULL ASC']);
         $users_find->limit(5 - count($users));
 
         $users_find = $users_find->all();
@@ -44,7 +45,7 @@ class TaskComponent extends Component
     private function setFindUsersCondition(&$users, &$exclude_user_ids, $where = null) {
         if(count($users) < 5) {
             $users_find = User::find()->select(
-                'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city'
+                'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_specialization.rate rate_h,geo_country.title_en country,user_profile.city_title city'
             )
                 ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
                 ->join('LEFT OUTER JOIN','user_specialization', 'user_specialization.user_id = user.id')
@@ -54,6 +55,8 @@ class TaskComponent extends Component
             if($where) {
                 $users_find->where($where);
             }
+
+            //$users_find = $users_find->orderBy(['skill_list.id', SORT_DESC]);
 
 
 
@@ -84,8 +87,9 @@ class TaskComponent extends Component
 
         $users = [];
         $exclude_user_ids = $delegate_user_ids;
-        $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
-        $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
+        /*$this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);*/
+       // $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
+        /*
         if (isset($post['rate_start']) && $post['rate_start'] != '' && isset($post['rate_end']) && $post['rate_end'] != '') {
             $this->setFindUsersCondition($users, $exclude_user_ids, ['between', 'user_profile.rate', $post['rate_start'], $post['rate_end']]);
         }
@@ -104,16 +108,69 @@ class TaskComponent extends Component
             foreach($post['skills_ids'] as $skill) {
                 $this->setFindUsersCondition($users, $exclude_user_ids,['user_skills.skill_tag' => intval($skill)]);
             }
+        }*/
+       /* $this->setFindUsersCondition($users, $exclude_user_ids);
+        $this->setFindUsersCondition($users, $exclude_user_ids);*/
+
+        if(!isset($_POST['id'])){
+            $id = 1;
+        }else{
+            $id = $_POST['id'];
         }
-        $this->setFindUsersCondition($users, $exclude_user_ids);
-        $this->setFindUsersCondition($users, $exclude_user_ids);
 
+        $users = [];
+        $users = $this->getSearchUsers($id, $task_user, $exclude_user_ids);
 
-        return Yii::$app->controller->renderPartial('blocks/task/delegate_users',
+        $return['html'] = Yii::$app->controller->renderPartial('blocks/task/delegate_users',
             [
-                'users' => $users,
+                'users' => $users['users']
             ]
         );
+
+        $return['count'] = Yii::$app->controller->renderPartial('blocks/task/pagination',
+            [
+                'count' => $users['count_all'],
+                'active' => $id
+            ]
+        );
+
+        return $return;
+    }
+
+    public function getSearchUsers($id, $task_user, $exclude){
+
+
+        $offset = 5*($id - 1);
+
+        $users_find = User::find()->select(
+            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_specialization.rate rate_h,geo_country.title_en country,user_profile.city_title city'
+        )
+            ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
+            ->join('LEFT OUTER JOIN','user_specialization', 'user_specialization.user_id = user.id')
+            ->join('LEFT OUTER JOIN','skill_list', 'skill_list.id = user_specialization.exp_type')
+            ->join('LEFT OUTER JOIN','geo_country', 'geo_country.id = user_profile.country_id')
+            ->join('LEFT OUTER JOIN','user_skills', 'user_skills.user_id = user_profile.user_id');
+
+        $exc = [];
+        $i = 0;
+        foreach($exclude as $e => $val){
+            $exc[$i] = $e;
+            $i++;
+        }
+
+        if($task_user){
+            $users_find = $users_find->where(['user_specialization.specialization_id' => $task_user->spec]);
+            $users_find = $users_find->AndWhere(['not in','user.id',$exc]);;
+            $users_find = $users_find->orderBy(['user_specialization.exp_type' => SORT_ASC]);
+
+        }
+
+        $return['count_all'] = count($users_find->all());
+        $return['users'] = $users_find->limit(5)->offset($offset)->all();
+
+
+
+        return $return;
     }
 
     public function get_delegate_users_advanced($task_user_id, $post) {
@@ -142,7 +199,7 @@ class TaskComponent extends Component
         }
 
         if(!isset($post['is_advanced'])){
-            $users = [];
+           /* $users = [];
             $exclude_user_ids = $delegate_user_ids;
             $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
             $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
@@ -166,12 +223,15 @@ class TaskComponent extends Component
                 }
             }
             $this->setFindUsersCondition($users, $exclude_user_ids);
-            $this->setFindUsersCondition($users, $exclude_user_ids); // this place
+            $this->setFindUsersCondition($users, $exclude_user_ids);*/ // this place
 
         }else{
             $users = [];
             $exclude_user_ids = $delegate_user_ids;
-            $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
+
+            $users = $this->getSearchUsers();
+
+            /*$this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.task_id' => $task_user->task_id]);
             $this->setFindUsersCondition($users, $exclude_user_ids, ['user_specialization.specialization_id' => $task_user->spec]);
             if (isset($post['rate_start']) && $post['rate_start'] != '' && isset($post['rate_end']) && $post['rate_end'] != '') {
                 $this->setFindUsersCondition($users, $exclude_user_ids, ['between', 'user_profile.rate', $post['rate_start'], $post['rate_end']]);
@@ -193,17 +253,27 @@ class TaskComponent extends Component
                 }
             }
             $this->setFindUsersCondition($users, $exclude_user_ids);
-            $this->setFindUsersCondition($users, $exclude_user_ids); // this place
+            $this->setFindUsersCondition($users, $exclude_user_ids);*/ // this place
         }
 
+        $users = [];
 
+        $users = $this->getSearchUsers($_POST['id'], $task_user, $delegate_user_ids);
 
-
-        return Yii::$app->controller->renderPartial('blocks/task/delegate_users',
+        $return['html'] = Yii::$app->controller->renderPartial('blocks/task/delegate_users',
             [
-                'users' => $users,
+                'users' => $users['users']
             ]
         );
+
+        $return['count'] = Yii::$app->controller->renderPartial('blocks/task/pagination',
+            [
+                'count' => $users['count_all'],
+                'active' => $_POST['id']
+            ]
+        );
+
+        return $return;
     }
 
 
@@ -219,7 +289,7 @@ class TaskComponent extends Component
     public function get_cancel_delegate_users($task_user_id) {
 
         $users = User::find()->select(
-            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city, delegate_task.id del_id'
+            'user.*,user_profile.first_name fname,user_profile.last_name lname,user_profile.avatar ava,skill_list.name level,user_profile.rate rate_h,geo_country.title_en country,user_profile.city_title city, delegate_task.id del_id, delegate_task.start start, delegate_task.end end'
         )
             ->join('JOIN','user_profile', 'user_profile.user_id = user.id')
             ->join('JOIN','delegate_task', 'delegate_task.delegate_user_id = user.id')
@@ -260,7 +330,9 @@ class TaskComponent extends Component
         }
 
         $response['error'] = false;
-        $response['html'] = $this->get_delegate_users($post['task_user_id'], $post);
+        $resp = $this->get_delegate_users($post['task_user_id'], $post);
+        $response['html'] = $resp['html'];
+        $response['count'] = $resp['count'];
         return json_encode($response);
     }
 
@@ -275,13 +347,18 @@ class TaskComponent extends Component
             if ($task_user) {
                 $task_user->time = $post['time'];
                 $task_user->price = $post['price'];
+                if($task_user->time == 0){
+                    $task_user->time = 1;
+                }
                 $task_user->rate = intval($task_user->price/$task_user->time);
                 $task_user->save(false);
             }
         }
 
         $response['error'] = false;
-        $response['html'] = $this->get_delegate_users_advanced($post['task_user_id'], $post);
+        $resp = $this->get_delegate_users_advanced($post['task_user_id'], $post);
+        $response['html'] = $resp['html'];
+        $response['count'] = $resp['count'];
         return json_encode($response);
     }
 
@@ -347,7 +424,9 @@ class TaskComponent extends Component
                 }
             }
             $response['error'] = false;
-            $response['html_users'] = $this->get_delegate_users($task_user_id, $post);
+            $resp = $this->get_delegate_users($task_user_id, $post);
+            $response['html_users'] = $resp['html'];
+            $response['count'] = $resp['count'];
             $response['html_cancel_users'] = $this->get_cancel_delegate_users($task_user_id);
             $response['html_active_users'] = $this->render_delegate_active_users($task_user_id);
             $response['html_task_user_logs'] = $this->get_task_user_logs($task_user_id);
@@ -378,7 +457,9 @@ class TaskComponent extends Component
                 }
             }
             $response['error'] = false;
-            $response['html_users'] = $this->get_delegate_users($task_user_id, $post);
+            $resp = $this->get_delegate_users($task_user_id, $post);
+            $response['html_users'] = $resp['html'];
+            $response['count'] = $resp['count'];
             $response['html_cancel_users'] = $this->get_cancel_delegate_users($task_user_id);
             $response['html_active_users'] = $this->render_delegate_active_users($task_user_id);
             $response['html_task_user_logs'] = $this->get_task_user_logs($task_user_id);
@@ -406,6 +487,9 @@ class TaskComponent extends Component
             else {
                 if(!$delegate_task) {
                     $response['error'] = true;
+                    $response['html_action_panel'] = Yii::$app->controller->renderPartial(
+                        'blocks/task/action_panel_guest'
+                    );
                     return json_encode($response);
                 }
             }
@@ -440,7 +524,10 @@ class TaskComponent extends Component
                         'counter_offers' => $counter_offers
                     ]
                 );
-                $response['html_users'] = $this->get_delegate_users($task_user_id, $post);
+
+                $resp = $this->get_delegate_users($task_user_id, $post);
+                $response['html_users'] = $resp['html'];
+                $response['count'] = $resp['count'];
                 $response['html_cancel_users'] = $this->get_cancel_delegate_users($task_user_id);
                 $response['html_task_user_logs'] = $this->get_task_user_logs($task_user_id);
             }
@@ -555,6 +642,19 @@ class TaskComponent extends Component
         $response['error'] = false;
         return json_encode($response);
     }
+
+    public function ajaxSet_date_delegate() {
+        $post = Yii::$app->request->post();
+        $delegate_task = DelegateTask::find()->where(['id' => $post['del_id']])->one();
+        if($delegate_task){
+            $delegate_task->start = $post['start'];
+            $delegate_task->end = $post['end'];
+            $delegate_task->save();
+        }
+        $response['error'] = false;
+        return json_encode($response);
+    }
+
     public function ajaxOffer() {
         $post = Yii::$app->request->post();
         $task_user_id = $post['task_user_id'];

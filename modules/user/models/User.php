@@ -98,6 +98,8 @@ class User extends ActiveRecord implements IdentityInterface
     public $dname;
     public $uid;
     public $del_id;
+    public $start;
+    public $end;
 
 
     /** @inheritdoc */
@@ -739,5 +741,26 @@ class User extends ActiveRecord implements IdentityInterface
         }else{
             false;
         }
+    }
+
+    public static function getUserName($id){
+        $str_name = '';
+        $profile = Profile::find()
+            ->select('user_profile.*, user.email email')
+            ->join('LEFT JOIN', 'user', 'user.id = user_profile.user_id')
+            ->where(['user_profile.user_id' => $id])->one();
+        if($profile){
+            if($profile->first_name && $profile->first_name != ''){
+                $str_name = $profile->first_name;
+            }
+
+            if($profile->last_name && $profile->last_name != ''){
+                $str_name .= ' '.$profile->first_name;
+            }
+            if(($profile->first_name == null || $profile->first_name == '') && ($profile->last_name == null || $profile->last_name == '')){
+                $str_name = $profile->email;
+            }
+        }
+        return $str_name;
     }
 }

@@ -266,6 +266,7 @@ $this->registerJs($msgJs);
     }
 
     function clsTask(id){
+      //  $('.milestones-filters').remove();
         $.ajax({
             url: '/departments/get-milestone-from-task-id',
             data: {id:id},
@@ -273,9 +274,9 @@ $this->registerJs($msgJs);
             dataType: 'json',
             success: function(response){
                 var that = $('div#ml'+response.id);
-                getattributes(that.closest('.milestones'));
+               // getattributes(that.closest('.milestones'));
                 that = $('div#mlAll');
-                getattributes(that.closest('.milestones'));
+               // getattributes(that.closest('.milestones'));
             }
         })
     }
@@ -349,6 +350,15 @@ $this->registerJs($msgJs);
     $(document).on('click','.milestones-filters li', function(e){
         e.preventDefault();
         e.stopPropagation();
+      /*  if($(this).hasClass('active')) {
+            var i = 0;
+            $(this).closest('ul').find('.m_filters.active').each(function () {
+                i = i + 1;
+            })
+            if (i == 1) {
+                return false;
+            }
+        }*/
         $(this).toggleClass('active');
         // вот здесь функционал пиши
         getattributes($(this).closest('.milestones'));
